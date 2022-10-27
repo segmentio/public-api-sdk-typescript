@@ -1,0 +1,15 @@
+import { RemoveSourceConnectionFromWarehouseV1Output } from './removeSourceConnectionFromWarehouseV1Output';
+export declare class RemoveSourceConnectionFromWarehouse200Response {
+    'data'?: RemoveSourceConnectionFromWarehouseV1Output;
+    static discriminator: string | undefined;
+    static attributeTypeMap: Array<{
+        name: string;
+        baseName: string;
+        type: string;
+    }>;
+    static getAttributeTypeMap(): {
+        name: string;
+        baseName: string;
+        type: string;
+    }[];
+}

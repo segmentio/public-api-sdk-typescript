@@ -1,0 +1,15 @@
+import { GetSubscriptionRequest } from './getSubscriptionRequest';
+export declare class BatchQueryMessagingSubscriptionsForSpaceAlphaInput {
+    'subscriptions': Array<GetSubscriptionRequest>;
+    static discriminator: string | undefined;
+    static attributeTypeMap: Array<{
+        name: string;
+        baseName: string;
+        type: string;
+    }>;
+    static getAttributeTypeMap(): {
+        name: string;
+        baseName: string;
+        type: string;
+    }[];
+}

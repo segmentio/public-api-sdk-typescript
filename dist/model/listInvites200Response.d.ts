@@ -1,0 +1,15 @@
+import { ListInvitesV1Output } from './listInvitesV1Output';
+export declare class ListInvites200Response {
+    'data'?: ListInvitesV1Output;
+    static discriminator: string | undefined;
+    static attributeTypeMap: Array<{
+        name: string;
+        baseName: string;
+        type: string;
+    }>;
+    static getAttributeTypeMap(): {
+        name: string;
+        baseName: string;
+        type: string;
+    }[];
+}

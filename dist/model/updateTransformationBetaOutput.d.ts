@@ -1,0 +1,15 @@
+import { Transformation1 } from './transformation1';
+export declare class UpdateTransformationBetaOutput {
+    'transformation': Transformation1;
+    static discriminator: string | undefined;
+    static attributeTypeMap: Array<{
+        name: string;
+        baseName: string;
+        type: string;
+    }>;
+    static getAttributeTypeMap(): {
+        name: string;
+        baseName: string;
+        type: string;
+    }[];
+}
