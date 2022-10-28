@@ -46,6 +46,7 @@ __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput"), ex
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput"), exports);
 __exportStar(require("./breakdownBeta"), exports);
 __exportStar(require("./commonSourceSettingsV1"), exports);
+__exportStar(require("./contact"), exports);
 __exportStar(require("./createCloudSourceRegulation200Response"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Input"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Output"), exports);
@@ -508,6 +509,7 @@ var batchQueryMessagingSubscriptionsForSpaceAlphaInput_1 = require("./batchQuery
 var batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput");
 var breakdownBeta_1 = require("./breakdownBeta");
 var commonSourceSettingsV1_1 = require("./commonSourceSettingsV1");
+var contact_1 = require("./contact");
 var createCloudSourceRegulation200Response_1 = require("./createCloudSourceRegulation200Response");
 var createCloudSourceRegulationV1Input_1 = require("./createCloudSourceRegulationV1Input");
 var createCloudSourceRegulationV1Output_1 = require("./createCloudSourceRegulationV1Output");
@@ -1063,6 +1065,7 @@ var typeMap = {
     BatchQueryMessagingSubscriptionsForSpaceAlphaOutput: batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
     BreakdownBeta: breakdownBeta_1.BreakdownBeta,
     CommonSourceSettingsV1: commonSourceSettingsV1_1.CommonSourceSettingsV1,
+    Contact: contact_1.Contact,
     CreateCloudSourceRegulation200Response: createCloudSourceRegulation200Response_1.CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input,
     CreateCloudSourceRegulationV1Output: createCloudSourceRegulationV1Output_1.CreateCloudSourceRegulationV1Output,

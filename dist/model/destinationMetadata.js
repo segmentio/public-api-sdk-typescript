@@ -89,6 +89,16 @@ var DestinationMetadata = (function () {
             baseName: 'presets',
             type: 'Array<DestinationMetadataSubscriptionPresetV1>',
         },
+        {
+            name: 'contacts',
+            baseName: 'contacts',
+            type: 'Array<Contact>',
+        },
+        {
+            name: 'partnerOwned',
+            baseName: 'partnerOwned',
+            type: 'boolean',
+        },
     ];
     return DestinationMetadata;
 }());

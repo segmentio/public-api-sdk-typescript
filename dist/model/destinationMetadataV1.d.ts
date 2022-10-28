@@ -1,3 +1,4 @@
+import { Contact } from './contact';
 import { DestinationMetadataActionV1 } from './destinationMetadataActionV1';
 import { DestinationMetadataComponentV1 } from './destinationMetadataComponentV1';
 import { DestinationMetadataSubscriptionPresetV1 } from './destinationMetadataSubscriptionPresetV1';
@@ -23,6 +24,8 @@ export declare class DestinationMetadataV1 {
     'supportedPlatforms': SupportedPlatforms;
     'actions': Array<DestinationMetadataActionV1>;
     'presets': Array<DestinationMetadataSubscriptionPresetV1>;
+    'contacts'?: Array<Contact>;
+    'partnerOwned'?: boolean;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

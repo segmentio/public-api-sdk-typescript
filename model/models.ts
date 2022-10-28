@@ -31,6 +31,7 @@ export * from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 export * from './breakdownBeta';
 export * from './commonSourceSettingsV1';
+export * from './contact';
 export * from './createCloudSourceRegulation200Response';
 export * from './createCloudSourceRegulationV1Input';
 export * from './createCloudSourceRegulationV1Output';
@@ -506,6 +507,7 @@ import { BatchQueryMessagingSubscriptionsForSpaceAlphaInput } from './batchQuery
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaOutput } from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 import { BreakdownBeta } from './breakdownBeta';
 import { CommonSourceSettingsV1 } from './commonSourceSettingsV1';
+import { Contact } from './contact';
 import { CreateCloudSourceRegulation200Response } from './createCloudSourceRegulation200Response';
 import { CreateCloudSourceRegulationV1Input } from './createCloudSourceRegulationV1Input';
 import { CreateCloudSourceRegulationV1Output } from './createCloudSourceRegulationV1Output';
@@ -1113,6 +1115,7 @@ let typeMap: { [index: string]: any } = {
         BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
     BreakdownBeta: BreakdownBeta,
     CommonSourceSettingsV1: CommonSourceSettingsV1,
+    Contact: Contact,
     CreateCloudSourceRegulation200Response:
         CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: CreateCloudSourceRegulationV1Input,
