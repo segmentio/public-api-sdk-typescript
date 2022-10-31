@@ -49,3 +49,9 @@ All test files are under `tests` folders.
 yarn install
 yarn test
 ```
+
+## Contributing
+
+This repository is Public. However, it is not open for contributions from external contributors.
+
+Therefore, please do not create pull requests. They will not be reviewed.
