@@ -49,3 +49,7 @@ All test files are under `tests` folders.
 yarn install
 yarn test
 ```
+
+## Contributing
+
+This repository is auto-generated and not open for contributions from external contributors. If you have problems with the repo, please raise an issue instead of a pull request. Pull requests will not be reviewed.
