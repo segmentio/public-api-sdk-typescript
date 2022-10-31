@@ -52,6 +52,4 @@ yarn test
 
 ## Contributing
 
-This repository is Public. However, it is not open for contributions from external contributors.
-
-Therefore, please do not create pull requests. They will not be reviewed.
+This repository is auto-generated and not open for contributions from external contributors. If you have problems with the repo, please raise an issue instead of a pull request. Pull requests will not be reviewed.
