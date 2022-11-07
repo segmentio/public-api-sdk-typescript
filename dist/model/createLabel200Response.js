@@ -12,7 +12,7 @@ var CreateLabel200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'CreateLabelAlphaOutput',
+            type: 'CreateLabelV1Output',
         },
     ];
     return CreateLabel200Response;

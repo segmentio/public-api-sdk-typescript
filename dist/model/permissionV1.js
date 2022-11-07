@@ -27,7 +27,7 @@ var PermissionV1 = (function () {
         {
             name: 'labels',
             baseName: 'labels',
-            type: 'Array<AllowedLabelBeta>',
+            type: 'Array<AllowedLabelV1>',
         },
     ];
     return PermissionV1;

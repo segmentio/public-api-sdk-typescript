@@ -35,22 +35,6 @@ export declare class DeletionAndSuppressionApi {
     setApiKey(key: DeletionAndSuppressionApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    createCloudSourceRegulationAlpha(sourceId: string, CreateCloudSourceRegulationV1Input: CreateCloudSourceRegulationV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateCloudSourceRegulation200Response;
-    }>;
-    createCloudSourceRegulationBeta(sourceId: string, CreateCloudSourceRegulationV1Input: CreateCloudSourceRegulationV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateCloudSourceRegulation200Response;
-    }>;
     createCloudSourceRegulationCurrent(sourceId: string, CreateCloudSourceRegulationV1Input: CreateCloudSourceRegulationV1Input, options?: {
         headers: {
             [name: string]: string;
@@ -66,22 +50,6 @@ export declare class DeletionAndSuppressionApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: CreateCloudSourceRegulation200Response;
-    }>;
-    createSourceRegulationAlpha(sourceId: string, CreateSourceRegulationV1Input: CreateSourceRegulationV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateSourceRegulation200Response;
-    }>;
-    createSourceRegulationBeta(sourceId: string, CreateSourceRegulationV1Input: CreateSourceRegulationV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateSourceRegulation200Response;
     }>;
     createSourceRegulationCurrent(sourceId: string, CreateSourceRegulationV1Input: CreateSourceRegulationV1Input, options?: {
         headers: {
@@ -99,22 +67,6 @@ export declare class DeletionAndSuppressionApi {
         response: http.IncomingMessage;
         body: CreateSourceRegulation200Response;
     }>;
-    createWorkspaceRegulationAlpha(CreateWorkspaceRegulationV1Input: CreateWorkspaceRegulationV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateWorkspaceRegulation200Response;
-    }>;
-    createWorkspaceRegulationBeta(CreateWorkspaceRegulationV1Input: CreateWorkspaceRegulationV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateWorkspaceRegulation200Response;
-    }>;
     createWorkspaceRegulationCurrent(CreateWorkspaceRegulationV1Input: CreateWorkspaceRegulationV1Input, options?: {
         headers: {
             [name: string]: string;
@@ -130,22 +82,6 @@ export declare class DeletionAndSuppressionApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: CreateWorkspaceRegulation200Response;
-    }>;
-    deleteRegulationAlpha(regulateId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteRegulation200Response;
-    }>;
-    deleteRegulationBeta(regulateId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteRegulation200Response;
     }>;
     deleteRegulationCurrent(regulateId: string, options?: {
         headers: {
@@ -163,22 +99,6 @@ export declare class DeletionAndSuppressionApi {
         response: http.IncomingMessage;
         body: DeleteRegulation200Response;
     }>;
-    getRegulationAlpha(regulateId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetRegulation200Response;
-    }>;
-    getRegulationBeta(regulateId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetRegulation200Response;
-    }>;
     getRegulationCurrent(regulateId: string, options?: {
         headers: {
             [name: string]: string;
@@ -194,22 +114,6 @@ export declare class DeletionAndSuppressionApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: GetRegulation200Response;
-    }>;
-    listRegulationsFromSourceAlpha(sourceId: string, pagination: PaginationInput, status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'BULK_DELETE_ONLY' | 'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListRegulationsFromSource200Response;
-    }>;
-    listRegulationsFromSourceBeta(sourceId: string, pagination: PaginationInput, status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'BULK_DELETE_ONLY' | 'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListRegulationsFromSource200Response;
     }>;
     listRegulationsFromSourceCurrent(sourceId: string, pagination: PaginationInput, status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'BULK_DELETE_ONLY' | 'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>, options?: {
         headers: {
@@ -227,22 +131,6 @@ export declare class DeletionAndSuppressionApi {
         response: http.IncomingMessage;
         body: ListRegulationsFromSource200Response;
     }>;
-    listSuppressionsAlpha(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListSuppressions200Response;
-    }>;
-    listSuppressionsBeta(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListSuppressions200Response;
-    }>;
     listSuppressionsCurrent(pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
@@ -258,22 +146,6 @@ export declare class DeletionAndSuppressionApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: ListSuppressions200Response;
-    }>;
-    listWorkspaceRegulationsAlpha(pagination: PaginationInput, status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'BULK_DELETE_ONLY' | 'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListWorkspaceRegulations200Response;
-    }>;
-    listWorkspaceRegulationsBeta(pagination: PaginationInput, status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'BULK_DELETE_ONLY' | 'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListWorkspaceRegulations200Response;
     }>;
     listWorkspaceRegulationsCurrent(pagination: PaginationInput, status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'BULK_DELETE_ONLY' | 'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>, options?: {
         headers: {

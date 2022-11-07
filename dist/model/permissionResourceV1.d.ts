@@ -1,8 +1,8 @@
-import { AllowedLabelBeta } from './allowedLabelBeta';
+import { AllowedLabelV1 } from './allowedLabelV1';
 export declare class PermissionResourceV1 {
     'id': string;
     'type': PermissionResourceV1.TypeEnum;
-    'labels'?: Array<AllowedLabelBeta>;
+    'labels'?: Array<AllowedLabelV1>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

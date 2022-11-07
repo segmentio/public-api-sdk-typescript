@@ -12,7 +12,7 @@ var ListSources200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'ListSourcesAlphaOutput',
+            type: 'ListSourcesV1Output',
         },
     ];
     return ListSources200Response;

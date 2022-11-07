@@ -12,7 +12,7 @@ var Echo200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'EchoAlphaOutput',
+            type: 'EchoV1Output',
         },
     ];
     return Echo200Response;

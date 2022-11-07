@@ -5,9 +5,6 @@ export * from './accessPermissionV1';
 export * from './addConnectionFromSourceToWarehouse200Response';
 export * from './addConnectionFromSourceToWarehouseV1Output';
 export * from './addLabelsToSource200Response';
-export * from './addLabelsToSource200Response1';
-export * from './addLabelsToSourceAlphaInput';
-export * from './addLabelsToSourceAlphaOutput';
 export * from './addLabelsToSourceV1Input';
 export * from './addLabelsToSourceV1Output';
 export * from './addPermissionsToUser200Response';
@@ -24,26 +21,16 @@ export * from './addUsersToUserGroupV1Input';
 export * from './addUsersToUserGroupV1Output';
 export * from './advancedWarehouseSyncScheduleV1Input';
 export * from './advancedWarehouseSyncScheduleV1Output';
-export * from './allowedLabelBeta';
+export * from './allowedLabelV1';
 export * from './auditEventV1';
-export * from './batchQueryMessagingSubscriptionsForSpace200Response';
-export * from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
-export * from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
-export * from './breakdownBeta';
 export * from './commonSourceSettingsV1';
 export * from './contact';
 export * from './createCloudSourceRegulation200Response';
 export * from './createCloudSourceRegulationV1Input';
 export * from './createCloudSourceRegulationV1Output';
 export * from './createDestination200Response';
-export * from './createDestinationSubscription200Response';
-export * from './createDestinationSubscriptionAlphaInput';
-export * from './createDestinationSubscriptionAlphaOutput';
 export * from './createDestinationV1Input';
 export * from './createDestinationV1Output';
-export * from './createEdgeFunctions200Response';
-export * from './createEdgeFunctionsAlphaInput';
-export * from './createEdgeFunctionsAlphaOutput';
 export * from './createFilterForDestination200Response';
 export * from './createFilterForDestinationV1Input';
 export * from './createFilterForDestinationV1Output';
@@ -56,15 +43,9 @@ export * from './createInvites200Response';
 export * from './createInvitesV1Input';
 export * from './createInvitesV1Output';
 export * from './createLabel200Response';
-export * from './createLabel200Response1';
-export * from './createLabelAlphaInput';
-export * from './createLabelAlphaOutput';
 export * from './createLabelV1Input';
 export * from './createLabelV1Output';
 export * from './createSource200Response';
-export * from './createSource200Response1';
-export * from './createSourceAlphaInput';
-export * from './createSourceAlphaOutput';
 export * from './createSourceRegulation200Response';
 export * from './createSourceRegulationV1Input';
 export * from './createSourceRegulationV1Output';
@@ -73,9 +54,6 @@ export * from './createSourceV1Output';
 export * from './createTrackingPlan200Response';
 export * from './createTrackingPlanV1Input';
 export * from './createTrackingPlanV1Output';
-export * from './createTransformation200Response';
-export * from './createTransformationBetaInput';
-export * from './createTransformationBetaOutput';
 export * from './createUserGroup200Response';
 export * from './createUserGroupV1Input';
 export * from './createUserGroupV1Output';
@@ -95,27 +73,19 @@ export * from './deleteFunctionV1Output';
 export * from './deleteInvites200Response';
 export * from './deleteInvitesV1Output';
 export * from './deleteLabel200Response';
-export * from './deleteLabel200Response1';
-export * from './deleteLabelAlphaOutput';
 export * from './deleteLabelV1Output';
 export * from './deleteRegulation200Response';
 export * from './deleteRegulationV1Output';
 export * from './deleteSource200Response';
-export * from './deleteSource200Response1';
-export * from './deleteSourceAlphaOutput';
 export * from './deleteSourceV1Output';
 export * from './deleteTrackingPlan200Response';
 export * from './deleteTrackingPlanV1Output';
-export * from './deleteTransformation200Response';
-export * from './deleteTransformationBetaOutput';
 export * from './deleteUserGroup200Response';
 export * from './deleteUserGroupV1Output';
 export * from './deleteUsers200Response';
 export * from './deleteUsersV1Output';
 export * from './deleteWarehouse200Response';
 export * from './deleteWarehouseV1Output';
-export * from './deliveryMetricsSummary';
-export * from './deliveryMetricsSummaryBeta';
 export * from './destination';
 export * from './destination1';
 export * from './destination2';
@@ -134,15 +104,8 @@ export * from './destinationStatusV1';
 export * from './destinationSubscription';
 export * from './destinationSubscriptionUpdateInput';
 export * from './destinationV1';
-export * from './disableEdgeFunctions200Response';
-export * from './disableEdgeFunctionsAlphaOutput';
 export * from './echo200Response';
-export * from './echo200Response1';
-export * from './echoAlphaOutput';
 export * from './echoV1Output';
-export * from './edgeFunctions';
-export * from './edgeFunctions1';
-export * from './edgeFunctionsAlpha';
 export * from './eventSourceV1';
 export * from './filter';
 export * from './filter1';
@@ -154,8 +117,6 @@ export * from './function2';
 export * from './functionDeployment';
 export * from './functionSettingV1';
 export * from './functionV1';
-export * from './generateUploadURLForEdgeFunctions200Response';
-export * from './generateUploadURLForEdgeFunctionsAlphaOutput';
 export * from './getAdvancedSyncScheduleFromWarehouse200Response';
 export * from './getAdvancedSyncScheduleFromWarehouseV1Output';
 export * from './getConnectionStateFromWarehouse200Response';
@@ -180,29 +141,19 @@ export * from './getFilterInDestination200Response';
 export * from './getFilterInDestinationV1Output';
 export * from './getFunction200Response';
 export * from './getFunctionV1Output';
-export * from './getLatestFromEdgeFunctions200Response';
-export * from './getLatestFromEdgeFunctionsAlphaOutput';
 export * from './getMessagingSubscriptionFailureResponse';
 export * from './getMessagingSubscriptionSuccessResponse';
 export * from './getRegulation200Response';
 export * from './getRegulationV1Output';
 export * from './getSource200Response';
-export * from './getSource200Response1';
-export * from './getSourceAlphaOutput';
 export * from './getSourceMetadata200Response';
 export * from './getSourceMetadataV1Output';
 export * from './getSourceV1Output';
 export * from './getSourcesCatalog200Response';
 export * from './getSourcesCatalogV1Output';
-export * from './getSpace200Response';
-export * from './getSpaceAlphaOutput';
-export * from './getSubscriptionFromDestination200Response';
-export * from './getSubscriptionFromDestinationAlphaOutput';
 export * from './getSubscriptionRequest';
 export * from './getTrackingPlan200Response';
 export * from './getTrackingPlanV1Output';
-export * from './getTransformation200Response';
-export * from './getTransformationBetaOutput';
 export * from './getUser200Response';
 export * from './getUserGroup200Response';
 export * from './getUserGroupV1Output';
@@ -219,29 +170,20 @@ export * from './group';
 export * from './groupSourceSettingsV1';
 export * from './identify';
 export * from './identifySourceSettingsV1';
-export * from './input';
-export * from './integrationOptionBeta';
+export * from './integrationOptionV1';
 export * from './invitePermissionV1';
 export * from './inviteV1';
 export * from './label';
 export * from './label1';
-export * from './label2';
-export * from './labelAlpha';
 export * from './labelV1';
 export * from './listAuditEvents200Response';
 export * from './listAuditEventsV1Output';
 export * from './listConnectedDestinationsFromSource200Response';
-export * from './listConnectedDestinationsFromSource200Response1';
-export * from './listConnectedDestinationsFromSourceAlphaOutput';
 export * from './listConnectedDestinationsFromSourceV1Output';
 export * from './listConnectedSourcesFromWarehouse200Response';
 export * from './listConnectedSourcesFromWarehouseV1Output';
 export * from './listConnectedWarehousesFromSource200Response';
-export * from './listConnectedWarehousesFromSource200Response1';
-export * from './listConnectedWarehousesFromSourceAlphaOutput';
 export * from './listConnectedWarehousesFromSourceV1Output';
-export * from './listDeliveryMetricsSummaryFromDestination200Response';
-export * from './listDeliveryMetricsSummaryFromDestinationBetaOutput';
 export * from './listDestinations200Response';
 export * from './listDestinationsV1Output';
 export * from './listFiltersFromDestination200Response';
@@ -254,8 +196,6 @@ export * from './listInvitesFromUserGroup200Response';
 export * from './listInvitesFromUserGroupV1Output';
 export * from './listInvitesV1Output';
 export * from './listLabels200Response';
-export * from './listLabels200Response1';
-export * from './listLabelsAlphaOutput';
 export * from './listLabelsV1Output';
 export * from './listRegulationsFromSource200Response';
 export * from './listRegulationsFromSourceV1Output';
@@ -268,13 +208,9 @@ export * from './listSchemaSettingsInSourceV1Output';
 export * from './listSelectiveSyncsFromWarehouseAndSource200Response';
 export * from './listSelectiveSyncsFromWarehouseAndSourceV1Output';
 export * from './listSources200Response';
-export * from './listSources200Response1';
-export * from './listSourcesAlphaOutput';
 export * from './listSourcesFromTrackingPlan200Response';
 export * from './listSourcesFromTrackingPlanV1Output';
 export * from './listSourcesV1Output';
-export * from './listSubscriptionsFromDestination200Response';
-export * from './listSubscriptionsFromDestinationAlphaOutput';
 export * from './listSuppressions200Response';
 export * from './listSuppressionsV1Output';
 export * from './listSyncsFromWarehouse200Response';
@@ -283,8 +219,6 @@ export * from './listSyncsFromWarehouseAndSourceV1Output';
 export * from './listSyncsFromWarehouseV1Output';
 export * from './listTrackingPlans200Response';
 export * from './listTrackingPlansV1Output';
-export * from './listTransformations200Response';
-export * from './listTransformationsBetaOutput';
 export * from './listUserGroups200Response';
 export * from './listUserGroupsFromUser200Response';
 export * from './listUserGroupsFromUserV1Output';
@@ -300,14 +234,13 @@ export * from './listWorkspaceRegulationsV1Output';
 export * from './logos';
 export * from './logos1';
 export * from './logos2';
-export * from './logosBeta';
+export * from './logosV1';
 export * from './messageSubscriptionResponse';
 export * from './messageSubscriptionResponseError';
 export * from './messagesSubscriptionRequest';
 export * from './metadata';
 export * from './metadata1';
 export * from './metadata2';
-export * from './metricBeta';
 export * from './minimalUserGroupV1';
 export * from './minimalUserV1';
 export * from './mtuSnapshotV1';
@@ -321,7 +254,6 @@ export * from './previewDestinationFilter200Response';
 export * from './previewDestinationFilterV1';
 export * from './previewDestinationFilterV1Input';
 export * from './previewDestinationFilterV1Output';
-export * from './propertyRenameBeta';
 export * from './regulation';
 export * from './regulationListEntryV1';
 export * from './removeFilterFromDestination200Response';
@@ -333,22 +265,14 @@ export * from './removeSourceConnectionFromWarehouse200Response';
 export * from './removeSourceConnectionFromWarehouseV1Output';
 export * from './removeSourceFromTrackingPlan200Response';
 export * from './removeSourceFromTrackingPlanV1Output';
-export * from './removeSubscriptionFromDestination200Response';
-export * from './removeSubscriptionFromDestinationAlphaOutput';
 export * from './removeUsersFromUserGroup200Response';
 export * from './removeUsersFromUserGroupV1Output';
 export * from './replaceAdvancedSyncScheduleForWarehouse200Response';
 export * from './replaceAdvancedSyncScheduleForWarehouseV1Input';
 export * from './replaceAdvancedSyncScheduleForWarehouseV1Output';
 export * from './replaceLabelsInSource200Response';
-export * from './replaceLabelsInSource200Response1';
-export * from './replaceLabelsInSourceAlphaInput';
-export * from './replaceLabelsInSourceAlphaOutput';
 export * from './replaceLabelsInSourceV1Input';
 export * from './replaceLabelsInSourceV1Output';
-export * from './replaceMessagingSubscriptionsInSpaces200Response';
-export * from './replaceMessagingSubscriptionsInSpacesAlphaInput';
-export * from './replaceMessagingSubscriptionsInSpacesAlphaOutput';
 export * from './replacePermissionsForUser200Response';
 export * from './replacePermissionsForUserGroup200Response';
 export * from './replacePermissionsForUserGroupV1Input';
@@ -375,11 +299,7 @@ export * from './source';
 export * from './source1';
 export * from './source2';
 export * from './source3';
-export * from './source4';
-export * from './source5';
-export * from './source6';
 export * from './sourceAPICallSnapshotV1';
-export * from './sourceAlpha';
 export * from './sourceEventVolumeDatapointV1';
 export * from './sourceEventVolumeV1';
 export * from './sourceMetadata';
@@ -388,7 +308,6 @@ export * from './sourceSettingsOutputV1';
 export * from './sourceV1';
 export * from './space';
 export * from './streamStatusV1';
-export * from './subscription';
 export * from './supportedFeatures';
 export * from './supportedMethods';
 export * from './supportedPlatforms';
@@ -400,10 +319,6 @@ export * from './trackSourceSettingsV1';
 export * from './trackingPlan';
 export * from './trackingPlan1';
 export * from './trackingPlanV1';
-export * from './transformation';
-export * from './transformation1';
-export * from './transformation2';
-export * from './transformationBeta';
 export * from './updateDestination200Response';
 export * from './updateDestinationV1Input';
 export * from './updateDestinationV1Output';
@@ -423,20 +338,11 @@ export * from './updateSelectiveSyncForWarehouse200Response';
 export * from './updateSelectiveSyncForWarehouseV1Input';
 export * from './updateSelectiveSyncForWarehouseV1Output';
 export * from './updateSource200Response';
-export * from './updateSource200Response1';
-export * from './updateSourceAlphaInput';
-export * from './updateSourceAlphaOutput';
 export * from './updateSourceV1Input';
 export * from './updateSourceV1Output';
-export * from './updateSubscriptionForDestination200Response';
-export * from './updateSubscriptionForDestinationAlphaInput';
-export * from './updateSubscriptionForDestinationAlphaOutput';
 export * from './updateTrackingPlan200Response';
 export * from './updateTrackingPlanV1Input';
 export * from './updateTrackingPlanV1Output';
-export * from './updateTransformation200Response';
-export * from './updateTransformationBetaInput';
-export * from './updateTransformationBetaOutput';
 export * from './updateUserGroup200Response';
 export * from './updateUserGroupV1Input';
 export * from './updateUserGroupV1Output';
@@ -481,9 +387,6 @@ import { AccessPermissionV1 } from './accessPermissionV1';
 import { AddConnectionFromSourceToWarehouse200Response } from './addConnectionFromSourceToWarehouse200Response';
 import { AddConnectionFromSourceToWarehouseV1Output } from './addConnectionFromSourceToWarehouseV1Output';
 import { AddLabelsToSource200Response } from './addLabelsToSource200Response';
-import { AddLabelsToSource200Response1 } from './addLabelsToSource200Response1';
-import { AddLabelsToSourceAlphaInput } from './addLabelsToSourceAlphaInput';
-import { AddLabelsToSourceAlphaOutput } from './addLabelsToSourceAlphaOutput';
 import { AddLabelsToSourceV1Input } from './addLabelsToSourceV1Input';
 import { AddLabelsToSourceV1Output } from './addLabelsToSourceV1Output';
 import { AddPermissionsToUser200Response } from './addPermissionsToUser200Response';
@@ -500,26 +403,16 @@ import { AddUsersToUserGroupV1Input } from './addUsersToUserGroupV1Input';
 import { AddUsersToUserGroupV1Output } from './addUsersToUserGroupV1Output';
 import { AdvancedWarehouseSyncScheduleV1Input } from './advancedWarehouseSyncScheduleV1Input';
 import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncScheduleV1Output';
-import { AllowedLabelBeta } from './allowedLabelBeta';
+import { AllowedLabelV1 } from './allowedLabelV1';
 import { AuditEventV1 } from './auditEventV1';
-import { BatchQueryMessagingSubscriptionsForSpace200Response } from './batchQueryMessagingSubscriptionsForSpace200Response';
-import { BatchQueryMessagingSubscriptionsForSpaceAlphaInput } from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
-import { BatchQueryMessagingSubscriptionsForSpaceAlphaOutput } from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
-import { BreakdownBeta } from './breakdownBeta';
 import { CommonSourceSettingsV1 } from './commonSourceSettingsV1';
 import { Contact } from './contact';
 import { CreateCloudSourceRegulation200Response } from './createCloudSourceRegulation200Response';
 import { CreateCloudSourceRegulationV1Input } from './createCloudSourceRegulationV1Input';
 import { CreateCloudSourceRegulationV1Output } from './createCloudSourceRegulationV1Output';
 import { CreateDestination200Response } from './createDestination200Response';
-import { CreateDestinationSubscription200Response } from './createDestinationSubscription200Response';
-import { CreateDestinationSubscriptionAlphaInput } from './createDestinationSubscriptionAlphaInput';
-import { CreateDestinationSubscriptionAlphaOutput } from './createDestinationSubscriptionAlphaOutput';
 import { CreateDestinationV1Input } from './createDestinationV1Input';
 import { CreateDestinationV1Output } from './createDestinationV1Output';
-import { CreateEdgeFunctions200Response } from './createEdgeFunctions200Response';
-import { CreateEdgeFunctionsAlphaInput } from './createEdgeFunctionsAlphaInput';
-import { CreateEdgeFunctionsAlphaOutput } from './createEdgeFunctionsAlphaOutput';
 import { CreateFilterForDestination200Response } from './createFilterForDestination200Response';
 import { CreateFilterForDestinationV1Input } from './createFilterForDestinationV1Input';
 import { CreateFilterForDestinationV1Output } from './createFilterForDestinationV1Output';
@@ -532,15 +425,9 @@ import { CreateInvites200Response } from './createInvites200Response';
 import { CreateInvitesV1Input } from './createInvitesV1Input';
 import { CreateInvitesV1Output } from './createInvitesV1Output';
 import { CreateLabel200Response } from './createLabel200Response';
-import { CreateLabel200Response1 } from './createLabel200Response1';
-import { CreateLabelAlphaInput } from './createLabelAlphaInput';
-import { CreateLabelAlphaOutput } from './createLabelAlphaOutput';
 import { CreateLabelV1Input } from './createLabelV1Input';
 import { CreateLabelV1Output } from './createLabelV1Output';
 import { CreateSource200Response } from './createSource200Response';
-import { CreateSource200Response1 } from './createSource200Response1';
-import { CreateSourceAlphaInput } from './createSourceAlphaInput';
-import { CreateSourceAlphaOutput } from './createSourceAlphaOutput';
 import { CreateSourceRegulation200Response } from './createSourceRegulation200Response';
 import { CreateSourceRegulationV1Input } from './createSourceRegulationV1Input';
 import { CreateSourceRegulationV1Output } from './createSourceRegulationV1Output';
@@ -549,9 +436,6 @@ import { CreateSourceV1Output } from './createSourceV1Output';
 import { CreateTrackingPlan200Response } from './createTrackingPlan200Response';
 import { CreateTrackingPlanV1Input } from './createTrackingPlanV1Input';
 import { CreateTrackingPlanV1Output } from './createTrackingPlanV1Output';
-import { CreateTransformation200Response } from './createTransformation200Response';
-import { CreateTransformationBetaInput } from './createTransformationBetaInput';
-import { CreateTransformationBetaOutput } from './createTransformationBetaOutput';
 import { CreateUserGroup200Response } from './createUserGroup200Response';
 import { CreateUserGroupV1Input } from './createUserGroupV1Input';
 import { CreateUserGroupV1Output } from './createUserGroupV1Output';
@@ -571,27 +455,19 @@ import { DeleteFunctionV1Output } from './deleteFunctionV1Output';
 import { DeleteInvites200Response } from './deleteInvites200Response';
 import { DeleteInvitesV1Output } from './deleteInvitesV1Output';
 import { DeleteLabel200Response } from './deleteLabel200Response';
-import { DeleteLabel200Response1 } from './deleteLabel200Response1';
-import { DeleteLabelAlphaOutput } from './deleteLabelAlphaOutput';
 import { DeleteLabelV1Output } from './deleteLabelV1Output';
 import { DeleteRegulation200Response } from './deleteRegulation200Response';
 import { DeleteRegulationV1Output } from './deleteRegulationV1Output';
 import { DeleteSource200Response } from './deleteSource200Response';
-import { DeleteSource200Response1 } from './deleteSource200Response1';
-import { DeleteSourceAlphaOutput } from './deleteSourceAlphaOutput';
 import { DeleteSourceV1Output } from './deleteSourceV1Output';
 import { DeleteTrackingPlan200Response } from './deleteTrackingPlan200Response';
 import { DeleteTrackingPlanV1Output } from './deleteTrackingPlanV1Output';
-import { DeleteTransformation200Response } from './deleteTransformation200Response';
-import { DeleteTransformationBetaOutput } from './deleteTransformationBetaOutput';
 import { DeleteUserGroup200Response } from './deleteUserGroup200Response';
 import { DeleteUserGroupV1Output } from './deleteUserGroupV1Output';
 import { DeleteUsers200Response } from './deleteUsers200Response';
 import { DeleteUsersV1Output } from './deleteUsersV1Output';
 import { DeleteWarehouse200Response } from './deleteWarehouse200Response';
 import { DeleteWarehouseV1Output } from './deleteWarehouseV1Output';
-import { DeliveryMetricsSummary } from './deliveryMetricsSummary';
-import { DeliveryMetricsSummaryBeta } from './deliveryMetricsSummaryBeta';
 import { Destination } from './destination';
 import { Destination1 } from './destination1';
 import { Destination2 } from './destination2';
@@ -610,15 +486,8 @@ import { DestinationStatusV1 } from './destinationStatusV1';
 import { DestinationSubscription } from './destinationSubscription';
 import { DestinationSubscriptionUpdateInput } from './destinationSubscriptionUpdateInput';
 import { DestinationV1 } from './destinationV1';
-import { DisableEdgeFunctions200Response } from './disableEdgeFunctions200Response';
-import { DisableEdgeFunctionsAlphaOutput } from './disableEdgeFunctionsAlphaOutput';
 import { Echo200Response } from './echo200Response';
-import { Echo200Response1 } from './echo200Response1';
-import { EchoAlphaOutput } from './echoAlphaOutput';
 import { EchoV1Output } from './echoV1Output';
-import { EdgeFunctions } from './edgeFunctions';
-import { EdgeFunctions1 } from './edgeFunctions1';
-import { EdgeFunctionsAlpha } from './edgeFunctionsAlpha';
 import { EventSourceV1 } from './eventSourceV1';
 import { Filter } from './filter';
 import { Filter1 } from './filter1';
@@ -630,8 +499,6 @@ import { Function2 } from './function2';
 import { FunctionDeployment } from './functionDeployment';
 import { FunctionSettingV1 } from './functionSettingV1';
 import { FunctionV1 } from './functionV1';
-import { GenerateUploadURLForEdgeFunctions200Response } from './generateUploadURLForEdgeFunctions200Response';
-import { GenerateUploadURLForEdgeFunctionsAlphaOutput } from './generateUploadURLForEdgeFunctionsAlphaOutput';
 import { GetAdvancedSyncScheduleFromWarehouse200Response } from './getAdvancedSyncScheduleFromWarehouse200Response';
 import { GetAdvancedSyncScheduleFromWarehouseV1Output } from './getAdvancedSyncScheduleFromWarehouseV1Output';
 import { GetConnectionStateFromWarehouse200Response } from './getConnectionStateFromWarehouse200Response';
@@ -656,29 +523,19 @@ import { GetFilterInDestination200Response } from './getFilterInDestination200Re
 import { GetFilterInDestinationV1Output } from './getFilterInDestinationV1Output';
 import { GetFunction200Response } from './getFunction200Response';
 import { GetFunctionV1Output } from './getFunctionV1Output';
-import { GetLatestFromEdgeFunctions200Response } from './getLatestFromEdgeFunctions200Response';
-import { GetLatestFromEdgeFunctionsAlphaOutput } from './getLatestFromEdgeFunctionsAlphaOutput';
 import { GetMessagingSubscriptionFailureResponse } from './getMessagingSubscriptionFailureResponse';
 import { GetMessagingSubscriptionSuccessResponse } from './getMessagingSubscriptionSuccessResponse';
 import { GetRegulation200Response } from './getRegulation200Response';
 import { GetRegulationV1Output } from './getRegulationV1Output';
 import { GetSource200Response } from './getSource200Response';
-import { GetSource200Response1 } from './getSource200Response1';
-import { GetSourceAlphaOutput } from './getSourceAlphaOutput';
 import { GetSourceMetadata200Response } from './getSourceMetadata200Response';
 import { GetSourceMetadataV1Output } from './getSourceMetadataV1Output';
 import { GetSourceV1Output } from './getSourceV1Output';
 import { GetSourcesCatalog200Response } from './getSourcesCatalog200Response';
 import { GetSourcesCatalogV1Output } from './getSourcesCatalogV1Output';
-import { GetSpace200Response } from './getSpace200Response';
-import { GetSpaceAlphaOutput } from './getSpaceAlphaOutput';
-import { GetSubscriptionFromDestination200Response } from './getSubscriptionFromDestination200Response';
-import { GetSubscriptionFromDestinationAlphaOutput } from './getSubscriptionFromDestinationAlphaOutput';
 import { GetSubscriptionRequest } from './getSubscriptionRequest';
 import { GetTrackingPlan200Response } from './getTrackingPlan200Response';
 import { GetTrackingPlanV1Output } from './getTrackingPlanV1Output';
-import { GetTransformation200Response } from './getTransformation200Response';
-import { GetTransformationBetaOutput } from './getTransformationBetaOutput';
 import { GetUser200Response } from './getUser200Response';
 import { GetUserGroup200Response } from './getUserGroup200Response';
 import { GetUserGroupV1Output } from './getUserGroupV1Output';
@@ -695,29 +552,20 @@ import { Group } from './group';
 import { GroupSourceSettingsV1 } from './groupSourceSettingsV1';
 import { Identify } from './identify';
 import { IdentifySourceSettingsV1 } from './identifySourceSettingsV1';
-import { Input } from './input';
-import { IntegrationOptionBeta } from './integrationOptionBeta';
+import { IntegrationOptionV1 } from './integrationOptionV1';
 import { InvitePermissionV1 } from './invitePermissionV1';
 import { InviteV1 } from './inviteV1';
 import { Label } from './label';
 import { Label1 } from './label1';
-import { Label2 } from './label2';
-import { LabelAlpha } from './labelAlpha';
 import { LabelV1 } from './labelV1';
 import { ListAuditEvents200Response } from './listAuditEvents200Response';
 import { ListAuditEventsV1Output } from './listAuditEventsV1Output';
 import { ListConnectedDestinationsFromSource200Response } from './listConnectedDestinationsFromSource200Response';
-import { ListConnectedDestinationsFromSource200Response1 } from './listConnectedDestinationsFromSource200Response1';
-import { ListConnectedDestinationsFromSourceAlphaOutput } from './listConnectedDestinationsFromSourceAlphaOutput';
 import { ListConnectedDestinationsFromSourceV1Output } from './listConnectedDestinationsFromSourceV1Output';
 import { ListConnectedSourcesFromWarehouse200Response } from './listConnectedSourcesFromWarehouse200Response';
 import { ListConnectedSourcesFromWarehouseV1Output } from './listConnectedSourcesFromWarehouseV1Output';
 import { ListConnectedWarehousesFromSource200Response } from './listConnectedWarehousesFromSource200Response';
-import { ListConnectedWarehousesFromSource200Response1 } from './listConnectedWarehousesFromSource200Response1';
-import { ListConnectedWarehousesFromSourceAlphaOutput } from './listConnectedWarehousesFromSourceAlphaOutput';
 import { ListConnectedWarehousesFromSourceV1Output } from './listConnectedWarehousesFromSourceV1Output';
-import { ListDeliveryMetricsSummaryFromDestination200Response } from './listDeliveryMetricsSummaryFromDestination200Response';
-import { ListDeliveryMetricsSummaryFromDestinationBetaOutput } from './listDeliveryMetricsSummaryFromDestinationBetaOutput';
 import { ListDestinations200Response } from './listDestinations200Response';
 import { ListDestinationsV1Output } from './listDestinationsV1Output';
 import { ListFiltersFromDestination200Response } from './listFiltersFromDestination200Response';
@@ -730,8 +578,6 @@ import { ListInvitesFromUserGroup200Response } from './listInvitesFromUserGroup2
 import { ListInvitesFromUserGroupV1Output } from './listInvitesFromUserGroupV1Output';
 import { ListInvitesV1Output } from './listInvitesV1Output';
 import { ListLabels200Response } from './listLabels200Response';
-import { ListLabels200Response1 } from './listLabels200Response1';
-import { ListLabelsAlphaOutput } from './listLabelsAlphaOutput';
 import { ListLabelsV1Output } from './listLabelsV1Output';
 import { ListRegulationsFromSource200Response } from './listRegulationsFromSource200Response';
 import { ListRegulationsFromSourceV1Output } from './listRegulationsFromSourceV1Output';
@@ -744,13 +590,9 @@ import { ListSchemaSettingsInSourceV1Output } from './listSchemaSettingsInSource
 import { ListSelectiveSyncsFromWarehouseAndSource200Response } from './listSelectiveSyncsFromWarehouseAndSource200Response';
 import { ListSelectiveSyncsFromWarehouseAndSourceV1Output } from './listSelectiveSyncsFromWarehouseAndSourceV1Output';
 import { ListSources200Response } from './listSources200Response';
-import { ListSources200Response1 } from './listSources200Response1';
-import { ListSourcesAlphaOutput } from './listSourcesAlphaOutput';
 import { ListSourcesFromTrackingPlan200Response } from './listSourcesFromTrackingPlan200Response';
 import { ListSourcesFromTrackingPlanV1Output } from './listSourcesFromTrackingPlanV1Output';
 import { ListSourcesV1Output } from './listSourcesV1Output';
-import { ListSubscriptionsFromDestination200Response } from './listSubscriptionsFromDestination200Response';
-import { ListSubscriptionsFromDestinationAlphaOutput } from './listSubscriptionsFromDestinationAlphaOutput';
 import { ListSuppressions200Response } from './listSuppressions200Response';
 import { ListSuppressionsV1Output } from './listSuppressionsV1Output';
 import { ListSyncsFromWarehouse200Response } from './listSyncsFromWarehouse200Response';
@@ -759,8 +601,6 @@ import { ListSyncsFromWarehouseAndSourceV1Output } from './listSyncsFromWarehous
 import { ListSyncsFromWarehouseV1Output } from './listSyncsFromWarehouseV1Output';
 import { ListTrackingPlans200Response } from './listTrackingPlans200Response';
 import { ListTrackingPlansV1Output } from './listTrackingPlansV1Output';
-import { ListTransformations200Response } from './listTransformations200Response';
-import { ListTransformationsBetaOutput } from './listTransformationsBetaOutput';
 import { ListUserGroups200Response } from './listUserGroups200Response';
 import { ListUserGroupsFromUser200Response } from './listUserGroupsFromUser200Response';
 import { ListUserGroupsFromUserV1Output } from './listUserGroupsFromUserV1Output';
@@ -776,14 +616,13 @@ import { ListWorkspaceRegulationsV1Output } from './listWorkspaceRegulationsV1Ou
 import { Logos } from './logos';
 import { Logos1 } from './logos1';
 import { Logos2 } from './logos2';
-import { LogosBeta } from './logosBeta';
+import { LogosV1 } from './logosV1';
 import { MessageSubscriptionResponse } from './messageSubscriptionResponse';
 import { MessageSubscriptionResponseError } from './messageSubscriptionResponseError';
 import { MessagesSubscriptionRequest } from './messagesSubscriptionRequest';
 import { Metadata } from './metadata';
 import { Metadata1 } from './metadata1';
 import { Metadata2 } from './metadata2';
-import { MetricBeta } from './metricBeta';
 import { MinimalUserGroupV1 } from './minimalUserGroupV1';
 import { MinimalUserV1 } from './minimalUserV1';
 import { MtuSnapshotV1 } from './mtuSnapshotV1';
@@ -797,7 +636,6 @@ import { PreviewDestinationFilter200Response } from './previewDestinationFilter2
 import { PreviewDestinationFilterV1 } from './previewDestinationFilterV1';
 import { PreviewDestinationFilterV1Input } from './previewDestinationFilterV1Input';
 import { PreviewDestinationFilterV1Output } from './previewDestinationFilterV1Output';
-import { PropertyRenameBeta } from './propertyRenameBeta';
 import { Regulation } from './regulation';
 import { RegulationListEntryV1 } from './regulationListEntryV1';
 import { RemoveFilterFromDestination200Response } from './removeFilterFromDestination200Response';
@@ -809,22 +647,14 @@ import { RemoveSourceConnectionFromWarehouse200Response } from './removeSourceCo
 import { RemoveSourceConnectionFromWarehouseV1Output } from './removeSourceConnectionFromWarehouseV1Output';
 import { RemoveSourceFromTrackingPlan200Response } from './removeSourceFromTrackingPlan200Response';
 import { RemoveSourceFromTrackingPlanV1Output } from './removeSourceFromTrackingPlanV1Output';
-import { RemoveSubscriptionFromDestination200Response } from './removeSubscriptionFromDestination200Response';
-import { RemoveSubscriptionFromDestinationAlphaOutput } from './removeSubscriptionFromDestinationAlphaOutput';
 import { RemoveUsersFromUserGroup200Response } from './removeUsersFromUserGroup200Response';
 import { RemoveUsersFromUserGroupV1Output } from './removeUsersFromUserGroupV1Output';
 import { ReplaceAdvancedSyncScheduleForWarehouse200Response } from './replaceAdvancedSyncScheduleForWarehouse200Response';
 import { ReplaceAdvancedSyncScheduleForWarehouseV1Input } from './replaceAdvancedSyncScheduleForWarehouseV1Input';
 import { ReplaceAdvancedSyncScheduleForWarehouseV1Output } from './replaceAdvancedSyncScheduleForWarehouseV1Output';
 import { ReplaceLabelsInSource200Response } from './replaceLabelsInSource200Response';
-import { ReplaceLabelsInSource200Response1 } from './replaceLabelsInSource200Response1';
-import { ReplaceLabelsInSourceAlphaInput } from './replaceLabelsInSourceAlphaInput';
-import { ReplaceLabelsInSourceAlphaOutput } from './replaceLabelsInSourceAlphaOutput';
 import { ReplaceLabelsInSourceV1Input } from './replaceLabelsInSourceV1Input';
 import { ReplaceLabelsInSourceV1Output } from './replaceLabelsInSourceV1Output';
-import { ReplaceMessagingSubscriptionsInSpaces200Response } from './replaceMessagingSubscriptionsInSpaces200Response';
-import { ReplaceMessagingSubscriptionsInSpacesAlphaInput } from './replaceMessagingSubscriptionsInSpacesAlphaInput';
-import { ReplaceMessagingSubscriptionsInSpacesAlphaOutput } from './replaceMessagingSubscriptionsInSpacesAlphaOutput';
 import { ReplacePermissionsForUser200Response } from './replacePermissionsForUser200Response';
 import { ReplacePermissionsForUserGroup200Response } from './replacePermissionsForUserGroup200Response';
 import { ReplacePermissionsForUserGroupV1Input } from './replacePermissionsForUserGroupV1Input';
@@ -851,11 +681,7 @@ import { Source } from './source';
 import { Source1 } from './source1';
 import { Source2 } from './source2';
 import { Source3 } from './source3';
-import { Source4 } from './source4';
-import { Source5 } from './source5';
-import { Source6 } from './source6';
 import { SourceAPICallSnapshotV1 } from './sourceAPICallSnapshotV1';
-import { SourceAlpha } from './sourceAlpha';
 import { SourceEventVolumeDatapointV1 } from './sourceEventVolumeDatapointV1';
 import { SourceEventVolumeV1 } from './sourceEventVolumeV1';
 import { SourceMetadata } from './sourceMetadata';
@@ -864,7 +690,6 @@ import { SourceSettingsOutputV1 } from './sourceSettingsOutputV1';
 import { SourceV1 } from './sourceV1';
 import { Space } from './space';
 import { StreamStatusV1 } from './streamStatusV1';
-import { Subscription } from './subscription';
 import { SupportedFeatures } from './supportedFeatures';
 import { SupportedMethods } from './supportedMethods';
 import { SupportedPlatforms } from './supportedPlatforms';
@@ -876,10 +701,6 @@ import { TrackSourceSettingsV1 } from './trackSourceSettingsV1';
 import { TrackingPlan } from './trackingPlan';
 import { TrackingPlan1 } from './trackingPlan1';
 import { TrackingPlanV1 } from './trackingPlanV1';
-import { Transformation } from './transformation';
-import { Transformation1 } from './transformation1';
-import { Transformation2 } from './transformation2';
-import { TransformationBeta } from './transformationBeta';
 import { UpdateDestination200Response } from './updateDestination200Response';
 import { UpdateDestinationV1Input } from './updateDestinationV1Input';
 import { UpdateDestinationV1Output } from './updateDestinationV1Output';
@@ -899,20 +720,11 @@ import { UpdateSelectiveSyncForWarehouse200Response } from './updateSelectiveSyn
 import { UpdateSelectiveSyncForWarehouseV1Input } from './updateSelectiveSyncForWarehouseV1Input';
 import { UpdateSelectiveSyncForWarehouseV1Output } from './updateSelectiveSyncForWarehouseV1Output';
 import { UpdateSource200Response } from './updateSource200Response';
-import { UpdateSource200Response1 } from './updateSource200Response1';
-import { UpdateSourceAlphaInput } from './updateSourceAlphaInput';
-import { UpdateSourceAlphaOutput } from './updateSourceAlphaOutput';
 import { UpdateSourceV1Input } from './updateSourceV1Input';
 import { UpdateSourceV1Output } from './updateSourceV1Output';
-import { UpdateSubscriptionForDestination200Response } from './updateSubscriptionForDestination200Response';
-import { UpdateSubscriptionForDestinationAlphaInput } from './updateSubscriptionForDestinationAlphaInput';
-import { UpdateSubscriptionForDestinationAlphaOutput } from './updateSubscriptionForDestinationAlphaOutput';
 import { UpdateTrackingPlan200Response } from './updateTrackingPlan200Response';
 import { UpdateTrackingPlanV1Input } from './updateTrackingPlanV1Input';
 import { UpdateTrackingPlanV1Output } from './updateTrackingPlanV1Output';
-import { UpdateTransformation200Response } from './updateTransformation200Response';
-import { UpdateTransformationBetaInput } from './updateTransformationBetaInput';
-import { UpdateTransformationBetaOutput } from './updateTransformationBetaOutput';
 import { UpdateUserGroup200Response } from './updateUserGroup200Response';
 import { UpdateUserGroupV1Input } from './updateUserGroupV1Input';
 import { UpdateUserGroupV1Output } from './updateUserGroupV1Output';
@@ -978,15 +790,11 @@ let enumsMap: { [index: string]: any } = {
         DeleteDestinationV1Output.StatusEnum,
     'DeleteFunctionV1Output.StatusEnum': DeleteFunctionV1Output.StatusEnum,
     'DeleteInvitesV1Output.StatusEnum': DeleteInvitesV1Output.StatusEnum,
-    'DeleteLabelAlphaOutput.StatusEnum': DeleteLabelAlphaOutput.StatusEnum,
     'DeleteLabelV1Output.StatusEnum': DeleteLabelV1Output.StatusEnum,
     'DeleteRegulationV1Output.StatusEnum': DeleteRegulationV1Output.StatusEnum,
-    'DeleteSourceAlphaOutput.StatusEnum': DeleteSourceAlphaOutput.StatusEnum,
     'DeleteSourceV1Output.StatusEnum': DeleteSourceV1Output.StatusEnum,
     'DeleteTrackingPlanV1Output.StatusEnum':
         DeleteTrackingPlanV1Output.StatusEnum,
-    'DeleteTransformationBetaOutput.StatusEnum':
-        DeleteTransformationBetaOutput.StatusEnum,
     'DeleteUserGroupV1Output.StatusEnum': DeleteUserGroupV1Output.StatusEnum,
     'DeleteUsersV1Output.StatusEnum': DeleteUsersV1Output.StatusEnum,
     'DeleteWarehouseV1Output.StatusEnum': DeleteWarehouseV1Output.StatusEnum,
@@ -1006,7 +814,6 @@ let enumsMap: { [index: string]: any } = {
         DestinationMetadataFeaturesV1.DeviceModeInstancesEnum,
     'DestinationMetadataV1.StatusEnum': DestinationMetadataV1.StatusEnum,
     'DestinationStatusV1.StatusEnum': DestinationStatusV1.StatusEnum,
-    'EchoAlphaOutput.MethodEnum': EchoAlphaOutput.MethodEnum,
     'EchoV1Output.MethodEnum': EchoV1Output.MethodEnum,
     'Function.ResourceTypeEnum': Function.ResourceTypeEnum,
     'Function1.ResourceTypeEnum': Function1.ResourceTypeEnum,
@@ -1050,8 +857,6 @@ let enumsMap: { [index: string]: any } = {
         RemoveSourceConnectionFromWarehouseV1Output.StatusEnum,
     'RemoveSourceFromTrackingPlanV1Output.StatusEnum':
         RemoveSourceFromTrackingPlanV1Output.StatusEnum,
-    'RemoveSubscriptionFromDestinationAlphaOutput.StatusEnum':
-        RemoveSubscriptionFromDestinationAlphaOutput.StatusEnum,
     'RemoveUsersFromUserGroupV1Output.StatusEnum':
         RemoveUsersFromUserGroupV1Output.StatusEnum,
     'ReplaceRulesInTrackingPlanV1Output.StatusEnum':
@@ -1085,9 +890,6 @@ let typeMap: { [index: string]: any } = {
     AddConnectionFromSourceToWarehouseV1Output:
         AddConnectionFromSourceToWarehouseV1Output,
     AddLabelsToSource200Response: AddLabelsToSource200Response,
-    AddLabelsToSource200Response1: AddLabelsToSource200Response1,
-    AddLabelsToSourceAlphaInput: AddLabelsToSourceAlphaInput,
-    AddLabelsToSourceAlphaOutput: AddLabelsToSourceAlphaOutput,
     AddLabelsToSourceV1Input: AddLabelsToSourceV1Input,
     AddLabelsToSourceV1Output: AddLabelsToSourceV1Output,
     AddPermissionsToUser200Response: AddPermissionsToUser200Response,
@@ -1105,15 +907,8 @@ let typeMap: { [index: string]: any } = {
     AdvancedWarehouseSyncScheduleV1Input: AdvancedWarehouseSyncScheduleV1Input,
     AdvancedWarehouseSyncScheduleV1Output:
         AdvancedWarehouseSyncScheduleV1Output,
-    AllowedLabelBeta: AllowedLabelBeta,
+    AllowedLabelV1: AllowedLabelV1,
     AuditEventV1: AuditEventV1,
-    BatchQueryMessagingSubscriptionsForSpace200Response:
-        BatchQueryMessagingSubscriptionsForSpace200Response,
-    BatchQueryMessagingSubscriptionsForSpaceAlphaInput:
-        BatchQueryMessagingSubscriptionsForSpaceAlphaInput,
-    BatchQueryMessagingSubscriptionsForSpaceAlphaOutput:
-        BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
-    BreakdownBeta: BreakdownBeta,
     CommonSourceSettingsV1: CommonSourceSettingsV1,
     Contact: Contact,
     CreateCloudSourceRegulation200Response:
@@ -1121,17 +916,8 @@ let typeMap: { [index: string]: any } = {
     CreateCloudSourceRegulationV1Input: CreateCloudSourceRegulationV1Input,
     CreateCloudSourceRegulationV1Output: CreateCloudSourceRegulationV1Output,
     CreateDestination200Response: CreateDestination200Response,
-    CreateDestinationSubscription200Response:
-        CreateDestinationSubscription200Response,
-    CreateDestinationSubscriptionAlphaInput:
-        CreateDestinationSubscriptionAlphaInput,
-    CreateDestinationSubscriptionAlphaOutput:
-        CreateDestinationSubscriptionAlphaOutput,
     CreateDestinationV1Input: CreateDestinationV1Input,
     CreateDestinationV1Output: CreateDestinationV1Output,
-    CreateEdgeFunctions200Response: CreateEdgeFunctions200Response,
-    CreateEdgeFunctionsAlphaInput: CreateEdgeFunctionsAlphaInput,
-    CreateEdgeFunctionsAlphaOutput: CreateEdgeFunctionsAlphaOutput,
     CreateFilterForDestination200Response:
         CreateFilterForDestination200Response,
     CreateFilterForDestinationV1Input: CreateFilterForDestinationV1Input,
@@ -1145,15 +931,9 @@ let typeMap: { [index: string]: any } = {
     CreateInvitesV1Input: CreateInvitesV1Input,
     CreateInvitesV1Output: CreateInvitesV1Output,
     CreateLabel200Response: CreateLabel200Response,
-    CreateLabel200Response1: CreateLabel200Response1,
-    CreateLabelAlphaInput: CreateLabelAlphaInput,
-    CreateLabelAlphaOutput: CreateLabelAlphaOutput,
     CreateLabelV1Input: CreateLabelV1Input,
     CreateLabelV1Output: CreateLabelV1Output,
     CreateSource200Response: CreateSource200Response,
-    CreateSource200Response1: CreateSource200Response1,
-    CreateSourceAlphaInput: CreateSourceAlphaInput,
-    CreateSourceAlphaOutput: CreateSourceAlphaOutput,
     CreateSourceRegulation200Response: CreateSourceRegulation200Response,
     CreateSourceRegulationV1Input: CreateSourceRegulationV1Input,
     CreateSourceRegulationV1Output: CreateSourceRegulationV1Output,
@@ -1162,9 +942,6 @@ let typeMap: { [index: string]: any } = {
     CreateTrackingPlan200Response: CreateTrackingPlan200Response,
     CreateTrackingPlanV1Input: CreateTrackingPlanV1Input,
     CreateTrackingPlanV1Output: CreateTrackingPlanV1Output,
-    CreateTransformation200Response: CreateTransformation200Response,
-    CreateTransformationBetaInput: CreateTransformationBetaInput,
-    CreateTransformationBetaOutput: CreateTransformationBetaOutput,
     CreateUserGroup200Response: CreateUserGroup200Response,
     CreateUserGroupV1Input: CreateUserGroupV1Input,
     CreateUserGroupV1Output: CreateUserGroupV1Output,
@@ -1185,27 +962,19 @@ let typeMap: { [index: string]: any } = {
     DeleteInvites200Response: DeleteInvites200Response,
     DeleteInvitesV1Output: DeleteInvitesV1Output,
     DeleteLabel200Response: DeleteLabel200Response,
-    DeleteLabel200Response1: DeleteLabel200Response1,
-    DeleteLabelAlphaOutput: DeleteLabelAlphaOutput,
     DeleteLabelV1Output: DeleteLabelV1Output,
     DeleteRegulation200Response: DeleteRegulation200Response,
     DeleteRegulationV1Output: DeleteRegulationV1Output,
     DeleteSource200Response: DeleteSource200Response,
-    DeleteSource200Response1: DeleteSource200Response1,
-    DeleteSourceAlphaOutput: DeleteSourceAlphaOutput,
     DeleteSourceV1Output: DeleteSourceV1Output,
     DeleteTrackingPlan200Response: DeleteTrackingPlan200Response,
     DeleteTrackingPlanV1Output: DeleteTrackingPlanV1Output,
-    DeleteTransformation200Response: DeleteTransformation200Response,
-    DeleteTransformationBetaOutput: DeleteTransformationBetaOutput,
     DeleteUserGroup200Response: DeleteUserGroup200Response,
     DeleteUserGroupV1Output: DeleteUserGroupV1Output,
     DeleteUsers200Response: DeleteUsers200Response,
     DeleteUsersV1Output: DeleteUsersV1Output,
     DeleteWarehouse200Response: DeleteWarehouse200Response,
     DeleteWarehouseV1Output: DeleteWarehouseV1Output,
-    DeliveryMetricsSummary: DeliveryMetricsSummary,
-    DeliveryMetricsSummaryBeta: DeliveryMetricsSummaryBeta,
     Destination: Destination,
     Destination1: Destination1,
     Destination2: Destination2,
@@ -1225,15 +994,8 @@ let typeMap: { [index: string]: any } = {
     DestinationSubscription: DestinationSubscription,
     DestinationSubscriptionUpdateInput: DestinationSubscriptionUpdateInput,
     DestinationV1: DestinationV1,
-    DisableEdgeFunctions200Response: DisableEdgeFunctions200Response,
-    DisableEdgeFunctionsAlphaOutput: DisableEdgeFunctionsAlphaOutput,
     Echo200Response: Echo200Response,
-    Echo200Response1: Echo200Response1,
-    EchoAlphaOutput: EchoAlphaOutput,
     EchoV1Output: EchoV1Output,
-    EdgeFunctions: EdgeFunctions,
-    EdgeFunctions1: EdgeFunctions1,
-    EdgeFunctionsAlpha: EdgeFunctionsAlpha,
     EventSourceV1: EventSourceV1,
     Filter: Filter,
     Filter1: Filter1,
@@ -1245,10 +1007,6 @@ let typeMap: { [index: string]: any } = {
     FunctionDeployment: FunctionDeployment,
     FunctionSettingV1: FunctionSettingV1,
     FunctionV1: FunctionV1,
-    GenerateUploadURLForEdgeFunctions200Response:
-        GenerateUploadURLForEdgeFunctions200Response,
-    GenerateUploadURLForEdgeFunctionsAlphaOutput:
-        GenerateUploadURLForEdgeFunctionsAlphaOutput,
     GetAdvancedSyncScheduleFromWarehouse200Response:
         GetAdvancedSyncScheduleFromWarehouse200Response,
     GetAdvancedSyncScheduleFromWarehouseV1Output:
@@ -1282,10 +1040,6 @@ let typeMap: { [index: string]: any } = {
     GetFilterInDestinationV1Output: GetFilterInDestinationV1Output,
     GetFunction200Response: GetFunction200Response,
     GetFunctionV1Output: GetFunctionV1Output,
-    GetLatestFromEdgeFunctions200Response:
-        GetLatestFromEdgeFunctions200Response,
-    GetLatestFromEdgeFunctionsAlphaOutput:
-        GetLatestFromEdgeFunctionsAlphaOutput,
     GetMessagingSubscriptionFailureResponse:
         GetMessagingSubscriptionFailureResponse,
     GetMessagingSubscriptionSuccessResponse:
@@ -1293,24 +1047,14 @@ let typeMap: { [index: string]: any } = {
     GetRegulation200Response: GetRegulation200Response,
     GetRegulationV1Output: GetRegulationV1Output,
     GetSource200Response: GetSource200Response,
-    GetSource200Response1: GetSource200Response1,
-    GetSourceAlphaOutput: GetSourceAlphaOutput,
     GetSourceMetadata200Response: GetSourceMetadata200Response,
     GetSourceMetadataV1Output: GetSourceMetadataV1Output,
     GetSourceV1Output: GetSourceV1Output,
     GetSourcesCatalog200Response: GetSourcesCatalog200Response,
     GetSourcesCatalogV1Output: GetSourcesCatalogV1Output,
-    GetSpace200Response: GetSpace200Response,
-    GetSpaceAlphaOutput: GetSpaceAlphaOutput,
-    GetSubscriptionFromDestination200Response:
-        GetSubscriptionFromDestination200Response,
-    GetSubscriptionFromDestinationAlphaOutput:
-        GetSubscriptionFromDestinationAlphaOutput,
     GetSubscriptionRequest: GetSubscriptionRequest,
     GetTrackingPlan200Response: GetTrackingPlan200Response,
     GetTrackingPlanV1Output: GetTrackingPlanV1Output,
-    GetTransformation200Response: GetTransformation200Response,
-    GetTransformationBetaOutput: GetTransformationBetaOutput,
     GetUser200Response: GetUser200Response,
     GetUserGroup200Response: GetUserGroup200Response,
     GetUserGroupV1Output: GetUserGroupV1Output,
@@ -1327,23 +1071,16 @@ let typeMap: { [index: string]: any } = {
     GroupSourceSettingsV1: GroupSourceSettingsV1,
     Identify: Identify,
     IdentifySourceSettingsV1: IdentifySourceSettingsV1,
-    Input: Input,
-    IntegrationOptionBeta: IntegrationOptionBeta,
+    IntegrationOptionV1: IntegrationOptionV1,
     InvitePermissionV1: InvitePermissionV1,
     InviteV1: InviteV1,
     Label: Label,
     Label1: Label1,
-    Label2: Label2,
-    LabelAlpha: LabelAlpha,
     LabelV1: LabelV1,
     ListAuditEvents200Response: ListAuditEvents200Response,
     ListAuditEventsV1Output: ListAuditEventsV1Output,
     ListConnectedDestinationsFromSource200Response:
         ListConnectedDestinationsFromSource200Response,
-    ListConnectedDestinationsFromSource200Response1:
-        ListConnectedDestinationsFromSource200Response1,
-    ListConnectedDestinationsFromSourceAlphaOutput:
-        ListConnectedDestinationsFromSourceAlphaOutput,
     ListConnectedDestinationsFromSourceV1Output:
         ListConnectedDestinationsFromSourceV1Output,
     ListConnectedSourcesFromWarehouse200Response:
@@ -1352,16 +1089,8 @@ let typeMap: { [index: string]: any } = {
         ListConnectedSourcesFromWarehouseV1Output,
     ListConnectedWarehousesFromSource200Response:
         ListConnectedWarehousesFromSource200Response,
-    ListConnectedWarehousesFromSource200Response1:
-        ListConnectedWarehousesFromSource200Response1,
-    ListConnectedWarehousesFromSourceAlphaOutput:
-        ListConnectedWarehousesFromSourceAlphaOutput,
     ListConnectedWarehousesFromSourceV1Output:
         ListConnectedWarehousesFromSourceV1Output,
-    ListDeliveryMetricsSummaryFromDestination200Response:
-        ListDeliveryMetricsSummaryFromDestination200Response,
-    ListDeliveryMetricsSummaryFromDestinationBetaOutput:
-        ListDeliveryMetricsSummaryFromDestinationBetaOutput,
     ListDestinations200Response: ListDestinations200Response,
     ListDestinationsV1Output: ListDestinationsV1Output,
     ListFiltersFromDestination200Response:
@@ -1375,8 +1104,6 @@ let typeMap: { [index: string]: any } = {
     ListInvitesFromUserGroupV1Output: ListInvitesFromUserGroupV1Output,
     ListInvitesV1Output: ListInvitesV1Output,
     ListLabels200Response: ListLabels200Response,
-    ListLabels200Response1: ListLabels200Response1,
-    ListLabelsAlphaOutput: ListLabelsAlphaOutput,
     ListLabelsV1Output: ListLabelsV1Output,
     ListRegulationsFromSource200Response: ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: ListRegulationsFromSourceV1Output,
@@ -1392,16 +1119,10 @@ let typeMap: { [index: string]: any } = {
     ListSelectiveSyncsFromWarehouseAndSourceV1Output:
         ListSelectiveSyncsFromWarehouseAndSourceV1Output,
     ListSources200Response: ListSources200Response,
-    ListSources200Response1: ListSources200Response1,
-    ListSourcesAlphaOutput: ListSourcesAlphaOutput,
     ListSourcesFromTrackingPlan200Response:
         ListSourcesFromTrackingPlan200Response,
     ListSourcesFromTrackingPlanV1Output: ListSourcesFromTrackingPlanV1Output,
     ListSourcesV1Output: ListSourcesV1Output,
-    ListSubscriptionsFromDestination200Response:
-        ListSubscriptionsFromDestination200Response,
-    ListSubscriptionsFromDestinationAlphaOutput:
-        ListSubscriptionsFromDestinationAlphaOutput,
     ListSuppressions200Response: ListSuppressions200Response,
     ListSuppressionsV1Output: ListSuppressionsV1Output,
     ListSyncsFromWarehouse200Response: ListSyncsFromWarehouse200Response,
@@ -1412,8 +1133,6 @@ let typeMap: { [index: string]: any } = {
     ListSyncsFromWarehouseV1Output: ListSyncsFromWarehouseV1Output,
     ListTrackingPlans200Response: ListTrackingPlans200Response,
     ListTrackingPlansV1Output: ListTrackingPlansV1Output,
-    ListTransformations200Response: ListTransformations200Response,
-    ListTransformationsBetaOutput: ListTransformationsBetaOutput,
     ListUserGroups200Response: ListUserGroups200Response,
     ListUserGroupsFromUser200Response: ListUserGroupsFromUser200Response,
     ListUserGroupsFromUserV1Output: ListUserGroupsFromUserV1Output,
@@ -1429,14 +1148,13 @@ let typeMap: { [index: string]: any } = {
     Logos: Logos,
     Logos1: Logos1,
     Logos2: Logos2,
-    LogosBeta: LogosBeta,
+    LogosV1: LogosV1,
     MessageSubscriptionResponse: MessageSubscriptionResponse,
     MessageSubscriptionResponseError: MessageSubscriptionResponseError,
     MessagesSubscriptionRequest: MessagesSubscriptionRequest,
     Metadata: Metadata,
     Metadata1: Metadata1,
     Metadata2: Metadata2,
-    MetricBeta: MetricBeta,
     MinimalUserGroupV1: MinimalUserGroupV1,
     MinimalUserV1: MinimalUserV1,
     MtuSnapshotV1: MtuSnapshotV1,
@@ -1450,7 +1168,6 @@ let typeMap: { [index: string]: any } = {
     PreviewDestinationFilterV1: PreviewDestinationFilterV1,
     PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: PreviewDestinationFilterV1Output,
-    PropertyRenameBeta: PropertyRenameBeta,
     Regulation: Regulation,
     RegulationListEntryV1: RegulationListEntryV1,
     RemoveFilterFromDestination200Response:
@@ -1467,10 +1184,6 @@ let typeMap: { [index: string]: any } = {
     RemoveSourceFromTrackingPlan200Response:
         RemoveSourceFromTrackingPlan200Response,
     RemoveSourceFromTrackingPlanV1Output: RemoveSourceFromTrackingPlanV1Output,
-    RemoveSubscriptionFromDestination200Response:
-        RemoveSubscriptionFromDestination200Response,
-    RemoveSubscriptionFromDestinationAlphaOutput:
-        RemoveSubscriptionFromDestinationAlphaOutput,
     RemoveUsersFromUserGroup200Response: RemoveUsersFromUserGroup200Response,
     RemoveUsersFromUserGroupV1Output: RemoveUsersFromUserGroupV1Output,
     ReplaceAdvancedSyncScheduleForWarehouse200Response:
@@ -1480,17 +1193,8 @@ let typeMap: { [index: string]: any } = {
     ReplaceAdvancedSyncScheduleForWarehouseV1Output:
         ReplaceAdvancedSyncScheduleForWarehouseV1Output,
     ReplaceLabelsInSource200Response: ReplaceLabelsInSource200Response,
-    ReplaceLabelsInSource200Response1: ReplaceLabelsInSource200Response1,
-    ReplaceLabelsInSourceAlphaInput: ReplaceLabelsInSourceAlphaInput,
-    ReplaceLabelsInSourceAlphaOutput: ReplaceLabelsInSourceAlphaOutput,
     ReplaceLabelsInSourceV1Input: ReplaceLabelsInSourceV1Input,
     ReplaceLabelsInSourceV1Output: ReplaceLabelsInSourceV1Output,
-    ReplaceMessagingSubscriptionsInSpaces200Response:
-        ReplaceMessagingSubscriptionsInSpaces200Response,
-    ReplaceMessagingSubscriptionsInSpacesAlphaInput:
-        ReplaceMessagingSubscriptionsInSpacesAlphaInput,
-    ReplaceMessagingSubscriptionsInSpacesAlphaOutput:
-        ReplaceMessagingSubscriptionsInSpacesAlphaOutput,
     ReplacePermissionsForUser200Response: ReplacePermissionsForUser200Response,
     ReplacePermissionsForUserGroup200Response:
         ReplacePermissionsForUserGroup200Response,
@@ -1521,11 +1225,7 @@ let typeMap: { [index: string]: any } = {
     Source1: Source1,
     Source2: Source2,
     Source3: Source3,
-    Source4: Source4,
-    Source5: Source5,
-    Source6: Source6,
     SourceAPICallSnapshotV1: SourceAPICallSnapshotV1,
-    SourceAlpha: SourceAlpha,
     SourceEventVolumeDatapointV1: SourceEventVolumeDatapointV1,
     SourceEventVolumeV1: SourceEventVolumeV1,
     SourceMetadata: SourceMetadata,
@@ -1534,7 +1234,6 @@ let typeMap: { [index: string]: any } = {
     SourceV1: SourceV1,
     Space: Space,
     StreamStatusV1: StreamStatusV1,
-    Subscription: Subscription,
     SupportedFeatures: SupportedFeatures,
     SupportedMethods: SupportedMethods,
     SupportedPlatforms: SupportedPlatforms,
@@ -1546,10 +1245,6 @@ let typeMap: { [index: string]: any } = {
     TrackingPlan: TrackingPlan,
     TrackingPlan1: TrackingPlan1,
     TrackingPlanV1: TrackingPlanV1,
-    Transformation: Transformation,
-    Transformation1: Transformation1,
-    Transformation2: Transformation2,
-    TransformationBeta: TransformationBeta,
     UpdateDestination200Response: UpdateDestination200Response,
     UpdateDestinationV1Input: UpdateDestinationV1Input,
     UpdateDestinationV1Output: UpdateDestinationV1Output,
@@ -1574,23 +1269,11 @@ let typeMap: { [index: string]: any } = {
     UpdateSelectiveSyncForWarehouseV1Output:
         UpdateSelectiveSyncForWarehouseV1Output,
     UpdateSource200Response: UpdateSource200Response,
-    UpdateSource200Response1: UpdateSource200Response1,
-    UpdateSourceAlphaInput: UpdateSourceAlphaInput,
-    UpdateSourceAlphaOutput: UpdateSourceAlphaOutput,
     UpdateSourceV1Input: UpdateSourceV1Input,
     UpdateSourceV1Output: UpdateSourceV1Output,
-    UpdateSubscriptionForDestination200Response:
-        UpdateSubscriptionForDestination200Response,
-    UpdateSubscriptionForDestinationAlphaInput:
-        UpdateSubscriptionForDestinationAlphaInput,
-    UpdateSubscriptionForDestinationAlphaOutput:
-        UpdateSubscriptionForDestinationAlphaOutput,
     UpdateTrackingPlan200Response: UpdateTrackingPlan200Response,
     UpdateTrackingPlanV1Input: UpdateTrackingPlanV1Input,
     UpdateTrackingPlanV1Output: UpdateTrackingPlanV1Output,
-    UpdateTransformation200Response: UpdateTransformation200Response,
-    UpdateTransformationBetaInput: UpdateTransformationBetaInput,
-    UpdateTransformationBetaOutput: UpdateTransformationBetaOutput,
     UpdateUserGroup200Response: UpdateUserGroup200Response,
     UpdateUserGroupV1Input: UpdateUserGroupV1Input,
     UpdateUserGroupV1Output: UpdateUserGroupV1Output,

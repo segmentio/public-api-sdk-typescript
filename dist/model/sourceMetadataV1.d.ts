@@ -1,4 +1,4 @@
-import { IntegrationOptionBeta } from './integrationOptionBeta';
+import { IntegrationOptionV1 } from './integrationOptionV1';
 import { Logos1 } from './logos1';
 export declare class SourceMetadataV1 {
     'id': string;
@@ -6,7 +6,7 @@ export declare class SourceMetadataV1 {
     'slug': string;
     'description': string;
     'logos': Logos1;
-    'options': Array<IntegrationOptionBeta>;
+    'options': Array<IntegrationOptionV1>;
     'categories': Array<string>;
     'isCloudEventSource': boolean;
     static discriminator: string | undefined;

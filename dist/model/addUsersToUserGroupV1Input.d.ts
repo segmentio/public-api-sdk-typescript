@@ -1,5 +1,5 @@
 export declare class AddUsersToUserGroupV1Input {
-    'emails'?: Array<string>;
+    'emails': Array<string>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

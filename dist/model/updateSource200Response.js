@@ -12,7 +12,7 @@ var UpdateSource200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'UpdateSourceAlphaOutput',
+            type: 'UpdateSourceV1Output',
         },
     ];
     return UpdateSource200Response;

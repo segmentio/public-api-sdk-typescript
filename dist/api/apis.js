@@ -78,8 +78,6 @@ __exportStar(require("./destinationFiltersApi"), exports);
 var destinationFiltersApi_1 = require("./destinationFiltersApi");
 __exportStar(require("./destinationsApi"), exports);
 var destinationsApi_1 = require("./destinationsApi");
-__exportStar(require("./edgeFunctionsApi"), exports);
-var edgeFunctionsApi_1 = require("./edgeFunctionsApi");
 __exportStar(require("./eventsApi"), exports);
 var eventsApi_1 = require("./eventsApi");
 __exportStar(require("./functionsApi"), exports);
@@ -98,14 +96,10 @@ __exportStar(require("./selectiveSyncApi"), exports);
 var selectiveSyncApi_1 = require("./selectiveSyncApi");
 __exportStar(require("./sourcesApi"), exports);
 var sourcesApi_1 = require("./sourcesApi");
-__exportStar(require("./spacesApi"), exports);
-var spacesApi_1 = require("./spacesApi");
 __exportStar(require("./testingApi"), exports);
 var testingApi_1 = require("./testingApi");
 __exportStar(require("./trackingPlansApi"), exports);
 var trackingPlansApi_1 = require("./trackingPlansApi");
-__exportStar(require("./transformationsApi"), exports);
-var transformationsApi_1 = require("./transformationsApi");
 __exportStar(require("./warehousesApi"), exports);
 var warehousesApi_1 = require("./warehousesApi");
 __exportStar(require("./workspacesApi"), exports);
@@ -130,7 +124,6 @@ exports.APIS = [
     deletionAndSuppressionApi_1.DeletionAndSuppressionApi,
     destinationFiltersApi_1.DestinationFiltersApi,
     destinationsApi_1.DestinationsApi,
-    edgeFunctionsApi_1.EdgeFunctionsApi,
     eventsApi_1.EventsApi,
     functionsApi_1.FunctionsApi,
     iAMGroupsApi_1.IAMGroupsApi,
@@ -140,10 +133,8 @@ exports.APIS = [
     monthlyTrackedUsersApi_1.MonthlyTrackedUsersApi,
     selectiveSyncApi_1.SelectiveSyncApi,
     sourcesApi_1.SourcesApi,
-    spacesApi_1.SpacesApi,
     testingApi_1.TestingApi,
     trackingPlansApi_1.TrackingPlansApi,
-    transformationsApi_1.TransformationsApi,
     warehousesApi_1.WarehousesApi,
     workspacesApi_1.WorkspacesApi,
 ];
@@ -156,7 +147,6 @@ function configureApis(token, headers) {
         deletionAndSuppresion: new deletionAndSuppressionApi_1.DeletionAndSuppressionApi(),
         destinationFilters: new destinationFiltersApi_1.DestinationFiltersApi(),
         destinations: new destinationsApi_1.DestinationsApi(),
-        edgeFunctions: new edgeFunctionsApi_1.EdgeFunctionsApi(),
         events: new eventsApi_1.EventsApi(),
         functions: new functionsApi_1.FunctionsApi(),
         iamGroups: new iAMGroupsApi_1.IAMGroupsApi(),
@@ -166,10 +156,8 @@ function configureApis(token, headers) {
         monthlyTrackedUsers: new monthlyTrackedUsersApi_1.MonthlyTrackedUsersApi(),
         selectiveSync: new selectiveSyncApi_1.SelectiveSyncApi(),
         sources: new sourcesApi_1.SourcesApi(),
-        spaces: new spacesApi_1.SpacesApi(),
         testing: new testingApi_1.TestingApi(),
         trackingPlans: new trackingPlansApi_1.TrackingPlansApi(),
-        transformations: new transformationsApi_1.TransformationsApi(),
         warehouses: new warehousesApi_1.WarehousesApi(),
         workspaces: new workspacesApi_1.WorkspacesApi(),
     };

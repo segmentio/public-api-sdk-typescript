@@ -42,22 +42,6 @@ export declare class TrackingPlansApi {
     setApiKey(key: TrackingPlansApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    addSourceToTrackingPlanAlpha(trackingPlanId: string, AddSourceToTrackingPlanV1Input: AddSourceToTrackingPlanV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: AddSourceToTrackingPlan200Response;
-    }>;
-    addSourceToTrackingPlanBeta(trackingPlanId: string, AddSourceToTrackingPlanV1Input: AddSourceToTrackingPlanV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: AddSourceToTrackingPlan200Response;
-    }>;
     addSourceToTrackingPlanCurrent(trackingPlanId: string, AddSourceToTrackingPlanV1Input: AddSourceToTrackingPlanV1Input, options?: {
         headers: {
             [name: string]: string;
@@ -73,22 +57,6 @@ export declare class TrackingPlansApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: AddSourceToTrackingPlan200Response;
-    }>;
-    createTrackingPlanAlpha(CreateTrackingPlanV1Input: CreateTrackingPlanV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateTrackingPlan200Response;
-    }>;
-    createTrackingPlanBeta(CreateTrackingPlanV1Input: CreateTrackingPlanV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateTrackingPlan200Response;
     }>;
     createTrackingPlanCurrent(CreateTrackingPlanV1Input: CreateTrackingPlanV1Input, options?: {
         headers: {
@@ -106,22 +74,6 @@ export declare class TrackingPlansApi {
         response: http.IncomingMessage;
         body: CreateTrackingPlan200Response;
     }>;
-    deleteTrackingPlanAlpha(trackingPlanId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteTrackingPlan200Response;
-    }>;
-    deleteTrackingPlanBeta(trackingPlanId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteTrackingPlan200Response;
-    }>;
     deleteTrackingPlanCurrent(trackingPlanId: string, options?: {
         headers: {
             [name: string]: string;
@@ -137,22 +89,6 @@ export declare class TrackingPlansApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: DeleteTrackingPlan200Response;
-    }>;
-    getTrackingPlanAlpha(trackingPlanId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetTrackingPlan200Response;
-    }>;
-    getTrackingPlanBeta(trackingPlanId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetTrackingPlan200Response;
     }>;
     getTrackingPlanCurrent(trackingPlanId: string, options?: {
         headers: {
@@ -170,22 +106,6 @@ export declare class TrackingPlansApi {
         response: http.IncomingMessage;
         body: GetTrackingPlan200Response;
     }>;
-    listRulesFromTrackingPlanAlpha(trackingPlanId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListRulesFromTrackingPlan200Response;
-    }>;
-    listRulesFromTrackingPlanBeta(trackingPlanId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListRulesFromTrackingPlan200Response;
-    }>;
     listRulesFromTrackingPlanCurrent(trackingPlanId: string, pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
@@ -201,22 +121,6 @@ export declare class TrackingPlansApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: ListRulesFromTrackingPlan200Response;
-    }>;
-    listSourcesFromTrackingPlanAlpha(trackingPlanId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListSourcesFromTrackingPlan200Response;
-    }>;
-    listSourcesFromTrackingPlanBeta(trackingPlanId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListSourcesFromTrackingPlan200Response;
     }>;
     listSourcesFromTrackingPlanCurrent(trackingPlanId: string, pagination: PaginationInput, options?: {
         headers: {
@@ -234,22 +138,6 @@ export declare class TrackingPlansApi {
         response: http.IncomingMessage;
         body: ListSourcesFromTrackingPlan200Response;
     }>;
-    listTrackingPlansAlpha(pagination: PaginationInput, type?: 'LIVE' | 'PROPERTY_LIBRARY' | 'RULE_LIBRARY' | 'TEMPLATE', options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListTrackingPlans200Response;
-    }>;
-    listTrackingPlansBeta(pagination: PaginationInput, type?: 'LIVE' | 'PROPERTY_LIBRARY' | 'RULE_LIBRARY' | 'TEMPLATE', options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListTrackingPlans200Response;
-    }>;
     listTrackingPlansCurrent(pagination: PaginationInput, type?: 'LIVE' | 'PROPERTY_LIBRARY' | 'RULE_LIBRARY' | 'TEMPLATE', options?: {
         headers: {
             [name: string]: string;
@@ -265,22 +153,6 @@ export declare class TrackingPlansApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: ListTrackingPlans200Response;
-    }>;
-    removeRulesFromTrackingPlanAlpha(trackingPlanId: string, rules: Array<RemoveRuleV1>, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: RemoveRulesFromTrackingPlan200Response;
-    }>;
-    removeRulesFromTrackingPlanBeta(trackingPlanId: string, rules: Array<RemoveRuleV1>, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: RemoveRulesFromTrackingPlan200Response;
     }>;
     removeRulesFromTrackingPlanCurrent(trackingPlanId: string, rules: Array<RemoveRuleV1>, options?: {
         headers: {
@@ -298,22 +170,6 @@ export declare class TrackingPlansApi {
         response: http.IncomingMessage;
         body: RemoveRulesFromTrackingPlan200Response;
     }>;
-    removeSourceFromTrackingPlanAlpha(trackingPlanId: string, sourceId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: RemoveSourceFromTrackingPlan200Response;
-    }>;
-    removeSourceFromTrackingPlanBeta(trackingPlanId: string, sourceId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: RemoveSourceFromTrackingPlan200Response;
-    }>;
     removeSourceFromTrackingPlanCurrent(trackingPlanId: string, sourceId: string, options?: {
         headers: {
             [name: string]: string;
@@ -329,22 +185,6 @@ export declare class TrackingPlansApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: RemoveSourceFromTrackingPlan200Response;
-    }>;
-    replaceRulesInTrackingPlanAlpha(trackingPlanId: string, ReplaceRulesInTrackingPlanV1Input: ReplaceRulesInTrackingPlanV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ReplaceRulesInTrackingPlan200Response;
-    }>;
-    replaceRulesInTrackingPlanBeta(trackingPlanId: string, ReplaceRulesInTrackingPlanV1Input: ReplaceRulesInTrackingPlanV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ReplaceRulesInTrackingPlan200Response;
     }>;
     replaceRulesInTrackingPlanCurrent(trackingPlanId: string, ReplaceRulesInTrackingPlanV1Input: ReplaceRulesInTrackingPlanV1Input, options?: {
         headers: {
@@ -362,22 +202,6 @@ export declare class TrackingPlansApi {
         response: http.IncomingMessage;
         body: ReplaceRulesInTrackingPlan200Response;
     }>;
-    updateRulesInTrackingPlanAlpha(trackingPlanId: string, UpdateRulesInTrackingPlanV1Input: UpdateRulesInTrackingPlanV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateRulesInTrackingPlan200Response;
-    }>;
-    updateRulesInTrackingPlanBeta(trackingPlanId: string, UpdateRulesInTrackingPlanV1Input: UpdateRulesInTrackingPlanV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateRulesInTrackingPlan200Response;
-    }>;
     updateRulesInTrackingPlanCurrent(trackingPlanId: string, UpdateRulesInTrackingPlanV1Input: UpdateRulesInTrackingPlanV1Input, options?: {
         headers: {
             [name: string]: string;
@@ -393,22 +217,6 @@ export declare class TrackingPlansApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: UpdateRulesInTrackingPlan200Response;
-    }>;
-    updateTrackingPlanAlpha(trackingPlanId: string, UpdateTrackingPlanV1Input: UpdateTrackingPlanV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateTrackingPlan200Response;
-    }>;
-    updateTrackingPlanBeta(trackingPlanId: string, UpdateTrackingPlanV1Input: UpdateTrackingPlanV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateTrackingPlan200Response;
     }>;
     updateTrackingPlanCurrent(trackingPlanId: string, UpdateTrackingPlanV1Input: UpdateTrackingPlanV1Input, options?: {
         headers: {

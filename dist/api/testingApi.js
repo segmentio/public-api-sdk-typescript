@@ -112,7 +112,7 @@ var TestingApi = (function () {
     TestingApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    TestingApi.prototype.echoAlpha = function (message, delay, triggerError, triggerMultipleErrors, triggerUnexpectedError, statusCode, options) {
+    TestingApi.prototype.echoCurrent = function (message, delay, triggerError, triggerMultipleErrors, triggerUnexpectedError, statusCode, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -121,10 +121,7 @@ var TestingApi = (function () {
                 localVarPath = this.basePath + '/echo';
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
+                produces = ['application/json'];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = produces[0];
                 }
@@ -133,7 +130,7 @@ var TestingApi = (function () {
                 }
                 localVarFormParams = {};
                 if (message === null || message === undefined) {
-                    throw new Error('Required parameter message was null or undefined when calling echoAlpha.');
+                    throw new Error('Required parameter message was null or undefined when calling echoCurrent.');
                 }
                 if (message !== undefined) {
                     localVarQueryParameters['message'] = models_1.ObjectSerializer.serialize(message, 'string');
@@ -216,7 +213,7 @@ var TestingApi = (function () {
             });
         });
     };
-    TestingApi.prototype.echoCurrent = function (message, delay, triggerError, triggerMultipleErrors, triggerUnexpectedError, statusCode, options) {
+    TestingApi.prototype.echoV1 = function (message, delay, triggerError, triggerMultipleErrors, triggerUnexpectedError, statusCode, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
@@ -225,7 +222,10 @@ var TestingApi = (function () {
                 localVarPath = this.basePath + '/echo';
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
+                produces = [
+                    'application/vnd.segment.v1+json',
+                    'application/json',
+                ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = produces[0];
                 }
@@ -234,7 +234,7 @@ var TestingApi = (function () {
                 }
                 localVarFormParams = {};
                 if (message === null || message === undefined) {
-                    throw new Error('Required parameter message was null or undefined when calling echoCurrent.');
+                    throw new Error('Required parameter message was null or undefined when calling echoV1.');
                 }
                 if (message !== undefined) {
                     localVarQueryParameters['message'] = models_1.ObjectSerializer.serialize(message, 'string');
@@ -304,111 +304,7 @@ var TestingApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'Echo200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    TestingApi.prototype.echoV1 = function (message, delay, triggerError, triggerMultipleErrors, triggerUnexpectedError, statusCode, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/echo';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (message === null || message === undefined) {
-                    throw new Error('Required parameter message was null or undefined when calling echoV1.');
-                }
-                if (message !== undefined) {
-                    localVarQueryParameters['message'] = models_1.ObjectSerializer.serialize(message, 'string');
-                }
-                if (delay !== undefined) {
-                    localVarQueryParameters['delay'] = models_1.ObjectSerializer.serialize(delay, 'number');
-                }
-                if (triggerError !== undefined) {
-                    localVarQueryParameters['triggerError'] =
-                        models_1.ObjectSerializer.serialize(triggerError, 'boolean');
-                }
-                if (triggerMultipleErrors !== undefined) {
-                    localVarQueryParameters['triggerMultipleErrors'] =
-                        models_1.ObjectSerializer.serialize(triggerMultipleErrors, 'boolean');
-                }
-                if (triggerUnexpectedError !== undefined) {
-                    localVarQueryParameters['triggerUnexpectedError'] =
-                        models_1.ObjectSerializer.serialize(triggerUnexpectedError, 'boolean');
-                }
-                if (statusCode !== undefined) {
-                    localVarQueryParameters['statusCode'] = models_1.ObjectSerializer.serialize(statusCode, 'number');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_3 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_3(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'Echo200Response1');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'Echo200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {

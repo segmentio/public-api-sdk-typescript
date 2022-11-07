@@ -12,7 +12,7 @@ var ListConnectedWarehousesFromSource200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'ListConnectedWarehousesFromSourceAlphaOutput',
+            type: 'ListConnectedWarehousesFromSourceV1Output',
         },
     ];
     return ListConnectedWarehousesFromSource200Response;

@@ -12,7 +12,7 @@ var UpdateSourceV1Output = (function () {
         {
             name: 'source',
             baseName: 'source',
-            type: 'Source6',
+            type: 'Source3',
         },
     ];
     return UpdateSourceV1Output;

@@ -25,22 +25,6 @@ export declare class AuditTrailApi {
     setApiKey(key: AuditTrailApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    listAuditEventsAlpha(pagination: PaginationInput, startTime?: string, endTime?: string, resourceId?: string, resourceType?: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListAuditEvents200Response;
-    }>;
-    listAuditEventsBeta(pagination: PaginationInput, startTime?: string, endTime?: string, resourceId?: string, resourceType?: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListAuditEvents200Response;
-    }>;
     listAuditEventsCurrent(pagination: PaginationInput, startTime?: string, endTime?: string, resourceId?: string, resourceType?: string, options?: {
         headers: {
             [name: string]: string;

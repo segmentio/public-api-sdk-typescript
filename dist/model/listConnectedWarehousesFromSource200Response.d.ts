@@ -1,6 +1,6 @@
-import { ListConnectedWarehousesFromSourceAlphaOutput } from './listConnectedWarehousesFromSourceAlphaOutput';
+import { ListConnectedWarehousesFromSourceV1Output } from './listConnectedWarehousesFromSourceV1Output';
 export declare class ListConnectedWarehousesFromSource200Response {
-    'data'?: ListConnectedWarehousesFromSourceAlphaOutput;
+    'data'?: ListConnectedWarehousesFromSourceV1Output;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

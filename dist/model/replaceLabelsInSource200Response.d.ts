@@ -1,6 +1,6 @@
-import { ReplaceLabelsInSourceAlphaOutput } from './replaceLabelsInSourceAlphaOutput';
+import { ReplaceLabelsInSourceV1Output } from './replaceLabelsInSourceV1Output';
 export declare class ReplaceLabelsInSource200Response {
-    'data'?: ReplaceLabelsInSourceAlphaOutput;
+    'data'?: ReplaceLabelsInSourceV1Output;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

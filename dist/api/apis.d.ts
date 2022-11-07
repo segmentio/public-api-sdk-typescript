@@ -11,8 +11,6 @@ export * from './destinationFiltersApi';
 import { DestinationFiltersApi } from './destinationFiltersApi';
 export * from './destinationsApi';
 import { DestinationsApi } from './destinationsApi';
-export * from './edgeFunctionsApi';
-import { EdgeFunctionsApi } from './edgeFunctionsApi';
 export * from './eventsApi';
 import { EventsApi } from './eventsApi';
 export * from './functionsApi';
@@ -31,14 +29,10 @@ export * from './selectiveSyncApi';
 import { SelectiveSyncApi } from './selectiveSyncApi';
 export * from './sourcesApi';
 import { SourcesApi } from './sourcesApi';
-export * from './spacesApi';
-import { SpacesApi } from './spacesApi';
 export * from './testingApi';
 import { TestingApi } from './testingApi';
 export * from './trackingPlansApi';
 import { TrackingPlansApi } from './trackingPlansApi';
-export * from './transformationsApi';
-import { TransformationsApi } from './transformationsApi';
 export * from './warehousesApi';
 import { WarehousesApi } from './warehousesApi';
 export * from './workspacesApi';
@@ -51,7 +45,7 @@ export declare class HttpError extends Error {
     constructor(response: http.IncomingMessage, body: any, statusCode?: number | undefined);
 }
 export { RequestFile } from '../model/models';
-export declare const APIS: (typeof APICallsApi | typeof AuditTrailApi | typeof CatalogApi | typeof DeletionAndSuppressionApi | typeof DestinationFiltersApi | typeof DestinationsApi | typeof EdgeFunctionsApi | typeof EventsApi | typeof FunctionsApi | typeof IAMGroupsApi | typeof IAMRolesApi | typeof IAMUsersApi | typeof LabelsApi | typeof MonthlyTrackedUsersApi | typeof SelectiveSyncApi | typeof SourcesApi | typeof SpacesApi | typeof TestingApi | typeof TrackingPlansApi | typeof TransformationsApi | typeof WarehousesApi | typeof WorkspacesApi)[];
+export declare const APIS: (typeof APICallsApi | typeof AuditTrailApi | typeof CatalogApi | typeof DeletionAndSuppressionApi | typeof DestinationFiltersApi | typeof DestinationsApi | typeof EventsApi | typeof FunctionsApi | typeof IAMGroupsApi | typeof IAMRolesApi | typeof IAMUsersApi | typeof LabelsApi | typeof MonthlyTrackedUsersApi | typeof SelectiveSyncApi | typeof SourcesApi | typeof TestingApi | typeof TrackingPlansApi | typeof WarehousesApi | typeof WorkspacesApi)[];
 export interface Apis {
     apiCalls: APICallsApi;
     auditTrail: AuditTrailApi;
@@ -59,7 +53,6 @@ export interface Apis {
     deletionAndSuppresion: DeletionAndSuppressionApi;
     destinationFilters: DestinationFiltersApi;
     destinations: DestinationsApi;
-    edgeFunctions: EdgeFunctionsApi;
     events: EventsApi;
     functions: FunctionsApi;
     iamGroups: IAMGroupsApi;
@@ -69,10 +62,8 @@ export interface Apis {
     monthlyTrackedUsers: MonthlyTrackedUsersApi;
     selectiveSync: SelectiveSyncApi;
     sources: SourcesApi;
-    spaces: SpacesApi;
     testing: TestingApi;
     trackingPlans: TrackingPlansApi;
-    transformations: TransformationsApi;
     warehouses: WarehousesApi;
     workspaces: WorkspacesApi;
 }

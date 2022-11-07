@@ -1,6 +1,6 @@
-import { Label2 } from './label2';
+import { Label1 } from './label1';
 export declare class CreateLabelV1Output {
-    'label': Label2;
+    'label': Label1;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

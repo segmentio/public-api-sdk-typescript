@@ -10,8 +10,6 @@ export * from './destinationFiltersApi';
 import { DestinationFiltersApi } from './destinationFiltersApi';
 export * from './destinationsApi';
 import { DestinationsApi } from './destinationsApi';
-export * from './edgeFunctionsApi';
-import { EdgeFunctionsApi } from './edgeFunctionsApi';
 export * from './eventsApi';
 import { EventsApi } from './eventsApi';
 export * from './functionsApi';
@@ -30,14 +28,10 @@ export * from './selectiveSyncApi';
 import { SelectiveSyncApi } from './selectiveSyncApi';
 export * from './sourcesApi';
 import { SourcesApi } from './sourcesApi';
-export * from './spacesApi';
-import { SpacesApi } from './spacesApi';
 export * from './testingApi';
 import { TestingApi } from './testingApi';
 export * from './trackingPlansApi';
 import { TrackingPlansApi } from './trackingPlansApi';
-export * from './transformationsApi';
-import { TransformationsApi } from './transformationsApi';
 export * from './warehousesApi';
 import { WarehousesApi } from './warehousesApi';
 export * from './workspacesApi';
@@ -64,7 +58,6 @@ export const APIS = [
     DeletionAndSuppressionApi,
     DestinationFiltersApi,
     DestinationsApi,
-    EdgeFunctionsApi,
     EventsApi,
     FunctionsApi,
     IAMGroupsApi,
@@ -74,10 +67,8 @@ export const APIS = [
     MonthlyTrackedUsersApi,
     SelectiveSyncApi,
     SourcesApi,
-    SpacesApi,
     TestingApi,
     TrackingPlansApi,
-    TransformationsApi,
     WarehousesApi,
     WorkspacesApi,
 ];
@@ -89,7 +80,6 @@ export interface Apis {
     deletionAndSuppresion: DeletionAndSuppressionApi;
     destinationFilters: DestinationFiltersApi;
     destinations: DestinationsApi;
-    edgeFunctions: EdgeFunctionsApi;
     events: EventsApi;
     functions: FunctionsApi;
     iamGroups: IAMGroupsApi;
@@ -99,10 +89,8 @@ export interface Apis {
     monthlyTrackedUsers: MonthlyTrackedUsersApi;
     selectiveSync: SelectiveSyncApi;
     sources: SourcesApi;
-    spaces: SpacesApi;
     testing: TestingApi;
     trackingPlans: TrackingPlansApi;
-    transformations: TransformationsApi;
     warehouses: WarehousesApi;
     workspaces: WorkspacesApi;
 }
@@ -124,7 +112,6 @@ export function configureApis(
         deletionAndSuppresion: new DeletionAndSuppressionApi(),
         destinationFilters: new DestinationFiltersApi(),
         destinations: new DestinationsApi(),
-        edgeFunctions: new EdgeFunctionsApi(),
         events: new EventsApi(),
         functions: new FunctionsApi(),
         iamGroups: new IAMGroupsApi(),
@@ -134,10 +121,8 @@ export function configureApis(
         monthlyTrackedUsers: new MonthlyTrackedUsersApi(),
         selectiveSync: new SelectiveSyncApi(),
         sources: new SourcesApi(),
-        spaces: new SpacesApi(),
         testing: new TestingApi(),
         trackingPlans: new TrackingPlansApi(),
-        transformations: new TransformationsApi(),
         warehouses: new WarehousesApi(),
         workspaces: new WorkspacesApi(),
     };

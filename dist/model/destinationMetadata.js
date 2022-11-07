@@ -37,7 +37,7 @@ var DestinationMetadata = (function () {
         {
             name: 'options',
             baseName: 'options',
-            type: 'Array<IntegrationOptionBeta>',
+            type: 'Array<IntegrationOptionV1>',
         },
         {
             name: 'status',

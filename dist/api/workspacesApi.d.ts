@@ -24,22 +24,6 @@ export declare class WorkspacesApi {
     setApiKey(key: WorkspacesApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    getWorkspaceAlpha(options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetWorkspace200Response;
-    }>;
-    getWorkspaceBeta(options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetWorkspace200Response;
-    }>;
     getWorkspaceCurrent(options?: {
         headers: {
             [name: string]: string;

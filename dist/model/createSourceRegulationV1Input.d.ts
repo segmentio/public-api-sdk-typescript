@@ -1,7 +1,7 @@
 export declare class CreateSourceRegulationV1Input {
     'regulationType': CreateSourceRegulationV1Input.RegulationTypeEnum;
-    'subjectType'?: CreateSourceRegulationV1Input.SubjectTypeEnum;
-    'subjectIds'?: Array<string>;
+    'subjectType': CreateSourceRegulationV1Input.SubjectTypeEnum;
+    'subjectIds': Array<string>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

@@ -12,7 +12,7 @@ var DeleteLabel200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'DeleteLabelAlphaOutput',
+            type: 'DeleteLabelV1Output',
         },
     ];
     return DeleteLabel200Response;

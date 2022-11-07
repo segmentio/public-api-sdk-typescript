@@ -37,7 +37,7 @@ var WarehouseMetadata = (function () {
         {
             name: 'options',
             baseName: 'options',
-            type: 'Array<IntegrationOptionBeta>',
+            type: 'Array<IntegrationOptionV1>',
         },
     ];
     return WarehouseMetadata;

@@ -2,7 +2,7 @@ import { Contact } from './contact';
 import { DestinationMetadataActionV1 } from './destinationMetadataActionV1';
 import { DestinationMetadataComponentV1 } from './destinationMetadataComponentV1';
 import { DestinationMetadataSubscriptionPresetV1 } from './destinationMetadataSubscriptionPresetV1';
-import { IntegrationOptionBeta } from './integrationOptionBeta';
+import { IntegrationOptionV1 } from './integrationOptionV1';
 import { Logos } from './logos';
 import { SupportedFeatures } from './supportedFeatures';
 import { SupportedMethods } from './supportedMethods';
@@ -13,7 +13,7 @@ export declare class Metadata {
     'description': string;
     'slug': string;
     'logos': Logos;
-    'options': Array<IntegrationOptionBeta>;
+    'options': Array<IntegrationOptionV1>;
     'status': Metadata.StatusEnum;
     'previousNames': Array<string>;
     'categories': Array<string>;

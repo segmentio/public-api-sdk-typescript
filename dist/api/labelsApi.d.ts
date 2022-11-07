@@ -1,13 +1,9 @@
 /// <reference types="node" />
 import http from 'http';
 import { CreateLabel200Response } from '../model/createLabel200Response';
-import { CreateLabel200Response1 } from '../model/createLabel200Response1';
-import { CreateLabelAlphaInput } from '../model/createLabelAlphaInput';
 import { CreateLabelV1Input } from '../model/createLabelV1Input';
 import { DeleteLabel200Response } from '../model/deleteLabel200Response';
-import { DeleteLabel200Response1 } from '../model/deleteLabel200Response1';
 import { ListLabels200Response } from '../model/listLabels200Response';
-import { ListLabels200Response1 } from '../model/listLabels200Response1';
 import { Authentication, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
 export declare enum LabelsApiApiKeys {
@@ -31,7 +27,7 @@ export declare class LabelsApi {
     setApiKey(key: LabelsApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    createLabelAlpha(CreateLabelAlphaInput: CreateLabelAlphaInput, options?: {
+    createLabelCurrent(CreateLabelV1Input: CreateLabelV1Input, options?: {
         headers: {
             [name: string]: string;
         };
@@ -39,45 +35,13 @@ export declare class LabelsApi {
         response: http.IncomingMessage;
         body: CreateLabel200Response;
     }>;
-    createLabelBeta(CreateLabelV1Input: CreateLabelV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateLabel200Response1;
-    }>;
-    createLabelCurrent(CreateLabelV1Input: CreateLabelV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateLabel200Response1;
-    }>;
     createLabelV1(CreateLabelV1Input: CreateLabelV1Input, options?: {
         headers: {
             [name: string]: string;
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: CreateLabel200Response1;
-    }>;
-    deleteLabelAlpha(key: string, value: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteLabel200Response;
-    }>;
-    deleteLabelBeta(key: string, value: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteLabel200Response1;
+        body: CreateLabel200Response;
     }>;
     deleteLabelCurrent(key: string, value: string, options?: {
         headers: {
@@ -85,7 +49,7 @@ export declare class LabelsApi {
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: DeleteLabel200Response1;
+        body: DeleteLabel200Response;
     }>;
     deleteLabelV1(key: string, value: string, options?: {
         headers: {
@@ -93,23 +57,7 @@ export declare class LabelsApi {
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: DeleteLabel200Response1;
-    }>;
-    listLabelsAlpha(options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListLabels200Response;
-    }>;
-    listLabelsBeta(options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListLabels200Response1;
+        body: DeleteLabel200Response;
     }>;
     listLabelsCurrent(options?: {
         headers: {
@@ -117,7 +65,7 @@ export declare class LabelsApi {
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: ListLabels200Response1;
+        body: ListLabels200Response;
     }>;
     listLabelsV1(options?: {
         headers: {
@@ -125,6 +73,6 @@ export declare class LabelsApi {
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: ListLabels200Response1;
+        body: ListLabels200Response;
     }>;
 }

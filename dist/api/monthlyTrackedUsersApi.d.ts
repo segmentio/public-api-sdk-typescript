@@ -26,22 +26,6 @@ export declare class MonthlyTrackedUsersApi {
     setApiKey(key: MonthlyTrackedUsersApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    getDailyPerSourceMTUUsageAlpha(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyPerSourceMTUUsage200Response;
-    }>;
-    getDailyPerSourceMTUUsageBeta(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyPerSourceMTUUsage200Response;
-    }>;
     getDailyPerSourceMTUUsageCurrent(period: string, pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
@@ -57,22 +41,6 @@ export declare class MonthlyTrackedUsersApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: GetDailyPerSourceMTUUsage200Response;
-    }>;
-    getDailyWorkspaceMTUUsageAlpha(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyWorkspaceMTUUsage200Response;
-    }>;
-    getDailyWorkspaceMTUUsageBeta(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyWorkspaceMTUUsage200Response;
     }>;
     getDailyWorkspaceMTUUsageCurrent(period: string, pagination: PaginationInput, options?: {
         headers: {
