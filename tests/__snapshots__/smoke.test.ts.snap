@@ -177,9 +177,9 @@ exports[`Smoke tests sends correct request and parses response for create 1`] = 
 
 exports[`Smoke tests sends correct request and parses response for create 2`] = `
 {
-  "body": CreateSource200Response1 {
+  "body": CreateSource200Response {
     "data": CreateSourceV1Output {
-      "source": Source5 {
+      "source": Source2 {
         "enabled": true,
         "id": "source-id",
         "labels": [],
@@ -345,7 +345,7 @@ exports[`Smoke tests sends correct request and parses response for delete 1`] = 
 
 exports[`Smoke tests sends correct request and parses response for delete 2`] = `
 {
-  "body": DeleteSource200Response1 {
+  "body": DeleteSource200Response {
     "data": DeleteSourceV1Output {
       "status": "SUCCESS",
     },
@@ -456,7 +456,7 @@ exports[`Smoke tests sends correct request and parses response for list 1`] = `
 
 exports[`Smoke tests sends correct request and parses response for list 2`] = `
 {
-  "body": ListSources200Response1 {
+  "body": ListSources200Response {
     "data": ListSourcesV1Output {
       "pagination": Pagination {
         "current": "MA==",
@@ -636,9 +636,9 @@ exports[`Smoke tests sends correct request and parses response for read 1`] = `
 
 exports[`Smoke tests sends correct request and parses response for read 2`] = `
 {
-  "body": GetSource200Response1 {
+  "body": GetSource200Response {
     "data": GetSourceV1Output {
-      "source": Source4 {
+      "source": Source1 {
         "enabled": true,
         "id": "source-id",
         "labels": [],
@@ -807,9 +807,9 @@ exports[`Smoke tests sends correct request and parses response for update 1`] = 
 
 exports[`Smoke tests sends correct request and parses response for update 2`] = `
 {
-  "body": UpdateSource200Response1 {
+  "body": UpdateSource200Response {
     "data": UpdateSourceV1Output {
-      "source": Source6 {
+      "source": Source3 {
         "enabled": false,
         "id": "source-id",
         "labels": [],
