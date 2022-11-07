@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Smoke tests parses errors correctly 1`] = `
-{
+Object {
   "_consuming": false,
   "_dumped": false,
-  "_events": {
+  "_events": Object {
     "end": [Function],
   },
   "_eventsCount": 1,
@@ -37,7 +37,7 @@ exports[`Smoke tests parses errors correctly 1`] = `
     "multiAwaitDrain": false,
     "needReadable": false,
     "objectMode": false,
-    "pipes": [],
+    "pipes": Array [],
     "readableListening": false,
     "reading": false,
     "readingMore": true,
@@ -52,7 +52,7 @@ exports[`Smoke tests parses errors correctly 1`] = `
   "httpVersionMajor": 1,
   "httpVersionMinor": 1,
   "method": "DELETE",
-  "rawHeaders": [
+  "rawHeaders": Array [
     "Accept",
     "application/json",
     "Authorization",
@@ -64,14 +64,14 @@ exports[`Smoke tests parses errors correctly 1`] = `
     "Connection",
     "close",
   ],
-  "rawTrailers": [],
+  "rawTrailers": Array [],
   "socket": Any<Object>,
   "statusCode": null,
   "statusMessage": null,
   "upgrade": false,
   "url": "/sources/404",
   Symbol(kCapture): false,
-  Symbol(kHeaders): {
+  Symbol(kHeaders): Object {
     "accept": "application/json",
     "authorization": "Bearer 1ba60ccaae1c1a5230",
     "connection": "close",
@@ -88,10 +88,10 @@ exports[`Smoke tests parses errors correctly 1`] = `
 exports[`Smoke tests parses errors correctly 2`] = `[HttpError: HTTP request failed]`;
 
 exports[`Smoke tests sends correct request and parses response for create 1`] = `
-{
+Object {
   "_consuming": false,
   "_dumped": false,
-  "_events": {
+  "_events": Object {
     "end": [Function],
   },
   "_eventsCount": 1,
@@ -124,7 +124,7 @@ exports[`Smoke tests sends correct request and parses response for create 1`] = 
     "multiAwaitDrain": false,
     "needReadable": false,
     "objectMode": false,
-    "pipes": [],
+    "pipes": Array [],
     "readableListening": false,
     "reading": false,
     "readingMore": true,
@@ -139,7 +139,7 @@ exports[`Smoke tests sends correct request and parses response for create 1`] = 
   "httpVersionMajor": 1,
   "httpVersionMinor": 1,
   "method": "POST",
-  "rawHeaders": [
+  "rawHeaders": Array [
     "Accept",
     "application/vnd.segment.v1+json",
     "Authorization",
@@ -153,14 +153,14 @@ exports[`Smoke tests sends correct request and parses response for create 1`] = 
     "Connection",
     "close",
   ],
-  "rawTrailers": [],
+  "rawTrailers": Array [],
   "socket": Any<Object>,
   "statusCode": null,
   "statusMessage": null,
   "upgrade": false,
   "url": "/sources",
   Symbol(kCapture): false,
-  Symbol(kHeaders): {
+  Symbol(kHeaders): Object {
     "accept": "application/vnd.segment.v1+json",
     "authorization": "Bearer 1ba60ccaae1c1a5230",
     "connection": "close",
@@ -176,15 +176,15 @@ exports[`Smoke tests sends correct request and parses response for create 1`] = 
 `;
 
 exports[`Smoke tests sends correct request and parses response for create 2`] = `
-{
+Object {
   "body": CreateSource200Response1 {
     "data": CreateSourceV1Output {
       "source": Source5 {
         "enabled": true,
         "id": "source-id",
-        "labels": [],
+        "labels": Array [],
         "metadata": Metadata1 {
-          "categories": [
+          "categories": Array [
             "Website",
           ],
           "description": "This is our most flexible and powerful tracking system, using analytics.js.  Track and analyze information about your visitors and customers, and every action that they take, in any of our 140 integrations, business intelligence tools, or directly with SQL tools.",
@@ -196,59 +196,59 @@ exports[`Smoke tests sends correct request and parses response for create 2`] = 
             "mark": "https://cdn.filepicker.io/api/file/kBpmEoSSaakidAvoFmzd",
           },
           "name": "Javascript",
-          "options": [],
+          "options": Array [],
           "slug": "javascript",
         },
         "name": "my-test-source",
-        "settings": {},
+        "settings": Object {},
         "slug": "my-test-source",
         "workspaceId": "workspace-id",
-        "writeKeys": [
+        "writeKeys": Array [
           "write-key",
         ],
       },
     },
   },
-  "response": {
-    "body": {
-      "data": {
-        "source": {
+  "response": Object {
+    "body": Object {
+      "data": Object {
+        "source": Object {
           "enabled": true,
           "id": "source-id",
-          "labels": [],
-          "metadata": {
-            "categories": [
+          "labels": Array [],
+          "metadata": Object {
+            "categories": Array [
               "Website",
             ],
             "description": "This is our most flexible and powerful tracking system, using analytics.js.  Track and analyze information about your visitors and customers, and every action that they take, in any of our 140 integrations, business intelligence tools, or directly with SQL tools.",
             "id": "IqDTy1TpoU",
             "isCloudEventSource": false,
-            "logos": {
+            "logos": Object {
               "alt": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
               "default": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
               "mark": "https://cdn.filepicker.io/api/file/kBpmEoSSaakidAvoFmzd",
             },
             "name": "Javascript",
-            "options": [],
+            "options": Array [],
             "slug": "javascript",
           },
           "name": "my-test-source",
-          "settings": {},
+          "settings": Object {},
           "slug": "my-test-source",
           "workspaceId": "workspace-id",
-          "writeKeys": [
+          "writeKeys": Array [
             "write-key",
           ],
         },
       },
     },
-    "headers": {
+    "headers": Object {
       "connection": "close",
       "content-type": "application/json",
       "date": Any<String>,
       "transfer-encoding": "chunked",
     },
-    "request": {
+    "request": Object {
       "headers": undefined,
       "method": undefined,
       "uri": undefined,
@@ -259,10 +259,10 @@ exports[`Smoke tests sends correct request and parses response for create 2`] = 
 `;
 
 exports[`Smoke tests sends correct request and parses response for delete 1`] = `
-{
+Object {
   "_consuming": false,
   "_dumped": false,
-  "_events": {
+  "_events": Object {
     "end": [Function],
   },
   "_eventsCount": 1,
@@ -295,7 +295,7 @@ exports[`Smoke tests sends correct request and parses response for delete 1`] = 
     "multiAwaitDrain": false,
     "needReadable": false,
     "objectMode": false,
-    "pipes": [],
+    "pipes": Array [],
     "readableListening": false,
     "reading": false,
     "readingMore": true,
@@ -310,7 +310,7 @@ exports[`Smoke tests sends correct request and parses response for delete 1`] = 
   "httpVersionMajor": 1,
   "httpVersionMinor": 1,
   "method": "DELETE",
-  "rawHeaders": [
+  "rawHeaders": Array [
     "Accept",
     "application/json",
     "Authorization",
@@ -322,14 +322,14 @@ exports[`Smoke tests sends correct request and parses response for delete 1`] = 
     "Connection",
     "close",
   ],
-  "rawTrailers": [],
+  "rawTrailers": Array [],
   "socket": Any<Object>,
   "statusCode": null,
   "statusMessage": null,
   "upgrade": false,
   "url": "/sources/my-source",
   Symbol(kCapture): false,
-  Symbol(kHeaders): {
+  Symbol(kHeaders): Object {
     "accept": "application/json",
     "authorization": "Bearer 1ba60ccaae1c1a5230",
     "connection": "close",
@@ -344,25 +344,25 @@ exports[`Smoke tests sends correct request and parses response for delete 1`] = 
 `;
 
 exports[`Smoke tests sends correct request and parses response for delete 2`] = `
-{
+Object {
   "body": DeleteSource200Response1 {
     "data": DeleteSourceV1Output {
       "status": "SUCCESS",
     },
   },
-  "response": {
-    "body": {
-      "data": {
+  "response": Object {
+    "body": Object {
+      "data": Object {
         "status": "SUCCESS",
       },
     },
-    "headers": {
+    "headers": Object {
       "connection": "close",
       "content-type": "application/json",
       "date": Any<String>,
       "transfer-encoding": "chunked",
     },
-    "request": {
+    "request": Object {
       "headers": undefined,
       "method": undefined,
       "uri": undefined,
@@ -373,10 +373,10 @@ exports[`Smoke tests sends correct request and parses response for delete 2`] = 
 `;
 
 exports[`Smoke tests sends correct request and parses response for list 1`] = `
-{
+Object {
   "_consuming": false,
   "_dumped": false,
-  "_events": {
+  "_events": Object {
     "end": [Function],
   },
   "_eventsCount": 1,
@@ -409,7 +409,7 @@ exports[`Smoke tests sends correct request and parses response for list 1`] = `
     "multiAwaitDrain": false,
     "needReadable": false,
     "objectMode": false,
-    "pipes": [],
+    "pipes": Array [],
     "readableListening": false,
     "reading": false,
     "readingMore": true,
@@ -424,7 +424,7 @@ exports[`Smoke tests sends correct request and parses response for list 1`] = `
   "httpVersionMajor": 1,
   "httpVersionMinor": 1,
   "method": "GET",
-  "rawHeaders": [
+  "rawHeaders": Array [
     "Accept",
     "application/json",
     "Authorization",
@@ -434,14 +434,14 @@ exports[`Smoke tests sends correct request and parses response for list 1`] = `
     "Connection",
     "close",
   ],
-  "rawTrailers": [],
+  "rawTrailers": Array [],
   "socket": Any<Object>,
   "statusCode": null,
   "statusMessage": null,
   "upgrade": false,
   "url": "/sources?pagination%5Bcount%5D=1",
   Symbol(kCapture): false,
-  Symbol(kHeaders): {
+  Symbol(kHeaders): Object {
     "accept": "application/json",
     "authorization": "Bearer 1ba60ccaae1c1a5230",
     "connection": "close",
@@ -455,7 +455,7 @@ exports[`Smoke tests sends correct request and parses response for list 1`] = `
 `;
 
 exports[`Smoke tests sends correct request and parses response for list 2`] = `
-{
+Object {
   "body": ListSources200Response1 {
     "data": ListSourcesV1Output {
       "pagination": Pagination {
@@ -464,13 +464,13 @@ exports[`Smoke tests sends correct request and parses response for list 2`] = `
         "previous": undefined,
         "totalEntries": 63,
       },
-      "sources": [
+      "sources": Array [
         SourceV1 {
           "enabled": true,
           "id": "source-id",
-          "labels": [],
+          "labels": Array [],
           "metadata": Metadata1 {
-            "categories": [
+            "categories": Array [
               "Website",
             ],
             "description": "This is our most flexible and powerful tracking system, using analytics.js.  Track and analyze information about your visitors and customers, and every action that they take, in any of our 140 integrations, business intelligence tools, or directly with SQL tools.",
@@ -482,67 +482,67 @@ exports[`Smoke tests sends correct request and parses response for list 2`] = `
               "mark": "https://cdn.filepicker.io/api/file/kBpmEoSSaakidAvoFmzd",
             },
             "name": "Javascript",
-            "options": [],
+            "options": Array [],
             "slug": "javascript",
           },
           "name": "my-test-source",
-          "settings": {},
+          "settings": Object {},
           "slug": "my-test-source",
           "workspaceId": "workspace-id",
-          "writeKeys": [
+          "writeKeys": Array [
             "write-key",
           ],
         },
       ],
     },
   },
-  "response": {
-    "body": {
-      "data": {
-        "pagination": {
+  "response": Object {
+    "body": Object {
+      "data": Object {
+        "pagination": Object {
           "current": "MA==",
           "next": "MQ==",
           "totalEntries": 63,
         },
-        "sources": [
-          {
+        "sources": Array [
+          Object {
             "enabled": true,
             "id": "source-id",
-            "labels": [],
-            "metadata": {
-              "categories": [
+            "labels": Array [],
+            "metadata": Object {
+              "categories": Array [
                 "Website",
               ],
               "description": "This is our most flexible and powerful tracking system, using analytics.js.  Track and analyze information about your visitors and customers, and every action that they take, in any of our 140 integrations, business intelligence tools, or directly with SQL tools.",
               "id": "IqDTy1TpoU",
               "isCloudEventSource": false,
-              "logos": {
+              "logos": Object {
                 "alt": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
                 "default": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
                 "mark": "https://cdn.filepicker.io/api/file/kBpmEoSSaakidAvoFmzd",
               },
               "name": "Javascript",
-              "options": [],
+              "options": Array [],
               "slug": "javascript",
             },
             "name": "my-test-source",
-            "settings": {},
+            "settings": Object {},
             "slug": "my-test-source",
             "workspaceId": "workspace-id",
-            "writeKeys": [
+            "writeKeys": Array [
               "write-key",
             ],
           },
         ],
       },
     },
-    "headers": {
+    "headers": Object {
       "connection": "close",
       "content-type": "application/json",
       "date": Any<String>,
       "transfer-encoding": "chunked",
     },
-    "request": {
+    "request": Object {
       "headers": undefined,
       "method": undefined,
       "uri": undefined,
@@ -553,10 +553,10 @@ exports[`Smoke tests sends correct request and parses response for list 2`] = `
 `;
 
 exports[`Smoke tests sends correct request and parses response for read 1`] = `
-{
+Object {
   "_consuming": false,
   "_dumped": false,
-  "_events": {
+  "_events": Object {
     "end": [Function],
   },
   "_eventsCount": 1,
@@ -589,7 +589,7 @@ exports[`Smoke tests sends correct request and parses response for read 1`] = `
     "multiAwaitDrain": false,
     "needReadable": false,
     "objectMode": false,
-    "pipes": [],
+    "pipes": Array [],
     "readableListening": false,
     "reading": false,
     "readingMore": true,
@@ -604,7 +604,7 @@ exports[`Smoke tests sends correct request and parses response for read 1`] = `
   "httpVersionMajor": 1,
   "httpVersionMinor": 1,
   "method": "GET",
-  "rawHeaders": [
+  "rawHeaders": Array [
     "Accept",
     "application/json",
     "Authorization",
@@ -614,14 +614,14 @@ exports[`Smoke tests sends correct request and parses response for read 1`] = `
     "Connection",
     "close",
   ],
-  "rawTrailers": [],
+  "rawTrailers": Array [],
   "socket": Any<Object>,
   "statusCode": null,
   "statusMessage": null,
   "upgrade": false,
   "url": "/sources/source-id",
   Symbol(kCapture): false,
-  Symbol(kHeaders): {
+  Symbol(kHeaders): Object {
     "accept": "application/json",
     "authorization": "Bearer 1ba60ccaae1c1a5230",
     "connection": "close",
@@ -635,15 +635,15 @@ exports[`Smoke tests sends correct request and parses response for read 1`] = `
 `;
 
 exports[`Smoke tests sends correct request and parses response for read 2`] = `
-{
+Object {
   "body": GetSource200Response1 {
     "data": GetSourceV1Output {
       "source": Source4 {
         "enabled": true,
         "id": "source-id",
-        "labels": [],
+        "labels": Array [],
         "metadata": Metadata1 {
-          "categories": [
+          "categories": Array [
             "Website",
           ],
           "description": "This is our most flexible and powerful tracking system, using analytics.js.  Track and analyze information about your visitors and customers, and every action that they take, in any of our 140 integrations, business intelligence tools, or directly with SQL tools.",
@@ -655,59 +655,59 @@ exports[`Smoke tests sends correct request and parses response for read 2`] = `
             "mark": "https://cdn.filepicker.io/api/file/kBpmEoSSaakidAvoFmzd",
           },
           "name": "Javascript",
-          "options": [],
+          "options": Array [],
           "slug": "javascript",
         },
         "name": "my-test-source",
-        "settings": {},
+        "settings": Object {},
         "slug": "my-test-source",
         "workspaceId": "workspace-id",
-        "writeKeys": [
+        "writeKeys": Array [
           "write-key",
         ],
       },
     },
   },
-  "response": {
-    "body": {
-      "data": {
-        "source": {
+  "response": Object {
+    "body": Object {
+      "data": Object {
+        "source": Object {
           "enabled": true,
           "id": "source-id",
-          "labels": [],
-          "metadata": {
-            "categories": [
+          "labels": Array [],
+          "metadata": Object {
+            "categories": Array [
               "Website",
             ],
             "description": "This is our most flexible and powerful tracking system, using analytics.js.  Track and analyze information about your visitors and customers, and every action that they take, in any of our 140 integrations, business intelligence tools, or directly with SQL tools.",
             "id": "IqDTy1TpoU",
             "isCloudEventSource": false,
-            "logos": {
+            "logos": Object {
               "alt": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
               "default": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
               "mark": "https://cdn.filepicker.io/api/file/kBpmEoSSaakidAvoFmzd",
             },
             "name": "Javascript",
-            "options": [],
+            "options": Array [],
             "slug": "javascript",
           },
           "name": "my-test-source",
-          "settings": {},
+          "settings": Object {},
           "slug": "my-test-source",
           "workspaceId": "workspace-id",
-          "writeKeys": [
+          "writeKeys": Array [
             "write-key",
           ],
         },
       },
     },
-    "headers": {
+    "headers": Object {
       "connection": "close",
       "content-type": "application/json",
       "date": Any<String>,
       "transfer-encoding": "chunked",
     },
-    "request": {
+    "request": Object {
       "headers": undefined,
       "method": undefined,
       "uri": undefined,
@@ -718,10 +718,10 @@ exports[`Smoke tests sends correct request and parses response for read 2`] = `
 `;
 
 exports[`Smoke tests sends correct request and parses response for update 1`] = `
-{
+Object {
   "_consuming": false,
   "_dumped": false,
-  "_events": {
+  "_events": Object {
     "end": [Function],
   },
   "_eventsCount": 1,
@@ -754,7 +754,7 @@ exports[`Smoke tests sends correct request and parses response for update 1`] = 
     "multiAwaitDrain": false,
     "needReadable": false,
     "objectMode": false,
-    "pipes": [],
+    "pipes": Array [],
     "readableListening": false,
     "reading": false,
     "readingMore": true,
@@ -769,7 +769,7 @@ exports[`Smoke tests sends correct request and parses response for update 1`] = 
   "httpVersionMajor": 1,
   "httpVersionMinor": 1,
   "method": "PATCH",
-  "rawHeaders": [
+  "rawHeaders": Array [
     "Accept",
     "application/vnd.segment.v1+json",
     "Authorization",
@@ -783,14 +783,14 @@ exports[`Smoke tests sends correct request and parses response for update 1`] = 
     "Connection",
     "close",
   ],
-  "rawTrailers": [],
+  "rawTrailers": Array [],
   "socket": Any<Object>,
   "statusCode": null,
   "statusMessage": null,
   "upgrade": false,
   "url": "/sources/source-id",
   Symbol(kCapture): false,
-  Symbol(kHeaders): {
+  Symbol(kHeaders): Object {
     "accept": "application/vnd.segment.v1+json",
     "authorization": "Bearer 1ba60ccaae1c1a5230",
     "connection": "close",
@@ -806,15 +806,15 @@ exports[`Smoke tests sends correct request and parses response for update 1`] = 
 `;
 
 exports[`Smoke tests sends correct request and parses response for update 2`] = `
-{
+Object {
   "body": UpdateSource200Response1 {
     "data": UpdateSourceV1Output {
       "source": Source6 {
         "enabled": false,
         "id": "source-id",
-        "labels": [],
+        "labels": Array [],
         "metadata": Metadata1 {
-          "categories": [
+          "categories": Array [
             "Website",
           ],
           "description": "This is our most flexible and powerful tracking system, using analytics.js.  Track and analyze information about your visitors and customers, and every action that they take, in any of our 140 integrations, business intelligence tools, or directly with SQL tools.",
@@ -826,59 +826,59 @@ exports[`Smoke tests sends correct request and parses response for update 2`] = 
             "mark": "https://cdn.filepicker.io/api/file/kBpmEoSSaakidAvoFmzd",
           },
           "name": "Javascript",
-          "options": [],
+          "options": Array [],
           "slug": "javascript",
         },
         "name": "My updated source",
-        "settings": {},
+        "settings": Object {},
         "slug": "my-test-source",
         "workspaceId": "workspace-id",
-        "writeKeys": [
+        "writeKeys": Array [
           "write-key",
         ],
       },
     },
   },
-  "response": {
-    "body": {
-      "data": {
-        "source": {
+  "response": Object {
+    "body": Object {
+      "data": Object {
+        "source": Object {
           "enabled": false,
           "id": "source-id",
-          "labels": [],
-          "metadata": {
-            "categories": [
+          "labels": Array [],
+          "metadata": Object {
+            "categories": Array [
               "Website",
             ],
             "description": "This is our most flexible and powerful tracking system, using analytics.js.  Track and analyze information about your visitors and customers, and every action that they take, in any of our 140 integrations, business intelligence tools, or directly with SQL tools.",
             "id": "IqDTy1TpoU",
             "isCloudEventSource": false,
-            "logos": {
+            "logos": Object {
               "alt": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
               "default": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
               "mark": "https://cdn.filepicker.io/api/file/kBpmEoSSaakidAvoFmzd",
             },
             "name": "Javascript",
-            "options": [],
+            "options": Array [],
             "slug": "javascript",
           },
           "name": "My updated source",
-          "settings": {},
+          "settings": Object {},
           "slug": "my-test-source",
           "workspaceId": "workspace-id",
-          "writeKeys": [
+          "writeKeys": Array [
             "write-key",
           ],
         },
       },
     },
-    "headers": {
+    "headers": Object {
       "connection": "close",
       "content-type": "application/json",
       "date": Any<String>,
       "transfer-encoding": "chunked",
     },
-    "request": {
+    "request": Object {
       "headers": undefined,
       "method": undefined,
       "uri": undefined,

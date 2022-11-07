@@ -1,8 +1,6 @@
-export declare class Contact {
-    'name': string;
-    'email': string;
-    'role': string;
-    'isPrimary': boolean;
+export declare class PropertyValueTransformationBeta {
+    'propertyPaths': Array<string>;
+    'propertyValue': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

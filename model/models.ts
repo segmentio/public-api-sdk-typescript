@@ -31,7 +31,6 @@ export * from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 export * from './breakdownBeta';
 export * from './commonSourceSettingsV1';
-export * from './contact';
 export * from './createCloudSourceRegulation200Response';
 export * from './createCloudSourceRegulationV1Input';
 export * from './createCloudSourceRegulationV1Output';
@@ -322,6 +321,7 @@ export * from './previewDestinationFilterV1';
 export * from './previewDestinationFilterV1Input';
 export * from './previewDestinationFilterV1Output';
 export * from './propertyRenameBeta';
+export * from './propertyValueTransformationBeta';
 export * from './regulation';
 export * from './regulationListEntryV1';
 export * from './removeFilterFromDestination200Response';
@@ -507,7 +507,6 @@ import { BatchQueryMessagingSubscriptionsForSpaceAlphaInput } from './batchQuery
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaOutput } from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 import { BreakdownBeta } from './breakdownBeta';
 import { CommonSourceSettingsV1 } from './commonSourceSettingsV1';
-import { Contact } from './contact';
 import { CreateCloudSourceRegulation200Response } from './createCloudSourceRegulation200Response';
 import { CreateCloudSourceRegulationV1Input } from './createCloudSourceRegulationV1Input';
 import { CreateCloudSourceRegulationV1Output } from './createCloudSourceRegulationV1Output';
@@ -798,6 +797,7 @@ import { PreviewDestinationFilterV1 } from './previewDestinationFilterV1';
 import { PreviewDestinationFilterV1Input } from './previewDestinationFilterV1Input';
 import { PreviewDestinationFilterV1Output } from './previewDestinationFilterV1Output';
 import { PropertyRenameBeta } from './propertyRenameBeta';
+import { PropertyValueTransformationBeta } from './propertyValueTransformationBeta';
 import { Regulation } from './regulation';
 import { RegulationListEntryV1 } from './regulationListEntryV1';
 import { RemoveFilterFromDestination200Response } from './removeFilterFromDestination200Response';
@@ -1115,7 +1115,6 @@ let typeMap: { [index: string]: any } = {
         BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
     BreakdownBeta: BreakdownBeta,
     CommonSourceSettingsV1: CommonSourceSettingsV1,
-    Contact: Contact,
     CreateCloudSourceRegulation200Response:
         CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: CreateCloudSourceRegulationV1Input,
@@ -1451,6 +1450,7 @@ let typeMap: { [index: string]: any } = {
     PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: PreviewDestinationFilterV1Output,
     PropertyRenameBeta: PropertyRenameBeta,
+    PropertyValueTransformationBeta: PropertyValueTransformationBeta,
     Regulation: Regulation,
     RegulationListEntryV1: RegulationListEntryV1,
     RemoveFilterFromDestination200Response:
