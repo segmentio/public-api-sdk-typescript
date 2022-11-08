@@ -12,7 +12,6 @@
 
 import { RequestFile } from './models';
 import { PropertyRenameBeta } from './propertyRenameBeta';
-import { PropertyValueTransformationBeta } from './propertyValueTransformationBeta';
 
 /**
  * The input to create a Transformation.
@@ -46,10 +45,6 @@ export class CreateTransformationBetaInput {
      * Optional array for renaming properties collected by your events.
      */
     'propertyRenames'?: Array<PropertyRenameBeta>;
-    /**
-     * Optional array for transforming properties and values collected by your events.
-     */
-    'propertyValueTransformations'?: Array<PropertyValueTransformationBeta>;
 
     static discriminator: string | undefined = undefined;
 
@@ -92,11 +87,6 @@ export class CreateTransformationBetaInput {
             name: 'propertyRenames',
             baseName: 'propertyRenames',
             type: 'Array<PropertyRenameBeta>',
-        },
-        {
-            name: 'propertyValueTransformations',
-            baseName: 'propertyValueTransformations',
-            type: 'Array<PropertyValueTransformationBeta>',
         },
     ];
 
