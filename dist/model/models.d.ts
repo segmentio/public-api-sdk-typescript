@@ -323,6 +323,7 @@ export * from './previewDestinationFilterV1';
 export * from './previewDestinationFilterV1Input';
 export * from './previewDestinationFilterV1Output';
 export * from './propertyRenameBeta';
+export * from './propertyValueTransformationBeta';
 export * from './regulation';
 export * from './regulationListEntryV1';
 export * from './removeFilterFromDestination200Response';
