@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { TrackSourceSettingsV1 } from './trackSourceSettingsV1';
 
 /**
  * Track settings.

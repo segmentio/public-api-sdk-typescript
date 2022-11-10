@@ -27,7 +27,7 @@ export class UpdateWarehouseV1Input {
     /**
      * A key-value object that contains instance-specific settings for a Warehouse.  Different kinds of Warehouses require different settings. The required and optional settings for a Warehouse are described in the `options` object of the associated Warehouse metadata.  You can find the full list of Warehouse metadata and related settings information in the `/catalog/warehouses` endpoint.
      */
-    'settings'?: any;
+    'settings'?: any | null;
 
     static discriminator: string | undefined = undefined;
 

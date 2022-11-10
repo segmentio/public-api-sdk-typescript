@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncScheduleV1Output';
 import { WarehouseAdvancedSyncV1 } from './warehouseAdvancedSyncV1';
 
 /**

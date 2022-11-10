@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { GetSourceV1Output } from './getSourceV1Output';
+import { GetSourceAlphaOutput } from './getSourceAlphaOutput';
 
 export class GetSource200Response1 {
-    'data'?: GetSourceV1Output;
+    'data'?: GetSourceAlphaOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -26,7 +26,7 @@ export class GetSource200Response1 {
         {
             name: 'data',
             baseName: 'data',
-            type: 'GetSourceV1Output',
+            type: 'GetSourceAlphaOutput',
         },
     ];
 

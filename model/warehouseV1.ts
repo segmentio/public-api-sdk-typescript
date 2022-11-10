@@ -33,7 +33,7 @@ export class WarehouseV1 {
     /**
      * The settings associated with this Warehouse.  Common settings are connection-related configuration used to connect to it, for example host, username, and port.
      */
-    'settings': any;
+    'settings': any | null;
 
     static discriminator: string | undefined = undefined;
 

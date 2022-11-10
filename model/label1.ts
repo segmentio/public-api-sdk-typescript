@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { LabelV1 } from './labelV1';
 
 /**
  * The new label to create in the Workspace.

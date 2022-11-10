@@ -31,7 +31,7 @@ export declare class TransformationsApi {
     setApiKey(key: TransformationsApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    createTransformationAlpha(CreateTransformationBetaInput: CreateTransformationBetaInput, options?: {
+    createTransformation(CreateTransformationBetaInput: CreateTransformationBetaInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -39,15 +39,7 @@ export declare class TransformationsApi {
         response: http.IncomingMessage;
         body: CreateTransformation200Response;
     }>;
-    createTransformationBeta(CreateTransformationBetaInput: CreateTransformationBetaInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateTransformation200Response;
-    }>;
-    deleteTransformationAlpha(transformationId: string, options?: {
+    deleteTransformation(transformationId: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -55,15 +47,7 @@ export declare class TransformationsApi {
         response: http.IncomingMessage;
         body: DeleteTransformation200Response;
     }>;
-    deleteTransformationBeta(transformationId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteTransformation200Response;
-    }>;
-    getTransformationAlpha(transformationId: string, options?: {
+    getTransformation(transformationId: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -71,15 +55,7 @@ export declare class TransformationsApi {
         response: http.IncomingMessage;
         body: GetTransformation200Response;
     }>;
-    getTransformationBeta(transformationId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetTransformation200Response;
-    }>;
-    listTransformationsAlpha(pagination: PaginationInput, options?: {
+    listTransformations(pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -87,23 +63,7 @@ export declare class TransformationsApi {
         response: http.IncomingMessage;
         body: ListTransformations200Response;
     }>;
-    listTransformationsBeta(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListTransformations200Response;
-    }>;
-    updateTransformationAlpha(transformationId: string, UpdateTransformationBetaInput: UpdateTransformationBetaInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateTransformation200Response;
-    }>;
-    updateTransformationBeta(transformationId: string, UpdateTransformationBetaInput: UpdateTransformationBetaInput, options?: {
+    updateTransformation(transformationId: string, UpdateTransformationBetaInput: UpdateTransformationBetaInput, options?: {
         headers: {
             [name: string]: string;
         };

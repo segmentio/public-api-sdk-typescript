@@ -4,7 +4,7 @@ export declare class Warehouse1 {
     'metadata': Metadata2;
     'workspaceId': string;
     'enabled': boolean;
-    'settings': any;
+    'settings': any | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

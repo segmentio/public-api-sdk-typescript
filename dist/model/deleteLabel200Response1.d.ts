@@ -1,6 +1,6 @@
-import { DeleteLabelV1Output } from './deleteLabelV1Output';
+import { DeleteLabelAlphaOutput } from './deleteLabelAlphaOutput';
 export declare class DeleteLabel200Response1 {
-    'data'?: DeleteLabelV1Output;
+    'data'?: DeleteLabelAlphaOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

@@ -35,7 +35,7 @@ export class CreateSourceAlphaInput {
     /**
      * A key-value object that contains instance-specific settings for the Source.
      */
-    'settings'?: any;
+    'settings'?: any | null;
 
     static discriminator: string | undefined = undefined;
 

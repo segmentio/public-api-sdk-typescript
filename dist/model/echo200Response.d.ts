@@ -1,6 +1,6 @@
-import { EchoAlphaOutput } from './echoAlphaOutput';
+import { EchoV1Output } from './echoV1Output';
 export declare class Echo200Response {
-    'data'?: EchoAlphaOutput;
+    'data'?: EchoV1Output;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

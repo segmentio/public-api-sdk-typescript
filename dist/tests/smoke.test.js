@@ -108,7 +108,7 @@ describe('Smoke tests', function () {
                     })];
                 case 1:
                     mockedCreate = _a.sent();
-                    return [4, mockedCreate.createSourceCurrent({
+                    return [4, mockedCreate.createSource({
                             enabled: true,
                             metadataId: 'IqDTy1TpoU',
                             slug: 'my-test-source',
@@ -161,7 +161,7 @@ describe('Smoke tests', function () {
                     })];
                 case 1:
                     mockedRead = _a.sent();
-                    return [4, mockedRead.getSourceCurrent('source-id')];
+                    return [4, mockedRead.getSource('source-id')];
                 case 2:
                     resp = _a.sent();
                     expect(resp).toMatchSnapshot({
@@ -217,7 +217,7 @@ describe('Smoke tests', function () {
                     })];
                 case 1:
                     mockedList = _a.sent();
-                    return [4, mockedList.listSourcesCurrent({ count: 1 })];
+                    return [4, mockedList.listSources({ count: 1 })];
                 case 2:
                     resp = _a.sent();
                     expect(resp).toMatchSnapshot({
@@ -266,7 +266,7 @@ describe('Smoke tests', function () {
                     })];
                 case 1:
                     mockedUpdate = _a.sent();
-                    return [4, mockedUpdate.updateSourceCurrent('source-id', {
+                    return [4, mockedUpdate.updateSource('source-id', {
                             name: 'My updated source',
                             enabled: false,
                         })];
@@ -295,7 +295,7 @@ describe('Smoke tests', function () {
                     })];
                 case 1:
                     mockedDelete = _a.sent();
-                    return [4, mockedDelete.deleteSourceCurrent('my-source')];
+                    return [4, mockedDelete.deleteSource('my-source')];
                 case 2:
                     resp = _a.sent();
                     expect(resp).toMatchSnapshot({
@@ -325,7 +325,7 @@ describe('Smoke tests', function () {
                     }, 404)];
                 case 1:
                     mockedDelete = _a.sent();
-                    resp = mockedDelete.deleteSourceCurrent('404');
+                    resp = mockedDelete.deleteSource('404');
                     return [4, expect(resp).rejects.toMatchSnapshot()];
                 case 2:
                     _a.sent();

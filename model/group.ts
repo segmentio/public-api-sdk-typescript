@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { GroupSourceSettingsV1 } from './groupSourceSettingsV1';
 
 /**
  * Group settings.

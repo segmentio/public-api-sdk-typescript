@@ -13,6 +13,7 @@
 import { RequestFile } from './models';
 import { IntegrationOptionBeta } from './integrationOptionBeta';
 import { Logos1 } from './logos1';
+import { SourceMetadataV1 } from './sourceMetadataV1';
 
 /**
  * The catalog item matched by id.

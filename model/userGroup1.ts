@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { PermissionV1 } from './permissionV1';
+import { UserGroupV1 } from './userGroupV1';
 
 /**
  * The updated the user group.

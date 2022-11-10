@@ -36,7 +36,7 @@ export declare class IAMUsersApi {
     setApiKey(key: IAMUsersApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    addPermissionsToUserAlpha(userId: string, AddPermissionsToUserV1Input: AddPermissionsToUserV1Input, options?: {
+    addPermissionsToUser(userId: string, AddPermissionsToUserV1Input: AddPermissionsToUserV1Input, options?: {
         headers: {
             [name: string]: string;
         };
@@ -44,31 +44,7 @@ export declare class IAMUsersApi {
         response: http.IncomingMessage;
         body: AddPermissionsToUser200Response;
     }>;
-    addPermissionsToUserBeta(userId: string, AddPermissionsToUserV1Input: AddPermissionsToUserV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: AddPermissionsToUser200Response;
-    }>;
-    addPermissionsToUserCurrent(userId: string, AddPermissionsToUserV1Input: AddPermissionsToUserV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: AddPermissionsToUser200Response;
-    }>;
-    addPermissionsToUserV1(userId: string, AddPermissionsToUserV1Input: AddPermissionsToUserV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: AddPermissionsToUser200Response;
-    }>;
-    createInvitesAlpha(CreateInvitesV1Input: CreateInvitesV1Input, options?: {
+    createInvites(CreateInvitesV1Input: CreateInvitesV1Input, options?: {
         headers: {
             [name: string]: string;
         };
@@ -76,31 +52,7 @@ export declare class IAMUsersApi {
         response: http.IncomingMessage;
         body: CreateInvites200Response;
     }>;
-    createInvitesBeta(CreateInvitesV1Input: CreateInvitesV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateInvites200Response;
-    }>;
-    createInvitesCurrent(CreateInvitesV1Input: CreateInvitesV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateInvites200Response;
-    }>;
-    createInvitesV1(CreateInvitesV1Input: CreateInvitesV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateInvites200Response;
-    }>;
-    deleteInvitesAlpha(emails: Array<string>, options?: {
+    deleteInvites(emails: Array<string>, options?: {
         headers: {
             [name: string]: string;
         };
@@ -108,31 +60,7 @@ export declare class IAMUsersApi {
         response: http.IncomingMessage;
         body: DeleteInvites200Response;
     }>;
-    deleteInvitesBeta(emails: Array<string>, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteInvites200Response;
-    }>;
-    deleteInvitesCurrent(emails: Array<string>, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteInvites200Response;
-    }>;
-    deleteInvitesV1(emails: Array<string>, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteInvites200Response;
-    }>;
-    deleteUsersAlpha(userIds: Array<string>, options?: {
+    deleteUsers(userIds: Array<string>, options?: {
         headers: {
             [name: string]: string;
         };
@@ -140,31 +68,7 @@ export declare class IAMUsersApi {
         response: http.IncomingMessage;
         body: DeleteUsers200Response;
     }>;
-    deleteUsersBeta(userIds: Array<string>, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteUsers200Response;
-    }>;
-    deleteUsersCurrent(userIds: Array<string>, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteUsers200Response;
-    }>;
-    deleteUsersV1(userIds: Array<string>, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteUsers200Response;
-    }>;
-    getUserAlpha(userId: string, options?: {
+    getUser(userId: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -172,31 +76,7 @@ export declare class IAMUsersApi {
         response: http.IncomingMessage;
         body: GetUser200Response;
     }>;
-    getUserBeta(userId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetUser200Response;
-    }>;
-    getUserCurrent(userId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetUser200Response;
-    }>;
-    getUserV1(userId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetUser200Response;
-    }>;
-    listInvitesAlpha(pagination: PaginationInput, options?: {
+    listInvites(pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -204,31 +84,7 @@ export declare class IAMUsersApi {
         response: http.IncomingMessage;
         body: ListInvites200Response;
     }>;
-    listInvitesBeta(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListInvites200Response;
-    }>;
-    listInvitesCurrent(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListInvites200Response;
-    }>;
-    listInvitesV1(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListInvites200Response;
-    }>;
-    listUserGroupsFromUserAlpha(userId: string, pagination: PaginationInput, options?: {
+    listUserGroupsFromUser(userId: string, pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -236,31 +92,7 @@ export declare class IAMUsersApi {
         response: http.IncomingMessage;
         body: ListUserGroupsFromUser200Response;
     }>;
-    listUserGroupsFromUserBeta(userId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListUserGroupsFromUser200Response;
-    }>;
-    listUserGroupsFromUserCurrent(userId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListUserGroupsFromUser200Response;
-    }>;
-    listUserGroupsFromUserV1(userId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListUserGroupsFromUser200Response;
-    }>;
-    listUsersAlpha(pagination: PaginationInput, options?: {
+    listUsers(pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -268,55 +100,7 @@ export declare class IAMUsersApi {
         response: http.IncomingMessage;
         body: ListUsers200Response;
     }>;
-    listUsersBeta(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListUsers200Response;
-    }>;
-    listUsersCurrent(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListUsers200Response;
-    }>;
-    listUsersV1(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListUsers200Response;
-    }>;
-    replacePermissionsForUserAlpha(userId: string, ReplacePermissionsForUserV1Input: ReplacePermissionsForUserV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ReplacePermissionsForUser200Response;
-    }>;
-    replacePermissionsForUserBeta(userId: string, ReplacePermissionsForUserV1Input: ReplacePermissionsForUserV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ReplacePermissionsForUser200Response;
-    }>;
-    replacePermissionsForUserCurrent(userId: string, ReplacePermissionsForUserV1Input: ReplacePermissionsForUserV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ReplacePermissionsForUser200Response;
-    }>;
-    replacePermissionsForUserV1(userId: string, ReplacePermissionsForUserV1Input: ReplacePermissionsForUserV1Input, options?: {
+    replacePermissionsForUser(userId: string, ReplacePermissionsForUserV1Input: ReplacePermissionsForUserV1Input, options?: {
         headers: {
             [name: string]: string;
         };

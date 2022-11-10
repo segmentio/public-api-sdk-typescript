@@ -12,7 +12,7 @@ var ReplaceLabelsInSource200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'ReplaceLabelsInSourceAlphaOutput',
+            type: 'ReplaceLabelsInSourceV1Output',
         },
     ];
     return ReplaceLabelsInSource200Response;

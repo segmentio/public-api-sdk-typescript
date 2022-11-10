@@ -13,6 +13,7 @@
 import { RequestFile } from './models';
 import { Group } from './group';
 import { Identify } from './identify';
+import { SourceSettingsOutputV1 } from './sourceSettingsOutputV1';
 import { Track } from './track';
 
 /**

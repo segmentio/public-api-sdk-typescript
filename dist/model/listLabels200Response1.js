@@ -12,7 +12,7 @@ var ListLabels200Response1 = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'ListLabelsV1Output',
+            type: 'ListLabelsAlphaOutput',
         },
     ];
     return ListLabels200Response1;

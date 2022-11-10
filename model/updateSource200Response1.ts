@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { UpdateSourceV1Output } from './updateSourceV1Output';
+import { UpdateSourceAlphaOutput } from './updateSourceAlphaOutput';
 
 export class UpdateSource200Response1 {
-    'data'?: UpdateSourceV1Output;
+    'data'?: UpdateSourceAlphaOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -26,7 +26,7 @@ export class UpdateSource200Response1 {
         {
             name: 'data',
             baseName: 'data',
-            type: 'UpdateSourceV1Output',
+            type: 'UpdateSourceAlphaOutput',
         },
     ];
 

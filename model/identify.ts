@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { IdentifySourceSettingsV1 } from './identifySourceSettingsV1';
 
 /**
  * Identify settings.

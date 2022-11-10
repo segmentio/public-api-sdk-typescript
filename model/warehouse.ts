@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { Metadata2 } from './metadata2';
+import { WarehouseV1 } from './warehouseV1';
 
 /**
  * The returned Warehouse object.
@@ -33,7 +34,7 @@ export class Warehouse {
     /**
      * The settings associated with this Warehouse.  Common settings are connection-related configuration used to connect to it, for example host, username, and port.
      */
-    'settings': any;
+    'settings': any | null;
 
     static discriminator: string | undefined = undefined;
 

@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { ListLabelsAlphaOutput } from './listLabelsAlphaOutput';
+import { ListLabelsV1Output } from './listLabelsV1Output';
 
 export class ListLabels200Response {
-    'data'?: ListLabelsAlphaOutput;
+    'data'?: ListLabelsV1Output;
 
     static discriminator: string | undefined = undefined;
 
@@ -26,7 +26,7 @@ export class ListLabels200Response {
         {
             name: 'data',
             baseName: 'data',
-            type: 'ListLabelsAlphaOutput',
+            type: 'ListLabelsV1Output',
         },
     ];
 

@@ -31,7 +31,7 @@ export class UpdateSourceAlphaInput {
     /**
      * A key-value object that contains instance-specific settings for the Source.  Different kinds of Sources require different kinds of input. The settings input for a Source comes from the `options` object associated with this instance of a Source.  You can find the full list of required settings by accessing the Sources catalog endpoint under `/catalog/sources`.
      */
-    'settings'?: any;
+    'settings'?: any | null;
 
     static discriminator: string | undefined = undefined;
 

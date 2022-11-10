@@ -1,6 +1,6 @@
-import { AddLabelsToSourceAlphaOutput } from './addLabelsToSourceAlphaOutput';
+import { AddLabelsToSourceV1Output } from './addLabelsToSourceV1Output';
 export declare class AddLabelsToSource200Response {
-    'data'?: AddLabelsToSourceAlphaOutput;
+    'data'?: AddLabelsToSourceV1Output;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

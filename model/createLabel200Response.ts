@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { CreateLabelAlphaOutput } from './createLabelAlphaOutput';
+import { CreateLabelV1Output } from './createLabelV1Output';
 
 export class CreateLabel200Response {
-    'data'?: CreateLabelAlphaOutput;
+    'data'?: CreateLabelV1Output;
 
     static discriminator: string | undefined = undefined;
 
@@ -26,7 +26,7 @@ export class CreateLabel200Response {
         {
             name: 'data',
             baseName: 'data',
-            type: 'CreateLabelAlphaOutput',
+            type: 'CreateLabelV1Output',
         },
     ];
 

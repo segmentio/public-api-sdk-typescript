@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { DestinationFilterActionV1 } from './destinationFilterActionV1';
+import { PreviewDestinationFilterV1 } from './previewDestinationFilterV1';
 
 /**
  * The filter to preview.

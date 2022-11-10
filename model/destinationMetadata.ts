@@ -15,6 +15,7 @@ import { Contact } from './contact';
 import { DestinationMetadataActionV1 } from './destinationMetadataActionV1';
 import { DestinationMetadataComponentV1 } from './destinationMetadataComponentV1';
 import { DestinationMetadataSubscriptionPresetV1 } from './destinationMetadataSubscriptionPresetV1';
+import { DestinationMetadataV1 } from './destinationMetadataV1';
 import { IntegrationOptionBeta } from './integrationOptionBeta';
 import { Logos } from './logos';
 import { SupportedFeatures } from './supportedFeatures';

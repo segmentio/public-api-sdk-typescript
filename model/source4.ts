@@ -13,6 +13,7 @@
 import { RequestFile } from './models';
 import { LabelV1 } from './labelV1';
 import { Metadata1 } from './metadata1';
+import { SourceV1 } from './sourceV1';
 
 /**
  * The returned Source object.
@@ -46,7 +47,7 @@ export class Source4 {
     /**
      * The settings associated with the Source.
      */
-    'settings'?: any;
+    'settings'?: any | null;
     /**
      * A list of labels applied to the Source.
      */

@@ -43,7 +43,7 @@ export class DestinationSubscription {
     /**
      * The customer settings for action fields.
      */
-    'settings': any;
+    'settings': any | null;
     /**
      * FQL string that describes what events should trigger a Destination action.
      */

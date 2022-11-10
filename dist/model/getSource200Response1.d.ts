@@ -1,6 +1,6 @@
-import { GetSourceV1Output } from './getSourceV1Output';
+import { GetSourceAlphaOutput } from './getSourceAlphaOutput';
 export declare class GetSource200Response1 {
-    'data'?: GetSourceV1Output;
+    'data'?: GetSourceAlphaOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

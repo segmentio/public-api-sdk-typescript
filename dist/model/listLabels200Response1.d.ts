@@ -1,6 +1,6 @@
-import { ListLabelsV1Output } from './listLabelsV1Output';
+import { ListLabelsAlphaOutput } from './listLabelsAlphaOutput';
 export declare class ListLabels200Response1 {
-    'data'?: ListLabelsV1Output;
+    'data'?: ListLabelsAlphaOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

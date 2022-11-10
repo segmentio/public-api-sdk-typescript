@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { DestinationMetadataFeaturesV1 } from './destinationMetadataFeaturesV1';
 
 /**
  * Features that this Destination supports.  Config API note: holds `browserUnbundling` fields.

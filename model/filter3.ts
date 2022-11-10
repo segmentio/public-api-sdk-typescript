@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { DestinationFilterActionV1 } from './destinationFilterActionV1';
+import { DestinationFilterV1 } from './destinationFilterV1';
 
 /**
  * The updated Destination filter.

@@ -12,7 +12,7 @@ var AddLabelsToSource200Response1 = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'AddLabelsToSourceV1Output',
+            type: 'AddLabelsToSourceAlphaOutput',
         },
     ];
     return AddLabelsToSource200Response1;

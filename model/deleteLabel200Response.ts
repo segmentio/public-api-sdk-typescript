@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { DeleteLabelAlphaOutput } from './deleteLabelAlphaOutput';
+import { DeleteLabelV1Output } from './deleteLabelV1Output';
 
 export class DeleteLabel200Response {
-    'data'?: DeleteLabelAlphaOutput;
+    'data'?: DeleteLabelV1Output;
 
     static discriminator: string | undefined = undefined;
 
@@ -26,7 +26,7 @@ export class DeleteLabel200Response {
         {
             name: 'data',
             baseName: 'data',
-            type: 'DeleteLabelAlphaOutput',
+            type: 'DeleteLabelV1Output',
         },
     ];
 

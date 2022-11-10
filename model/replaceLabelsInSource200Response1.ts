@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { ReplaceLabelsInSourceV1Output } from './replaceLabelsInSourceV1Output';
+import { ReplaceLabelsInSourceAlphaOutput } from './replaceLabelsInSourceAlphaOutput';
 
 export class ReplaceLabelsInSource200Response1 {
-    'data'?: ReplaceLabelsInSourceV1Output;
+    'data'?: ReplaceLabelsInSourceAlphaOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -26,7 +26,7 @@ export class ReplaceLabelsInSource200Response1 {
         {
             name: 'data',
             baseName: 'data',
-            type: 'ReplaceLabelsInSourceV1Output',
+            type: 'ReplaceLabelsInSourceAlphaOutput',
         },
     ];
 
