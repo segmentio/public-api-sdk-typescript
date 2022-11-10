@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { DestinationSubscriptionUpdateInput } from './destinationSubscriptionUpdateInput';
 
 /**
  * A set of valid Destination input params required for updating.
@@ -31,7 +32,7 @@ export class Input {
     /**
      * The fields used for configuring this action.
      */
-    'settings'?: any;
+    'settings'?: any | null;
 
     static discriminator: string | undefined = undefined;
 

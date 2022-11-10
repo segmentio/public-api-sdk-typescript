@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { LabelV1 } from './labelV1';
 
 /**
  * The newly created label.

@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { PaginationOutput } from './paginationOutput';
 
 /**
  * Information about the pagination of this response.

@@ -141,7 +141,7 @@ exports[`Smoke tests sends correct request and parses response for create 1`] = 
   "method": "POST",
   "rawHeaders": [
     "Accept",
-    "application/vnd.segment.v1+json",
+    "application/json",
     "Authorization",
     "Bearer 1ba60ccaae1c1a5230",
     "host",
@@ -161,7 +161,7 @@ exports[`Smoke tests sends correct request and parses response for create 1`] = 
   "url": "/sources",
   Symbol(kCapture): false,
   Symbol(kHeaders): {
-    "accept": "application/vnd.segment.v1+json",
+    "accept": "application/json",
     "authorization": "Bearer 1ba60ccaae1c1a5230",
     "connection": "close",
     "content-length": "66",
@@ -177,7 +177,7 @@ exports[`Smoke tests sends correct request and parses response for create 1`] = 
 
 exports[`Smoke tests sends correct request and parses response for create 2`] = `
 {
-  "body": CreateSource200Response1 {
+  "body": CreateSource200Response {
     "data": CreateSourceV1Output {
       "source": Source5 {
         "enabled": true,
@@ -345,7 +345,7 @@ exports[`Smoke tests sends correct request and parses response for delete 1`] = 
 
 exports[`Smoke tests sends correct request and parses response for delete 2`] = `
 {
-  "body": DeleteSource200Response1 {
+  "body": DeleteSource200Response {
     "data": DeleteSourceV1Output {
       "status": "SUCCESS",
     },
@@ -456,7 +456,7 @@ exports[`Smoke tests sends correct request and parses response for list 1`] = `
 
 exports[`Smoke tests sends correct request and parses response for list 2`] = `
 {
-  "body": ListSources200Response1 {
+  "body": ListSources200Response {
     "data": ListSourcesV1Output {
       "pagination": Pagination {
         "current": "MA==",
@@ -636,7 +636,7 @@ exports[`Smoke tests sends correct request and parses response for read 1`] = `
 
 exports[`Smoke tests sends correct request and parses response for read 2`] = `
 {
-  "body": GetSource200Response1 {
+  "body": GetSource200Response {
     "data": GetSourceV1Output {
       "source": Source4 {
         "enabled": true,
@@ -771,7 +771,7 @@ exports[`Smoke tests sends correct request and parses response for update 1`] = 
   "method": "PATCH",
   "rawHeaders": [
     "Accept",
-    "application/vnd.segment.v1+json",
+    "application/json",
     "Authorization",
     "Bearer 1ba60ccaae1c1a5230",
     "host",
@@ -791,7 +791,7 @@ exports[`Smoke tests sends correct request and parses response for update 1`] = 
   "url": "/sources/source-id",
   Symbol(kCapture): false,
   Symbol(kHeaders): {
-    "accept": "application/vnd.segment.v1+json",
+    "accept": "application/json",
     "authorization": "Bearer 1ba60ccaae1c1a5230",
     "connection": "close",
     "content-length": "44",
@@ -807,7 +807,7 @@ exports[`Smoke tests sends correct request and parses response for update 1`] = 
 
 exports[`Smoke tests sends correct request and parses response for update 2`] = `
 {
-  "body": UpdateSource200Response1 {
+  "body": UpdateSource200Response {
     "data": UpdateSourceV1Output {
       "source": Source6 {
         "enabled": false,

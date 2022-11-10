@@ -46,7 +46,7 @@ export class SourceAlpha {
     /**
      * The settings associated with the Source.
      */
-    'settings'?: any;
+    'settings'?: any | null;
     /**
      * A list of labels applied to the Source.
      */

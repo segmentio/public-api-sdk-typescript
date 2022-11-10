@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { TrackingPlanV1 } from './trackingPlanV1';
 
 /**
  * The requested Tracking Plan.

@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { EdgeFunctionsAlpha } from './edgeFunctionsAlpha';
 
 /**
  * The latest version of Edge Function bundle.

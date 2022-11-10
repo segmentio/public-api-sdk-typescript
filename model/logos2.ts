@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { LogosBeta } from './logosBeta';
 
 /**
  * Logo information for this object.

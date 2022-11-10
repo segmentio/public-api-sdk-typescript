@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { CreateSourceAlphaOutput } from './createSourceAlphaOutput';
+import { CreateSourceV1Output } from './createSourceV1Output';
 
 export class CreateSource200Response {
-    'data'?: CreateSourceAlphaOutput;
+    'data'?: CreateSourceV1Output;
 
     static discriminator: string | undefined = undefined;
 
@@ -26,7 +26,7 @@ export class CreateSource200Response {
         {
             name: 'data',
             baseName: 'data',
-            type: 'CreateSourceAlphaOutput',
+            type: 'CreateSourceV1Output',
         },
     ];
 

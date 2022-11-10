@@ -2,7 +2,7 @@ export declare class Input {
     'name'?: string;
     'trigger'?: string;
     'enabled'?: boolean;
-    'settings'?: any;
+    'settings'?: any | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

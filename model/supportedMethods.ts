@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { DestinationMetadataMethodsV1 } from './destinationMetadataMethodsV1';
 
 /**
  * Methods that this Destination supports.  Config API note: equal to `methods`.

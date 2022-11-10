@@ -139,10 +139,11 @@ export class EdgeFunctionsApi {
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
@@ -269,10 +270,11 @@ export class EdgeFunctionsApi {
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
@@ -385,10 +387,11 @@ export class EdgeFunctionsApi {
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
@@ -501,10 +504,11 @@ export class EdgeFunctionsApi {
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 

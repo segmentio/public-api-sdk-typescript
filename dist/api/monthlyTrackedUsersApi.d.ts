@@ -26,7 +26,7 @@ export declare class MonthlyTrackedUsersApi {
     setApiKey(key: MonthlyTrackedUsersApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    getDailyPerSourceMTUUsageAlpha(period: string, pagination: PaginationInput, options?: {
+    getDailyPerSourceMTUUsage(period: string, pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -34,55 +34,7 @@ export declare class MonthlyTrackedUsersApi {
         response: http.IncomingMessage;
         body: GetDailyPerSourceMTUUsage200Response;
     }>;
-    getDailyPerSourceMTUUsageBeta(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyPerSourceMTUUsage200Response;
-    }>;
-    getDailyPerSourceMTUUsageCurrent(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyPerSourceMTUUsage200Response;
-    }>;
-    getDailyPerSourceMTUUsageV1(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyPerSourceMTUUsage200Response;
-    }>;
-    getDailyWorkspaceMTUUsageAlpha(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyWorkspaceMTUUsage200Response;
-    }>;
-    getDailyWorkspaceMTUUsageBeta(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyWorkspaceMTUUsage200Response;
-    }>;
-    getDailyWorkspaceMTUUsageCurrent(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyWorkspaceMTUUsage200Response;
-    }>;
-    getDailyWorkspaceMTUUsageV1(period: string, pagination: PaginationInput, options?: {
+    getDailyWorkspaceMTUUsage(period: string, pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

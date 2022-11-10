@@ -1,6 +1,6 @@
-import { UpdateSourceAlphaOutput } from './updateSourceAlphaOutput';
+import { UpdateSourceV1Output } from './updateSourceV1Output';
 export declare class UpdateSource200Response {
-    'data'?: UpdateSourceAlphaOutput;
+    'data'?: UpdateSourceV1Output;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

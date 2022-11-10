@@ -31,7 +31,7 @@ export class CreateSourceV1Input {
     /**
      * A key-value object that contains instance-specific settings for the Source.
      */
-    'settings'?: any;
+    'settings'?: any | null;
 
     static discriminator: string | undefined = undefined;
 

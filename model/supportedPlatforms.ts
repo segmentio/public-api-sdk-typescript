@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { DestinationMetadataPlatformsV1 } from './destinationMetadataPlatformsV1';
 
 /**
  * Platforms from which the Destination receives events.  Config API note: equal to `platforms`.

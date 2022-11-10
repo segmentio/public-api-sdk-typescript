@@ -32,7 +32,7 @@ export declare class FunctionsApi {
     setApiKey(key: FunctionsApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    createFunctionAlpha(CreateFunctionV1Input: CreateFunctionV1Input, options?: {
+    createFunction(CreateFunctionV1Input: CreateFunctionV1Input, options?: {
         headers: {
             [name: string]: string;
         };
@@ -40,23 +40,7 @@ export declare class FunctionsApi {
         response: http.IncomingMessage;
         body: CreateFunction200Response;
     }>;
-    createFunctionBeta(CreateFunctionV1Input: CreateFunctionV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateFunction200Response;
-    }>;
-    createFunctionCurrent(CreateFunctionV1Input: CreateFunctionV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateFunction200Response;
-    }>;
-    createFunctionDeploymentAlpha(functionId: string, options?: {
+    createFunctionDeployment(functionId: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -64,39 +48,7 @@ export declare class FunctionsApi {
         response: http.IncomingMessage;
         body: CreateFunctionDeployment200Response;
     }>;
-    createFunctionDeploymentBeta(functionId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateFunctionDeployment200Response;
-    }>;
-    createFunctionDeploymentCurrent(functionId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateFunctionDeployment200Response;
-    }>;
-    createFunctionDeploymentV1(functionId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateFunctionDeployment200Response;
-    }>;
-    createFunctionV1(CreateFunctionV1Input: CreateFunctionV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateFunction200Response;
-    }>;
-    deleteFunctionAlpha(functionId: string, options?: {
+    deleteFunction(functionId: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -104,31 +56,7 @@ export declare class FunctionsApi {
         response: http.IncomingMessage;
         body: DeleteFunction200Response;
     }>;
-    deleteFunctionBeta(functionId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteFunction200Response;
-    }>;
-    deleteFunctionCurrent(functionId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteFunction200Response;
-    }>;
-    deleteFunctionV1(functionId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteFunction200Response;
-    }>;
-    getFunctionAlpha(functionId: string, options?: {
+    getFunction(functionId: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -136,31 +64,7 @@ export declare class FunctionsApi {
         response: http.IncomingMessage;
         body: GetFunction200Response;
     }>;
-    getFunctionBeta(functionId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetFunction200Response;
-    }>;
-    getFunctionCurrent(functionId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetFunction200Response;
-    }>;
-    getFunctionV1(functionId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetFunction200Response;
-    }>;
-    listFunctionsAlpha(pagination: PaginationInput, resourceType: 'DESTINATION' | 'SOURCE', options?: {
+    listFunctions(pagination: PaginationInput, resourceType: 'DESTINATION' | 'SOURCE', options?: {
         headers: {
             [name: string]: string;
         };
@@ -168,55 +72,7 @@ export declare class FunctionsApi {
         response: http.IncomingMessage;
         body: ListFunctions200Response;
     }>;
-    listFunctionsBeta(pagination: PaginationInput, resourceType: 'DESTINATION' | 'SOURCE', options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListFunctions200Response;
-    }>;
-    listFunctionsCurrent(pagination: PaginationInput, resourceType: 'DESTINATION' | 'SOURCE', options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListFunctions200Response;
-    }>;
-    listFunctionsV1(pagination: PaginationInput, resourceType: 'DESTINATION' | 'SOURCE', options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListFunctions200Response;
-    }>;
-    updateFunctionAlpha(functionId: string, UpdateFunctionV1Input: UpdateFunctionV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateFunction200Response;
-    }>;
-    updateFunctionBeta(functionId: string, UpdateFunctionV1Input: UpdateFunctionV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateFunction200Response;
-    }>;
-    updateFunctionCurrent(functionId: string, UpdateFunctionV1Input: UpdateFunctionV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateFunction200Response;
-    }>;
-    updateFunctionV1(functionId: string, UpdateFunctionV1Input: UpdateFunctionV1Input, options?: {
+    updateFunction(functionId: string, UpdateFunctionV1Input: UpdateFunctionV1Input, options?: {
         headers: {
             [name: string]: string;
         };

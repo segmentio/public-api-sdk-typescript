@@ -12,7 +12,7 @@ var GetSource200Response1 = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'GetSourceV1Output',
+            type: 'GetSourceAlphaOutput',
         },
     ];
     return GetSource200Response1;

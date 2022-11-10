@@ -12,7 +12,7 @@ var DeleteSource200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'DeleteSourceAlphaOutput',
+            type: 'DeleteSourceV1Output',
         },
     ];
     return DeleteSource200Response;

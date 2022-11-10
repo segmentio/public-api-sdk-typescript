@@ -122,7 +122,7 @@ export class DestinationFiltersApi {
      * @param destinationId
      * @param CreateFilterForDestinationV1Input
      */
-    public async createFilterForDestinationAlpha(
+    public async createFilterForDestination(
         destinationId: string,
         CreateFilterForDestinationV1Input: CreateFilterForDestinationV1Input,
         options: { headers: { [name: string]: string } } = { headers: {} }
@@ -142,560 +142,33 @@ export class DestinationFiltersApi {
             this._defaultHeaders
         );
         const produces = [
-            'application/vnd.segment.v1alpha+json',
+            'application/vnd.segment.v1+json',
             'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling createFilterForDestinationAlpha.'
-            );
-        }
-
-        // verify required parameter 'CreateFilterForDestinationV1Input' is not null or undefined
-        if (
-            CreateFilterForDestinationV1Input === null ||
-            CreateFilterForDestinationV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter CreateFilterForDestinationV1Input was null or undefined when calling createFilterForDestinationAlpha.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                CreateFilterForDestinationV1Input,
-                'CreateFilterForDestinationV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: CreateFilterForDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'CreateFilterForDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Creates a filter in a Destination.    When called, this endpoint may generate the `Destination Filter Created` [Audit Trail](/tag/Audit-Trail) event.
-     * @summary Create Filter for Destination
-     * @param destinationId
-     * @param CreateFilterForDestinationV1Input
-     */
-    public async createFilterForDestinationBeta(
-        destinationId: string,
-        CreateFilterForDestinationV1Input: CreateFilterForDestinationV1Input,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: CreateFilterForDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destination/{destinationId}/filters'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
             'application/vnd.segment.v1beta+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling createFilterForDestinationBeta.'
-            );
-        }
-
-        // verify required parameter 'CreateFilterForDestinationV1Input' is not null or undefined
-        if (
-            CreateFilterForDestinationV1Input === null ||
-            CreateFilterForDestinationV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter CreateFilterForDestinationV1Input was null or undefined when calling createFilterForDestinationBeta.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                CreateFilterForDestinationV1Input,
-                'CreateFilterForDestinationV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: CreateFilterForDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'CreateFilterForDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Creates a filter in a Destination.    When called, this endpoint may generate the `Destination Filter Created` [Audit Trail](/tag/Audit-Trail) event.
-     * @summary Create Filter for Destination
-     * @param destinationId
-     * @param CreateFilterForDestinationV1Input
-     */
-    public async createFilterForDestinationCurrent(
-        destinationId: string,
-        CreateFilterForDestinationV1Input: CreateFilterForDestinationV1Input,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: CreateFilterForDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destination/{destinationId}/filters'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling createFilterForDestinationCurrent.'
-            );
-        }
-
-        // verify required parameter 'CreateFilterForDestinationV1Input' is not null or undefined
-        if (
-            CreateFilterForDestinationV1Input === null ||
-            CreateFilterForDestinationV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter CreateFilterForDestinationV1Input was null or undefined when calling createFilterForDestinationCurrent.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                CreateFilterForDestinationV1Input,
-                'CreateFilterForDestinationV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: CreateFilterForDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'CreateFilterForDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Creates a filter in a Destination.    When called, this endpoint may generate the `Destination Filter Created` [Audit Trail](/tag/Audit-Trail) event.
-     * @summary Create Filter for Destination
-     * @param destinationId
-     * @param CreateFilterForDestinationV1Input
-     */
-    public async createFilterForDestinationV1(
-        destinationId: string,
-        CreateFilterForDestinationV1Input: CreateFilterForDestinationV1Input,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: CreateFilterForDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destination/{destinationId}/filters'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling createFilterForDestinationV1.'
-            );
-        }
-
-        // verify required parameter 'CreateFilterForDestinationV1Input' is not null or undefined
-        if (
-            CreateFilterForDestinationV1Input === null ||
-            CreateFilterForDestinationV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter CreateFilterForDestinationV1Input was null or undefined when calling createFilterForDestinationV1.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                CreateFilterForDestinationV1Input,
-                'CreateFilterForDestinationV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: CreateFilterForDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'CreateFilterForDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Gets a Destination filter by id.
-     * @summary Get Filter in Destination
-     * @param destinationId
-     * @param filterId
-     */
-    public async getFilterInDestinationAlpha(
-        destinationId: string,
-        filterId: string,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: GetFilterInDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destination/{destinationId}/filters/{filterId}'
-                .replace(
-                    '{' + 'destinationId' + '}',
-                    encodeURIComponent(String(destinationId))
-                )
-                .replace(
-                    '{' + 'filterId' + '}',
-                    encodeURIComponent(String(filterId))
-                );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
             'application/vnd.segment.v1alpha+json',
-            'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
         // verify required parameter 'destinationId' is not null or undefined
         if (destinationId === null || destinationId === undefined) {
             throw new Error(
-                'Required parameter destinationId was null or undefined when calling getFilterInDestinationAlpha.'
+                'Required parameter destinationId was null or undefined when calling createFilterForDestination.'
             );
         }
 
-        // verify required parameter 'filterId' is not null or undefined
-        if (filterId === null || filterId === undefined) {
+        // verify required parameter 'CreateFilterForDestinationV1Input' is not null or undefined
+        if (
+            CreateFilterForDestinationV1Input === null ||
+            CreateFilterForDestinationV1Input === undefined
+        ) {
             throw new Error(
-                'Required parameter filterId was null or undefined when calling getFilterInDestinationAlpha.'
+                'Required parameter CreateFilterForDestinationV1Input was null or undefined when calling createFilterForDestination.'
             );
         }
 
@@ -704,12 +177,16 @@ export class DestinationFiltersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
+            method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
+            body: ObjectSerializer.serialize(
+                CreateFilterForDestinationV1Input,
+                'CreateFilterForDestinationV1Input'
+            ),
         };
 
         let authenticationPromise = Promise.resolve();
@@ -741,7 +218,7 @@ export class DestinationFiltersApi {
             }
             return new Promise<{
                 response: http.IncomingMessage;
-                body: GetFilterInDestination200Response;
+                body: CreateFilterForDestination200Response;
             }>((resolve, reject) => {
                 localVarRequest(
                     localVarRequestOptions,
@@ -756,7 +233,7 @@ export class DestinationFiltersApi {
                             ) {
                                 body = ObjectSerializer.deserialize(
                                     body,
-                                    'GetFilterInDestination200Response'
+                                    'CreateFilterForDestination200Response'
                                 );
                                 resolve({ response: response, body: body });
                             } else {
@@ -780,264 +257,7 @@ export class DestinationFiltersApi {
      * @param destinationId
      * @param filterId
      */
-    public async getFilterInDestinationBeta(
-        destinationId: string,
-        filterId: string,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: GetFilterInDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destination/{destinationId}/filters/{filterId}'
-                .replace(
-                    '{' + 'destinationId' + '}',
-                    encodeURIComponent(String(destinationId))
-                )
-                .replace(
-                    '{' + 'filterId' + '}',
-                    encodeURIComponent(String(filterId))
-                );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1beta+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling getFilterInDestinationBeta.'
-            );
-        }
-
-        // verify required parameter 'filterId' is not null or undefined
-        if (filterId === null || filterId === undefined) {
-            throw new Error(
-                'Required parameter filterId was null or undefined when calling getFilterInDestinationBeta.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: GetFilterInDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'GetFilterInDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Gets a Destination filter by id.
-     * @summary Get Filter in Destination
-     * @param destinationId
-     * @param filterId
-     */
-    public async getFilterInDestinationCurrent(
-        destinationId: string,
-        filterId: string,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: GetFilterInDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destination/{destinationId}/filters/{filterId}'
-                .replace(
-                    '{' + 'destinationId' + '}',
-                    encodeURIComponent(String(destinationId))
-                )
-                .replace(
-                    '{' + 'filterId' + '}',
-                    encodeURIComponent(String(filterId))
-                );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = ['application/json'];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling getFilterInDestinationCurrent.'
-            );
-        }
-
-        // verify required parameter 'filterId' is not null or undefined
-        if (filterId === null || filterId === undefined) {
-            throw new Error(
-                'Required parameter filterId was null or undefined when calling getFilterInDestinationCurrent.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: GetFilterInDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'GetFilterInDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Gets a Destination filter by id.
-     * @summary Get Filter in Destination
-     * @param destinationId
-     * @param filterId
-     */
-    public async getFilterInDestinationV1(
+    public async getFilterInDestination(
         destinationId: string,
         filterId: string,
         options: { headers: { [name: string]: string } } = { headers: {} }
@@ -1064,157 +284,28 @@ export class DestinationFiltersApi {
         const produces = [
             'application/vnd.segment.v1+json',
             'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling getFilterInDestinationV1.'
-            );
-        }
-
-        // verify required parameter 'filterId' is not null or undefined
-        if (filterId === null || filterId === undefined) {
-            throw new Error(
-                'Required parameter filterId was null or undefined when calling getFilterInDestinationV1.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: GetFilterInDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'GetFilterInDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Lists filters for a Destination.
-     * @summary List Filters from Destination
-     * @param destinationId
-     * @param pagination Pagination options.  This parameter exists in alpha.
-     */
-    public async listFiltersFromDestinationAlpha(
-        destinationId: string,
-        pagination: PaginationInput,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: ListFiltersFromDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destination/{destinationId}/filters'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
+            'application/vnd.segment.v1beta+json',
             'application/vnd.segment.v1alpha+json',
-            'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
         // verify required parameter 'destinationId' is not null or undefined
         if (destinationId === null || destinationId === undefined) {
             throw new Error(
-                'Required parameter destinationId was null or undefined when calling listFiltersFromDestinationAlpha.'
+                'Required parameter destinationId was null or undefined when calling getFilterInDestination.'
             );
         }
 
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
+        // verify required parameter 'filterId' is not null or undefined
+        if (filterId === null || filterId === undefined) {
             throw new Error(
-                'Required parameter pagination was null or undefined when calling listFiltersFromDestinationAlpha.'
-            );
-        }
-
-        if (pagination !== undefined) {
-            localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
-                pagination,
-                'PaginationInput'
+                'Required parameter filterId was null or undefined when calling getFilterInDestination.'
             );
         }
 
@@ -1260,7 +351,7 @@ export class DestinationFiltersApi {
             }
             return new Promise<{
                 response: http.IncomingMessage;
-                body: ListFiltersFromDestination200Response;
+                body: GetFilterInDestination200Response;
             }>((resolve, reject) => {
                 localVarRequest(
                     localVarRequestOptions,
@@ -1275,7 +366,7 @@ export class DestinationFiltersApi {
                             ) {
                                 body = ObjectSerializer.deserialize(
                                     body,
-                                    'ListFiltersFromDestination200Response'
+                                    'GetFilterInDestination200Response'
                                 );
                                 resolve({ response: response, body: body });
                             } else {
@@ -1297,270 +388,9 @@ export class DestinationFiltersApi {
      * Lists filters for a Destination.
      * @summary List Filters from Destination
      * @param destinationId
-     * @param pagination Pagination options.  This parameter exists in alpha.
+     * @param pagination Pagination options.  This parameter exists in v1.
      */
-    public async listFiltersFromDestinationBeta(
-        destinationId: string,
-        pagination: PaginationInput,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: ListFiltersFromDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destination/{destinationId}/filters'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1beta+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling listFiltersFromDestinationBeta.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listFiltersFromDestinationBeta.'
-            );
-        }
-
-        if (pagination !== undefined) {
-            localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
-                pagination,
-                'PaginationInput'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: ListFiltersFromDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'ListFiltersFromDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Lists filters for a Destination.
-     * @summary List Filters from Destination
-     * @param destinationId
-     * @param pagination Pagination options.  This parameter exists in alpha.
-     */
-    public async listFiltersFromDestinationCurrent(
-        destinationId: string,
-        pagination: PaginationInput,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: ListFiltersFromDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destination/{destinationId}/filters'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = ['application/json'];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling listFiltersFromDestinationCurrent.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listFiltersFromDestinationCurrent.'
-            );
-        }
-
-        if (pagination !== undefined) {
-            localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
-                pagination,
-                'PaginationInput'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: ListFiltersFromDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'ListFiltersFromDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Lists filters for a Destination.
-     * @summary List Filters from Destination
-     * @param destinationId
-     * @param pagination Pagination options.  This parameter exists in alpha.
-     */
-    public async listFiltersFromDestinationV1(
+    public async listFiltersFromDestination(
         destinationId: string,
         pagination: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
@@ -1582,25 +412,28 @@ export class DestinationFiltersApi {
         const produces = [
             'application/vnd.segment.v1+json',
             'application/json',
+            'application/vnd.segment.v1beta+json',
+            'application/vnd.segment.v1alpha+json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
         // verify required parameter 'destinationId' is not null or undefined
         if (destinationId === null || destinationId === undefined) {
             throw new Error(
-                'Required parameter destinationId was null or undefined when calling listFiltersFromDestinationV1.'
+                'Required parameter destinationId was null or undefined when calling listFiltersFromDestination.'
             );
         }
 
         // verify required parameter 'pagination' is not null or undefined
         if (pagination === null || pagination === undefined) {
             throw new Error(
-                'Required parameter pagination was null or undefined when calling listFiltersFromDestinationV1.'
+                'Required parameter pagination was null or undefined when calling listFiltersFromDestination.'
             );
         }
 
@@ -1691,7 +524,7 @@ export class DestinationFiltersApi {
      * @summary Preview Destination Filter
      * @param PreviewDestinationFilterV1Input
      */
-    public async previewDestinationFilterAlpha(
+    public async previewDestinationFilter(
         PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
@@ -1705,511 +538,26 @@ export class DestinationFiltersApi {
             this._defaultHeaders
         );
         const produces = [
-            'application/vnd.segment.v1alpha+json',
+            'application/vnd.segment.v1+json',
             'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'PreviewDestinationFilterV1Input' is not null or undefined
-        if (
-            PreviewDestinationFilterV1Input === null ||
-            PreviewDestinationFilterV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter PreviewDestinationFilterV1Input was null or undefined when calling previewDestinationFilterAlpha.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                PreviewDestinationFilterV1Input,
-                'PreviewDestinationFilterV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: PreviewDestinationFilter200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'PreviewDestinationFilter200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Simulates the application of a Destination filter to a provided JSON payload.
-     * @summary Preview Destination Filter
-     * @param PreviewDestinationFilterV1Input
-     */
-    public async previewDestinationFilterBeta(
-        PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: PreviewDestinationFilter200Response;
-    }> {
-        const localVarPath = this.basePath + '/destination/filters/preview';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
             'application/vnd.segment.v1beta+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'PreviewDestinationFilterV1Input' is not null or undefined
-        if (
-            PreviewDestinationFilterV1Input === null ||
-            PreviewDestinationFilterV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter PreviewDestinationFilterV1Input was null or undefined when calling previewDestinationFilterBeta.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                PreviewDestinationFilterV1Input,
-                'PreviewDestinationFilterV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: PreviewDestinationFilter200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'PreviewDestinationFilter200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Simulates the application of a Destination filter to a provided JSON payload.
-     * @summary Preview Destination Filter
-     * @param PreviewDestinationFilterV1Input
-     */
-    public async previewDestinationFilterCurrent(
-        PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: PreviewDestinationFilter200Response;
-    }> {
-        const localVarPath = this.basePath + '/destination/filters/preview';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'PreviewDestinationFilterV1Input' is not null or undefined
-        if (
-            PreviewDestinationFilterV1Input === null ||
-            PreviewDestinationFilterV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter PreviewDestinationFilterV1Input was null or undefined when calling previewDestinationFilterCurrent.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                PreviewDestinationFilterV1Input,
-                'PreviewDestinationFilterV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: PreviewDestinationFilter200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'PreviewDestinationFilter200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Simulates the application of a Destination filter to a provided JSON payload.
-     * @summary Preview Destination Filter
-     * @param PreviewDestinationFilterV1Input
-     */
-    public async previewDestinationFilterV1(
-        PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: PreviewDestinationFilter200Response;
-    }> {
-        const localVarPath = this.basePath + '/destination/filters/preview';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'PreviewDestinationFilterV1Input' is not null or undefined
-        if (
-            PreviewDestinationFilterV1Input === null ||
-            PreviewDestinationFilterV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter PreviewDestinationFilterV1Input was null or undefined when calling previewDestinationFilterV1.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                PreviewDestinationFilterV1Input,
-                'PreviewDestinationFilterV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: PreviewDestinationFilter200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'PreviewDestinationFilter200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Deletes a Destination filter.    When called, this endpoint may generate the `Destination Filter Deleted` [Audit Trail](/tag/Audit-Trail) event.
-     * @summary Remove Filter from Destination
-     * @param destinationId
-     * @param filterId
-     */
-    public async removeFilterFromDestinationAlpha(
-        destinationId: string,
-        filterId: string,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: RemoveFilterFromDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destination/{destinationId}/filters/{filterId}'
-                .replace(
-                    '{' + 'destinationId' + '}',
-                    encodeURIComponent(String(destinationId))
-                )
-                .replace(
-                    '{' + 'filterId' + '}',
-                    encodeURIComponent(String(filterId))
-                );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
             'application/vnd.segment.v1alpha+json',
-            'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
+        // verify required parameter 'PreviewDestinationFilterV1Input' is not null or undefined
+        if (
+            PreviewDestinationFilterV1Input === null ||
+            PreviewDestinationFilterV1Input === undefined
+        ) {
             throw new Error(
-                'Required parameter destinationId was null or undefined when calling removeFilterFromDestinationAlpha.'
-            );
-        }
-
-        // verify required parameter 'filterId' is not null or undefined
-        if (filterId === null || filterId === undefined) {
-            throw new Error(
-                'Required parameter filterId was null or undefined when calling removeFilterFromDestinationAlpha.'
+                'Required parameter PreviewDestinationFilterV1Input was null or undefined when calling previewDestinationFilter.'
             );
         }
 
@@ -2218,12 +566,16 @@ export class DestinationFiltersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
-            method: 'DELETE',
+            method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
+            body: ObjectSerializer.serialize(
+                PreviewDestinationFilterV1Input,
+                'PreviewDestinationFilterV1Input'
+            ),
         };
 
         let authenticationPromise = Promise.resolve();
@@ -2255,7 +607,7 @@ export class DestinationFiltersApi {
             }
             return new Promise<{
                 response: http.IncomingMessage;
-                body: RemoveFilterFromDestination200Response;
+                body: PreviewDestinationFilter200Response;
             }>((resolve, reject) => {
                 localVarRequest(
                     localVarRequestOptions,
@@ -2270,7 +622,7 @@ export class DestinationFiltersApi {
                             ) {
                                 body = ObjectSerializer.deserialize(
                                     body,
-                                    'RemoveFilterFromDestination200Response'
+                                    'PreviewDestinationFilter200Response'
                                 );
                                 resolve({ response: response, body: body });
                             } else {
@@ -2294,264 +646,7 @@ export class DestinationFiltersApi {
      * @param destinationId
      * @param filterId
      */
-    public async removeFilterFromDestinationBeta(
-        destinationId: string,
-        filterId: string,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: RemoveFilterFromDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destination/{destinationId}/filters/{filterId}'
-                .replace(
-                    '{' + 'destinationId' + '}',
-                    encodeURIComponent(String(destinationId))
-                )
-                .replace(
-                    '{' + 'filterId' + '}',
-                    encodeURIComponent(String(filterId))
-                );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1beta+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling removeFilterFromDestinationBeta.'
-            );
-        }
-
-        // verify required parameter 'filterId' is not null or undefined
-        if (filterId === null || filterId === undefined) {
-            throw new Error(
-                'Required parameter filterId was null or undefined when calling removeFilterFromDestinationBeta.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'DELETE',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: RemoveFilterFromDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'RemoveFilterFromDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Deletes a Destination filter.    When called, this endpoint may generate the `Destination Filter Deleted` [Audit Trail](/tag/Audit-Trail) event.
-     * @summary Remove Filter from Destination
-     * @param destinationId
-     * @param filterId
-     */
-    public async removeFilterFromDestinationCurrent(
-        destinationId: string,
-        filterId: string,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: RemoveFilterFromDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destination/{destinationId}/filters/{filterId}'
-                .replace(
-                    '{' + 'destinationId' + '}',
-                    encodeURIComponent(String(destinationId))
-                )
-                .replace(
-                    '{' + 'filterId' + '}',
-                    encodeURIComponent(String(filterId))
-                );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = ['application/json'];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling removeFilterFromDestinationCurrent.'
-            );
-        }
-
-        // verify required parameter 'filterId' is not null or undefined
-        if (filterId === null || filterId === undefined) {
-            throw new Error(
-                'Required parameter filterId was null or undefined when calling removeFilterFromDestinationCurrent.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'DELETE',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: RemoveFilterFromDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'RemoveFilterFromDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Deletes a Destination filter.    When called, this endpoint may generate the `Destination Filter Deleted` [Audit Trail](/tag/Audit-Trail) event.
-     * @summary Remove Filter from Destination
-     * @param destinationId
-     * @param filterId
-     */
-    public async removeFilterFromDestinationV1(
+    public async removeFilterFromDestination(
         destinationId: string,
         filterId: string,
         options: { headers: { [name: string]: string } } = { headers: {} }
@@ -2578,167 +673,28 @@ export class DestinationFiltersApi {
         const produces = [
             'application/vnd.segment.v1+json',
             'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling removeFilterFromDestinationV1.'
-            );
-        }
-
-        // verify required parameter 'filterId' is not null or undefined
-        if (filterId === null || filterId === undefined) {
-            throw new Error(
-                'Required parameter filterId was null or undefined when calling removeFilterFromDestinationV1.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'DELETE',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: RemoveFilterFromDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'RemoveFilterFromDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Updates a filter in a Destination.  When called, this endpoint may generate one or more of the following [Audit Trail](/tag/Audit-Trail) events: * Destination Filter Enabled * Destination Filter Disabled
-     * @summary Update Filter for Destination
-     * @param destinationId
-     * @param filterId
-     * @param UpdateFilterForDestinationV1Input
-     */
-    public async updateFilterForDestinationAlpha(
-        destinationId: string,
-        filterId: string,
-        UpdateFilterForDestinationV1Input: UpdateFilterForDestinationV1Input,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateFilterForDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destination/{destinationId}/filters/{filterId}'
-                .replace(
-                    '{' + 'destinationId' + '}',
-                    encodeURIComponent(String(destinationId))
-                )
-                .replace(
-                    '{' + 'filterId' + '}',
-                    encodeURIComponent(String(filterId))
-                );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
+            'application/vnd.segment.v1beta+json',
             'application/vnd.segment.v1alpha+json',
-            'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
         // verify required parameter 'destinationId' is not null or undefined
         if (destinationId === null || destinationId === undefined) {
             throw new Error(
-                'Required parameter destinationId was null or undefined when calling updateFilterForDestinationAlpha.'
+                'Required parameter destinationId was null or undefined when calling removeFilterFromDestination.'
             );
         }
 
         // verify required parameter 'filterId' is not null or undefined
         if (filterId === null || filterId === undefined) {
             throw new Error(
-                'Required parameter filterId was null or undefined when calling updateFilterForDestinationAlpha.'
-            );
-        }
-
-        // verify required parameter 'UpdateFilterForDestinationV1Input' is not null or undefined
-        if (
-            UpdateFilterForDestinationV1Input === null ||
-            UpdateFilterForDestinationV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter UpdateFilterForDestinationV1Input was null or undefined when calling updateFilterForDestinationAlpha.'
+                'Required parameter filterId was null or undefined when calling removeFilterFromDestination.'
             );
         }
 
@@ -2747,16 +703,12 @@ export class DestinationFiltersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
-            method: 'PATCH',
+            method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(
-                UpdateFilterForDestinationV1Input,
-                'UpdateFilterForDestinationV1Input'
-            ),
         };
 
         let authenticationPromise = Promise.resolve();
@@ -2788,7 +740,7 @@ export class DestinationFiltersApi {
             }
             return new Promise<{
                 response: http.IncomingMessage;
-                body: UpdateFilterForDestination200Response;
+                body: RemoveFilterFromDestination200Response;
             }>((resolve, reject) => {
                 localVarRequest(
                     localVarRequestOptions,
@@ -2803,7 +755,7 @@ export class DestinationFiltersApi {
                             ) {
                                 body = ObjectSerializer.deserialize(
                                     body,
-                                    'UpdateFilterForDestination200Response'
+                                    'RemoveFilterFromDestination200Response'
                                 );
                                 resolve({ response: response, body: body });
                             } else {
@@ -2828,7 +780,7 @@ export class DestinationFiltersApi {
      * @param filterId
      * @param UpdateFilterForDestinationV1Input
      */
-    public async updateFilterForDestinationBeta(
+    public async updateFilterForDestination(
         destinationId: string,
         filterId: string,
         UpdateFilterForDestinationV1Input: UpdateFilterForDestinationV1Input,
@@ -2854,27 +806,30 @@ export class DestinationFiltersApi {
             this._defaultHeaders
         );
         const produces = [
+            'application/vnd.segment.v1+json',
+            'application/json',
             'application/vnd.segment.v1beta+json',
-            'application/json',
+            'application/vnd.segment.v1alpha+json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
         // verify required parameter 'destinationId' is not null or undefined
         if (destinationId === null || destinationId === undefined) {
             throw new Error(
-                'Required parameter destinationId was null or undefined when calling updateFilterForDestinationBeta.'
+                'Required parameter destinationId was null or undefined when calling updateFilterForDestination.'
             );
         }
 
         // verify required parameter 'filterId' is not null or undefined
         if (filterId === null || filterId === undefined) {
             throw new Error(
-                'Required parameter filterId was null or undefined when calling updateFilterForDestinationBeta.'
+                'Required parameter filterId was null or undefined when calling updateFilterForDestination.'
             );
         }
 
@@ -2884,299 +839,7 @@ export class DestinationFiltersApi {
             UpdateFilterForDestinationV1Input === undefined
         ) {
             throw new Error(
-                'Required parameter UpdateFilterForDestinationV1Input was null or undefined when calling updateFilterForDestinationBeta.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'PATCH',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                UpdateFilterForDestinationV1Input,
-                'UpdateFilterForDestinationV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: UpdateFilterForDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'UpdateFilterForDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Updates a filter in a Destination.  When called, this endpoint may generate one or more of the following [Audit Trail](/tag/Audit-Trail) events: * Destination Filter Enabled * Destination Filter Disabled
-     * @summary Update Filter for Destination
-     * @param destinationId
-     * @param filterId
-     * @param UpdateFilterForDestinationV1Input
-     */
-    public async updateFilterForDestinationCurrent(
-        destinationId: string,
-        filterId: string,
-        UpdateFilterForDestinationV1Input: UpdateFilterForDestinationV1Input,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateFilterForDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destination/{destinationId}/filters/{filterId}'
-                .replace(
-                    '{' + 'destinationId' + '}',
-                    encodeURIComponent(String(destinationId))
-                )
-                .replace(
-                    '{' + 'filterId' + '}',
-                    encodeURIComponent(String(filterId))
-                );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling updateFilterForDestinationCurrent.'
-            );
-        }
-
-        // verify required parameter 'filterId' is not null or undefined
-        if (filterId === null || filterId === undefined) {
-            throw new Error(
-                'Required parameter filterId was null or undefined when calling updateFilterForDestinationCurrent.'
-            );
-        }
-
-        // verify required parameter 'UpdateFilterForDestinationV1Input' is not null or undefined
-        if (
-            UpdateFilterForDestinationV1Input === null ||
-            UpdateFilterForDestinationV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter UpdateFilterForDestinationV1Input was null or undefined when calling updateFilterForDestinationCurrent.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'PATCH',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                UpdateFilterForDestinationV1Input,
-                'UpdateFilterForDestinationV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: UpdateFilterForDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'UpdateFilterForDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Updates a filter in a Destination.  When called, this endpoint may generate one or more of the following [Audit Trail](/tag/Audit-Trail) events: * Destination Filter Enabled * Destination Filter Disabled
-     * @summary Update Filter for Destination
-     * @param destinationId
-     * @param filterId
-     * @param UpdateFilterForDestinationV1Input
-     */
-    public async updateFilterForDestinationV1(
-        destinationId: string,
-        filterId: string,
-        UpdateFilterForDestinationV1Input: UpdateFilterForDestinationV1Input,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateFilterForDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destination/{destinationId}/filters/{filterId}'
-                .replace(
-                    '{' + 'destinationId' + '}',
-                    encodeURIComponent(String(destinationId))
-                )
-                .replace(
-                    '{' + 'filterId' + '}',
-                    encodeURIComponent(String(filterId))
-                );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling updateFilterForDestinationV1.'
-            );
-        }
-
-        // verify required parameter 'filterId' is not null or undefined
-        if (filterId === null || filterId === undefined) {
-            throw new Error(
-                'Required parameter filterId was null or undefined when calling updateFilterForDestinationV1.'
-            );
-        }
-
-        // verify required parameter 'UpdateFilterForDestinationV1Input' is not null or undefined
-        if (
-            UpdateFilterForDestinationV1Input === null ||
-            UpdateFilterForDestinationV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter UpdateFilterForDestinationV1Input was null or undefined when calling updateFilterForDestinationV1.'
+                'Required parameter UpdateFilterForDestinationV1Input was null or undefined when calling updateFilterForDestination.'
             );
         }
 

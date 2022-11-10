@@ -118,125 +118,7 @@ export class TransformationsApi {
      * @summary Create Transformation
      * @param CreateTransformationBetaInput
      */
-    public async createTransformationAlpha(
-        CreateTransformationBetaInput: CreateTransformationBetaInput,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: CreateTransformation200Response;
-    }> {
-        const localVarPath = this.basePath + '/transformations';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1alpha+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'CreateTransformationBetaInput' is not null or undefined
-        if (
-            CreateTransformationBetaInput === null ||
-            CreateTransformationBetaInput === undefined
-        ) {
-            throw new Error(
-                'Required parameter CreateTransformationBetaInput was null or undefined when calling createTransformationAlpha.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                CreateTransformationBetaInput,
-                'CreateTransformationBetaInput'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: CreateTransformation200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'CreateTransformation200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Creates a new Transformation.    When called, this endpoint may generate the `Transformation Created` [Audit Trail](/tag/Audit-Trail) event. **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
-     * @summary Create Transformation
-     * @param CreateTransformationBetaInput
-     */
-    public async createTransformationBeta(
+    public async createTransformation(
         CreateTransformationBetaInput: CreateTransformationBetaInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
@@ -251,12 +133,14 @@ export class TransformationsApi {
         );
         const produces = [
             'application/vnd.segment.v1beta+json',
+            'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
@@ -266,7 +150,7 @@ export class TransformationsApi {
             CreateTransformationBetaInput === undefined
         ) {
             throw new Error(
-                'Required parameter CreateTransformationBetaInput was null or undefined when calling createTransformationBeta.'
+                'Required parameter CreateTransformationBetaInput was null or undefined when calling createTransformation.'
             );
         }
 
@@ -354,123 +238,7 @@ export class TransformationsApi {
      * @summary Delete Transformation
      * @param transformationId
      */
-    public async deleteTransformationAlpha(
-        transformationId: string,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteTransformation200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/transformations/{transformationId}'.replace(
-                '{' + 'transformationId' + '}',
-                encodeURIComponent(String(transformationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1alpha+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'transformationId' is not null or undefined
-        if (transformationId === null || transformationId === undefined) {
-            throw new Error(
-                'Required parameter transformationId was null or undefined when calling deleteTransformationAlpha.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'DELETE',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: DeleteTransformation200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'DeleteTransformation200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Deletes a Transformation.    When called, this endpoint may generate the `Transformation Deleted` [Audit Trail](/tag/Audit-Trail) event. **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
-     * @summary Delete Transformation
-     * @param transformationId
-     */
-    public async deleteTransformationBeta(
+    public async deleteTransformation(
         transformationId: string,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
@@ -490,19 +258,21 @@ export class TransformationsApi {
         );
         const produces = [
             'application/vnd.segment.v1beta+json',
+            'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
         // verify required parameter 'transformationId' is not null or undefined
         if (transformationId === null || transformationId === undefined) {
             throw new Error(
-                'Required parameter transformationId was null or undefined when calling deleteTransformationBeta.'
+                'Required parameter transformationId was null or undefined when calling deleteTransformation.'
             );
         }
 
@@ -586,123 +356,7 @@ export class TransformationsApi {
      * @summary Get Transformation
      * @param transformationId
      */
-    public async getTransformationAlpha(
-        transformationId: string,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: GetTransformation200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/transformations/{transformationId}'.replace(
-                '{' + 'transformationId' + '}',
-                encodeURIComponent(String(transformationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1alpha+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'transformationId' is not null or undefined
-        if (transformationId === null || transformationId === undefined) {
-            throw new Error(
-                'Required parameter transformationId was null or undefined when calling getTransformationAlpha.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: GetTransformation200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'GetTransformation200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Gets a Transformation.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
-     * @summary Get Transformation
-     * @param transformationId
-     */
-    public async getTransformationBeta(
+    public async getTransformation(
         transformationId: string,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
@@ -722,19 +376,21 @@ export class TransformationsApi {
         );
         const produces = [
             'application/vnd.segment.v1beta+json',
+            'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
         // verify required parameter 'transformationId' is not null or undefined
         if (transformationId === null || transformationId === undefined) {
             throw new Error(
-                'Required parameter transformationId was null or undefined when calling getTransformationBeta.'
+                'Required parameter transformationId was null or undefined when calling getTransformation.'
             );
         }
 
@@ -816,127 +472,9 @@ export class TransformationsApi {
     /**
      * Lists all Transformations in the Workspace.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary List Transformations
-     * @param pagination Pagination options.  This parameter exists in alpha.
+     * @param pagination Pagination options.  This parameter exists in beta.
      */
-    public async listTransformationsAlpha(
-        pagination: PaginationInput,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: ListTransformations200Response;
-    }> {
-        const localVarPath = this.basePath + '/transformations';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1alpha+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listTransformationsAlpha.'
-            );
-        }
-
-        if (pagination !== undefined) {
-            localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
-                pagination,
-                'PaginationInput'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: ListTransformations200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'ListTransformations200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Lists all Transformations in the Workspace.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
-     * @summary List Transformations
-     * @param pagination Pagination options.  This parameter exists in alpha.
-     */
-    public async listTransformationsBeta(
+    public async listTransformations(
         pagination: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
@@ -951,19 +489,21 @@ export class TransformationsApi {
         );
         const produces = [
             'application/vnd.segment.v1beta+json',
+            'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
         // verify required parameter 'pagination' is not null or undefined
         if (pagination === null || pagination === undefined) {
             throw new Error(
-                'Required parameter pagination was null or undefined when calling listTransformationsBeta.'
+                'Required parameter pagination was null or undefined when calling listTransformations.'
             );
         }
 
@@ -1055,139 +595,7 @@ export class TransformationsApi {
      * @param transformationId
      * @param UpdateTransformationBetaInput
      */
-    public async updateTransformationAlpha(
-        transformationId: string,
-        UpdateTransformationBetaInput: UpdateTransformationBetaInput,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateTransformation200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/transformations/{transformationId}'.replace(
-                '{' + 'transformationId' + '}',
-                encodeURIComponent(String(transformationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1alpha+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'transformationId' is not null or undefined
-        if (transformationId === null || transformationId === undefined) {
-            throw new Error(
-                'Required parameter transformationId was null or undefined when calling updateTransformationAlpha.'
-            );
-        }
-
-        // verify required parameter 'UpdateTransformationBetaInput' is not null or undefined
-        if (
-            UpdateTransformationBetaInput === null ||
-            UpdateTransformationBetaInput === undefined
-        ) {
-            throw new Error(
-                'Required parameter UpdateTransformationBetaInput was null or undefined when calling updateTransformationAlpha.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'PATCH',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                UpdateTransformationBetaInput,
-                'UpdateTransformationBetaInput'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: UpdateTransformation200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'UpdateTransformation200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Updates an existing Transformation.    When called, this endpoint may generate the `Transformation Updated` [Audit Trail](/tag/Audit-Trail) event. **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
-     * @summary Update Transformation
-     * @param transformationId
-     * @param UpdateTransformationBetaInput
-     */
-    public async updateTransformationBeta(
+    public async updateTransformation(
         transformationId: string,
         UpdateTransformationBetaInput: UpdateTransformationBetaInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
@@ -1208,19 +616,21 @@ export class TransformationsApi {
         );
         const produces = [
             'application/vnd.segment.v1beta+json',
+            'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
         // verify required parameter 'transformationId' is not null or undefined
         if (transformationId === null || transformationId === undefined) {
             throw new Error(
-                'Required parameter transformationId was null or undefined when calling updateTransformationBeta.'
+                'Required parameter transformationId was null or undefined when calling updateTransformation.'
             );
         }
 
@@ -1230,7 +640,7 @@ export class TransformationsApi {
             UpdateTransformationBetaInput === undefined
         ) {
             throw new Error(
-                'Required parameter UpdateTransformationBetaInput was null or undefined when calling updateTransformationBeta.'
+                'Required parameter UpdateTransformationBetaInput was null or undefined when calling updateTransformation.'
             );
         }
 

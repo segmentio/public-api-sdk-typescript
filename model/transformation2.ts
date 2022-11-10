@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { PropertyRenameBeta } from './propertyRenameBeta';
+import { TransformationBeta } from './transformationBeta';
 
 /**
  * The created Transformation.

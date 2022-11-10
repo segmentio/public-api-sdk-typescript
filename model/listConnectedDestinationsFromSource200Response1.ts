@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { ListConnectedDestinationsFromSourceV1Output } from './listConnectedDestinationsFromSourceV1Output';
+import { ListConnectedDestinationsFromSourceAlphaOutput } from './listConnectedDestinationsFromSourceAlphaOutput';
 
 export class ListConnectedDestinationsFromSource200Response1 {
-    'data'?: ListConnectedDestinationsFromSourceV1Output;
+    'data'?: ListConnectedDestinationsFromSourceAlphaOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -26,7 +26,7 @@ export class ListConnectedDestinationsFromSource200Response1 {
         {
             name: 'data',
             baseName: 'data',
-            type: 'ListConnectedDestinationsFromSourceV1Output',
+            type: 'ListConnectedDestinationsFromSourceAlphaOutput',
         },
     ];
 

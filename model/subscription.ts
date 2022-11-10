@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { DestinationSubscription } from './destinationSubscription';
 
 /**
  * The Destination subscription.
@@ -43,7 +44,7 @@ export class Subscription {
     /**
      * The customer settings for action fields.
      */
-    'settings': any;
+    'settings': any | null;
     /**
      * FQL string that describes what events should trigger a Destination action.
      */

@@ -35,7 +35,7 @@ export class CreateDestinationSubscriptionAlphaInput {
     /**
      * The fields used for configuring this action.
      */
-    'settings'?: any;
+    'settings'?: any | null;
 
     static discriminator: string | undefined = undefined;
 

@@ -33,7 +33,7 @@ export declare class DestinationFiltersApi {
     setApiKey(key: DestinationFiltersApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    createFilterForDestinationAlpha(destinationId: string, CreateFilterForDestinationV1Input: CreateFilterForDestinationV1Input, options?: {
+    createFilterForDestination(destinationId: string, CreateFilterForDestinationV1Input: CreateFilterForDestinationV1Input, options?: {
         headers: {
             [name: string]: string;
         };
@@ -41,31 +41,7 @@ export declare class DestinationFiltersApi {
         response: http.IncomingMessage;
         body: CreateFilterForDestination200Response;
     }>;
-    createFilterForDestinationBeta(destinationId: string, CreateFilterForDestinationV1Input: CreateFilterForDestinationV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateFilterForDestination200Response;
-    }>;
-    createFilterForDestinationCurrent(destinationId: string, CreateFilterForDestinationV1Input: CreateFilterForDestinationV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateFilterForDestination200Response;
-    }>;
-    createFilterForDestinationV1(destinationId: string, CreateFilterForDestinationV1Input: CreateFilterForDestinationV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateFilterForDestination200Response;
-    }>;
-    getFilterInDestinationAlpha(destinationId: string, filterId: string, options?: {
+    getFilterInDestination(destinationId: string, filterId: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -73,31 +49,7 @@ export declare class DestinationFiltersApi {
         response: http.IncomingMessage;
         body: GetFilterInDestination200Response;
     }>;
-    getFilterInDestinationBeta(destinationId: string, filterId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetFilterInDestination200Response;
-    }>;
-    getFilterInDestinationCurrent(destinationId: string, filterId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetFilterInDestination200Response;
-    }>;
-    getFilterInDestinationV1(destinationId: string, filterId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetFilterInDestination200Response;
-    }>;
-    listFiltersFromDestinationAlpha(destinationId: string, pagination: PaginationInput, options?: {
+    listFiltersFromDestination(destinationId: string, pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -105,31 +57,7 @@ export declare class DestinationFiltersApi {
         response: http.IncomingMessage;
         body: ListFiltersFromDestination200Response;
     }>;
-    listFiltersFromDestinationBeta(destinationId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListFiltersFromDestination200Response;
-    }>;
-    listFiltersFromDestinationCurrent(destinationId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListFiltersFromDestination200Response;
-    }>;
-    listFiltersFromDestinationV1(destinationId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListFiltersFromDestination200Response;
-    }>;
-    previewDestinationFilterAlpha(PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input, options?: {
+    previewDestinationFilter(PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input, options?: {
         headers: {
             [name: string]: string;
         };
@@ -137,31 +65,7 @@ export declare class DestinationFiltersApi {
         response: http.IncomingMessage;
         body: PreviewDestinationFilter200Response;
     }>;
-    previewDestinationFilterBeta(PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: PreviewDestinationFilter200Response;
-    }>;
-    previewDestinationFilterCurrent(PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: PreviewDestinationFilter200Response;
-    }>;
-    previewDestinationFilterV1(PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: PreviewDestinationFilter200Response;
-    }>;
-    removeFilterFromDestinationAlpha(destinationId: string, filterId: string, options?: {
+    removeFilterFromDestination(destinationId: string, filterId: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -169,55 +73,7 @@ export declare class DestinationFiltersApi {
         response: http.IncomingMessage;
         body: RemoveFilterFromDestination200Response;
     }>;
-    removeFilterFromDestinationBeta(destinationId: string, filterId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: RemoveFilterFromDestination200Response;
-    }>;
-    removeFilterFromDestinationCurrent(destinationId: string, filterId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: RemoveFilterFromDestination200Response;
-    }>;
-    removeFilterFromDestinationV1(destinationId: string, filterId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: RemoveFilterFromDestination200Response;
-    }>;
-    updateFilterForDestinationAlpha(destinationId: string, filterId: string, UpdateFilterForDestinationV1Input: UpdateFilterForDestinationV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateFilterForDestination200Response;
-    }>;
-    updateFilterForDestinationBeta(destinationId: string, filterId: string, UpdateFilterForDestinationV1Input: UpdateFilterForDestinationV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateFilterForDestination200Response;
-    }>;
-    updateFilterForDestinationCurrent(destinationId: string, filterId: string, UpdateFilterForDestinationV1Input: UpdateFilterForDestinationV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateFilterForDestination200Response;
-    }>;
-    updateFilterForDestinationV1(destinationId: string, filterId: string, UpdateFilterForDestinationV1Input: UpdateFilterForDestinationV1Input, options?: {
+    updateFilterForDestination(destinationId: string, filterId: string, UpdateFilterForDestinationV1Input: UpdateFilterForDestinationV1Input, options?: {
         headers: {
             [name: string]: string;
         };

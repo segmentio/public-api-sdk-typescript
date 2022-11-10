@@ -13,6 +13,7 @@
 import { RequestFile } from './models';
 import { IntegrationOptionBeta } from './integrationOptionBeta';
 import { Logos2 } from './logos2';
+import { WarehouseMetadataV1 } from './warehouseMetadataV1';
 
 /**
  * The Warehouse catalog item.

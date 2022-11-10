@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { WorkspaceV1 } from './workspaceV1';
 
 /**
  * The Workspace.

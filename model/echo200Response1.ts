@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { EchoV1Output } from './echoV1Output';
+import { EchoAlphaOutput } from './echoAlphaOutput';
 
 export class Echo200Response1 {
-    'data'?: EchoV1Output;
+    'data'?: EchoAlphaOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -26,7 +26,7 @@ export class Echo200Response1 {
         {
             name: 'data',
             baseName: 'data',
-            type: 'EchoV1Output',
+            type: 'EchoAlphaOutput',
         },
     ];
 

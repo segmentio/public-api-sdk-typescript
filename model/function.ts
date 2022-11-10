@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { FunctionSettingV1 } from './functionSettingV1';
+import { FunctionV1 } from './functionV1';
 
 /**
  * A Function object.

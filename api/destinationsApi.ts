@@ -126,243 +126,7 @@ export class DestinationsApi {
      * @summary Create Destination
      * @param CreateDestinationV1Input
      */
-    public async createDestinationAlpha(
-        CreateDestinationV1Input: CreateDestinationV1Input,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: CreateDestination200Response;
-    }> {
-        const localVarPath = this.basePath + '/destinations';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1alpha+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'CreateDestinationV1Input' is not null or undefined
-        if (
-            CreateDestinationV1Input === null ||
-            CreateDestinationV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter CreateDestinationV1Input was null or undefined when calling createDestinationAlpha.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                CreateDestinationV1Input,
-                'CreateDestinationV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: CreateDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'CreateDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Creates a new Destination.    When called, this endpoint may generate the `Integration Created` [Audit Trail](/tag/Audit-Trail) event.
-     * @summary Create Destination
-     * @param CreateDestinationV1Input
-     */
-    public async createDestinationBeta(
-        CreateDestinationV1Input: CreateDestinationV1Input,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: CreateDestination200Response;
-    }> {
-        const localVarPath = this.basePath + '/destinations';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1beta+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'CreateDestinationV1Input' is not null or undefined
-        if (
-            CreateDestinationV1Input === null ||
-            CreateDestinationV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter CreateDestinationV1Input was null or undefined when calling createDestinationBeta.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                CreateDestinationV1Input,
-                'CreateDestinationV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: CreateDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'CreateDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Creates a new Destination.    When called, this endpoint may generate the `Integration Created` [Audit Trail](/tag/Audit-Trail) event.
-     * @summary Create Destination
-     * @param CreateDestinationV1Input
-     */
-    public async createDestinationCurrent(
+    public async createDestination(
         CreateDestinationV1Input: CreateDestinationV1Input,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
@@ -378,11 +142,14 @@ export class DestinationsApi {
         const produces = [
             'application/vnd.segment.v1+json',
             'application/json',
+            'application/vnd.segment.v1beta+json',
+            'application/vnd.segment.v1alpha+json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
@@ -392,7 +159,7 @@ export class DestinationsApi {
             CreateDestinationV1Input === undefined
         ) {
             throw new Error(
-                'Required parameter CreateDestinationV1Input was null or undefined when calling createDestinationCurrent.'
+                'Required parameter CreateDestinationV1Input was null or undefined when calling createDestination.'
             );
         }
 
@@ -504,10 +271,11 @@ export class DestinationsApi {
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
@@ -608,18 +376,23 @@ export class DestinationsApi {
         });
     }
     /**
-     * Creates a new Destination.    When called, this endpoint may generate the `Integration Created` [Audit Trail](/tag/Audit-Trail) event.
-     * @summary Create Destination
-     * @param CreateDestinationV1Input
+     * Deletes an existing Destination.    When called, this endpoint may generate the `Integration Deleted` [Audit Trail](/tag/Audit-Trail) event.  Config API omitted fields: - `catalogId`
+     * @summary Delete Destination
+     * @param destinationId
      */
-    public async createDestinationV1(
-        CreateDestinationV1Input: CreateDestinationV1Input,
+    public async deleteDestination(
+        destinationId: string,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
-        body: CreateDestination200Response;
+        body: DeleteDestination200Response;
     }> {
-        const localVarPath = this.basePath + '/destinations';
+        const localVarPath =
+            this.basePath +
+            '/destinations/{destinationId}'.replace(
+                '{' + 'destinationId' + '}',
+                encodeURIComponent(String(destinationId))
+            );
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign(
             {},
@@ -628,602 +401,21 @@ export class DestinationsApi {
         const produces = [
             'application/vnd.segment.v1+json',
             'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'CreateDestinationV1Input' is not null or undefined
-        if (
-            CreateDestinationV1Input === null ||
-            CreateDestinationV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter CreateDestinationV1Input was null or undefined when calling createDestinationV1.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                CreateDestinationV1Input,
-                'CreateDestinationV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: CreateDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'CreateDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Deletes an existing Destination.    When called, this endpoint may generate the `Integration Deleted` [Audit Trail](/tag/Audit-Trail) event.  Config API omitted fields: - `catalogId`
-     * @summary Delete Destination
-     * @param destinationId
-     */
-    public async deleteDestinationAlpha(
-        destinationId: string,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destinations/{destinationId}'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1alpha+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling deleteDestinationAlpha.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'DELETE',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: DeleteDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'DeleteDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Deletes an existing Destination.    When called, this endpoint may generate the `Integration Deleted` [Audit Trail](/tag/Audit-Trail) event.  Config API omitted fields: - `catalogId`
-     * @summary Delete Destination
-     * @param destinationId
-     */
-    public async deleteDestinationBeta(
-        destinationId: string,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destinations/{destinationId}'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
             'application/vnd.segment.v1beta+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling deleteDestinationBeta.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'DELETE',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: DeleteDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'DeleteDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Deletes an existing Destination.    When called, this endpoint may generate the `Integration Deleted` [Audit Trail](/tag/Audit-Trail) event.  Config API omitted fields: - `catalogId`
-     * @summary Delete Destination
-     * @param destinationId
-     */
-    public async deleteDestinationCurrent(
-        destinationId: string,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destinations/{destinationId}'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = ['application/json'];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling deleteDestinationCurrent.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'DELETE',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: DeleteDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'DeleteDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Deletes an existing Destination.    When called, this endpoint may generate the `Integration Deleted` [Audit Trail](/tag/Audit-Trail) event.  Config API omitted fields: - `catalogId`
-     * @summary Delete Destination
-     * @param destinationId
-     */
-    public async deleteDestinationV1(
-        destinationId: string,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destinations/{destinationId}'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling deleteDestinationV1.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'DELETE',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: DeleteDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'DeleteDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Returns a Destination by its id.        Config API omitted fields: - `catalogId`
-     * @summary Get Destination
-     * @param destinationId
-     */
-    public async getDestinationAlpha(
-        destinationId: string,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: GetDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destinations/{destinationId}'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
             'application/vnd.segment.v1alpha+json',
-            'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
         // verify required parameter 'destinationId' is not null or undefined
         if (destinationId === null || destinationId === undefined) {
             throw new Error(
-                'Required parameter destinationId was null or undefined when calling getDestinationAlpha.'
+                'Required parameter destinationId was null or undefined when calling deleteDestination.'
             );
         }
 
@@ -1232,7 +424,7 @@ export class DestinationsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
+            method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
             uri: localVarPath,
@@ -1269,7 +461,7 @@ export class DestinationsApi {
             }
             return new Promise<{
                 response: http.IncomingMessage;
-                body: GetDestination200Response;
+                body: DeleteDestination200Response;
             }>((resolve, reject) => {
                 localVarRequest(
                     localVarRequestOptions,
@@ -1284,7 +476,7 @@ export class DestinationsApi {
                             ) {
                                 body = ObjectSerializer.deserialize(
                                     body,
-                                    'GetDestination200Response'
+                                    'DeleteDestination200Response'
                                 );
                                 resolve({ response: response, body: body });
                             } else {
@@ -1307,236 +499,7 @@ export class DestinationsApi {
      * @summary Get Destination
      * @param destinationId
      */
-    public async getDestinationBeta(
-        destinationId: string,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: GetDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destinations/{destinationId}'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1beta+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling getDestinationBeta.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: GetDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'GetDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Returns a Destination by its id.        Config API omitted fields: - `catalogId`
-     * @summary Get Destination
-     * @param destinationId
-     */
-    public async getDestinationCurrent(
-        destinationId: string,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: GetDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destinations/{destinationId}'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = ['application/json'];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling getDestinationCurrent.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: GetDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'GetDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Returns a Destination by its id.        Config API omitted fields: - `catalogId`
-     * @summary Get Destination
-     * @param destinationId
-     */
-    public async getDestinationV1(
+    public async getDestination(
         destinationId: string,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
@@ -1557,18 +520,21 @@ export class DestinationsApi {
         const produces = [
             'application/vnd.segment.v1+json',
             'application/json',
+            'application/vnd.segment.v1beta+json',
+            'application/vnd.segment.v1alpha+json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
         // verify required parameter 'destinationId' is not null or undefined
         if (destinationId === null || destinationId === undefined) {
             throw new Error(
-                'Required parameter destinationId was null or undefined when calling getDestinationV1.'
+                'Required parameter destinationId was null or undefined when calling getDestination.'
             );
         }
 
@@ -1678,10 +644,11 @@ export class DestinationsApi {
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
@@ -1778,171 +745,12 @@ export class DestinationsApi {
      * Get event delivery metrics summary from a Destination.          Based on the granularity, there are restrictions on the time range you can query:      **Minute Granularity**:    - Max time range: 4 hours    - Oldest possible start time: 48 hours in the past      **Hour Granularity**:    - Max Time range: 1 week    - Oldest possible start time: 10 days in the past      **Day Granularity**:    - Max time range: 60 days    - Oldest possible start time: 60 days in the past
      * @summary List Delivery Metrics Summary from Destination
      * @param destinationId
-     * @param sourceId The id of the Source linked to the Destination.  Config API note: analogous to &#x60;parent&#x60;.  This parameter exists in alpha.
-     * @param startTime Filter events that happened after this time.  Defaults to: - 1 hour ago if granularity is &#x60;MINUTE&#x60;. - 7 days ago if granularity is &#x60;HOUR&#x60;. - 30 days ago if granularity is &#x60;DAY&#x60;.  This parameter exists in alpha.
-     * @param endTime Filter events that happened before this time. Defaults to now if not set.  This parameter exists in alpha.
-     * @param granularity The granularity to filter metrics to. Either &#x60;MINUTE&#x60;, &#x60;HOUR&#x60; or &#x60;DAY&#x60;.  Defaults to &#x60;MINUTE&#x60; if not set.  This parameter exists in alpha.
+     * @param sourceId The id of the Source linked to the Destination.  Config API note: analogous to &#x60;parent&#x60;.  This parameter exists in beta.
+     * @param startTime Filter events that happened after this time.  Defaults to: - 1 hour ago if granularity is &#x60;MINUTE&#x60;. - 7 days ago if granularity is &#x60;HOUR&#x60;. - 30 days ago if granularity is &#x60;DAY&#x60;.  This parameter exists in beta.
+     * @param endTime Filter events that happened before this time. Defaults to now if not set.  This parameter exists in beta.
+     * @param granularity The granularity to filter metrics to. Either &#x60;MINUTE&#x60;, &#x60;HOUR&#x60; or &#x60;DAY&#x60;.  Defaults to &#x60;MINUTE&#x60; if not set.  This parameter exists in beta.
      */
-    public async listDeliveryMetricsSummaryFromDestinationAlpha(
-        destinationId: string,
-        sourceId: string,
-        startTime?: string,
-        endTime?: string,
-        granularity?: 'DAY' | 'HOUR' | 'MINUTE',
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: ListDeliveryMetricsSummaryFromDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destinations/{destinationId}/delivery-metrics'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1alpha+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling listDeliveryMetricsSummaryFromDestinationAlpha.'
-            );
-        }
-
-        // verify required parameter 'sourceId' is not null or undefined
-        if (sourceId === null || sourceId === undefined) {
-            throw new Error(
-                'Required parameter sourceId was null or undefined when calling listDeliveryMetricsSummaryFromDestinationAlpha.'
-            );
-        }
-
-        if (sourceId !== undefined) {
-            localVarQueryParameters['sourceId'] = ObjectSerializer.serialize(
-                sourceId,
-                'string'
-            );
-        }
-
-        if (startTime !== undefined) {
-            localVarQueryParameters['startTime'] = ObjectSerializer.serialize(
-                startTime,
-                'string'
-            );
-        }
-
-        if (endTime !== undefined) {
-            localVarQueryParameters['endTime'] = ObjectSerializer.serialize(
-                endTime,
-                'string'
-            );
-        }
-
-        if (granularity !== undefined) {
-            localVarQueryParameters['granularity'] = ObjectSerializer.serialize(
-                granularity,
-                "'DAY' | 'HOUR' | 'MINUTE'"
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: ListDeliveryMetricsSummaryFromDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'ListDeliveryMetricsSummaryFromDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Get event delivery metrics summary from a Destination.          Based on the granularity, there are restrictions on the time range you can query:      **Minute Granularity**:    - Max time range: 4 hours    - Oldest possible start time: 48 hours in the past      **Hour Granularity**:    - Max Time range: 1 week    - Oldest possible start time: 10 days in the past      **Day Granularity**:    - Max time range: 60 days    - Oldest possible start time: 60 days in the past
-     * @summary List Delivery Metrics Summary from Destination
-     * @param destinationId
-     * @param sourceId The id of the Source linked to the Destination.  Config API note: analogous to &#x60;parent&#x60;.  This parameter exists in alpha.
-     * @param startTime Filter events that happened after this time.  Defaults to: - 1 hour ago if granularity is &#x60;MINUTE&#x60;. - 7 days ago if granularity is &#x60;HOUR&#x60;. - 30 days ago if granularity is &#x60;DAY&#x60;.  This parameter exists in alpha.
-     * @param endTime Filter events that happened before this time. Defaults to now if not set.  This parameter exists in alpha.
-     * @param granularity The granularity to filter metrics to. Either &#x60;MINUTE&#x60;, &#x60;HOUR&#x60; or &#x60;DAY&#x60;.  Defaults to &#x60;MINUTE&#x60; if not set.  This parameter exists in alpha.
-     */
-    public async listDeliveryMetricsSummaryFromDestinationBeta(
+    public async listDeliveryMetricsSummaryFromDestination(
         destinationId: string,
         sourceId: string,
         startTime?: string,
@@ -1966,26 +774,28 @@ export class DestinationsApi {
         );
         const produces = [
             'application/vnd.segment.v1beta+json',
+            'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
         // verify required parameter 'destinationId' is not null or undefined
         if (destinationId === null || destinationId === undefined) {
             throw new Error(
-                'Required parameter destinationId was null or undefined when calling listDeliveryMetricsSummaryFromDestinationBeta.'
+                'Required parameter destinationId was null or undefined when calling listDeliveryMetricsSummaryFromDestination.'
             );
         }
 
         // verify required parameter 'sourceId' is not null or undefined
         if (sourceId === null || sourceId === undefined) {
             throw new Error(
-                'Required parameter sourceId was null or undefined when calling listDeliveryMetricsSummaryFromDestinationBeta.'
+                'Required parameter sourceId was null or undefined when calling listDeliveryMetricsSummaryFromDestination.'
             );
         }
 
@@ -2095,360 +905,9 @@ export class DestinationsApi {
     /**
      * Returns a list of Destinations.
      * @summary List Destinations
-     * @param pagination Required pagination params for the request.  This parameter exists in alpha.
+     * @param pagination Required pagination params for the request.  This parameter exists in v1.
      */
-    public async listDestinationsAlpha(
-        pagination: PaginationInput,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: ListDestinations200Response;
-    }> {
-        const localVarPath = this.basePath + '/destinations';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1alpha+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listDestinationsAlpha.'
-            );
-        }
-
-        if (pagination !== undefined) {
-            localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
-                pagination,
-                'PaginationInput'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: ListDestinations200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'ListDestinations200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Returns a list of Destinations.
-     * @summary List Destinations
-     * @param pagination Required pagination params for the request.  This parameter exists in alpha.
-     */
-    public async listDestinationsBeta(
-        pagination: PaginationInput,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: ListDestinations200Response;
-    }> {
-        const localVarPath = this.basePath + '/destinations';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1beta+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listDestinationsBeta.'
-            );
-        }
-
-        if (pagination !== undefined) {
-            localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
-                pagination,
-                'PaginationInput'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: ListDestinations200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'ListDestinations200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Returns a list of Destinations.
-     * @summary List Destinations
-     * @param pagination Required pagination params for the request.  This parameter exists in alpha.
-     */
-    public async listDestinationsCurrent(
-        pagination: PaginationInput,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: ListDestinations200Response;
-    }> {
-        const localVarPath = this.basePath + '/destinations';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = ['application/json'];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listDestinationsCurrent.'
-            );
-        }
-
-        if (pagination !== undefined) {
-            localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
-                pagination,
-                'PaginationInput'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: ListDestinations200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'ListDestinations200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Returns a list of Destinations.
-     * @summary List Destinations
-     * @param pagination Required pagination params for the request.  This parameter exists in alpha.
-     */
-    public async listDestinationsV1(
+    public async listDestinations(
         pagination: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
@@ -2464,18 +923,21 @@ export class DestinationsApi {
         const produces = [
             'application/vnd.segment.v1+json',
             'application/json',
+            'application/vnd.segment.v1beta+json',
+            'application/vnd.segment.v1alpha+json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
         // verify required parameter 'pagination' is not null or undefined
         if (pagination === null || pagination === undefined) {
             throw new Error(
-                'Required parameter pagination was null or undefined when calling listDestinationsV1.'
+                'Required parameter pagination was null or undefined when calling listDestinations.'
             );
         }
 
@@ -2590,10 +1052,11 @@ export class DestinationsApi {
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
@@ -2724,10 +1187,11 @@ export class DestinationsApi {
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
@@ -2826,7 +1290,7 @@ export class DestinationsApi {
      * @param destinationId
      * @param UpdateDestinationV1Input
      */
-    public async updateDestinationAlpha(
+    public async updateDestination(
         destinationId: string,
         UpdateDestinationV1Input: UpdateDestinationV1Input,
         options: { headers: { [name: string]: string } } = { headers: {} }
@@ -2846,152 +1310,23 @@ export class DestinationsApi {
             this._defaultHeaders
         );
         const produces = [
-            'application/vnd.segment.v1alpha+json',
+            'application/vnd.segment.v1+json',
             'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling updateDestinationAlpha.'
-            );
-        }
-
-        // verify required parameter 'UpdateDestinationV1Input' is not null or undefined
-        if (
-            UpdateDestinationV1Input === null ||
-            UpdateDestinationV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter UpdateDestinationV1Input was null or undefined when calling updateDestinationAlpha.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'PATCH',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                UpdateDestinationV1Input,
-                'UpdateDestinationV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: UpdateDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'UpdateDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Updates an existing Destination.  **Note**: if you attempt to update read-only settings for your destination you\'ll encounter the following behavior:    * If only read-only properties are being updated, the endpoint will return an HTTP 400 error.   * If there\'s a mix of writable and read-only properties in the payload, the request will be accepted, the writable properties will be updated and the read-only properties ignored.     When called, this endpoint may generate the `Integration Disabled` [Audit Trail](/tag/Audit-Trail) event.  Config API omitted fields: - `updateMask`
-     * @summary Update Destination
-     * @param destinationId
-     * @param UpdateDestinationV1Input
-     */
-    public async updateDestinationBeta(
-        destinationId: string,
-        UpdateDestinationV1Input: UpdateDestinationV1Input,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destinations/{destinationId}'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
             'application/vnd.segment.v1beta+json',
-            'application/json',
+            'application/vnd.segment.v1alpha+json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 
         // verify required parameter 'destinationId' is not null or undefined
         if (destinationId === null || destinationId === undefined) {
             throw new Error(
-                'Required parameter destinationId was null or undefined when calling updateDestinationBeta.'
+                'Required parameter destinationId was null or undefined when calling updateDestination.'
             );
         }
 
@@ -3001,271 +1336,7 @@ export class DestinationsApi {
             UpdateDestinationV1Input === undefined
         ) {
             throw new Error(
-                'Required parameter UpdateDestinationV1Input was null or undefined when calling updateDestinationBeta.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'PATCH',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                UpdateDestinationV1Input,
-                'UpdateDestinationV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: UpdateDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'UpdateDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Updates an existing Destination.  **Note**: if you attempt to update read-only settings for your destination you\'ll encounter the following behavior:    * If only read-only properties are being updated, the endpoint will return an HTTP 400 error.   * If there\'s a mix of writable and read-only properties in the payload, the request will be accepted, the writable properties will be updated and the read-only properties ignored.     When called, this endpoint may generate the `Integration Disabled` [Audit Trail](/tag/Audit-Trail) event.  Config API omitted fields: - `updateMask`
-     * @summary Update Destination
-     * @param destinationId
-     * @param UpdateDestinationV1Input
-     */
-    public async updateDestinationCurrent(
-        destinationId: string,
-        UpdateDestinationV1Input: UpdateDestinationV1Input,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destinations/{destinationId}'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling updateDestinationCurrent.'
-            );
-        }
-
-        // verify required parameter 'UpdateDestinationV1Input' is not null or undefined
-        if (
-            UpdateDestinationV1Input === null ||
-            UpdateDestinationV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter UpdateDestinationV1Input was null or undefined when calling updateDestinationCurrent.'
-            );
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'PATCH',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-            body: ObjectSerializer.serialize(
-                UpdateDestinationV1Input,
-                'UpdateDestinationV1Input'
-            ),
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.token.accessToken) {
-            authenticationPromise = authenticationPromise.then(() =>
-                this.authentications.token.applyToRequest(
-                    localVarRequestOptions
-                )
-            );
-        }
-        authenticationPromise = authenticationPromise.then(() =>
-            this.authentications.default.applyToRequest(localVarRequestOptions)
-        );
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() =>
-                interceptor(localVarRequestOptions)
-            );
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{
-                response: http.IncomingMessage;
-                body: UpdateDestination200Response;
-            }>((resolve, reject) => {
-                localVarRequest(
-                    localVarRequestOptions,
-                    (error, response, body) => {
-                        if (error) {
-                            reject(error);
-                        } else {
-                            if (
-                                response.statusCode &&
-                                response.statusCode >= 200 &&
-                                response.statusCode <= 299
-                            ) {
-                                body = ObjectSerializer.deserialize(
-                                    body,
-                                    'UpdateDestination200Response'
-                                );
-                                resolve({ response: response, body: body });
-                            } else {
-                                reject(
-                                    new HttpError(
-                                        response,
-                                        body,
-                                        response.statusCode
-                                    )
-                                );
-                            }
-                        }
-                    }
-                );
-            });
-        });
-    }
-    /**
-     * Updates an existing Destination.  **Note**: if you attempt to update read-only settings for your destination you\'ll encounter the following behavior:    * If only read-only properties are being updated, the endpoint will return an HTTP 400 error.   * If there\'s a mix of writable and read-only properties in the payload, the request will be accepted, the writable properties will be updated and the read-only properties ignored.     When called, this endpoint may generate the `Integration Disabled` [Audit Trail](/tag/Audit-Trail) event.  Config API omitted fields: - `updateMask`
-     * @summary Update Destination
-     * @param destinationId
-     * @param UpdateDestinationV1Input
-     */
-    public async updateDestinationV1(
-        destinationId: string,
-        UpdateDestinationV1Input: UpdateDestinationV1Input,
-        options: { headers: { [name: string]: string } } = { headers: {} }
-    ): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateDestination200Response;
-    }> {
-        const localVarPath =
-            this.basePath +
-            '/destinations/{destinationId}'.replace(
-                '{' + 'destinationId' + '}',
-                encodeURIComponent(String(destinationId))
-            );
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign(
-            {},
-            this._defaultHeaders
-        );
-        const produces = [
-            'application/vnd.segment.v1+json',
-            'application/json',
-        ];
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
-            localVarHeaderParams.Accept = 'application/json';
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'destinationId' is not null or undefined
-        if (destinationId === null || destinationId === undefined) {
-            throw new Error(
-                'Required parameter destinationId was null or undefined when calling updateDestinationV1.'
-            );
-        }
-
-        // verify required parameter 'UpdateDestinationV1Input' is not null or undefined
-        if (
-            UpdateDestinationV1Input === null ||
-            UpdateDestinationV1Input === undefined
-        ) {
-            throw new Error(
-                'Required parameter UpdateDestinationV1Input was null or undefined when calling updateDestinationV1.'
+                'Required parameter UpdateDestinationV1Input was null or undefined when calling updateDestination.'
             );
         }
 
@@ -3381,10 +1452,11 @@ export class DestinationsApi {
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
+        // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = produces[0];
-        } else {
             localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
 

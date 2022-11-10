@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { DeliveryMetricsSummaryBeta } from './deliveryMetricsSummaryBeta';
 import { MetricBeta } from './metricBeta';
 
 /**

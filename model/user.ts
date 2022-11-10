@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { PermissionV1 } from './permissionV1';
+import { UserV1 } from './userV1';
 
 /**
  * The user object.

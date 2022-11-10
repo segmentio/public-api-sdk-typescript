@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { DestinationV1 } from './destinationV1';
 import { Metadata } from './metadata';
 
 /**

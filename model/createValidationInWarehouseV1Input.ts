@@ -23,7 +23,7 @@ export class CreateValidationInWarehouseV1Input {
     /**
      * The settings to check.
      */
-    'settings': any;
+    'settings': any | null;
 
     static discriminator: string | undefined = undefined;
 

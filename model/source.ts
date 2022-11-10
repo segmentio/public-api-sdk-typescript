@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { EventSourceV1 } from './eventSourceV1';
 
 /**
  * The Source where the events originated.

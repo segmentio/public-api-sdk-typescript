@@ -26,7 +26,7 @@ export declare class APICallsApi {
     setApiKey(key: APICallsApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    getDailyPerSourceAPICallsUsageAlpha(period: string, pagination: PaginationInput, options?: {
+    getDailyPerSourceAPICallsUsage(period: string, pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -34,55 +34,7 @@ export declare class APICallsApi {
         response: http.IncomingMessage;
         body: GetDailyPerSourceAPICallsUsage200Response;
     }>;
-    getDailyPerSourceAPICallsUsageBeta(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyPerSourceAPICallsUsage200Response;
-    }>;
-    getDailyPerSourceAPICallsUsageCurrent(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyPerSourceAPICallsUsage200Response;
-    }>;
-    getDailyPerSourceAPICallsUsageV1(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyPerSourceAPICallsUsage200Response;
-    }>;
-    getDailyWorkspaceAPICallsUsageAlpha(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyWorkspaceAPICallsUsage200Response;
-    }>;
-    getDailyWorkspaceAPICallsUsageBeta(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyWorkspaceAPICallsUsage200Response;
-    }>;
-    getDailyWorkspaceAPICallsUsageCurrent(period: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDailyWorkspaceAPICallsUsage200Response;
-    }>;
-    getDailyWorkspaceAPICallsUsageV1(period: string, pagination: PaginationInput, options?: {
+    getDailyWorkspaceAPICallsUsage(period: string, pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
