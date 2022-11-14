@@ -767,7 +767,6 @@ export class DeletionAndSuppressionApi {
             | 'PARTIAL_SUCCESS'
             | 'RUNNING',
         regulationTypes?: Array<
-            | 'BULK_DELETE_ONLY'
             | 'DELETE_INTERNAL'
             | 'DELETE_ONLY'
             | 'SUPPRESS_ONLY'
@@ -829,7 +828,7 @@ export class DeletionAndSuppressionApi {
             localVarQueryParameters['regulationTypes'] =
                 ObjectSerializer.serialize(
                     regulationTypes,
-                    "Array<'BULK_DELETE_ONLY' | 'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>"
+                    "Array<'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>"
                 );
         }
 
@@ -1054,7 +1053,6 @@ export class DeletionAndSuppressionApi {
             | 'PARTIAL_SUCCESS'
             | 'RUNNING',
         regulationTypes?: Array<
-            | 'BULK_DELETE_ONLY'
             | 'DELETE_INTERNAL'
             | 'DELETE_ONLY'
             | 'SUPPRESS_ONLY'
@@ -1104,7 +1102,7 @@ export class DeletionAndSuppressionApi {
             localVarQueryParameters['regulationTypes'] =
                 ObjectSerializer.serialize(
                     regulationTypes,
-                    "Array<'BULK_DELETE_ONLY' | 'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>"
+                    "Array<'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>"
                 );
         }
 
