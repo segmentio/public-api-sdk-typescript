@@ -30,7 +30,7 @@ export declare class CatalogApi {
     setApiKey(key: CatalogApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    getDestinationMetadataAlpha(destinationMetadataId: string, options?: {
+    getDestinationMetadata(destinationMetadataId: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -38,31 +38,7 @@ export declare class CatalogApi {
         response: http.IncomingMessage;
         body: GetDestinationMetadata200Response;
     }>;
-    getDestinationMetadataBeta(destinationMetadataId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDestinationMetadata200Response;
-    }>;
-    getDestinationMetadataCurrent(destinationMetadataId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDestinationMetadata200Response;
-    }>;
-    getDestinationMetadataV1(destinationMetadataId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDestinationMetadata200Response;
-    }>;
-    getDestinationsCatalogAlpha(pagination: PaginationInput, options?: {
+    getDestinationsCatalog(pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -70,31 +46,7 @@ export declare class CatalogApi {
         response: http.IncomingMessage;
         body: GetDestinationsCatalog200Response;
     }>;
-    getDestinationsCatalogBeta(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDestinationsCatalog200Response;
-    }>;
-    getDestinationsCatalogCurrent(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDestinationsCatalog200Response;
-    }>;
-    getDestinationsCatalogV1(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetDestinationsCatalog200Response;
-    }>;
-    getSourceMetadataAlpha(sourceMetadataId: string, options?: {
+    getSourceMetadata(sourceMetadataId: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -102,31 +54,7 @@ export declare class CatalogApi {
         response: http.IncomingMessage;
         body: GetSourceMetadata200Response;
     }>;
-    getSourceMetadataBeta(sourceMetadataId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetSourceMetadata200Response;
-    }>;
-    getSourceMetadataCurrent(sourceMetadataId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetSourceMetadata200Response;
-    }>;
-    getSourceMetadataV1(sourceMetadataId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetSourceMetadata200Response;
-    }>;
-    getSourcesCatalogAlpha(pagination: PaginationInput, options?: {
+    getSourcesCatalog(pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -134,31 +62,7 @@ export declare class CatalogApi {
         response: http.IncomingMessage;
         body: GetSourcesCatalog200Response;
     }>;
-    getSourcesCatalogBeta(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetSourcesCatalog200Response;
-    }>;
-    getSourcesCatalogCurrent(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetSourcesCatalog200Response;
-    }>;
-    getSourcesCatalogV1(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetSourcesCatalog200Response;
-    }>;
-    getWarehouseMetadataAlpha(warehouseMetadataId: string, options?: {
+    getWarehouseMetadata(warehouseMetadataId: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -166,55 +70,7 @@ export declare class CatalogApi {
         response: http.IncomingMessage;
         body: GetWarehouseMetadata200Response;
     }>;
-    getWarehouseMetadataBeta(warehouseMetadataId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetWarehouseMetadata200Response;
-    }>;
-    getWarehouseMetadataCurrent(warehouseMetadataId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetWarehouseMetadata200Response;
-    }>;
-    getWarehouseMetadataV1(warehouseMetadataId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetWarehouseMetadata200Response;
-    }>;
-    getWarehousesCatalogAlpha(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetWarehousesCatalog200Response;
-    }>;
-    getWarehousesCatalogBeta(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetWarehousesCatalog200Response;
-    }>;
-    getWarehousesCatalogCurrent(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetWarehousesCatalog200Response;
-    }>;
-    getWarehousesCatalogV1(pagination: PaginationInput, options?: {
+    getWarehousesCatalog(pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

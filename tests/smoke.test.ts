@@ -69,7 +69,7 @@ describe('Smoke tests', () => {
             },
         });
 
-        const resp = await mockedCreate.createSourceCurrent({
+        const resp = await mockedCreate.createSource({
             enabled: true,
             metadataId: 'IqDTy1TpoU',
             slug: 'my-test-source',
@@ -117,7 +117,7 @@ describe('Smoke tests', () => {
             },
         });
 
-        const resp = await mockedRead.getSourceCurrent('source-id');
+        const resp = await mockedRead.getSource('source-id');
 
         expect(resp).toMatchSnapshot({
             response: {
@@ -168,7 +168,7 @@ describe('Smoke tests', () => {
             },
         });
 
-        const resp = await mockedList.listSourcesCurrent({ count: 1 });
+        const resp = await mockedList.listSources({ count: 1 });
 
         expect(resp).toMatchSnapshot({
             response: {
@@ -212,7 +212,7 @@ describe('Smoke tests', () => {
             },
         });
 
-        const resp = await mockedUpdate.updateSourceCurrent('source-id', {
+        const resp = await mockedUpdate.updateSource('source-id', {
             name: 'My updated source',
             enabled: false,
         });
@@ -234,7 +234,7 @@ describe('Smoke tests', () => {
             },
         });
 
-        const resp = await mockedDelete.deleteSourceCurrent('my-source');
+        const resp = await mockedDelete.deleteSource('my-source');
 
         expect(resp).toMatchSnapshot({
             response: {
@@ -260,7 +260,7 @@ describe('Smoke tests', () => {
             404
         );
 
-        const resp = mockedDelete.deleteSourceCurrent('404');
+        const resp = mockedDelete.deleteSource('404');
 
         await expect(resp).rejects.toMatchSnapshot();
     });

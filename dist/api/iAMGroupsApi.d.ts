@@ -42,7 +42,7 @@ export declare class IAMGroupsApi {
     setApiKey(key: IAMGroupsApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    addPermissionsToUserGroupAlpha(userGroupId: string, AddPermissionsToUserGroupV1Input: AddPermissionsToUserGroupV1Input, options?: {
+    addPermissionsToUserGroup(userGroupId: string, AddPermissionsToUserGroupV1Input: AddPermissionsToUserGroupV1Input, options?: {
         headers: {
             [name: string]: string;
         };
@@ -50,31 +50,7 @@ export declare class IAMGroupsApi {
         response: http.IncomingMessage;
         body: AddPermissionsToUserGroup200Response;
     }>;
-    addPermissionsToUserGroupBeta(userGroupId: string, AddPermissionsToUserGroupV1Input: AddPermissionsToUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: AddPermissionsToUserGroup200Response;
-    }>;
-    addPermissionsToUserGroupCurrent(userGroupId: string, AddPermissionsToUserGroupV1Input: AddPermissionsToUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: AddPermissionsToUserGroup200Response;
-    }>;
-    addPermissionsToUserGroupV1(userGroupId: string, AddPermissionsToUserGroupV1Input: AddPermissionsToUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: AddPermissionsToUserGroup200Response;
-    }>;
-    addUsersToUserGroupAlpha(userGroupId: string, AddUsersToUserGroupV1Input: AddUsersToUserGroupV1Input, options?: {
+    addUsersToUserGroup(userGroupId: string, AddUsersToUserGroupV1Input: AddUsersToUserGroupV1Input, options?: {
         headers: {
             [name: string]: string;
         };
@@ -82,31 +58,7 @@ export declare class IAMGroupsApi {
         response: http.IncomingMessage;
         body: AddUsersToUserGroup200Response;
     }>;
-    addUsersToUserGroupBeta(userGroupId: string, AddUsersToUserGroupV1Input: AddUsersToUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: AddUsersToUserGroup200Response;
-    }>;
-    addUsersToUserGroupCurrent(userGroupId: string, AddUsersToUserGroupV1Input: AddUsersToUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: AddUsersToUserGroup200Response;
-    }>;
-    addUsersToUserGroupV1(userGroupId: string, AddUsersToUserGroupV1Input: AddUsersToUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: AddUsersToUserGroup200Response;
-    }>;
-    createUserGroupAlpha(CreateUserGroupV1Input: CreateUserGroupV1Input, options?: {
+    createUserGroup(CreateUserGroupV1Input: CreateUserGroupV1Input, options?: {
         headers: {
             [name: string]: string;
         };
@@ -114,31 +66,7 @@ export declare class IAMGroupsApi {
         response: http.IncomingMessage;
         body: CreateUserGroup200Response;
     }>;
-    createUserGroupBeta(CreateUserGroupV1Input: CreateUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateUserGroup200Response;
-    }>;
-    createUserGroupCurrent(CreateUserGroupV1Input: CreateUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateUserGroup200Response;
-    }>;
-    createUserGroupV1(CreateUserGroupV1Input: CreateUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateUserGroup200Response;
-    }>;
-    deleteUserGroupAlpha(userGroupId: string, options?: {
+    deleteUserGroup(userGroupId: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -146,31 +74,7 @@ export declare class IAMGroupsApi {
         response: http.IncomingMessage;
         body: DeleteUserGroup200Response;
     }>;
-    deleteUserGroupBeta(userGroupId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteUserGroup200Response;
-    }>;
-    deleteUserGroupCurrent(userGroupId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteUserGroup200Response;
-    }>;
-    deleteUserGroupV1(userGroupId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteUserGroup200Response;
-    }>;
-    getUserGroupAlpha(userGroupId: string, options?: {
+    getUserGroup(userGroupId: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -178,31 +82,7 @@ export declare class IAMGroupsApi {
         response: http.IncomingMessage;
         body: GetUserGroup200Response;
     }>;
-    getUserGroupBeta(userGroupId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetUserGroup200Response;
-    }>;
-    getUserGroupCurrent(userGroupId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetUserGroup200Response;
-    }>;
-    getUserGroupV1(userGroupId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetUserGroup200Response;
-    }>;
-    listInvitesFromUserGroupAlpha(userGroupId: string, pagination: PaginationInput, options?: {
+    listInvitesFromUserGroup(userGroupId: string, pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -210,31 +90,7 @@ export declare class IAMGroupsApi {
         response: http.IncomingMessage;
         body: ListInvitesFromUserGroup200Response;
     }>;
-    listInvitesFromUserGroupBeta(userGroupId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListInvitesFromUserGroup200Response;
-    }>;
-    listInvitesFromUserGroupCurrent(userGroupId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListInvitesFromUserGroup200Response;
-    }>;
-    listInvitesFromUserGroupV1(userGroupId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListInvitesFromUserGroup200Response;
-    }>;
-    listUserGroupsAlpha(pagination: PaginationInput, options?: {
+    listUserGroups(pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -242,31 +98,7 @@ export declare class IAMGroupsApi {
         response: http.IncomingMessage;
         body: ListUserGroups200Response;
     }>;
-    listUserGroupsBeta(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListUserGroups200Response;
-    }>;
-    listUserGroupsCurrent(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListUserGroups200Response;
-    }>;
-    listUserGroupsV1(pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListUserGroups200Response;
-    }>;
-    listUsersFromUserGroupAlpha(userGroupId: string, pagination: PaginationInput, options?: {
+    listUsersFromUserGroup(userGroupId: string, pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -274,31 +106,7 @@ export declare class IAMGroupsApi {
         response: http.IncomingMessage;
         body: ListUsersFromUserGroup200Response;
     }>;
-    listUsersFromUserGroupBeta(userGroupId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListUsersFromUserGroup200Response;
-    }>;
-    listUsersFromUserGroupCurrent(userGroupId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListUsersFromUserGroup200Response;
-    }>;
-    listUsersFromUserGroupV1(userGroupId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListUsersFromUserGroup200Response;
-    }>;
-    removeUsersFromUserGroupAlpha(userGroupId: string, emails: Array<string>, options?: {
+    removeUsersFromUserGroup(userGroupId: string, emails: Array<string>, options?: {
         headers: {
             [name: string]: string;
         };
@@ -306,31 +114,7 @@ export declare class IAMGroupsApi {
         response: http.IncomingMessage;
         body: RemoveUsersFromUserGroup200Response;
     }>;
-    removeUsersFromUserGroupBeta(userGroupId: string, emails: Array<string>, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: RemoveUsersFromUserGroup200Response;
-    }>;
-    removeUsersFromUserGroupCurrent(userGroupId: string, emails: Array<string>, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: RemoveUsersFromUserGroup200Response;
-    }>;
-    removeUsersFromUserGroupV1(userGroupId: string, emails: Array<string>, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: RemoveUsersFromUserGroup200Response;
-    }>;
-    replacePermissionsForUserGroupAlpha(userGroupId: string, ReplacePermissionsForUserGroupV1Input: ReplacePermissionsForUserGroupV1Input, options?: {
+    replacePermissionsForUserGroup(userGroupId: string, ReplacePermissionsForUserGroupV1Input: ReplacePermissionsForUserGroupV1Input, options?: {
         headers: {
             [name: string]: string;
         };
@@ -338,31 +122,7 @@ export declare class IAMGroupsApi {
         response: http.IncomingMessage;
         body: ReplacePermissionsForUserGroup200Response;
     }>;
-    replacePermissionsForUserGroupBeta(userGroupId: string, ReplacePermissionsForUserGroupV1Input: ReplacePermissionsForUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ReplacePermissionsForUserGroup200Response;
-    }>;
-    replacePermissionsForUserGroupCurrent(userGroupId: string, ReplacePermissionsForUserGroupV1Input: ReplacePermissionsForUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ReplacePermissionsForUserGroup200Response;
-    }>;
-    replacePermissionsForUserGroupV1(userGroupId: string, ReplacePermissionsForUserGroupV1Input: ReplacePermissionsForUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ReplacePermissionsForUserGroup200Response;
-    }>;
-    replaceUsersInUserGroupAlpha(userGroupId: string, ReplaceUsersInUserGroupV1Input: ReplaceUsersInUserGroupV1Input, options?: {
+    replaceUsersInUserGroup(userGroupId: string, ReplaceUsersInUserGroupV1Input: ReplaceUsersInUserGroupV1Input, options?: {
         headers: {
             [name: string]: string;
         };
@@ -370,55 +130,7 @@ export declare class IAMGroupsApi {
         response: http.IncomingMessage;
         body: ReplaceUsersInUserGroup200Response;
     }>;
-    replaceUsersInUserGroupBeta(userGroupId: string, ReplaceUsersInUserGroupV1Input: ReplaceUsersInUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ReplaceUsersInUserGroup200Response;
-    }>;
-    replaceUsersInUserGroupCurrent(userGroupId: string, ReplaceUsersInUserGroupV1Input: ReplaceUsersInUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ReplaceUsersInUserGroup200Response;
-    }>;
-    replaceUsersInUserGroupV1(userGroupId: string, ReplaceUsersInUserGroupV1Input: ReplaceUsersInUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ReplaceUsersInUserGroup200Response;
-    }>;
-    updateUserGroupAlpha(userGroupId: string, UpdateUserGroupV1Input: UpdateUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateUserGroup200Response;
-    }>;
-    updateUserGroupBeta(userGroupId: string, UpdateUserGroupV1Input: UpdateUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateUserGroup200Response;
-    }>;
-    updateUserGroupCurrent(userGroupId: string, UpdateUserGroupV1Input: UpdateUserGroupV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateUserGroup200Response;
-    }>;
-    updateUserGroupV1(userGroupId: string, UpdateUserGroupV1Input: UpdateUserGroupV1Input, options?: {
+    updateUserGroup(userGroupId: string, UpdateUserGroupV1Input: UpdateUserGroupV1Input, options?: {
         headers: {
             [name: string]: string;
         };

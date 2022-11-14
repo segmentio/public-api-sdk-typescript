@@ -112,7 +112,7 @@ var EventsApi = (function () {
     EventsApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    EventsApi.prototype.getEventsVolumeFromWorkspaceAlpha = function (granularity, startTime, endTime, groupBy, sourceId, eventName, eventType, appVersion, pagination, options) {
+    EventsApi.prototype.getEventsVolumeFromWorkspace = function (granularity, startTime, endTime, groupBy, sourceId, eventName, eventType, appVersion, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -122,24 +122,26 @@ var EventsApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (granularity === null || granularity === undefined) {
-                    throw new Error('Required parameter granularity was null or undefined when calling getEventsVolumeFromWorkspaceAlpha.');
+                    throw new Error('Required parameter granularity was null or undefined when calling getEventsVolumeFromWorkspace.');
                 }
                 if (startTime === null || startTime === undefined) {
-                    throw new Error('Required parameter startTime was null or undefined when calling getEventsVolumeFromWorkspaceAlpha.');
+                    throw new Error('Required parameter startTime was null or undefined when calling getEventsVolumeFromWorkspace.');
                 }
                 if (endTime === null || endTime === undefined) {
-                    throw new Error('Required parameter endTime was null or undefined when calling getEventsVolumeFromWorkspaceAlpha.');
+                    throw new Error('Required parameter endTime was null or undefined when calling getEventsVolumeFromWorkspace.');
                 }
                 if (granularity !== undefined) {
                     localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'DAY' | 'HOUR' | 'MINUTE'");
@@ -196,351 +198,6 @@ var EventsApi = (function () {
                 for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
                     interceptor = _a[_i];
                     _loop_1(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetEventsVolumeFromWorkspace200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    EventsApi.prototype.getEventsVolumeFromWorkspaceBeta = function (granularity, startTime, endTime, groupBy, sourceId, eventName, eventType, appVersion, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/events/volume';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (granularity === null || granularity === undefined) {
-                    throw new Error('Required parameter granularity was null or undefined when calling getEventsVolumeFromWorkspaceBeta.');
-                }
-                if (startTime === null || startTime === undefined) {
-                    throw new Error('Required parameter startTime was null or undefined when calling getEventsVolumeFromWorkspaceBeta.');
-                }
-                if (endTime === null || endTime === undefined) {
-                    throw new Error('Required parameter endTime was null or undefined when calling getEventsVolumeFromWorkspaceBeta.');
-                }
-                if (granularity !== undefined) {
-                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'DAY' | 'HOUR' | 'MINUTE'");
-                }
-                if (startTime !== undefined) {
-                    localVarQueryParameters['startTime'] = models_1.ObjectSerializer.serialize(startTime, 'string');
-                }
-                if (endTime !== undefined) {
-                    localVarQueryParameters['endTime'] = models_1.ObjectSerializer.serialize(endTime, 'string');
-                }
-                if (groupBy !== undefined) {
-                    localVarQueryParameters['groupBy'] = models_1.ObjectSerializer.serialize(groupBy, 'Array<string>');
-                }
-                if (sourceId !== undefined) {
-                    localVarQueryParameters['sourceId'] = models_1.ObjectSerializer.serialize(sourceId, 'Array<string>');
-                }
-                if (eventName !== undefined) {
-                    localVarQueryParameters['eventName'] = models_1.ObjectSerializer.serialize(eventName, 'Array<string>');
-                }
-                if (eventType !== undefined) {
-                    localVarQueryParameters['eventType'] = models_1.ObjectSerializer.serialize(eventType, 'Array<string>');
-                }
-                if (appVersion !== undefined) {
-                    localVarQueryParameters['appVersion'] = models_1.ObjectSerializer.serialize(appVersion, 'Array<string>');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_2 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_2(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetEventsVolumeFromWorkspace200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    EventsApi.prototype.getEventsVolumeFromWorkspaceCurrent = function (granularity, startTime, endTime, groupBy, sourceId, eventName, eventType, appVersion, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/events/volume';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (granularity === null || granularity === undefined) {
-                    throw new Error('Required parameter granularity was null or undefined when calling getEventsVolumeFromWorkspaceCurrent.');
-                }
-                if (startTime === null || startTime === undefined) {
-                    throw new Error('Required parameter startTime was null or undefined when calling getEventsVolumeFromWorkspaceCurrent.');
-                }
-                if (endTime === null || endTime === undefined) {
-                    throw new Error('Required parameter endTime was null or undefined when calling getEventsVolumeFromWorkspaceCurrent.');
-                }
-                if (granularity !== undefined) {
-                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'DAY' | 'HOUR' | 'MINUTE'");
-                }
-                if (startTime !== undefined) {
-                    localVarQueryParameters['startTime'] = models_1.ObjectSerializer.serialize(startTime, 'string');
-                }
-                if (endTime !== undefined) {
-                    localVarQueryParameters['endTime'] = models_1.ObjectSerializer.serialize(endTime, 'string');
-                }
-                if (groupBy !== undefined) {
-                    localVarQueryParameters['groupBy'] = models_1.ObjectSerializer.serialize(groupBy, 'Array<string>');
-                }
-                if (sourceId !== undefined) {
-                    localVarQueryParameters['sourceId'] = models_1.ObjectSerializer.serialize(sourceId, 'Array<string>');
-                }
-                if (eventName !== undefined) {
-                    localVarQueryParameters['eventName'] = models_1.ObjectSerializer.serialize(eventName, 'Array<string>');
-                }
-                if (eventType !== undefined) {
-                    localVarQueryParameters['eventType'] = models_1.ObjectSerializer.serialize(eventType, 'Array<string>');
-                }
-                if (appVersion !== undefined) {
-                    localVarQueryParameters['appVersion'] = models_1.ObjectSerializer.serialize(appVersion, 'Array<string>');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_3 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_3(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetEventsVolumeFromWorkspace200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    EventsApi.prototype.getEventsVolumeFromWorkspaceV1 = function (granularity, startTime, endTime, groupBy, sourceId, eventName, eventType, appVersion, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/events/volume';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (granularity === null || granularity === undefined) {
-                    throw new Error('Required parameter granularity was null or undefined when calling getEventsVolumeFromWorkspaceV1.');
-                }
-                if (startTime === null || startTime === undefined) {
-                    throw new Error('Required parameter startTime was null or undefined when calling getEventsVolumeFromWorkspaceV1.');
-                }
-                if (endTime === null || endTime === undefined) {
-                    throw new Error('Required parameter endTime was null or undefined when calling getEventsVolumeFromWorkspaceV1.');
-                }
-                if (granularity !== undefined) {
-                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'DAY' | 'HOUR' | 'MINUTE'");
-                }
-                if (startTime !== undefined) {
-                    localVarQueryParameters['startTime'] = models_1.ObjectSerializer.serialize(startTime, 'string');
-                }
-                if (endTime !== undefined) {
-                    localVarQueryParameters['endTime'] = models_1.ObjectSerializer.serialize(endTime, 'string');
-                }
-                if (groupBy !== undefined) {
-                    localVarQueryParameters['groupBy'] = models_1.ObjectSerializer.serialize(groupBy, 'Array<string>');
-                }
-                if (sourceId !== undefined) {
-                    localVarQueryParameters['sourceId'] = models_1.ObjectSerializer.serialize(sourceId, 'Array<string>');
-                }
-                if (eventName !== undefined) {
-                    localVarQueryParameters['eventName'] = models_1.ObjectSerializer.serialize(eventName, 'Array<string>');
-                }
-                if (eventType !== undefined) {
-                    localVarQueryParameters['eventType'] = models_1.ObjectSerializer.serialize(eventType, 'Array<string>');
-                }
-                if (appVersion !== undefined) {
-                    localVarQueryParameters['appVersion'] = models_1.ObjectSerializer.serialize(appVersion, 'Array<string>');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_4 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_4(interceptor);
                 }
                 return [2, interceptorPromise.then(function () {
                         if (Object.keys(localVarFormParams).length) {

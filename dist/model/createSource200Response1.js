@@ -12,7 +12,7 @@ var CreateSource200Response1 = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'CreateSourceV1Output',
+            type: 'CreateSourceAlphaOutput',
         },
     ];
     return CreateSource200Response1;

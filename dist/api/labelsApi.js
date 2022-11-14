@@ -112,7 +112,7 @@ var LabelsApi = (function () {
     LabelsApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    LabelsApi.prototype.createLabelAlpha = function (CreateLabelAlphaInput, options) {
+    LabelsApi.prototype.createLabel = function (CreateLabelV1Input, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -122,19 +122,20 @@ var LabelsApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
+                }
                 localVarFormParams = {};
-                if (CreateLabelAlphaInput === null ||
-                    CreateLabelAlphaInput === undefined) {
-                    throw new Error('Required parameter CreateLabelAlphaInput was null or undefined when calling createLabelAlpha.');
+                if (CreateLabelV1Input === null || CreateLabelV1Input === undefined) {
+                    throw new Error('Required parameter CreateLabelV1Input was null or undefined when calling createLabel.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -145,7 +146,7 @@ var LabelsApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateLabelAlphaInput, 'CreateLabelAlphaInput'),
+                    body: models_1.ObjectSerializer.serialize(CreateLabelV1Input, 'CreateLabelV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -197,39 +198,46 @@ var LabelsApi = (function () {
             });
         });
     };
-    LabelsApi.prototype.createLabelBeta = function (CreateLabelV1Input, options) {
+    LabelsApi.prototype.deleteLabel = function (key, value, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/labels';
+                localVarPath = this.basePath +
+                    '/labels/{key}/{value}'
+                        .replace('{' + 'key' + '}', encodeURIComponent(String(key)))
+                        .replace('{' + 'value' + '}', encodeURIComponent(String(value)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
+                }
                 localVarFormParams = {};
-                if (CreateLabelV1Input === null || CreateLabelV1Input === undefined) {
-                    throw new Error('Required parameter CreateLabelV1Input was null or undefined when calling createLabelBeta.');
+                if (key === null || key === undefined) {
+                    throw new Error('Required parameter key was null or undefined when calling deleteLabel.');
+                }
+                if (value === null || value === undefined) {
+                    throw new Error('Required parameter value was null or undefined when calling deleteLabel.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'DELETE',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateLabelV1Input, 'CreateLabelV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -268,7 +276,7 @@ var LabelsApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateLabel200Response1');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteLabel200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -281,7 +289,7 @@ var LabelsApi = (function () {
             });
         });
     };
-    LabelsApi.prototype.createLabelCurrent = function (CreateLabelV1Input, options) {
+    LabelsApi.prototype.listLabels = function (options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
@@ -293,27 +301,25 @@ var LabelsApi = (function () {
                 produces = [
                     'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
-                localVarFormParams = {};
-                if (CreateLabelV1Input === null || CreateLabelV1Input === undefined) {
-                    throw new Error('Required parameter CreateLabelV1Input was null or undefined when calling createLabelCurrent.');
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
+                localVarFormParams = {};
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'GET',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateLabelV1Input, 'CreateLabelV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -352,761 +358,7 @@ var LabelsApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateLabel200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    LabelsApi.prototype.createLabelV1 = function (CreateLabelV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/labels';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (CreateLabelV1Input === null || CreateLabelV1Input === undefined) {
-                    throw new Error('Required parameter CreateLabelV1Input was null or undefined when calling createLabelV1.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'POST',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateLabelV1Input, 'CreateLabelV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_4 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_4(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateLabel200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    LabelsApi.prototype.deleteLabelAlpha = function (key, value, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_5, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/labels/{key}/{value}'
-                        .replace('{' + 'key' + '}', encodeURIComponent(String(key)))
-                        .replace('{' + 'value' + '}', encodeURIComponent(String(value)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (key === null || key === undefined) {
-                    throw new Error('Required parameter key was null or undefined when calling deleteLabelAlpha.');
-                }
-                if (value === null || value === undefined) {
-                    throw new Error('Required parameter value was null or undefined when calling deleteLabelAlpha.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'DELETE',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_5 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_5(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteLabel200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    LabelsApi.prototype.deleteLabelBeta = function (key, value, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_6, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/labels/{key}/{value}'
-                        .replace('{' + 'key' + '}', encodeURIComponent(String(key)))
-                        .replace('{' + 'value' + '}', encodeURIComponent(String(value)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (key === null || key === undefined) {
-                    throw new Error('Required parameter key was null or undefined when calling deleteLabelBeta.');
-                }
-                if (value === null || value === undefined) {
-                    throw new Error('Required parameter value was null or undefined when calling deleteLabelBeta.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'DELETE',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_6 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_6(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteLabel200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    LabelsApi.prototype.deleteLabelCurrent = function (key, value, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_7, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/labels/{key}/{value}'
-                        .replace('{' + 'key' + '}', encodeURIComponent(String(key)))
-                        .replace('{' + 'value' + '}', encodeURIComponent(String(value)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (key === null || key === undefined) {
-                    throw new Error('Required parameter key was null or undefined when calling deleteLabelCurrent.');
-                }
-                if (value === null || value === undefined) {
-                    throw new Error('Required parameter value was null or undefined when calling deleteLabelCurrent.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'DELETE',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_7 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_7(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteLabel200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    LabelsApi.prototype.deleteLabelV1 = function (key, value, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_8, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/labels/{key}/{value}'
-                        .replace('{' + 'key' + '}', encodeURIComponent(String(key)))
-                        .replace('{' + 'value' + '}', encodeURIComponent(String(value)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (key === null || key === undefined) {
-                    throw new Error('Required parameter key was null or undefined when calling deleteLabelV1.');
-                }
-                if (value === null || value === undefined) {
-                    throw new Error('Required parameter value was null or undefined when calling deleteLabelV1.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'DELETE',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_8 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_8(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteLabel200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    LabelsApi.prototype.listLabelsAlpha = function (options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_9, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/labels';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_9 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_9(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
                                         body = models_1.ObjectSerializer.deserialize(body, 'ListLabels200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    LabelsApi.prototype.listLabelsBeta = function (options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_10, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/labels';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_10 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_10(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListLabels200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    LabelsApi.prototype.listLabelsCurrent = function (options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_11, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/labels';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_11 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_11(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListLabels200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    LabelsApi.prototype.listLabelsV1 = function (options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_12, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/labels';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_12 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_12(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListLabels200Response1');
                                         resolve({ response: response, body: body });
                                     }
                                     else {

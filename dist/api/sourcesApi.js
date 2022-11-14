@@ -112,7 +112,7 @@ var SourcesApi = (function () {
     SourcesApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    SourcesApi.prototype.addLabelsToSourceAlpha = function (sourceId, AddLabelsToSourceAlphaInput, options) {
+    SourcesApi.prototype.addLabelsToSource = function (sourceId, AddLabelsToSourceV1Input, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -123,22 +123,24 @@ var SourcesApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling addLabelsToSourceAlpha.');
+                    throw new Error('Required parameter sourceId was null or undefined when calling addLabelsToSource.');
                 }
-                if (AddLabelsToSourceAlphaInput === null ||
-                    AddLabelsToSourceAlphaInput === undefined) {
-                    throw new Error('Required parameter AddLabelsToSourceAlphaInput was null or undefined when calling addLabelsToSourceAlpha.');
+                if (AddLabelsToSourceV1Input === null ||
+                    AddLabelsToSourceV1Input === undefined) {
+                    throw new Error('Required parameter AddLabelsToSourceV1Input was null or undefined when calling addLabelsToSource.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -149,7 +151,7 @@ var SourcesApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(AddLabelsToSourceAlphaInput, 'AddLabelsToSourceAlphaInput'),
+                    body: models_1.ObjectSerializer.serialize(AddLabelsToSourceV1Input, 'AddLabelsToSourceV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -201,33 +203,30 @@ var SourcesApi = (function () {
             });
         });
     };
-    SourcesApi.prototype.addLabelsToSourceBeta = function (sourceId, AddLabelsToSourceV1Input, options) {
+    SourcesApi.prototype.createSource = function (CreateSourceV1Input, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/labels'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
+                localVarPath = this.basePath + '/sources';
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling addLabelsToSourceBeta.');
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
-                if (AddLabelsToSourceV1Input === null ||
-                    AddLabelsToSourceV1Input === undefined) {
-                    throw new Error('Required parameter AddLabelsToSourceV1Input was null or undefined when calling addLabelsToSourceBeta.');
+                localVarFormParams = {};
+                if (CreateSourceV1Input === null || CreateSourceV1Input === undefined) {
+                    throw new Error('Required parameter CreateSourceV1Input was null or undefined when calling createSource.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -238,7 +237,7 @@ var SourcesApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(AddLabelsToSourceV1Input, 'AddLabelsToSourceV1Input'),
+                    body: models_1.ObjectSerializer.serialize(CreateSourceV1Input, 'CreateSourceV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -277,7 +276,7 @@ var SourcesApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'AddLabelsToSource200Response1');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateSource200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -290,44 +289,41 @@ var SourcesApi = (function () {
             });
         });
     };
-    SourcesApi.prototype.addLabelsToSourceCurrent = function (sourceId, AddLabelsToSourceV1Input, options) {
+    SourcesApi.prototype.deleteSource = function (sourceId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/sources/{sourceId}/labels'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
+                    '/sources/{sourceId}'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
                     'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling addLabelsToSourceCurrent.');
-                }
-                if (AddLabelsToSourceV1Input === null ||
-                    AddLabelsToSourceV1Input === undefined) {
-                    throw new Error('Required parameter AddLabelsToSourceV1Input was null or undefined when calling addLabelsToSourceCurrent.');
+                    throw new Error('Required parameter sourceId was null or undefined when calling deleteSource.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'DELETE',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(AddLabelsToSourceV1Input, 'AddLabelsToSourceV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -366,7 +362,7 @@ var SourcesApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'AddLabelsToSource200Response1');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteSource200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -379,44 +375,41 @@ var SourcesApi = (function () {
             });
         });
     };
-    SourcesApi.prototype.addLabelsToSourceV1 = function (sourceId, AddLabelsToSourceV1Input, options) {
+    SourcesApi.prototype.getSource = function (sourceId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/sources/{sourceId}/labels'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
+                    '/sources/{sourceId}'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
                     'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling addLabelsToSourceV1.');
-                }
-                if (AddLabelsToSourceV1Input === null ||
-                    AddLabelsToSourceV1Input === undefined) {
-                    throw new Error('Required parameter AddLabelsToSourceV1Input was null or undefined when calling addLabelsToSourceV1.');
+                    throw new Error('Required parameter sourceId was null or undefined when calling getSource.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'GET',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(AddLabelsToSourceV1Input, 'AddLabelsToSourceV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -455,7 +448,7 @@ var SourcesApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'AddLabelsToSource200Response1');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'GetSource200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -468,40 +461,47 @@ var SourcesApi = (function () {
             });
         });
     };
-    SourcesApi.prototype.createSourceAlpha = function (CreateSourceAlphaInput, options) {
+    SourcesApi.prototype.listConnectedDestinationsFromSource = function (sourceId, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_5, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/sources';
+                localVarPath = this.basePath +
+                    '/sources/{sourceId}/connected-destinations'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
+                }
                 localVarFormParams = {};
-                if (CreateSourceAlphaInput === null ||
-                    CreateSourceAlphaInput === undefined) {
-                    throw new Error('Required parameter CreateSourceAlphaInput was null or undefined when calling createSourceAlpha.');
+                if (sourceId === null || sourceId === undefined) {
+                    throw new Error('Required parameter sourceId was null or undefined when calling listConnectedDestinationsFromSource.');
+                }
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling listConnectedDestinationsFromSource.');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'GET',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateSourceAlphaInput, 'CreateSourceAlphaInput'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -540,7 +540,7 @@ var SourcesApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateSource200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ListConnectedDestinationsFromSource200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -553,39 +553,47 @@ var SourcesApi = (function () {
             });
         });
     };
-    SourcesApi.prototype.createSourceBeta = function (CreateSourceV1Input, options) {
+    SourcesApi.prototype.listConnectedWarehousesFromSource = function (sourceId, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_6, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/sources';
+                localVarPath = this.basePath +
+                    '/sources/{sourceId}/connected-warehouses'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
+                }
                 localVarFormParams = {};
-                if (CreateSourceV1Input === null || CreateSourceV1Input === undefined) {
-                    throw new Error('Required parameter CreateSourceV1Input was null or undefined when calling createSourceBeta.');
+                if (sourceId === null || sourceId === undefined) {
+                    throw new Error('Required parameter sourceId was null or undefined when calling listConnectedWarehousesFromSource.');
+                }
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling listConnectedWarehousesFromSource.');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'GET',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateSourceV1Input, 'CreateSourceV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -624,7 +632,7 @@ var SourcesApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateSource200Response1');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ListConnectedWarehousesFromSource200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -637,39 +645,41 @@ var SourcesApi = (function () {
             });
         });
     };
-    SourcesApi.prototype.createSourceCurrent = function (CreateSourceV1Input, options) {
+    SourcesApi.prototype.listSchemaSettingsInSource = function (sourceId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_7, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/sources';
+                localVarPath = this.basePath +
+                    '/sources/{sourceId}/settings'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
                     'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
+                }
                 localVarFormParams = {};
-                if (CreateSourceV1Input === null || CreateSourceV1Input === undefined) {
-                    throw new Error('Required parameter CreateSourceV1Input was null or undefined when calling createSourceCurrent.');
+                if (sourceId === null || sourceId === undefined) {
+                    throw new Error('Required parameter sourceId was null or undefined when calling listSchemaSettingsInSource.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'GET',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateSourceV1Input, 'CreateSourceV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -708,7 +718,7 @@ var SourcesApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateSource200Response1');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSchemaSettingsInSource200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -721,7 +731,7 @@ var SourcesApi = (function () {
             });
         });
     };
-    SourcesApi.prototype.createSourceV1 = function (CreateSourceV1Input, options) {
+    SourcesApi.prototype.listSources = function (pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_8, _i, _a, interceptor;
@@ -733,27 +743,31 @@ var SourcesApi = (function () {
                 produces = [
                     'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
+                }
                 localVarFormParams = {};
-                if (CreateSourceV1Input === null || CreateSourceV1Input === undefined) {
-                    throw new Error('Required parameter CreateSourceV1Input was null or undefined when calling createSourceV1.');
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling listSources.');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'GET',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateSourceV1Input, 'CreateSourceV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -792,7 +806,7 @@ var SourcesApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateSource200Response1');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSources200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -805,39 +819,46 @@ var SourcesApi = (function () {
             });
         });
     };
-    SourcesApi.prototype.deleteSourceAlpha = function (sourceId, options) {
+    SourcesApi.prototype.replaceLabelsInSource = function (sourceId, ReplaceLabelsInSourceV1Input, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_9, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/sources/{sourceId}'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
+                    '/sources/{sourceId}/labels'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling deleteSourceAlpha.');
+                    throw new Error('Required parameter sourceId was null or undefined when calling replaceLabelsInSource.');
+                }
+                if (ReplaceLabelsInSourceV1Input === null ||
+                    ReplaceLabelsInSourceV1Input === undefined) {
+                    throw new Error('Required parameter ReplaceLabelsInSourceV1Input was null or undefined when calling replaceLabelsInSource.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'DELETE',
+                    method: 'PUT',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
+                    body: models_1.ObjectSerializer.serialize(ReplaceLabelsInSourceV1Input, 'ReplaceLabelsInSourceV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -876,7 +897,7 @@ var SourcesApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteSource200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ReplaceLabelsInSource200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -889,39 +910,46 @@ var SourcesApi = (function () {
             });
         });
     };
-    SourcesApi.prototype.deleteSourceBeta = function (sourceId, options) {
+    SourcesApi.prototype.updateSchemaSettingsInSource = function (sourceId, UpdateSchemaSettingsInSourceV1Input, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_10, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/sources/{sourceId}'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
+                    '/sources/{sourceId}/settings'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling deleteSourceBeta.');
+                    throw new Error('Required parameter sourceId was null or undefined when calling updateSchemaSettingsInSource.');
+                }
+                if (UpdateSchemaSettingsInSourceV1Input === null ||
+                    UpdateSchemaSettingsInSourceV1Input === undefined) {
+                    throw new Error('Required parameter UpdateSchemaSettingsInSourceV1Input was null or undefined when calling updateSchemaSettingsInSource.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'DELETE',
+                    method: 'PATCH',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
+                    body: models_1.ObjectSerializer.serialize(UpdateSchemaSettingsInSourceV1Input, 'UpdateSchemaSettingsInSourceV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -960,7 +988,7 @@ var SourcesApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteSource200Response1');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'UpdateSchemaSettingsInSource200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -973,7 +1001,7 @@ var SourcesApi = (function () {
             });
         });
     };
-    SourcesApi.prototype.deleteSourceCurrent = function (sourceId, options) {
+    SourcesApi.prototype.updateSource = function (sourceId, UpdateSourceV1Input, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_11, _i, _a, interceptor;
@@ -983,26 +1011,35 @@ var SourcesApi = (function () {
                     '/sources/{sourceId}'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
+                produces = [
+                    'application/vnd.segment.v1+json',
+                    'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
+                ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling deleteSourceCurrent.');
+                    throw new Error('Required parameter sourceId was null or undefined when calling updateSource.');
+                }
+                if (UpdateSourceV1Input === null || UpdateSourceV1Input === undefined) {
+                    throw new Error('Required parameter UpdateSourceV1Input was null or undefined when calling updateSource.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'DELETE',
+                    method: 'PATCH',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
+                    body: models_1.ObjectSerializer.serialize(UpdateSourceV1Input, 'UpdateSourceV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -1041,2877 +1078,7 @@ var SourcesApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.deleteSourceV1 = function (sourceId, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_12, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling deleteSourceV1.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'DELETE',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_12 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_12(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.getSourceAlpha = function (sourceId, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_13, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling getSourceAlpha.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_13 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_13(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.getSourceBeta = function (sourceId, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_14, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling getSourceBeta.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_14 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_14(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.getSourceCurrent = function (sourceId, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_15, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling getSourceCurrent.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_15 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_15(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.getSourceV1 = function (sourceId, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_16, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling getSourceV1.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_16 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_16(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listConnectedDestinationsFromSourceAlpha = function (sourceId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_17, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/connected-destinations'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listConnectedDestinationsFromSourceAlpha.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listConnectedDestinationsFromSourceAlpha.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_17 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_17(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListConnectedDestinationsFromSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listConnectedDestinationsFromSourceBeta = function (sourceId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_18, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/connected-destinations'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listConnectedDestinationsFromSourceBeta.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listConnectedDestinationsFromSourceBeta.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_18 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_18(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListConnectedDestinationsFromSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listConnectedDestinationsFromSourceCurrent = function (sourceId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_19, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/connected-destinations'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listConnectedDestinationsFromSourceCurrent.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listConnectedDestinationsFromSourceCurrent.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_19 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_19(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListConnectedDestinationsFromSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listConnectedDestinationsFromSourceV1 = function (sourceId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_20, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/connected-destinations'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listConnectedDestinationsFromSourceV1.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listConnectedDestinationsFromSourceV1.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_20 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_20(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListConnectedDestinationsFromSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listConnectedWarehousesFromSourceAlpha = function (sourceId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_21, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/connected-warehouses'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listConnectedWarehousesFromSourceAlpha.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listConnectedWarehousesFromSourceAlpha.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_21 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_21(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListConnectedWarehousesFromSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listConnectedWarehousesFromSourceBeta = function (sourceId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_22, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/connected-warehouses'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listConnectedWarehousesFromSourceBeta.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listConnectedWarehousesFromSourceBeta.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_22 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_22(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListConnectedWarehousesFromSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listConnectedWarehousesFromSourceCurrent = function (sourceId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_23, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/connected-warehouses'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listConnectedWarehousesFromSourceCurrent.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listConnectedWarehousesFromSourceCurrent.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_23 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_23(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListConnectedWarehousesFromSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listConnectedWarehousesFromSourceV1 = function (sourceId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_24, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/connected-warehouses'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listConnectedWarehousesFromSourceV1.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listConnectedWarehousesFromSourceV1.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_24 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_24(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListConnectedWarehousesFromSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listSchemaSettingsInSourceAlpha = function (sourceId, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_25, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/settings'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listSchemaSettingsInSourceAlpha.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_25 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_25(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSchemaSettingsInSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listSchemaSettingsInSourceBeta = function (sourceId, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_26, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/settings'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listSchemaSettingsInSourceBeta.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_26 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_26(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSchemaSettingsInSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listSchemaSettingsInSourceCurrent = function (sourceId, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_27, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/settings'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listSchemaSettingsInSourceCurrent.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_27 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_27(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSchemaSettingsInSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listSchemaSettingsInSourceV1 = function (sourceId, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_28, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/settings'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listSchemaSettingsInSourceV1.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_28 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_28(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSchemaSettingsInSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listSourcesAlpha = function (pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_29, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/sources';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSourcesAlpha.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_29 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_29(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSources200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listSourcesBeta = function (pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_30, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/sources';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSourcesBeta.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_30 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_30(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSources200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listSourcesCurrent = function (pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_31, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/sources';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSourcesCurrent.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_31 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_31(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSources200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.listSourcesV1 = function (pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_32, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/sources';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSourcesV1.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_32 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_32(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSources200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.replaceLabelsInSourceAlpha = function (sourceId, ReplaceLabelsInSourceAlphaInput, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_33, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/labels'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling replaceLabelsInSourceAlpha.');
-                }
-                if (ReplaceLabelsInSourceAlphaInput === null ||
-                    ReplaceLabelsInSourceAlphaInput === undefined) {
-                    throw new Error('Required parameter ReplaceLabelsInSourceAlphaInput was null or undefined when calling replaceLabelsInSourceAlpha.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PUT',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(ReplaceLabelsInSourceAlphaInput, 'ReplaceLabelsInSourceAlphaInput'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_33 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_33(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ReplaceLabelsInSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.replaceLabelsInSourceBeta = function (sourceId, ReplaceLabelsInSourceV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_34, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/labels'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling replaceLabelsInSourceBeta.');
-                }
-                if (ReplaceLabelsInSourceV1Input === null ||
-                    ReplaceLabelsInSourceV1Input === undefined) {
-                    throw new Error('Required parameter ReplaceLabelsInSourceV1Input was null or undefined when calling replaceLabelsInSourceBeta.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PUT',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(ReplaceLabelsInSourceV1Input, 'ReplaceLabelsInSourceV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_34 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_34(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ReplaceLabelsInSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.replaceLabelsInSourceCurrent = function (sourceId, ReplaceLabelsInSourceV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_35, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/labels'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling replaceLabelsInSourceCurrent.');
-                }
-                if (ReplaceLabelsInSourceV1Input === null ||
-                    ReplaceLabelsInSourceV1Input === undefined) {
-                    throw new Error('Required parameter ReplaceLabelsInSourceV1Input was null or undefined when calling replaceLabelsInSourceCurrent.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PUT',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(ReplaceLabelsInSourceV1Input, 'ReplaceLabelsInSourceV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_35 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_35(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ReplaceLabelsInSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.replaceLabelsInSourceV1 = function (sourceId, ReplaceLabelsInSourceV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_36, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/labels'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling replaceLabelsInSourceV1.');
-                }
-                if (ReplaceLabelsInSourceV1Input === null ||
-                    ReplaceLabelsInSourceV1Input === undefined) {
-                    throw new Error('Required parameter ReplaceLabelsInSourceV1Input was null or undefined when calling replaceLabelsInSourceV1.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PUT',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(ReplaceLabelsInSourceV1Input, 'ReplaceLabelsInSourceV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_36 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_36(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ReplaceLabelsInSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.updateSchemaSettingsInSourceAlpha = function (sourceId, UpdateSchemaSettingsInSourceV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_37, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/settings'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling updateSchemaSettingsInSourceAlpha.');
-                }
-                if (UpdateSchemaSettingsInSourceV1Input === null ||
-                    UpdateSchemaSettingsInSourceV1Input === undefined) {
-                    throw new Error('Required parameter UpdateSchemaSettingsInSourceV1Input was null or undefined when calling updateSchemaSettingsInSourceAlpha.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PATCH',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateSchemaSettingsInSourceV1Input, 'UpdateSchemaSettingsInSourceV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_37 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_37(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'UpdateSchemaSettingsInSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.updateSchemaSettingsInSourceBeta = function (sourceId, UpdateSchemaSettingsInSourceV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_38, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/settings'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling updateSchemaSettingsInSourceBeta.');
-                }
-                if (UpdateSchemaSettingsInSourceV1Input === null ||
-                    UpdateSchemaSettingsInSourceV1Input === undefined) {
-                    throw new Error('Required parameter UpdateSchemaSettingsInSourceV1Input was null or undefined when calling updateSchemaSettingsInSourceBeta.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PATCH',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateSchemaSettingsInSourceV1Input, 'UpdateSchemaSettingsInSourceV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_38 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_38(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'UpdateSchemaSettingsInSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.updateSchemaSettingsInSourceCurrent = function (sourceId, UpdateSchemaSettingsInSourceV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_39, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/settings'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling updateSchemaSettingsInSourceCurrent.');
-                }
-                if (UpdateSchemaSettingsInSourceV1Input === null ||
-                    UpdateSchemaSettingsInSourceV1Input === undefined) {
-                    throw new Error('Required parameter UpdateSchemaSettingsInSourceV1Input was null or undefined when calling updateSchemaSettingsInSourceCurrent.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PATCH',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateSchemaSettingsInSourceV1Input, 'UpdateSchemaSettingsInSourceV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_39 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_39(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'UpdateSchemaSettingsInSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.updateSchemaSettingsInSourceV1 = function (sourceId, UpdateSchemaSettingsInSourceV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_40, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}/settings'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling updateSchemaSettingsInSourceV1.');
-                }
-                if (UpdateSchemaSettingsInSourceV1Input === null ||
-                    UpdateSchemaSettingsInSourceV1Input === undefined) {
-                    throw new Error('Required parameter UpdateSchemaSettingsInSourceV1Input was null or undefined when calling updateSchemaSettingsInSourceV1.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PATCH',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateSchemaSettingsInSourceV1Input, 'UpdateSchemaSettingsInSourceV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_40 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_40(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'UpdateSchemaSettingsInSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.updateSourceAlpha = function (sourceId, UpdateSourceAlphaInput, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_41, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling updateSourceAlpha.');
-                }
-                if (UpdateSourceAlphaInput === null ||
-                    UpdateSourceAlphaInput === undefined) {
-                    throw new Error('Required parameter UpdateSourceAlphaInput was null or undefined when calling updateSourceAlpha.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PATCH',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateSourceAlphaInput, 'UpdateSourceAlphaInput'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_41 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_41(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
                                         body = models_1.ObjectSerializer.deserialize(body, 'UpdateSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.updateSourceBeta = function (sourceId, UpdateSourceV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_42, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling updateSourceBeta.');
-                }
-                if (UpdateSourceV1Input === null || UpdateSourceV1Input === undefined) {
-                    throw new Error('Required parameter UpdateSourceV1Input was null or undefined when calling updateSourceBeta.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PATCH',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateSourceV1Input, 'UpdateSourceV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_42 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_42(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'UpdateSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.updateSourceCurrent = function (sourceId, UpdateSourceV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_43, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling updateSourceCurrent.');
-                }
-                if (UpdateSourceV1Input === null || UpdateSourceV1Input === undefined) {
-                    throw new Error('Required parameter UpdateSourceV1Input was null or undefined when calling updateSourceCurrent.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PATCH',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateSourceV1Input, 'UpdateSourceV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_43 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_43(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'UpdateSource200Response1');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SourcesApi.prototype.updateSourceV1 = function (sourceId, UpdateSourceV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_44, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/sources/{sourceId}'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling updateSourceV1.');
-                }
-                if (UpdateSourceV1Input === null || UpdateSourceV1Input === undefined) {
-                    throw new Error('Required parameter UpdateSourceV1Input was null or undefined when calling updateSourceV1.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PATCH',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateSourceV1Input, 'UpdateSourceV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_44 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_44(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'UpdateSource200Response1');
                                         resolve({ response: response, body: body });
                                     }
                                     else {

@@ -127,10 +127,10 @@ var SpacesApi = (function () {
                     'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (spaceId === null || spaceId === undefined) {
@@ -216,10 +216,10 @@ var SpacesApi = (function () {
                     'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (spaceId === null || spaceId === undefined) {
@@ -300,10 +300,10 @@ var SpacesApi = (function () {
                     'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (spaceId === null || spaceId === undefined) {

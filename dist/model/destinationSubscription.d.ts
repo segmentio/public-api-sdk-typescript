@@ -5,7 +5,7 @@ export declare class DestinationSubscription {
     'actionSlug': string;
     'destinationId': string;
     'enabled': boolean;
-    'settings': any;
+    'settings': any | null;
     'trigger': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
