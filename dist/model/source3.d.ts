@@ -8,7 +8,7 @@ export declare class Source3 {
     'workspaceId': string;
     'enabled': boolean;
     'writeKeys': Array<string>;
-    'settings'?: any;
+    'settings'?: any | null;
     'labels': Array<LabelV1>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

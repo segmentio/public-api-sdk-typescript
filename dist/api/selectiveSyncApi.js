@@ -113,7 +113,7 @@ var SelectiveSyncApi = (function () {
     SelectiveSyncApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    SelectiveSyncApi.prototype.getAdvancedSyncScheduleFromWarehouseAlpha = function (warehouseId, options) {
+    SelectiveSyncApi.prototype.getAdvancedSyncScheduleFromWarehouse = function (warehouseId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -124,18 +124,20 @@ var SelectiveSyncApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling getAdvancedSyncScheduleFromWarehouseAlpha.');
+                    throw new Error('Required parameter warehouseId was null or undefined when calling getAdvancedSyncScheduleFromWarehouse.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -197,29 +199,42 @@ var SelectiveSyncApi = (function () {
             });
         });
     };
-    SelectiveSyncApi.prototype.getAdvancedSyncScheduleFromWarehouseBeta = function (warehouseId, options) {
+    SelectiveSyncApi.prototype.listSelectiveSyncsFromWarehouseAndSource = function (warehouseId, sourceId, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/advanced-sync-schedule'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
+                    '/warehouses/{warehouseId}/connected-sources/{sourceId}/selective-syncs'
+                        .replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)))
+                        .replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling getAdvancedSyncScheduleFromWarehouseBeta.');
+                    throw new Error('Required parameter warehouseId was null or undefined when calling listSelectiveSyncsFromWarehouseAndSource.');
+                }
+                if (sourceId === null || sourceId === undefined) {
+                    throw new Error('Required parameter sourceId was null or undefined when calling listSelectiveSyncsFromWarehouseAndSource.');
+                }
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling listSelectiveSyncsFromWarehouseAndSource.');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -268,7 +283,7 @@ var SelectiveSyncApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetAdvancedSyncScheduleFromWarehouse200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSelectiveSyncsFromWarehouseAndSource200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -281,26 +296,37 @@ var SelectiveSyncApi = (function () {
             });
         });
     };
-    SelectiveSyncApi.prototype.getAdvancedSyncScheduleFromWarehouseCurrent = function (warehouseId, options) {
+    SelectiveSyncApi.prototype.listSyncsFromWarehouse = function (warehouseId, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/advanced-sync-schedule'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
+                    '/warehouses/{warehouseId}/syncs'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
+                produces = [
+                    'application/vnd.segment.v1+json',
+                    'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
+                ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling getAdvancedSyncScheduleFromWarehouseCurrent.');
+                    throw new Error('Required parameter warehouseId was null or undefined when calling listSyncsFromWarehouse.');
+                }
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling listSyncsFromWarehouse.');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -349,7 +375,7 @@ var SelectiveSyncApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetAdvancedSyncScheduleFromWarehouse200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSyncsFromWarehouse200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -362,29 +388,42 @@ var SelectiveSyncApi = (function () {
             });
         });
     };
-    SelectiveSyncApi.prototype.getAdvancedSyncScheduleFromWarehouseV1 = function (warehouseId, options) {
+    SelectiveSyncApi.prototype.listSyncsFromWarehouseAndSource = function (warehouseId, sourceId, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/advanced-sync-schedule'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
+                    '/warehouses/{warehouseId}/connected-sources/{sourceId}/syncs'
+                        .replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)))
+                        .replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
                     'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling getAdvancedSyncScheduleFromWarehouseV1.');
+                    throw new Error('Required parameter warehouseId was null or undefined when calling listSyncsFromWarehouseAndSource.');
+                }
+                if (sourceId === null || sourceId === undefined) {
+                    throw new Error('Required parameter sourceId was null or undefined when calling listSyncsFromWarehouseAndSource.');
+                }
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling listSyncsFromWarehouseAndSource.');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -433,7 +472,7 @@ var SelectiveSyncApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetAdvancedSyncScheduleFromWarehouse200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSyncsFromWarehouseAndSource200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -446,50 +485,46 @@ var SelectiveSyncApi = (function () {
             });
         });
     };
-    SelectiveSyncApi.prototype.listSelectiveSyncsFromWarehouseAndSourceAlpha = function (warehouseId, sourceId, pagination, options) {
+    SelectiveSyncApi.prototype.replaceAdvancedSyncScheduleForWarehouse = function (warehouseId, ReplaceAdvancedSyncScheduleForWarehouseV1Input, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_5, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/connected-sources/{sourceId}/selective-syncs'
-                        .replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)))
-                        .replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
+                    '/warehouses/{warehouseId}/advanced-sync-schedule'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling listSelectiveSyncsFromWarehouseAndSourceAlpha.');
+                    throw new Error('Required parameter warehouseId was null or undefined when calling replaceAdvancedSyncScheduleForWarehouse.');
                 }
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listSelectiveSyncsFromWarehouseAndSourceAlpha.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSelectiveSyncsFromWarehouseAndSourceAlpha.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                if (ReplaceAdvancedSyncScheduleForWarehouseV1Input === null ||
+                    ReplaceAdvancedSyncScheduleForWarehouseV1Input === undefined) {
+                    throw new Error('Required parameter ReplaceAdvancedSyncScheduleForWarehouseV1Input was null or undefined when calling replaceAdvancedSyncScheduleForWarehouse.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'GET',
+                    method: 'PUT',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
+                    body: models_1.ObjectSerializer.serialize(ReplaceAdvancedSyncScheduleForWarehouseV1Input, 'ReplaceAdvancedSyncScheduleForWarehouseV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -528,7 +563,7 @@ var SelectiveSyncApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSelectiveSyncsFromWarehouseAndSource200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ReplaceAdvancedSyncScheduleForWarehouse200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -541,50 +576,46 @@ var SelectiveSyncApi = (function () {
             });
         });
     };
-    SelectiveSyncApi.prototype.listSelectiveSyncsFromWarehouseAndSourceBeta = function (warehouseId, sourceId, pagination, options) {
+    SelectiveSyncApi.prototype.updateSelectiveSyncForWarehouse = function (warehouseId, UpdateSelectiveSyncForWarehouseV1Input, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_6, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/connected-sources/{sourceId}/selective-syncs'
-                        .replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)))
-                        .replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
+                    '/warehouses/{warehouseId}/selective-sync'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling listSelectiveSyncsFromWarehouseAndSourceBeta.');
+                    throw new Error('Required parameter warehouseId was null or undefined when calling updateSelectiveSyncForWarehouse.');
                 }
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listSelectiveSyncsFromWarehouseAndSourceBeta.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSelectiveSyncsFromWarehouseAndSourceBeta.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                if (UpdateSelectiveSyncForWarehouseV1Input === null ||
+                    UpdateSelectiveSyncForWarehouseV1Input === undefined) {
+                    throw new Error('Required parameter UpdateSelectiveSyncForWarehouseV1Input was null or undefined when calling updateSelectiveSyncForWarehouse.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'GET',
+                    method: 'PATCH',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
+                    body: models_1.ObjectSerializer.serialize(UpdateSelectiveSyncForWarehouseV1Input, 'UpdateSelectiveSyncForWarehouseV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -604,1639 +635,6 @@ var SelectiveSyncApi = (function () {
                 for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
                     interceptor = _a[_i];
                     _loop_6(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSelectiveSyncsFromWarehouseAndSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.listSelectiveSyncsFromWarehouseAndSourceCurrent = function (warehouseId, sourceId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_7, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/connected-sources/{sourceId}/selective-syncs'
-                        .replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)))
-                        .replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling listSelectiveSyncsFromWarehouseAndSourceCurrent.');
-                }
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listSelectiveSyncsFromWarehouseAndSourceCurrent.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSelectiveSyncsFromWarehouseAndSourceCurrent.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_7 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_7(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSelectiveSyncsFromWarehouseAndSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.listSelectiveSyncsFromWarehouseAndSourceV1 = function (warehouseId, sourceId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_8, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/connected-sources/{sourceId}/selective-syncs'
-                        .replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)))
-                        .replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling listSelectiveSyncsFromWarehouseAndSourceV1.');
-                }
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listSelectiveSyncsFromWarehouseAndSourceV1.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSelectiveSyncsFromWarehouseAndSourceV1.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_8 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_8(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSelectiveSyncsFromWarehouseAndSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.listSyncsFromWarehouseAlpha = function (warehouseId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_9, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/syncs'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling listSyncsFromWarehouseAlpha.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSyncsFromWarehouseAlpha.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_9 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_9(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSyncsFromWarehouse200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.listSyncsFromWarehouseAndSourceAlpha = function (warehouseId, sourceId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_10, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/connected-sources/{sourceId}/syncs'
-                        .replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)))
-                        .replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling listSyncsFromWarehouseAndSourceAlpha.');
-                }
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listSyncsFromWarehouseAndSourceAlpha.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSyncsFromWarehouseAndSourceAlpha.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_10 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_10(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSyncsFromWarehouseAndSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.listSyncsFromWarehouseAndSourceBeta = function (warehouseId, sourceId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_11, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/connected-sources/{sourceId}/syncs'
-                        .replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)))
-                        .replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling listSyncsFromWarehouseAndSourceBeta.');
-                }
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listSyncsFromWarehouseAndSourceBeta.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSyncsFromWarehouseAndSourceBeta.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_11 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_11(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSyncsFromWarehouseAndSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.listSyncsFromWarehouseAndSourceCurrent = function (warehouseId, sourceId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_12, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/connected-sources/{sourceId}/syncs'
-                        .replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)))
-                        .replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling listSyncsFromWarehouseAndSourceCurrent.');
-                }
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listSyncsFromWarehouseAndSourceCurrent.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSyncsFromWarehouseAndSourceCurrent.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_12 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_12(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSyncsFromWarehouseAndSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.listSyncsFromWarehouseAndSourceV1 = function (warehouseId, sourceId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_13, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/connected-sources/{sourceId}/syncs'
-                        .replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)))
-                        .replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling listSyncsFromWarehouseAndSourceV1.');
-                }
-                if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling listSyncsFromWarehouseAndSourceV1.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSyncsFromWarehouseAndSourceV1.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_13 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_13(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSyncsFromWarehouseAndSource200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.listSyncsFromWarehouseBeta = function (warehouseId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_14, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/syncs'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling listSyncsFromWarehouseBeta.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSyncsFromWarehouseBeta.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_14 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_14(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSyncsFromWarehouse200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.listSyncsFromWarehouseCurrent = function (warehouseId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_15, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/syncs'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling listSyncsFromWarehouseCurrent.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSyncsFromWarehouseCurrent.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_15 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_15(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSyncsFromWarehouse200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.listSyncsFromWarehouseV1 = function (warehouseId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_16, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/syncs'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling listSyncsFromWarehouseV1.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSyncsFromWarehouseV1.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_16 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_16(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListSyncsFromWarehouse200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.replaceAdvancedSyncScheduleForWarehouseAlpha = function (warehouseId, ReplaceAdvancedSyncScheduleForWarehouseV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_17, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/advanced-sync-schedule'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling replaceAdvancedSyncScheduleForWarehouseAlpha.');
-                }
-                if (ReplaceAdvancedSyncScheduleForWarehouseV1Input === null ||
-                    ReplaceAdvancedSyncScheduleForWarehouseV1Input === undefined) {
-                    throw new Error('Required parameter ReplaceAdvancedSyncScheduleForWarehouseV1Input was null or undefined when calling replaceAdvancedSyncScheduleForWarehouseAlpha.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PUT',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(ReplaceAdvancedSyncScheduleForWarehouseV1Input, 'ReplaceAdvancedSyncScheduleForWarehouseV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_17 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_17(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ReplaceAdvancedSyncScheduleForWarehouse200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.replaceAdvancedSyncScheduleForWarehouseBeta = function (warehouseId, ReplaceAdvancedSyncScheduleForWarehouseV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_18, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/advanced-sync-schedule'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling replaceAdvancedSyncScheduleForWarehouseBeta.');
-                }
-                if (ReplaceAdvancedSyncScheduleForWarehouseV1Input === null ||
-                    ReplaceAdvancedSyncScheduleForWarehouseV1Input === undefined) {
-                    throw new Error('Required parameter ReplaceAdvancedSyncScheduleForWarehouseV1Input was null or undefined when calling replaceAdvancedSyncScheduleForWarehouseBeta.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PUT',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(ReplaceAdvancedSyncScheduleForWarehouseV1Input, 'ReplaceAdvancedSyncScheduleForWarehouseV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_18 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_18(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ReplaceAdvancedSyncScheduleForWarehouse200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.replaceAdvancedSyncScheduleForWarehouseCurrent = function (warehouseId, ReplaceAdvancedSyncScheduleForWarehouseV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_19, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/advanced-sync-schedule'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling replaceAdvancedSyncScheduleForWarehouseCurrent.');
-                }
-                if (ReplaceAdvancedSyncScheduleForWarehouseV1Input === null ||
-                    ReplaceAdvancedSyncScheduleForWarehouseV1Input === undefined) {
-                    throw new Error('Required parameter ReplaceAdvancedSyncScheduleForWarehouseV1Input was null or undefined when calling replaceAdvancedSyncScheduleForWarehouseCurrent.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PUT',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(ReplaceAdvancedSyncScheduleForWarehouseV1Input, 'ReplaceAdvancedSyncScheduleForWarehouseV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_19 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_19(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ReplaceAdvancedSyncScheduleForWarehouse200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.replaceAdvancedSyncScheduleForWarehouseV1 = function (warehouseId, ReplaceAdvancedSyncScheduleForWarehouseV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_20, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/advanced-sync-schedule'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling replaceAdvancedSyncScheduleForWarehouseV1.');
-                }
-                if (ReplaceAdvancedSyncScheduleForWarehouseV1Input === null ||
-                    ReplaceAdvancedSyncScheduleForWarehouseV1Input === undefined) {
-                    throw new Error('Required parameter ReplaceAdvancedSyncScheduleForWarehouseV1Input was null or undefined when calling replaceAdvancedSyncScheduleForWarehouseV1.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PUT',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(ReplaceAdvancedSyncScheduleForWarehouseV1Input, 'ReplaceAdvancedSyncScheduleForWarehouseV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_20 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_20(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ReplaceAdvancedSyncScheduleForWarehouse200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.updateSelectiveSyncForWarehouseAlpha = function (warehouseId, UpdateSelectiveSyncForWarehouseV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_21, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/selective-sync'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling updateSelectiveSyncForWarehouseAlpha.');
-                }
-                if (UpdateSelectiveSyncForWarehouseV1Input === null ||
-                    UpdateSelectiveSyncForWarehouseV1Input === undefined) {
-                    throw new Error('Required parameter UpdateSelectiveSyncForWarehouseV1Input was null or undefined when calling updateSelectiveSyncForWarehouseAlpha.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PATCH',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateSelectiveSyncForWarehouseV1Input, 'UpdateSelectiveSyncForWarehouseV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_21 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_21(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'UpdateSelectiveSyncForWarehouse200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.updateSelectiveSyncForWarehouseBeta = function (warehouseId, UpdateSelectiveSyncForWarehouseV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_22, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/selective-sync'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling updateSelectiveSyncForWarehouseBeta.');
-                }
-                if (UpdateSelectiveSyncForWarehouseV1Input === null ||
-                    UpdateSelectiveSyncForWarehouseV1Input === undefined) {
-                    throw new Error('Required parameter UpdateSelectiveSyncForWarehouseV1Input was null or undefined when calling updateSelectiveSyncForWarehouseBeta.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PATCH',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateSelectiveSyncForWarehouseV1Input, 'UpdateSelectiveSyncForWarehouseV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_22 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_22(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'UpdateSelectiveSyncForWarehouse200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.updateSelectiveSyncForWarehouseCurrent = function (warehouseId, UpdateSelectiveSyncForWarehouseV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_23, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/selective-sync'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling updateSelectiveSyncForWarehouseCurrent.');
-                }
-                if (UpdateSelectiveSyncForWarehouseV1Input === null ||
-                    UpdateSelectiveSyncForWarehouseV1Input === undefined) {
-                    throw new Error('Required parameter UpdateSelectiveSyncForWarehouseV1Input was null or undefined when calling updateSelectiveSyncForWarehouseCurrent.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PATCH',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateSelectiveSyncForWarehouseV1Input, 'UpdateSelectiveSyncForWarehouseV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_23 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_23(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'UpdateSelectiveSyncForWarehouse200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    SelectiveSyncApi.prototype.updateSelectiveSyncForWarehouseV1 = function (warehouseId, UpdateSelectiveSyncForWarehouseV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_24, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/warehouses/{warehouseId}/selective-sync'.replace('{' + 'warehouseId' + '}', encodeURIComponent(String(warehouseId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (warehouseId === null || warehouseId === undefined) {
-                    throw new Error('Required parameter warehouseId was null or undefined when calling updateSelectiveSyncForWarehouseV1.');
-                }
-                if (UpdateSelectiveSyncForWarehouseV1Input === null ||
-                    UpdateSelectiveSyncForWarehouseV1Input === undefined) {
-                    throw new Error('Required parameter UpdateSelectiveSyncForWarehouseV1Input was null or undefined when calling updateSelectiveSyncForWarehouseV1.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PATCH',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateSelectiveSyncForWarehouseV1Input, 'UpdateSelectiveSyncForWarehouseV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_24 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_24(interceptor);
                 }
                 return [2, interceptorPromise.then(function () {
                         if (Object.keys(localVarFormParams).length) {

@@ -112,7 +112,7 @@ var IAMUsersApi = (function () {
     IAMUsersApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    IAMUsersApi.prototype.addPermissionsToUserAlpha = function (userId, AddPermissionsToUserV1Input, options) {
+    IAMUsersApi.prototype.addPermissionsToUser = function (userId, AddPermissionsToUserV1Input, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -123,22 +123,24 @@ var IAMUsersApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
+                    localVarHeaderParams.Accept = 'application/json';
                 }
                 else {
-                    localVarHeaderParams.Accept = 'application/json';
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
                 if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling addPermissionsToUserAlpha.');
+                    throw new Error('Required parameter userId was null or undefined when calling addPermissionsToUser.');
                 }
                 if (AddPermissionsToUserV1Input === null ||
                     AddPermissionsToUserV1Input === undefined) {
-                    throw new Error('Required parameter AddPermissionsToUserV1Input was null or undefined when calling addPermissionsToUserAlpha.');
+                    throw new Error('Required parameter AddPermissionsToUserV1Input was null or undefined when calling addPermissionsToUser.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -201,33 +203,31 @@ var IAMUsersApi = (function () {
             });
         });
     };
-    IAMUsersApi.prototype.addPermissionsToUserBeta = function (userId, AddPermissionsToUserV1Input, options) {
+    IAMUsersApi.prototype.createInvites = function (CreateInvitesV1Input, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/users/{userId}/permissions'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+                localVarPath = this.basePath + '/invites';
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
-                localVarFormParams = {};
-                if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling addPermissionsToUserBeta.');
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
-                if (AddPermissionsToUserV1Input === null ||
-                    AddPermissionsToUserV1Input === undefined) {
-                    throw new Error('Required parameter AddPermissionsToUserV1Input was null or undefined when calling addPermissionsToUserBeta.');
+                localVarFormParams = {};
+                if (CreateInvitesV1Input === null ||
+                    CreateInvitesV1Input === undefined) {
+                    throw new Error('Required parameter CreateInvitesV1Input was null or undefined when calling createInvites.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -238,7 +238,7 @@ var IAMUsersApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(AddPermissionsToUserV1Input, 'AddPermissionsToUserV1Input'),
+                    body: models_1.ObjectSerializer.serialize(CreateInvitesV1Input, 'CreateInvitesV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -277,7 +277,7 @@ var IAMUsersApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'AddPermissionsToUser200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateInvites200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -290,44 +290,43 @@ var IAMUsersApi = (function () {
             });
         });
     };
-    IAMUsersApi.prototype.addPermissionsToUserCurrent = function (userId, AddPermissionsToUserV1Input, options) {
+    IAMUsersApi.prototype.deleteInvites = function (emails, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/users/{userId}/permissions'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+                localVarPath = this.basePath + '/invites';
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
                     'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
-                localVarFormParams = {};
-                if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling addPermissionsToUserCurrent.');
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
-                if (AddPermissionsToUserV1Input === null ||
-                    AddPermissionsToUserV1Input === undefined) {
-                    throw new Error('Required parameter AddPermissionsToUserV1Input was null or undefined when calling addPermissionsToUserCurrent.');
+                localVarFormParams = {};
+                if (emails === null || emails === undefined) {
+                    throw new Error('Required parameter emails was null or undefined when calling deleteInvites.');
+                }
+                if (emails !== undefined) {
+                    localVarQueryParameters['emails'] = models_1.ObjectSerializer.serialize(emails, 'Array<string>');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'DELETE',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(AddPermissionsToUserV1Input, 'AddPermissionsToUserV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -366,7 +365,7 @@ var IAMUsersApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'AddPermissionsToUser200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteInvites200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -379,44 +378,43 @@ var IAMUsersApi = (function () {
             });
         });
     };
-    IAMUsersApi.prototype.addPermissionsToUserV1 = function (userId, AddPermissionsToUserV1Input, options) {
+    IAMUsersApi.prototype.deleteUsers = function (userIds, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/users/{userId}/permissions'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
+                localVarPath = this.basePath + '/users';
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
                     'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
-                localVarFormParams = {};
-                if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling addPermissionsToUserV1.');
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
-                if (AddPermissionsToUserV1Input === null ||
-                    AddPermissionsToUserV1Input === undefined) {
-                    throw new Error('Required parameter AddPermissionsToUserV1Input was null or undefined when calling addPermissionsToUserV1.');
+                localVarFormParams = {};
+                if (userIds === null || userIds === undefined) {
+                    throw new Error('Required parameter userIds was null or undefined when calling deleteUsers.');
+                }
+                if (userIds !== undefined) {
+                    localVarQueryParameters['userIds'] = models_1.ObjectSerializer.serialize(userIds, 'Array<string>');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'DELETE',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(AddPermissionsToUserV1Input, 'AddPermissionsToUserV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -455,7 +453,7 @@ var IAMUsersApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'AddPermissionsToUser200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteUsers200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -468,40 +466,41 @@ var IAMUsersApi = (function () {
             });
         });
     };
-    IAMUsersApi.prototype.createInvitesAlpha = function (CreateInvitesV1Input, options) {
+    IAMUsersApi.prototype.getUser = function (userId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_5, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/invites';
+                localVarPath = this.basePath +
+                    '/users/{userId}'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
+                }
                 localVarFormParams = {};
-                if (CreateInvitesV1Input === null ||
-                    CreateInvitesV1Input === undefined) {
-                    throw new Error('Required parameter CreateInvitesV1Input was null or undefined when calling createInvitesAlpha.');
+                if (userId === null || userId === undefined) {
+                    throw new Error('Required parameter userId was null or undefined when calling getUser.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'GET',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateInvitesV1Input, 'CreateInvitesV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -540,7 +539,7 @@ var IAMUsersApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateInvites200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'GetUser200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -553,7 +552,7 @@ var IAMUsersApi = (function () {
             });
         });
     };
-    IAMUsersApi.prototype.createInvitesBeta = function (CreateInvitesV1Input, options) {
+    IAMUsersApi.prototype.listInvites = function (pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_6, _i, _a, interceptor;
@@ -563,30 +562,33 @@ var IAMUsersApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
+                }
                 localVarFormParams = {};
-                if (CreateInvitesV1Input === null ||
-                    CreateInvitesV1Input === undefined) {
-                    throw new Error('Required parameter CreateInvitesV1Input was null or undefined when calling createInvitesBeta.');
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling listInvites.');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'GET',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateInvitesV1Input, 'CreateInvitesV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -625,7 +627,7 @@ var IAMUsersApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateInvites200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ListInvites200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -638,40 +640,47 @@ var IAMUsersApi = (function () {
             });
         });
     };
-    IAMUsersApi.prototype.createInvitesCurrent = function (CreateInvitesV1Input, options) {
+    IAMUsersApi.prototype.listUserGroupsFromUser = function (userId, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_7, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/invites';
+                localVarPath = this.basePath +
+                    '/users/{userId}/groups'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
                     'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
+                }
                 localVarFormParams = {};
-                if (CreateInvitesV1Input === null ||
-                    CreateInvitesV1Input === undefined) {
-                    throw new Error('Required parameter CreateInvitesV1Input was null or undefined when calling createInvitesCurrent.');
+                if (userId === null || userId === undefined) {
+                    throw new Error('Required parameter userId was null or undefined when calling listUserGroupsFromUser.');
+                }
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling listUserGroupsFromUser.');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'GET',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateInvitesV1Input, 'CreateInvitesV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -710,7 +719,7 @@ var IAMUsersApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateInvites200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ListUserGroupsFromUser200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -723,40 +732,43 @@ var IAMUsersApi = (function () {
             });
         });
     };
-    IAMUsersApi.prototype.createInvitesV1 = function (CreateInvitesV1Input, options) {
+    IAMUsersApi.prototype.listUsers = function (pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_8, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/invites';
+                localVarPath = this.basePath + '/users';
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
                     'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
+                }
                 localVarFormParams = {};
-                if (CreateInvitesV1Input === null ||
-                    CreateInvitesV1Input === undefined) {
-                    throw new Error('Required parameter CreateInvitesV1Input was null or undefined when calling createInvitesV1.');
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling listUsers.');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'GET',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateInvitesV1Input, 'CreateInvitesV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -795,7 +807,7 @@ var IAMUsersApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateInvites200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ListUsers200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -808,41 +820,46 @@ var IAMUsersApi = (function () {
             });
         });
     };
-    IAMUsersApi.prototype.deleteInvitesAlpha = function (emails, options) {
+    IAMUsersApi.prototype.replacePermissionsForUser = function (userId, ReplacePermissionsForUserV1Input, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_9, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/invites';
+                localVarPath = this.basePath +
+                    '/users/{userId}/permissions'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
                     localVarHeaderParams.Accept = 'application/json';
                 }
-                localVarFormParams = {};
-                if (emails === null || emails === undefined) {
-                    throw new Error('Required parameter emails was null or undefined when calling deleteInvitesAlpha.');
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
                 }
-                if (emails !== undefined) {
-                    localVarQueryParameters['emails'] = models_1.ObjectSerializer.serialize(emails, 'Array<string>');
+                localVarFormParams = {};
+                if (userId === null || userId === undefined) {
+                    throw new Error('Required parameter userId was null or undefined when calling replacePermissionsForUser.');
+                }
+                if (ReplacePermissionsForUserV1Input === null ||
+                    ReplacePermissionsForUserV1Input === undefined) {
+                    throw new Error('Required parameter ReplacePermissionsForUserV1Input was null or undefined when calling replacePermissionsForUser.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'DELETE',
+                    method: 'PUT',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
+                    body: models_1.ObjectSerializer.serialize(ReplacePermissionsForUserV1Input, 'ReplacePermissionsForUserV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -862,2330 +879,6 @@ var IAMUsersApi = (function () {
                 for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
                     interceptor = _a[_i];
                     _loop_9(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteInvites200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.deleteInvitesBeta = function (emails, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_10, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/invites';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (emails === null || emails === undefined) {
-                    throw new Error('Required parameter emails was null or undefined when calling deleteInvitesBeta.');
-                }
-                if (emails !== undefined) {
-                    localVarQueryParameters['emails'] = models_1.ObjectSerializer.serialize(emails, 'Array<string>');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'DELETE',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_10 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_10(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteInvites200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.deleteInvitesCurrent = function (emails, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_11, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/invites';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (emails === null || emails === undefined) {
-                    throw new Error('Required parameter emails was null or undefined when calling deleteInvitesCurrent.');
-                }
-                if (emails !== undefined) {
-                    localVarQueryParameters['emails'] = models_1.ObjectSerializer.serialize(emails, 'Array<string>');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'DELETE',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_11 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_11(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteInvites200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.deleteInvitesV1 = function (emails, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_12, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/invites';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (emails === null || emails === undefined) {
-                    throw new Error('Required parameter emails was null or undefined when calling deleteInvitesV1.');
-                }
-                if (emails !== undefined) {
-                    localVarQueryParameters['emails'] = models_1.ObjectSerializer.serialize(emails, 'Array<string>');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'DELETE',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_12 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_12(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteInvites200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.deleteUsersAlpha = function (userIds, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_13, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/users';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userIds === null || userIds === undefined) {
-                    throw new Error('Required parameter userIds was null or undefined when calling deleteUsersAlpha.');
-                }
-                if (userIds !== undefined) {
-                    localVarQueryParameters['userIds'] = models_1.ObjectSerializer.serialize(userIds, 'Array<string>');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'DELETE',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_13 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_13(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteUsers200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.deleteUsersBeta = function (userIds, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_14, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/users';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userIds === null || userIds === undefined) {
-                    throw new Error('Required parameter userIds was null or undefined when calling deleteUsersBeta.');
-                }
-                if (userIds !== undefined) {
-                    localVarQueryParameters['userIds'] = models_1.ObjectSerializer.serialize(userIds, 'Array<string>');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'DELETE',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_14 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_14(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteUsers200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.deleteUsersCurrent = function (userIds, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_15, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/users';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userIds === null || userIds === undefined) {
-                    throw new Error('Required parameter userIds was null or undefined when calling deleteUsersCurrent.');
-                }
-                if (userIds !== undefined) {
-                    localVarQueryParameters['userIds'] = models_1.ObjectSerializer.serialize(userIds, 'Array<string>');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'DELETE',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_15 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_15(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteUsers200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.deleteUsersV1 = function (userIds, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_16, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/users';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userIds === null || userIds === undefined) {
-                    throw new Error('Required parameter userIds was null or undefined when calling deleteUsersV1.');
-                }
-                if (userIds !== undefined) {
-                    localVarQueryParameters['userIds'] = models_1.ObjectSerializer.serialize(userIds, 'Array<string>');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'DELETE',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_16 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_16(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteUsers200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.getUserAlpha = function (userId, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_17, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/users/{userId}'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling getUserAlpha.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_17 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_17(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetUser200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.getUserBeta = function (userId, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_18, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/users/{userId}'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling getUserBeta.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_18 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_18(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetUser200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.getUserCurrent = function (userId, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_19, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/users/{userId}'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling getUserCurrent.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_19 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_19(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetUser200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.getUserV1 = function (userId, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_20, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/users/{userId}'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling getUserV1.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_20 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_20(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetUser200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.listInvitesAlpha = function (pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_21, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/invites';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listInvitesAlpha.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_21 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_21(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListInvites200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.listInvitesBeta = function (pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_22, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/invites';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listInvitesBeta.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_22 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_22(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListInvites200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.listInvitesCurrent = function (pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_23, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/invites';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listInvitesCurrent.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_23 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_23(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListInvites200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.listInvitesV1 = function (pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_24, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/invites';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listInvitesV1.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_24 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_24(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListInvites200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.listUserGroupsFromUserAlpha = function (userId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_25, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/users/{userId}/groups'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling listUserGroupsFromUserAlpha.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listUserGroupsFromUserAlpha.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_25 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_25(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListUserGroupsFromUser200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.listUserGroupsFromUserBeta = function (userId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_26, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/users/{userId}/groups'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling listUserGroupsFromUserBeta.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listUserGroupsFromUserBeta.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_26 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_26(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListUserGroupsFromUser200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.listUserGroupsFromUserCurrent = function (userId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_27, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/users/{userId}/groups'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling listUserGroupsFromUserCurrent.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listUserGroupsFromUserCurrent.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_27 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_27(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListUserGroupsFromUser200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.listUserGroupsFromUserV1 = function (userId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_28, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/users/{userId}/groups'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling listUserGroupsFromUserV1.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listUserGroupsFromUserV1.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_28 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_28(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListUserGroupsFromUser200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.listUsersAlpha = function (pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_29, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/users';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listUsersAlpha.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_29 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_29(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListUsers200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.listUsersBeta = function (pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_30, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/users';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listUsersBeta.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_30 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_30(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListUsers200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.listUsersCurrent = function (pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_31, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/users';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = ['application/json'];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listUsersCurrent.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_31 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_31(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListUsers200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.listUsersV1 = function (pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_32, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/users';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listUsersV1.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_32 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_32(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListUsers200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.replacePermissionsForUserAlpha = function (userId, ReplacePermissionsForUserV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_33, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/users/{userId}/permissions'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling replacePermissionsForUserAlpha.');
-                }
-                if (ReplacePermissionsForUserV1Input === null ||
-                    ReplacePermissionsForUserV1Input === undefined) {
-                    throw new Error('Required parameter ReplacePermissionsForUserV1Input was null or undefined when calling replacePermissionsForUserAlpha.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PUT',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(ReplacePermissionsForUserV1Input, 'ReplacePermissionsForUserV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_33 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_33(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ReplacePermissionsForUser200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.replacePermissionsForUserBeta = function (userId, ReplacePermissionsForUserV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_34, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/users/{userId}/permissions'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1beta+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling replacePermissionsForUserBeta.');
-                }
-                if (ReplacePermissionsForUserV1Input === null ||
-                    ReplacePermissionsForUserV1Input === undefined) {
-                    throw new Error('Required parameter ReplacePermissionsForUserV1Input was null or undefined when calling replacePermissionsForUserBeta.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PUT',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(ReplacePermissionsForUserV1Input, 'ReplacePermissionsForUserV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_34 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_34(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ReplacePermissionsForUser200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.replacePermissionsForUserCurrent = function (userId, ReplacePermissionsForUserV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_35, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/users/{userId}/permissions'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling replacePermissionsForUserCurrent.');
-                }
-                if (ReplacePermissionsForUserV1Input === null ||
-                    ReplacePermissionsForUserV1Input === undefined) {
-                    throw new Error('Required parameter ReplacePermissionsForUserV1Input was null or undefined when calling replacePermissionsForUserCurrent.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PUT',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(ReplacePermissionsForUserV1Input, 'ReplacePermissionsForUserV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_35 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_35(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ReplacePermissionsForUser200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    IAMUsersApi.prototype.replacePermissionsForUserV1 = function (userId, ReplacePermissionsForUserV1Input, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_36, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/users/{userId}/permissions'.replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = produces[0];
-                }
-                else {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                localVarFormParams = {};
-                if (userId === null || userId === undefined) {
-                    throw new Error('Required parameter userId was null or undefined when calling replacePermissionsForUserV1.');
-                }
-                if (ReplacePermissionsForUserV1Input === null ||
-                    ReplacePermissionsForUserV1Input === undefined) {
-                    throw new Error('Required parameter ReplacePermissionsForUserV1Input was null or undefined when calling replacePermissionsForUserV1.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'PUT',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(ReplacePermissionsForUserV1Input, 'ReplacePermissionsForUserV1Input'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_36 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_36(interceptor);
                 }
                 return [2, interceptorPromise.then(function () {
                         if (Object.keys(localVarFormParams).length) {

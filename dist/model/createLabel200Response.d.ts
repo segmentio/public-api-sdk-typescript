@@ -1,6 +1,6 @@
-import { CreateLabelAlphaOutput } from './createLabelAlphaOutput';
+import { CreateLabelV1Output } from './createLabelV1Output';
 export declare class CreateLabel200Response {
-    'data'?: CreateLabelAlphaOutput;
+    'data'?: CreateLabelV1Output;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

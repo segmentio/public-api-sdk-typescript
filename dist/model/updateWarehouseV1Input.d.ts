@@ -1,7 +1,7 @@
 export declare class UpdateWarehouseV1Input {
     'name'?: string | null;
     'enabled'?: boolean;
-    'settings'?: any;
+    'settings'?: any | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

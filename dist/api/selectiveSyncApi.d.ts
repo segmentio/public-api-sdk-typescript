@@ -32,7 +32,7 @@ export declare class SelectiveSyncApi {
     setApiKey(key: SelectiveSyncApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    getAdvancedSyncScheduleFromWarehouseAlpha(warehouseId: string, options?: {
+    getAdvancedSyncScheduleFromWarehouse(warehouseId: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -40,31 +40,7 @@ export declare class SelectiveSyncApi {
         response: http.IncomingMessage;
         body: GetAdvancedSyncScheduleFromWarehouse200Response;
     }>;
-    getAdvancedSyncScheduleFromWarehouseBeta(warehouseId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetAdvancedSyncScheduleFromWarehouse200Response;
-    }>;
-    getAdvancedSyncScheduleFromWarehouseCurrent(warehouseId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetAdvancedSyncScheduleFromWarehouse200Response;
-    }>;
-    getAdvancedSyncScheduleFromWarehouseV1(warehouseId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetAdvancedSyncScheduleFromWarehouse200Response;
-    }>;
-    listSelectiveSyncsFromWarehouseAndSourceAlpha(warehouseId: string, sourceId: string, pagination: PaginationInput, options?: {
+    listSelectiveSyncsFromWarehouseAndSource(warehouseId: string, sourceId: string, pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -72,31 +48,7 @@ export declare class SelectiveSyncApi {
         response: http.IncomingMessage;
         body: ListSelectiveSyncsFromWarehouseAndSource200Response;
     }>;
-    listSelectiveSyncsFromWarehouseAndSourceBeta(warehouseId: string, sourceId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListSelectiveSyncsFromWarehouseAndSource200Response;
-    }>;
-    listSelectiveSyncsFromWarehouseAndSourceCurrent(warehouseId: string, sourceId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListSelectiveSyncsFromWarehouseAndSource200Response;
-    }>;
-    listSelectiveSyncsFromWarehouseAndSourceV1(warehouseId: string, sourceId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListSelectiveSyncsFromWarehouseAndSource200Response;
-    }>;
-    listSyncsFromWarehouseAlpha(warehouseId: string, pagination: PaginationInput, options?: {
+    listSyncsFromWarehouse(warehouseId: string, pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -104,7 +56,7 @@ export declare class SelectiveSyncApi {
         response: http.IncomingMessage;
         body: ListSyncsFromWarehouse200Response;
     }>;
-    listSyncsFromWarehouseAndSourceAlpha(warehouseId: string, sourceId: string, pagination: PaginationInput, options?: {
+    listSyncsFromWarehouseAndSource(warehouseId: string, sourceId: string, pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -112,55 +64,7 @@ export declare class SelectiveSyncApi {
         response: http.IncomingMessage;
         body: ListSyncsFromWarehouseAndSource200Response;
     }>;
-    listSyncsFromWarehouseAndSourceBeta(warehouseId: string, sourceId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListSyncsFromWarehouseAndSource200Response;
-    }>;
-    listSyncsFromWarehouseAndSourceCurrent(warehouseId: string, sourceId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListSyncsFromWarehouseAndSource200Response;
-    }>;
-    listSyncsFromWarehouseAndSourceV1(warehouseId: string, sourceId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListSyncsFromWarehouseAndSource200Response;
-    }>;
-    listSyncsFromWarehouseBeta(warehouseId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListSyncsFromWarehouse200Response;
-    }>;
-    listSyncsFromWarehouseCurrent(warehouseId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListSyncsFromWarehouse200Response;
-    }>;
-    listSyncsFromWarehouseV1(warehouseId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListSyncsFromWarehouse200Response;
-    }>;
-    replaceAdvancedSyncScheduleForWarehouseAlpha(warehouseId: string, ReplaceAdvancedSyncScheduleForWarehouseV1Input: ReplaceAdvancedSyncScheduleForWarehouseV1Input, options?: {
+    replaceAdvancedSyncScheduleForWarehouse(warehouseId: string, ReplaceAdvancedSyncScheduleForWarehouseV1Input: ReplaceAdvancedSyncScheduleForWarehouseV1Input, options?: {
         headers: {
             [name: string]: string;
         };
@@ -168,55 +72,7 @@ export declare class SelectiveSyncApi {
         response: http.IncomingMessage;
         body: ReplaceAdvancedSyncScheduleForWarehouse200Response;
     }>;
-    replaceAdvancedSyncScheduleForWarehouseBeta(warehouseId: string, ReplaceAdvancedSyncScheduleForWarehouseV1Input: ReplaceAdvancedSyncScheduleForWarehouseV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ReplaceAdvancedSyncScheduleForWarehouse200Response;
-    }>;
-    replaceAdvancedSyncScheduleForWarehouseCurrent(warehouseId: string, ReplaceAdvancedSyncScheduleForWarehouseV1Input: ReplaceAdvancedSyncScheduleForWarehouseV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ReplaceAdvancedSyncScheduleForWarehouse200Response;
-    }>;
-    replaceAdvancedSyncScheduleForWarehouseV1(warehouseId: string, ReplaceAdvancedSyncScheduleForWarehouseV1Input: ReplaceAdvancedSyncScheduleForWarehouseV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ReplaceAdvancedSyncScheduleForWarehouse200Response;
-    }>;
-    updateSelectiveSyncForWarehouseAlpha(warehouseId: string, UpdateSelectiveSyncForWarehouseV1Input: UpdateSelectiveSyncForWarehouseV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateSelectiveSyncForWarehouse200Response;
-    }>;
-    updateSelectiveSyncForWarehouseBeta(warehouseId: string, UpdateSelectiveSyncForWarehouseV1Input: UpdateSelectiveSyncForWarehouseV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateSelectiveSyncForWarehouse200Response;
-    }>;
-    updateSelectiveSyncForWarehouseCurrent(warehouseId: string, UpdateSelectiveSyncForWarehouseV1Input: UpdateSelectiveSyncForWarehouseV1Input, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: UpdateSelectiveSyncForWarehouse200Response;
-    }>;
-    updateSelectiveSyncForWarehouseV1(warehouseId: string, UpdateSelectiveSyncForWarehouseV1Input: UpdateSelectiveSyncForWarehouseV1Input, options?: {
+    updateSelectiveSyncForWarehouse(warehouseId: string, UpdateSelectiveSyncForWarehouseV1Input: UpdateSelectiveSyncForWarehouseV1Input, options?: {
         headers: {
             [name: string]: string;
         };

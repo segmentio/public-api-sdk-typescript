@@ -12,7 +12,7 @@ var ListConnectedDestinationsFromSource200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'ListConnectedDestinationsFromSourceAlphaOutput',
+            type: 'ListConnectedDestinationsFromSourceV1Output',
         },
     ];
     return ListConnectedDestinationsFromSource200Response;

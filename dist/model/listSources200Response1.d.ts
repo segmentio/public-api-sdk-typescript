@@ -1,6 +1,6 @@
-import { ListSourcesV1Output } from './listSourcesV1Output';
+import { ListSourcesAlphaOutput } from './listSourcesAlphaOutput';
 export declare class ListSources200Response1 {
-    'data'?: ListSourcesV1Output;
+    'data'?: ListSourcesAlphaOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

@@ -1,7 +1,6 @@
 /// <reference types="node" />
 import http from 'http';
 import { Echo200Response } from '../model/echo200Response';
-import { Echo200Response1 } from '../model/echo200Response1';
 import { Authentication, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
 export declare enum TestingApiApiKeys {
@@ -25,28 +24,12 @@ export declare class TestingApi {
     setApiKey(key: TestingApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    echoAlpha(message: string, delay?: number, triggerError?: boolean, triggerMultipleErrors?: boolean, triggerUnexpectedError?: boolean, statusCode?: number, options?: {
+    echo(message: string, delay?: number, triggerError?: boolean, triggerMultipleErrors?: boolean, triggerUnexpectedError?: boolean, statusCode?: number, options?: {
         headers: {
             [name: string]: string;
         };
     }): Promise<{
         response: http.IncomingMessage;
         body: Echo200Response;
-    }>;
-    echoCurrent(message: string, delay?: number, triggerError?: boolean, triggerMultipleErrors?: boolean, triggerUnexpectedError?: boolean, statusCode?: number, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: Echo200Response1;
-    }>;
-    echoV1(message: string, delay?: number, triggerError?: boolean, triggerMultipleErrors?: boolean, triggerUnexpectedError?: boolean, statusCode?: number, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: Echo200Response1;
     }>;
 }

@@ -25,31 +25,7 @@ export declare class EventsApi {
     setApiKey(key: EventsApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    getEventsVolumeFromWorkspaceAlpha(granularity: 'DAY' | 'HOUR' | 'MINUTE', startTime: string, endTime: string, groupBy?: Array<string>, sourceId?: Array<string>, eventName?: Array<string>, eventType?: Array<string>, appVersion?: Array<string>, pagination?: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetEventsVolumeFromWorkspace200Response;
-    }>;
-    getEventsVolumeFromWorkspaceBeta(granularity: 'DAY' | 'HOUR' | 'MINUTE', startTime: string, endTime: string, groupBy?: Array<string>, sourceId?: Array<string>, eventName?: Array<string>, eventType?: Array<string>, appVersion?: Array<string>, pagination?: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetEventsVolumeFromWorkspace200Response;
-    }>;
-    getEventsVolumeFromWorkspaceCurrent(granularity: 'DAY' | 'HOUR' | 'MINUTE', startTime: string, endTime: string, groupBy?: Array<string>, sourceId?: Array<string>, eventName?: Array<string>, eventType?: Array<string>, appVersion?: Array<string>, pagination?: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetEventsVolumeFromWorkspace200Response;
-    }>;
-    getEventsVolumeFromWorkspaceV1(granularity: 'DAY' | 'HOUR' | 'MINUTE', startTime: string, endTime: string, groupBy?: Array<string>, sourceId?: Array<string>, eventName?: Array<string>, eventType?: Array<string>, appVersion?: Array<string>, pagination?: PaginationInput, options?: {
+    getEventsVolumeFromWorkspace(granularity: 'DAY' | 'HOUR' | 'MINUTE', startTime: string, endTime: string, groupBy?: Array<string>, sourceId?: Array<string>, eventName?: Array<string>, eventType?: Array<string>, appVersion?: Array<string>, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
