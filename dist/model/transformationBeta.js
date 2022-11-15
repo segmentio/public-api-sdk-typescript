@@ -49,6 +49,11 @@ var TransformationBeta = (function () {
             baseName: 'propertyRenames',
             type: 'Array<PropertyRenameBeta>',
         },
+        {
+            name: 'propertyValueTransformations',
+            baseName: 'propertyValueTransformations',
+            type: 'Array<PropertyValueTransformationBeta>',
+        },
     ];
     return TransformationBeta;
 }());

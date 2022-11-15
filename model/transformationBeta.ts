@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { PropertyRenameBeta } from './propertyRenameBeta';
+import { PropertyValueTransformationBeta } from './propertyValueTransformationBeta';
 
 /**
  * Represents a Transformation.
@@ -49,6 +50,10 @@ export class TransformationBeta {
      * Optional array for renaming properties collected by your events.
      */
     'propertyRenames'?: Array<PropertyRenameBeta>;
+    /**
+     * Optional array for transforming properties and values collected by your events. Limited to 10 properties.
+     */
+    'propertyValueTransformations'?: Array<PropertyValueTransformationBeta>;
 
     static discriminator: string | undefined = undefined;
 
@@ -96,6 +101,11 @@ export class TransformationBeta {
             name: 'propertyRenames',
             baseName: 'propertyRenames',
             type: 'Array<PropertyRenameBeta>',
+        },
+        {
+            name: 'propertyValueTransformations',
+            baseName: 'propertyValueTransformations',
+            type: 'Array<PropertyValueTransformationBeta>',
         },
     ];
 
