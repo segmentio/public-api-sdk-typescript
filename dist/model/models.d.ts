@@ -472,7 +472,7 @@ export interface RequestDetailedFile {
         contentType?: string;
     };
 }
-export declare type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
+export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 export declare class ObjectSerializer {
     static findCorrectType(data: any, expectedType: string): any;
     static serialize(data: any, type: string): any;
@@ -506,4 +506,4 @@ export declare class VoidAuth implements Authentication {
     password: string;
     applyToRequest(_: localVarRequest.Options): void;
 }
-export declare type Interceptor = (requestOptions: localVarRequest.Options) => Promise<void> | void;
+export type Interceptor = (requestOptions: localVarRequest.Options) => Promise<void> | void;
