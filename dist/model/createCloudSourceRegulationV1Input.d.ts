@@ -17,7 +17,6 @@ export declare class CreateCloudSourceRegulationV1Input {
 }
 export declare namespace CreateCloudSourceRegulationV1Input {
     enum RegulationTypeEnum {
-        BULK_DELETE_ONLY,
         DELETE_INTERNAL,
         DELETE_ONLY,
         SUPPRESS_ONLY,
