@@ -1,4 +1,5 @@
 import { PropertyRenameBeta } from './propertyRenameBeta';
+import { PropertyValueTransformationBeta } from './propertyValueTransformationBeta';
 export declare class Transformation {
     'id': string;
     'name': string;
@@ -8,6 +9,7 @@ export declare class Transformation {
     'if': string;
     'newEventName'?: string;
     'propertyRenames'?: Array<PropertyRenameBeta>;
+    'propertyValueTransformations'?: Array<PropertyValueTransformationBeta>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
