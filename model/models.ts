@@ -322,6 +322,7 @@ export * from './previewDestinationFilterV1';
 export * from './previewDestinationFilterV1Input';
 export * from './previewDestinationFilterV1Output';
 export * from './propertyRenameBeta';
+export * from './propertyValueTransformationBeta';
 export * from './regulation';
 export * from './regulationListEntryV1';
 export * from './removeFilterFromDestination200Response';
@@ -798,6 +799,7 @@ import { PreviewDestinationFilterV1 } from './previewDestinationFilterV1';
 import { PreviewDestinationFilterV1Input } from './previewDestinationFilterV1Input';
 import { PreviewDestinationFilterV1Output } from './previewDestinationFilterV1Output';
 import { PropertyRenameBeta } from './propertyRenameBeta';
+import { PropertyValueTransformationBeta } from './propertyValueTransformationBeta';
 import { Regulation } from './regulation';
 import { RegulationListEntryV1 } from './regulationListEntryV1';
 import { RemoveFilterFromDestination200Response } from './removeFilterFromDestination200Response';
@@ -1451,6 +1453,7 @@ let typeMap: { [index: string]: any } = {
     PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: PreviewDestinationFilterV1Output,
     PropertyRenameBeta: PropertyRenameBeta,
+    PropertyValueTransformationBeta: PropertyValueTransformationBeta,
     Regulation: Regulation,
     RegulationListEntryV1: RegulationListEntryV1,
     RemoveFilterFromDestination200Response:
