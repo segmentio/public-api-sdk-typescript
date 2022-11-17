@@ -1,7 +1,6 @@
 import { PropertyRenameBeta } from './propertyRenameBeta';
 import { PropertyValueTransformationBeta } from './propertyValueTransformationBeta';
 export declare class UpdateTransformationBetaInput {
-    'transformationId': string;
     'name'?: string;
     'sourceId'?: string;
     'destinationMetadataId'?: string;

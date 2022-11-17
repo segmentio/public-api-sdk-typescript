@@ -587,7 +587,7 @@ var DeletionAndSuppressionApi = (function () {
                 }
                 if (regulationTypes !== undefined) {
                     localVarQueryParameters['regulationTypes'] =
-                        models_1.ObjectSerializer.serialize(regulationTypes, "Array<'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>");
+                        models_1.ObjectSerializer.serialize(regulationTypes, "Array<'BULK_DELETE_ONLY' | 'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>");
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
@@ -770,7 +770,7 @@ var DeletionAndSuppressionApi = (function () {
                 }
                 if (regulationTypes !== undefined) {
                     localVarQueryParameters['regulationTypes'] =
-                        models_1.ObjectSerializer.serialize(regulationTypes, "Array<'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>");
+                        models_1.ObjectSerializer.serialize(regulationTypes, "Array<'BULK_DELETE_ONLY' | 'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>");
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');

@@ -12,7 +12,7 @@ var DeleteTransformation200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'DeleteTransformationV1Output',
+            type: 'DeleteTransformationBetaOutput',
         },
     ];
     return DeleteTransformation200Response;

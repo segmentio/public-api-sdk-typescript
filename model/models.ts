@@ -76,8 +76,6 @@ export * from './createTrackingPlanV1Output';
 export * from './createTransformation200Response';
 export * from './createTransformationBetaInput';
 export * from './createTransformationBetaOutput';
-export * from './createTransformationV1Input';
-export * from './createTransformationV1Output';
 export * from './createUserGroup200Response';
 export * from './createUserGroupV1Input';
 export * from './createUserGroupV1Output';
@@ -109,9 +107,7 @@ export * from './deleteSourceV1Output';
 export * from './deleteTrackingPlan200Response';
 export * from './deleteTrackingPlanV1Output';
 export * from './deleteTransformation200Response';
-export * from './deleteTransformationBetaInput';
 export * from './deleteTransformationBetaOutput';
-export * from './deleteTransformationV1Output';
 export * from './deleteUserGroup200Response';
 export * from './deleteUserGroupV1Output';
 export * from './deleteUsers200Response';
@@ -206,9 +202,7 @@ export * from './getSubscriptionRequest';
 export * from './getTrackingPlan200Response';
 export * from './getTrackingPlanV1Output';
 export * from './getTransformation200Response';
-export * from './getTransformationBetaInput';
 export * from './getTransformationBetaOutput';
-export * from './getTransformationV1Output';
 export * from './getUser200Response';
 export * from './getUserGroup200Response';
 export * from './getUserGroupV1Output';
@@ -290,9 +284,7 @@ export * from './listSyncsFromWarehouseV1Output';
 export * from './listTrackingPlans200Response';
 export * from './listTrackingPlansV1Output';
 export * from './listTransformations200Response';
-export * from './listTransformationsBetaInput';
 export * from './listTransformationsBetaOutput';
-export * from './listTransformationsV1Output';
 export * from './listUserGroups200Response';
 export * from './listUserGroupsFromUser200Response';
 export * from './listUserGroupsFromUserV1Output';
@@ -320,7 +312,6 @@ export * from './minimalUserGroupV1';
 export * from './minimalUserV1';
 export * from './mtuSnapshotV1';
 export * from './pagination';
-export * from './pagination1';
 export * from './paginationInput';
 export * from './paginationOutput';
 export * from './permissionInputV1';
@@ -331,9 +322,7 @@ export * from './previewDestinationFilterV1';
 export * from './previewDestinationFilterV1Input';
 export * from './previewDestinationFilterV1Output';
 export * from './propertyRenameBeta';
-export * from './propertyRenameV1';
 export * from './propertyValueTransformationBeta';
-export * from './propertyValueTransformationV1';
 export * from './regulation';
 export * from './regulationListEntryV1';
 export * from './removeFilterFromDestination200Response';
@@ -415,11 +404,7 @@ export * from './trackingPlanV1';
 export * from './transformation';
 export * from './transformation1';
 export * from './transformation2';
-export * from './transformation3';
-export * from './transformation4';
-export * from './transformation5';
 export * from './transformationBeta';
-export * from './transformationV1';
 export * from './updateDestination200Response';
 export * from './updateDestinationV1Input';
 export * from './updateDestinationV1Output';
@@ -453,8 +438,6 @@ export * from './updateTrackingPlanV1Output';
 export * from './updateTransformation200Response';
 export * from './updateTransformationBetaInput';
 export * from './updateTransformationBetaOutput';
-export * from './updateTransformationV1Input';
-export * from './updateTransformationV1Output';
 export * from './updateUserGroup200Response';
 export * from './updateUserGroupV1Input';
 export * from './updateUserGroupV1Output';
@@ -570,8 +553,6 @@ import { CreateTrackingPlanV1Output } from './createTrackingPlanV1Output';
 import { CreateTransformation200Response } from './createTransformation200Response';
 import { CreateTransformationBetaInput } from './createTransformationBetaInput';
 import { CreateTransformationBetaOutput } from './createTransformationBetaOutput';
-import { CreateTransformationV1Input } from './createTransformationV1Input';
-import { CreateTransformationV1Output } from './createTransformationV1Output';
 import { CreateUserGroup200Response } from './createUserGroup200Response';
 import { CreateUserGroupV1Input } from './createUserGroupV1Input';
 import { CreateUserGroupV1Output } from './createUserGroupV1Output';
@@ -603,9 +584,7 @@ import { DeleteSourceV1Output } from './deleteSourceV1Output';
 import { DeleteTrackingPlan200Response } from './deleteTrackingPlan200Response';
 import { DeleteTrackingPlanV1Output } from './deleteTrackingPlanV1Output';
 import { DeleteTransformation200Response } from './deleteTransformation200Response';
-import { DeleteTransformationBetaInput } from './deleteTransformationBetaInput';
 import { DeleteTransformationBetaOutput } from './deleteTransformationBetaOutput';
-import { DeleteTransformationV1Output } from './deleteTransformationV1Output';
 import { DeleteUserGroup200Response } from './deleteUserGroup200Response';
 import { DeleteUserGroupV1Output } from './deleteUserGroupV1Output';
 import { DeleteUsers200Response } from './deleteUsers200Response';
@@ -700,9 +679,7 @@ import { GetSubscriptionRequest } from './getSubscriptionRequest';
 import { GetTrackingPlan200Response } from './getTrackingPlan200Response';
 import { GetTrackingPlanV1Output } from './getTrackingPlanV1Output';
 import { GetTransformation200Response } from './getTransformation200Response';
-import { GetTransformationBetaInput } from './getTransformationBetaInput';
 import { GetTransformationBetaOutput } from './getTransformationBetaOutput';
-import { GetTransformationV1Output } from './getTransformationV1Output';
 import { GetUser200Response } from './getUser200Response';
 import { GetUserGroup200Response } from './getUserGroup200Response';
 import { GetUserGroupV1Output } from './getUserGroupV1Output';
@@ -784,9 +761,7 @@ import { ListSyncsFromWarehouseV1Output } from './listSyncsFromWarehouseV1Output
 import { ListTrackingPlans200Response } from './listTrackingPlans200Response';
 import { ListTrackingPlansV1Output } from './listTrackingPlansV1Output';
 import { ListTransformations200Response } from './listTransformations200Response';
-import { ListTransformationsBetaInput } from './listTransformationsBetaInput';
 import { ListTransformationsBetaOutput } from './listTransformationsBetaOutput';
-import { ListTransformationsV1Output } from './listTransformationsV1Output';
 import { ListUserGroups200Response } from './listUserGroups200Response';
 import { ListUserGroupsFromUser200Response } from './listUserGroupsFromUser200Response';
 import { ListUserGroupsFromUserV1Output } from './listUserGroupsFromUserV1Output';
@@ -814,7 +789,6 @@ import { MinimalUserGroupV1 } from './minimalUserGroupV1';
 import { MinimalUserV1 } from './minimalUserV1';
 import { MtuSnapshotV1 } from './mtuSnapshotV1';
 import { Pagination } from './pagination';
-import { Pagination1 } from './pagination1';
 import { PaginationInput } from './paginationInput';
 import { PaginationOutput } from './paginationOutput';
 import { PermissionInputV1 } from './permissionInputV1';
@@ -825,9 +799,7 @@ import { PreviewDestinationFilterV1 } from './previewDestinationFilterV1';
 import { PreviewDestinationFilterV1Input } from './previewDestinationFilterV1Input';
 import { PreviewDestinationFilterV1Output } from './previewDestinationFilterV1Output';
 import { PropertyRenameBeta } from './propertyRenameBeta';
-import { PropertyRenameV1 } from './propertyRenameV1';
 import { PropertyValueTransformationBeta } from './propertyValueTransformationBeta';
-import { PropertyValueTransformationV1 } from './propertyValueTransformationV1';
 import { Regulation } from './regulation';
 import { RegulationListEntryV1 } from './regulationListEntryV1';
 import { RemoveFilterFromDestination200Response } from './removeFilterFromDestination200Response';
@@ -909,11 +881,7 @@ import { TrackingPlanV1 } from './trackingPlanV1';
 import { Transformation } from './transformation';
 import { Transformation1 } from './transformation1';
 import { Transformation2 } from './transformation2';
-import { Transformation3 } from './transformation3';
-import { Transformation4 } from './transformation4';
-import { Transformation5 } from './transformation5';
 import { TransformationBeta } from './transformationBeta';
-import { TransformationV1 } from './transformationV1';
 import { UpdateDestination200Response } from './updateDestination200Response';
 import { UpdateDestinationV1Input } from './updateDestinationV1Input';
 import { UpdateDestinationV1Output } from './updateDestinationV1Output';
@@ -947,8 +915,6 @@ import { UpdateTrackingPlanV1Output } from './updateTrackingPlanV1Output';
 import { UpdateTransformation200Response } from './updateTransformation200Response';
 import { UpdateTransformationBetaInput } from './updateTransformationBetaInput';
 import { UpdateTransformationBetaOutput } from './updateTransformationBetaOutput';
-import { UpdateTransformationV1Input } from './updateTransformationV1Input';
-import { UpdateTransformationV1Output } from './updateTransformationV1Output';
 import { UpdateUserGroup200Response } from './updateUserGroup200Response';
 import { UpdateUserGroupV1Input } from './updateUserGroupV1Input';
 import { UpdateUserGroupV1Output } from './updateUserGroupV1Output';
@@ -1023,8 +989,6 @@ let enumsMap: { [index: string]: any } = {
         DeleteTrackingPlanV1Output.StatusEnum,
     'DeleteTransformationBetaOutput.StatusEnum':
         DeleteTransformationBetaOutput.StatusEnum,
-    'DeleteTransformationV1Output.StatusEnum':
-        DeleteTransformationV1Output.StatusEnum,
     'DeleteUserGroupV1Output.StatusEnum': DeleteUserGroupV1Output.StatusEnum,
     'DeleteUsersV1Output.StatusEnum': DeleteUsersV1Output.StatusEnum,
     'DeleteWarehouseV1Output.StatusEnum': DeleteWarehouseV1Output.StatusEnum,
@@ -1203,8 +1167,6 @@ let typeMap: { [index: string]: any } = {
     CreateTransformation200Response: CreateTransformation200Response,
     CreateTransformationBetaInput: CreateTransformationBetaInput,
     CreateTransformationBetaOutput: CreateTransformationBetaOutput,
-    CreateTransformationV1Input: CreateTransformationV1Input,
-    CreateTransformationV1Output: CreateTransformationV1Output,
     CreateUserGroup200Response: CreateUserGroup200Response,
     CreateUserGroupV1Input: CreateUserGroupV1Input,
     CreateUserGroupV1Output: CreateUserGroupV1Output,
@@ -1237,9 +1199,7 @@ let typeMap: { [index: string]: any } = {
     DeleteTrackingPlan200Response: DeleteTrackingPlan200Response,
     DeleteTrackingPlanV1Output: DeleteTrackingPlanV1Output,
     DeleteTransformation200Response: DeleteTransformation200Response,
-    DeleteTransformationBetaInput: DeleteTransformationBetaInput,
     DeleteTransformationBetaOutput: DeleteTransformationBetaOutput,
-    DeleteTransformationV1Output: DeleteTransformationV1Output,
     DeleteUserGroup200Response: DeleteUserGroup200Response,
     DeleteUserGroupV1Output: DeleteUserGroupV1Output,
     DeleteUsers200Response: DeleteUsers200Response,
@@ -1352,9 +1312,7 @@ let typeMap: { [index: string]: any } = {
     GetTrackingPlan200Response: GetTrackingPlan200Response,
     GetTrackingPlanV1Output: GetTrackingPlanV1Output,
     GetTransformation200Response: GetTransformation200Response,
-    GetTransformationBetaInput: GetTransformationBetaInput,
     GetTransformationBetaOutput: GetTransformationBetaOutput,
-    GetTransformationV1Output: GetTransformationV1Output,
     GetUser200Response: GetUser200Response,
     GetUserGroup200Response: GetUserGroup200Response,
     GetUserGroupV1Output: GetUserGroupV1Output,
@@ -1457,9 +1415,7 @@ let typeMap: { [index: string]: any } = {
     ListTrackingPlans200Response: ListTrackingPlans200Response,
     ListTrackingPlansV1Output: ListTrackingPlansV1Output,
     ListTransformations200Response: ListTransformations200Response,
-    ListTransformationsBetaInput: ListTransformationsBetaInput,
     ListTransformationsBetaOutput: ListTransformationsBetaOutput,
-    ListTransformationsV1Output: ListTransformationsV1Output,
     ListUserGroups200Response: ListUserGroups200Response,
     ListUserGroupsFromUser200Response: ListUserGroupsFromUser200Response,
     ListUserGroupsFromUserV1Output: ListUserGroupsFromUserV1Output,
@@ -1487,7 +1443,6 @@ let typeMap: { [index: string]: any } = {
     MinimalUserV1: MinimalUserV1,
     MtuSnapshotV1: MtuSnapshotV1,
     Pagination: Pagination,
-    Pagination1: Pagination1,
     PaginationInput: PaginationInput,
     PaginationOutput: PaginationOutput,
     PermissionInputV1: PermissionInputV1,
@@ -1498,9 +1453,7 @@ let typeMap: { [index: string]: any } = {
     PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: PreviewDestinationFilterV1Output,
     PropertyRenameBeta: PropertyRenameBeta,
-    PropertyRenameV1: PropertyRenameV1,
     PropertyValueTransformationBeta: PropertyValueTransformationBeta,
-    PropertyValueTransformationV1: PropertyValueTransformationV1,
     Regulation: Regulation,
     RegulationListEntryV1: RegulationListEntryV1,
     RemoveFilterFromDestination200Response:
@@ -1599,11 +1552,7 @@ let typeMap: { [index: string]: any } = {
     Transformation: Transformation,
     Transformation1: Transformation1,
     Transformation2: Transformation2,
-    Transformation3: Transformation3,
-    Transformation4: Transformation4,
-    Transformation5: Transformation5,
     TransformationBeta: TransformationBeta,
-    TransformationV1: TransformationV1,
     UpdateDestination200Response: UpdateDestination200Response,
     UpdateDestinationV1Input: UpdateDestinationV1Input,
     UpdateDestinationV1Output: UpdateDestinationV1Output,
@@ -1645,8 +1594,6 @@ let typeMap: { [index: string]: any } = {
     UpdateTransformation200Response: UpdateTransformation200Response,
     UpdateTransformationBetaInput: UpdateTransformationBetaInput,
     UpdateTransformationBetaOutput: UpdateTransformationBetaOutput,
-    UpdateTransformationV1Input: UpdateTransformationV1Input,
-    UpdateTransformationV1Output: UpdateTransformationV1Output,
     UpdateUserGroup200Response: UpdateUserGroup200Response,
     UpdateUserGroupV1Input: UpdateUserGroupV1Input,
     UpdateUserGroupV1Output: UpdateUserGroupV1Output,

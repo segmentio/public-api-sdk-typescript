@@ -10,11 +10,6 @@ var UpdateTransformationBetaInput = (function () {
     UpdateTransformationBetaInput.discriminator = undefined;
     UpdateTransformationBetaInput.attributeTypeMap = [
         {
-            name: 'transformationId',
-            baseName: 'transformationId',
-            type: 'string',
-        },
-        {
             name: 'name',
             baseName: 'name',
             type: 'string',

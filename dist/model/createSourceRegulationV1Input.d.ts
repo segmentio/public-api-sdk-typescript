@@ -16,6 +16,7 @@ export declare class CreateSourceRegulationV1Input {
 }
 export declare namespace CreateSourceRegulationV1Input {
     enum RegulationTypeEnum {
+        BULK_DELETE_ONLY,
         DELETE_INTERNAL,
         DELETE_ONLY,
         SUPPRESS_ONLY,
