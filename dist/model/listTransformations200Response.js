@@ -12,7 +12,7 @@ var ListTransformations200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'ListTransformationsBetaOutput',
+            type: 'ListTransformationsV1Output',
         },
     ];
     return ListTransformations200Response;

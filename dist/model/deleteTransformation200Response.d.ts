@@ -1,6 +1,6 @@
-import { DeleteTransformationBetaOutput } from './deleteTransformationBetaOutput';
+import { DeleteTransformationV1Output } from './deleteTransformationV1Output';
 export declare class DeleteTransformation200Response {
-    'data'?: DeleteTransformationBetaOutput;
+    'data'?: DeleteTransformationV1Output;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
