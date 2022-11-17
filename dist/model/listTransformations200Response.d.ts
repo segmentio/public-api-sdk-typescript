@@ -1,6 +1,6 @@
-import { ListTransformationsBetaOutput } from './listTransformationsBetaOutput';
+import { ListTransformationsV1Output } from './listTransformationsV1Output';
 export declare class ListTransformations200Response {
-    'data'?: ListTransformationsBetaOutput;
+    'data'?: ListTransformationsV1Output;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

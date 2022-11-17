@@ -1,6 +1,6 @@
-import { GetTransformationBetaOutput } from './getTransformationBetaOutput';
+import { GetTransformationV1Output } from './getTransformationV1Output';
 export declare class GetTransformation200Response {
-    'data'?: GetTransformationBetaOutput;
+    'data'?: GetTransformationV1Output;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
