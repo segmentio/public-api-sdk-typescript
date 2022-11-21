@@ -23,7 +23,7 @@ export class PreviewDestinationFilterV1Output {
     /**
      * The filtered JSON output.
      */
-    'result': any | null;
+    'result': object | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -40,7 +40,7 @@ export class PreviewDestinationFilterV1Output {
         {
             name: 'result',
             baseName: 'result',
-            type: 'any',
+            type: 'object',
         },
     ];
 
