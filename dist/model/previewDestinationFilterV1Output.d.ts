@@ -2,7 +2,7 @@ export declare class PreviewDestinationFilterV1Output {
     'inputPayload': {
         [key: string]: any;
     };
-    'result': any | null;
+    'result': object | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
