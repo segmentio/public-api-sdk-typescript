@@ -91,6 +91,8 @@ __exportStar(require("./createTrackingPlanV1Output"), exports);
 __exportStar(require("./createTransformation200Response"), exports);
 __exportStar(require("./createTransformationBetaInput"), exports);
 __exportStar(require("./createTransformationBetaOutput"), exports);
+__exportStar(require("./createTransformationV1Input"), exports);
+__exportStar(require("./createTransformationV1Output"), exports);
 __exportStar(require("./createUserGroup200Response"), exports);
 __exportStar(require("./createUserGroupV1Input"), exports);
 __exportStar(require("./createUserGroupV1Output"), exports);
@@ -122,7 +124,9 @@ __exportStar(require("./deleteSourceV1Output"), exports);
 __exportStar(require("./deleteTrackingPlan200Response"), exports);
 __exportStar(require("./deleteTrackingPlanV1Output"), exports);
 __exportStar(require("./deleteTransformation200Response"), exports);
+__exportStar(require("./deleteTransformationBetaInput"), exports);
 __exportStar(require("./deleteTransformationBetaOutput"), exports);
+__exportStar(require("./deleteTransformationV1Output"), exports);
 __exportStar(require("./deleteUserGroup200Response"), exports);
 __exportStar(require("./deleteUserGroupV1Output"), exports);
 __exportStar(require("./deleteUsers200Response"), exports);
@@ -217,7 +221,9 @@ __exportStar(require("./getSubscriptionRequest"), exports);
 __exportStar(require("./getTrackingPlan200Response"), exports);
 __exportStar(require("./getTrackingPlanV1Output"), exports);
 __exportStar(require("./getTransformation200Response"), exports);
+__exportStar(require("./getTransformationBetaInput"), exports);
 __exportStar(require("./getTransformationBetaOutput"), exports);
+__exportStar(require("./getTransformationV1Output"), exports);
 __exportStar(require("./getUser200Response"), exports);
 __exportStar(require("./getUserGroup200Response"), exports);
 __exportStar(require("./getUserGroupV1Output"), exports);
@@ -299,7 +305,9 @@ __exportStar(require("./listSyncsFromWarehouseV1Output"), exports);
 __exportStar(require("./listTrackingPlans200Response"), exports);
 __exportStar(require("./listTrackingPlansV1Output"), exports);
 __exportStar(require("./listTransformations200Response"), exports);
+__exportStar(require("./listTransformationsBetaInput"), exports);
 __exportStar(require("./listTransformationsBetaOutput"), exports);
+__exportStar(require("./listTransformationsV1Output"), exports);
 __exportStar(require("./listUserGroups200Response"), exports);
 __exportStar(require("./listUserGroupsFromUser200Response"), exports);
 __exportStar(require("./listUserGroupsFromUserV1Output"), exports);
@@ -327,6 +335,7 @@ __exportStar(require("./minimalUserGroupV1"), exports);
 __exportStar(require("./minimalUserV1"), exports);
 __exportStar(require("./mtuSnapshotV1"), exports);
 __exportStar(require("./pagination"), exports);
+__exportStar(require("./pagination1"), exports);
 __exportStar(require("./paginationInput"), exports);
 __exportStar(require("./paginationOutput"), exports);
 __exportStar(require("./permissionInputV1"), exports);
@@ -337,7 +346,9 @@ __exportStar(require("./previewDestinationFilterV1"), exports);
 __exportStar(require("./previewDestinationFilterV1Input"), exports);
 __exportStar(require("./previewDestinationFilterV1Output"), exports);
 __exportStar(require("./propertyRenameBeta"), exports);
+__exportStar(require("./propertyRenameV1"), exports);
 __exportStar(require("./propertyValueTransformationBeta"), exports);
+__exportStar(require("./propertyValueTransformationV1"), exports);
 __exportStar(require("./regulation"), exports);
 __exportStar(require("./regulationListEntryV1"), exports);
 __exportStar(require("./removeFilterFromDestination200Response"), exports);
@@ -419,7 +430,11 @@ __exportStar(require("./trackingPlanV1"), exports);
 __exportStar(require("./transformation"), exports);
 __exportStar(require("./transformation1"), exports);
 __exportStar(require("./transformation2"), exports);
+__exportStar(require("./transformation3"), exports);
+__exportStar(require("./transformation4"), exports);
+__exportStar(require("./transformation5"), exports);
 __exportStar(require("./transformationBeta"), exports);
+__exportStar(require("./transformationV1"), exports);
 __exportStar(require("./updateDestination200Response"), exports);
 __exportStar(require("./updateDestinationV1Input"), exports);
 __exportStar(require("./updateDestinationV1Output"), exports);
@@ -453,6 +468,8 @@ __exportStar(require("./updateTrackingPlanV1Output"), exports);
 __exportStar(require("./updateTransformation200Response"), exports);
 __exportStar(require("./updateTransformationBetaInput"), exports);
 __exportStar(require("./updateTransformationBetaOutput"), exports);
+__exportStar(require("./updateTransformationV1Input"), exports);
+__exportStar(require("./updateTransformationV1Output"), exports);
 __exportStar(require("./updateUserGroup200Response"), exports);
 __exportStar(require("./updateUserGroupV1Input"), exports);
 __exportStar(require("./updateUserGroupV1Output"), exports);
@@ -555,6 +572,8 @@ var createTrackingPlanV1Output_1 = require("./createTrackingPlanV1Output");
 var createTransformation200Response_1 = require("./createTransformation200Response");
 var createTransformationBetaInput_1 = require("./createTransformationBetaInput");
 var createTransformationBetaOutput_1 = require("./createTransformationBetaOutput");
+var createTransformationV1Input_1 = require("./createTransformationV1Input");
+var createTransformationV1Output_1 = require("./createTransformationV1Output");
 var createUserGroup200Response_1 = require("./createUserGroup200Response");
 var createUserGroupV1Input_1 = require("./createUserGroupV1Input");
 var createUserGroupV1Output_1 = require("./createUserGroupV1Output");
@@ -586,7 +605,9 @@ var deleteSourceV1Output_1 = require("./deleteSourceV1Output");
 var deleteTrackingPlan200Response_1 = require("./deleteTrackingPlan200Response");
 var deleteTrackingPlanV1Output_1 = require("./deleteTrackingPlanV1Output");
 var deleteTransformation200Response_1 = require("./deleteTransformation200Response");
+var deleteTransformationBetaInput_1 = require("./deleteTransformationBetaInput");
 var deleteTransformationBetaOutput_1 = require("./deleteTransformationBetaOutput");
+var deleteTransformationV1Output_1 = require("./deleteTransformationV1Output");
 var deleteUserGroup200Response_1 = require("./deleteUserGroup200Response");
 var deleteUserGroupV1Output_1 = require("./deleteUserGroupV1Output");
 var deleteUsers200Response_1 = require("./deleteUsers200Response");
@@ -681,7 +702,9 @@ var getSubscriptionRequest_1 = require("./getSubscriptionRequest");
 var getTrackingPlan200Response_1 = require("./getTrackingPlan200Response");
 var getTrackingPlanV1Output_1 = require("./getTrackingPlanV1Output");
 var getTransformation200Response_1 = require("./getTransformation200Response");
+var getTransformationBetaInput_1 = require("./getTransformationBetaInput");
 var getTransformationBetaOutput_1 = require("./getTransformationBetaOutput");
+var getTransformationV1Output_1 = require("./getTransformationV1Output");
 var getUser200Response_1 = require("./getUser200Response");
 var getUserGroup200Response_1 = require("./getUserGroup200Response");
 var getUserGroupV1Output_1 = require("./getUserGroupV1Output");
@@ -763,7 +786,9 @@ var listSyncsFromWarehouseV1Output_1 = require("./listSyncsFromWarehouseV1Output
 var listTrackingPlans200Response_1 = require("./listTrackingPlans200Response");
 var listTrackingPlansV1Output_1 = require("./listTrackingPlansV1Output");
 var listTransformations200Response_1 = require("./listTransformations200Response");
+var listTransformationsBetaInput_1 = require("./listTransformationsBetaInput");
 var listTransformationsBetaOutput_1 = require("./listTransformationsBetaOutput");
+var listTransformationsV1Output_1 = require("./listTransformationsV1Output");
 var listUserGroups200Response_1 = require("./listUserGroups200Response");
 var listUserGroupsFromUser200Response_1 = require("./listUserGroupsFromUser200Response");
 var listUserGroupsFromUserV1Output_1 = require("./listUserGroupsFromUserV1Output");
@@ -791,6 +816,7 @@ var minimalUserGroupV1_1 = require("./minimalUserGroupV1");
 var minimalUserV1_1 = require("./minimalUserV1");
 var mtuSnapshotV1_1 = require("./mtuSnapshotV1");
 var pagination_1 = require("./pagination");
+var pagination1_1 = require("./pagination1");
 var paginationInput_1 = require("./paginationInput");
 var paginationOutput_1 = require("./paginationOutput");
 var permissionInputV1_1 = require("./permissionInputV1");
@@ -801,7 +827,9 @@ var previewDestinationFilterV1_1 = require("./previewDestinationFilterV1");
 var previewDestinationFilterV1Input_1 = require("./previewDestinationFilterV1Input");
 var previewDestinationFilterV1Output_1 = require("./previewDestinationFilterV1Output");
 var propertyRenameBeta_1 = require("./propertyRenameBeta");
+var propertyRenameV1_1 = require("./propertyRenameV1");
 var propertyValueTransformationBeta_1 = require("./propertyValueTransformationBeta");
+var propertyValueTransformationV1_1 = require("./propertyValueTransformationV1");
 var regulation_1 = require("./regulation");
 var regulationListEntryV1_1 = require("./regulationListEntryV1");
 var removeFilterFromDestination200Response_1 = require("./removeFilterFromDestination200Response");
@@ -883,7 +911,11 @@ var trackingPlanV1_1 = require("./trackingPlanV1");
 var transformation_1 = require("./transformation");
 var transformation1_1 = require("./transformation1");
 var transformation2_1 = require("./transformation2");
+var transformation3_1 = require("./transformation3");
+var transformation4_1 = require("./transformation4");
+var transformation5_1 = require("./transformation5");
 var transformationBeta_1 = require("./transformationBeta");
+var transformationV1_1 = require("./transformationV1");
 var updateDestination200Response_1 = require("./updateDestination200Response");
 var updateDestinationV1Input_1 = require("./updateDestinationV1Input");
 var updateDestinationV1Output_1 = require("./updateDestinationV1Output");
@@ -917,6 +949,8 @@ var updateTrackingPlanV1Output_1 = require("./updateTrackingPlanV1Output");
 var updateTransformation200Response_1 = require("./updateTransformation200Response");
 var updateTransformationBetaInput_1 = require("./updateTransformationBetaInput");
 var updateTransformationBetaOutput_1 = require("./updateTransformationBetaOutput");
+var updateTransformationV1Input_1 = require("./updateTransformationV1Input");
+var updateTransformationV1Output_1 = require("./updateTransformationV1Output");
 var updateUserGroup200Response_1 = require("./updateUserGroup200Response");
 var updateUserGroupV1Input_1 = require("./updateUserGroupV1Input");
 var updateUserGroupV1Output_1 = require("./updateUserGroupV1Output");
@@ -975,6 +1009,7 @@ var enumsMap = {
     'DeleteSourceV1Output.StatusEnum': deleteSourceV1Output_1.DeleteSourceV1Output.StatusEnum,
     'DeleteTrackingPlanV1Output.StatusEnum': deleteTrackingPlanV1Output_1.DeleteTrackingPlanV1Output.StatusEnum,
     'DeleteTransformationBetaOutput.StatusEnum': deleteTransformationBetaOutput_1.DeleteTransformationBetaOutput.StatusEnum,
+    'DeleteTransformationV1Output.StatusEnum': deleteTransformationV1Output_1.DeleteTransformationV1Output.StatusEnum,
     'DeleteUserGroupV1Output.StatusEnum': deleteUserGroupV1Output_1.DeleteUserGroupV1Output.StatusEnum,
     'DeleteUsersV1Output.StatusEnum': deleteUsersV1Output_1.DeleteUsersV1Output.StatusEnum,
     'DeleteWarehouseV1Output.StatusEnum': deleteWarehouseV1Output_1.DeleteWarehouseV1Output.StatusEnum,
@@ -1112,6 +1147,8 @@ var typeMap = {
     CreateTransformation200Response: createTransformation200Response_1.CreateTransformation200Response,
     CreateTransformationBetaInput: createTransformationBetaInput_1.CreateTransformationBetaInput,
     CreateTransformationBetaOutput: createTransformationBetaOutput_1.CreateTransformationBetaOutput,
+    CreateTransformationV1Input: createTransformationV1Input_1.CreateTransformationV1Input,
+    CreateTransformationV1Output: createTransformationV1Output_1.CreateTransformationV1Output,
     CreateUserGroup200Response: createUserGroup200Response_1.CreateUserGroup200Response,
     CreateUserGroupV1Input: createUserGroupV1Input_1.CreateUserGroupV1Input,
     CreateUserGroupV1Output: createUserGroupV1Output_1.CreateUserGroupV1Output,
@@ -1143,7 +1180,9 @@ var typeMap = {
     DeleteTrackingPlan200Response: deleteTrackingPlan200Response_1.DeleteTrackingPlan200Response,
     DeleteTrackingPlanV1Output: deleteTrackingPlanV1Output_1.DeleteTrackingPlanV1Output,
     DeleteTransformation200Response: deleteTransformation200Response_1.DeleteTransformation200Response,
+    DeleteTransformationBetaInput: deleteTransformationBetaInput_1.DeleteTransformationBetaInput,
     DeleteTransformationBetaOutput: deleteTransformationBetaOutput_1.DeleteTransformationBetaOutput,
+    DeleteTransformationV1Output: deleteTransformationV1Output_1.DeleteTransformationV1Output,
     DeleteUserGroup200Response: deleteUserGroup200Response_1.DeleteUserGroup200Response,
     DeleteUserGroupV1Output: deleteUserGroupV1Output_1.DeleteUserGroupV1Output,
     DeleteUsers200Response: deleteUsers200Response_1.DeleteUsers200Response,
@@ -1238,7 +1277,9 @@ var typeMap = {
     GetTrackingPlan200Response: getTrackingPlan200Response_1.GetTrackingPlan200Response,
     GetTrackingPlanV1Output: getTrackingPlanV1Output_1.GetTrackingPlanV1Output,
     GetTransformation200Response: getTransformation200Response_1.GetTransformation200Response,
+    GetTransformationBetaInput: getTransformationBetaInput_1.GetTransformationBetaInput,
     GetTransformationBetaOutput: getTransformationBetaOutput_1.GetTransformationBetaOutput,
+    GetTransformationV1Output: getTransformationV1Output_1.GetTransformationV1Output,
     GetUser200Response: getUser200Response_1.GetUser200Response,
     GetUserGroup200Response: getUserGroup200Response_1.GetUserGroup200Response,
     GetUserGroupV1Output: getUserGroupV1Output_1.GetUserGroupV1Output,
@@ -1320,7 +1361,9 @@ var typeMap = {
     ListTrackingPlans200Response: listTrackingPlans200Response_1.ListTrackingPlans200Response,
     ListTrackingPlansV1Output: listTrackingPlansV1Output_1.ListTrackingPlansV1Output,
     ListTransformations200Response: listTransformations200Response_1.ListTransformations200Response,
+    ListTransformationsBetaInput: listTransformationsBetaInput_1.ListTransformationsBetaInput,
     ListTransformationsBetaOutput: listTransformationsBetaOutput_1.ListTransformationsBetaOutput,
+    ListTransformationsV1Output: listTransformationsV1Output_1.ListTransformationsV1Output,
     ListUserGroups200Response: listUserGroups200Response_1.ListUserGroups200Response,
     ListUserGroupsFromUser200Response: listUserGroupsFromUser200Response_1.ListUserGroupsFromUser200Response,
     ListUserGroupsFromUserV1Output: listUserGroupsFromUserV1Output_1.ListUserGroupsFromUserV1Output,
@@ -1348,6 +1391,7 @@ var typeMap = {
     MinimalUserV1: minimalUserV1_1.MinimalUserV1,
     MtuSnapshotV1: mtuSnapshotV1_1.MtuSnapshotV1,
     Pagination: pagination_1.Pagination,
+    Pagination1: pagination1_1.Pagination1,
     PaginationInput: paginationInput_1.PaginationInput,
     PaginationOutput: paginationOutput_1.PaginationOutput,
     PermissionInputV1: permissionInputV1_1.PermissionInputV1,
@@ -1358,7 +1402,9 @@ var typeMap = {
     PreviewDestinationFilterV1Input: previewDestinationFilterV1Input_1.PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: previewDestinationFilterV1Output_1.PreviewDestinationFilterV1Output,
     PropertyRenameBeta: propertyRenameBeta_1.PropertyRenameBeta,
+    PropertyRenameV1: propertyRenameV1_1.PropertyRenameV1,
     PropertyValueTransformationBeta: propertyValueTransformationBeta_1.PropertyValueTransformationBeta,
+    PropertyValueTransformationV1: propertyValueTransformationV1_1.PropertyValueTransformationV1,
     Regulation: regulation_1.Regulation,
     RegulationListEntryV1: regulationListEntryV1_1.RegulationListEntryV1,
     RemoveFilterFromDestination200Response: removeFilterFromDestination200Response_1.RemoveFilterFromDestination200Response,
@@ -1440,7 +1486,11 @@ var typeMap = {
     Transformation: transformation_1.Transformation,
     Transformation1: transformation1_1.Transformation1,
     Transformation2: transformation2_1.Transformation2,
+    Transformation3: transformation3_1.Transformation3,
+    Transformation4: transformation4_1.Transformation4,
+    Transformation5: transformation5_1.Transformation5,
     TransformationBeta: transformationBeta_1.TransformationBeta,
+    TransformationV1: transformationV1_1.TransformationV1,
     UpdateDestination200Response: updateDestination200Response_1.UpdateDestination200Response,
     UpdateDestinationV1Input: updateDestinationV1Input_1.UpdateDestinationV1Input,
     UpdateDestinationV1Output: updateDestinationV1Output_1.UpdateDestinationV1Output,
@@ -1474,6 +1524,8 @@ var typeMap = {
     UpdateTransformation200Response: updateTransformation200Response_1.UpdateTransformation200Response,
     UpdateTransformationBetaInput: updateTransformationBetaInput_1.UpdateTransformationBetaInput,
     UpdateTransformationBetaOutput: updateTransformationBetaOutput_1.UpdateTransformationBetaOutput,
+    UpdateTransformationV1Input: updateTransformationV1Input_1.UpdateTransformationV1Input,
+    UpdateTransformationV1Output: updateTransformationV1Output_1.UpdateTransformationV1Output,
     UpdateUserGroup200Response: updateUserGroup200Response_1.UpdateUserGroup200Response,
     UpdateUserGroupV1Input: updateUserGroupV1Input_1.UpdateUserGroupV1Input,
     UpdateUserGroupV1Output: updateUserGroupV1Output_1.UpdateUserGroupV1Output,
