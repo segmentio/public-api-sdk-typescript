@@ -1,6 +1,6 @@
-import { UpdateTransformationV1Output } from './updateTransformationV1Output';
+import { UpdateTransformationBetaOutput } from './updateTransformationBetaOutput';
 export declare class UpdateTransformation200Response {
-    'data'?: UpdateTransformationV1Output;
+    'data'?: UpdateTransformationBetaOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

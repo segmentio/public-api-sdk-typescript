@@ -12,7 +12,7 @@ var UpdateTransformation200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'UpdateTransformationV1Output',
+            type: 'UpdateTransformationBetaOutput',
         },
     ];
     return UpdateTransformation200Response;

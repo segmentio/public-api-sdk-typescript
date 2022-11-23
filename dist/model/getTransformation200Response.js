@@ -12,7 +12,7 @@ var GetTransformation200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'GetTransformationV1Output',
+            type: 'GetTransformationBetaOutput',
         },
     ];
     return GetTransformation200Response;

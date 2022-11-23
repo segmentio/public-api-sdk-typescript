@@ -12,7 +12,7 @@ var CreateTransformation200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'CreateTransformationV1Output',
+            type: 'CreateTransformationBetaOutput',
         },
     ];
     return CreateTransformation200Response;
