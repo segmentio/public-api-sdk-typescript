@@ -125,7 +125,7 @@ export class TrackingPlansApi {
     }
 
     /**
-     * Connects a Source to a Tracking Plan.    When called, this endpoint may generate the `Source Modified` [Audit Trail](/tag/Audit-Trail) event. **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Connects a Source to a Tracking Plan.    When called, this endpoint may generate the `Source Modified` event in the [audit trail](/tag/Audit-Trail). **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary Add Source to Tracking Plan
      * @param trackingPlanId
      * @param AddSourceToTrackingPlanV1Input
@@ -1154,7 +1154,7 @@ export class TrackingPlansApi {
         });
     }
     /**
-     * Disconnects a Source from a Tracking Plan.    When called, this endpoint may generate the `Source Modified` [Audit Trail](/tag/Audit-Trail) event. **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Disconnects a Source from a Tracking Plan.    When called, this endpoint may generate the `Source Modified` event in the [audit trail](/tag/Audit-Trail). **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary Remove Source from Tracking Plan
      * @param trackingPlanId
      * @param sourceId The id of the Source associated with the Tracking Plan.  Config API note: analogous to &#x60;sourceName&#x60;.  This parameter exists in v1.
