@@ -17,7 +17,7 @@ var PreviewDestinationFilterV1Output = (function () {
         {
             name: 'result',
             baseName: 'result',
-            type: 'any',
+            type: 'object',
         },
     ];
     return PreviewDestinationFilterV1Output;

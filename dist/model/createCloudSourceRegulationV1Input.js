@@ -36,7 +36,6 @@ exports.CreateCloudSourceRegulationV1Input = CreateCloudSourceRegulationV1Input;
 (function (CreateCloudSourceRegulationV1Input) {
     var RegulationTypeEnum;
     (function (RegulationTypeEnum) {
-        RegulationTypeEnum[RegulationTypeEnum["BULK_DELETE_ONLY"] = 'BULK_DELETE_ONLY'] = "BULK_DELETE_ONLY";
         RegulationTypeEnum[RegulationTypeEnum["DELETE_INTERNAL"] = 'DELETE_INTERNAL'] = "DELETE_INTERNAL";
         RegulationTypeEnum[RegulationTypeEnum["DELETE_ONLY"] = 'DELETE_ONLY'] = "DELETE_ONLY";
         RegulationTypeEnum[RegulationTypeEnum["SUPPRESS_ONLY"] = 'SUPPRESS_ONLY'] = "SUPPRESS_ONLY";

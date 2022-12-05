@@ -16,7 +16,6 @@ export declare class CreateWorkspaceRegulationV1Input {
 }
 export declare namespace CreateWorkspaceRegulationV1Input {
     enum RegulationTypeEnum {
-        BULK_DELETE_ONLY,
         DELETE_INTERNAL,
         DELETE_ONLY,
         SUPPRESS_ONLY,
