@@ -1,13 +1,13 @@
 /// <reference types="node" />
 import http from 'http';
 import { CreateTransformation200Response } from '../model/createTransformation200Response';
-import { CreateTransformationBetaInput } from '../model/createTransformationBetaInput';
+import { CreateTransformationV1Input } from '../model/createTransformationV1Input';
 import { DeleteTransformation200Response } from '../model/deleteTransformation200Response';
 import { GetTransformation200Response } from '../model/getTransformation200Response';
 import { ListTransformations200Response } from '../model/listTransformations200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { UpdateTransformation200Response } from '../model/updateTransformation200Response';
-import { UpdateTransformationBetaInput } from '../model/updateTransformationBetaInput';
+import { UpdateTransformationV1Input } from '../model/updateTransformationV1Input';
 import { Authentication, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
 export declare enum TransformationsApiApiKeys {
@@ -31,7 +31,7 @@ export declare class TransformationsApi {
     setApiKey(key: TransformationsApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    createTransformation(CreateTransformationBetaInput: CreateTransformationBetaInput, options?: {
+    createTransformation(CreateTransformationV1Input: CreateTransformationV1Input, options?: {
         headers: {
             [name: string]: string;
         };
@@ -63,7 +63,7 @@ export declare class TransformationsApi {
         response: http.IncomingMessage;
         body: ListTransformations200Response;
     }>;
-    updateTransformation(transformationId: string, UpdateTransformationBetaInput: UpdateTransformationBetaInput, options?: {
+    updateTransformation(transformationId: string, UpdateTransformationV1Input: UpdateTransformationV1Input, options?: {
         headers: {
             [name: string]: string;
         };

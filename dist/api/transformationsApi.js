@@ -113,7 +113,7 @@ var TransformationsApi = (function () {
     TransformationsApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    TransformationsApi.prototype.createTransformation = function (CreateTransformationBetaInput, options) {
+    TransformationsApi.prototype.createTransformation = function (CreateTransformationV1Input, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -123,9 +123,10 @@ var TransformationsApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1+json',
+                    'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
-                    'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -134,9 +135,9 @@ var TransformationsApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (CreateTransformationBetaInput === null ||
-                    CreateTransformationBetaInput === undefined) {
-                    throw new Error('Required parameter CreateTransformationBetaInput was null or undefined when calling createTransformation.');
+                if (CreateTransformationV1Input === null ||
+                    CreateTransformationV1Input === undefined) {
+                    throw new Error('Required parameter CreateTransformationV1Input was null or undefined when calling createTransformation.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -147,7 +148,7 @@ var TransformationsApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateTransformationBetaInput, 'CreateTransformationBetaInput'),
+                    body: models_1.ObjectSerializer.serialize(CreateTransformationV1Input, 'CreateTransformationV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -210,9 +211,10 @@ var TransformationsApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1+json',
+                    'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
-                    'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -295,9 +297,10 @@ var TransformationsApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1+json',
+                    'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
-                    'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -379,9 +382,10 @@ var TransformationsApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1+json',
+                    'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
-                    'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -456,7 +460,7 @@ var TransformationsApi = (function () {
             });
         });
     };
-    TransformationsApi.prototype.updateTransformation = function (transformationId, UpdateTransformationBetaInput, options) {
+    TransformationsApi.prototype.updateTransformation = function (transformationId, UpdateTransformationV1Input, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_5, _i, _a, interceptor;
@@ -467,9 +471,10 @@ var TransformationsApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1+json',
+                    'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
-                    'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -481,9 +486,9 @@ var TransformationsApi = (function () {
                 if (transformationId === null || transformationId === undefined) {
                     throw new Error('Required parameter transformationId was null or undefined when calling updateTransformation.');
                 }
-                if (UpdateTransformationBetaInput === null ||
-                    UpdateTransformationBetaInput === undefined) {
-                    throw new Error('Required parameter UpdateTransformationBetaInput was null or undefined when calling updateTransformation.');
+                if (UpdateTransformationV1Input === null ||
+                    UpdateTransformationV1Input === undefined) {
+                    throw new Error('Required parameter UpdateTransformationV1Input was null or undefined when calling updateTransformation.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -494,7 +499,7 @@ var TransformationsApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateTransformationBetaInput, 'UpdateTransformationBetaInput'),
+                    body: models_1.ObjectSerializer.serialize(UpdateTransformationV1Input, 'UpdateTransformationV1Input'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
