@@ -99,6 +99,16 @@ var DestinationMetadata = (function () {
             baseName: 'partnerOwned',
             type: 'boolean',
         },
+        {
+            name: 'supportedRegions',
+            baseName: 'supportedRegions',
+            type: 'Array<string>',
+        },
+        {
+            name: 'regionEndpoints',
+            baseName: 'regionEndpoints',
+            type: 'Array<string>',
+        },
     ];
     return DestinationMetadata;
 }());
