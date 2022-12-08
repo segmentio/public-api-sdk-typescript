@@ -1,5 +1,7 @@
 # Segment Public API TypeScript SDK
 
+> :warning: **Note**: This SDK is currently released as [Public Beta](https://segment.com/legal/first-access-beta-preview/). Its use in critical systems is discouraged, but [feedback is welcome](#contributing).
+
 ## Overview
 
 The Segment Public API helps you manage your Segment Workspaces and its resources. You can use the API to perform CRUD (create, read, update, delete) operations at no extra charge. This includes working with resources such as Sources, Destinations, Warehouses, Tracking Plans, and the Segment Destinations and Sources Catalogs. The full documentation is available at [https://docs.segmentapis.com](https://docs.segmentapis.com).
