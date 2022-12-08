@@ -26,6 +26,8 @@ export declare class DestinationMetadataV1 {
     'presets': Array<DestinationMetadataSubscriptionPresetV1>;
     'contacts'?: Array<Contact>;
     'partnerOwned'?: boolean;
+    'supportedRegions'?: Array<string>;
+    'regionEndpoints'?: Array<string>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

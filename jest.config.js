@@ -1,7 +1,7 @@
-const config = {
+module.exports = {
     roots: ['<rootDir>/tests'],
     testTimeout: 1000,
-    testMatch: ['**/?(*.)+(test).ts'],
+    testRegex: '(.*)test\\.(js|jsx?|tsx?)$',
     transform: {
         '^.+\\.tsx?$': 'ts-jest',
     },
@@ -10,12 +10,4 @@ const config = {
     verbose: true,
     silent: false,
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-    clearMocks: true,
-    reporters: ['default'],
-    testLocationInResults: true,
-    forceExit: true,
-    detectOpenHandles: true,
-    cache: false,
 };
-
-module.exports = config;
