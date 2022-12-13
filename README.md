@@ -1,6 +1,6 @@
 # Segment Public API TypeScript SDK
 
-> :warning: **Note**: This SDK is currently released as [Public Beta](https://segment.com/legal/first-access-beta-preview/). Its use in critical systems is discouraged, but [feedback is welcome](#contributing).
+:warning: This SDK is currently released as [Public Beta](https://segment.com/legal/first-access-beta-preview/). Its use in critical systems is discouraged, but [feedback is welcome](#contributing).
 
 ## Overview
 
