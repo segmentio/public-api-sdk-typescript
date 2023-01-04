@@ -19,7 +19,7 @@ export class AddUsersToUserGroupV1Input {
     /**
      * The email addresses of the users and invites to add.
      */
-    'emails'?: Array<string>;
+    'emails': Array<string>;
 
     static discriminator: string | undefined = undefined;
 

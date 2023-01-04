@@ -20,7 +20,7 @@ export class UpdateRulesInTrackingPlanV1Input {
     /**
      * Rules to update or insert.
      */
-    'rules'?: Array<UpsertRuleV1>;
+    'rules': Array<UpsertRuleV1>;
 
     static discriminator: string | undefined = undefined;
 

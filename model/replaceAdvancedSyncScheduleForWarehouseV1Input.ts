@@ -20,7 +20,7 @@ export class ReplaceAdvancedSyncScheduleForWarehouseV1Input {
     /**
      * Enable to turn on an advanced sync schedule for the Warehouse.
      */
-    'enabled'?: boolean;
+    'enabled': boolean;
     'schedule'?: Schedule1;
 
     static discriminator: string | undefined = undefined;

@@ -1,7 +1,7 @@
 export declare class CreateCloudSourceRegulationV1Input {
     'regulationType': CreateCloudSourceRegulationV1Input.RegulationTypeEnum;
-    'subjectType'?: CreateCloudSourceRegulationV1Input.SubjectTypeEnum;
-    'subjectIds'?: Array<string>;
+    'subjectType': CreateCloudSourceRegulationV1Input.SubjectTypeEnum;
+    'subjectIds': Array<string>;
     'collection': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

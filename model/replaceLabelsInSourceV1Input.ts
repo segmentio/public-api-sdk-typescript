@@ -20,7 +20,7 @@ export class ReplaceLabelsInSourceV1Input {
     /**
      * The list of labels to replace in the Source.
      */
-    'labels'?: Array<LabelV1>;
+    'labels': Array<LabelV1>;
 
     static discriminator: string | undefined = undefined;
 

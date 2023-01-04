@@ -1,5 +1,5 @@
 export declare class UpdateUserGroupV1Input {
-    'name'?: string;
+    'name': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

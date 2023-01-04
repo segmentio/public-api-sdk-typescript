@@ -20,7 +20,7 @@ export class UpdateSelectiveSyncForWarehouseV1Input {
     /**
      * A list of sync schema overrides to apply to this Warehouse.
      */
-    'syncOverrides'?: Array<WarehouseSyncOverrideV1>;
+    'syncOverrides': Array<WarehouseSyncOverrideV1>;
 
     static discriminator: string | undefined = undefined;
 

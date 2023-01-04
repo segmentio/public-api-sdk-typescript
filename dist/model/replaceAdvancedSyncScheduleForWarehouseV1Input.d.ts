@@ -1,6 +1,6 @@
 import { Schedule1 } from './schedule1';
 export declare class ReplaceAdvancedSyncScheduleForWarehouseV1Input {
-    'enabled'?: boolean;
+    'enabled': boolean;
     'schedule'?: Schedule1;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

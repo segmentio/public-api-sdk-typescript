@@ -20,7 +20,7 @@ export class AddLabelsToSourceV1Input {
     /**
      * The labels to associate with a Source.
      */
-    'labels'?: Array<LabelV1>;
+    'labels': Array<LabelV1>;
 
     static discriminator: string | undefined = undefined;
 
