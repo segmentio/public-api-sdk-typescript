@@ -20,7 +20,7 @@ export class CreateFilterForDestinationV1Input {
     /**
      * The id of the Source associated with this filter.
      */
-    'sourceId'?: string;
+    'sourceId': string;
     /**
      * The filter\'s condition.
      */
@@ -32,7 +32,7 @@ export class CreateFilterForDestinationV1Input {
     /**
      * The title of the filter.
      */
-    'title'?: string;
+    'title': string;
     /**
      * The description of the filter.
      */

@@ -19,7 +19,7 @@ export class ReplaceUsersInUserGroupV1Input {
     /**
      * The email addresses of the users and invites to replace.
      */
-    'emails'?: Array<string>;
+    'emails': Array<string>;
 
     static discriminator: string | undefined = undefined;
 

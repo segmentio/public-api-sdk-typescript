@@ -20,7 +20,7 @@ export class ReplaceRulesInTrackingPlanV1Input {
     /**
      * Rules to replace.
      */
-    'rules'?: Array<RuleV1>;
+    'rules': Array<RuleV1>;
 
     static discriminator: string | undefined = undefined;
 

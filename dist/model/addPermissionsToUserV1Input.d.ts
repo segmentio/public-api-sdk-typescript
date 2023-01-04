@@ -1,6 +1,6 @@
 import { PermissionInputV1 } from './permissionInputV1';
 export declare class AddPermissionsToUserV1Input {
-    'permissions'?: Array<PermissionInputV1>;
+    'permissions': Array<PermissionInputV1>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

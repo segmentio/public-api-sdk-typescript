@@ -23,11 +23,11 @@ export class CreateCloudSourceRegulationV1Input {
     /**
      * The subject type. Must be `objectId` for Cloud Sources.
      */
-    'subjectType'?: CreateCloudSourceRegulationV1Input.SubjectTypeEnum;
+    'subjectType': CreateCloudSourceRegulationV1Input.SubjectTypeEnum;
     /**
      * The user or object ids of the subjects to regulate.  Config API note: equal to `parent` but allows an array.
      */
-    'subjectIds'?: Array<string>;
+    'subjectIds': Array<string>;
     /**
      * The Cloud Source collection to regulate.
      */

@@ -19,7 +19,7 @@ export class UpdateUserGroupV1Input {
     /**
      * The intended value to rename the user group to.
      */
-    'name'?: string;
+    'name': string;
 
     static discriminator: string | undefined = undefined;
 

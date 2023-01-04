@@ -20,7 +20,7 @@ export class ReplacePermissionsForUserGroupV1Input {
     /**
      * The permissions to replace with.
      */
-    'permissions'?: Array<PermissionInputV1>;
+    'permissions': Array<PermissionInputV1>;
 
     static discriminator: string | undefined = undefined;
 

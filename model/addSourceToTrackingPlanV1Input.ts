@@ -19,7 +19,7 @@ export class AddSourceToTrackingPlanV1Input {
     /**
      * The id of the Source associated with the Tracking Plan.  Config API note: analogous to `sourceName`.
      */
-    'sourceId'?: string;
+    'sourceId': string;
 
     static discriminator: string | undefined = undefined;
 

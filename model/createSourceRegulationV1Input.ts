@@ -23,11 +23,11 @@ export class CreateSourceRegulationV1Input {
     /**
      * The subject type.
      */
-    'subjectType'?: CreateSourceRegulationV1Input.SubjectTypeEnum;
+    'subjectType': CreateSourceRegulationV1Input.SubjectTypeEnum;
     /**
      * The user or object ids of the subjects to regulate.  Config API note: equal to `parent` but allows an array.
      */
-    'subjectIds'?: Array<string>;
+    'subjectIds': Array<string>;
 
     static discriminator: string | undefined = undefined;
 

@@ -1,5 +1,5 @@
 export declare class AddSourceToTrackingPlanV1Input {
-    'sourceId'?: string;
+    'sourceId': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

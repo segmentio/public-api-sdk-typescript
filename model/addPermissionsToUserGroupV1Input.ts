@@ -20,7 +20,7 @@ export class AddPermissionsToUserGroupV1Input {
     /**
      * The permissions to add.
      */
-    'permissions'?: Array<PermissionInputV1>;
+    'permissions': Array<PermissionInputV1>;
 
     static discriminator: string | undefined = undefined;
 
