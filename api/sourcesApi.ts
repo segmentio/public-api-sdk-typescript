@@ -135,7 +135,7 @@ export class SourcesApi {
     }
 
     /**
-     * Adds an existing label to a Source.    When called, this endpoint may generate the `Source Modified` event in the [audit trail](/tag/Audit-Trail).
+     * Adds an existing label to a Source.  • When called, this endpoint may generate the `Source Modified` event in the [audit trail](/tag/Audit-Trail).
      * @summary Add Labels to Source
      * @param sourceId
      * @param AddLabelsToSourceV1Input
@@ -270,7 +270,7 @@ export class SourcesApi {
         });
     }
     /**
-     * Creates a new Source.    When called, this endpoint may generate the `Source Created` event in the [audit trail](/tag/Audit-Trail).
+     * Creates a new Source.  • When called, this endpoint may generate the `Source Created` event in the [audit trail](/tag/Audit-Trail).
      * @summary Create Source
      * @param CreateSourceV1Input
      */
@@ -388,7 +388,7 @@ export class SourcesApi {
         });
     }
     /**
-     * Deletes an existing Source.    When called, this endpoint may generate the `Source Deleted` event in the [audit trail](/tag/Audit-Trail).
+     * Deletes an existing Source.  • When called, this endpoint may generate the `Source Deleted` event in the [audit trail](/tag/Audit-Trail).
      * @summary Delete Source
      * @param sourceId
      */
@@ -1403,7 +1403,7 @@ export class SourcesApi {
         });
     }
     /**
-     * Updates an existing Source.  When called, this endpoint may generate one or more of the following [audit trail](/tag/Audit-Trail) events: * Source Modified * Source Enabled * Source Settings Modified * Source Disabled  Config API omitted fields: - `updateMask`
+     * Updates an existing Source.  • When called, this endpoint may generate one or more of the following [audit trail](/tag/Audit-Trail) events:* Source Modified * Source Enabled * Source Settings Modified * Source Disabled  Config API omitted fields: - `updateMask`
      * @summary Update Source
      * @param sourceId
      * @param UpdateSourceV1Input

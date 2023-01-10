@@ -125,7 +125,7 @@ export class TrackingPlansApi {
     }
 
     /**
-     * Connects a Source to a Tracking Plan.    When called, this endpoint may generate the `Source Modified` event in the [audit trail](/tag/Audit-Trail). **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Connects a Source to a Tracking Plan.  • When called, this endpoint may generate the `Source Modified` event in the [audit trail](/tag/Audit-Trail).   • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary Add Source to Tracking Plan
      * @param trackingPlanId
      * @param AddSourceToTrackingPlanV1Input
@@ -260,7 +260,7 @@ export class TrackingPlansApi {
         });
     }
     /**
-     * Creates a Tracking Plan.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Creates a Tracking Plan.    • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary Create Tracking Plan
      * @param CreateTrackingPlanV1Input
      */
@@ -381,7 +381,7 @@ export class TrackingPlansApi {
         });
     }
     /**
-     * Deletes a Tracking Plan.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Deletes a Tracking Plan.    • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary Delete Tracking Plan
      * @param trackingPlanId
      */
@@ -500,7 +500,7 @@ export class TrackingPlansApi {
         });
     }
     /**
-     * Returns a Tracking Plan.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Returns a Tracking Plan.    • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary Get Tracking Plan
      * @param trackingPlanId
      */
@@ -619,7 +619,7 @@ export class TrackingPlansApi {
         });
     }
     /**
-     * Lists Tracking Plan rules.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.   The rate limit for this endpoint is 20 requests per minute, which is lower than the default due to access pattern restrictions. Once reached, this endpoint will respond with the 429 HTTP status code with headers indicating the limit parameters. See [Rate Limiting](/#tag/Rate-Limits) for more information.
+     * Lists Tracking Plan rules.    • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.   The rate limit for this endpoint is 20 requests per minute, which is lower than the default due to access pattern restrictions. Once reached, this endpoint will respond with the 429 HTTP status code with headers indicating the limit parameters. See [Rate Limiting](/#tag/Rate-Limits) for more information.
      * @summary List Rules from Tracking Plan
      * @param trackingPlanId
      * @param pagination Pagination options.  This parameter exists in v1.
@@ -754,7 +754,7 @@ export class TrackingPlansApi {
         });
     }
     /**
-     * Lists Sources connected to a Tracking Plan.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.   This endpoint requires the user to have at least the following permission(s):   * Source Read-only  * Tracking Plan Read-only
+     * Lists Sources connected to a Tracking Plan.    • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.   This endpoint requires the user to have at least the following permission(s):   * Source Read-only  * Tracking Plan Read-only
      * @summary List Sources from Tracking Plan
      * @param trackingPlanId
      * @param pagination Pagination options.  This parameter exists in v1.
@@ -889,7 +889,7 @@ export class TrackingPlansApi {
         });
     }
     /**
-     * Returns a list of Tracking Plans.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Returns a list of Tracking Plans.    • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary List Tracking Plans
      * @param pagination Pagination options.  This parameter exists in v1.
      * @param type Requests Tracking Plans of a certain type. If omitted, lists all types.  This parameter exists in v1.
@@ -1019,7 +1019,7 @@ export class TrackingPlansApi {
         });
     }
     /**
-     * Deletes Tracking Plan rules.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Deletes Tracking Plan rules.    • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary Remove Rules from Tracking Plan
      * @param trackingPlanId
      * @param rules Rules to delete.  This parameter exists in v1.
@@ -1154,7 +1154,7 @@ export class TrackingPlansApi {
         });
     }
     /**
-     * Disconnects a Source from a Tracking Plan.    When called, this endpoint may generate the `Source Modified` event in the [audit trail](/tag/Audit-Trail). **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Disconnects a Source from a Tracking Plan.  • When called, this endpoint may generate the `Source Modified` event in the [audit trail](/tag/Audit-Trail).   • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary Remove Source from Tracking Plan
      * @param trackingPlanId
      * @param sourceId The id of the Source associated with the Tracking Plan.  Config API note: analogous to &#x60;sourceName&#x60;.  This parameter exists in v1.
@@ -1289,7 +1289,7 @@ export class TrackingPlansApi {
         });
     }
     /**
-     * Replaces Tracking Plan rules.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Replaces Tracking Plan rules.    • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary Replace Rules in Tracking Plan
      * @param trackingPlanId
      * @param ReplaceRulesInTrackingPlanV1Input
@@ -1424,7 +1424,7 @@ export class TrackingPlansApi {
         });
     }
     /**
-     * Updates Tracking Plan rules.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Updates Tracking Plan rules.    • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary Update Rules in Tracking Plan
      * @param trackingPlanId
      * @param UpdateRulesInTrackingPlanV1Input
@@ -1559,7 +1559,7 @@ export class TrackingPlansApi {
         });
     }
     /**
-     * Updates a Tracking Plan.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.  Config API omitted fields: - `updateMask`
+     * Updates a Tracking Plan.    • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.  Config API omitted fields: - `updateMask`
      * @summary Update Tracking Plan
      * @param trackingPlanId
      * @param UpdateTrackingPlanV1Input

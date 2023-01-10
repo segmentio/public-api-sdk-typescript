@@ -114,7 +114,7 @@ export class FunctionsApi {
     }
 
     /**
-     * Creates a Function.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
+     * Creates a Function.    • In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
      * @summary Create Function
      * @param CreateFunctionV1Input
      */
@@ -235,7 +235,7 @@ export class FunctionsApi {
         });
     }
     /**
-     * Deploys a Function. Only applicable to Source Function instances.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
+     * Deploys a Function. Only applicable to Source Function instances.    • In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
      * @summary Create Function Deployment
      * @param functionId
      */
@@ -354,7 +354,7 @@ export class FunctionsApi {
         });
     }
     /**
-     * Deletes a Function.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
+     * Deletes a Function.    • In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
      * @summary Delete Function
      * @param functionId
      */
@@ -473,7 +473,7 @@ export class FunctionsApi {
         });
     }
     /**
-     * Gets a Function.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
+     * Gets a Function.    • In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
      * @summary Get Function
      * @param functionId
      */
@@ -592,7 +592,7 @@ export class FunctionsApi {
         });
     }
     /**
-     * Lists all Functions in a Workspace.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
+     * Lists all Functions in a Workspace.    • In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
      * @summary List Functions
      * @param pagination Pagination parameters.  This parameter exists in v1.
      * @param resourceType The Function type.  Config API note: equal to &#x60;type&#x60;.  This parameter exists in v1.
@@ -730,7 +730,7 @@ export class FunctionsApi {
         });
     }
     /**
-     * Updates a Function.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.  Config API omitted fields: - `updateMask`
+     * Updates a Function.    • In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.  Config API omitted fields: - `updateMask`
      * @summary Update Function
      * @param functionId
      * @param UpdateFunctionV1Input
