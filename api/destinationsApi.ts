@@ -122,7 +122,7 @@ export class DestinationsApi {
     }
 
     /**
-     * Creates a new Destination.    When called, this endpoint may generate the `Integration Created` event in the [audit trail](/tag/Audit-Trail).
+     * Creates a new Destination.  • When called, this endpoint may generate the `Integration Created` event in the [audit trail](/tag/Audit-Trail).
      * @summary Create Destination
      * @param CreateDestinationV1Input
      */
@@ -243,7 +243,7 @@ export class DestinationsApi {
         });
     }
     /**
-     * Creates a new Destination subscription.
+     * Creates a new Destination subscription.  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Destination Subscriptions feature enabled. Please reach out to your customer success manager for more information.
      * @summary Create Destination Subscription
      * @param destinationId
      * @param CreateDestinationSubscriptionAlphaInput
@@ -376,7 +376,7 @@ export class DestinationsApi {
         });
     }
     /**
-     * Deletes an existing Destination.    When called, this endpoint may generate the `Integration Deleted` event in the [audit trail](/tag/Audit-Trail).  Config API omitted fields: - `catalogId`
+     * Deletes an existing Destination.  • When called, this endpoint may generate the `Integration Deleted` event in the [audit trail](/tag/Audit-Trail).  Config API omitted fields: - `catalogId`
      * @summary Delete Destination
      * @param destinationId
      */
@@ -614,7 +614,7 @@ export class DestinationsApi {
         });
     }
     /**
-     * Gets a Destination subscription by id.
+     * Gets a Destination subscription by id.  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Destination Subscriptions feature enabled. Please reach out to your customer success manager for more information.
      * @summary Get Subscription from Destination
      * @param destinationId
      * @param id
@@ -1024,7 +1024,7 @@ export class DestinationsApi {
         });
     }
     /**
-     * Lists subscriptions for a Destination.
+     * Lists subscriptions for a Destination.  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Destination Subscriptions feature enabled. Please reach out to your customer success manager for more information.
      * @summary List Subscriptions from Destination
      * @param destinationId
      * @param pagination Pagination options.  This parameter exists in alpha.
@@ -1157,7 +1157,7 @@ export class DestinationsApi {
         });
     }
     /**
-     * Deletes an existing Destination subscription.
+     * Deletes an existing Destination subscription.  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Destination Subscriptions feature enabled. Please reach out to your customer success manager for more information.
      * @summary Remove Subscription from Destination
      * @param destinationId
      * @param id
@@ -1285,7 +1285,7 @@ export class DestinationsApi {
         });
     }
     /**
-     * Updates an existing Destination.  **Note**: if you attempt to update read-only settings for your destination you\'ll encounter the following behavior:    * If only read-only properties are being updated, the endpoint will return an HTTP 400 error.   * If there\'s a mix of writable and read-only properties in the payload, the request will be accepted, the writable properties will be updated and the read-only properties ignored.     When called, this endpoint may generate the `Integration Disabled` event in the [audit trail](/tag/Audit-Trail).  Config API omitted fields: - `updateMask`
+     * Updates an existing Destination.  **Note**: if you attempt to update read-only settings for your destination you\'ll encounter the following behavior:    * If only read-only properties are being updated, the endpoint will return an HTTP 400 error.   * If there\'s a mix of writable and read-only properties in the payload, the request will be accepted, the writable properties will be updated and the read-only properties ignored.   • When called, this endpoint may generate the `Integration Disabled` event in the [audit trail](/tag/Audit-Trail).  Config API omitted fields: - `updateMask`
      * @summary Update Destination
      * @param destinationId
      * @param UpdateDestinationV1Input
@@ -1420,7 +1420,7 @@ export class DestinationsApi {
         });
     }
     /**
-     * Updates an existing Destination subscription.
+     * Updates an existing Destination subscription.  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Destination Subscriptions feature enabled. Please reach out to your customer success manager for more information.
      * @summary Update Subscription for Destination
      * @param destinationId
      * @param id

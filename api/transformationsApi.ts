@@ -114,7 +114,7 @@ export class TransformationsApi {
     }
 
     /**
-     * Creates a new Transformation.    When called, this endpoint may generate the `Transformation Created` event in the [audit trail](/tag/Audit-Trail). **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Creates a new Transformation.  • When called, this endpoint may generate the `Transformation Created` event in the [audit trail](/tag/Audit-Trail).   • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary Create Transformation
      * @param CreateTransformationV1Input
      */
@@ -235,7 +235,7 @@ export class TransformationsApi {
         });
     }
     /**
-     * Deletes a Transformation.    When called, this endpoint may generate the `Transformation Deleted` event in the [audit trail](/tag/Audit-Trail). **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Deletes a Transformation.  • When called, this endpoint may generate the `Transformation Deleted` event in the [audit trail](/tag/Audit-Trail).   • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary Delete Transformation
      * @param transformationId
      */
@@ -354,7 +354,7 @@ export class TransformationsApi {
         });
     }
     /**
-     * Gets a Transformation.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Gets a Transformation.    • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary Get Transformation
      * @param transformationId
      */
@@ -473,7 +473,7 @@ export class TransformationsApi {
         });
     }
     /**
-     * Lists all Transformations in the Workspace.  **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Lists all Transformations in the Workspace.    • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary List Transformations
      * @param pagination Pagination options.  This parameter exists in v1.
      */
@@ -594,7 +594,7 @@ export class TransformationsApi {
         });
     }
     /**
-     * Updates an existing Transformation.    When called, this endpoint may generate the `Transformation Updated` event in the [audit trail](/tag/Audit-Trail). **Note**: In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
+     * Updates an existing Transformation.  • When called, this endpoint may generate the `Transformation Updated` event in the [audit trail](/tag/Audit-Trail).   • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary Update Transformation
      * @param transformationId
      * @param UpdateTransformationV1Input

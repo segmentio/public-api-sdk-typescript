@@ -119,7 +119,7 @@ export class WarehousesApi {
     }
 
     /**
-     * Connects a Source to a Warehouse.    When called, this endpoint may generate the `Storage Destination Modified` event in the [audit trail](/tag/Audit-Trail).
+     * Connects a Source to a Warehouse.  • When called, this endpoint may generate the `Storage Destination Modified` event in the [audit trail](/tag/Audit-Trail).
      * @summary Add Connection from Source to Warehouse
      * @param warehouseId
      * @param sourceId
@@ -252,7 +252,7 @@ export class WarehousesApi {
         });
     }
     /**
-     * Validates input settings against a Warehouse.    When called, this endpoint may generate the `Storage Destination Settings Validation` event in the [audit trail](/tag/Audit-Trail).
+     * Validates input settings against a Warehouse.  • When called, this endpoint may generate the `Storage Destination Settings Validation` event in the [audit trail](/tag/Audit-Trail).
      * @summary Create Validation in Warehouse
      * @param CreateValidationInWarehouseV1Input
      */
@@ -373,7 +373,7 @@ export class WarehousesApi {
         });
     }
     /**
-     * Creates a new Warehouse.    When called, this endpoint may generate the `Storage Destination Created` event in the [audit trail](/tag/Audit-Trail).
+     * Creates a new Warehouse.  • When called, this endpoint may generate the `Storage Destination Created` event in the [audit trail](/tag/Audit-Trail).
      * @summary Create Warehouse
      * @param CreateWarehouseV1Input
      */
@@ -494,7 +494,7 @@ export class WarehousesApi {
         });
     }
     /**
-     * Deletes an existing Warehouse.    When called, this endpoint may generate the `Storage Destination Deleted` event in the [audit trail](/tag/Audit-Trail).
+     * Deletes an existing Warehouse.  • When called, this endpoint may generate the `Storage Destination Deleted` event in the [audit trail](/tag/Audit-Trail).
      * @summary Delete Warehouse
      * @param warehouseId
      */
@@ -1240,7 +1240,7 @@ export class WarehousesApi {
         });
     }
     /**
-     * Updates an existing Warehouse.  When called, this endpoint may generate one or more of the following [audit trail](/tag/Audit-Trail) events: * Storage Destination Modified * Storage Destination Enabled
+     * Updates an existing Warehouse.  • When called, this endpoint may generate one or more of the following [audit trail](/tag/Audit-Trail) events:* Storage Destination Modified * Storage Destination Enabled
      * @summary Update Warehouse
      * @param warehouseId
      * @param UpdateWarehouseV1Input

@@ -254,7 +254,7 @@ export class DeletionAndSuppressionApi {
         });
     }
     /**
-     * Creates a Source-scoped regulation.    When called, this endpoint may generate the `Source Regulation Created` event in the [audit trail](/tag/Audit-Trail).  Config API omitted fields: - `attributes`, - `userAgent`
+     * Creates a Source-scoped regulation.  • When called, this endpoint may generate the `Source Regulation Created` event in the [audit trail](/tag/Audit-Trail).  Config API omitted fields: - `attributes`, - `userAgent`
      * @summary Create Source Regulation
      * @param sourceId
      * @param CreateSourceRegulationV1Input
@@ -389,7 +389,7 @@ export class DeletionAndSuppressionApi {
         });
     }
     /**
-     * Creates a Workspace-scoped regulation.    When called, this endpoint may generate the `Workspace Regulation Created` event in the [audit trail](/tag/Audit-Trail).  Config API omitted fields: - `attributes`, - `userAgent`
+     * Creates a Workspace-scoped regulation.  • When called, this endpoint may generate the `Workspace Regulation Created` event in the [audit trail](/tag/Audit-Trail).  Config API omitted fields: - `attributes`, - `userAgent`
      * @summary Create Workspace Regulation
      * @param CreateWorkspaceRegulationV1Input
      */
@@ -510,7 +510,7 @@ export class DeletionAndSuppressionApi {
         });
     }
     /**
-     * Deletes a regulation from the Workspace. The regulation must be in the initialized state to be deleted.    When called, this endpoint may generate the `Regulation Deleted` event in the [audit trail](/tag/Audit-Trail).
+     * Deletes a regulation from the Workspace. The regulation must be in the initialized state to be deleted.  • When called, this endpoint may generate the `Regulation Deleted` event in the [audit trail](/tag/Audit-Trail).
      * @summary Delete Regulation
      * @param regulateId
      */
