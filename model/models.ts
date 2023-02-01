@@ -180,7 +180,6 @@ export * from './getDestinationsCatalog200Response';
 export * from './getDestinationsCatalogV1Output';
 export * from './getEventsVolumeFromWorkspace200Response';
 export * from './getEventsVolumeFromWorkspaceV1Output';
-export * from './getEventsVolumeFromWorkspaceV1Query';
 export * from './getFilterInDestination200Response';
 export * from './getFilterInDestinationV1Output';
 export * from './getFunction200Response';
@@ -335,7 +334,6 @@ export * from './propertyRenameBeta';
 export * from './propertyRenameV1';
 export * from './propertyValueTransformationBeta';
 export * from './propertyValueTransformationV1';
-export * from './query';
 export * from './regulation';
 export * from './regulationListEntryV1';
 export * from './removeFilterFromDestination200Response';
@@ -676,7 +674,6 @@ import { GetDestinationsCatalog200Response } from './getDestinationsCatalog200Re
 import { GetDestinationsCatalogV1Output } from './getDestinationsCatalogV1Output';
 import { GetEventsVolumeFromWorkspace200Response } from './getEventsVolumeFromWorkspace200Response';
 import { GetEventsVolumeFromWorkspaceV1Output } from './getEventsVolumeFromWorkspaceV1Output';
-import { GetEventsVolumeFromWorkspaceV1Query } from './getEventsVolumeFromWorkspaceV1Query';
 import { GetFilterInDestination200Response } from './getFilterInDestination200Response';
 import { GetFilterInDestinationV1Output } from './getFilterInDestinationV1Output';
 import { GetFunction200Response } from './getFunction200Response';
@@ -831,7 +828,6 @@ import { PropertyRenameBeta } from './propertyRenameBeta';
 import { PropertyRenameV1 } from './propertyRenameV1';
 import { PropertyValueTransformationBeta } from './propertyValueTransformationBeta';
 import { PropertyValueTransformationV1 } from './propertyValueTransformationV1';
-import { Query } from './query';
 import { Regulation } from './regulation';
 import { RegulationListEntryV1 } from './regulationListEntryV1';
 import { RemoveFilterFromDestination200Response } from './removeFilterFromDestination200Response';
@@ -1058,8 +1054,6 @@ let enumsMap: { [index: string]: any } = {
     'FunctionV1.ResourceTypeEnum': FunctionV1.ResourceTypeEnum,
     'GetConnectionStateFromWarehouseV1Output.ConnectionStateEnum':
         GetConnectionStateFromWarehouseV1Output.ConnectionStateEnum,
-    'GetEventsVolumeFromWorkspaceV1Query.GranularityEnum':
-        GetEventsVolumeFromWorkspaceV1Query.GranularityEnum,
     'GetMessagingSubscriptionSuccessResponse.TypeEnum':
         GetMessagingSubscriptionSuccessResponse.TypeEnum,
     'GetMessagingSubscriptionSuccessResponse.StatusEnum':
@@ -1083,7 +1077,6 @@ let enumsMap: { [index: string]: any } = {
         MessagesSubscriptionRequest.StatusEnum,
     'Metadata.StatusEnum': Metadata.StatusEnum,
     'PermissionResourceV1.TypeEnum': PermissionResourceV1.TypeEnum,
-    'Query.GranularityEnum': Query.GranularityEnum,
     'Regulation.OverallStatusEnum': Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': RegulationListEntryV1.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum':
@@ -1327,7 +1320,6 @@ let typeMap: { [index: string]: any } = {
     GetEventsVolumeFromWorkspace200Response:
         GetEventsVolumeFromWorkspace200Response,
     GetEventsVolumeFromWorkspaceV1Output: GetEventsVolumeFromWorkspaceV1Output,
-    GetEventsVolumeFromWorkspaceV1Query: GetEventsVolumeFromWorkspaceV1Query,
     GetFilterInDestination200Response: GetFilterInDestination200Response,
     GetFilterInDestinationV1Output: GetFilterInDestinationV1Output,
     GetFunction200Response: GetFunction200Response,
@@ -1509,7 +1501,6 @@ let typeMap: { [index: string]: any } = {
     PropertyRenameV1: PropertyRenameV1,
     PropertyValueTransformationBeta: PropertyValueTransformationBeta,
     PropertyValueTransformationV1: PropertyValueTransformationV1,
-    Query: Query,
     Regulation: Regulation,
     RegulationListEntryV1: RegulationListEntryV1,
     RemoveFilterFromDestination200Response:

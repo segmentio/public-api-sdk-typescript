@@ -18,7 +18,7 @@ import { SourceEventVolumeDatapointV1 } from './sourceEventVolumeDatapointV1';
  * SourceEventVolume represents a time series of event volume for a Workspace broken down by the dimensions which the customer specifies (optional parameters).
  */
 export class SourceEventVolumeV1 {
-    'source'?: Source;
+    'source': Source;
     /**
      * The name of the event, if applicable.
      */
