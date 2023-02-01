@@ -10,6 +10,16 @@ var GetEventsVolumeFromWorkspaceV1Output = (function () {
     GetEventsVolumeFromWorkspaceV1Output.discriminator = undefined;
     GetEventsVolumeFromWorkspaceV1Output.attributeTypeMap = [
         {
+            name: 'path',
+            baseName: 'path',
+            type: 'string',
+        },
+        {
+            name: 'query',
+            baseName: 'query',
+            type: 'Query',
+        },
+        {
             name: 'result',
             baseName: 'result',
             type: 'Array<SourceEventVolumeV1>',

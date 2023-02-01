@@ -12,12 +12,18 @@
 
 import { RequestFile } from './models';
 import { Pagination } from './pagination';
+import { Query } from './query';
 import { SourceEventVolumeV1 } from './sourceEventVolumeV1';
 
 /**
  * GetEventsVolumeFromWorkspaceV1Output represents the results given the input query.
  */
 export class GetEventsVolumeFromWorkspaceV1Output {
+    /**
+     * Observability event volume path
+     */
+    'path': string;
+    'query': Query;
     /**
      * The resultant list of series broken down by the dimensions requested over the time frame requested and ordered by the total count of events in all series. Note: The limit of entries returned is 5000.
      */
@@ -31,6 +37,16 @@ export class GetEventsVolumeFromWorkspaceV1Output {
         baseName: string;
         type: string;
     }> = [
+        {
+            name: 'path',
+            baseName: 'path',
+            type: 'string',
+        },
+        {
+            name: 'query',
+            baseName: 'query',
+            type: 'Query',
+        },
         {
             name: 'result',
             baseName: 'result',
