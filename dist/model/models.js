@@ -195,6 +195,7 @@ __exportStar(require("./getDestinationsCatalog200Response"), exports);
 __exportStar(require("./getDestinationsCatalogV1Output"), exports);
 __exportStar(require("./getEventsVolumeFromWorkspace200Response"), exports);
 __exportStar(require("./getEventsVolumeFromWorkspaceV1Output"), exports);
+__exportStar(require("./getEventsVolumeFromWorkspaceV1Query"), exports);
 __exportStar(require("./getFilterInDestination200Response"), exports);
 __exportStar(require("./getFilterInDestinationV1Output"), exports);
 __exportStar(require("./getFunction200Response"), exports);
@@ -349,6 +350,7 @@ __exportStar(require("./propertyRenameBeta"), exports);
 __exportStar(require("./propertyRenameV1"), exports);
 __exportStar(require("./propertyValueTransformationBeta"), exports);
 __exportStar(require("./propertyValueTransformationV1"), exports);
+__exportStar(require("./query"), exports);
 __exportStar(require("./regulation"), exports);
 __exportStar(require("./regulationListEntryV1"), exports);
 __exportStar(require("./removeFilterFromDestination200Response"), exports);
@@ -676,6 +678,7 @@ var getDestinationsCatalog200Response_1 = require("./getDestinationsCatalog200Re
 var getDestinationsCatalogV1Output_1 = require("./getDestinationsCatalogV1Output");
 var getEventsVolumeFromWorkspace200Response_1 = require("./getEventsVolumeFromWorkspace200Response");
 var getEventsVolumeFromWorkspaceV1Output_1 = require("./getEventsVolumeFromWorkspaceV1Output");
+var getEventsVolumeFromWorkspaceV1Query_1 = require("./getEventsVolumeFromWorkspaceV1Query");
 var getFilterInDestination200Response_1 = require("./getFilterInDestination200Response");
 var getFilterInDestinationV1Output_1 = require("./getFilterInDestinationV1Output");
 var getFunction200Response_1 = require("./getFunction200Response");
@@ -830,6 +833,7 @@ var propertyRenameBeta_1 = require("./propertyRenameBeta");
 var propertyRenameV1_1 = require("./propertyRenameV1");
 var propertyValueTransformationBeta_1 = require("./propertyValueTransformationBeta");
 var propertyValueTransformationV1_1 = require("./propertyValueTransformationV1");
+var query_1 = require("./query");
 var regulation_1 = require("./regulation");
 var regulationListEntryV1_1 = require("./regulationListEntryV1");
 var removeFilterFromDestination200Response_1 = require("./removeFilterFromDestination200Response");
@@ -1032,6 +1036,7 @@ var enumsMap = {
     'FunctionSettingV1.TypeEnum': functionSettingV1_1.FunctionSettingV1.TypeEnum,
     'FunctionV1.ResourceTypeEnum': functionV1_1.FunctionV1.ResourceTypeEnum,
     'GetConnectionStateFromWarehouseV1Output.ConnectionStateEnum': getConnectionStateFromWarehouseV1Output_1.GetConnectionStateFromWarehouseV1Output.ConnectionStateEnum,
+    'GetEventsVolumeFromWorkspaceV1Query.GranularityEnum': getEventsVolumeFromWorkspaceV1Query_1.GetEventsVolumeFromWorkspaceV1Query.GranularityEnum,
     'GetMessagingSubscriptionSuccessResponse.TypeEnum': getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse.TypeEnum,
     'GetMessagingSubscriptionSuccessResponse.StatusEnum': getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse.StatusEnum,
     'GetSubscriptionRequest.TypeEnum': getSubscriptionRequest_1.GetSubscriptionRequest.TypeEnum,
@@ -1046,6 +1051,7 @@ var enumsMap = {
     'MessagesSubscriptionRequest.StatusEnum': messagesSubscriptionRequest_1.MessagesSubscriptionRequest.StatusEnum,
     'Metadata.StatusEnum': metadata_1.Metadata.StatusEnum,
     'PermissionResourceV1.TypeEnum': permissionResourceV1_1.PermissionResourceV1.TypeEnum,
+    'Query.GranularityEnum': query_1.Query.GranularityEnum,
     'Regulation.OverallStatusEnum': regulation_1.Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': regulationListEntryV1_1.RegulationListEntryV1.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum': removeFilterFromDestinationV1Output_1.RemoveFilterFromDestinationV1Output.StatusEnum,
@@ -1251,6 +1257,7 @@ var typeMap = {
     GetDestinationsCatalogV1Output: getDestinationsCatalogV1Output_1.GetDestinationsCatalogV1Output,
     GetEventsVolumeFromWorkspace200Response: getEventsVolumeFromWorkspace200Response_1.GetEventsVolumeFromWorkspace200Response,
     GetEventsVolumeFromWorkspaceV1Output: getEventsVolumeFromWorkspaceV1Output_1.GetEventsVolumeFromWorkspaceV1Output,
+    GetEventsVolumeFromWorkspaceV1Query: getEventsVolumeFromWorkspaceV1Query_1.GetEventsVolumeFromWorkspaceV1Query,
     GetFilterInDestination200Response: getFilterInDestination200Response_1.GetFilterInDestination200Response,
     GetFilterInDestinationV1Output: getFilterInDestinationV1Output_1.GetFilterInDestinationV1Output,
     GetFunction200Response: getFunction200Response_1.GetFunction200Response,
@@ -1405,6 +1412,7 @@ var typeMap = {
     PropertyRenameV1: propertyRenameV1_1.PropertyRenameV1,
     PropertyValueTransformationBeta: propertyValueTransformationBeta_1.PropertyValueTransformationBeta,
     PropertyValueTransformationV1: propertyValueTransformationV1_1.PropertyValueTransformationV1,
+    Query: query_1.Query,
     Regulation: regulation_1.Regulation,
     RegulationListEntryV1: regulationListEntryV1_1.RegulationListEntryV1,
     RemoveFilterFromDestination200Response: removeFilterFromDestination200Response_1.RemoveFilterFromDestination200Response,
