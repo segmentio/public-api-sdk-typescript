@@ -1,8 +1,8 @@
 export declare class Contact {
-    'name': string;
+    'name'?: string;
     'email': string;
-    'role': string;
-    'isPrimary': boolean;
+    'role'?: string;
+    'isPrimary'?: boolean;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
