@@ -66,9 +66,9 @@ exports.GetEventsVolumeFromWorkspaceV1Query = GetEventsVolumeFromWorkspaceV1Quer
 (function (GetEventsVolumeFromWorkspaceV1Query) {
     var GranularityEnum;
     (function (GranularityEnum) {
-        GranularityEnum[GranularityEnum["day"] = 'day'] = "day";
-        GranularityEnum[GranularityEnum["hour"] = 'hour'] = "hour";
-        GranularityEnum[GranularityEnum["minute"] = 'minute'] = "minute";
+        GranularityEnum[GranularityEnum["DAY"] = 'DAY'] = "DAY";
+        GranularityEnum[GranularityEnum["HOUR"] = 'HOUR'] = "HOUR";
+        GranularityEnum[GranularityEnum["MINUTE"] = 'MINUTE'] = "MINUTE";
     })(GranularityEnum = GetEventsVolumeFromWorkspaceV1Query.GranularityEnum || (GetEventsVolumeFromWorkspaceV1Query.GranularityEnum = {}));
 })(GetEventsVolumeFromWorkspaceV1Query = exports.GetEventsVolumeFromWorkspaceV1Query || (exports.GetEventsVolumeFromWorkspaceV1Query = {}));
 exports.GetEventsVolumeFromWorkspaceV1Query = GetEventsVolumeFromWorkspaceV1Query;

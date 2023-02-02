@@ -23,8 +23,8 @@ export declare class Query {
 }
 export declare namespace Query {
     enum GranularityEnum {
-        day,
-        hour,
-        minute
+        DAY,
+        HOUR,
+        MINUTE
     }
 }

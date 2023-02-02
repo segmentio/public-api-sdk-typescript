@@ -124,8 +124,8 @@ export class Query {
 
 export namespace Query {
     export enum GranularityEnum {
-        day = <any>'day',
-        hour = <any>'hour',
-        minute = <any>'minute',
+        DAY = <any>'DAY',
+        HOUR = <any>'HOUR',
+        MINUTE = <any>'MINUTE',
     }
 }

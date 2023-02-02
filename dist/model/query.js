@@ -66,9 +66,9 @@ exports.Query = Query;
 (function (Query) {
     var GranularityEnum;
     (function (GranularityEnum) {
-        GranularityEnum[GranularityEnum["day"] = 'day'] = "day";
-        GranularityEnum[GranularityEnum["hour"] = 'hour'] = "hour";
-        GranularityEnum[GranularityEnum["minute"] = 'minute'] = "minute";
+        GranularityEnum[GranularityEnum["DAY"] = 'DAY'] = "DAY";
+        GranularityEnum[GranularityEnum["HOUR"] = 'HOUR'] = "HOUR";
+        GranularityEnum[GranularityEnum["MINUTE"] = 'MINUTE'] = "MINUTE";
     })(GranularityEnum = Query.GranularityEnum || (Query.GranularityEnum = {}));
 })(Query = exports.Query || (exports.Query = {}));
 exports.Query = Query;

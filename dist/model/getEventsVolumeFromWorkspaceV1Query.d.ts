@@ -23,8 +23,8 @@ export declare class GetEventsVolumeFromWorkspaceV1Query {
 }
 export declare namespace GetEventsVolumeFromWorkspaceV1Query {
     enum GranularityEnum {
-        day,
-        hour,
-        minute
+        DAY,
+        HOUR,
+        MINUTE
     }
 }

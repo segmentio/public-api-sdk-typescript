@@ -123,8 +123,8 @@ export class GetEventsVolumeFromWorkspaceV1Query {
 
 export namespace GetEventsVolumeFromWorkspaceV1Query {
     export enum GranularityEnum {
-        day = <any>'day',
-        hour = <any>'hour',
-        minute = <any>'minute',
+        DAY = <any>'DAY',
+        HOUR = <any>'HOUR',
+        MINUTE = <any>'MINUTE',
     }
 }
