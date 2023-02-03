@@ -144,7 +144,7 @@ export function configureApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 34.0.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 34.0.1 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
