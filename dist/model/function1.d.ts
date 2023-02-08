@@ -29,6 +29,7 @@ export declare class Function1 {
 export declare namespace Function1 {
     enum ResourceTypeEnum {
         DESTINATION,
+        INSERT_DESTINATION,
         SOURCE
     }
 }

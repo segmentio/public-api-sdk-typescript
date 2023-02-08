@@ -61,6 +61,9 @@ export * from './createLabelAlphaInput';
 export * from './createLabelAlphaOutput';
 export * from './createLabelV1Input';
 export * from './createLabelV1Output';
+export * from './createReverseEtlModel200Response';
+export * from './createReverseEtlModelInput';
+export * from './createReverseEtlModelOutput';
 export * from './createSource200Response';
 export * from './createSource200Response1';
 export * from './createSourceAlphaInput';
@@ -102,6 +105,8 @@ export * from './deleteLabelAlphaOutput';
 export * from './deleteLabelV1Output';
 export * from './deleteRegulation200Response';
 export * from './deleteRegulationV1Output';
+export * from './deleteReverseEtlModel200Response';
+export * from './deleteReverseEtlModelOutput';
 export * from './deleteSource200Response';
 export * from './deleteSource200Response1';
 export * from './deleteSourceAlphaOutput';
@@ -191,6 +196,8 @@ export * from './getMessagingSubscriptionFailureResponse';
 export * from './getMessagingSubscriptionSuccessResponse';
 export * from './getRegulation200Response';
 export * from './getRegulationV1Output';
+export * from './getReverseEtlModel200Response';
+export * from './getReverseEtlModelOutput';
 export * from './getSource200Response';
 export * from './getSource200Response1';
 export * from './getSourceAlphaOutput';
@@ -266,6 +273,8 @@ export * from './listLabelsAlphaOutput';
 export * from './listLabelsV1Output';
 export * from './listRegulationsFromSource200Response';
 export * from './listRegulationsFromSourceV1Output';
+export * from './listReverseEtlModels200Response';
+export * from './listReverseEtlModelsOutput';
 export * from './listRoles200Response';
 export * from './listRolesV1Output';
 export * from './listRulesFromTrackingPlan200Response';
@@ -378,6 +387,8 @@ export * from './replaceUsersInUserGroupV1Output';
 export * from './requestError';
 export * from './requestErrorEnvelope';
 export * from './resourceV1';
+export * from './reverseEtlModel';
+export * from './reverseEtlModel1';
 export * from './roleV1';
 export * from './ruleV1';
 export * from './schedule';
@@ -431,6 +442,9 @@ export * from './updateFilterForDestinationV1Output';
 export * from './updateFunction200Response';
 export * from './updateFunctionV1Input';
 export * from './updateFunctionV1Output';
+export * from './updateReverseEtlModel200Response';
+export * from './updateReverseEtlModelInput';
+export * from './updateReverseEtlModelOutput';
 export * from './updateRulesInTrackingPlan200Response';
 export * from './updateRulesInTrackingPlanV1Input';
 export * from './updateRulesInTrackingPlanV1Output';
@@ -557,6 +571,9 @@ import { CreateLabelAlphaInput } from './createLabelAlphaInput';
 import { CreateLabelAlphaOutput } from './createLabelAlphaOutput';
 import { CreateLabelV1Input } from './createLabelV1Input';
 import { CreateLabelV1Output } from './createLabelV1Output';
+import { CreateReverseEtlModel200Response } from './createReverseEtlModel200Response';
+import { CreateReverseEtlModelInput } from './createReverseEtlModelInput';
+import { CreateReverseEtlModelOutput } from './createReverseEtlModelOutput';
 import { CreateSource200Response } from './createSource200Response';
 import { CreateSource200Response1 } from './createSource200Response1';
 import { CreateSourceAlphaInput } from './createSourceAlphaInput';
@@ -598,6 +615,8 @@ import { DeleteLabelAlphaOutput } from './deleteLabelAlphaOutput';
 import { DeleteLabelV1Output } from './deleteLabelV1Output';
 import { DeleteRegulation200Response } from './deleteRegulation200Response';
 import { DeleteRegulationV1Output } from './deleteRegulationV1Output';
+import { DeleteReverseEtlModel200Response } from './deleteReverseEtlModel200Response';
+import { DeleteReverseEtlModelOutput } from './deleteReverseEtlModelOutput';
 import { DeleteSource200Response } from './deleteSource200Response';
 import { DeleteSource200Response1 } from './deleteSource200Response1';
 import { DeleteSourceAlphaOutput } from './deleteSourceAlphaOutput';
@@ -687,6 +706,8 @@ import { GetMessagingSubscriptionFailureResponse } from './getMessagingSubscript
 import { GetMessagingSubscriptionSuccessResponse } from './getMessagingSubscriptionSuccessResponse';
 import { GetRegulation200Response } from './getRegulation200Response';
 import { GetRegulationV1Output } from './getRegulationV1Output';
+import { GetReverseEtlModel200Response } from './getReverseEtlModel200Response';
+import { GetReverseEtlModelOutput } from './getReverseEtlModelOutput';
 import { GetSource200Response } from './getSource200Response';
 import { GetSource200Response1 } from './getSource200Response1';
 import { GetSourceAlphaOutput } from './getSourceAlphaOutput';
@@ -762,6 +783,8 @@ import { ListLabelsAlphaOutput } from './listLabelsAlphaOutput';
 import { ListLabelsV1Output } from './listLabelsV1Output';
 import { ListRegulationsFromSource200Response } from './listRegulationsFromSource200Response';
 import { ListRegulationsFromSourceV1Output } from './listRegulationsFromSourceV1Output';
+import { ListReverseEtlModels200Response } from './listReverseEtlModels200Response';
+import { ListReverseEtlModelsOutput } from './listReverseEtlModelsOutput';
 import { ListRoles200Response } from './listRoles200Response';
 import { ListRolesV1Output } from './listRolesV1Output';
 import { ListRulesFromTrackingPlan200Response } from './listRulesFromTrackingPlan200Response';
@@ -874,6 +897,8 @@ import { ReplaceUsersInUserGroupV1Output } from './replaceUsersInUserGroupV1Outp
 import { RequestError } from './requestError';
 import { RequestErrorEnvelope } from './requestErrorEnvelope';
 import { ResourceV1 } from './resourceV1';
+import { ReverseEtlModel } from './reverseEtlModel';
+import { ReverseEtlModel1 } from './reverseEtlModel1';
 import { RoleV1 } from './roleV1';
 import { RuleV1 } from './ruleV1';
 import { Schedule } from './schedule';
@@ -927,6 +952,9 @@ import { UpdateFilterForDestinationV1Output } from './updateFilterForDestination
 import { UpdateFunction200Response } from './updateFunction200Response';
 import { UpdateFunctionV1Input } from './updateFunctionV1Input';
 import { UpdateFunctionV1Output } from './updateFunctionV1Output';
+import { UpdateReverseEtlModel200Response } from './updateReverseEtlModel200Response';
+import { UpdateReverseEtlModelInput } from './updateReverseEtlModelInput';
+import { UpdateReverseEtlModelOutput } from './updateReverseEtlModelOutput';
 import { UpdateRulesInTrackingPlan200Response } from './updateRulesInTrackingPlan200Response';
 import { UpdateRulesInTrackingPlanV1Input } from './updateRulesInTrackingPlanV1Input';
 import { UpdateRulesInTrackingPlanV1Output } from './updateRulesInTrackingPlanV1Output';
@@ -1003,6 +1031,8 @@ let enumsMap: { [index: string]: any } = {
         CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
     'CreateFunctionV1Input.ResourceTypeEnum':
         CreateFunctionV1Input.ResourceTypeEnum,
+    'CreateReverseEtlModelInput.ScheduleStrategyEnum':
+        CreateReverseEtlModelInput.ScheduleStrategyEnum,
     'CreateSourceRegulationV1Input.RegulationTypeEnum':
         CreateSourceRegulationV1Input.RegulationTypeEnum,
     'CreateSourceRegulationV1Input.SubjectTypeEnum':
@@ -1021,6 +1051,8 @@ let enumsMap: { [index: string]: any } = {
     'DeleteLabelAlphaOutput.StatusEnum': DeleteLabelAlphaOutput.StatusEnum,
     'DeleteLabelV1Output.StatusEnum': DeleteLabelV1Output.StatusEnum,
     'DeleteRegulationV1Output.StatusEnum': DeleteRegulationV1Output.StatusEnum,
+    'DeleteReverseEtlModelOutput.StatusEnum':
+        DeleteReverseEtlModelOutput.StatusEnum,
     'DeleteSourceAlphaOutput.StatusEnum': DeleteSourceAlphaOutput.StatusEnum,
     'DeleteSourceV1Output.StatusEnum': DeleteSourceV1Output.StatusEnum,
     'DeleteTrackingPlanV1Output.StatusEnum':
@@ -1113,6 +1145,8 @@ let enumsMap: { [index: string]: any } = {
     'TrackingPlan.TypeEnum': TrackingPlan.TypeEnum,
     'TrackingPlan1.TypeEnum': TrackingPlan1.TypeEnum,
     'TrackingPlanV1.TypeEnum': TrackingPlanV1.TypeEnum,
+    'UpdateReverseEtlModelInput.ScheduleStrategyEnum':
+        UpdateReverseEtlModelInput.ScheduleStrategyEnum,
     'UpdateRulesInTrackingPlanV1Output.StatusEnum':
         UpdateRulesInTrackingPlanV1Output.StatusEnum,
     'UpdateSelectiveSyncForWarehouseV1Output.StatusEnum':
@@ -1195,6 +1229,9 @@ let typeMap: { [index: string]: any } = {
     CreateLabelAlphaOutput: CreateLabelAlphaOutput,
     CreateLabelV1Input: CreateLabelV1Input,
     CreateLabelV1Output: CreateLabelV1Output,
+    CreateReverseEtlModel200Response: CreateReverseEtlModel200Response,
+    CreateReverseEtlModelInput: CreateReverseEtlModelInput,
+    CreateReverseEtlModelOutput: CreateReverseEtlModelOutput,
     CreateSource200Response: CreateSource200Response,
     CreateSource200Response1: CreateSource200Response1,
     CreateSourceAlphaInput: CreateSourceAlphaInput,
@@ -1237,6 +1274,8 @@ let typeMap: { [index: string]: any } = {
     DeleteLabelV1Output: DeleteLabelV1Output,
     DeleteRegulation200Response: DeleteRegulation200Response,
     DeleteRegulationV1Output: DeleteRegulationV1Output,
+    DeleteReverseEtlModel200Response: DeleteReverseEtlModel200Response,
+    DeleteReverseEtlModelOutput: DeleteReverseEtlModelOutput,
     DeleteSource200Response: DeleteSource200Response,
     DeleteSource200Response1: DeleteSource200Response1,
     DeleteSourceAlphaOutput: DeleteSourceAlphaOutput,
@@ -1342,6 +1381,8 @@ let typeMap: { [index: string]: any } = {
         GetMessagingSubscriptionSuccessResponse,
     GetRegulation200Response: GetRegulation200Response,
     GetRegulationV1Output: GetRegulationV1Output,
+    GetReverseEtlModel200Response: GetReverseEtlModel200Response,
+    GetReverseEtlModelOutput: GetReverseEtlModelOutput,
     GetSource200Response: GetSource200Response,
     GetSource200Response1: GetSource200Response1,
     GetSourceAlphaOutput: GetSourceAlphaOutput,
@@ -1432,6 +1473,8 @@ let typeMap: { [index: string]: any } = {
     ListLabelsV1Output: ListLabelsV1Output,
     ListRegulationsFromSource200Response: ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: ListRegulationsFromSourceV1Output,
+    ListReverseEtlModels200Response: ListReverseEtlModels200Response,
+    ListReverseEtlModelsOutput: ListReverseEtlModelsOutput,
     ListRoles200Response: ListRoles200Response,
     ListRolesV1Output: ListRolesV1Output,
     ListRulesFromTrackingPlan200Response: ListRulesFromTrackingPlan200Response,
@@ -1569,6 +1612,8 @@ let typeMap: { [index: string]: any } = {
     RequestError: RequestError,
     RequestErrorEnvelope: RequestErrorEnvelope,
     ResourceV1: ResourceV1,
+    ReverseEtlModel: ReverseEtlModel,
+    ReverseEtlModel1: ReverseEtlModel1,
     RoleV1: RoleV1,
     RuleV1: RuleV1,
     Schedule: Schedule,
@@ -1623,6 +1668,9 @@ let typeMap: { [index: string]: any } = {
     UpdateFunction200Response: UpdateFunction200Response,
     UpdateFunctionV1Input: UpdateFunctionV1Input,
     UpdateFunctionV1Output: UpdateFunctionV1Output,
+    UpdateReverseEtlModel200Response: UpdateReverseEtlModel200Response,
+    UpdateReverseEtlModelInput: UpdateReverseEtlModelInput,
+    UpdateReverseEtlModelOutput: UpdateReverseEtlModelOutput,
     UpdateRulesInTrackingPlan200Response: UpdateRulesInTrackingPlan200Response,
     UpdateRulesInTrackingPlanV1Input: UpdateRulesInTrackingPlanV1Input,
     UpdateRulesInTrackingPlanV1Output: UpdateRulesInTrackingPlanV1Output,

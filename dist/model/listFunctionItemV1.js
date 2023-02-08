@@ -57,6 +57,7 @@ exports.ListFunctionItemV1 = ListFunctionItemV1;
     var ResourceTypeEnum;
     (function (ResourceTypeEnum) {
         ResourceTypeEnum[ResourceTypeEnum["DESTINATION"] = 'DESTINATION'] = "DESTINATION";
+        ResourceTypeEnum[ResourceTypeEnum["INSERT_DESTINATION"] = 'INSERT_DESTINATION'] = "INSERT_DESTINATION";
         ResourceTypeEnum[ResourceTypeEnum["SOURCE"] = 'SOURCE'] = "SOURCE";
     })(ResourceTypeEnum = ListFunctionItemV1.ResourceTypeEnum || (ListFunctionItemV1.ResourceTypeEnum = {}));
 })(ListFunctionItemV1 = exports.ListFunctionItemV1 || (exports.ListFunctionItemV1 = {}));
