@@ -49,6 +49,11 @@ var DestinationSubscription = (function () {
             baseName: 'trigger',
             type: 'string',
         },
+        {
+            name: 'modelId',
+            baseName: 'modelId',
+            type: 'string',
+        },
     ];
     return DestinationSubscription;
 }());

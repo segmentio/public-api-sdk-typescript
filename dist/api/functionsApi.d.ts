@@ -64,7 +64,7 @@ export declare class FunctionsApi {
         response: http.IncomingMessage;
         body: GetFunction200Response;
     }>;
-    listFunctions(pagination: PaginationInput, resourceType: 'DESTINATION' | 'SOURCE', options?: {
+    listFunctions(pagination: PaginationInput, resourceType: 'DESTINATION' | 'INSERT_DESTINATION' | 'SOURCE', options?: {
         headers: {
             [name: string]: string;
         };

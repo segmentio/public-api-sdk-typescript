@@ -87,6 +87,7 @@ exports.Function2 = Function2;
     var ResourceTypeEnum;
     (function (ResourceTypeEnum) {
         ResourceTypeEnum[ResourceTypeEnum["DESTINATION"] = 'DESTINATION'] = "DESTINATION";
+        ResourceTypeEnum[ResourceTypeEnum["INSERT_DESTINATION"] = 'INSERT_DESTINATION'] = "INSERT_DESTINATION";
         ResourceTypeEnum[ResourceTypeEnum["SOURCE"] = 'SOURCE'] = "SOURCE";
     })(ResourceTypeEnum = Function2.ResourceTypeEnum || (Function2.ResourceTypeEnum = {}));
 })(Function2 = exports.Function2 || (exports.Function2 = {}));

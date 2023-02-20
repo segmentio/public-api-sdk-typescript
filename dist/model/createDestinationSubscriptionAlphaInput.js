@@ -34,6 +34,11 @@ var CreateDestinationSubscriptionAlphaInput = (function () {
             baseName: 'settings',
             type: 'any',
         },
+        {
+            name: 'modelId',
+            baseName: 'modelId',
+            type: 'string',
+        },
     ];
     return CreateDestinationSubscriptionAlphaInput;
 }());

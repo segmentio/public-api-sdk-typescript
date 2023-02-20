@@ -76,6 +76,9 @@ __exportStar(require("./createLabelAlphaInput"), exports);
 __exportStar(require("./createLabelAlphaOutput"), exports);
 __exportStar(require("./createLabelV1Input"), exports);
 __exportStar(require("./createLabelV1Output"), exports);
+__exportStar(require("./createReverseEtlModel200Response"), exports);
+__exportStar(require("./createReverseEtlModelInput"), exports);
+__exportStar(require("./createReverseEtlModelOutput"), exports);
 __exportStar(require("./createSource200Response"), exports);
 __exportStar(require("./createSource200Response1"), exports);
 __exportStar(require("./createSourceAlphaInput"), exports);
@@ -117,6 +120,8 @@ __exportStar(require("./deleteLabelAlphaOutput"), exports);
 __exportStar(require("./deleteLabelV1Output"), exports);
 __exportStar(require("./deleteRegulation200Response"), exports);
 __exportStar(require("./deleteRegulationV1Output"), exports);
+__exportStar(require("./deleteReverseEtlModel200Response"), exports);
+__exportStar(require("./deleteReverseEtlModelOutput"), exports);
 __exportStar(require("./deleteSource200Response"), exports);
 __exportStar(require("./deleteSource200Response1"), exports);
 __exportStar(require("./deleteSourceAlphaOutput"), exports);
@@ -206,6 +211,8 @@ __exportStar(require("./getMessagingSubscriptionFailureResponse"), exports);
 __exportStar(require("./getMessagingSubscriptionSuccessResponse"), exports);
 __exportStar(require("./getRegulation200Response"), exports);
 __exportStar(require("./getRegulationV1Output"), exports);
+__exportStar(require("./getReverseEtlModel200Response"), exports);
+__exportStar(require("./getReverseEtlModelOutput"), exports);
 __exportStar(require("./getSource200Response"), exports);
 __exportStar(require("./getSource200Response1"), exports);
 __exportStar(require("./getSourceAlphaOutput"), exports);
@@ -281,6 +288,8 @@ __exportStar(require("./listLabelsAlphaOutput"), exports);
 __exportStar(require("./listLabelsV1Output"), exports);
 __exportStar(require("./listRegulationsFromSource200Response"), exports);
 __exportStar(require("./listRegulationsFromSourceV1Output"), exports);
+__exportStar(require("./listReverseEtlModels200Response"), exports);
+__exportStar(require("./listReverseEtlModelsOutput"), exports);
 __exportStar(require("./listRoles200Response"), exports);
 __exportStar(require("./listRolesV1Output"), exports);
 __exportStar(require("./listRulesFromTrackingPlan200Response"), exports);
@@ -393,6 +402,8 @@ __exportStar(require("./replaceUsersInUserGroupV1Output"), exports);
 __exportStar(require("./requestError"), exports);
 __exportStar(require("./requestErrorEnvelope"), exports);
 __exportStar(require("./resourceV1"), exports);
+__exportStar(require("./reverseEtlModel"), exports);
+__exportStar(require("./reverseEtlModel1"), exports);
 __exportStar(require("./roleV1"), exports);
 __exportStar(require("./ruleV1"), exports);
 __exportStar(require("./schedule"), exports);
@@ -446,6 +457,9 @@ __exportStar(require("./updateFilterForDestinationV1Output"), exports);
 __exportStar(require("./updateFunction200Response"), exports);
 __exportStar(require("./updateFunctionV1Input"), exports);
 __exportStar(require("./updateFunctionV1Output"), exports);
+__exportStar(require("./updateReverseEtlModel200Response"), exports);
+__exportStar(require("./updateReverseEtlModelInput"), exports);
+__exportStar(require("./updateReverseEtlModelOutput"), exports);
 __exportStar(require("./updateRulesInTrackingPlan200Response"), exports);
 __exportStar(require("./updateRulesInTrackingPlanV1Input"), exports);
 __exportStar(require("./updateRulesInTrackingPlanV1Output"), exports);
@@ -559,6 +573,9 @@ var createLabelAlphaInput_1 = require("./createLabelAlphaInput");
 var createLabelAlphaOutput_1 = require("./createLabelAlphaOutput");
 var createLabelV1Input_1 = require("./createLabelV1Input");
 var createLabelV1Output_1 = require("./createLabelV1Output");
+var createReverseEtlModel200Response_1 = require("./createReverseEtlModel200Response");
+var createReverseEtlModelInput_1 = require("./createReverseEtlModelInput");
+var createReverseEtlModelOutput_1 = require("./createReverseEtlModelOutput");
 var createSource200Response_1 = require("./createSource200Response");
 var createSource200Response1_1 = require("./createSource200Response1");
 var createSourceAlphaInput_1 = require("./createSourceAlphaInput");
@@ -600,6 +617,8 @@ var deleteLabelAlphaOutput_1 = require("./deleteLabelAlphaOutput");
 var deleteLabelV1Output_1 = require("./deleteLabelV1Output");
 var deleteRegulation200Response_1 = require("./deleteRegulation200Response");
 var deleteRegulationV1Output_1 = require("./deleteRegulationV1Output");
+var deleteReverseEtlModel200Response_1 = require("./deleteReverseEtlModel200Response");
+var deleteReverseEtlModelOutput_1 = require("./deleteReverseEtlModelOutput");
 var deleteSource200Response_1 = require("./deleteSource200Response");
 var deleteSource200Response1_1 = require("./deleteSource200Response1");
 var deleteSourceAlphaOutput_1 = require("./deleteSourceAlphaOutput");
@@ -689,6 +708,8 @@ var getMessagingSubscriptionFailureResponse_1 = require("./getMessagingSubscript
 var getMessagingSubscriptionSuccessResponse_1 = require("./getMessagingSubscriptionSuccessResponse");
 var getRegulation200Response_1 = require("./getRegulation200Response");
 var getRegulationV1Output_1 = require("./getRegulationV1Output");
+var getReverseEtlModel200Response_1 = require("./getReverseEtlModel200Response");
+var getReverseEtlModelOutput_1 = require("./getReverseEtlModelOutput");
 var getSource200Response_1 = require("./getSource200Response");
 var getSource200Response1_1 = require("./getSource200Response1");
 var getSourceAlphaOutput_1 = require("./getSourceAlphaOutput");
@@ -764,6 +785,8 @@ var listLabelsAlphaOutput_1 = require("./listLabelsAlphaOutput");
 var listLabelsV1Output_1 = require("./listLabelsV1Output");
 var listRegulationsFromSource200Response_1 = require("./listRegulationsFromSource200Response");
 var listRegulationsFromSourceV1Output_1 = require("./listRegulationsFromSourceV1Output");
+var listReverseEtlModels200Response_1 = require("./listReverseEtlModels200Response");
+var listReverseEtlModelsOutput_1 = require("./listReverseEtlModelsOutput");
 var listRoles200Response_1 = require("./listRoles200Response");
 var listRolesV1Output_1 = require("./listRolesV1Output");
 var listRulesFromTrackingPlan200Response_1 = require("./listRulesFromTrackingPlan200Response");
@@ -876,6 +899,8 @@ var replaceUsersInUserGroupV1Output_1 = require("./replaceUsersInUserGroupV1Outp
 var requestError_1 = require("./requestError");
 var requestErrorEnvelope_1 = require("./requestErrorEnvelope");
 var resourceV1_1 = require("./resourceV1");
+var reverseEtlModel_1 = require("./reverseEtlModel");
+var reverseEtlModel1_1 = require("./reverseEtlModel1");
 var roleV1_1 = require("./roleV1");
 var ruleV1_1 = require("./ruleV1");
 var schedule_1 = require("./schedule");
@@ -929,6 +954,9 @@ var updateFilterForDestinationV1Output_1 = require("./updateFilterForDestination
 var updateFunction200Response_1 = require("./updateFunction200Response");
 var updateFunctionV1Input_1 = require("./updateFunctionV1Input");
 var updateFunctionV1Output_1 = require("./updateFunctionV1Output");
+var updateReverseEtlModel200Response_1 = require("./updateReverseEtlModel200Response");
+var updateReverseEtlModelInput_1 = require("./updateReverseEtlModelInput");
+var updateReverseEtlModelOutput_1 = require("./updateReverseEtlModelOutput");
 var updateRulesInTrackingPlan200Response_1 = require("./updateRulesInTrackingPlan200Response");
 var updateRulesInTrackingPlanV1Input_1 = require("./updateRulesInTrackingPlanV1Input");
 var updateRulesInTrackingPlanV1Output_1 = require("./updateRulesInTrackingPlanV1Output");
@@ -997,6 +1025,7 @@ var enumsMap = {
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
     'CreateFunctionV1Input.ResourceTypeEnum': createFunctionV1Input_1.CreateFunctionV1Input.ResourceTypeEnum,
+    'CreateReverseEtlModelInput.ScheduleStrategyEnum': createReverseEtlModelInput_1.CreateReverseEtlModelInput.ScheduleStrategyEnum,
     'CreateSourceRegulationV1Input.RegulationTypeEnum': createSourceRegulationV1Input_1.CreateSourceRegulationV1Input.RegulationTypeEnum,
     'CreateSourceRegulationV1Input.SubjectTypeEnum': createSourceRegulationV1Input_1.CreateSourceRegulationV1Input.SubjectTypeEnum,
     'CreateTrackingPlanV1Input.TypeEnum': createTrackingPlanV1Input_1.CreateTrackingPlanV1Input.TypeEnum,
@@ -1009,6 +1038,7 @@ var enumsMap = {
     'DeleteLabelAlphaOutput.StatusEnum': deleteLabelAlphaOutput_1.DeleteLabelAlphaOutput.StatusEnum,
     'DeleteLabelV1Output.StatusEnum': deleteLabelV1Output_1.DeleteLabelV1Output.StatusEnum,
     'DeleteRegulationV1Output.StatusEnum': deleteRegulationV1Output_1.DeleteRegulationV1Output.StatusEnum,
+    'DeleteReverseEtlModelOutput.StatusEnum': deleteReverseEtlModelOutput_1.DeleteReverseEtlModelOutput.StatusEnum,
     'DeleteSourceAlphaOutput.StatusEnum': deleteSourceAlphaOutput_1.DeleteSourceAlphaOutput.StatusEnum,
     'DeleteSourceV1Output.StatusEnum': deleteSourceV1Output_1.DeleteSourceV1Output.StatusEnum,
     'DeleteTrackingPlanV1Output.StatusEnum': deleteTrackingPlanV1Output_1.DeleteTrackingPlanV1Output.StatusEnum,
@@ -1071,6 +1101,7 @@ var enumsMap = {
     'TrackingPlan.TypeEnum': trackingPlan_1.TrackingPlan.TypeEnum,
     'TrackingPlan1.TypeEnum': trackingPlan1_1.TrackingPlan1.TypeEnum,
     'TrackingPlanV1.TypeEnum': trackingPlanV1_1.TrackingPlanV1.TypeEnum,
+    'UpdateReverseEtlModelInput.ScheduleStrategyEnum': updateReverseEtlModelInput_1.UpdateReverseEtlModelInput.ScheduleStrategyEnum,
     'UpdateRulesInTrackingPlanV1Output.StatusEnum': updateRulesInTrackingPlanV1Output_1.UpdateRulesInTrackingPlanV1Output.StatusEnum,
     'UpdateSelectiveSyncForWarehouseV1Output.StatusEnum': updateSelectiveSyncForWarehouseV1Output_1.UpdateSelectiveSyncForWarehouseV1Output.StatusEnum,
     'UpdateTrackingPlanV1Output.StatusEnum': updateTrackingPlanV1Output_1.UpdateTrackingPlanV1Output.StatusEnum,
@@ -1138,6 +1169,9 @@ var typeMap = {
     CreateLabelAlphaOutput: createLabelAlphaOutput_1.CreateLabelAlphaOutput,
     CreateLabelV1Input: createLabelV1Input_1.CreateLabelV1Input,
     CreateLabelV1Output: createLabelV1Output_1.CreateLabelV1Output,
+    CreateReverseEtlModel200Response: createReverseEtlModel200Response_1.CreateReverseEtlModel200Response,
+    CreateReverseEtlModelInput: createReverseEtlModelInput_1.CreateReverseEtlModelInput,
+    CreateReverseEtlModelOutput: createReverseEtlModelOutput_1.CreateReverseEtlModelOutput,
     CreateSource200Response: createSource200Response_1.CreateSource200Response,
     CreateSource200Response1: createSource200Response1_1.CreateSource200Response1,
     CreateSourceAlphaInput: createSourceAlphaInput_1.CreateSourceAlphaInput,
@@ -1179,6 +1213,8 @@ var typeMap = {
     DeleteLabelV1Output: deleteLabelV1Output_1.DeleteLabelV1Output,
     DeleteRegulation200Response: deleteRegulation200Response_1.DeleteRegulation200Response,
     DeleteRegulationV1Output: deleteRegulationV1Output_1.DeleteRegulationV1Output,
+    DeleteReverseEtlModel200Response: deleteReverseEtlModel200Response_1.DeleteReverseEtlModel200Response,
+    DeleteReverseEtlModelOutput: deleteReverseEtlModelOutput_1.DeleteReverseEtlModelOutput,
     DeleteSource200Response: deleteSource200Response_1.DeleteSource200Response,
     DeleteSource200Response1: deleteSource200Response1_1.DeleteSource200Response1,
     DeleteSourceAlphaOutput: deleteSourceAlphaOutput_1.DeleteSourceAlphaOutput,
@@ -1268,6 +1304,8 @@ var typeMap = {
     GetMessagingSubscriptionSuccessResponse: getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse,
     GetRegulation200Response: getRegulation200Response_1.GetRegulation200Response,
     GetRegulationV1Output: getRegulationV1Output_1.GetRegulationV1Output,
+    GetReverseEtlModel200Response: getReverseEtlModel200Response_1.GetReverseEtlModel200Response,
+    GetReverseEtlModelOutput: getReverseEtlModelOutput_1.GetReverseEtlModelOutput,
     GetSource200Response: getSource200Response_1.GetSource200Response,
     GetSource200Response1: getSource200Response1_1.GetSource200Response1,
     GetSourceAlphaOutput: getSourceAlphaOutput_1.GetSourceAlphaOutput,
@@ -1343,6 +1381,8 @@ var typeMap = {
     ListLabelsV1Output: listLabelsV1Output_1.ListLabelsV1Output,
     ListRegulationsFromSource200Response: listRegulationsFromSource200Response_1.ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: listRegulationsFromSourceV1Output_1.ListRegulationsFromSourceV1Output,
+    ListReverseEtlModels200Response: listReverseEtlModels200Response_1.ListReverseEtlModels200Response,
+    ListReverseEtlModelsOutput: listReverseEtlModelsOutput_1.ListReverseEtlModelsOutput,
     ListRoles200Response: listRoles200Response_1.ListRoles200Response,
     ListRolesV1Output: listRolesV1Output_1.ListRolesV1Output,
     ListRulesFromTrackingPlan200Response: listRulesFromTrackingPlan200Response_1.ListRulesFromTrackingPlan200Response,
@@ -1455,6 +1495,8 @@ var typeMap = {
     RequestError: requestError_1.RequestError,
     RequestErrorEnvelope: requestErrorEnvelope_1.RequestErrorEnvelope,
     ResourceV1: resourceV1_1.ResourceV1,
+    ReverseEtlModel: reverseEtlModel_1.ReverseEtlModel,
+    ReverseEtlModel1: reverseEtlModel1_1.ReverseEtlModel1,
     RoleV1: roleV1_1.RoleV1,
     RuleV1: ruleV1_1.RuleV1,
     Schedule: schedule_1.Schedule,
@@ -1508,6 +1550,9 @@ var typeMap = {
     UpdateFunction200Response: updateFunction200Response_1.UpdateFunction200Response,
     UpdateFunctionV1Input: updateFunctionV1Input_1.UpdateFunctionV1Input,
     UpdateFunctionV1Output: updateFunctionV1Output_1.UpdateFunctionV1Output,
+    UpdateReverseEtlModel200Response: updateReverseEtlModel200Response_1.UpdateReverseEtlModel200Response,
+    UpdateReverseEtlModelInput: updateReverseEtlModelInput_1.UpdateReverseEtlModelInput,
+    UpdateReverseEtlModelOutput: updateReverseEtlModelOutput_1.UpdateReverseEtlModelOutput,
     UpdateRulesInTrackingPlan200Response: updateRulesInTrackingPlan200Response_1.UpdateRulesInTrackingPlan200Response,
     UpdateRulesInTrackingPlanV1Input: updateRulesInTrackingPlanV1Input_1.UpdateRulesInTrackingPlanV1Input,
     UpdateRulesInTrackingPlanV1Output: updateRulesInTrackingPlanV1Output_1.UpdateRulesInTrackingPlanV1Output,

@@ -94,6 +94,8 @@ __exportStar(require("./labelsApi"), exports);
 var labelsApi_1 = require("./labelsApi");
 __exportStar(require("./monthlyTrackedUsersApi"), exports);
 var monthlyTrackedUsersApi_1 = require("./monthlyTrackedUsersApi");
+__exportStar(require("./reverseETLApi"), exports);
+var reverseETLApi_1 = require("./reverseETLApi");
 __exportStar(require("./selectiveSyncApi"), exports);
 var selectiveSyncApi_1 = require("./selectiveSyncApi");
 __exportStar(require("./sourcesApi"), exports);
@@ -138,6 +140,7 @@ exports.APIS = [
     iAMUsersApi_1.IAMUsersApi,
     labelsApi_1.LabelsApi,
     monthlyTrackedUsersApi_1.MonthlyTrackedUsersApi,
+    reverseETLApi_1.ReverseETLApi,
     selectiveSyncApi_1.SelectiveSyncApi,
     sourcesApi_1.SourcesApi,
     spacesApi_1.SpacesApi,
@@ -176,7 +179,7 @@ function configureApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 34.0.1 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 34.1.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }

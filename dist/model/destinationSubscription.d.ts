@@ -7,6 +7,7 @@ export declare class DestinationSubscription {
     'enabled': boolean;
     'settings': any | null;
     'trigger': string;
+    'modelId'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
