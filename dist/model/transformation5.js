@@ -54,6 +54,11 @@ var Transformation5 = (function () {
             baseName: 'propertyValueTransformations',
             type: 'Array<PropertyValueTransformationV1>',
         },
+        {
+            name: 'fqlDefinedProperties',
+            baseName: 'fqlDefinedProperties',
+            type: 'Array<FQLDefinedPropertyV1>',
+        },
     ];
     return Transformation5;
 }());

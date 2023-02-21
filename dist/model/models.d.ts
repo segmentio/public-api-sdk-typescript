@@ -154,6 +154,7 @@ export * from './edgeFunctions';
 export * from './edgeFunctions1';
 export * from './edgeFunctionsAlpha';
 export * from './eventSourceV1';
+export * from './fQLDefinedPropertyV1';
 export * from './filter';
 export * from './filter1';
 export * from './filter2';
