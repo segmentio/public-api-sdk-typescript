@@ -153,6 +153,7 @@ export * from './edgeFunctions';
 export * from './edgeFunctions1';
 export * from './edgeFunctionsAlpha';
 export * from './eventSourceV1';
+export * from './fQLDefinedPropertyV1';
 export * from './filter';
 export * from './filter1';
 export * from './filter2';
@@ -663,6 +664,7 @@ import { EdgeFunctions } from './edgeFunctions';
 import { EdgeFunctions1 } from './edgeFunctions1';
 import { EdgeFunctionsAlpha } from './edgeFunctionsAlpha';
 import { EventSourceV1 } from './eventSourceV1';
+import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
 import { Filter } from './filter';
 import { Filter1 } from './filter1';
 import { Filter2 } from './filter2';
@@ -1323,6 +1325,7 @@ let typeMap: { [index: string]: any } = {
     EdgeFunctions1: EdgeFunctions1,
     EdgeFunctionsAlpha: EdgeFunctionsAlpha,
     EventSourceV1: EventSourceV1,
+    FQLDefinedPropertyV1: FQLDefinedPropertyV1,
     Filter: Filter,
     Filter1: Filter1,
     Filter2: Filter2,

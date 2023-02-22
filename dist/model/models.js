@@ -168,6 +168,7 @@ __exportStar(require("./edgeFunctions"), exports);
 __exportStar(require("./edgeFunctions1"), exports);
 __exportStar(require("./edgeFunctionsAlpha"), exports);
 __exportStar(require("./eventSourceV1"), exports);
+__exportStar(require("./fQLDefinedPropertyV1"), exports);
 __exportStar(require("./filter"), exports);
 __exportStar(require("./filter1"), exports);
 __exportStar(require("./filter2"), exports);
@@ -665,6 +666,7 @@ var edgeFunctions_1 = require("./edgeFunctions");
 var edgeFunctions1_1 = require("./edgeFunctions1");
 var edgeFunctionsAlpha_1 = require("./edgeFunctionsAlpha");
 var eventSourceV1_1 = require("./eventSourceV1");
+var fQLDefinedPropertyV1_1 = require("./fQLDefinedPropertyV1");
 var filter_1 = require("./filter");
 var filter1_1 = require("./filter1");
 var filter2_1 = require("./filter2");
@@ -1261,6 +1263,7 @@ var typeMap = {
     EdgeFunctions1: edgeFunctions1_1.EdgeFunctions1,
     EdgeFunctionsAlpha: edgeFunctionsAlpha_1.EdgeFunctionsAlpha,
     EventSourceV1: eventSourceV1_1.EventSourceV1,
+    FQLDefinedPropertyV1: fQLDefinedPropertyV1_1.FQLDefinedPropertyV1,
     Filter: filter_1.Filter,
     Filter1: filter1_1.Filter1,
     Filter2: filter2_1.Filter2,

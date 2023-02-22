@@ -10,7 +10,7 @@ All endpoints in the API follow REST conventions and use standard HTTP methods. 
 
 See the next sections for more information on how to use the Segment Public API TypeScript SDK.
 
-Latest API and SDK version: 34.1.0
+Latest API and SDK version: 34.2.0
 
 ## Installation
 
@@ -40,20 +40,17 @@ You are now ready to start making calls to Public API!
 ## Example
 
 ```typescript
-import * as publicApi from '@segment/public-api-sdk-typescript'
+import * as PublicAPI from '@segment/public-api-sdk-typescript'
 
-const TOKEN = // ...
+const TOKEN = '...' // fetch your token from a secure location
 
-const api = publicApi.configureApis(TOKEN)
-publicApi.unwrap(api.workspaces.getWorkspaceCurrent())
+const { workspaces } = PublicAPI.configureApis(TOKEN)
+PublicAPI.unwrap(workspaces.getWorkspace())
     .then((result) => {
-        console.log(`Result:\n ${JSON.stringify(result)}`);
+        console.log(JSON.stringify(result))
     })
-    .catch((error) => {
-        console.log("ERROR\n:", error)
-    }
+    .catch(console.error)
 )
-
 ```
 
 ## Contributing

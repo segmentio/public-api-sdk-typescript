@@ -1,3 +1,4 @@
+import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
 import { PropertyRenameV1 } from './propertyRenameV1';
 import { PropertyValueTransformationV1 } from './propertyValueTransformationV1';
 export declare class UpdateTransformationV1Input {
@@ -9,6 +10,7 @@ export declare class UpdateTransformationV1Input {
     'newEventName'?: string;
     'propertyRenames'?: Array<PropertyRenameV1>;
     'propertyValueTransformations'?: Array<PropertyValueTransformationV1>;
+    'fqlDefinedProperties'?: Array<FQLDefinedPropertyV1>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
