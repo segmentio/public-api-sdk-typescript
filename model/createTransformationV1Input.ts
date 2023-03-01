@@ -52,7 +52,7 @@ export class CreateTransformationV1Input {
      */
     'propertyValueTransformations'?: Array<PropertyValueTransformationV1>;
     /**
-     * Optional array for defining new properties in FQL. Currently limited to 1 property.
+     * Optional array for defining new properties in [FQL](https://segment.com/docs/config-api/fql/). Currently limited to 1 property.
      */
     'fqlDefinedProperties'?: Array<FQLDefinedPropertyV1>;
 
