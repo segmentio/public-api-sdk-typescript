@@ -5,6 +5,8 @@ import { CreateFunctionDeployment200Response } from '../model/createFunctionDepl
 import { CreateFunctionV1Input } from '../model/createFunctionV1Input';
 import { DeleteFunction200Response } from '../model/deleteFunction200Response';
 import { GetFunction200Response } from '../model/getFunction200Response';
+import { HandleWebhook200Response } from '../model/handleWebhook200Response';
+import { HandleWebhookInput } from '../model/handleWebhookInput';
 import { ListFunctions200Response } from '../model/listFunctions200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { UpdateFunction200Response } from '../model/updateFunction200Response';
@@ -63,6 +65,14 @@ export declare class FunctionsApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: GetFunction200Response;
+    }>;
+    handleWebhook(HandleWebhookInput: HandleWebhookInput, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: HandleWebhook200Response;
     }>;
     listFunctions(pagination: PaginationInput, resourceType: 'DESTINATION' | 'INSERT_DESTINATION' | 'SOURCE', options?: {
         headers: {

@@ -232,6 +232,9 @@ export * from './getWorkspace200Response';
 export * from './getWorkspaceV1Output';
 export * from './group';
 export * from './groupSourceSettingsV1';
+export * from './handleWebhook200Response';
+export * from './handleWebhookInput';
+export * from './handleWebhookOutput';
 export * from './identify';
 export * from './identifySourceSettingsV1';
 export * from './input';
@@ -743,6 +746,9 @@ import { GetWorkspace200Response } from './getWorkspace200Response';
 import { GetWorkspaceV1Output } from './getWorkspaceV1Output';
 import { Group } from './group';
 import { GroupSourceSettingsV1 } from './groupSourceSettingsV1';
+import { HandleWebhook200Response } from './handleWebhook200Response';
+import { HandleWebhookInput } from './handleWebhookInput';
+import { HandleWebhookOutput } from './handleWebhookOutput';
 import { Identify } from './identify';
 import { IdentifySourceSettingsV1 } from './identifySourceSettingsV1';
 import { Input } from './input';
@@ -1102,6 +1108,7 @@ let enumsMap: { [index: string]: any } = {
     'Group.CommonEventOnViolationsEnum': Group.CommonEventOnViolationsEnum,
     'GroupSourceSettingsV1.CommonEventOnViolationsEnum':
         GroupSourceSettingsV1.CommonEventOnViolationsEnum,
+    'HandleWebhookOutput.StatusEnum': HandleWebhookOutput.StatusEnum,
     'Identify.CommonEventOnViolationsEnum':
         Identify.CommonEventOnViolationsEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum':
@@ -1421,6 +1428,9 @@ let typeMap: { [index: string]: any } = {
     GetWorkspaceV1Output: GetWorkspaceV1Output,
     Group: Group,
     GroupSourceSettingsV1: GroupSourceSettingsV1,
+    HandleWebhook200Response: HandleWebhook200Response,
+    HandleWebhookInput: HandleWebhookInput,
+    HandleWebhookOutput: HandleWebhookOutput,
     Identify: Identify,
     IdentifySourceSettingsV1: IdentifySourceSettingsV1,
     Input: Input,
