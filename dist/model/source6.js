@@ -27,7 +27,7 @@ var Source6 = (function () {
         {
             name: 'metadata',
             baseName: 'metadata',
-            type: 'Metadata1',
+            type: 'Metadata2',
         },
         {
             name: 'workspaceId',

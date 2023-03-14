@@ -26,6 +26,8 @@ export * from './labelsApi';
 import { LabelsApi } from './labelsApi';
 export * from './monthlyTrackedUsersApi';
 import { MonthlyTrackedUsersApi } from './monthlyTrackedUsersApi';
+export * from './profilesSyncApi';
+import { ProfilesSyncApi } from './profilesSyncApi';
 export * from './reverseETLApi';
 import { ReverseETLApi } from './reverseETLApi';
 export * from './selectiveSyncApi';
@@ -74,6 +76,7 @@ export const APIS = [
     IAMUsersApi,
     LabelsApi,
     MonthlyTrackedUsersApi,
+    ProfilesSyncApi,
     ReverseETLApi,
     SelectiveSyncApi,
     SourcesApi,
@@ -147,7 +150,7 @@ export function configureApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 34.2.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 34.3.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }

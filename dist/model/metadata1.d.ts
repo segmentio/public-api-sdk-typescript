@@ -1,14 +1,12 @@
 import { IntegrationOptionBeta } from './integrationOptionBeta';
-import { Logos1 } from './logos1';
+import { Logos2 } from './logos2';
 export declare class Metadata1 {
     'id': string;
     'name': string;
     'slug': string;
     'description': string;
-    'logos': Logos1;
+    'logos': Logos2;
     'options': Array<IntegrationOptionBeta>;
-    'categories': Array<string>;
-    'isCloudEventSource': boolean;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

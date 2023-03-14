@@ -32,22 +32,12 @@ var Metadata1 = (function () {
         {
             name: 'logos',
             baseName: 'logos',
-            type: 'Logos1',
+            type: 'Logos2',
         },
         {
             name: 'options',
             baseName: 'options',
             type: 'Array<IntegrationOptionBeta>',
-        },
-        {
-            name: 'categories',
-            baseName: 'categories',
-            type: 'Array<string>',
-        },
-        {
-            name: 'isCloudEventSource',
-            baseName: 'isCloudEventSource',
-            type: 'boolean',
         },
     ];
     return Metadata1;

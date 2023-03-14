@@ -1,7 +1,7 @@
-import { Metadata2 } from './metadata2';
+import { Metadata1 } from './metadata1';
 export declare class Warehouse1 {
     'id': string;
-    'metadata': Metadata2;
+    'metadata': Metadata1;
     'workspaceId': string;
     'enabled': boolean;
     'settings': any | null;
