@@ -27,6 +27,8 @@ export * from './labelsApi';
 import { LabelsApi } from './labelsApi';
 export * from './monthlyTrackedUsersApi';
 import { MonthlyTrackedUsersApi } from './monthlyTrackedUsersApi';
+export * from './profilesSyncApi';
+import { ProfilesSyncApi } from './profilesSyncApi';
 export * from './reverseETLApi';
 import { ReverseETLApi } from './reverseETLApi';
 export * from './selectiveSyncApi';
@@ -53,7 +55,7 @@ export declare class HttpError extends Error {
     constructor(response: http.IncomingMessage, body: any, statusCode?: number | undefined);
 }
 export { RequestFile } from '../model/models';
-export declare const APIS: (typeof APICallsApi | typeof AuditTrailApi | typeof CatalogApi | typeof DeletionAndSuppressionApi | typeof DestinationFiltersApi | typeof DestinationsApi | typeof EdgeFunctionsApi | typeof EventsApi | typeof FunctionsApi | typeof IAMGroupsApi | typeof IAMRolesApi | typeof IAMUsersApi | typeof LabelsApi | typeof MonthlyTrackedUsersApi | typeof ReverseETLApi | typeof SelectiveSyncApi | typeof SourcesApi | typeof SpacesApi | typeof TestingApi | typeof TrackingPlansApi | typeof TransformationsApi | typeof WarehousesApi | typeof WorkspacesApi)[];
+export declare const APIS: (typeof APICallsApi | typeof AuditTrailApi | typeof CatalogApi | typeof DeletionAndSuppressionApi | typeof DestinationFiltersApi | typeof DestinationsApi | typeof EdgeFunctionsApi | typeof EventsApi | typeof FunctionsApi | typeof IAMGroupsApi | typeof IAMRolesApi | typeof IAMUsersApi | typeof LabelsApi | typeof MonthlyTrackedUsersApi | typeof ProfilesSyncApi | typeof ReverseETLApi | typeof SelectiveSyncApi | typeof SourcesApi | typeof SpacesApi | typeof TestingApi | typeof TrackingPlansApi | typeof TransformationsApi | typeof WarehousesApi | typeof WorkspacesApi)[];
 export interface Apis {
     apiCalls: APICallsApi;
     auditTrail: AuditTrailApi;

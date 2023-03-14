@@ -1,10 +1,10 @@
 import { LabelV1 } from './labelV1';
-import { Metadata1 } from './metadata1';
+import { Metadata2 } from './metadata2';
 export declare class Source4 {
     'id': string;
     'slug': string;
     'name'?: string;
-    'metadata': Metadata1;
+    'metadata': Metadata2;
     'workspaceId': string;
     'enabled': boolean;
     'writeKeys': Array<string>;

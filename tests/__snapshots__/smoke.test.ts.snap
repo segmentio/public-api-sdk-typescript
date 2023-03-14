@@ -183,7 +183,7 @@ exports[`Smoke tests sends correct request and parses response for create 2`] = 
         "enabled": true,
         "id": "source-id",
         "labels": [],
-        "metadata": Metadata1 {
+        "metadata": Metadata2 {
           "categories": [
             "Website",
           ],
@@ -469,7 +469,7 @@ exports[`Smoke tests sends correct request and parses response for list 2`] = `
           "enabled": true,
           "id": "source-id",
           "labels": [],
-          "metadata": Metadata1 {
+          "metadata": Metadata2 {
             "categories": [
               "Website",
             ],
@@ -642,7 +642,7 @@ exports[`Smoke tests sends correct request and parses response for read 2`] = `
         "enabled": true,
         "id": "source-id",
         "labels": [],
-        "metadata": Metadata1 {
+        "metadata": Metadata2 {
           "categories": [
             "Website",
           ],
@@ -813,7 +813,7 @@ exports[`Smoke tests sends correct request and parses response for update 2`] = 
         "enabled": false,
         "id": "source-id",
         "labels": [],
-        "metadata": Metadata1 {
+        "metadata": Metadata2 {
           "categories": [
             "Website",
           ],

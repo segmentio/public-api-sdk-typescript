@@ -17,7 +17,7 @@ var Warehouse1 = (function () {
         {
             name: 'metadata',
             baseName: 'metadata',
-            type: 'Metadata2',
+            type: 'Metadata1',
         },
         {
             name: 'workspaceId',
