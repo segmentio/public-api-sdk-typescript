@@ -76,6 +76,9 @@ __exportStar(require("./createLabelAlphaInput"), exports);
 __exportStar(require("./createLabelAlphaOutput"), exports);
 __exportStar(require("./createLabelV1Input"), exports);
 __exportStar(require("./createLabelV1Output"), exports);
+__exportStar(require("./createProfilesWarehouse200Response"), exports);
+__exportStar(require("./createProfilesWarehouseAlphaInput"), exports);
+__exportStar(require("./createProfilesWarehouseAlphaOutput"), exports);
 __exportStar(require("./createReverseEtlModel200Response"), exports);
 __exportStar(require("./createReverseEtlModelInput"), exports);
 __exportStar(require("./createReverseEtlModelOutput"), exports);
@@ -356,6 +359,8 @@ __exportStar(require("./previewDestinationFilter200Response"), exports);
 __exportStar(require("./previewDestinationFilterV1"), exports);
 __exportStar(require("./previewDestinationFilterV1Input"), exports);
 __exportStar(require("./previewDestinationFilterV1Output"), exports);
+__exportStar(require("./profilesWarehouse"), exports);
+__exportStar(require("./profilesWarehouseAlpha"), exports);
 __exportStar(require("./propertyRenameBeta"), exports);
 __exportStar(require("./propertyRenameV1"), exports);
 __exportStar(require("./propertyValueTransformationBeta"), exports);
@@ -574,6 +579,9 @@ var createLabelAlphaInput_1 = require("./createLabelAlphaInput");
 var createLabelAlphaOutput_1 = require("./createLabelAlphaOutput");
 var createLabelV1Input_1 = require("./createLabelV1Input");
 var createLabelV1Output_1 = require("./createLabelV1Output");
+var createProfilesWarehouse200Response_1 = require("./createProfilesWarehouse200Response");
+var createProfilesWarehouseAlphaInput_1 = require("./createProfilesWarehouseAlphaInput");
+var createProfilesWarehouseAlphaOutput_1 = require("./createProfilesWarehouseAlphaOutput");
 var createReverseEtlModel200Response_1 = require("./createReverseEtlModel200Response");
 var createReverseEtlModelInput_1 = require("./createReverseEtlModelInput");
 var createReverseEtlModelOutput_1 = require("./createReverseEtlModelOutput");
@@ -854,6 +862,8 @@ var previewDestinationFilter200Response_1 = require("./previewDestinationFilter2
 var previewDestinationFilterV1_1 = require("./previewDestinationFilterV1");
 var previewDestinationFilterV1Input_1 = require("./previewDestinationFilterV1Input");
 var previewDestinationFilterV1Output_1 = require("./previewDestinationFilterV1Output");
+var profilesWarehouse_1 = require("./profilesWarehouse");
+var profilesWarehouseAlpha_1 = require("./profilesWarehouseAlpha");
 var propertyRenameBeta_1 = require("./propertyRenameBeta");
 var propertyRenameV1_1 = require("./propertyRenameV1");
 var propertyValueTransformationBeta_1 = require("./propertyValueTransformationBeta");
@@ -1171,6 +1181,9 @@ var typeMap = {
     CreateLabelAlphaOutput: createLabelAlphaOutput_1.CreateLabelAlphaOutput,
     CreateLabelV1Input: createLabelV1Input_1.CreateLabelV1Input,
     CreateLabelV1Output: createLabelV1Output_1.CreateLabelV1Output,
+    CreateProfilesWarehouse200Response: createProfilesWarehouse200Response_1.CreateProfilesWarehouse200Response,
+    CreateProfilesWarehouseAlphaInput: createProfilesWarehouseAlphaInput_1.CreateProfilesWarehouseAlphaInput,
+    CreateProfilesWarehouseAlphaOutput: createProfilesWarehouseAlphaOutput_1.CreateProfilesWarehouseAlphaOutput,
     CreateReverseEtlModel200Response: createReverseEtlModel200Response_1.CreateReverseEtlModel200Response,
     CreateReverseEtlModelInput: createReverseEtlModelInput_1.CreateReverseEtlModelInput,
     CreateReverseEtlModelOutput: createReverseEtlModelOutput_1.CreateReverseEtlModelOutput,
@@ -1451,6 +1464,8 @@ var typeMap = {
     PreviewDestinationFilterV1: previewDestinationFilterV1_1.PreviewDestinationFilterV1,
     PreviewDestinationFilterV1Input: previewDestinationFilterV1Input_1.PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: previewDestinationFilterV1Output_1.PreviewDestinationFilterV1Output,
+    ProfilesWarehouse: profilesWarehouse_1.ProfilesWarehouse,
+    ProfilesWarehouseAlpha: profilesWarehouseAlpha_1.ProfilesWarehouseAlpha,
     PropertyRenameBeta: propertyRenameBeta_1.PropertyRenameBeta,
     PropertyRenameV1: propertyRenameV1_1.PropertyRenameV1,
     PropertyValueTransformationBeta: propertyValueTransformationBeta_1.PropertyValueTransformationBeta,

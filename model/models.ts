@@ -61,6 +61,9 @@ export * from './createLabelAlphaInput';
 export * from './createLabelAlphaOutput';
 export * from './createLabelV1Input';
 export * from './createLabelV1Output';
+export * from './createProfilesWarehouse200Response';
+export * from './createProfilesWarehouseAlphaInput';
+export * from './createProfilesWarehouseAlphaOutput';
 export * from './createReverseEtlModel200Response';
 export * from './createReverseEtlModelInput';
 export * from './createReverseEtlModelOutput';
@@ -341,6 +344,8 @@ export * from './previewDestinationFilter200Response';
 export * from './previewDestinationFilterV1';
 export * from './previewDestinationFilterV1Input';
 export * from './previewDestinationFilterV1Output';
+export * from './profilesWarehouse';
+export * from './profilesWarehouseAlpha';
 export * from './propertyRenameBeta';
 export * from './propertyRenameV1';
 export * from './propertyValueTransformationBeta';
@@ -572,6 +577,9 @@ import { CreateLabelAlphaInput } from './createLabelAlphaInput';
 import { CreateLabelAlphaOutput } from './createLabelAlphaOutput';
 import { CreateLabelV1Input } from './createLabelV1Input';
 import { CreateLabelV1Output } from './createLabelV1Output';
+import { CreateProfilesWarehouse200Response } from './createProfilesWarehouse200Response';
+import { CreateProfilesWarehouseAlphaInput } from './createProfilesWarehouseAlphaInput';
+import { CreateProfilesWarehouseAlphaOutput } from './createProfilesWarehouseAlphaOutput';
 import { CreateReverseEtlModel200Response } from './createReverseEtlModel200Response';
 import { CreateReverseEtlModelInput } from './createReverseEtlModelInput';
 import { CreateReverseEtlModelOutput } from './createReverseEtlModelOutput';
@@ -852,6 +860,8 @@ import { PreviewDestinationFilter200Response } from './previewDestinationFilter2
 import { PreviewDestinationFilterV1 } from './previewDestinationFilterV1';
 import { PreviewDestinationFilterV1Input } from './previewDestinationFilterV1Input';
 import { PreviewDestinationFilterV1Output } from './previewDestinationFilterV1Output';
+import { ProfilesWarehouse } from './profilesWarehouse';
+import { ProfilesWarehouseAlpha } from './profilesWarehouseAlpha';
 import { PropertyRenameBeta } from './propertyRenameBeta';
 import { PropertyRenameV1 } from './propertyRenameV1';
 import { PropertyValueTransformationBeta } from './propertyValueTransformationBeta';
@@ -1231,6 +1241,9 @@ let typeMap: { [index: string]: any } = {
     CreateLabelAlphaOutput: CreateLabelAlphaOutput,
     CreateLabelV1Input: CreateLabelV1Input,
     CreateLabelV1Output: CreateLabelV1Output,
+    CreateProfilesWarehouse200Response: CreateProfilesWarehouse200Response,
+    CreateProfilesWarehouseAlphaInput: CreateProfilesWarehouseAlphaInput,
+    CreateProfilesWarehouseAlphaOutput: CreateProfilesWarehouseAlphaOutput,
     CreateReverseEtlModel200Response: CreateReverseEtlModel200Response,
     CreateReverseEtlModelInput: CreateReverseEtlModelInput,
     CreateReverseEtlModelOutput: CreateReverseEtlModelOutput,
@@ -1551,6 +1564,8 @@ let typeMap: { [index: string]: any } = {
     PreviewDestinationFilterV1: PreviewDestinationFilterV1,
     PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: PreviewDestinationFilterV1Output,
+    ProfilesWarehouse: ProfilesWarehouse,
+    ProfilesWarehouseAlpha: ProfilesWarehouseAlpha,
     PropertyRenameBeta: PropertyRenameBeta,
     PropertyRenameV1: PropertyRenameV1,
     PropertyValueTransformationBeta: PropertyValueTransformationBeta,
