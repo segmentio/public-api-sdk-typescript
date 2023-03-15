@@ -290,6 +290,8 @@ __exportStar(require("./listLabels200Response"), exports);
 __exportStar(require("./listLabels200Response1"), exports);
 __exportStar(require("./listLabelsAlphaOutput"), exports);
 __exportStar(require("./listLabelsV1Output"), exports);
+__exportStar(require("./listProfilesWarehouseInSpace200Response"), exports);
+__exportStar(require("./listProfilesWarehouseInSpaceAlphaOutput"), exports);
 __exportStar(require("./listRegulationsFromSource200Response"), exports);
 __exportStar(require("./listRegulationsFromSourceV1Output"), exports);
 __exportStar(require("./listReverseEtlModels200Response"), exports);
@@ -795,6 +797,8 @@ var listLabels200Response_1 = require("./listLabels200Response");
 var listLabels200Response1_1 = require("./listLabels200Response1");
 var listLabelsAlphaOutput_1 = require("./listLabelsAlphaOutput");
 var listLabelsV1Output_1 = require("./listLabelsV1Output");
+var listProfilesWarehouseInSpace200Response_1 = require("./listProfilesWarehouseInSpace200Response");
+var listProfilesWarehouseInSpaceAlphaOutput_1 = require("./listProfilesWarehouseInSpaceAlphaOutput");
 var listRegulationsFromSource200Response_1 = require("./listRegulationsFromSource200Response");
 var listRegulationsFromSourceV1Output_1 = require("./listRegulationsFromSourceV1Output");
 var listReverseEtlModels200Response_1 = require("./listReverseEtlModels200Response");
@@ -1400,6 +1404,8 @@ var typeMap = {
     ListLabels200Response1: listLabels200Response1_1.ListLabels200Response1,
     ListLabelsAlphaOutput: listLabelsAlphaOutput_1.ListLabelsAlphaOutput,
     ListLabelsV1Output: listLabelsV1Output_1.ListLabelsV1Output,
+    ListProfilesWarehouseInSpace200Response: listProfilesWarehouseInSpace200Response_1.ListProfilesWarehouseInSpace200Response,
+    ListProfilesWarehouseInSpaceAlphaOutput: listProfilesWarehouseInSpaceAlphaOutput_1.ListProfilesWarehouseInSpaceAlphaOutput,
     ListRegulationsFromSource200Response: listRegulationsFromSource200Response_1.ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: listRegulationsFromSourceV1Output_1.ListRegulationsFromSourceV1Output,
     ListReverseEtlModels200Response: listReverseEtlModels200Response_1.ListReverseEtlModels200Response,

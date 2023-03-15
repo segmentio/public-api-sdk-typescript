@@ -275,6 +275,8 @@ export * from './listLabels200Response';
 export * from './listLabels200Response1';
 export * from './listLabelsAlphaOutput';
 export * from './listLabelsV1Output';
+export * from './listProfilesWarehouseInSpace200Response';
+export * from './listProfilesWarehouseInSpaceAlphaOutput';
 export * from './listRegulationsFromSource200Response';
 export * from './listRegulationsFromSourceV1Output';
 export * from './listReverseEtlModels200Response';
@@ -793,6 +795,8 @@ import { ListLabels200Response } from './listLabels200Response';
 import { ListLabels200Response1 } from './listLabels200Response1';
 import { ListLabelsAlphaOutput } from './listLabelsAlphaOutput';
 import { ListLabelsV1Output } from './listLabelsV1Output';
+import { ListProfilesWarehouseInSpace200Response } from './listProfilesWarehouseInSpace200Response';
+import { ListProfilesWarehouseInSpaceAlphaOutput } from './listProfilesWarehouseInSpaceAlphaOutput';
 import { ListRegulationsFromSource200Response } from './listRegulationsFromSource200Response';
 import { ListRegulationsFromSourceV1Output } from './listRegulationsFromSourceV1Output';
 import { ListReverseEtlModels200Response } from './listReverseEtlModels200Response';
@@ -1493,6 +1497,10 @@ let typeMap: { [index: string]: any } = {
     ListLabels200Response1: ListLabels200Response1,
     ListLabelsAlphaOutput: ListLabelsAlphaOutput,
     ListLabelsV1Output: ListLabelsV1Output,
+    ListProfilesWarehouseInSpace200Response:
+        ListProfilesWarehouseInSpace200Response,
+    ListProfilesWarehouseInSpaceAlphaOutput:
+        ListProfilesWarehouseInSpaceAlphaOutput,
     ListRegulationsFromSource200Response: ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: ListRegulationsFromSourceV1Output,
     ListReverseEtlModels200Response: ListReverseEtlModels200Response,

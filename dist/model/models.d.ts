@@ -276,6 +276,8 @@ export * from './listLabels200Response';
 export * from './listLabels200Response1';
 export * from './listLabelsAlphaOutput';
 export * from './listLabelsV1Output';
+export * from './listProfilesWarehouseInSpace200Response';
+export * from './listProfilesWarehouseInSpaceAlphaOutput';
 export * from './listRegulationsFromSource200Response';
 export * from './listRegulationsFromSourceV1Output';
 export * from './listReverseEtlModels200Response';
