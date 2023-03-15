@@ -355,6 +355,8 @@ export * from './regulation';
 export * from './regulationListEntryV1';
 export * from './removeFilterFromDestination200Response';
 export * from './removeFilterFromDestinationV1Output';
+export * from './removeProfilesWarehouseFromSpace200Response';
+export * from './removeProfilesWarehouseFromSpaceAlphaOutput';
 export * from './removeRuleV1';
 export * from './removeRulesFromTrackingPlan200Response';
 export * from './removeRulesFromTrackingPlanV1Output';
@@ -871,6 +873,8 @@ import { Regulation } from './regulation';
 import { RegulationListEntryV1 } from './regulationListEntryV1';
 import { RemoveFilterFromDestination200Response } from './removeFilterFromDestination200Response';
 import { RemoveFilterFromDestinationV1Output } from './removeFilterFromDestinationV1Output';
+import { RemoveProfilesWarehouseFromSpace200Response } from './removeProfilesWarehouseFromSpace200Response';
+import { RemoveProfilesWarehouseFromSpaceAlphaOutput } from './removeProfilesWarehouseFromSpaceAlphaOutput';
 import { RemoveRuleV1 } from './removeRuleV1';
 import { RemoveRulesFromTrackingPlan200Response } from './removeRulesFromTrackingPlan200Response';
 import { RemoveRulesFromTrackingPlanV1Output } from './removeRulesFromTrackingPlanV1Output';
@@ -1132,6 +1136,8 @@ let enumsMap: { [index: string]: any } = {
     'RegulationListEntryV1.StatusEnum': RegulationListEntryV1.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum':
         RemoveFilterFromDestinationV1Output.StatusEnum,
+    'RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum':
+        RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum,
     'RemoveRuleV1.TypeEnum': RemoveRuleV1.TypeEnum,
     'RemoveRulesFromTrackingPlanV1Output.StatusEnum':
         RemoveRulesFromTrackingPlanV1Output.StatusEnum,
@@ -1576,6 +1582,10 @@ let typeMap: { [index: string]: any } = {
     RemoveFilterFromDestination200Response:
         RemoveFilterFromDestination200Response,
     RemoveFilterFromDestinationV1Output: RemoveFilterFromDestinationV1Output,
+    RemoveProfilesWarehouseFromSpace200Response:
+        RemoveProfilesWarehouseFromSpace200Response,
+    RemoveProfilesWarehouseFromSpaceAlphaOutput:
+        RemoveProfilesWarehouseFromSpaceAlphaOutput,
     RemoveRuleV1: RemoveRuleV1,
     RemoveRulesFromTrackingPlan200Response:
         RemoveRulesFromTrackingPlan200Response,
