@@ -16,6 +16,9 @@ import http from 'http';
 /* tslint:disable:no-unused-locals */
 import { CreateProfilesWarehouse200Response } from '../model/createProfilesWarehouse200Response';
 import { CreateProfilesWarehouseAlphaInput } from '../model/createProfilesWarehouseAlphaInput';
+import { ListProfilesWarehouseInSpace200Response } from '../model/listProfilesWarehouseInSpace200Response';
+import { PaginationInput } from '../model/paginationInput';
+import { RemoveProfilesWarehouseFromSpace200Response } from '../model/removeProfilesWarehouseFromSpace200Response';
 import { RequestErrorEnvelope } from '../model/requestErrorEnvelope';
 
 import {
@@ -223,6 +226,263 @@ export class ProfilesSyncApi {
                                 body = ObjectSerializer.deserialize(
                                     body,
                                     'CreateProfilesWarehouse200Response'
+                                );
+                                resolve({ response: response, body: body });
+                            } else {
+                                reject(
+                                    new HttpError(
+                                        response,
+                                        body,
+                                        response.statusCode
+                                    )
+                                );
+                            }
+                        }
+                    }
+                );
+            });
+        });
+    }
+    /**
+     * Lists all Profile Warehouses for a given space id.  • When called, this endpoint may generate the `Profiles Sync Warehouse Retrieved` event in the [audit trail](/tag/Audit-Trail).
+     * @summary List Profiles Warehouse in Space
+     * @param spaceId
+     * @param pagination Defines the pagination parameters.  This parameter exists in alpha.
+     */
+    public async listProfilesWarehouseInSpace(
+        spaceId: string,
+        pagination?: PaginationInput,
+        options: { headers: { [name: string]: string } } = { headers: {} }
+    ): Promise<{
+        response: http.IncomingMessage;
+        body: ListProfilesWarehouseInSpace200Response;
+    }> {
+        const localVarPath =
+            this.basePath +
+            '/spaces/{spaceId}/profiles-warehouses'.replace(
+                '{' + 'spaceId' + '}',
+                encodeURIComponent(String(spaceId))
+            );
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign(
+            {},
+            this._defaultHeaders
+        );
+        const produces = [
+            'application/vnd.segment.v1alpha+json',
+            'application/json',
+        ];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'spaceId' is not null or undefined
+        if (spaceId === null || spaceId === undefined) {
+            throw new Error(
+                'Required parameter spaceId was null or undefined when calling listProfilesWarehouseInSpace.'
+            );
+        }
+
+        if (pagination !== undefined) {
+            localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
+                pagination,
+                'PaginationInput'
+            );
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications.token.accessToken) {
+            authenticationPromise = authenticationPromise.then(() =>
+                this.authentications.token.applyToRequest(
+                    localVarRequestOptions
+                )
+            );
+        }
+        authenticationPromise = authenticationPromise.then(() =>
+            this.authentications.default.applyToRequest(localVarRequestOptions)
+        );
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() =>
+                interceptor(localVarRequestOptions)
+            );
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{
+                response: http.IncomingMessage;
+                body: ListProfilesWarehouseInSpace200Response;
+            }>((resolve, reject) => {
+                localVarRequest(
+                    localVarRequestOptions,
+                    (error, response, body) => {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            if (
+                                response.statusCode &&
+                                response.statusCode >= 200 &&
+                                response.statusCode <= 299
+                            ) {
+                                body = ObjectSerializer.deserialize(
+                                    body,
+                                    'ListProfilesWarehouseInSpace200Response'
+                                );
+                                resolve({ response: response, body: body });
+                            } else {
+                                reject(
+                                    new HttpError(
+                                        response,
+                                        body,
+                                        response.statusCode
+                                    )
+                                );
+                            }
+                        }
+                    }
+                );
+            });
+        });
+    }
+    /**
+     * Deletes an existing Profiles Warehouse.  • When called, this endpoint may generate the `Profiles Sync Warehouse Deleted` event in the [audit trail](/tag/Audit-Trail).
+     * @summary Remove Profiles Warehouse from Space
+     * @param spaceId
+     * @param warehouseId
+     */
+    public async removeProfilesWarehouseFromSpace(
+        spaceId: string,
+        warehouseId: string,
+        options: { headers: { [name: string]: string } } = { headers: {} }
+    ): Promise<{
+        response: http.IncomingMessage;
+        body: RemoveProfilesWarehouseFromSpace200Response;
+    }> {
+        const localVarPath =
+            this.basePath +
+            '/spaces/{spaceId}/profiles-warehouses/{warehouseId}'
+                .replace(
+                    '{' + 'spaceId' + '}',
+                    encodeURIComponent(String(spaceId))
+                )
+                .replace(
+                    '{' + 'warehouseId' + '}',
+                    encodeURIComponent(String(warehouseId))
+                );
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign(
+            {},
+            this._defaultHeaders
+        );
+        const produces = [
+            'application/vnd.segment.v1alpha+json',
+            'application/json',
+        ];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'spaceId' is not null or undefined
+        if (spaceId === null || spaceId === undefined) {
+            throw new Error(
+                'Required parameter spaceId was null or undefined when calling removeProfilesWarehouseFromSpace.'
+            );
+        }
+
+        // verify required parameter 'warehouseId' is not null or undefined
+        if (warehouseId === null || warehouseId === undefined) {
+            throw new Error(
+                'Required parameter warehouseId was null or undefined when calling removeProfilesWarehouseFromSpace.'
+            );
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'DELETE',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications.token.accessToken) {
+            authenticationPromise = authenticationPromise.then(() =>
+                this.authentications.token.applyToRequest(
+                    localVarRequestOptions
+                )
+            );
+        }
+        authenticationPromise = authenticationPromise.then(() =>
+            this.authentications.default.applyToRequest(localVarRequestOptions)
+        );
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() =>
+                interceptor(localVarRequestOptions)
+            );
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{
+                response: http.IncomingMessage;
+                body: RemoveProfilesWarehouseFromSpace200Response;
+            }>((resolve, reject) => {
+                localVarRequest(
+                    localVarRequestOptions,
+                    (error, response, body) => {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            if (
+                                response.statusCode &&
+                                response.statusCode >= 200 &&
+                                response.statusCode <= 299
+                            ) {
+                                body = ObjectSerializer.deserialize(
+                                    body,
+                                    'RemoveProfilesWarehouseFromSpace200Response'
                                 );
                                 resolve({ response: response, body: body });
                             } else {

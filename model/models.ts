@@ -276,6 +276,8 @@ export * from './listLabels200Response';
 export * from './listLabels200Response1';
 export * from './listLabelsAlphaOutput';
 export * from './listLabelsV1Output';
+export * from './listProfilesWarehouseInSpace200Response';
+export * from './listProfilesWarehouseInSpaceAlphaOutput';
 export * from './listRegulationsFromSource200Response';
 export * from './listRegulationsFromSourceV1Output';
 export * from './listReverseEtlModels200Response';
@@ -357,6 +359,8 @@ export * from './regulation';
 export * from './regulationListEntryV1';
 export * from './removeFilterFromDestination200Response';
 export * from './removeFilterFromDestinationV1Output';
+export * from './removeProfilesWarehouseFromSpace200Response';
+export * from './removeProfilesWarehouseFromSpaceAlphaOutput';
 export * from './removeRuleV1';
 export * from './removeRulesFromTrackingPlan200Response';
 export * from './removeRulesFromTrackingPlanV1Output';
@@ -798,6 +802,8 @@ import { ListLabels200Response } from './listLabels200Response';
 import { ListLabels200Response1 } from './listLabels200Response1';
 import { ListLabelsAlphaOutput } from './listLabelsAlphaOutput';
 import { ListLabelsV1Output } from './listLabelsV1Output';
+import { ListProfilesWarehouseInSpace200Response } from './listProfilesWarehouseInSpace200Response';
+import { ListProfilesWarehouseInSpaceAlphaOutput } from './listProfilesWarehouseInSpaceAlphaOutput';
 import { ListRegulationsFromSource200Response } from './listRegulationsFromSource200Response';
 import { ListRegulationsFromSourceV1Output } from './listRegulationsFromSourceV1Output';
 import { ListReverseEtlModels200Response } from './listReverseEtlModels200Response';
@@ -879,6 +885,8 @@ import { Regulation } from './regulation';
 import { RegulationListEntryV1 } from './regulationListEntryV1';
 import { RemoveFilterFromDestination200Response } from './removeFilterFromDestination200Response';
 import { RemoveFilterFromDestinationV1Output } from './removeFilterFromDestinationV1Output';
+import { RemoveProfilesWarehouseFromSpace200Response } from './removeProfilesWarehouseFromSpace200Response';
+import { RemoveProfilesWarehouseFromSpaceAlphaOutput } from './removeProfilesWarehouseFromSpaceAlphaOutput';
 import { RemoveRuleV1 } from './removeRuleV1';
 import { RemoveRulesFromTrackingPlan200Response } from './removeRulesFromTrackingPlan200Response';
 import { RemoveRulesFromTrackingPlanV1Output } from './removeRulesFromTrackingPlanV1Output';
@@ -1144,6 +1152,8 @@ let enumsMap: { [index: string]: any } = {
     'RegulationListEntryV1.StatusEnum': RegulationListEntryV1.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum':
         RemoveFilterFromDestinationV1Output.StatusEnum,
+    'RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum':
+        RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum,
     'RemoveRuleV1.TypeEnum': RemoveRuleV1.TypeEnum,
     'RemoveRulesFromTrackingPlanV1Output.StatusEnum':
         RemoveRulesFromTrackingPlanV1Output.StatusEnum,
@@ -1500,6 +1510,10 @@ let typeMap: { [index: string]: any } = {
     ListLabels200Response1: ListLabels200Response1,
     ListLabelsAlphaOutput: ListLabelsAlphaOutput,
     ListLabelsV1Output: ListLabelsV1Output,
+    ListProfilesWarehouseInSpace200Response:
+        ListProfilesWarehouseInSpace200Response,
+    ListProfilesWarehouseInSpaceAlphaOutput:
+        ListProfilesWarehouseInSpaceAlphaOutput,
     ListRegulationsFromSource200Response: ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: ListRegulationsFromSourceV1Output,
     ListReverseEtlModels200Response: ListReverseEtlModels200Response,
@@ -1590,6 +1604,10 @@ let typeMap: { [index: string]: any } = {
     RemoveFilterFromDestination200Response:
         RemoveFilterFromDestination200Response,
     RemoveFilterFromDestinationV1Output: RemoveFilterFromDestinationV1Output,
+    RemoveProfilesWarehouseFromSpace200Response:
+        RemoveProfilesWarehouseFromSpace200Response,
+    RemoveProfilesWarehouseFromSpaceAlphaOutput:
+        RemoveProfilesWarehouseFromSpaceAlphaOutput,
     RemoveRuleV1: RemoveRuleV1,
     RemoveRulesFromTrackingPlan200Response:
         RemoveRulesFromTrackingPlan200Response,

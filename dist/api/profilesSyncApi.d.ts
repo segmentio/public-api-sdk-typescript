@@ -2,6 +2,9 @@
 import http from 'http';
 import { CreateProfilesWarehouse200Response } from '../model/createProfilesWarehouse200Response';
 import { CreateProfilesWarehouseAlphaInput } from '../model/createProfilesWarehouseAlphaInput';
+import { ListProfilesWarehouseInSpace200Response } from '../model/listProfilesWarehouseInSpace200Response';
+import { PaginationInput } from '../model/paginationInput';
+import { RemoveProfilesWarehouseFromSpace200Response } from '../model/removeProfilesWarehouseFromSpace200Response';
 import { Authentication, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
 export declare enum ProfilesSyncApiApiKeys {
@@ -32,5 +35,21 @@ export declare class ProfilesSyncApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: CreateProfilesWarehouse200Response;
+    }>;
+    listProfilesWarehouseInSpace(spaceId: string, pagination?: PaginationInput, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: ListProfilesWarehouseInSpace200Response;
+    }>;
+    removeProfilesWarehouseFromSpace(spaceId: string, warehouseId: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: RemoveProfilesWarehouseFromSpace200Response;
     }>;
 }

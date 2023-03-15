@@ -291,6 +291,8 @@ __exportStar(require("./listLabels200Response"), exports);
 __exportStar(require("./listLabels200Response1"), exports);
 __exportStar(require("./listLabelsAlphaOutput"), exports);
 __exportStar(require("./listLabelsV1Output"), exports);
+__exportStar(require("./listProfilesWarehouseInSpace200Response"), exports);
+__exportStar(require("./listProfilesWarehouseInSpaceAlphaOutput"), exports);
 __exportStar(require("./listRegulationsFromSource200Response"), exports);
 __exportStar(require("./listRegulationsFromSourceV1Output"), exports);
 __exportStar(require("./listReverseEtlModels200Response"), exports);
@@ -372,6 +374,8 @@ __exportStar(require("./regulation"), exports);
 __exportStar(require("./regulationListEntryV1"), exports);
 __exportStar(require("./removeFilterFromDestination200Response"), exports);
 __exportStar(require("./removeFilterFromDestinationV1Output"), exports);
+__exportStar(require("./removeProfilesWarehouseFromSpace200Response"), exports);
+__exportStar(require("./removeProfilesWarehouseFromSpaceAlphaOutput"), exports);
 __exportStar(require("./removeRuleV1"), exports);
 __exportStar(require("./removeRulesFromTrackingPlan200Response"), exports);
 __exportStar(require("./removeRulesFromTrackingPlanV1Output"), exports);
@@ -800,6 +804,8 @@ var listLabels200Response_1 = require("./listLabels200Response");
 var listLabels200Response1_1 = require("./listLabels200Response1");
 var listLabelsAlphaOutput_1 = require("./listLabelsAlphaOutput");
 var listLabelsV1Output_1 = require("./listLabelsV1Output");
+var listProfilesWarehouseInSpace200Response_1 = require("./listProfilesWarehouseInSpace200Response");
+var listProfilesWarehouseInSpaceAlphaOutput_1 = require("./listProfilesWarehouseInSpaceAlphaOutput");
 var listRegulationsFromSource200Response_1 = require("./listRegulationsFromSource200Response");
 var listRegulationsFromSourceV1Output_1 = require("./listRegulationsFromSourceV1Output");
 var listReverseEtlModels200Response_1 = require("./listReverseEtlModels200Response");
@@ -881,6 +887,8 @@ var regulation_1 = require("./regulation");
 var regulationListEntryV1_1 = require("./regulationListEntryV1");
 var removeFilterFromDestination200Response_1 = require("./removeFilterFromDestination200Response");
 var removeFilterFromDestinationV1Output_1 = require("./removeFilterFromDestinationV1Output");
+var removeProfilesWarehouseFromSpace200Response_1 = require("./removeProfilesWarehouseFromSpace200Response");
+var removeProfilesWarehouseFromSpaceAlphaOutput_1 = require("./removeProfilesWarehouseFromSpaceAlphaOutput");
 var removeRuleV1_1 = require("./removeRuleV1");
 var removeRulesFromTrackingPlan200Response_1 = require("./removeRulesFromTrackingPlan200Response");
 var removeRulesFromTrackingPlanV1Output_1 = require("./removeRulesFromTrackingPlanV1Output");
@@ -1109,6 +1117,7 @@ var enumsMap = {
     'Regulation.OverallStatusEnum': regulation_1.Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': regulationListEntryV1_1.RegulationListEntryV1.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum': removeFilterFromDestinationV1Output_1.RemoveFilterFromDestinationV1Output.StatusEnum,
+    'RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum': removeProfilesWarehouseFromSpaceAlphaOutput_1.RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum,
     'RemoveRuleV1.TypeEnum': removeRuleV1_1.RemoveRuleV1.TypeEnum,
     'RemoveRulesFromTrackingPlanV1Output.StatusEnum': removeRulesFromTrackingPlanV1Output_1.RemoveRulesFromTrackingPlanV1Output.StatusEnum,
     'RemoveSourceConnectionFromWarehouseV1Output.StatusEnum': removeSourceConnectionFromWarehouseV1Output_1.RemoveSourceConnectionFromWarehouseV1Output.StatusEnum,
@@ -1408,6 +1417,8 @@ var typeMap = {
     ListLabels200Response1: listLabels200Response1_1.ListLabels200Response1,
     ListLabelsAlphaOutput: listLabelsAlphaOutput_1.ListLabelsAlphaOutput,
     ListLabelsV1Output: listLabelsV1Output_1.ListLabelsV1Output,
+    ListProfilesWarehouseInSpace200Response: listProfilesWarehouseInSpace200Response_1.ListProfilesWarehouseInSpace200Response,
+    ListProfilesWarehouseInSpaceAlphaOutput: listProfilesWarehouseInSpaceAlphaOutput_1.ListProfilesWarehouseInSpaceAlphaOutput,
     ListRegulationsFromSource200Response: listRegulationsFromSource200Response_1.ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: listRegulationsFromSourceV1Output_1.ListRegulationsFromSourceV1Output,
     ListReverseEtlModels200Response: listReverseEtlModels200Response_1.ListReverseEtlModels200Response,
@@ -1489,6 +1500,8 @@ var typeMap = {
     RegulationListEntryV1: regulationListEntryV1_1.RegulationListEntryV1,
     RemoveFilterFromDestination200Response: removeFilterFromDestination200Response_1.RemoveFilterFromDestination200Response,
     RemoveFilterFromDestinationV1Output: removeFilterFromDestinationV1Output_1.RemoveFilterFromDestinationV1Output,
+    RemoveProfilesWarehouseFromSpace200Response: removeProfilesWarehouseFromSpace200Response_1.RemoveProfilesWarehouseFromSpace200Response,
+    RemoveProfilesWarehouseFromSpaceAlphaOutput: removeProfilesWarehouseFromSpaceAlphaOutput_1.RemoveProfilesWarehouseFromSpaceAlphaOutput,
     RemoveRuleV1: removeRuleV1_1.RemoveRuleV1,
     RemoveRulesFromTrackingPlan200Response: removeRulesFromTrackingPlan200Response_1.RemoveRulesFromTrackingPlan200Response,
     RemoveRulesFromTrackingPlanV1Output: removeRulesFromTrackingPlanV1Output_1.RemoveRulesFromTrackingPlanV1Output,
