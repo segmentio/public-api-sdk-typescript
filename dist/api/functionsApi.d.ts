@@ -5,8 +5,11 @@ import { CreateFunctionDeployment200Response } from '../model/createFunctionDepl
 import { CreateFunctionV1Input } from '../model/createFunctionV1Input';
 import { DeleteFunction200Response } from '../model/deleteFunction200Response';
 import { GetFunction200Response } from '../model/getFunction200Response';
+import { ListFunctionVersions200Response } from '../model/listFunctionVersions200Response';
 import { ListFunctions200Response } from '../model/listFunctions200Response';
 import { PaginationInput } from '../model/paginationInput';
+import { RestoreFunctionVersion200Response } from '../model/restoreFunctionVersion200Response';
+import { RestoreFunctionVersionAlphaInput } from '../model/restoreFunctionVersionAlphaInput';
 import { UpdateFunction200Response } from '../model/updateFunction200Response';
 import { UpdateFunctionV1Input } from '../model/updateFunctionV1Input';
 import { Authentication, Interceptor } from '../model/models';
@@ -64,6 +67,14 @@ export declare class FunctionsApi {
         response: http.IncomingMessage;
         body: GetFunction200Response;
     }>;
+    listFunctionVersions(functionId: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: ListFunctionVersions200Response;
+    }>;
     listFunctions(pagination: PaginationInput, resourceType: 'DESTINATION' | 'INSERT_DESTINATION' | 'SOURCE', options?: {
         headers: {
             [name: string]: string;
@@ -71,6 +82,14 @@ export declare class FunctionsApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: ListFunctions200Response;
+    }>;
+    restoreFunctionVersion(functionId: string, RestoreFunctionVersionAlphaInput: RestoreFunctionVersionAlphaInput, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: RestoreFunctionVersion200Response;
     }>;
     updateFunction(functionId: string, UpdateFunctionV1Input: UpdateFunctionV1Input, options?: {
         headers: {
