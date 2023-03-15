@@ -5,6 +5,8 @@ import { CreateProfilesWarehouseAlphaInput } from '../model/createProfilesWareho
 import { ListProfilesWarehouseInSpace200Response } from '../model/listProfilesWarehouseInSpace200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveProfilesWarehouseFromSpace200Response } from '../model/removeProfilesWarehouseFromSpace200Response';
+import { UpdateProfilesWarehouseForSpaceWarehouse200Response } from '../model/updateProfilesWarehouseForSpaceWarehouse200Response';
+import { UpdateProfilesWarehouseForSpaceWarehouseAlphaInput } from '../model/updateProfilesWarehouseForSpaceWarehouseAlphaInput';
 import { Authentication, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
 export declare enum ProfilesSyncApiApiKeys {
@@ -51,5 +53,13 @@ export declare class ProfilesSyncApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: RemoveProfilesWarehouseFromSpace200Response;
+    }>;
+    updateProfilesWarehouseForSpaceWarehouse(spaceId: string, warehouseId: string, UpdateProfilesWarehouseForSpaceWarehouseAlphaInput: UpdateProfilesWarehouseForSpaceWarehouseAlphaInput, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: UpdateProfilesWarehouseForSpaceWarehouse200Response;
     }>;
 }
