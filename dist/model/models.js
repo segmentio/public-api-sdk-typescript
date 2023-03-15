@@ -362,6 +362,7 @@ __exportStar(require("./previewDestinationFilterV1"), exports);
 __exportStar(require("./previewDestinationFilterV1Input"), exports);
 __exportStar(require("./previewDestinationFilterV1Output"), exports);
 __exportStar(require("./profilesWarehouse"), exports);
+__exportStar(require("./profilesWarehouse1"), exports);
 __exportStar(require("./profilesWarehouseAlpha"), exports);
 __exportStar(require("./propertyRenameBeta"), exports);
 __exportStar(require("./propertyRenameV1"), exports);
@@ -467,6 +468,9 @@ __exportStar(require("./updateFilterForDestinationV1Output"), exports);
 __exportStar(require("./updateFunction200Response"), exports);
 __exportStar(require("./updateFunctionV1Input"), exports);
 __exportStar(require("./updateFunctionV1Output"), exports);
+__exportStar(require("./updateProfilesWarehouseForSpaceWarehouse200Response"), exports);
+__exportStar(require("./updateProfilesWarehouseForSpaceWarehouseAlphaInput"), exports);
+__exportStar(require("./updateProfilesWarehouseForSpaceWarehouseAlphaOutput"), exports);
 __exportStar(require("./updateReverseEtlModel200Response"), exports);
 __exportStar(require("./updateReverseEtlModelInput"), exports);
 __exportStar(require("./updateReverseEtlModelOutput"), exports);
@@ -869,6 +873,7 @@ var previewDestinationFilterV1_1 = require("./previewDestinationFilterV1");
 var previewDestinationFilterV1Input_1 = require("./previewDestinationFilterV1Input");
 var previewDestinationFilterV1Output_1 = require("./previewDestinationFilterV1Output");
 var profilesWarehouse_1 = require("./profilesWarehouse");
+var profilesWarehouse1_1 = require("./profilesWarehouse1");
 var profilesWarehouseAlpha_1 = require("./profilesWarehouseAlpha");
 var propertyRenameBeta_1 = require("./propertyRenameBeta");
 var propertyRenameV1_1 = require("./propertyRenameV1");
@@ -974,6 +979,9 @@ var updateFilterForDestinationV1Output_1 = require("./updateFilterForDestination
 var updateFunction200Response_1 = require("./updateFunction200Response");
 var updateFunctionV1Input_1 = require("./updateFunctionV1Input");
 var updateFunctionV1Output_1 = require("./updateFunctionV1Output");
+var updateProfilesWarehouseForSpaceWarehouse200Response_1 = require("./updateProfilesWarehouseForSpaceWarehouse200Response");
+var updateProfilesWarehouseForSpaceWarehouseAlphaInput_1 = require("./updateProfilesWarehouseForSpaceWarehouseAlphaInput");
+var updateProfilesWarehouseForSpaceWarehouseAlphaOutput_1 = require("./updateProfilesWarehouseForSpaceWarehouseAlphaOutput");
 var updateReverseEtlModel200Response_1 = require("./updateReverseEtlModel200Response");
 var updateReverseEtlModelInput_1 = require("./updateReverseEtlModelInput");
 var updateReverseEtlModelOutput_1 = require("./updateReverseEtlModelOutput");
@@ -1476,6 +1484,7 @@ var typeMap = {
     PreviewDestinationFilterV1Input: previewDestinationFilterV1Input_1.PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: previewDestinationFilterV1Output_1.PreviewDestinationFilterV1Output,
     ProfilesWarehouse: profilesWarehouse_1.ProfilesWarehouse,
+    ProfilesWarehouse1: profilesWarehouse1_1.ProfilesWarehouse1,
     ProfilesWarehouseAlpha: profilesWarehouseAlpha_1.ProfilesWarehouseAlpha,
     PropertyRenameBeta: propertyRenameBeta_1.PropertyRenameBeta,
     PropertyRenameV1: propertyRenameV1_1.PropertyRenameV1,
@@ -1581,6 +1590,9 @@ var typeMap = {
     UpdateFunction200Response: updateFunction200Response_1.UpdateFunction200Response,
     UpdateFunctionV1Input: updateFunctionV1Input_1.UpdateFunctionV1Input,
     UpdateFunctionV1Output: updateFunctionV1Output_1.UpdateFunctionV1Output,
+    UpdateProfilesWarehouseForSpaceWarehouse200Response: updateProfilesWarehouseForSpaceWarehouse200Response_1.UpdateProfilesWarehouseForSpaceWarehouse200Response,
+    UpdateProfilesWarehouseForSpaceWarehouseAlphaInput: updateProfilesWarehouseForSpaceWarehouseAlphaInput_1.UpdateProfilesWarehouseForSpaceWarehouseAlphaInput,
+    UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput: updateProfilesWarehouseForSpaceWarehouseAlphaOutput_1.UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput,
     UpdateReverseEtlModel200Response: updateReverseEtlModel200Response_1.UpdateReverseEtlModel200Response,
     UpdateReverseEtlModelInput: updateReverseEtlModelInput_1.UpdateReverseEtlModelInput,
     UpdateReverseEtlModelOutput: updateReverseEtlModelOutput_1.UpdateReverseEtlModelOutput,
