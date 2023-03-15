@@ -356,8 +356,6 @@ export * from './regulation';
 export * from './regulationListEntryV1';
 export * from './removeFilterFromDestination200Response';
 export * from './removeFilterFromDestinationV1Output';
-export * from './removeProfilesWarehouseFromSpace200Response';
-export * from './removeProfilesWarehouseFromSpaceAlphaOutput';
 export * from './removeRuleV1';
 export * from './removeRulesFromTrackingPlan200Response';
 export * from './removeRulesFromTrackingPlanV1Output';
