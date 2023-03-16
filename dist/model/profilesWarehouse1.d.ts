@@ -1,6 +1,12 @@
-import { ListVersionsAlphaOutput } from './listVersionsAlphaOutput';
-export declare class ListFunctionVersions200Response {
-    'data'?: ListVersionsAlphaOutput;
+import { Metadata1 } from './metadata1';
+export declare class ProfilesWarehouse1 {
+    'id': string;
+    'spaceId': string;
+    'metadata': Metadata1;
+    'workspaceId': string;
+    'enabled': boolean;
+    'settings': any | null;
+    'schemaName'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

@@ -265,7 +265,6 @@ export * from './listDestinationsV1Output';
 export * from './listFiltersFromDestination200Response';
 export * from './listFiltersFromDestinationV1Output';
 export * from './listFunctionItemV1';
-export * from './listFunctionVersions200Response';
 export * from './listFunctions200Response';
 export * from './listFunctionsV1Output';
 export * from './listInvites200Response';
@@ -318,7 +317,6 @@ export * from './listUsers200Response';
 export * from './listUsersFromUserGroup200Response';
 export * from './listUsersFromUserGroupV1Output';
 export * from './listUsersV1Output';
-export * from './listVersionsAlphaOutput';
 export * from './listWarehouses200Response';
 export * from './listWarehousesV1Output';
 export * from './listWorkspaceRegulations200Response';
@@ -349,6 +347,7 @@ export * from './previewDestinationFilterV1';
 export * from './previewDestinationFilterV1Input';
 export * from './previewDestinationFilterV1Output';
 export * from './profilesWarehouse';
+export * from './profilesWarehouse1';
 export * from './profilesWarehouseAlpha';
 export * from './propertyRenameBeta';
 export * from './propertyRenameV1';
@@ -399,9 +398,6 @@ export * from './replaceUsersInUserGroupV1Output';
 export * from './requestError';
 export * from './requestErrorEnvelope';
 export * from './resourceV1';
-export * from './restoreFunctionVersion200Response';
-export * from './restoreFunctionVersionAlphaInput';
-export * from './restoreFunctionVersionAlphaOutput';
 export * from './reverseEtlModel';
 export * from './reverseEtlModel1';
 export * from './roleV1';
@@ -457,6 +453,9 @@ export * from './updateFilterForDestinationV1Output';
 export * from './updateFunction200Response';
 export * from './updateFunctionV1Input';
 export * from './updateFunctionV1Output';
+export * from './updateProfilesWarehouseForSpaceWarehouse200Response';
+export * from './updateProfilesWarehouseForSpaceWarehouseAlphaInput';
+export * from './updateProfilesWarehouseForSpaceWarehouseAlphaOutput';
 export * from './updateReverseEtlModel200Response';
 export * from './updateReverseEtlModelInput';
 export * from './updateReverseEtlModelOutput';
@@ -501,7 +500,6 @@ export * from './userGroup3';
 export * from './userGroupV1';
 export * from './userV1';
 export * from './usersPerSourceSnapshotV1';
-export * from './version';
 export * from './warehouse';
 export * from './warehouse1';
 export * from './warehouse2';
@@ -791,7 +789,6 @@ import { ListDestinationsV1Output } from './listDestinationsV1Output';
 import { ListFiltersFromDestination200Response } from './listFiltersFromDestination200Response';
 import { ListFiltersFromDestinationV1Output } from './listFiltersFromDestinationV1Output';
 import { ListFunctionItemV1 } from './listFunctionItemV1';
-import { ListFunctionVersions200Response } from './listFunctionVersions200Response';
 import { ListFunctions200Response } from './listFunctions200Response';
 import { ListFunctionsV1Output } from './listFunctionsV1Output';
 import { ListInvites200Response } from './listInvites200Response';
@@ -844,7 +841,6 @@ import { ListUsers200Response } from './listUsers200Response';
 import { ListUsersFromUserGroup200Response } from './listUsersFromUserGroup200Response';
 import { ListUsersFromUserGroupV1Output } from './listUsersFromUserGroupV1Output';
 import { ListUsersV1Output } from './listUsersV1Output';
-import { ListVersionsAlphaOutput } from './listVersionsAlphaOutput';
 import { ListWarehouses200Response } from './listWarehouses200Response';
 import { ListWarehousesV1Output } from './listWarehousesV1Output';
 import { ListWorkspaceRegulations200Response } from './listWorkspaceRegulations200Response';
@@ -875,6 +871,7 @@ import { PreviewDestinationFilterV1 } from './previewDestinationFilterV1';
 import { PreviewDestinationFilterV1Input } from './previewDestinationFilterV1Input';
 import { PreviewDestinationFilterV1Output } from './previewDestinationFilterV1Output';
 import { ProfilesWarehouse } from './profilesWarehouse';
+import { ProfilesWarehouse1 } from './profilesWarehouse1';
 import { ProfilesWarehouseAlpha } from './profilesWarehouseAlpha';
 import { PropertyRenameBeta } from './propertyRenameBeta';
 import { PropertyRenameV1 } from './propertyRenameV1';
@@ -925,9 +922,6 @@ import { ReplaceUsersInUserGroupV1Output } from './replaceUsersInUserGroupV1Outp
 import { RequestError } from './requestError';
 import { RequestErrorEnvelope } from './requestErrorEnvelope';
 import { ResourceV1 } from './resourceV1';
-import { RestoreFunctionVersion200Response } from './restoreFunctionVersion200Response';
-import { RestoreFunctionVersionAlphaInput } from './restoreFunctionVersionAlphaInput';
-import { RestoreFunctionVersionAlphaOutput } from './restoreFunctionVersionAlphaOutput';
 import { ReverseEtlModel } from './reverseEtlModel';
 import { ReverseEtlModel1 } from './reverseEtlModel1';
 import { RoleV1 } from './roleV1';
@@ -983,6 +977,9 @@ import { UpdateFilterForDestinationV1Output } from './updateFilterForDestination
 import { UpdateFunction200Response } from './updateFunction200Response';
 import { UpdateFunctionV1Input } from './updateFunctionV1Input';
 import { UpdateFunctionV1Output } from './updateFunctionV1Output';
+import { UpdateProfilesWarehouseForSpaceWarehouse200Response } from './updateProfilesWarehouseForSpaceWarehouse200Response';
+import { UpdateProfilesWarehouseForSpaceWarehouseAlphaInput } from './updateProfilesWarehouseForSpaceWarehouseAlphaInput';
+import { UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput } from './updateProfilesWarehouseForSpaceWarehouseAlphaOutput';
 import { UpdateReverseEtlModel200Response } from './updateReverseEtlModel200Response';
 import { UpdateReverseEtlModelInput } from './updateReverseEtlModelInput';
 import { UpdateReverseEtlModelOutput } from './updateReverseEtlModelOutput';
@@ -1027,7 +1024,6 @@ import { UserGroup3 } from './userGroup3';
 import { UserGroupV1 } from './userGroupV1';
 import { UserV1 } from './userV1';
 import { UsersPerSourceSnapshotV1 } from './usersPerSourceSnapshotV1';
-import { Version } from './version';
 import { Warehouse } from './warehouse';
 import { Warehouse1 } from './warehouse1';
 import { Warehouse2 } from './warehouse2';
@@ -1499,7 +1495,6 @@ let typeMap: { [index: string]: any } = {
         ListFiltersFromDestination200Response,
     ListFiltersFromDestinationV1Output: ListFiltersFromDestinationV1Output,
     ListFunctionItemV1: ListFunctionItemV1,
-    ListFunctionVersions200Response: ListFunctionVersions200Response,
     ListFunctions200Response: ListFunctions200Response,
     ListFunctionsV1Output: ListFunctionsV1Output,
     ListInvites200Response: ListInvites200Response,
@@ -1562,7 +1557,6 @@ let typeMap: { [index: string]: any } = {
     ListUsersFromUserGroup200Response: ListUsersFromUserGroup200Response,
     ListUsersFromUserGroupV1Output: ListUsersFromUserGroupV1Output,
     ListUsersV1Output: ListUsersV1Output,
-    ListVersionsAlphaOutput: ListVersionsAlphaOutput,
     ListWarehouses200Response: ListWarehouses200Response,
     ListWarehousesV1Output: ListWarehousesV1Output,
     ListWorkspaceRegulations200Response: ListWorkspaceRegulations200Response,
@@ -1593,6 +1587,7 @@ let typeMap: { [index: string]: any } = {
     PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: PreviewDestinationFilterV1Output,
     ProfilesWarehouse: ProfilesWarehouse,
+    ProfilesWarehouse1: ProfilesWarehouse1,
     ProfilesWarehouseAlpha: ProfilesWarehouseAlpha,
     PropertyRenameBeta: PropertyRenameBeta,
     PropertyRenameV1: PropertyRenameV1,
@@ -1662,9 +1657,6 @@ let typeMap: { [index: string]: any } = {
     RequestError: RequestError,
     RequestErrorEnvelope: RequestErrorEnvelope,
     ResourceV1: ResourceV1,
-    RestoreFunctionVersion200Response: RestoreFunctionVersion200Response,
-    RestoreFunctionVersionAlphaInput: RestoreFunctionVersionAlphaInput,
-    RestoreFunctionVersionAlphaOutput: RestoreFunctionVersionAlphaOutput,
     ReverseEtlModel: ReverseEtlModel,
     ReverseEtlModel1: ReverseEtlModel1,
     RoleV1: RoleV1,
@@ -1721,6 +1713,12 @@ let typeMap: { [index: string]: any } = {
     UpdateFunction200Response: UpdateFunction200Response,
     UpdateFunctionV1Input: UpdateFunctionV1Input,
     UpdateFunctionV1Output: UpdateFunctionV1Output,
+    UpdateProfilesWarehouseForSpaceWarehouse200Response:
+        UpdateProfilesWarehouseForSpaceWarehouse200Response,
+    UpdateProfilesWarehouseForSpaceWarehouseAlphaInput:
+        UpdateProfilesWarehouseForSpaceWarehouseAlphaInput,
+    UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput:
+        UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput,
     UpdateReverseEtlModel200Response: UpdateReverseEtlModel200Response,
     UpdateReverseEtlModelInput: UpdateReverseEtlModelInput,
     UpdateReverseEtlModelOutput: UpdateReverseEtlModelOutput,
@@ -1772,7 +1770,6 @@ let typeMap: { [index: string]: any } = {
     UserGroupV1: UserGroupV1,
     UserV1: UserV1,
     UsersPerSourceSnapshotV1: UsersPerSourceSnapshotV1,
-    Version: Version,
     Warehouse: Warehouse,
     Warehouse1: Warehouse1,
     Warehouse2: Warehouse2,

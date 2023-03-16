@@ -1,6 +1,6 @@
-import { Version } from './version';
-export declare class RestoreFunctionVersionAlphaOutput {
-    'version': Version;
+import { UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput } from './updateProfilesWarehouseForSpaceWarehouseAlphaOutput';
+export declare class UpdateProfilesWarehouseForSpaceWarehouse200Response {
+    'data'?: UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

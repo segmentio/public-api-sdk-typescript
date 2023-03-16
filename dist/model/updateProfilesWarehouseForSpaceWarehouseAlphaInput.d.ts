@@ -1,6 +1,8 @@
-import { RestoreFunctionVersionAlphaOutput } from './restoreFunctionVersionAlphaOutput';
-export declare class RestoreFunctionVersion200Response {
-    'data'?: RestoreFunctionVersionAlphaOutput;
+export declare class UpdateProfilesWarehouseForSpaceWarehouseAlphaInput {
+    'name'?: string;
+    'enabled'?: boolean;
+    'settings': any | null;
+    'schemaName'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
