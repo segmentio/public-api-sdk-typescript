@@ -250,6 +250,8 @@ __exportStar(require("./getWorkspace200Response"), exports);
 __exportStar(require("./getWorkspaceV1Output"), exports);
 __exportStar(require("./group"), exports);
 __exportStar(require("./groupSourceSettingsV1"), exports);
+__exportStar(require("./handleWebhookInput"), exports);
+__exportStar(require("./handleWebhookOutput"), exports);
 __exportStar(require("./identify"), exports);
 __exportStar(require("./identifySourceSettingsV1"), exports);
 __exportStar(require("./input"), exports);
@@ -761,6 +763,8 @@ var getWorkspace200Response_1 = require("./getWorkspace200Response");
 var getWorkspaceV1Output_1 = require("./getWorkspaceV1Output");
 var group_1 = require("./group");
 var groupSourceSettingsV1_1 = require("./groupSourceSettingsV1");
+var handleWebhookInput_1 = require("./handleWebhookInput");
+var handleWebhookOutput_1 = require("./handleWebhookOutput");
 var identify_1 = require("./identify");
 var identifySourceSettingsV1_1 = require("./identifySourceSettingsV1");
 var input_1 = require("./input");
@@ -1372,6 +1376,8 @@ var typeMap = {
     GetWorkspaceV1Output: getWorkspaceV1Output_1.GetWorkspaceV1Output,
     Group: group_1.Group,
     GroupSourceSettingsV1: groupSourceSettingsV1_1.GroupSourceSettingsV1,
+    HandleWebhookInput: handleWebhookInput_1.HandleWebhookInput,
+    HandleWebhookOutput: handleWebhookOutput_1.HandleWebhookOutput,
     Identify: identify_1.Identify,
     IdentifySourceSettingsV1: identifySourceSettingsV1_1.IdentifySourceSettingsV1,
     Input: input_1.Input,

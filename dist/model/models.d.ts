@@ -236,6 +236,8 @@ export * from './getWorkspace200Response';
 export * from './getWorkspaceV1Output';
 export * from './group';
 export * from './groupSourceSettingsV1';
+export * from './handleWebhookInput';
+export * from './handleWebhookOutput';
 export * from './identify';
 export * from './identifySourceSettingsV1';
 export * from './input';

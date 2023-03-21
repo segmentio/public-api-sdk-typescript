@@ -235,6 +235,8 @@ export * from './getWorkspace200Response';
 export * from './getWorkspaceV1Output';
 export * from './group';
 export * from './groupSourceSettingsV1';
+export * from './handleWebhookInput';
+export * from './handleWebhookOutput';
 export * from './identify';
 export * from './identifySourceSettingsV1';
 export * from './input';
@@ -759,6 +761,8 @@ import { GetWorkspace200Response } from './getWorkspace200Response';
 import { GetWorkspaceV1Output } from './getWorkspaceV1Output';
 import { Group } from './group';
 import { GroupSourceSettingsV1 } from './groupSourceSettingsV1';
+import { HandleWebhookInput } from './handleWebhookInput';
+import { HandleWebhookOutput } from './handleWebhookOutput';
 import { Identify } from './identify';
 import { IdentifySourceSettingsV1 } from './identifySourceSettingsV1';
 import { Input } from './input';
@@ -1452,6 +1456,8 @@ let typeMap: { [index: string]: any } = {
     GetWorkspaceV1Output: GetWorkspaceV1Output,
     Group: Group,
     GroupSourceSettingsV1: GroupSourceSettingsV1,
+    HandleWebhookInput: HandleWebhookInput,
+    HandleWebhookOutput: HandleWebhookOutput,
     Identify: Identify,
     IdentifySourceSettingsV1: IdentifySourceSettingsV1,
     Input: Input,
