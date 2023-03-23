@@ -194,6 +194,8 @@ export * from './getFilterInDestination200Response';
 export * from './getFilterInDestinationV1Output';
 export * from './getFunction200Response';
 export * from './getFunctionV1Output';
+export * from './getFunctionVersion200Response';
+export * from './getFunctionVersionAlphaOutput';
 export * from './getLatestFromEdgeFunctions200Response';
 export * from './getLatestFromEdgeFunctionsAlphaOutput';
 export * from './getMessagingSubscriptionFailureResponse';
@@ -267,6 +269,8 @@ export * from './listDestinationsV1Output';
 export * from './listFiltersFromDestination200Response';
 export * from './listFiltersFromDestinationV1Output';
 export * from './listFunctionItemV1';
+export * from './listFunctionVersions200Response';
+export * from './listFunctionVersionsAlphaOutput';
 export * from './listFunctions200Response';
 export * from './listFunctionsV1Output';
 export * from './listInvites200Response';
@@ -400,6 +404,9 @@ export * from './replaceUsersInUserGroupV1Output';
 export * from './requestError';
 export * from './requestErrorEnvelope';
 export * from './resourceV1';
+export * from './restoreFunctionVersion200Response';
+export * from './restoreFunctionVersionAlphaInput';
+export * from './restoreFunctionVersionAlphaOutput';
 export * from './reverseEtlModel';
 export * from './reverseEtlModel1';
 export * from './roleV1';
@@ -502,6 +509,8 @@ export * from './userGroup3';
 export * from './userGroupV1';
 export * from './userV1';
 export * from './usersPerSourceSnapshotV1';
+export * from './version';
+export * from './version1';
 export * from './warehouse';
 export * from './warehouse1';
 export * from './warehouse2';
@@ -720,6 +729,8 @@ import { GetFilterInDestination200Response } from './getFilterInDestination200Re
 import { GetFilterInDestinationV1Output } from './getFilterInDestinationV1Output';
 import { GetFunction200Response } from './getFunction200Response';
 import { GetFunctionV1Output } from './getFunctionV1Output';
+import { GetFunctionVersion200Response } from './getFunctionVersion200Response';
+import { GetFunctionVersionAlphaOutput } from './getFunctionVersionAlphaOutput';
 import { GetLatestFromEdgeFunctions200Response } from './getLatestFromEdgeFunctions200Response';
 import { GetLatestFromEdgeFunctionsAlphaOutput } from './getLatestFromEdgeFunctionsAlphaOutput';
 import { GetMessagingSubscriptionFailureResponse } from './getMessagingSubscriptionFailureResponse';
@@ -793,6 +804,8 @@ import { ListDestinationsV1Output } from './listDestinationsV1Output';
 import { ListFiltersFromDestination200Response } from './listFiltersFromDestination200Response';
 import { ListFiltersFromDestinationV1Output } from './listFiltersFromDestinationV1Output';
 import { ListFunctionItemV1 } from './listFunctionItemV1';
+import { ListFunctionVersions200Response } from './listFunctionVersions200Response';
+import { ListFunctionVersionsAlphaOutput } from './listFunctionVersionsAlphaOutput';
 import { ListFunctions200Response } from './listFunctions200Response';
 import { ListFunctionsV1Output } from './listFunctionsV1Output';
 import { ListInvites200Response } from './listInvites200Response';
@@ -926,6 +939,9 @@ import { ReplaceUsersInUserGroupV1Output } from './replaceUsersInUserGroupV1Outp
 import { RequestError } from './requestError';
 import { RequestErrorEnvelope } from './requestErrorEnvelope';
 import { ResourceV1 } from './resourceV1';
+import { RestoreFunctionVersion200Response } from './restoreFunctionVersion200Response';
+import { RestoreFunctionVersionAlphaInput } from './restoreFunctionVersionAlphaInput';
+import { RestoreFunctionVersionAlphaOutput } from './restoreFunctionVersionAlphaOutput';
 import { ReverseEtlModel } from './reverseEtlModel';
 import { ReverseEtlModel1 } from './reverseEtlModel1';
 import { RoleV1 } from './roleV1';
@@ -1028,6 +1044,8 @@ import { UserGroup3 } from './userGroup3';
 import { UserGroupV1 } from './userGroupV1';
 import { UserV1 } from './userV1';
 import { UsersPerSourceSnapshotV1 } from './usersPerSourceSnapshotV1';
+import { Version } from './version';
+import { Version1 } from './version1';
 import { Warehouse } from './warehouse';
 import { Warehouse1 } from './warehouse1';
 import { Warehouse2 } from './warehouse2';
@@ -1409,6 +1427,8 @@ let typeMap: { [index: string]: any } = {
     GetFilterInDestinationV1Output: GetFilterInDestinationV1Output,
     GetFunction200Response: GetFunction200Response,
     GetFunctionV1Output: GetFunctionV1Output,
+    GetFunctionVersion200Response: GetFunctionVersion200Response,
+    GetFunctionVersionAlphaOutput: GetFunctionVersionAlphaOutput,
     GetLatestFromEdgeFunctions200Response:
         GetLatestFromEdgeFunctions200Response,
     GetLatestFromEdgeFunctionsAlphaOutput:
@@ -1501,6 +1521,8 @@ let typeMap: { [index: string]: any } = {
         ListFiltersFromDestination200Response,
     ListFiltersFromDestinationV1Output: ListFiltersFromDestinationV1Output,
     ListFunctionItemV1: ListFunctionItemV1,
+    ListFunctionVersions200Response: ListFunctionVersions200Response,
+    ListFunctionVersionsAlphaOutput: ListFunctionVersionsAlphaOutput,
     ListFunctions200Response: ListFunctions200Response,
     ListFunctionsV1Output: ListFunctionsV1Output,
     ListInvites200Response: ListInvites200Response,
@@ -1663,6 +1685,9 @@ let typeMap: { [index: string]: any } = {
     RequestError: RequestError,
     RequestErrorEnvelope: RequestErrorEnvelope,
     ResourceV1: ResourceV1,
+    RestoreFunctionVersion200Response: RestoreFunctionVersion200Response,
+    RestoreFunctionVersionAlphaInput: RestoreFunctionVersionAlphaInput,
+    RestoreFunctionVersionAlphaOutput: RestoreFunctionVersionAlphaOutput,
     ReverseEtlModel: ReverseEtlModel,
     ReverseEtlModel1: ReverseEtlModel1,
     RoleV1: RoleV1,
@@ -1776,6 +1801,8 @@ let typeMap: { [index: string]: any } = {
     UserGroupV1: UserGroupV1,
     UserV1: UserV1,
     UsersPerSourceSnapshotV1: UsersPerSourceSnapshotV1,
+    Version: Version,
+    Version1: Version1,
     Warehouse: Warehouse,
     Warehouse1: Warehouse1,
     Warehouse2: Warehouse2,

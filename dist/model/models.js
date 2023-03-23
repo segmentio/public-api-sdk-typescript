@@ -209,6 +209,8 @@ __exportStar(require("./getFilterInDestination200Response"), exports);
 __exportStar(require("./getFilterInDestinationV1Output"), exports);
 __exportStar(require("./getFunction200Response"), exports);
 __exportStar(require("./getFunctionV1Output"), exports);
+__exportStar(require("./getFunctionVersion200Response"), exports);
+__exportStar(require("./getFunctionVersionAlphaOutput"), exports);
 __exportStar(require("./getLatestFromEdgeFunctions200Response"), exports);
 __exportStar(require("./getLatestFromEdgeFunctionsAlphaOutput"), exports);
 __exportStar(require("./getMessagingSubscriptionFailureResponse"), exports);
@@ -282,6 +284,8 @@ __exportStar(require("./listDestinationsV1Output"), exports);
 __exportStar(require("./listFiltersFromDestination200Response"), exports);
 __exportStar(require("./listFiltersFromDestinationV1Output"), exports);
 __exportStar(require("./listFunctionItemV1"), exports);
+__exportStar(require("./listFunctionVersions200Response"), exports);
+__exportStar(require("./listFunctionVersionsAlphaOutput"), exports);
 __exportStar(require("./listFunctions200Response"), exports);
 __exportStar(require("./listFunctionsV1Output"), exports);
 __exportStar(require("./listInvites200Response"), exports);
@@ -415,6 +419,9 @@ __exportStar(require("./replaceUsersInUserGroupV1Output"), exports);
 __exportStar(require("./requestError"), exports);
 __exportStar(require("./requestErrorEnvelope"), exports);
 __exportStar(require("./resourceV1"), exports);
+__exportStar(require("./restoreFunctionVersion200Response"), exports);
+__exportStar(require("./restoreFunctionVersionAlphaInput"), exports);
+__exportStar(require("./restoreFunctionVersionAlphaOutput"), exports);
 __exportStar(require("./reverseEtlModel"), exports);
 __exportStar(require("./reverseEtlModel1"), exports);
 __exportStar(require("./roleV1"), exports);
@@ -517,6 +524,8 @@ __exportStar(require("./userGroup3"), exports);
 __exportStar(require("./userGroupV1"), exports);
 __exportStar(require("./userV1"), exports);
 __exportStar(require("./usersPerSourceSnapshotV1"), exports);
+__exportStar(require("./version"), exports);
+__exportStar(require("./version1"), exports);
 __exportStar(require("./warehouse"), exports);
 __exportStar(require("./warehouse1"), exports);
 __exportStar(require("./warehouse2"), exports);
@@ -722,6 +731,8 @@ var getFilterInDestination200Response_1 = require("./getFilterInDestination200Re
 var getFilterInDestinationV1Output_1 = require("./getFilterInDestinationV1Output");
 var getFunction200Response_1 = require("./getFunction200Response");
 var getFunctionV1Output_1 = require("./getFunctionV1Output");
+var getFunctionVersion200Response_1 = require("./getFunctionVersion200Response");
+var getFunctionVersionAlphaOutput_1 = require("./getFunctionVersionAlphaOutput");
 var getLatestFromEdgeFunctions200Response_1 = require("./getLatestFromEdgeFunctions200Response");
 var getLatestFromEdgeFunctionsAlphaOutput_1 = require("./getLatestFromEdgeFunctionsAlphaOutput");
 var getMessagingSubscriptionFailureResponse_1 = require("./getMessagingSubscriptionFailureResponse");
@@ -795,6 +806,8 @@ var listDestinationsV1Output_1 = require("./listDestinationsV1Output");
 var listFiltersFromDestination200Response_1 = require("./listFiltersFromDestination200Response");
 var listFiltersFromDestinationV1Output_1 = require("./listFiltersFromDestinationV1Output");
 var listFunctionItemV1_1 = require("./listFunctionItemV1");
+var listFunctionVersions200Response_1 = require("./listFunctionVersions200Response");
+var listFunctionVersionsAlphaOutput_1 = require("./listFunctionVersionsAlphaOutput");
 var listFunctions200Response_1 = require("./listFunctions200Response");
 var listFunctionsV1Output_1 = require("./listFunctionsV1Output");
 var listInvites200Response_1 = require("./listInvites200Response");
@@ -928,6 +941,9 @@ var replaceUsersInUserGroupV1Output_1 = require("./replaceUsersInUserGroupV1Outp
 var requestError_1 = require("./requestError");
 var requestErrorEnvelope_1 = require("./requestErrorEnvelope");
 var resourceV1_1 = require("./resourceV1");
+var restoreFunctionVersion200Response_1 = require("./restoreFunctionVersion200Response");
+var restoreFunctionVersionAlphaInput_1 = require("./restoreFunctionVersionAlphaInput");
+var restoreFunctionVersionAlphaOutput_1 = require("./restoreFunctionVersionAlphaOutput");
 var reverseEtlModel_1 = require("./reverseEtlModel");
 var reverseEtlModel1_1 = require("./reverseEtlModel1");
 var roleV1_1 = require("./roleV1");
@@ -1030,6 +1046,8 @@ var userGroup3_1 = require("./userGroup3");
 var userGroupV1_1 = require("./userGroupV1");
 var userV1_1 = require("./userV1");
 var usersPerSourceSnapshotV1_1 = require("./usersPerSourceSnapshotV1");
+var version_1 = require("./version");
+var version1_1 = require("./version1");
 var warehouse_1 = require("./warehouse");
 var warehouse1_1 = require("./warehouse1");
 var warehouse2_1 = require("./warehouse2");
@@ -1335,6 +1353,8 @@ var typeMap = {
     GetFilterInDestinationV1Output: getFilterInDestinationV1Output_1.GetFilterInDestinationV1Output,
     GetFunction200Response: getFunction200Response_1.GetFunction200Response,
     GetFunctionV1Output: getFunctionV1Output_1.GetFunctionV1Output,
+    GetFunctionVersion200Response: getFunctionVersion200Response_1.GetFunctionVersion200Response,
+    GetFunctionVersionAlphaOutput: getFunctionVersionAlphaOutput_1.GetFunctionVersionAlphaOutput,
     GetLatestFromEdgeFunctions200Response: getLatestFromEdgeFunctions200Response_1.GetLatestFromEdgeFunctions200Response,
     GetLatestFromEdgeFunctionsAlphaOutput: getLatestFromEdgeFunctionsAlphaOutput_1.GetLatestFromEdgeFunctionsAlphaOutput,
     GetMessagingSubscriptionFailureResponse: getMessagingSubscriptionFailureResponse_1.GetMessagingSubscriptionFailureResponse,
@@ -1408,6 +1428,8 @@ var typeMap = {
     ListFiltersFromDestination200Response: listFiltersFromDestination200Response_1.ListFiltersFromDestination200Response,
     ListFiltersFromDestinationV1Output: listFiltersFromDestinationV1Output_1.ListFiltersFromDestinationV1Output,
     ListFunctionItemV1: listFunctionItemV1_1.ListFunctionItemV1,
+    ListFunctionVersions200Response: listFunctionVersions200Response_1.ListFunctionVersions200Response,
+    ListFunctionVersionsAlphaOutput: listFunctionVersionsAlphaOutput_1.ListFunctionVersionsAlphaOutput,
     ListFunctions200Response: listFunctions200Response_1.ListFunctions200Response,
     ListFunctionsV1Output: listFunctionsV1Output_1.ListFunctionsV1Output,
     ListInvites200Response: listInvites200Response_1.ListInvites200Response,
@@ -1541,6 +1563,9 @@ var typeMap = {
     RequestError: requestError_1.RequestError,
     RequestErrorEnvelope: requestErrorEnvelope_1.RequestErrorEnvelope,
     ResourceV1: resourceV1_1.ResourceV1,
+    RestoreFunctionVersion200Response: restoreFunctionVersion200Response_1.RestoreFunctionVersion200Response,
+    RestoreFunctionVersionAlphaInput: restoreFunctionVersionAlphaInput_1.RestoreFunctionVersionAlphaInput,
+    RestoreFunctionVersionAlphaOutput: restoreFunctionVersionAlphaOutput_1.RestoreFunctionVersionAlphaOutput,
     ReverseEtlModel: reverseEtlModel_1.ReverseEtlModel,
     ReverseEtlModel1: reverseEtlModel1_1.ReverseEtlModel1,
     RoleV1: roleV1_1.RoleV1,
@@ -1643,6 +1668,8 @@ var typeMap = {
     UserGroupV1: userGroupV1_1.UserGroupV1,
     UserV1: userV1_1.UserV1,
     UsersPerSourceSnapshotV1: usersPerSourceSnapshotV1_1.UsersPerSourceSnapshotV1,
+    Version: version_1.Version,
+    Version1: version1_1.Version1,
     Warehouse: warehouse_1.Warehouse,
     Warehouse1: warehouse1_1.Warehouse1,
     Warehouse2: warehouse2_1.Warehouse2,
