@@ -194,6 +194,8 @@ export * from './getFilterInDestination200Response';
 export * from './getFilterInDestinationV1Output';
 export * from './getFunction200Response';
 export * from './getFunctionV1Output';
+export * from './getFunctionVersion200Response';
+export * from './getFunctionVersionAlphaOutput';
 export * from './getLatestFromEdgeFunctions200Response';
 export * from './getLatestFromEdgeFunctionsAlphaOutput';
 export * from './getMessagingSubscriptionFailureResponse';
@@ -235,6 +237,8 @@ export * from './getWorkspace200Response';
 export * from './getWorkspaceV1Output';
 export * from './group';
 export * from './groupSourceSettingsV1';
+export * from './handleWebhookInput';
+export * from './handleWebhookOutput';
 export * from './identify';
 export * from './identifySourceSettingsV1';
 export * from './input';
@@ -265,6 +269,7 @@ export * from './listDestinationsV1Output';
 export * from './listFiltersFromDestination200Response';
 export * from './listFiltersFromDestinationV1Output';
 export * from './listFunctionItemV1';
+export * from './listFunctionVersions200Response';
 export * from './listFunctions200Response';
 export * from './listFunctionsV1Output';
 export * from './listInvites200Response';
@@ -317,6 +322,7 @@ export * from './listUsers200Response';
 export * from './listUsersFromUserGroup200Response';
 export * from './listUsersFromUserGroupV1Output';
 export * from './listUsersV1Output';
+export * from './listVersionsAlphaOutput';
 export * from './listWarehouses200Response';
 export * from './listWarehousesV1Output';
 export * from './listWorkspaceRegulations200Response';
@@ -398,6 +404,9 @@ export * from './replaceUsersInUserGroupV1Output';
 export * from './requestError';
 export * from './requestErrorEnvelope';
 export * from './resourceV1';
+export * from './restoreFunctionVersion200Response';
+export * from './restoreFunctionVersionAlphaInput';
+export * from './restoreFunctionVersionAlphaOutput';
 export * from './reverseEtlModel';
 export * from './reverseEtlModel1';
 export * from './roleV1';
@@ -500,6 +509,8 @@ export * from './userGroup3';
 export * from './userGroupV1';
 export * from './userV1';
 export * from './usersPerSourceSnapshotV1';
+export * from './version';
+export * from './version1';
 export * from './warehouse';
 export * from './warehouse1';
 export * from './warehouse2';
@@ -718,6 +729,8 @@ import { GetFilterInDestination200Response } from './getFilterInDestination200Re
 import { GetFilterInDestinationV1Output } from './getFilterInDestinationV1Output';
 import { GetFunction200Response } from './getFunction200Response';
 import { GetFunctionV1Output } from './getFunctionV1Output';
+import { GetFunctionVersion200Response } from './getFunctionVersion200Response';
+import { GetFunctionVersionAlphaOutput } from './getFunctionVersionAlphaOutput';
 import { GetLatestFromEdgeFunctions200Response } from './getLatestFromEdgeFunctions200Response';
 import { GetLatestFromEdgeFunctionsAlphaOutput } from './getLatestFromEdgeFunctionsAlphaOutput';
 import { GetMessagingSubscriptionFailureResponse } from './getMessagingSubscriptionFailureResponse';
@@ -759,6 +772,8 @@ import { GetWorkspace200Response } from './getWorkspace200Response';
 import { GetWorkspaceV1Output } from './getWorkspaceV1Output';
 import { Group } from './group';
 import { GroupSourceSettingsV1 } from './groupSourceSettingsV1';
+import { HandleWebhookInput } from './handleWebhookInput';
+import { HandleWebhookOutput } from './handleWebhookOutput';
 import { Identify } from './identify';
 import { IdentifySourceSettingsV1 } from './identifySourceSettingsV1';
 import { Input } from './input';
@@ -789,6 +804,7 @@ import { ListDestinationsV1Output } from './listDestinationsV1Output';
 import { ListFiltersFromDestination200Response } from './listFiltersFromDestination200Response';
 import { ListFiltersFromDestinationV1Output } from './listFiltersFromDestinationV1Output';
 import { ListFunctionItemV1 } from './listFunctionItemV1';
+import { ListFunctionVersions200Response } from './listFunctionVersions200Response';
 import { ListFunctions200Response } from './listFunctions200Response';
 import { ListFunctionsV1Output } from './listFunctionsV1Output';
 import { ListInvites200Response } from './listInvites200Response';
@@ -841,6 +857,7 @@ import { ListUsers200Response } from './listUsers200Response';
 import { ListUsersFromUserGroup200Response } from './listUsersFromUserGroup200Response';
 import { ListUsersFromUserGroupV1Output } from './listUsersFromUserGroupV1Output';
 import { ListUsersV1Output } from './listUsersV1Output';
+import { ListVersionsAlphaOutput } from './listVersionsAlphaOutput';
 import { ListWarehouses200Response } from './listWarehouses200Response';
 import { ListWarehousesV1Output } from './listWarehousesV1Output';
 import { ListWorkspaceRegulations200Response } from './listWorkspaceRegulations200Response';
@@ -922,6 +939,9 @@ import { ReplaceUsersInUserGroupV1Output } from './replaceUsersInUserGroupV1Outp
 import { RequestError } from './requestError';
 import { RequestErrorEnvelope } from './requestErrorEnvelope';
 import { ResourceV1 } from './resourceV1';
+import { RestoreFunctionVersion200Response } from './restoreFunctionVersion200Response';
+import { RestoreFunctionVersionAlphaInput } from './restoreFunctionVersionAlphaInput';
+import { RestoreFunctionVersionAlphaOutput } from './restoreFunctionVersionAlphaOutput';
 import { ReverseEtlModel } from './reverseEtlModel';
 import { ReverseEtlModel1 } from './reverseEtlModel1';
 import { RoleV1 } from './roleV1';
@@ -1024,6 +1044,8 @@ import { UserGroup3 } from './userGroup3';
 import { UserGroupV1 } from './userGroupV1';
 import { UserV1 } from './userV1';
 import { UsersPerSourceSnapshotV1 } from './usersPerSourceSnapshotV1';
+import { Version } from './version';
+import { Version1 } from './version1';
 import { Warehouse } from './warehouse';
 import { Warehouse1 } from './warehouse1';
 import { Warehouse2 } from './warehouse2';
@@ -1405,6 +1427,8 @@ let typeMap: { [index: string]: any } = {
     GetFilterInDestinationV1Output: GetFilterInDestinationV1Output,
     GetFunction200Response: GetFunction200Response,
     GetFunctionV1Output: GetFunctionV1Output,
+    GetFunctionVersion200Response: GetFunctionVersion200Response,
+    GetFunctionVersionAlphaOutput: GetFunctionVersionAlphaOutput,
     GetLatestFromEdgeFunctions200Response:
         GetLatestFromEdgeFunctions200Response,
     GetLatestFromEdgeFunctionsAlphaOutput:
@@ -1452,6 +1476,8 @@ let typeMap: { [index: string]: any } = {
     GetWorkspaceV1Output: GetWorkspaceV1Output,
     Group: Group,
     GroupSourceSettingsV1: GroupSourceSettingsV1,
+    HandleWebhookInput: HandleWebhookInput,
+    HandleWebhookOutput: HandleWebhookOutput,
     Identify: Identify,
     IdentifySourceSettingsV1: IdentifySourceSettingsV1,
     Input: Input,
@@ -1495,6 +1521,7 @@ let typeMap: { [index: string]: any } = {
         ListFiltersFromDestination200Response,
     ListFiltersFromDestinationV1Output: ListFiltersFromDestinationV1Output,
     ListFunctionItemV1: ListFunctionItemV1,
+    ListFunctionVersions200Response: ListFunctionVersions200Response,
     ListFunctions200Response: ListFunctions200Response,
     ListFunctionsV1Output: ListFunctionsV1Output,
     ListInvites200Response: ListInvites200Response,
@@ -1557,6 +1584,7 @@ let typeMap: { [index: string]: any } = {
     ListUsersFromUserGroup200Response: ListUsersFromUserGroup200Response,
     ListUsersFromUserGroupV1Output: ListUsersFromUserGroupV1Output,
     ListUsersV1Output: ListUsersV1Output,
+    ListVersionsAlphaOutput: ListVersionsAlphaOutput,
     ListWarehouses200Response: ListWarehouses200Response,
     ListWarehousesV1Output: ListWarehousesV1Output,
     ListWorkspaceRegulations200Response: ListWorkspaceRegulations200Response,
@@ -1657,6 +1685,9 @@ let typeMap: { [index: string]: any } = {
     RequestError: RequestError,
     RequestErrorEnvelope: RequestErrorEnvelope,
     ResourceV1: ResourceV1,
+    RestoreFunctionVersion200Response: RestoreFunctionVersion200Response,
+    RestoreFunctionVersionAlphaInput: RestoreFunctionVersionAlphaInput,
+    RestoreFunctionVersionAlphaOutput: RestoreFunctionVersionAlphaOutput,
     ReverseEtlModel: ReverseEtlModel,
     ReverseEtlModel1: ReverseEtlModel1,
     RoleV1: RoleV1,
@@ -1770,6 +1801,8 @@ let typeMap: { [index: string]: any } = {
     UserGroupV1: UserGroupV1,
     UserV1: UserV1,
     UsersPerSourceSnapshotV1: UsersPerSourceSnapshotV1,
+    Version: Version,
+    Version1: Version1,
     Warehouse: Warehouse,
     Warehouse1: Warehouse1,
     Warehouse2: Warehouse2,
