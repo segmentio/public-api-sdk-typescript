@@ -209,6 +209,8 @@ __exportStar(require("./getFilterInDestination200Response"), exports);
 __exportStar(require("./getFilterInDestinationV1Output"), exports);
 __exportStar(require("./getFunction200Response"), exports);
 __exportStar(require("./getFunctionV1Output"), exports);
+__exportStar(require("./getFunctionVersion200Response"), exports);
+__exportStar(require("./getFunctionVersionAlphaOutput"), exports);
 __exportStar(require("./getLatestFromEdgeFunctions200Response"), exports);
 __exportStar(require("./getLatestFromEdgeFunctionsAlphaOutput"), exports);
 __exportStar(require("./getMessagingSubscriptionFailureResponse"), exports);
@@ -250,6 +252,8 @@ __exportStar(require("./getWorkspace200Response"), exports);
 __exportStar(require("./getWorkspaceV1Output"), exports);
 __exportStar(require("./group"), exports);
 __exportStar(require("./groupSourceSettingsV1"), exports);
+__exportStar(require("./handleWebhookInput"), exports);
+__exportStar(require("./handleWebhookOutput"), exports);
 __exportStar(require("./identify"), exports);
 __exportStar(require("./identifySourceSettingsV1"), exports);
 __exportStar(require("./input"), exports);
@@ -291,6 +295,8 @@ __exportStar(require("./listLabels200Response"), exports);
 __exportStar(require("./listLabels200Response1"), exports);
 __exportStar(require("./listLabelsAlphaOutput"), exports);
 __exportStar(require("./listLabelsV1Output"), exports);
+__exportStar(require("./listProfilesWarehouseInSpace200Response"), exports);
+__exportStar(require("./listProfilesWarehouseInSpaceAlphaOutput"), exports);
 __exportStar(require("./listRegulationsFromSource200Response"), exports);
 __exportStar(require("./listRegulationsFromSourceV1Output"), exports);
 __exportStar(require("./listReverseEtlModels200Response"), exports);
@@ -362,6 +368,7 @@ __exportStar(require("./previewDestinationFilterV1"), exports);
 __exportStar(require("./previewDestinationFilterV1Input"), exports);
 __exportStar(require("./previewDestinationFilterV1Output"), exports);
 __exportStar(require("./profilesWarehouse"), exports);
+__exportStar(require("./profilesWarehouse1"), exports);
 __exportStar(require("./profilesWarehouseAlpha"), exports);
 __exportStar(require("./propertyRenameBeta"), exports);
 __exportStar(require("./propertyRenameV1"), exports);
@@ -372,6 +379,8 @@ __exportStar(require("./regulation"), exports);
 __exportStar(require("./regulationListEntryV1"), exports);
 __exportStar(require("./removeFilterFromDestination200Response"), exports);
 __exportStar(require("./removeFilterFromDestinationV1Output"), exports);
+__exportStar(require("./removeProfilesWarehouseFromSpace200Response"), exports);
+__exportStar(require("./removeProfilesWarehouseFromSpaceAlphaOutput"), exports);
 __exportStar(require("./removeRuleV1"), exports);
 __exportStar(require("./removeRulesFromTrackingPlan200Response"), exports);
 __exportStar(require("./removeRulesFromTrackingPlanV1Output"), exports);
@@ -468,6 +477,9 @@ __exportStar(require("./updateFilterForDestinationV1Output"), exports);
 __exportStar(require("./updateFunction200Response"), exports);
 __exportStar(require("./updateFunctionV1Input"), exports);
 __exportStar(require("./updateFunctionV1Output"), exports);
+__exportStar(require("./updateProfilesWarehouseForSpaceWarehouse200Response"), exports);
+__exportStar(require("./updateProfilesWarehouseForSpaceWarehouseAlphaInput"), exports);
+__exportStar(require("./updateProfilesWarehouseForSpaceWarehouseAlphaOutput"), exports);
 __exportStar(require("./updateReverseEtlModel200Response"), exports);
 __exportStar(require("./updateReverseEtlModelInput"), exports);
 __exportStar(require("./updateReverseEtlModelOutput"), exports);
@@ -513,6 +525,7 @@ __exportStar(require("./userGroupV1"), exports);
 __exportStar(require("./userV1"), exports);
 __exportStar(require("./usersPerSourceSnapshotV1"), exports);
 __exportStar(require("./version"), exports);
+__exportStar(require("./version1"), exports);
 __exportStar(require("./warehouse"), exports);
 __exportStar(require("./warehouse1"), exports);
 __exportStar(require("./warehouse2"), exports);
@@ -718,6 +731,8 @@ var getFilterInDestination200Response_1 = require("./getFilterInDestination200Re
 var getFilterInDestinationV1Output_1 = require("./getFilterInDestinationV1Output");
 var getFunction200Response_1 = require("./getFunction200Response");
 var getFunctionV1Output_1 = require("./getFunctionV1Output");
+var getFunctionVersion200Response_1 = require("./getFunctionVersion200Response");
+var getFunctionVersionAlphaOutput_1 = require("./getFunctionVersionAlphaOutput");
 var getLatestFromEdgeFunctions200Response_1 = require("./getLatestFromEdgeFunctions200Response");
 var getLatestFromEdgeFunctionsAlphaOutput_1 = require("./getLatestFromEdgeFunctionsAlphaOutput");
 var getMessagingSubscriptionFailureResponse_1 = require("./getMessagingSubscriptionFailureResponse");
@@ -759,6 +774,8 @@ var getWorkspace200Response_1 = require("./getWorkspace200Response");
 var getWorkspaceV1Output_1 = require("./getWorkspaceV1Output");
 var group_1 = require("./group");
 var groupSourceSettingsV1_1 = require("./groupSourceSettingsV1");
+var handleWebhookInput_1 = require("./handleWebhookInput");
+var handleWebhookOutput_1 = require("./handleWebhookOutput");
 var identify_1 = require("./identify");
 var identifySourceSettingsV1_1 = require("./identifySourceSettingsV1");
 var input_1 = require("./input");
@@ -800,6 +817,8 @@ var listLabels200Response_1 = require("./listLabels200Response");
 var listLabels200Response1_1 = require("./listLabels200Response1");
 var listLabelsAlphaOutput_1 = require("./listLabelsAlphaOutput");
 var listLabelsV1Output_1 = require("./listLabelsV1Output");
+var listProfilesWarehouseInSpace200Response_1 = require("./listProfilesWarehouseInSpace200Response");
+var listProfilesWarehouseInSpaceAlphaOutput_1 = require("./listProfilesWarehouseInSpaceAlphaOutput");
 var listRegulationsFromSource200Response_1 = require("./listRegulationsFromSource200Response");
 var listRegulationsFromSourceV1Output_1 = require("./listRegulationsFromSourceV1Output");
 var listReverseEtlModels200Response_1 = require("./listReverseEtlModels200Response");
@@ -871,6 +890,7 @@ var previewDestinationFilterV1_1 = require("./previewDestinationFilterV1");
 var previewDestinationFilterV1Input_1 = require("./previewDestinationFilterV1Input");
 var previewDestinationFilterV1Output_1 = require("./previewDestinationFilterV1Output");
 var profilesWarehouse_1 = require("./profilesWarehouse");
+var profilesWarehouse1_1 = require("./profilesWarehouse1");
 var profilesWarehouseAlpha_1 = require("./profilesWarehouseAlpha");
 var propertyRenameBeta_1 = require("./propertyRenameBeta");
 var propertyRenameV1_1 = require("./propertyRenameV1");
@@ -881,6 +901,8 @@ var regulation_1 = require("./regulation");
 var regulationListEntryV1_1 = require("./regulationListEntryV1");
 var removeFilterFromDestination200Response_1 = require("./removeFilterFromDestination200Response");
 var removeFilterFromDestinationV1Output_1 = require("./removeFilterFromDestinationV1Output");
+var removeProfilesWarehouseFromSpace200Response_1 = require("./removeProfilesWarehouseFromSpace200Response");
+var removeProfilesWarehouseFromSpaceAlphaOutput_1 = require("./removeProfilesWarehouseFromSpaceAlphaOutput");
 var removeRuleV1_1 = require("./removeRuleV1");
 var removeRulesFromTrackingPlan200Response_1 = require("./removeRulesFromTrackingPlan200Response");
 var removeRulesFromTrackingPlanV1Output_1 = require("./removeRulesFromTrackingPlanV1Output");
@@ -977,6 +999,9 @@ var updateFilterForDestinationV1Output_1 = require("./updateFilterForDestination
 var updateFunction200Response_1 = require("./updateFunction200Response");
 var updateFunctionV1Input_1 = require("./updateFunctionV1Input");
 var updateFunctionV1Output_1 = require("./updateFunctionV1Output");
+var updateProfilesWarehouseForSpaceWarehouse200Response_1 = require("./updateProfilesWarehouseForSpaceWarehouse200Response");
+var updateProfilesWarehouseForSpaceWarehouseAlphaInput_1 = require("./updateProfilesWarehouseForSpaceWarehouseAlphaInput");
+var updateProfilesWarehouseForSpaceWarehouseAlphaOutput_1 = require("./updateProfilesWarehouseForSpaceWarehouseAlphaOutput");
 var updateReverseEtlModel200Response_1 = require("./updateReverseEtlModel200Response");
 var updateReverseEtlModelInput_1 = require("./updateReverseEtlModelInput");
 var updateReverseEtlModelOutput_1 = require("./updateReverseEtlModelOutput");
@@ -1022,6 +1047,7 @@ var userGroupV1_1 = require("./userGroupV1");
 var userV1_1 = require("./userV1");
 var usersPerSourceSnapshotV1_1 = require("./usersPerSourceSnapshotV1");
 var version_1 = require("./version");
+var version1_1 = require("./version1");
 var warehouse_1 = require("./warehouse");
 var warehouse1_1 = require("./warehouse1");
 var warehouse2_1 = require("./warehouse2");
@@ -1109,6 +1135,7 @@ var enumsMap = {
     'Regulation.OverallStatusEnum': regulation_1.Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': regulationListEntryV1_1.RegulationListEntryV1.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum': removeFilterFromDestinationV1Output_1.RemoveFilterFromDestinationV1Output.StatusEnum,
+    'RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum': removeProfilesWarehouseFromSpaceAlphaOutput_1.RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum,
     'RemoveRuleV1.TypeEnum': removeRuleV1_1.RemoveRuleV1.TypeEnum,
     'RemoveRulesFromTrackingPlanV1Output.StatusEnum': removeRulesFromTrackingPlanV1Output_1.RemoveRulesFromTrackingPlanV1Output.StatusEnum,
     'RemoveSourceConnectionFromWarehouseV1Output.StatusEnum': removeSourceConnectionFromWarehouseV1Output_1.RemoveSourceConnectionFromWarehouseV1Output.StatusEnum,
@@ -1326,6 +1353,8 @@ var typeMap = {
     GetFilterInDestinationV1Output: getFilterInDestinationV1Output_1.GetFilterInDestinationV1Output,
     GetFunction200Response: getFunction200Response_1.GetFunction200Response,
     GetFunctionV1Output: getFunctionV1Output_1.GetFunctionV1Output,
+    GetFunctionVersion200Response: getFunctionVersion200Response_1.GetFunctionVersion200Response,
+    GetFunctionVersionAlphaOutput: getFunctionVersionAlphaOutput_1.GetFunctionVersionAlphaOutput,
     GetLatestFromEdgeFunctions200Response: getLatestFromEdgeFunctions200Response_1.GetLatestFromEdgeFunctions200Response,
     GetLatestFromEdgeFunctionsAlphaOutput: getLatestFromEdgeFunctionsAlphaOutput_1.GetLatestFromEdgeFunctionsAlphaOutput,
     GetMessagingSubscriptionFailureResponse: getMessagingSubscriptionFailureResponse_1.GetMessagingSubscriptionFailureResponse,
@@ -1367,6 +1396,8 @@ var typeMap = {
     GetWorkspaceV1Output: getWorkspaceV1Output_1.GetWorkspaceV1Output,
     Group: group_1.Group,
     GroupSourceSettingsV1: groupSourceSettingsV1_1.GroupSourceSettingsV1,
+    HandleWebhookInput: handleWebhookInput_1.HandleWebhookInput,
+    HandleWebhookOutput: handleWebhookOutput_1.HandleWebhookOutput,
     Identify: identify_1.Identify,
     IdentifySourceSettingsV1: identifySourceSettingsV1_1.IdentifySourceSettingsV1,
     Input: input_1.Input,
@@ -1408,6 +1439,8 @@ var typeMap = {
     ListLabels200Response1: listLabels200Response1_1.ListLabels200Response1,
     ListLabelsAlphaOutput: listLabelsAlphaOutput_1.ListLabelsAlphaOutput,
     ListLabelsV1Output: listLabelsV1Output_1.ListLabelsV1Output,
+    ListProfilesWarehouseInSpace200Response: listProfilesWarehouseInSpace200Response_1.ListProfilesWarehouseInSpace200Response,
+    ListProfilesWarehouseInSpaceAlphaOutput: listProfilesWarehouseInSpaceAlphaOutput_1.ListProfilesWarehouseInSpaceAlphaOutput,
     ListRegulationsFromSource200Response: listRegulationsFromSource200Response_1.ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: listRegulationsFromSourceV1Output_1.ListRegulationsFromSourceV1Output,
     ListReverseEtlModels200Response: listReverseEtlModels200Response_1.ListReverseEtlModels200Response,
@@ -1479,6 +1512,7 @@ var typeMap = {
     PreviewDestinationFilterV1Input: previewDestinationFilterV1Input_1.PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: previewDestinationFilterV1Output_1.PreviewDestinationFilterV1Output,
     ProfilesWarehouse: profilesWarehouse_1.ProfilesWarehouse,
+    ProfilesWarehouse1: profilesWarehouse1_1.ProfilesWarehouse1,
     ProfilesWarehouseAlpha: profilesWarehouseAlpha_1.ProfilesWarehouseAlpha,
     PropertyRenameBeta: propertyRenameBeta_1.PropertyRenameBeta,
     PropertyRenameV1: propertyRenameV1_1.PropertyRenameV1,
@@ -1489,6 +1523,8 @@ var typeMap = {
     RegulationListEntryV1: regulationListEntryV1_1.RegulationListEntryV1,
     RemoveFilterFromDestination200Response: removeFilterFromDestination200Response_1.RemoveFilterFromDestination200Response,
     RemoveFilterFromDestinationV1Output: removeFilterFromDestinationV1Output_1.RemoveFilterFromDestinationV1Output,
+    RemoveProfilesWarehouseFromSpace200Response: removeProfilesWarehouseFromSpace200Response_1.RemoveProfilesWarehouseFromSpace200Response,
+    RemoveProfilesWarehouseFromSpaceAlphaOutput: removeProfilesWarehouseFromSpaceAlphaOutput_1.RemoveProfilesWarehouseFromSpaceAlphaOutput,
     RemoveRuleV1: removeRuleV1_1.RemoveRuleV1,
     RemoveRulesFromTrackingPlan200Response: removeRulesFromTrackingPlan200Response_1.RemoveRulesFromTrackingPlan200Response,
     RemoveRulesFromTrackingPlanV1Output: removeRulesFromTrackingPlanV1Output_1.RemoveRulesFromTrackingPlanV1Output,
@@ -1585,6 +1621,9 @@ var typeMap = {
     UpdateFunction200Response: updateFunction200Response_1.UpdateFunction200Response,
     UpdateFunctionV1Input: updateFunctionV1Input_1.UpdateFunctionV1Input,
     UpdateFunctionV1Output: updateFunctionV1Output_1.UpdateFunctionV1Output,
+    UpdateProfilesWarehouseForSpaceWarehouse200Response: updateProfilesWarehouseForSpaceWarehouse200Response_1.UpdateProfilesWarehouseForSpaceWarehouse200Response,
+    UpdateProfilesWarehouseForSpaceWarehouseAlphaInput: updateProfilesWarehouseForSpaceWarehouseAlphaInput_1.UpdateProfilesWarehouseForSpaceWarehouseAlphaInput,
+    UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput: updateProfilesWarehouseForSpaceWarehouseAlphaOutput_1.UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput,
     UpdateReverseEtlModel200Response: updateReverseEtlModel200Response_1.UpdateReverseEtlModel200Response,
     UpdateReverseEtlModelInput: updateReverseEtlModelInput_1.UpdateReverseEtlModelInput,
     UpdateReverseEtlModelOutput: updateReverseEtlModelOutput_1.UpdateReverseEtlModelOutput,
@@ -1630,6 +1669,7 @@ var typeMap = {
     UserV1: userV1_1.UserV1,
     UsersPerSourceSnapshotV1: usersPerSourceSnapshotV1_1.UsersPerSourceSnapshotV1,
     Version: version_1.Version,
+    Version1: version1_1.Version1,
     Warehouse: warehouse_1.Warehouse,
     Warehouse1: warehouse1_1.Warehouse1,
     Warehouse2: warehouse2_1.Warehouse2,

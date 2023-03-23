@@ -194,6 +194,8 @@ export * from './getFilterInDestination200Response';
 export * from './getFilterInDestinationV1Output';
 export * from './getFunction200Response';
 export * from './getFunctionV1Output';
+export * from './getFunctionVersion200Response';
+export * from './getFunctionVersionAlphaOutput';
 export * from './getLatestFromEdgeFunctions200Response';
 export * from './getLatestFromEdgeFunctionsAlphaOutput';
 export * from './getMessagingSubscriptionFailureResponse';
@@ -235,6 +237,8 @@ export * from './getWorkspace200Response';
 export * from './getWorkspaceV1Output';
 export * from './group';
 export * from './groupSourceSettingsV1';
+export * from './handleWebhookInput';
+export * from './handleWebhookOutput';
 export * from './identify';
 export * from './identifySourceSettingsV1';
 export * from './input';
@@ -276,6 +280,8 @@ export * from './listLabels200Response';
 export * from './listLabels200Response1';
 export * from './listLabelsAlphaOutput';
 export * from './listLabelsV1Output';
+export * from './listProfilesWarehouseInSpace200Response';
+export * from './listProfilesWarehouseInSpaceAlphaOutput';
 export * from './listRegulationsFromSource200Response';
 export * from './listRegulationsFromSourceV1Output';
 export * from './listReverseEtlModels200Response';
@@ -347,6 +353,7 @@ export * from './previewDestinationFilterV1';
 export * from './previewDestinationFilterV1Input';
 export * from './previewDestinationFilterV1Output';
 export * from './profilesWarehouse';
+export * from './profilesWarehouse1';
 export * from './profilesWarehouseAlpha';
 export * from './propertyRenameBeta';
 export * from './propertyRenameV1';
@@ -357,6 +364,8 @@ export * from './regulation';
 export * from './regulationListEntryV1';
 export * from './removeFilterFromDestination200Response';
 export * from './removeFilterFromDestinationV1Output';
+export * from './removeProfilesWarehouseFromSpace200Response';
+export * from './removeProfilesWarehouseFromSpaceAlphaOutput';
 export * from './removeRuleV1';
 export * from './removeRulesFromTrackingPlan200Response';
 export * from './removeRulesFromTrackingPlanV1Output';
@@ -453,6 +462,9 @@ export * from './updateFilterForDestinationV1Output';
 export * from './updateFunction200Response';
 export * from './updateFunctionV1Input';
 export * from './updateFunctionV1Output';
+export * from './updateProfilesWarehouseForSpaceWarehouse200Response';
+export * from './updateProfilesWarehouseForSpaceWarehouseAlphaInput';
+export * from './updateProfilesWarehouseForSpaceWarehouseAlphaOutput';
 export * from './updateReverseEtlModel200Response';
 export * from './updateReverseEtlModelInput';
 export * from './updateReverseEtlModelOutput';
@@ -498,6 +510,7 @@ export * from './userGroupV1';
 export * from './userV1';
 export * from './usersPerSourceSnapshotV1';
 export * from './version';
+export * from './version1';
 export * from './warehouse';
 export * from './warehouse1';
 export * from './warehouse2';
@@ -716,6 +729,8 @@ import { GetFilterInDestination200Response } from './getFilterInDestination200Re
 import { GetFilterInDestinationV1Output } from './getFilterInDestinationV1Output';
 import { GetFunction200Response } from './getFunction200Response';
 import { GetFunctionV1Output } from './getFunctionV1Output';
+import { GetFunctionVersion200Response } from './getFunctionVersion200Response';
+import { GetFunctionVersionAlphaOutput } from './getFunctionVersionAlphaOutput';
 import { GetLatestFromEdgeFunctions200Response } from './getLatestFromEdgeFunctions200Response';
 import { GetLatestFromEdgeFunctionsAlphaOutput } from './getLatestFromEdgeFunctionsAlphaOutput';
 import { GetMessagingSubscriptionFailureResponse } from './getMessagingSubscriptionFailureResponse';
@@ -757,6 +772,8 @@ import { GetWorkspace200Response } from './getWorkspace200Response';
 import { GetWorkspaceV1Output } from './getWorkspaceV1Output';
 import { Group } from './group';
 import { GroupSourceSettingsV1 } from './groupSourceSettingsV1';
+import { HandleWebhookInput } from './handleWebhookInput';
+import { HandleWebhookOutput } from './handleWebhookOutput';
 import { Identify } from './identify';
 import { IdentifySourceSettingsV1 } from './identifySourceSettingsV1';
 import { Input } from './input';
@@ -798,6 +815,8 @@ import { ListLabels200Response } from './listLabels200Response';
 import { ListLabels200Response1 } from './listLabels200Response1';
 import { ListLabelsAlphaOutput } from './listLabelsAlphaOutput';
 import { ListLabelsV1Output } from './listLabelsV1Output';
+import { ListProfilesWarehouseInSpace200Response } from './listProfilesWarehouseInSpace200Response';
+import { ListProfilesWarehouseInSpaceAlphaOutput } from './listProfilesWarehouseInSpaceAlphaOutput';
 import { ListRegulationsFromSource200Response } from './listRegulationsFromSource200Response';
 import { ListRegulationsFromSourceV1Output } from './listRegulationsFromSourceV1Output';
 import { ListReverseEtlModels200Response } from './listReverseEtlModels200Response';
@@ -869,6 +888,7 @@ import { PreviewDestinationFilterV1 } from './previewDestinationFilterV1';
 import { PreviewDestinationFilterV1Input } from './previewDestinationFilterV1Input';
 import { PreviewDestinationFilterV1Output } from './previewDestinationFilterV1Output';
 import { ProfilesWarehouse } from './profilesWarehouse';
+import { ProfilesWarehouse1 } from './profilesWarehouse1';
 import { ProfilesWarehouseAlpha } from './profilesWarehouseAlpha';
 import { PropertyRenameBeta } from './propertyRenameBeta';
 import { PropertyRenameV1 } from './propertyRenameV1';
@@ -879,6 +899,8 @@ import { Regulation } from './regulation';
 import { RegulationListEntryV1 } from './regulationListEntryV1';
 import { RemoveFilterFromDestination200Response } from './removeFilterFromDestination200Response';
 import { RemoveFilterFromDestinationV1Output } from './removeFilterFromDestinationV1Output';
+import { RemoveProfilesWarehouseFromSpace200Response } from './removeProfilesWarehouseFromSpace200Response';
+import { RemoveProfilesWarehouseFromSpaceAlphaOutput } from './removeProfilesWarehouseFromSpaceAlphaOutput';
 import { RemoveRuleV1 } from './removeRuleV1';
 import { RemoveRulesFromTrackingPlan200Response } from './removeRulesFromTrackingPlan200Response';
 import { RemoveRulesFromTrackingPlanV1Output } from './removeRulesFromTrackingPlanV1Output';
@@ -975,6 +997,9 @@ import { UpdateFilterForDestinationV1Output } from './updateFilterForDestination
 import { UpdateFunction200Response } from './updateFunction200Response';
 import { UpdateFunctionV1Input } from './updateFunctionV1Input';
 import { UpdateFunctionV1Output } from './updateFunctionV1Output';
+import { UpdateProfilesWarehouseForSpaceWarehouse200Response } from './updateProfilesWarehouseForSpaceWarehouse200Response';
+import { UpdateProfilesWarehouseForSpaceWarehouseAlphaInput } from './updateProfilesWarehouseForSpaceWarehouseAlphaInput';
+import { UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput } from './updateProfilesWarehouseForSpaceWarehouseAlphaOutput';
 import { UpdateReverseEtlModel200Response } from './updateReverseEtlModel200Response';
 import { UpdateReverseEtlModelInput } from './updateReverseEtlModelInput';
 import { UpdateReverseEtlModelOutput } from './updateReverseEtlModelOutput';
@@ -1020,6 +1045,7 @@ import { UserGroupV1 } from './userGroupV1';
 import { UserV1 } from './userV1';
 import { UsersPerSourceSnapshotV1 } from './usersPerSourceSnapshotV1';
 import { Version } from './version';
+import { Version1 } from './version1';
 import { Warehouse } from './warehouse';
 import { Warehouse1 } from './warehouse1';
 import { Warehouse2 } from './warehouse2';
@@ -1144,6 +1170,8 @@ let enumsMap: { [index: string]: any } = {
     'RegulationListEntryV1.StatusEnum': RegulationListEntryV1.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum':
         RemoveFilterFromDestinationV1Output.StatusEnum,
+    'RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum':
+        RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum,
     'RemoveRuleV1.TypeEnum': RemoveRuleV1.TypeEnum,
     'RemoveRulesFromTrackingPlanV1Output.StatusEnum':
         RemoveRulesFromTrackingPlanV1Output.StatusEnum,
@@ -1399,6 +1427,8 @@ let typeMap: { [index: string]: any } = {
     GetFilterInDestinationV1Output: GetFilterInDestinationV1Output,
     GetFunction200Response: GetFunction200Response,
     GetFunctionV1Output: GetFunctionV1Output,
+    GetFunctionVersion200Response: GetFunctionVersion200Response,
+    GetFunctionVersionAlphaOutput: GetFunctionVersionAlphaOutput,
     GetLatestFromEdgeFunctions200Response:
         GetLatestFromEdgeFunctions200Response,
     GetLatestFromEdgeFunctionsAlphaOutput:
@@ -1446,6 +1476,8 @@ let typeMap: { [index: string]: any } = {
     GetWorkspaceV1Output: GetWorkspaceV1Output,
     Group: Group,
     GroupSourceSettingsV1: GroupSourceSettingsV1,
+    HandleWebhookInput: HandleWebhookInput,
+    HandleWebhookOutput: HandleWebhookOutput,
     Identify: Identify,
     IdentifySourceSettingsV1: IdentifySourceSettingsV1,
     Input: Input,
@@ -1500,6 +1532,10 @@ let typeMap: { [index: string]: any } = {
     ListLabels200Response1: ListLabels200Response1,
     ListLabelsAlphaOutput: ListLabelsAlphaOutput,
     ListLabelsV1Output: ListLabelsV1Output,
+    ListProfilesWarehouseInSpace200Response:
+        ListProfilesWarehouseInSpace200Response,
+    ListProfilesWarehouseInSpaceAlphaOutput:
+        ListProfilesWarehouseInSpaceAlphaOutput,
     ListRegulationsFromSource200Response: ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: ListRegulationsFromSourceV1Output,
     ListReverseEtlModels200Response: ListReverseEtlModels200Response,
@@ -1579,6 +1615,7 @@ let typeMap: { [index: string]: any } = {
     PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: PreviewDestinationFilterV1Output,
     ProfilesWarehouse: ProfilesWarehouse,
+    ProfilesWarehouse1: ProfilesWarehouse1,
     ProfilesWarehouseAlpha: ProfilesWarehouseAlpha,
     PropertyRenameBeta: PropertyRenameBeta,
     PropertyRenameV1: PropertyRenameV1,
@@ -1590,6 +1627,10 @@ let typeMap: { [index: string]: any } = {
     RemoveFilterFromDestination200Response:
         RemoveFilterFromDestination200Response,
     RemoveFilterFromDestinationV1Output: RemoveFilterFromDestinationV1Output,
+    RemoveProfilesWarehouseFromSpace200Response:
+        RemoveProfilesWarehouseFromSpace200Response,
+    RemoveProfilesWarehouseFromSpaceAlphaOutput:
+        RemoveProfilesWarehouseFromSpaceAlphaOutput,
     RemoveRuleV1: RemoveRuleV1,
     RemoveRulesFromTrackingPlan200Response:
         RemoveRulesFromTrackingPlan200Response,
@@ -1703,6 +1744,12 @@ let typeMap: { [index: string]: any } = {
     UpdateFunction200Response: UpdateFunction200Response,
     UpdateFunctionV1Input: UpdateFunctionV1Input,
     UpdateFunctionV1Output: UpdateFunctionV1Output,
+    UpdateProfilesWarehouseForSpaceWarehouse200Response:
+        UpdateProfilesWarehouseForSpaceWarehouse200Response,
+    UpdateProfilesWarehouseForSpaceWarehouseAlphaInput:
+        UpdateProfilesWarehouseForSpaceWarehouseAlphaInput,
+    UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput:
+        UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput,
     UpdateReverseEtlModel200Response: UpdateReverseEtlModel200Response,
     UpdateReverseEtlModelInput: UpdateReverseEtlModelInput,
     UpdateReverseEtlModelOutput: UpdateReverseEtlModelOutput,
@@ -1755,6 +1802,7 @@ let typeMap: { [index: string]: any } = {
     UserV1: UserV1,
     UsersPerSourceSnapshotV1: UsersPerSourceSnapshotV1,
     Version: Version,
+    Version1: Version1,
     Warehouse: Warehouse,
     Warehouse1: Warehouse1,
     Warehouse2: Warehouse2,

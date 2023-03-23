@@ -14,6 +14,11 @@ var ListVersionsAlphaOutput = (function () {
             baseName: 'versions',
             type: 'Array<Version>',
         },
+        {
+            name: 'pagination',
+            baseName: 'pagination',
+            type: 'Pagination',
+        },
     ];
     return ListVersionsAlphaOutput;
 }());

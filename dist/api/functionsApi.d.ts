@@ -5,6 +5,7 @@ import { CreateFunctionDeployment200Response } from '../model/createFunctionDepl
 import { CreateFunctionV1Input } from '../model/createFunctionV1Input';
 import { DeleteFunction200Response } from '../model/deleteFunction200Response';
 import { GetFunction200Response } from '../model/getFunction200Response';
+import { GetFunctionVersion200Response } from '../model/getFunctionVersion200Response';
 import { ListFunctionVersions200Response } from '../model/listFunctionVersions200Response';
 import { ListFunctions200Response } from '../model/listFunctions200Response';
 import { PaginationInput } from '../model/paginationInput';
@@ -67,7 +68,15 @@ export declare class FunctionsApi {
         response: http.IncomingMessage;
         body: GetFunction200Response;
     }>;
-    listFunctionVersions(functionId: string, options?: {
+    getFunctionVersion(functionId: string, versionId: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: GetFunctionVersion200Response;
+    }>;
+    listFunctionVersions(functionId: string, pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
