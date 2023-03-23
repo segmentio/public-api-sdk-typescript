@@ -12,7 +12,7 @@ var ListFunctionVersions200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'ListVersionsAlphaOutput',
+            type: 'ListFunctionVersionsAlphaOutput',
         },
     ];
     return ListFunctionVersions200Response;

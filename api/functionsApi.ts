@@ -727,7 +727,7 @@ export class FunctionsApi {
         });
     }
     /**
-     * Lists versions for a Functions in a Workspace.    • In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
+     * Lists versions for a Function in a Workspace.    • In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
      * @summary List Function Versions
      * @param functionId
      * @param pagination Pagination parameters.  This parameter exists in alpha.
