@@ -1,6 +1,6 @@
-import { ListVersionsAlphaOutput } from './listVersionsAlphaOutput';
+import { ListFunctionVersionsAlphaOutput } from './listFunctionVersionsAlphaOutput';
 export declare class ListFunctionVersions200Response {
-    'data'?: ListVersionsAlphaOutput;
+    'data'?: ListFunctionVersionsAlphaOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

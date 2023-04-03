@@ -17,7 +17,7 @@ import { Version } from './version';
 /**
  * Lists Versions of a Function.
  */
-export class ListVersionsAlphaOutput {
+export class ListFunctionVersionsAlphaOutput {
     /**
      * An array of Functions.
      */
@@ -44,6 +44,6 @@ export class ListVersionsAlphaOutput {
     ];
 
     static getAttributeTypeMap() {
-        return ListVersionsAlphaOutput.attributeTypeMap;
+        return ListFunctionVersionsAlphaOutput.attributeTypeMap;
     }
 }

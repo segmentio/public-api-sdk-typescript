@@ -270,6 +270,7 @@ export * from './listFiltersFromDestination200Response';
 export * from './listFiltersFromDestinationV1Output';
 export * from './listFunctionItemV1';
 export * from './listFunctionVersions200Response';
+export * from './listFunctionVersionsAlphaOutput';
 export * from './listFunctions200Response';
 export * from './listFunctionsV1Output';
 export * from './listInvites200Response';
@@ -322,7 +323,6 @@ export * from './listUsers200Response';
 export * from './listUsersFromUserGroup200Response';
 export * from './listUsersFromUserGroupV1Output';
 export * from './listUsersV1Output';
-export * from './listVersionsAlphaOutput';
 export * from './listWarehouses200Response';
 export * from './listWarehousesV1Output';
 export * from './listWorkspaceRegulations200Response';
@@ -805,6 +805,7 @@ import { ListFiltersFromDestination200Response } from './listFiltersFromDestinat
 import { ListFiltersFromDestinationV1Output } from './listFiltersFromDestinationV1Output';
 import { ListFunctionItemV1 } from './listFunctionItemV1';
 import { ListFunctionVersions200Response } from './listFunctionVersions200Response';
+import { ListFunctionVersionsAlphaOutput } from './listFunctionVersionsAlphaOutput';
 import { ListFunctions200Response } from './listFunctions200Response';
 import { ListFunctionsV1Output } from './listFunctionsV1Output';
 import { ListInvites200Response } from './listInvites200Response';
@@ -857,7 +858,6 @@ import { ListUsers200Response } from './listUsers200Response';
 import { ListUsersFromUserGroup200Response } from './listUsersFromUserGroup200Response';
 import { ListUsersFromUserGroupV1Output } from './listUsersFromUserGroupV1Output';
 import { ListUsersV1Output } from './listUsersV1Output';
-import { ListVersionsAlphaOutput } from './listVersionsAlphaOutput';
 import { ListWarehouses200Response } from './listWarehouses200Response';
 import { ListWarehousesV1Output } from './listWarehousesV1Output';
 import { ListWorkspaceRegulations200Response } from './listWorkspaceRegulations200Response';
@@ -1522,6 +1522,7 @@ let typeMap: { [index: string]: any } = {
     ListFiltersFromDestinationV1Output: ListFiltersFromDestinationV1Output,
     ListFunctionItemV1: ListFunctionItemV1,
     ListFunctionVersions200Response: ListFunctionVersions200Response,
+    ListFunctionVersionsAlphaOutput: ListFunctionVersionsAlphaOutput,
     ListFunctions200Response: ListFunctions200Response,
     ListFunctionsV1Output: ListFunctionsV1Output,
     ListInvites200Response: ListInvites200Response,
@@ -1584,7 +1585,6 @@ let typeMap: { [index: string]: any } = {
     ListUsersFromUserGroup200Response: ListUsersFromUserGroup200Response,
     ListUsersFromUserGroupV1Output: ListUsersFromUserGroupV1Output,
     ListUsersV1Output: ListUsersV1Output,
-    ListVersionsAlphaOutput: ListVersionsAlphaOutput,
     ListWarehouses200Response: ListWarehouses200Response,
     ListWarehousesV1Output: ListWarehousesV1Output,
     ListWorkspaceRegulations200Response: ListWorkspaceRegulations200Response,

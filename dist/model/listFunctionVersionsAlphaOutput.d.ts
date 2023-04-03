@@ -1,6 +1,6 @@
 import { Pagination } from './pagination';
 import { Version } from './version';
-export declare class ListVersionsAlphaOutput {
+export declare class ListFunctionVersionsAlphaOutput {
     'versions': Array<Version>;
     'pagination': Pagination;
     static discriminator: string | undefined;

@@ -285,6 +285,7 @@ __exportStar(require("./listFiltersFromDestination200Response"), exports);
 __exportStar(require("./listFiltersFromDestinationV1Output"), exports);
 __exportStar(require("./listFunctionItemV1"), exports);
 __exportStar(require("./listFunctionVersions200Response"), exports);
+__exportStar(require("./listFunctionVersionsAlphaOutput"), exports);
 __exportStar(require("./listFunctions200Response"), exports);
 __exportStar(require("./listFunctionsV1Output"), exports);
 __exportStar(require("./listInvites200Response"), exports);
@@ -337,7 +338,6 @@ __exportStar(require("./listUsers200Response"), exports);
 __exportStar(require("./listUsersFromUserGroup200Response"), exports);
 __exportStar(require("./listUsersFromUserGroupV1Output"), exports);
 __exportStar(require("./listUsersV1Output"), exports);
-__exportStar(require("./listVersionsAlphaOutput"), exports);
 __exportStar(require("./listWarehouses200Response"), exports);
 __exportStar(require("./listWarehousesV1Output"), exports);
 __exportStar(require("./listWorkspaceRegulations200Response"), exports);
@@ -807,6 +807,7 @@ var listFiltersFromDestination200Response_1 = require("./listFiltersFromDestinat
 var listFiltersFromDestinationV1Output_1 = require("./listFiltersFromDestinationV1Output");
 var listFunctionItemV1_1 = require("./listFunctionItemV1");
 var listFunctionVersions200Response_1 = require("./listFunctionVersions200Response");
+var listFunctionVersionsAlphaOutput_1 = require("./listFunctionVersionsAlphaOutput");
 var listFunctions200Response_1 = require("./listFunctions200Response");
 var listFunctionsV1Output_1 = require("./listFunctionsV1Output");
 var listInvites200Response_1 = require("./listInvites200Response");
@@ -859,7 +860,6 @@ var listUsers200Response_1 = require("./listUsers200Response");
 var listUsersFromUserGroup200Response_1 = require("./listUsersFromUserGroup200Response");
 var listUsersFromUserGroupV1Output_1 = require("./listUsersFromUserGroupV1Output");
 var listUsersV1Output_1 = require("./listUsersV1Output");
-var listVersionsAlphaOutput_1 = require("./listVersionsAlphaOutput");
 var listWarehouses200Response_1 = require("./listWarehouses200Response");
 var listWarehousesV1Output_1 = require("./listWarehousesV1Output");
 var listWorkspaceRegulations200Response_1 = require("./listWorkspaceRegulations200Response");
@@ -1429,6 +1429,7 @@ var typeMap = {
     ListFiltersFromDestinationV1Output: listFiltersFromDestinationV1Output_1.ListFiltersFromDestinationV1Output,
     ListFunctionItemV1: listFunctionItemV1_1.ListFunctionItemV1,
     ListFunctionVersions200Response: listFunctionVersions200Response_1.ListFunctionVersions200Response,
+    ListFunctionVersionsAlphaOutput: listFunctionVersionsAlphaOutput_1.ListFunctionVersionsAlphaOutput,
     ListFunctions200Response: listFunctions200Response_1.ListFunctions200Response,
     ListFunctionsV1Output: listFunctionsV1Output_1.ListFunctionsV1Output,
     ListInvites200Response: listInvites200Response_1.ListInvites200Response,
@@ -1481,7 +1482,6 @@ var typeMap = {
     ListUsersFromUserGroup200Response: listUsersFromUserGroup200Response_1.ListUsersFromUserGroup200Response,
     ListUsersFromUserGroupV1Output: listUsersFromUserGroupV1Output_1.ListUsersFromUserGroupV1Output,
     ListUsersV1Output: listUsersV1Output_1.ListUsersV1Output,
-    ListVersionsAlphaOutput: listVersionsAlphaOutput_1.ListVersionsAlphaOutput,
     ListWarehouses200Response: listWarehouses200Response_1.ListWarehouses200Response,
     ListWarehousesV1Output: listWarehousesV1Output_1.ListWarehousesV1Output,
     ListWorkspaceRegulations200Response: listWorkspaceRegulations200Response_1.ListWorkspaceRegulations200Response,
