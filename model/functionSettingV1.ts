@@ -14,27 +14,27 @@ import { RequestFile } from './models';
 
 export class FunctionSettingV1 {
     /**
-     * The name of this Function.
+     * The name of this Function Setting.
      */
     'name': string;
     /**
-     * The label for this Function.
+     * The label for this Function Setting.
      */
     'label': string;
     /**
-     * A description of this Function.
+     * A description of this Function Setting.
      */
     'description': string;
     /**
-     * The Function type.
+     * The type of this Function Setting.
      */
     'type': FunctionSettingV1.TypeEnum;
     /**
-     * Whether this Function is required.
+     * Whether this Function Setting is required.
      */
     'required': boolean;
     /**
-     * Whether this Function contains sensitive information.
+     * Whether this Function Setting contains sensitive information.
      */
     'sensitive': boolean;
 
