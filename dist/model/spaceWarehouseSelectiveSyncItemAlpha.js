@@ -25,6 +25,16 @@ var SpaceWarehouseSelectiveSyncItemAlpha = (function () {
             type: 'string',
         },
         {
+            name: 'source',
+            baseName: 'source',
+            type: 'string',
+        },
+        {
+            name: 'enabled',
+            baseName: 'enabled',
+            type: 'boolean',
+        },
+        {
             name: 'properties',
             baseName: 'properties',
             type: '{ [key: string]: any; }',

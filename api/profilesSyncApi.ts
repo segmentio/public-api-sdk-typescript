@@ -373,7 +373,7 @@ export class ProfilesSyncApi {
         });
     }
     /**
-     * Returns the schema for a Space Warehouse connection, including Sources, Collections, and Properties..  • When called, this endpoint may generate the `Profiles Sync Warehouse Schema Retrieved` event in the [audit trail](/tag/Audit-Trail).          The rate limit for this endpoint is 2 requests per minute, which is lower than the default due to access pattern restrictions. Once reached, this endpoint will respond with the 429 HTTP status code with headers indicating the limit parameters. See [Rate Limiting](/#tag/Rate-Limits) for more information.
+     * Returns the schema for a Space Warehouse connection, including Sources, Collections, and Properties.  • When called, this endpoint may generate the `Profiles Sync Warehouse Schema Retrieved` event in the [audit trail](/tag/Audit-Trail).          The rate limit for this endpoint is 2 requests per minute, which is lower than the default due to access pattern restrictions. Once reached, this endpoint will respond with the 429 HTTP status code with headers indicating the limit parameters. See [Rate Limiting](/#tag/Rate-Limits) for more information.
      * @summary List Selective Syncs from Warehouse And Space
      * @param spaceId
      * @param warehouseId

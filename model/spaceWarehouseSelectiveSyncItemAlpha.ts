@@ -29,6 +29,14 @@ export class SpaceWarehouseSelectiveSyncItemAlpha {
      */
     'warehouseId': string;
     /**
+     * The Source of the collection in this Space Warehouse.
+     */
+    'source'?: string;
+    /**
+     * The Enabled flag ok telling whether the Collection is enabled or not.
+     */
+    'enabled': boolean;
+    /**
      * A map that contains the properties within the collection to which the Warehouse should sync.
      */
     'properties': { [key: string]: any };
@@ -54,6 +62,16 @@ export class SpaceWarehouseSelectiveSyncItemAlpha {
             name: 'warehouseId',
             baseName: 'warehouseId',
             type: 'string',
+        },
+        {
+            name: 'source',
+            baseName: 'source',
+            type: 'string',
+        },
+        {
+            name: 'enabled',
+            baseName: 'enabled',
+            type: 'boolean',
         },
         {
             name: 'properties',

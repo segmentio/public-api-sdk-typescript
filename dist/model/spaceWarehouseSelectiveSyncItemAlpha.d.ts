@@ -2,6 +2,8 @@ export declare class SpaceWarehouseSelectiveSyncItemAlpha {
     'spaceId': string;
     'collection': string;
     'warehouseId': string;
+    'source'?: string;
+    'enabled': boolean;
     'properties': {
         [key: string]: any;
     };
