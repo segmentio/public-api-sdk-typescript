@@ -310,6 +310,8 @@ __exportStar(require("./listSchemaSettingsInSource200Response"), exports);
 __exportStar(require("./listSchemaSettingsInSourceV1Output"), exports);
 __exportStar(require("./listSelectiveSyncsFromWarehouseAndSource200Response"), exports);
 __exportStar(require("./listSelectiveSyncsFromWarehouseAndSourceV1Output"), exports);
+__exportStar(require("./listSelectiveSyncsFromWarehouseAndSpace200Response"), exports);
+__exportStar(require("./listSelectiveSyncsFromWarehouseAndSpaceAlphaOutput"), exports);
 __exportStar(require("./listSources200Response"), exports);
 __exportStar(require("./listSources200Response1"), exports);
 __exportStar(require("./listSourcesAlphaOutput"), exports);
@@ -447,6 +449,7 @@ __exportStar(require("./sourceMetadataV1"), exports);
 __exportStar(require("./sourceSettingsOutputV1"), exports);
 __exportStar(require("./sourceV1"), exports);
 __exportStar(require("./space"), exports);
+__exportStar(require("./spaceWarehouseSelectiveSyncItemAlpha"), exports);
 __exportStar(require("./streamStatusV1"), exports);
 __exportStar(require("./subscription"), exports);
 __exportStar(require("./supportedFeatures"), exports);
@@ -832,6 +835,8 @@ var listSchemaSettingsInSource200Response_1 = require("./listSchemaSettingsInSou
 var listSchemaSettingsInSourceV1Output_1 = require("./listSchemaSettingsInSourceV1Output");
 var listSelectiveSyncsFromWarehouseAndSource200Response_1 = require("./listSelectiveSyncsFromWarehouseAndSource200Response");
 var listSelectiveSyncsFromWarehouseAndSourceV1Output_1 = require("./listSelectiveSyncsFromWarehouseAndSourceV1Output");
+var listSelectiveSyncsFromWarehouseAndSpace200Response_1 = require("./listSelectiveSyncsFromWarehouseAndSpace200Response");
+var listSelectiveSyncsFromWarehouseAndSpaceAlphaOutput_1 = require("./listSelectiveSyncsFromWarehouseAndSpaceAlphaOutput");
 var listSources200Response_1 = require("./listSources200Response");
 var listSources200Response1_1 = require("./listSources200Response1");
 var listSourcesAlphaOutput_1 = require("./listSourcesAlphaOutput");
@@ -969,6 +974,7 @@ var sourceMetadataV1_1 = require("./sourceMetadataV1");
 var sourceSettingsOutputV1_1 = require("./sourceSettingsOutputV1");
 var sourceV1_1 = require("./sourceV1");
 var space_1 = require("./space");
+var spaceWarehouseSelectiveSyncItemAlpha_1 = require("./spaceWarehouseSelectiveSyncItemAlpha");
 var streamStatusV1_1 = require("./streamStatusV1");
 var subscription_1 = require("./subscription");
 var supportedFeatures_1 = require("./supportedFeatures");
@@ -1454,6 +1460,8 @@ var typeMap = {
     ListSchemaSettingsInSourceV1Output: listSchemaSettingsInSourceV1Output_1.ListSchemaSettingsInSourceV1Output,
     ListSelectiveSyncsFromWarehouseAndSource200Response: listSelectiveSyncsFromWarehouseAndSource200Response_1.ListSelectiveSyncsFromWarehouseAndSource200Response,
     ListSelectiveSyncsFromWarehouseAndSourceV1Output: listSelectiveSyncsFromWarehouseAndSourceV1Output_1.ListSelectiveSyncsFromWarehouseAndSourceV1Output,
+    ListSelectiveSyncsFromWarehouseAndSpace200Response: listSelectiveSyncsFromWarehouseAndSpace200Response_1.ListSelectiveSyncsFromWarehouseAndSpace200Response,
+    ListSelectiveSyncsFromWarehouseAndSpaceAlphaOutput: listSelectiveSyncsFromWarehouseAndSpaceAlphaOutput_1.ListSelectiveSyncsFromWarehouseAndSpaceAlphaOutput,
     ListSources200Response: listSources200Response_1.ListSources200Response,
     ListSources200Response1: listSources200Response1_1.ListSources200Response1,
     ListSourcesAlphaOutput: listSourcesAlphaOutput_1.ListSourcesAlphaOutput,
@@ -1591,6 +1599,7 @@ var typeMap = {
     SourceSettingsOutputV1: sourceSettingsOutputV1_1.SourceSettingsOutputV1,
     SourceV1: sourceV1_1.SourceV1,
     Space: space_1.Space,
+    SpaceWarehouseSelectiveSyncItemAlpha: spaceWarehouseSelectiveSyncItemAlpha_1.SpaceWarehouseSelectiveSyncItemAlpha,
     StreamStatusV1: streamStatusV1_1.StreamStatusV1,
     Subscription: subscription_1.Subscription,
     SupportedFeatures: supportedFeatures_1.SupportedFeatures,
