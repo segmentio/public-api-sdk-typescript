@@ -3,7 +3,6 @@ import http from 'http';
 import { CreateProfilesWarehouse200Response } from '../model/createProfilesWarehouse200Response';
 import { CreateProfilesWarehouseAlphaInput } from '../model/createProfilesWarehouseAlphaInput';
 import { ListProfilesWarehouseInSpace200Response } from '../model/listProfilesWarehouseInSpace200Response';
-import { ListSelectiveSyncsFromWarehouseAndSpace200Response } from '../model/listSelectiveSyncsFromWarehouseAndSpace200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveProfilesWarehouseFromSpace200Response } from '../model/removeProfilesWarehouseFromSpace200Response';
 import { UpdateProfilesWarehouseForSpaceWarehouse200Response } from '../model/updateProfilesWarehouseForSpaceWarehouse200Response';
@@ -46,14 +45,6 @@ export declare class ProfilesSyncApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: ListProfilesWarehouseInSpace200Response;
-    }>;
-    listSelectiveSyncsFromWarehouseAndSpace(spaceId: string, warehouseId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListSelectiveSyncsFromWarehouseAndSpace200Response;
     }>;
     removeProfilesWarehouseFromSpace(spaceId: string, warehouseId: string, options?: {
         headers: {

@@ -26,6 +26,8 @@ export * from './labelsApi';
 import { LabelsApi } from './labelsApi';
 export * from './monthlyTrackedUsersApi';
 import { MonthlyTrackedUsersApi } from './monthlyTrackedUsersApi';
+export * from './profilesSelectiveSyncApi';
+import { ProfilesSelectiveSyncApi } from './profilesSelectiveSyncApi';
 export * from './profilesSyncApi';
 import { ProfilesSyncApi } from './profilesSyncApi';
 export * from './reverseETLApi';
@@ -76,6 +78,7 @@ export const APIS = [
     IAMUsersApi,
     LabelsApi,
     MonthlyTrackedUsersApi,
+    ProfilesSelectiveSyncApi,
     ProfilesSyncApi,
     ReverseETLApi,
     SelectiveSyncApi,
