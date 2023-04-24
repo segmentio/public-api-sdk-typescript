@@ -94,6 +94,8 @@ __exportStar(require("./labelsApi"), exports);
 var labelsApi_1 = require("./labelsApi");
 __exportStar(require("./monthlyTrackedUsersApi"), exports);
 var monthlyTrackedUsersApi_1 = require("./monthlyTrackedUsersApi");
+__exportStar(require("./profilesSelectiveSyncApi"), exports);
+var profilesSelectiveSyncApi_1 = require("./profilesSelectiveSyncApi");
 __exportStar(require("./profilesSyncApi"), exports);
 var profilesSyncApi_1 = require("./profilesSyncApi");
 __exportStar(require("./reverseETLApi"), exports);
@@ -142,6 +144,7 @@ exports.APIS = [
     iAMUsersApi_1.IAMUsersApi,
     labelsApi_1.LabelsApi,
     monthlyTrackedUsersApi_1.MonthlyTrackedUsersApi,
+    profilesSelectiveSyncApi_1.ProfilesSelectiveSyncApi,
     profilesSyncApi_1.ProfilesSyncApi,
     reverseETLApi_1.ReverseETLApi,
     selectiveSyncApi_1.SelectiveSyncApi,

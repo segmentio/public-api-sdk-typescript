@@ -2,7 +2,6 @@
 import http from 'http';
 import { GetAdvancedSyncScheduleFromWarehouse200Response } from '../model/getAdvancedSyncScheduleFromWarehouse200Response';
 import { ListSelectiveSyncsFromWarehouseAndSource200Response } from '../model/listSelectiveSyncsFromWarehouseAndSource200Response';
-import { ListSelectiveSyncsFromWarehouseAndSpace200Response } from '../model/listSelectiveSyncsFromWarehouseAndSpace200Response';
 import { ListSyncsFromWarehouse200Response } from '../model/listSyncsFromWarehouse200Response';
 import { ListSyncsFromWarehouseAndSource200Response } from '../model/listSyncsFromWarehouseAndSource200Response';
 import { PaginationInput } from '../model/paginationInput';
@@ -48,14 +47,6 @@ export declare class SelectiveSyncApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: ListSelectiveSyncsFromWarehouseAndSource200Response;
-    }>;
-    listSelectiveSyncsFromWarehouseAndSpace(spaceId: string, warehouseId: string, pagination: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: ListSelectiveSyncsFromWarehouseAndSpace200Response;
     }>;
     listSyncsFromWarehouse(warehouseId: string, pagination: PaginationInput, options?: {
         headers: {
