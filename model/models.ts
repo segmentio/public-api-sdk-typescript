@@ -295,6 +295,8 @@ export * from './listSchemaSettingsInSource200Response';
 export * from './listSchemaSettingsInSourceV1Output';
 export * from './listSelectiveSyncsFromWarehouseAndSource200Response';
 export * from './listSelectiveSyncsFromWarehouseAndSourceV1Output';
+export * from './listSelectiveSyncsFromWarehouseAndSpace200Response';
+export * from './listSelectiveSyncsFromWarehouseAndSpaceAlphaOutput';
 export * from './listSources200Response';
 export * from './listSources200Response1';
 export * from './listSourcesAlphaOutput';
@@ -432,6 +434,7 @@ export * from './sourceMetadataV1';
 export * from './sourceSettingsOutputV1';
 export * from './sourceV1';
 export * from './space';
+export * from './spaceWarehouseSelectiveSyncItemAlpha';
 export * from './streamStatusV1';
 export * from './subscription';
 export * from './supportedFeatures';
@@ -830,6 +833,8 @@ import { ListSchemaSettingsInSource200Response } from './listSchemaSettingsInSou
 import { ListSchemaSettingsInSourceV1Output } from './listSchemaSettingsInSourceV1Output';
 import { ListSelectiveSyncsFromWarehouseAndSource200Response } from './listSelectiveSyncsFromWarehouseAndSource200Response';
 import { ListSelectiveSyncsFromWarehouseAndSourceV1Output } from './listSelectiveSyncsFromWarehouseAndSourceV1Output';
+import { ListSelectiveSyncsFromWarehouseAndSpace200Response } from './listSelectiveSyncsFromWarehouseAndSpace200Response';
+import { ListSelectiveSyncsFromWarehouseAndSpaceAlphaOutput } from './listSelectiveSyncsFromWarehouseAndSpaceAlphaOutput';
 import { ListSources200Response } from './listSources200Response';
 import { ListSources200Response1 } from './listSources200Response1';
 import { ListSourcesAlphaOutput } from './listSourcesAlphaOutput';
@@ -967,6 +972,7 @@ import { SourceMetadataV1 } from './sourceMetadataV1';
 import { SourceSettingsOutputV1 } from './sourceSettingsOutputV1';
 import { SourceV1 } from './sourceV1';
 import { Space } from './space';
+import { SpaceWarehouseSelectiveSyncItemAlpha } from './spaceWarehouseSelectiveSyncItemAlpha';
 import { StreamStatusV1 } from './streamStatusV1';
 import { Subscription } from './subscription';
 import { SupportedFeatures } from './supportedFeatures';
@@ -1552,6 +1558,10 @@ let typeMap: { [index: string]: any } = {
         ListSelectiveSyncsFromWarehouseAndSource200Response,
     ListSelectiveSyncsFromWarehouseAndSourceV1Output:
         ListSelectiveSyncsFromWarehouseAndSourceV1Output,
+    ListSelectiveSyncsFromWarehouseAndSpace200Response:
+        ListSelectiveSyncsFromWarehouseAndSpace200Response,
+    ListSelectiveSyncsFromWarehouseAndSpaceAlphaOutput:
+        ListSelectiveSyncsFromWarehouseAndSpaceAlphaOutput,
     ListSources200Response: ListSources200Response,
     ListSources200Response1: ListSources200Response1,
     ListSourcesAlphaOutput: ListSourcesAlphaOutput,
@@ -1713,6 +1723,7 @@ let typeMap: { [index: string]: any } = {
     SourceSettingsOutputV1: SourceSettingsOutputV1,
     SourceV1: SourceV1,
     Space: Space,
+    SpaceWarehouseSelectiveSyncItemAlpha: SpaceWarehouseSelectiveSyncItemAlpha,
     StreamStatusV1: StreamStatusV1,
     Subscription: Subscription,
     SupportedFeatures: SupportedFeatures,
