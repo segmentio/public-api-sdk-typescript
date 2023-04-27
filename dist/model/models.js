@@ -449,6 +449,7 @@ __exportStar(require("./sourceMetadataV1"), exports);
 __exportStar(require("./sourceSettingsOutputV1"), exports);
 __exportStar(require("./sourceV1"), exports);
 __exportStar(require("./space"), exports);
+__exportStar(require("./spaceWarehouseSchemaOverride"), exports);
 __exportStar(require("./spaceWarehouseSelectiveSyncItemAlpha"), exports);
 __exportStar(require("./streamStatusV1"), exports);
 __exportStar(require("./subscription"), exports);
@@ -493,6 +494,9 @@ __exportStar(require("./updateSchemaSettingsInSource200Response"), exports);
 __exportStar(require("./updateSchemaSettingsInSourceV1Input"), exports);
 __exportStar(require("./updateSchemaSettingsInSourceV1Output"), exports);
 __exportStar(require("./updateSelectiveSyncForWarehouse200Response"), exports);
+__exportStar(require("./updateSelectiveSyncForWarehouseAndSpace200Response"), exports);
+__exportStar(require("./updateSelectiveSyncForWarehouseAndSpaceAlphaInput"), exports);
+__exportStar(require("./updateSelectiveSyncForWarehouseAndSpaceAlphaOutput"), exports);
 __exportStar(require("./updateSelectiveSyncForWarehouseV1Input"), exports);
 __exportStar(require("./updateSelectiveSyncForWarehouseV1Output"), exports);
 __exportStar(require("./updateSource200Response"), exports);
@@ -974,6 +978,7 @@ var sourceMetadataV1_1 = require("./sourceMetadataV1");
 var sourceSettingsOutputV1_1 = require("./sourceSettingsOutputV1");
 var sourceV1_1 = require("./sourceV1");
 var space_1 = require("./space");
+var spaceWarehouseSchemaOverride_1 = require("./spaceWarehouseSchemaOverride");
 var spaceWarehouseSelectiveSyncItemAlpha_1 = require("./spaceWarehouseSelectiveSyncItemAlpha");
 var streamStatusV1_1 = require("./streamStatusV1");
 var subscription_1 = require("./subscription");
@@ -1018,6 +1023,9 @@ var updateSchemaSettingsInSource200Response_1 = require("./updateSchemaSettingsI
 var updateSchemaSettingsInSourceV1Input_1 = require("./updateSchemaSettingsInSourceV1Input");
 var updateSchemaSettingsInSourceV1Output_1 = require("./updateSchemaSettingsInSourceV1Output");
 var updateSelectiveSyncForWarehouse200Response_1 = require("./updateSelectiveSyncForWarehouse200Response");
+var updateSelectiveSyncForWarehouseAndSpace200Response_1 = require("./updateSelectiveSyncForWarehouseAndSpace200Response");
+var updateSelectiveSyncForWarehouseAndSpaceAlphaInput_1 = require("./updateSelectiveSyncForWarehouseAndSpaceAlphaInput");
+var updateSelectiveSyncForWarehouseAndSpaceAlphaOutput_1 = require("./updateSelectiveSyncForWarehouseAndSpaceAlphaOutput");
 var updateSelectiveSyncForWarehouseV1Input_1 = require("./updateSelectiveSyncForWarehouseV1Input");
 var updateSelectiveSyncForWarehouseV1Output_1 = require("./updateSelectiveSyncForWarehouseV1Output");
 var updateSource200Response_1 = require("./updateSource200Response");
@@ -1160,6 +1168,7 @@ var enumsMap = {
     'TrackingPlanV1.TypeEnum': trackingPlanV1_1.TrackingPlanV1.TypeEnum,
     'UpdateReverseEtlModelInput.ScheduleStrategyEnum': updateReverseEtlModelInput_1.UpdateReverseEtlModelInput.ScheduleStrategyEnum,
     'UpdateRulesInTrackingPlanV1Output.StatusEnum': updateRulesInTrackingPlanV1Output_1.UpdateRulesInTrackingPlanV1Output.StatusEnum,
+    'UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum': updateSelectiveSyncForWarehouseAndSpaceAlphaOutput_1.UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum,
     'UpdateSelectiveSyncForWarehouseV1Output.StatusEnum': updateSelectiveSyncForWarehouseV1Output_1.UpdateSelectiveSyncForWarehouseV1Output.StatusEnum,
     'UpdateTrackingPlanV1Output.StatusEnum': updateTrackingPlanV1Output_1.UpdateTrackingPlanV1Output.StatusEnum,
     'UpsertRuleV1.TypeEnum': upsertRuleV1_1.UpsertRuleV1.TypeEnum,
@@ -1599,6 +1608,7 @@ var typeMap = {
     SourceSettingsOutputV1: sourceSettingsOutputV1_1.SourceSettingsOutputV1,
     SourceV1: sourceV1_1.SourceV1,
     Space: space_1.Space,
+    SpaceWarehouseSchemaOverride: spaceWarehouseSchemaOverride_1.SpaceWarehouseSchemaOverride,
     SpaceWarehouseSelectiveSyncItemAlpha: spaceWarehouseSelectiveSyncItemAlpha_1.SpaceWarehouseSelectiveSyncItemAlpha,
     StreamStatusV1: streamStatusV1_1.StreamStatusV1,
     Subscription: subscription_1.Subscription,
@@ -1643,6 +1653,9 @@ var typeMap = {
     UpdateSchemaSettingsInSourceV1Input: updateSchemaSettingsInSourceV1Input_1.UpdateSchemaSettingsInSourceV1Input,
     UpdateSchemaSettingsInSourceV1Output: updateSchemaSettingsInSourceV1Output_1.UpdateSchemaSettingsInSourceV1Output,
     UpdateSelectiveSyncForWarehouse200Response: updateSelectiveSyncForWarehouse200Response_1.UpdateSelectiveSyncForWarehouse200Response,
+    UpdateSelectiveSyncForWarehouseAndSpace200Response: updateSelectiveSyncForWarehouseAndSpace200Response_1.UpdateSelectiveSyncForWarehouseAndSpace200Response,
+    UpdateSelectiveSyncForWarehouseAndSpaceAlphaInput: updateSelectiveSyncForWarehouseAndSpaceAlphaInput_1.UpdateSelectiveSyncForWarehouseAndSpaceAlphaInput,
+    UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput: updateSelectiveSyncForWarehouseAndSpaceAlphaOutput_1.UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput,
     UpdateSelectiveSyncForWarehouseV1Input: updateSelectiveSyncForWarehouseV1Input_1.UpdateSelectiveSyncForWarehouseV1Input,
     UpdateSelectiveSyncForWarehouseV1Output: updateSelectiveSyncForWarehouseV1Output_1.UpdateSelectiveSyncForWarehouseV1Output,
     UpdateSource200Response: updateSource200Response_1.UpdateSource200Response,
