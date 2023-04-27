@@ -434,6 +434,7 @@ export * from './sourceMetadataV1';
 export * from './sourceSettingsOutputV1';
 export * from './sourceV1';
 export * from './space';
+export * from './spaceWarehouseSchemaOverride';
 export * from './spaceWarehouseSelectiveSyncItemAlpha';
 export * from './streamStatusV1';
 export * from './subscription';
@@ -478,6 +479,9 @@ export * from './updateSchemaSettingsInSource200Response';
 export * from './updateSchemaSettingsInSourceV1Input';
 export * from './updateSchemaSettingsInSourceV1Output';
 export * from './updateSelectiveSyncForWarehouse200Response';
+export * from './updateSelectiveSyncForWarehouseAndSpace200Response';
+export * from './updateSelectiveSyncForWarehouseAndSpaceAlphaInput';
+export * from './updateSelectiveSyncForWarehouseAndSpaceAlphaOutput';
 export * from './updateSelectiveSyncForWarehouseV1Input';
 export * from './updateSelectiveSyncForWarehouseV1Output';
 export * from './updateSource200Response';
@@ -972,6 +976,7 @@ import { SourceMetadataV1 } from './sourceMetadataV1';
 import { SourceSettingsOutputV1 } from './sourceSettingsOutputV1';
 import { SourceV1 } from './sourceV1';
 import { Space } from './space';
+import { SpaceWarehouseSchemaOverride } from './spaceWarehouseSchemaOverride';
 import { SpaceWarehouseSelectiveSyncItemAlpha } from './spaceWarehouseSelectiveSyncItemAlpha';
 import { StreamStatusV1 } from './streamStatusV1';
 import { Subscription } from './subscription';
@@ -1016,6 +1021,9 @@ import { UpdateSchemaSettingsInSource200Response } from './updateSchemaSettingsI
 import { UpdateSchemaSettingsInSourceV1Input } from './updateSchemaSettingsInSourceV1Input';
 import { UpdateSchemaSettingsInSourceV1Output } from './updateSchemaSettingsInSourceV1Output';
 import { UpdateSelectiveSyncForWarehouse200Response } from './updateSelectiveSyncForWarehouse200Response';
+import { UpdateSelectiveSyncForWarehouseAndSpace200Response } from './updateSelectiveSyncForWarehouseAndSpace200Response';
+import { UpdateSelectiveSyncForWarehouseAndSpaceAlphaInput } from './updateSelectiveSyncForWarehouseAndSpaceAlphaInput';
+import { UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput } from './updateSelectiveSyncForWarehouseAndSpaceAlphaOutput';
 import { UpdateSelectiveSyncForWarehouseV1Input } from './updateSelectiveSyncForWarehouseV1Input';
 import { UpdateSelectiveSyncForWarehouseV1Output } from './updateSelectiveSyncForWarehouseV1Output';
 import { UpdateSource200Response } from './updateSource200Response';
@@ -1207,6 +1215,8 @@ let enumsMap: { [index: string]: any } = {
         UpdateReverseEtlModelInput.ScheduleStrategyEnum,
     'UpdateRulesInTrackingPlanV1Output.StatusEnum':
         UpdateRulesInTrackingPlanV1Output.StatusEnum,
+    'UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum':
+        UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum,
     'UpdateSelectiveSyncForWarehouseV1Output.StatusEnum':
         UpdateSelectiveSyncForWarehouseV1Output.StatusEnum,
     'UpdateTrackingPlanV1Output.StatusEnum':
@@ -1723,6 +1733,7 @@ let typeMap: { [index: string]: any } = {
     SourceSettingsOutputV1: SourceSettingsOutputV1,
     SourceV1: SourceV1,
     Space: Space,
+    SpaceWarehouseSchemaOverride: SpaceWarehouseSchemaOverride,
     SpaceWarehouseSelectiveSyncItemAlpha: SpaceWarehouseSelectiveSyncItemAlpha,
     StreamStatusV1: StreamStatusV1,
     Subscription: Subscription,
@@ -1773,6 +1784,12 @@ let typeMap: { [index: string]: any } = {
     UpdateSchemaSettingsInSourceV1Output: UpdateSchemaSettingsInSourceV1Output,
     UpdateSelectiveSyncForWarehouse200Response:
         UpdateSelectiveSyncForWarehouse200Response,
+    UpdateSelectiveSyncForWarehouseAndSpace200Response:
+        UpdateSelectiveSyncForWarehouseAndSpace200Response,
+    UpdateSelectiveSyncForWarehouseAndSpaceAlphaInput:
+        UpdateSelectiveSyncForWarehouseAndSpaceAlphaInput,
+    UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput:
+        UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput,
     UpdateSelectiveSyncForWarehouseV1Input:
         UpdateSelectiveSyncForWarehouseV1Input,
     UpdateSelectiveSyncForWarehouseV1Output:

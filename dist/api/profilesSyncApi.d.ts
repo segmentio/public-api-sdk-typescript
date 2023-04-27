@@ -8,6 +8,8 @@ import { PaginationInput } from '../model/paginationInput';
 import { RemoveProfilesWarehouseFromSpace200Response } from '../model/removeProfilesWarehouseFromSpace200Response';
 import { UpdateProfilesWarehouseForSpaceWarehouse200Response } from '../model/updateProfilesWarehouseForSpaceWarehouse200Response';
 import { UpdateProfilesWarehouseForSpaceWarehouseAlphaInput } from '../model/updateProfilesWarehouseForSpaceWarehouseAlphaInput';
+import { UpdateSelectiveSyncForWarehouseAndSpace200Response } from '../model/updateSelectiveSyncForWarehouseAndSpace200Response';
+import { UpdateSelectiveSyncForWarehouseAndSpaceAlphaInput } from '../model/updateSelectiveSyncForWarehouseAndSpaceAlphaInput';
 import { Authentication, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
 export declare enum ProfilesSyncApiApiKeys {
@@ -70,5 +72,13 @@ export declare class ProfilesSyncApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: UpdateProfilesWarehouseForSpaceWarehouse200Response;
+    }>;
+    updateSelectiveSyncForWarehouseAndSpace(spaceId: string, warehouseId: string, UpdateSelectiveSyncForWarehouseAndSpaceAlphaInput: UpdateSelectiveSyncForWarehouseAndSpaceAlphaInput, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: UpdateSelectiveSyncForWarehouseAndSpace200Response;
     }>;
 }
