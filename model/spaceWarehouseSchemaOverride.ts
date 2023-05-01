@@ -17,17 +17,9 @@ import { RequestFile } from './models';
  */
 export class SpaceWarehouseSchemaOverride {
     /**
-     * The id of the space this schema item should apply to.
-     */
-    'spaceId': string;
-    /**
      * The collection within the Source.
      */
     'collection': string;
-    /**
-     * The Source of the collection in this Space Warehouse.
-     */
-    'source': string;
     /**
      * The Enabled flag ok telling whether the Collection is enabled or not.
      */
@@ -45,18 +37,8 @@ export class SpaceWarehouseSchemaOverride {
         type: string;
     }> = [
         {
-            name: 'spaceId',
-            baseName: 'spaceId',
-            type: 'string',
-        },
-        {
             name: 'collection',
             baseName: 'collection',
-            type: 'string',
-        },
-        {
-            name: 'source',
-            baseName: 'source',
             type: 'string',
         },
         {
