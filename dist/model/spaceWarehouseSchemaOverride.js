@@ -10,18 +10,8 @@ var SpaceWarehouseSchemaOverride = (function () {
     SpaceWarehouseSchemaOverride.discriminator = undefined;
     SpaceWarehouseSchemaOverride.attributeTypeMap = [
         {
-            name: 'spaceId',
-            baseName: 'spaceId',
-            type: 'string',
-        },
-        {
             name: 'collection',
             baseName: 'collection',
-            type: 'string',
-        },
-        {
-            name: 'source',
-            baseName: 'source',
             type: 'string',
         },
         {

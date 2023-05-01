@@ -375,7 +375,7 @@ export class ProfilesSyncApi {
         });
     }
     /**
-     * Returns the schema for a Space Warehouse connection, including Sources, Collections, and Properties.  • When called, this endpoint may generate the `Profiles Sync Warehouse Schema Retrieved` event in the [audit trail](/tag/Audit-Trail).
+     * Returns the schema for a Space Warehouse connection, including Sources, Collections, and Properties.
      * @summary List Selective Syncs from Warehouse And Space
      * @param spaceId
      * @param warehouseId
@@ -800,7 +800,7 @@ export class ProfilesSyncApi {
         });
     }
     /**
-     * Updates an existing Profiles Warehouse.  • When called, this endpoint may generate the `Profiles Sync Schema Updated` event in the [audit trail](/tag/Audit-Trail).
+     * Updates the schema for a Space Warehouse connection, including Collections and Properties.  • When called, this endpoint may generate the `Profiles Sync Warehouse Modified` event in the [audit trail](/tag/Audit-Trail).
      * @summary Update Selective Sync for Warehouse And Space
      * @param spaceId
      * @param warehouseId

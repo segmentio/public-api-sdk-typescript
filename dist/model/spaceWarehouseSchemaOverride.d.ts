@@ -1,7 +1,5 @@
 export declare class SpaceWarehouseSchemaOverride {
-    'spaceId': string;
     'collection': string;
-    'source': string;
     'enabled': boolean;
     'property': string;
     static discriminator: string | undefined;

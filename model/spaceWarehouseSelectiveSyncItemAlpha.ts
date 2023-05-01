@@ -17,10 +17,6 @@ import { RequestFile } from './models';
  */
 export class SpaceWarehouseSelectiveSyncItemAlpha {
     /**
-     * The space id attached to this Warehouse.
-     */
-    'spaceId': string;
-    /**
      * The collection within the Source.
      */
     'collection': string;
@@ -28,10 +24,6 @@ export class SpaceWarehouseSelectiveSyncItemAlpha {
      * The id of the Warehouse this sync belongs to.
      */
     'warehouseId': string;
-    /**
-     * The Source of the collection in this Space Warehouse.
-     */
-    'source'?: string;
     /**
      * The Enabled flag ok telling whether the Collection is enabled or not.
      */
@@ -49,11 +41,6 @@ export class SpaceWarehouseSelectiveSyncItemAlpha {
         type: string;
     }> = [
         {
-            name: 'spaceId',
-            baseName: 'spaceId',
-            type: 'string',
-        },
-        {
             name: 'collection',
             baseName: 'collection',
             type: 'string',
@@ -61,11 +48,6 @@ export class SpaceWarehouseSelectiveSyncItemAlpha {
         {
             name: 'warehouseId',
             baseName: 'warehouseId',
-            type: 'string',
-        },
-        {
-            name: 'source',
-            baseName: 'source',
             type: 'string',
         },
         {

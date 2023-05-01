@@ -10,11 +10,6 @@ var SpaceWarehouseSelectiveSyncItemAlpha = (function () {
     SpaceWarehouseSelectiveSyncItemAlpha.discriminator = undefined;
     SpaceWarehouseSelectiveSyncItemAlpha.attributeTypeMap = [
         {
-            name: 'spaceId',
-            baseName: 'spaceId',
-            type: 'string',
-        },
-        {
             name: 'collection',
             baseName: 'collection',
             type: 'string',
@@ -22,11 +17,6 @@ var SpaceWarehouseSelectiveSyncItemAlpha = (function () {
         {
             name: 'warehouseId',
             baseName: 'warehouseId',
-            type: 'string',
-        },
-        {
-            name: 'source',
-            baseName: 'source',
             type: 'string',
         },
         {
