@@ -24,8 +24,10 @@ export declare namespace Regulation {
         FINISHED,
         INITIALIZED,
         INVALID,
+        IN_PROGRESS,
         NOT_SUPPORTED,
         PARTIAL_SUCCESS,
-        RUNNING
+        RUNNING,
+        SUCCESS
     }
 }
