@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { SpaceWarehouseSchemaOverride } from './spaceWarehouseSchemaOverride';
 
 /**
- * Updates the schema for a Warehouse/sources pair.
+ * Updates the schema for a Space Warehouse connection.
  */
 export class UpdateSelectiveSyncForWarehouseAndSpaceAlphaInput {
     /**

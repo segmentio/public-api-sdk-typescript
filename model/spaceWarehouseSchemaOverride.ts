@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 /**
- * Represents the override for a Source/collection/property? path to apply to a Space Warehouse.
+ * Represents the override for a collection/property? path to apply to a Space Warehouse.
  */
 export class SpaceWarehouseSchemaOverride {
     /**

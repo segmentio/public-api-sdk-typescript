@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 /**
- * Results from a selectiveSync patch to a Warehouse/Space pair.
+ * Results from a selectiveSync patch to a Space Warehouse connection.
  */
 export class UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput {
     /**
