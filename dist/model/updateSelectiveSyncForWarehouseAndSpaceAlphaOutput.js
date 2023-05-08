@@ -14,11 +14,6 @@ var UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput = (function () {
             baseName: 'status',
             type: 'UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum',
         },
-        {
-            name: 'warnings',
-            baseName: 'warnings',
-            type: 'Array<string>',
-        },
     ];
     return UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput;
 }());

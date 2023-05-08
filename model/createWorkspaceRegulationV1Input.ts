@@ -25,7 +25,7 @@ export class CreateWorkspaceRegulationV1Input {
      */
     'subjectType': CreateWorkspaceRegulationV1Input.SubjectTypeEnum;
     /**
-     * The user or object ids of the subjects to regulate.  Config API note: equal to `parent` but allows an array.
+     * The list of `userId` or `objectId` values of the subjects to regulate.  Config API note: equal to `parent` but allows an array.
      */
     'subjectIds': Array<string>;
 

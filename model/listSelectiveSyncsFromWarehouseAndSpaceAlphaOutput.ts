@@ -19,7 +19,7 @@ import { SpaceWarehouseSelectiveSyncItemAlpha } from './spaceWarehouseSelectiveS
  */
 export class ListSelectiveSyncsFromWarehouseAndSpaceAlphaOutput {
     /**
-     * Represents a list of collection and properties synced to the Warehouse.
+     * Represents a list of collections and properties synced to the Warehouse.
      */
     'items': Array<SpaceWarehouseSelectiveSyncItemAlpha>;
     /**

@@ -1,6 +1,5 @@
 export declare class UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput {
     'status': UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum;
-    'warnings': Array<string>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

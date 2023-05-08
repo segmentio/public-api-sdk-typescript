@@ -27,7 +27,7 @@ export class SpaceWarehouseSchemaOverride {
     /**
      * A map that contains the properties within the collection to which the Warehouse should sync.
      */
-    'property': string;
+    'property'?: string;
 
     static discriminator: string | undefined = undefined;
 
