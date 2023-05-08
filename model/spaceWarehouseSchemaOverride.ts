@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 /**
- * Represents the override for a Source/collection/property? path to apply to a Space Warehouse.
+ * Represents the override for a collection/property? path to apply to a Space Warehouse.
  */
 export class SpaceWarehouseSchemaOverride {
     /**
@@ -27,7 +27,7 @@ export class SpaceWarehouseSchemaOverride {
     /**
      * A map that contains the properties within the collection to which the Warehouse should sync.
      */
-    'property': string;
+    'property'?: string;
 
     static discriminator: string | undefined = undefined;
 

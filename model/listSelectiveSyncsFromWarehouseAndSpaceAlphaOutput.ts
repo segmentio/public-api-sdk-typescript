@@ -19,9 +19,13 @@ import { SpaceWarehouseSelectiveSyncItemAlpha } from './spaceWarehouseSelectiveS
  */
 export class ListSelectiveSyncsFromWarehouseAndSpaceAlphaOutput {
     /**
-     * Represents a list of Source, collection, and properties synced to the Warehouse.
+     * Represents a list of collections and properties synced to the Warehouse.
      */
     'items': Array<SpaceWarehouseSelectiveSyncItemAlpha>;
+    /**
+     * A flag that represent if all event Tables are enable or disable.
+     */
+    'enableEventTables'?: boolean;
     'pagination': Pagination;
 
     static discriminator: string | undefined = undefined;
@@ -35,6 +39,11 @@ export class ListSelectiveSyncsFromWarehouseAndSpaceAlphaOutput {
             name: 'items',
             baseName: 'items',
             type: 'Array<SpaceWarehouseSelectiveSyncItemAlpha>',
+        },
+        {
+            name: 'enableEventTables',
+            baseName: 'enableEventTables',
+            type: 'boolean',
         },
         {
             name: 'pagination',

@@ -13,17 +13,13 @@
 import { RequestFile } from './models';
 
 /**
- * Results from a selectiveSync patch to a Warehouse/Space pair.
+ * Results from a selectiveSync patch to a Space Warehouse connection.
  */
 export class UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput {
     /**
      * Status of the update operation.
      */
     'status': UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum;
-    /**
-     * Warnings returned by the operation.
-     */
-    'warnings': Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -36,11 +32,6 @@ export class UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput {
             name: 'status',
             baseName: 'status',
             type: 'UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum',
-        },
-        {
-            name: 'warnings',
-            baseName: 'warnings',
-            type: 'Array<string>',
         },
     ];
 

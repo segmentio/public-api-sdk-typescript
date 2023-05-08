@@ -14,11 +14,11 @@ import { RequestFile } from './models';
 import { SpaceWarehouseSchemaOverride } from './spaceWarehouseSchemaOverride';
 
 /**
- * Updates the schema for a Warehouse/sources pair.
+ * Updates the schema for a Space Warehouse connection.
  */
 export class UpdateSelectiveSyncForWarehouseAndSpaceAlphaInput {
     /**
-     * A list of sync schema overrides to apply to this Space Warehouse. Note: Selective enabling of Event tables under disabled all event tables conditions is not currently supported. EnableEventTables flag need to be set to true before any selective operation on the event tables.
+     * A list of sync Schema overrides to apply to this Space Warehouse. Note: Selective Sync is not supported if the enableEventTables flag is false.
      */
     'syncOverrides'?: Array<SpaceWarehouseSchemaOverride>;
     /**

@@ -1,7 +1,7 @@
 export declare class SpaceWarehouseSchemaOverride {
     'collection': string;
     'enabled': boolean;
-    'property': string;
+    'property'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

@@ -375,7 +375,7 @@ export class ProfilesSyncApi {
         });
     }
     /**
-     * Returns the schema for a Space Warehouse connection, including Sources, Collections, and Properties.
+     * Returns the schema for a Space Warehouse connection, including Collections and Properties.
      * @summary List Selective Syncs from Warehouse And Space
      * @param spaceId
      * @param warehouseId
