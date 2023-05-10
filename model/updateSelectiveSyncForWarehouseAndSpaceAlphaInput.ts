@@ -22,7 +22,7 @@ export class UpdateSelectiveSyncForWarehouseAndSpaceAlphaInput {
      */
     'syncOverrides'?: Array<SpaceWarehouseSchemaOverride>;
     /**
-     * A flag to enable or disable all event Tables.
+     * A flag to enable or disable all event Tables. This field is optional.
      */
     'enableEventTables'?: boolean;
 
