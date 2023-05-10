@@ -23,7 +23,7 @@ export class ListSelectiveSyncsFromWarehouseAndSpaceAlphaOutput {
      */
     'items': Array<SpaceWarehouseSelectiveSyncItemAlpha>;
     /**
-     * A flag that represent if all event Tables are enable or disable.
+     * A flag that represent if all event Tables are enable or disable. This field is optional.
      */
     'enableEventTables'?: boolean;
     'pagination': Pagination;
