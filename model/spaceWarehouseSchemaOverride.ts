@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 /**
- * Represents the override for a collection/property? path to apply to a Space Warehouse.
+ * Overrides the enabled or disabled state of the specified collection and / or properties within the schema.
  */
 export class SpaceWarehouseSchemaOverride {
     /**
@@ -21,7 +21,7 @@ export class SpaceWarehouseSchemaOverride {
      */
     'collection': string;
     /**
-     * The Enabled flag ok telling whether the Collection is enabled or not.
+     * Represents the overridden enabled state for the listed collection and / or properties.
      */
     'enabled': boolean;
     /**
