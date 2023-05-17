@@ -2,6 +2,7 @@ import { Pagination } from './pagination';
 import { SpaceWarehouseSelectiveSyncItemAlpha } from './spaceWarehouseSelectiveSyncItemAlpha';
 export declare class ListSelectiveSyncsFromWarehouseAndSpaceAlphaOutput {
     'items': Array<SpaceWarehouseSelectiveSyncItemAlpha>;
+    'enableEventTables'?: boolean;
     'pagination': Pagination;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

@@ -15,6 +15,11 @@ var ListSelectiveSyncsFromWarehouseAndSpaceAlphaOutput = (function () {
             type: 'Array<SpaceWarehouseSelectiveSyncItemAlpha>',
         },
         {
+            name: 'enableEventTables',
+            baseName: 'enableEventTables',
+            type: 'boolean',
+        },
+        {
             name: 'pagination',
             baseName: 'pagination',
             type: 'Pagination',
