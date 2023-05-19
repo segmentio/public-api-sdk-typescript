@@ -92,10 +92,8 @@ export namespace Regulation {
         FINISHED = <any>'FINISHED',
         INITIALIZED = <any>'INITIALIZED',
         INVALID = <any>'INVALID',
-        IN_PROGRESS = <any>'IN_PROGRESS',
         NOT_SUPPORTED = <any>'NOT_SUPPORTED',
         PARTIAL_SUCCESS = <any>'PARTIAL_SUCCESS',
         RUNNING = <any>'RUNNING',
-        SUCCESS = <any>'SUCCESS',
     }
 }

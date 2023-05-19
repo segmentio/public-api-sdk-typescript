@@ -20,13 +20,10 @@ export declare namespace DestinationStatusV1 {
     enum StatusEnum {
         FAILED,
         FINISHED,
-        FORWARDED,
         INITIALIZED,
         INVALID,
-        IN_PROGRESS,
         NOT_SUPPORTED,
         PARTIAL_SUCCESS,
-        RUNNING,
-        SUCCESS
+        RUNNING
     }
 }

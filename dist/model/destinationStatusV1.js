@@ -43,14 +43,11 @@ exports.DestinationStatusV1 = DestinationStatusV1;
     (function (StatusEnum) {
         StatusEnum[StatusEnum["FAILED"] = 'FAILED'] = "FAILED";
         StatusEnum[StatusEnum["FINISHED"] = 'FINISHED'] = "FINISHED";
-        StatusEnum[StatusEnum["FORWARDED"] = 'FORWARDED'] = "FORWARDED";
         StatusEnum[StatusEnum["INITIALIZED"] = 'INITIALIZED'] = "INITIALIZED";
         StatusEnum[StatusEnum["INVALID"] = 'INVALID'] = "INVALID";
-        StatusEnum[StatusEnum["IN_PROGRESS"] = 'IN_PROGRESS'] = "IN_PROGRESS";
         StatusEnum[StatusEnum["NOT_SUPPORTED"] = 'NOT_SUPPORTED'] = "NOT_SUPPORTED";
         StatusEnum[StatusEnum["PARTIAL_SUCCESS"] = 'PARTIAL_SUCCESS'] = "PARTIAL_SUCCESS";
         StatusEnum[StatusEnum["RUNNING"] = 'RUNNING'] = "RUNNING";
-        StatusEnum[StatusEnum["SUCCESS"] = 'SUCCESS'] = "SUCCESS";
     })(StatusEnum = DestinationStatusV1.StatusEnum || (DestinationStatusV1.StatusEnum = {}));
 })(DestinationStatusV1 = exports.DestinationStatusV1 || (exports.DestinationStatusV1 = {}));
 exports.DestinationStatusV1 = DestinationStatusV1;
