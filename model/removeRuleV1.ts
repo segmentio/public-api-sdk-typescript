@@ -16,8 +16,17 @@ import { RequestFile } from './models';
  * Represents the parameters needed to identify a rule on the backend-side.
  */
 export class RemoveRuleV1 {
+    /**
+     * The type for this Tracking Plan rule.
+     */
     'type': RemoveRuleV1.TypeEnum;
+    /**
+     * Key to this rule (free-form string like \'Button clicked\').
+     */
     'key'?: string;
+    /**
+     * Version of this rule.
+     */
     'version': number;
 
     static discriminator: string | undefined = undefined;
