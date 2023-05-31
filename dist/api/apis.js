@@ -65,7 +65,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.unwrap = exports.configureApis = exports.APIS = exports.HttpError = void 0;
+exports.unwrap = exports.configureEuApis = exports.configureApis = exports.APIS = exports.HttpError = void 0;
 __exportStar(require("./aPICallsApi"), exports);
 var aPICallsApi_1 = require("./aPICallsApi");
 __exportStar(require("./auditTrailApi"), exports);
@@ -189,6 +189,43 @@ function configureApis(token, headers) {
     return apis;
 }
 exports.configureApis = configureApis;
+function configureEuApis(token, headers) {
+    if (headers === void 0) { headers = {}; }
+    var basePath = 'https://eu1.api.segmentapis.com';
+    var apis = {
+        apiCalls: new aPICallsApi_1.APICallsApi(basePath),
+        auditTrail: new auditTrailApi_1.AuditTrailApi(basePath),
+        catalog: new catalogApi_1.CatalogApi(basePath),
+        deletionAndSuppresion: new deletionAndSuppressionApi_1.DeletionAndSuppressionApi(basePath),
+        destinationFilters: new destinationFiltersApi_1.DestinationFiltersApi(basePath),
+        destinations: new destinationsApi_1.DestinationsApi(basePath),
+        edgeFunctions: new edgeFunctionsApi_1.EdgeFunctionsApi(basePath),
+        events: new eventsApi_1.EventsApi(basePath),
+        functions: new functionsApi_1.FunctionsApi(basePath),
+        iamGroups: new iAMGroupsApi_1.IAMGroupsApi(basePath),
+        iamRoles: new iAMRolesApi_1.IAMRolesApi(basePath),
+        iamUsers: new iAMUsersApi_1.IAMUsersApi(basePath),
+        labels: new labelsApi_1.LabelsApi(basePath),
+        monthlyTrackedUsers: new monthlyTrackedUsersApi_1.MonthlyTrackedUsersApi(basePath),
+        selectiveSync: new selectiveSyncApi_1.SelectiveSyncApi(basePath),
+        sources: new sourcesApi_1.SourcesApi(basePath),
+        spaces: new spacesApi_1.SpacesApi(basePath),
+        testing: new testingApi_1.TestingApi(basePath),
+        trackingPlans: new trackingPlansApi_1.TrackingPlansApi(basePath),
+        transformations: new transformationsApi_1.TransformationsApi(basePath),
+        warehouses: new warehousesApi_1.WarehousesApi(basePath),
+        workspaces: new workspacesApi_1.WorkspacesApi(basePath),
+    };
+    for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
+        var k = _a[_i];
+        var key = k;
+        headers['User-Agent'] = 'Public API SDK 34.3.6 (TypeScript)';
+        apis[key].accessToken = token;
+        apis[key].defaultHeaders = headers;
+    }
+    return apis;
+}
+exports.configureEuApis = configureEuApis;
 function unwrap(promise, fallback) {
     return __awaiter(this, void 0, void 0, function () {
         var response;

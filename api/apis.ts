@@ -159,6 +159,53 @@ export function configureApis(
 }
 
 /**
+ * Configures all the APIs and consolidates them into a single client for EU region.
+ *
+ * @param token the authorization token
+ * @returns The consolidated client
+ */
+export function configureEuApis(
+    token: string,
+    headers: Record<string, string> = {}
+): Apis {
+    const basePath = 'https://eu1.api.segmentapis.com';
+
+    const apis = {
+        apiCalls: new APICallsApi(basePath),
+        auditTrail: new AuditTrailApi(basePath),
+        catalog: new CatalogApi(basePath),
+        deletionAndSuppresion: new DeletionAndSuppressionApi(basePath),
+        destinationFilters: new DestinationFiltersApi(basePath),
+        destinations: new DestinationsApi(basePath),
+        edgeFunctions: new EdgeFunctionsApi(basePath),
+        events: new EventsApi(basePath),
+        functions: new FunctionsApi(basePath),
+        iamGroups: new IAMGroupsApi(basePath),
+        iamRoles: new IAMRolesApi(basePath),
+        iamUsers: new IAMUsersApi(basePath),
+        labels: new LabelsApi(basePath),
+        monthlyTrackedUsers: new MonthlyTrackedUsersApi(basePath),
+        selectiveSync: new SelectiveSyncApi(basePath),
+        sources: new SourcesApi(basePath),
+        spaces: new SpacesApi(basePath),
+        testing: new TestingApi(basePath),
+        trackingPlans: new TrackingPlansApi(basePath),
+        transformations: new TransformationsApi(basePath),
+        warehouses: new WarehousesApi(basePath),
+        workspaces: new WorkspacesApi(basePath),
+    };
+
+    for (const k of Object.keys(apis)) {
+        const key = k as keyof typeof apis;
+        headers['User-Agent'] = 'Public API SDK 34.3.6 (TypeScript)';
+        apis[key].accessToken = token;
+        apis[key].defaultHeaders = headers;
+    }
+
+    return apis;
+}
+
+/**
  * Unwraps the data from a Public API request, and re-throws client errors
  *
  * @param promise An async Public API request
