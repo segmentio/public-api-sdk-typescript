@@ -45,6 +45,8 @@ import * as PublicAPI from '@segment/public-api-sdk-typescript'
 const TOKEN = '...' // fetch your token from a secure location
 
 const { workspaces } = PublicAPI.configureApis(TOKEN)
+// To access the EU endpoint, use `const { workspaces } = PublicAPI.configureEuApis(TOKEN)`
+
 PublicAPI.unwrap(workspaces.getWorkspace())
     .then((result) => {
         console.log(JSON.stringify(result))
