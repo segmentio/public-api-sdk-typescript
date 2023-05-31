@@ -168,7 +168,7 @@ export function configureEuApis(
     token: string,
     headers: Record<string, string> = {}
 ): Apis {
-    const basePath = 'eu1.api.segmentapis.com';
+    const basePath = 'https://eu1.api.segmentapis.com';
 
     const apis = {
         apiCalls: new APICallsApi(basePath),

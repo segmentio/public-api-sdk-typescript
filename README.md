@@ -40,19 +40,18 @@ You are now ready to start making calls to Public API!
 ## Example
 
 ```typescript
-import * as PublicAPI from '@segment/public-api-sdk-typescript'
+import * as PublicAPI from '@segment/public-api-sdk-typescript';
 
-const TOKEN = '...' // fetch your token from a secure location
+const TOKEN = '...'; // fetch your token from a secure location
 
-const { workspaces } = PublicAPI.configureApis(TOKEN)
+const { workspaces } = PublicAPI.configureApis(TOKEN);
 // To access the EU endpoint, use `const { workspaces } = PublicAPI.configureEuApis(TOKEN)`
 
 PublicAPI.unwrap(workspaces.getWorkspace())
     .then((result) => {
-        console.log(JSON.stringify(result))
+        console.log(JSON.stringify(result));
     })
-    .catch(console.error)
-)
+    .catch(console.error);
 ```
 
 ## Contributing

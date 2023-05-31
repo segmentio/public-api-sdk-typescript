@@ -191,7 +191,7 @@ function configureApis(token, headers) {
 exports.configureApis = configureApis;
 function configureEuApis(token, headers) {
     if (headers === void 0) { headers = {}; }
-    var basePath = 'eu1.api.segmentapis.com';
+    var basePath = 'https://eu1.api.segmentapis.com';
     var apis = {
         apiCalls: new aPICallsApi_1.APICallsApi(basePath),
         auditTrail: new auditTrailApi_1.AuditTrailApi(basePath),
