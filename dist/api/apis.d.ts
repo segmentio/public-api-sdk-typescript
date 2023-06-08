@@ -81,6 +81,7 @@ export interface Apis {
     workspaces: WorkspacesApi;
 }
 export declare function configureApis(token: string, headers?: Record<string, string>): Apis;
+export declare function configureEuApis(token: string, headers?: Record<string, string>): Apis;
 export declare function unwrap<T>(promise: Promise<{
     body: {
         data?: T;
