@@ -896,7 +896,12 @@ export class TrackingPlansApi {
      */
     public async listTrackingPlans(
         pagination: PaginationInput,
-        type?: 'LIVE' | 'PROPERTY_LIBRARY' | 'RULE_LIBRARY' | 'TEMPLATE',
+        type?:
+            | 'ENGAGE'
+            | 'LIVE'
+            | 'PROPERTY_LIBRARY'
+            | 'RULE_LIBRARY'
+            | 'TEMPLATE',
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -932,7 +937,7 @@ export class TrackingPlansApi {
         if (type !== undefined) {
             localVarQueryParameters['type'] = ObjectSerializer.serialize(
                 type,
-                "'LIVE' | 'PROPERTY_LIBRARY' | 'RULE_LIBRARY' | 'TEMPLATE'"
+                "'ENGAGE' | 'LIVE' | 'PROPERTY_LIBRARY' | 'RULE_LIBRARY' | 'TEMPLATE'"
             );
         }
 

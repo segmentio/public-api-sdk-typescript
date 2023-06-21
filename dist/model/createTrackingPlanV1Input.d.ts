@@ -16,6 +16,7 @@ export declare class CreateTrackingPlanV1Input {
 }
 export declare namespace CreateTrackingPlanV1Input {
     enum TypeEnum {
+        ENGAGE,
         LIVE,
         PROPERTY_LIBRARY,
         RULE_LIBRARY,

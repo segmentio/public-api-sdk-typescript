@@ -28,11 +28,11 @@ export class UpsertRuleV1 {
     /**
      * JSON Schema of this rule.
      */
-    'jsonSchema': any | null;
+    'jsonSchema'?: any | null;
     /**
      * Version of this rule.
      */
-    'version': number;
+    'version'?: number;
     /**
      * The timestamp of this rule\'s creation.
      */

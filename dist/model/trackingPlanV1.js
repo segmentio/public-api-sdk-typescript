@@ -51,6 +51,7 @@ exports.TrackingPlanV1 = TrackingPlanV1;
 (function (TrackingPlanV1) {
     var TypeEnum;
     (function (TypeEnum) {
+        TypeEnum[TypeEnum["ENGAGE"] = 'ENGAGE'] = "ENGAGE";
         TypeEnum[TypeEnum["LIVE"] = 'LIVE'] = "LIVE";
         TypeEnum[TypeEnum["PROPERTY_LIBRARY"] = 'PROPERTY_LIBRARY'] = "PROPERTY_LIBRARY";
         TypeEnum[TypeEnum["RULE_LIBRARY"] = 'RULE_LIBRARY'] = "RULE_LIBRARY";
