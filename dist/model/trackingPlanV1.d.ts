@@ -20,7 +20,6 @@ export declare class TrackingPlanV1 {
 }
 export declare namespace TrackingPlanV1 {
     enum TypeEnum {
-        ENGAGE,
         LIVE,
         PROPERTY_LIBRARY,
         RULE_LIBRARY,

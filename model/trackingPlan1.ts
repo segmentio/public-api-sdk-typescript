@@ -97,7 +97,6 @@ export class TrackingPlan1 {
 
 export namespace TrackingPlan1 {
     export enum TypeEnum {
-        ENGAGE = <any>'ENGAGE',
         LIVE = <any>'LIVE',
         PROPERTY_LIBRARY = <any>'PROPERTY_LIBRARY',
         RULE_LIBRARY = <any>'RULE_LIBRARY',
