@@ -71,9 +71,6 @@ __exportStar(require("./createInvites200Response"), exports);
 __exportStar(require("./createInvitesV1Input"), exports);
 __exportStar(require("./createInvitesV1Output"), exports);
 __exportStar(require("./createLabel200Response"), exports);
-__exportStar(require("./createLabel200Response1"), exports);
-__exportStar(require("./createLabelAlphaInput"), exports);
-__exportStar(require("./createLabelAlphaOutput"), exports);
 __exportStar(require("./createLabelV1Input"), exports);
 __exportStar(require("./createLabelV1Output"), exports);
 __exportStar(require("./createProfilesWarehouse200Response"), exports);
@@ -262,7 +259,6 @@ __exportStar(require("./invitePermissionV1"), exports);
 __exportStar(require("./inviteV1"), exports);
 __exportStar(require("./label"), exports);
 __exportStar(require("./label1"), exports);
-__exportStar(require("./label2"), exports);
 __exportStar(require("./labelAlpha"), exports);
 __exportStar(require("./labelV1"), exports);
 __exportStar(require("./listAuditEvents200Response"), exports);
@@ -600,9 +596,6 @@ var createInvites200Response_1 = require("./createInvites200Response");
 var createInvitesV1Input_1 = require("./createInvitesV1Input");
 var createInvitesV1Output_1 = require("./createInvitesV1Output");
 var createLabel200Response_1 = require("./createLabel200Response");
-var createLabel200Response1_1 = require("./createLabel200Response1");
-var createLabelAlphaInput_1 = require("./createLabelAlphaInput");
-var createLabelAlphaOutput_1 = require("./createLabelAlphaOutput");
 var createLabelV1Input_1 = require("./createLabelV1Input");
 var createLabelV1Output_1 = require("./createLabelV1Output");
 var createProfilesWarehouse200Response_1 = require("./createProfilesWarehouse200Response");
@@ -791,7 +784,6 @@ var invitePermissionV1_1 = require("./invitePermissionV1");
 var inviteV1_1 = require("./inviteV1");
 var label_1 = require("./label");
 var label1_1 = require("./label1");
-var label2_1 = require("./label2");
 var labelAlpha_1 = require("./labelAlpha");
 var labelV1_1 = require("./labelV1");
 var listAuditEvents200Response_1 = require("./listAuditEvents200Response");
@@ -1230,9 +1222,6 @@ var typeMap = {
     CreateInvitesV1Input: createInvitesV1Input_1.CreateInvitesV1Input,
     CreateInvitesV1Output: createInvitesV1Output_1.CreateInvitesV1Output,
     CreateLabel200Response: createLabel200Response_1.CreateLabel200Response,
-    CreateLabel200Response1: createLabel200Response1_1.CreateLabel200Response1,
-    CreateLabelAlphaInput: createLabelAlphaInput_1.CreateLabelAlphaInput,
-    CreateLabelAlphaOutput: createLabelAlphaOutput_1.CreateLabelAlphaOutput,
     CreateLabelV1Input: createLabelV1Input_1.CreateLabelV1Input,
     CreateLabelV1Output: createLabelV1Output_1.CreateLabelV1Output,
     CreateProfilesWarehouse200Response: createProfilesWarehouse200Response_1.CreateProfilesWarehouse200Response,
@@ -1421,7 +1410,6 @@ var typeMap = {
     InviteV1: inviteV1_1.InviteV1,
     Label: label_1.Label,
     Label1: label1_1.Label1,
-    Label2: label2_1.Label2,
     LabelAlpha: labelAlpha_1.LabelAlpha,
     LabelV1: labelV1_1.LabelV1,
     ListAuditEvents200Response: listAuditEvents200Response_1.ListAuditEvents200Response,

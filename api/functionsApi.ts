@@ -998,7 +998,7 @@ export class FunctionsApi {
         });
     }
     /**
-     * Restore an old Function version as a latest version.    • In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
+     * Restore an old Function version as the latest version.    • In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
      * @summary Restore Function Version
      * @param functionId
      * @param RestoreFunctionVersionAlphaInput

@@ -56,9 +56,6 @@ export * from './createInvites200Response';
 export * from './createInvitesV1Input';
 export * from './createInvitesV1Output';
 export * from './createLabel200Response';
-export * from './createLabel200Response1';
-export * from './createLabelAlphaInput';
-export * from './createLabelAlphaOutput';
 export * from './createLabelV1Input';
 export * from './createLabelV1Output';
 export * from './createProfilesWarehouse200Response';
@@ -247,7 +244,6 @@ export * from './invitePermissionV1';
 export * from './inviteV1';
 export * from './label';
 export * from './label1';
-export * from './label2';
 export * from './labelAlpha';
 export * from './labelV1';
 export * from './listAuditEvents200Response';
@@ -598,9 +594,6 @@ import { CreateInvites200Response } from './createInvites200Response';
 import { CreateInvitesV1Input } from './createInvitesV1Input';
 import { CreateInvitesV1Output } from './createInvitesV1Output';
 import { CreateLabel200Response } from './createLabel200Response';
-import { CreateLabel200Response1 } from './createLabel200Response1';
-import { CreateLabelAlphaInput } from './createLabelAlphaInput';
-import { CreateLabelAlphaOutput } from './createLabelAlphaOutput';
 import { CreateLabelV1Input } from './createLabelV1Input';
 import { CreateLabelV1Output } from './createLabelV1Output';
 import { CreateProfilesWarehouse200Response } from './createProfilesWarehouse200Response';
@@ -789,7 +782,6 @@ import { InvitePermissionV1 } from './invitePermissionV1';
 import { InviteV1 } from './inviteV1';
 import { Label } from './label';
 import { Label1 } from './label1';
-import { Label2 } from './label2';
 import { LabelAlpha } from './labelAlpha';
 import { LabelV1 } from './labelV1';
 import { ListAuditEvents200Response } from './listAuditEvents200Response';
@@ -1292,9 +1284,6 @@ let typeMap: { [index: string]: any } = {
     CreateInvitesV1Input: CreateInvitesV1Input,
     CreateInvitesV1Output: CreateInvitesV1Output,
     CreateLabel200Response: CreateLabel200Response,
-    CreateLabel200Response1: CreateLabel200Response1,
-    CreateLabelAlphaInput: CreateLabelAlphaInput,
-    CreateLabelAlphaOutput: CreateLabelAlphaOutput,
     CreateLabelV1Input: CreateLabelV1Input,
     CreateLabelV1Output: CreateLabelV1Output,
     CreateProfilesWarehouse200Response: CreateProfilesWarehouse200Response,
@@ -1502,7 +1491,6 @@ let typeMap: { [index: string]: any } = {
     InviteV1: InviteV1,
     Label: Label,
     Label1: Label1,
-    Label2: Label2,
     LabelAlpha: LabelAlpha,
     LabelV1: LabelV1,
     ListAuditEvents200Response: ListAuditEvents200Response,

@@ -11,13 +11,13 @@
  */
 
 import { RequestFile } from './models';
-import { Label1 } from './label1';
+import { Label } from './label';
 
 /**
  * Creates a new label in the current Workspace.
  */
 export class CreateLabelV1Input {
-    'label': Label1;
+    'label': Label;
 
     static discriminator: string | undefined = undefined;
 
@@ -29,7 +29,7 @@ export class CreateLabelV1Input {
         {
             name: 'label',
             baseName: 'label',
-            type: 'Label1',
+            type: 'Label',
         },
     ];
 
