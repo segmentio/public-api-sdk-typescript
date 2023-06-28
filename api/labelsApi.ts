@@ -15,8 +15,6 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { CreateLabel200Response } from '../model/createLabel200Response';
-import { CreateLabel200Response1 } from '../model/createLabel200Response1';
-import { CreateLabelAlphaInput } from '../model/createLabelAlphaInput';
 import { CreateLabelV1Input } from '../model/createLabelV1Input';
 import { DeleteLabel200Response } from '../model/deleteLabel200Response';
 import { DeleteLabel200Response1 } from '../model/deleteLabel200Response1';
