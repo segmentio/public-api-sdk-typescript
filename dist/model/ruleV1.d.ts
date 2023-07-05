@@ -1,8 +1,8 @@
 export declare class RuleV1 {
     'type': RuleV1.TypeEnum;
     'key'?: string;
-    'jsonSchema'?: any | null;
-    'version'?: number;
+    'jsonSchema': any | null;
+    'version': number;
     'createdAt'?: string;
     'updatedAt'?: string;
     'deprecatedAt'?: string;
