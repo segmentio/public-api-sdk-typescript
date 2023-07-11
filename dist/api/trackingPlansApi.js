@@ -673,7 +673,7 @@ var TrackingPlansApi = (function () {
                     throw new Error('Required parameter pagination was null or undefined when calling listTrackingPlans.');
                 }
                 if (type !== undefined) {
-                    localVarQueryParameters['type'] = models_1.ObjectSerializer.serialize(type, "'LIVE' | 'PROPERTY_LIBRARY' | 'RULE_LIBRARY' | 'TEMPLATE'");
+                    localVarQueryParameters['type'] = models_1.ObjectSerializer.serialize(type, "'ENGAGE' | 'LIVE' | 'PROPERTY_LIBRARY' | 'RULE_LIBRARY' | 'TEMPLATE'");
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
