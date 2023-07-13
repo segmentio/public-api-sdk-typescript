@@ -90,7 +90,7 @@ export declare class TrackingPlansApi {
         response: http.IncomingMessage;
         body: ListSourcesFromTrackingPlan200Response;
     }>;
-    listTrackingPlans(pagination: PaginationInput, type?: 'LIVE' | 'PROPERTY_LIBRARY' | 'RULE_LIBRARY' | 'TEMPLATE', options?: {
+    listTrackingPlans(pagination: PaginationInput, type?: 'ENGAGE' | 'LIVE' | 'PROPERTY_LIBRARY' | 'RULE_LIBRARY' | 'TEMPLATE', options?: {
         headers: {
             [name: string]: string;
         };
