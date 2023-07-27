@@ -234,6 +234,8 @@ export * from './getWorkspace200Response';
 export * from './getWorkspaceV1Output';
 export * from './group';
 export * from './groupSourceSettingsV1';
+export * from './groupSubscriptionStatus';
+export * from './groupSubscriptionStatusResponse';
 export * from './handleWebhookInput';
 export * from './handleWebhookOutput';
 export * from './identify';
@@ -462,6 +464,7 @@ export * from './updateFilterForDestinationV1Output';
 export * from './updateFunction200Response';
 export * from './updateFunctionV1Input';
 export * from './updateFunctionV1Output';
+export * from './updateGroupSubscriptionStatusResponse';
 export * from './updateProfilesWarehouseForSpaceWarehouse200Response';
 export * from './updateProfilesWarehouseForSpaceWarehouseAlphaInput';
 export * from './updateProfilesWarehouseForSpaceWarehouseAlphaOutput';
@@ -772,6 +775,8 @@ import { GetWorkspace200Response } from './getWorkspace200Response';
 import { GetWorkspaceV1Output } from './getWorkspaceV1Output';
 import { Group } from './group';
 import { GroupSourceSettingsV1 } from './groupSourceSettingsV1';
+import { GroupSubscriptionStatus } from './groupSubscriptionStatus';
+import { GroupSubscriptionStatusResponse } from './groupSubscriptionStatusResponse';
 import { HandleWebhookInput } from './handleWebhookInput';
 import { HandleWebhookOutput } from './handleWebhookOutput';
 import { Identify } from './identify';
@@ -1000,6 +1005,7 @@ import { UpdateFilterForDestinationV1Output } from './updateFilterForDestination
 import { UpdateFunction200Response } from './updateFunction200Response';
 import { UpdateFunctionV1Input } from './updateFunctionV1Input';
 import { UpdateFunctionV1Output } from './updateFunctionV1Output';
+import { UpdateGroupSubscriptionStatusResponse } from './updateGroupSubscriptionStatusResponse';
 import { UpdateProfilesWarehouseForSpaceWarehouse200Response } from './updateProfilesWarehouseForSpaceWarehouse200Response';
 import { UpdateProfilesWarehouseForSpaceWarehouseAlphaInput } from './updateProfilesWarehouseForSpaceWarehouseAlphaInput';
 import { UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput } from './updateProfilesWarehouseForSpaceWarehouseAlphaOutput';
@@ -1156,6 +1162,9 @@ let enumsMap: { [index: string]: any } = {
     'Group.CommonEventOnViolationsEnum': Group.CommonEventOnViolationsEnum,
     'GroupSourceSettingsV1.CommonEventOnViolationsEnum':
         GroupSourceSettingsV1.CommonEventOnViolationsEnum,
+    'GroupSubscriptionStatus.StatusEnum': GroupSubscriptionStatus.StatusEnum,
+    'GroupSubscriptionStatusResponse.StatusEnum':
+        GroupSubscriptionStatusResponse.StatusEnum,
     'Identify.CommonEventOnViolationsEnum':
         Identify.CommonEventOnViolationsEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum':
@@ -1203,6 +1212,8 @@ let enumsMap: { [index: string]: any } = {
     'TrackingPlan.TypeEnum': TrackingPlan.TypeEnum,
     'TrackingPlan1.TypeEnum': TrackingPlan1.TypeEnum,
     'TrackingPlanV1.TypeEnum': TrackingPlanV1.TypeEnum,
+    'UpdateGroupSubscriptionStatusResponse.StatusEnum':
+        UpdateGroupSubscriptionStatusResponse.StatusEnum,
     'UpdateReverseEtlModelInput.ScheduleStrategyEnum':
         UpdateReverseEtlModelInput.ScheduleStrategyEnum,
     'UpdateRulesInTrackingPlanV1Output.StatusEnum':
@@ -1481,6 +1492,8 @@ let typeMap: { [index: string]: any } = {
     GetWorkspaceV1Output: GetWorkspaceV1Output,
     Group: Group,
     GroupSourceSettingsV1: GroupSourceSettingsV1,
+    GroupSubscriptionStatus: GroupSubscriptionStatus,
+    GroupSubscriptionStatusResponse: GroupSubscriptionStatusResponse,
     HandleWebhookInput: HandleWebhookInput,
     HandleWebhookOutput: HandleWebhookOutput,
     Identify: Identify,
@@ -1754,6 +1767,8 @@ let typeMap: { [index: string]: any } = {
     UpdateFunction200Response: UpdateFunction200Response,
     UpdateFunctionV1Input: UpdateFunctionV1Input,
     UpdateFunctionV1Output: UpdateFunctionV1Output,
+    UpdateGroupSubscriptionStatusResponse:
+        UpdateGroupSubscriptionStatusResponse,
     UpdateProfilesWarehouseForSpaceWarehouse200Response:
         UpdateProfilesWarehouseForSpaceWarehouse200Response,
     UpdateProfilesWarehouseForSpaceWarehouseAlphaInput:

@@ -12,15 +12,23 @@
 
 import { RequestFile } from './models';
 
-export class GetSubscriptionRequest {
+export class GroupSubscriptionStatusResponse {
     /**
-     * Key is the phone number or email.
+     * Name of the group.
      */
-    'key': string;
+    'name': string;
     /**
-     * Type is communication medium used.
+     * The user subscribed, unsubscribed, or on initial status.
      */
-    'type': GetSubscriptionRequest.TypeEnum;
+    'status': GroupSubscriptionStatusResponse.StatusEnum;
+    /**
+     * The group id.
+     */
+    'id': string;
+    /**
+     * The timestamp of this subscription status\'s last change.
+     */
+    'updatedAt'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -30,26 +38,36 @@ export class GetSubscriptionRequest {
         type: string;
     }> = [
         {
-            name: 'key',
-            baseName: 'key',
+            name: 'name',
+            baseName: 'name',
             type: 'string',
         },
         {
-            name: 'type',
-            baseName: 'type',
-            type: 'GetSubscriptionRequest.TypeEnum',
+            name: 'status',
+            baseName: 'status',
+            type: 'GroupSubscriptionStatusResponse.StatusEnum',
+        },
+        {
+            name: 'id',
+            baseName: 'id',
+            type: 'string',
+        },
+        {
+            name: 'updatedAt',
+            baseName: 'updatedAt',
+            type: 'string',
         },
     ];
 
     static getAttributeTypeMap() {
-        return GetSubscriptionRequest.attributeTypeMap;
+        return GroupSubscriptionStatusResponse.attributeTypeMap;
     }
 }
 
-export namespace GetSubscriptionRequest {
-    export enum TypeEnum {
-        EMAIL = <any>'EMAIL',
-        SMS = <any>'SMS',
-        WHATSAPP = <any>'WHATSAPP',
+export namespace GroupSubscriptionStatusResponse {
+    export enum StatusEnum {
+        DID_NOT_SUBSCRIBE = <any>'DID_NOT_SUBSCRIBE',
+        SUBSCRIBED = <any>'SUBSCRIBED',
+        UNSUBSCRIBED = <any>'UNSUBSCRIBED',
     }
 }

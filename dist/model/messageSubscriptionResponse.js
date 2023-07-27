@@ -29,6 +29,11 @@ var MessageSubscriptionResponse = (function () {
             baseName: 'errors',
             type: 'Array<MessageSubscriptionResponseError>',
         },
+        {
+            name: 'groups',
+            baseName: 'groups',
+            type: 'Array<UpdateGroupSubscriptionStatusResponse>',
+        },
     ];
     return MessageSubscriptionResponse;
 }());
@@ -38,6 +43,7 @@ exports.MessageSubscriptionResponse = MessageSubscriptionResponse;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["EMAIL"] = 'EMAIL'] = "EMAIL";
         TypeEnum[TypeEnum["SMS"] = 'SMS'] = "SMS";
+        TypeEnum[TypeEnum["WHATSAPP"] = 'WHATSAPP'] = "WHATSAPP";
     })(TypeEnum = MessageSubscriptionResponse.TypeEnum || (MessageSubscriptionResponse.TypeEnum = {}));
     var StatusEnum;
     (function (StatusEnum) {

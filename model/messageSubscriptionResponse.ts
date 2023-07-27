@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { MessageSubscriptionResponseError } from './messageSubscriptionResponseError';
+import { UpdateGroupSubscriptionStatusResponse } from './updateGroupSubscriptionStatusResponse';
 
 export class MessageSubscriptionResponse {
     /**
@@ -19,17 +20,21 @@ export class MessageSubscriptionResponse {
      */
     'key': string;
     /**
-     * Type is communication medium used. Either EMAIL or SMS.
+     * Type is communication medium used. Either SMS, EMAIL or WHATSAPP.
      */
     'type': MessageSubscriptionResponse.TypeEnum;
     /**
      * The user subscribed, unsubscribed, or on initial status.
      */
-    'status': MessageSubscriptionResponse.StatusEnum;
+    'status'?: MessageSubscriptionResponse.StatusEnum;
     /**
      * Error messages.
      */
     'errors'?: Array<MessageSubscriptionResponseError>;
+    /**
+     * Optional subscription groups.
+     */
+    'groups'?: Array<UpdateGroupSubscriptionStatusResponse>;
 
     static discriminator: string | undefined = undefined;
 
@@ -58,6 +63,11 @@ export class MessageSubscriptionResponse {
             baseName: 'errors',
             type: 'Array<MessageSubscriptionResponseError>',
         },
+        {
+            name: 'groups',
+            baseName: 'groups',
+            type: 'Array<UpdateGroupSubscriptionStatusResponse>',
+        },
     ];
 
     static getAttributeTypeMap() {
@@ -69,6 +79,7 @@ export namespace MessageSubscriptionResponse {
     export enum TypeEnum {
         EMAIL = <any>'EMAIL',
         SMS = <any>'SMS',
+        WHATSAPP = <any>'WHATSAPP',
     }
     export enum StatusEnum {
         DID_NOT_SUBSCRIBE = <any>'DID_NOT_SUBSCRIBE',
