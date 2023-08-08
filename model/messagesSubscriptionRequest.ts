@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { GroupSubscriptionStatus } from './groupSubscriptionStatus';
 
 export class MessagesSubscriptionRequest {
     /**
@@ -18,13 +19,17 @@ export class MessagesSubscriptionRequest {
      */
     'key': string;
     /**
-     * Type is communication medium used. Either EMAIL or SMS.
+     * Type is communication medium used.
      */
     'type': MessagesSubscriptionRequest.TypeEnum;
     /**
-     * The user subscribed, unsubscribed, or on initial status.
+     * The user subscribed, unsubscribed, or on initial status globally.
      */
-    'status': MessagesSubscriptionRequest.StatusEnum;
+    'status'?: MessagesSubscriptionRequest.StatusEnum;
+    /**
+     * Optional groups subscription status.
+     */
+    'groups'?: Array<GroupSubscriptionStatus>;
 
     static discriminator: string | undefined = undefined;
 
@@ -48,6 +53,11 @@ export class MessagesSubscriptionRequest {
             baseName: 'status',
             type: 'MessagesSubscriptionRequest.StatusEnum',
         },
+        {
+            name: 'groups',
+            baseName: 'groups',
+            type: 'Array<GroupSubscriptionStatus>',
+        },
     ];
 
     static getAttributeTypeMap() {
@@ -59,6 +69,7 @@ export namespace MessagesSubscriptionRequest {
     export enum TypeEnum {
         EMAIL = <any>'EMAIL',
         SMS = <any>'SMS',
+        WHATSAPP = <any>'WHATSAPP',
     }
     export enum StatusEnum {
         DID_NOT_SUBSCRIBE = <any>'DID_NOT_SUBSCRIBE',

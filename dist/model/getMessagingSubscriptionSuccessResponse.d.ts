@@ -1,7 +1,10 @@
+import { GroupSubscriptionStatusResponse } from './groupSubscriptionStatusResponse';
 export declare class GetMessagingSubscriptionSuccessResponse {
     'key': string;
     'type': GetMessagingSubscriptionSuccessResponse.TypeEnum;
     'status'?: GetMessagingSubscriptionSuccessResponse.StatusEnum;
+    'groups'?: Array<GroupSubscriptionStatusResponse>;
+    'updatedAt'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -17,7 +20,8 @@ export declare class GetMessagingSubscriptionSuccessResponse {
 export declare namespace GetMessagingSubscriptionSuccessResponse {
     enum TypeEnum {
         EMAIL,
-        SMS
+        SMS,
+        WHATSAPP
     }
     enum StatusEnum {
         DID_NOT_SUBSCRIBE,

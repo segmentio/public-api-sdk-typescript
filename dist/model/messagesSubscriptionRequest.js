@@ -24,6 +24,11 @@ var MessagesSubscriptionRequest = (function () {
             baseName: 'status',
             type: 'MessagesSubscriptionRequest.StatusEnum',
         },
+        {
+            name: 'groups',
+            baseName: 'groups',
+            type: 'Array<GroupSubscriptionStatus>',
+        },
     ];
     return MessagesSubscriptionRequest;
 }());
@@ -33,6 +38,7 @@ exports.MessagesSubscriptionRequest = MessagesSubscriptionRequest;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["EMAIL"] = 'EMAIL'] = "EMAIL";
         TypeEnum[TypeEnum["SMS"] = 'SMS'] = "SMS";
+        TypeEnum[TypeEnum["WHATSAPP"] = 'WHATSAPP'] = "WHATSAPP";
     })(TypeEnum = MessagesSubscriptionRequest.TypeEnum || (MessagesSubscriptionRequest.TypeEnum = {}));
     var StatusEnum;
     (function (StatusEnum) {

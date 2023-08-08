@@ -1,6 +1,6 @@
-export declare class GetSubscriptionRequest {
-    'key': string;
-    'type': GetSubscriptionRequest.TypeEnum;
+export declare class GroupSubscriptionStatus {
+    'name': string;
+    'status': GroupSubscriptionStatus.StatusEnum;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -13,10 +13,10 @@ export declare class GetSubscriptionRequest {
         type: string;
     }[];
 }
-export declare namespace GetSubscriptionRequest {
-    enum TypeEnum {
-        EMAIL,
-        SMS,
-        WHATSAPP
+export declare namespace GroupSubscriptionStatus {
+    enum StatusEnum {
+        DID_NOT_SUBSCRIBE,
+        SUBSCRIBED,
+        UNSUBSCRIBED
     }
 }

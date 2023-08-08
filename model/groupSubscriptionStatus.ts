@@ -12,15 +12,15 @@
 
 import { RequestFile } from './models';
 
-export class GetSubscriptionRequest {
+export class GroupSubscriptionStatus {
     /**
-     * Key is the phone number or email.
+     * Name of the group.
      */
-    'key': string;
+    'name': string;
     /**
-     * Type is communication medium used.
+     * The user subscribed, unsubscribed, or on initial status.
      */
-    'type': GetSubscriptionRequest.TypeEnum;
+    'status': GroupSubscriptionStatus.StatusEnum;
 
     static discriminator: string | undefined = undefined;
 
@@ -30,26 +30,26 @@ export class GetSubscriptionRequest {
         type: string;
     }> = [
         {
-            name: 'key',
-            baseName: 'key',
+            name: 'name',
+            baseName: 'name',
             type: 'string',
         },
         {
-            name: 'type',
-            baseName: 'type',
-            type: 'GetSubscriptionRequest.TypeEnum',
+            name: 'status',
+            baseName: 'status',
+            type: 'GroupSubscriptionStatus.StatusEnum',
         },
     ];
 
     static getAttributeTypeMap() {
-        return GetSubscriptionRequest.attributeTypeMap;
+        return GroupSubscriptionStatus.attributeTypeMap;
     }
 }
 
-export namespace GetSubscriptionRequest {
-    export enum TypeEnum {
-        EMAIL = <any>'EMAIL',
-        SMS = <any>'SMS',
-        WHATSAPP = <any>'WHATSAPP',
+export namespace GroupSubscriptionStatus {
+    export enum StatusEnum {
+        DID_NOT_SUBSCRIBE = <any>'DID_NOT_SUBSCRIBE',
+        SUBSCRIBED = <any>'SUBSCRIBED',
+        UNSUBSCRIBED = <any>'UNSUBSCRIBED',
     }
 }
