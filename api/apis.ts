@@ -1,9 +1,13 @@
 export * from './aPICallsApi';
 import { APICallsApi } from './aPICallsApi';
+export * from './audiencesApi';
+import { AudiencesApi } from './audiencesApi';
 export * from './auditTrailApi';
 import { AuditTrailApi } from './auditTrailApi';
 export * from './catalogApi';
 import { CatalogApi } from './catalogApi';
+export * from './computedTraitsApi';
+import { ComputedTraitsApi } from './computedTraitsApi';
 export * from './deletionAndSuppressionApi';
 import { DeletionAndSuppressionApi } from './deletionAndSuppressionApi';
 export * from './destinationFiltersApi';
@@ -63,8 +67,10 @@ export { RequestFile } from '../model/models';
 
 export const APIS = [
     APICallsApi,
+    AudiencesApi,
     AuditTrailApi,
     CatalogApi,
+    ComputedTraitsApi,
     DeletionAndSuppressionApi,
     DestinationFiltersApi,
     DestinationsApi,
@@ -150,7 +156,7 @@ export function configureApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 36.1.1 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 36.2.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -197,7 +203,7 @@ export function configureEuApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 36.1.1 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 36.2.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }

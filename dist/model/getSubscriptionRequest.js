@@ -26,7 +26,9 @@ exports.GetSubscriptionRequest = GetSubscriptionRequest;
 (function (GetSubscriptionRequest) {
     var TypeEnum;
     (function (TypeEnum) {
+        TypeEnum[TypeEnum["ANDROID_PUSH"] = 'ANDROID_PUSH'] = "ANDROID_PUSH";
         TypeEnum[TypeEnum["EMAIL"] = 'EMAIL'] = "EMAIL";
+        TypeEnum[TypeEnum["IOS_PUSH"] = 'IOS_PUSH'] = "IOS_PUSH";
         TypeEnum[TypeEnum["SMS"] = 'SMS'] = "SMS";
         TypeEnum[TypeEnum["WHATSAPP"] = 'WHATSAPP'] = "WHATSAPP";
     })(TypeEnum = GetSubscriptionRequest.TypeEnum || (GetSubscriptionRequest.TypeEnum = {}));
