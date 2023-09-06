@@ -40,16 +40,12 @@ __exportStar(require("./addUsersToUserGroupV1Output"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Input"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Output"), exports);
 __exportStar(require("./allowedLabelBeta"), exports);
-__exportStar(require("./audience"), exports);
-__exportStar(require("./audienceSummary"), exports);
 __exportStar(require("./auditEventV1"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpace200Response"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput"), exports);
 __exportStar(require("./breakdownBeta"), exports);
 __exportStar(require("./commonSourceSettingsV1"), exports);
-__exportStar(require("./computedTrait"), exports);
-__exportStar(require("./computedTraitSummary"), exports);
 __exportStar(require("./contact"), exports);
 __exportStar(require("./createCloudSourceRegulation200Response"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Input"), exports);
@@ -71,9 +67,6 @@ __exportStar(require("./createFunctionDeployment200Response"), exports);
 __exportStar(require("./createFunctionDeploymentV1Output"), exports);
 __exportStar(require("./createFunctionV1Input"), exports);
 __exportStar(require("./createFunctionV1Output"), exports);
-__exportStar(require("./createInsertFunctionInstance200Response"), exports);
-__exportStar(require("./createInsertFunctionInstanceAlphaInput"), exports);
-__exportStar(require("./createInsertFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./createInvites200Response"), exports);
 __exportStar(require("./createInvitesV1Input"), exports);
 __exportStar(require("./createInvitesV1Output"), exports);
@@ -119,8 +112,6 @@ __exportStar(require("./deleteDestination200Response"), exports);
 __exportStar(require("./deleteDestinationV1Output"), exports);
 __exportStar(require("./deleteFunction200Response"), exports);
 __exportStar(require("./deleteFunctionV1Output"), exports);
-__exportStar(require("./deleteInsertFunctionInstance200Response"), exports);
-__exportStar(require("./deleteInsertFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./deleteInvites200Response"), exports);
 __exportStar(require("./deleteInvitesV1Output"), exports);
 __exportStar(require("./deleteLabel200Response"), exports);
@@ -192,10 +183,6 @@ __exportStar(require("./generateUploadURLForEdgeFunctions200Response"), exports)
 __exportStar(require("./generateUploadURLForEdgeFunctionsAlphaOutput"), exports);
 __exportStar(require("./getAdvancedSyncScheduleFromWarehouse200Response"), exports);
 __exportStar(require("./getAdvancedSyncScheduleFromWarehouseV1Output"), exports);
-__exportStar(require("./getAudience200Response"), exports);
-__exportStar(require("./getAudienceAlphaOutput"), exports);
-__exportStar(require("./getComputedTrait200Response"), exports);
-__exportStar(require("./getComputedTraitAlphaOutput"), exports);
 __exportStar(require("./getConnectionStateFromWarehouse200Response"), exports);
 __exportStar(require("./getConnectionStateFromWarehouseV1Output"), exports);
 __exportStar(require("./getDailyPerSourceAPICallsUsage200Response"), exports);
@@ -269,9 +256,6 @@ __exportStar(require("./handleWebhookOutput"), exports);
 __exportStar(require("./identify"), exports);
 __exportStar(require("./identifySourceSettingsV1"), exports);
 __exportStar(require("./input"), exports);
-__exportStar(require("./insertFunctionInstance"), exports);
-__exportStar(require("./insertFunctionInstance1"), exports);
-__exportStar(require("./insertFunctionInstanceAlpha"), exports);
 __exportStar(require("./integrationOptionBeta"), exports);
 __exportStar(require("./invitePermissionV1"), exports);
 __exportStar(require("./inviteV1"), exports);
@@ -279,12 +263,8 @@ __exportStar(require("./label"), exports);
 __exportStar(require("./label1"), exports);
 __exportStar(require("./labelAlpha"), exports);
 __exportStar(require("./labelV1"), exports);
-__exportStar(require("./listAudiences200Response"), exports);
-__exportStar(require("./listAudiencesAlphaOutput"), exports);
 __exportStar(require("./listAuditEvents200Response"), exports);
 __exportStar(require("./listAuditEventsV1Output"), exports);
-__exportStar(require("./listComputedTraits200Response"), exports);
-__exportStar(require("./listComputedTraitsAlphaOutput"), exports);
 __exportStar(require("./listConnectedDestinationsFromSource200Response"), exports);
 __exportStar(require("./listConnectedDestinationsFromSource200Response1"), exports);
 __exportStar(require("./listConnectedDestinationsFromSourceAlphaOutput"), exports);
@@ -306,8 +286,6 @@ __exportStar(require("./listFunctionVersions200Response"), exports);
 __exportStar(require("./listFunctionVersionsAlphaOutput"), exports);
 __exportStar(require("./listFunctions200Response"), exports);
 __exportStar(require("./listFunctionsV1Output"), exports);
-__exportStar(require("./listInsertFunctionInstances200Response"), exports);
-__exportStar(require("./listInsertFunctionInstancesAlphaOutput"), exports);
 __exportStar(require("./listInvites200Response"), exports);
 __exportStar(require("./listInvitesFromUserGroup200Response"), exports);
 __exportStar(require("./listInvitesFromUserGroupV1Output"), exports);
@@ -399,10 +377,6 @@ __exportStar(require("./propertyValueTransformationV1"), exports);
 __exportStar(require("./query"), exports);
 __exportStar(require("./regulation"), exports);
 __exportStar(require("./regulationListEntryV1"), exports);
-__exportStar(require("./removeAudienceFromSpace200Response"), exports);
-__exportStar(require("./removeAudienceFromSpaceAlphaOutput"), exports);
-__exportStar(require("./removeComputedTraitFromSpace200Response"), exports);
-__exportStar(require("./removeComputedTraitFromSpaceAlphaOutput"), exports);
 __exportStar(require("./removeFilterFromDestination200Response"), exports);
 __exportStar(require("./removeFilterFromDestinationV1Output"), exports);
 __exportStar(require("./removeProfilesWarehouseFromSpace200Response"), exports);
@@ -496,12 +470,6 @@ __exportStar(require("./transformation4"), exports);
 __exportStar(require("./transformation5"), exports);
 __exportStar(require("./transformationBeta"), exports);
 __exportStar(require("./transformationV1"), exports);
-__exportStar(require("./updateAudienceForSpace200Response"), exports);
-__exportStar(require("./updateAudienceForSpaceAlphaOutput"), exports);
-__exportStar(require("./updateAudienceForSpaceInput"), exports);
-__exportStar(require("./updateComputedTraitForSpace200Response"), exports);
-__exportStar(require("./updateComputedTraitForSpaceAlphaInput"), exports);
-__exportStar(require("./updateComputedTraitForSpaceAlphaOutput"), exports);
 __exportStar(require("./updateDestination200Response"), exports);
 __exportStar(require("./updateDestinationV1Input"), exports);
 __exportStar(require("./updateDestinationV1Output"), exports);
@@ -512,9 +480,6 @@ __exportStar(require("./updateFunction200Response"), exports);
 __exportStar(require("./updateFunctionV1Input"), exports);
 __exportStar(require("./updateFunctionV1Output"), exports);
 __exportStar(require("./updateGroupSubscriptionStatusResponse"), exports);
-__exportStar(require("./updateInsertFunctionInstance200Response"), exports);
-__exportStar(require("./updateInsertFunctionInstanceAlphaInput"), exports);
-__exportStar(require("./updateInsertFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./updateProfilesWarehouseForSpaceWarehouse200Response"), exports);
 __exportStar(require("./updateProfilesWarehouseForSpaceWarehouseAlphaInput"), exports);
 __exportStar(require("./updateProfilesWarehouseForSpaceWarehouseAlphaOutput"), exports);
@@ -603,16 +568,12 @@ var addUsersToUserGroupV1Output_1 = require("./addUsersToUserGroupV1Output");
 var advancedWarehouseSyncScheduleV1Input_1 = require("./advancedWarehouseSyncScheduleV1Input");
 var advancedWarehouseSyncScheduleV1Output_1 = require("./advancedWarehouseSyncScheduleV1Output");
 var allowedLabelBeta_1 = require("./allowedLabelBeta");
-var audience_1 = require("./audience");
-var audienceSummary_1 = require("./audienceSummary");
 var auditEventV1_1 = require("./auditEventV1");
 var batchQueryMessagingSubscriptionsForSpace200Response_1 = require("./batchQueryMessagingSubscriptionsForSpace200Response");
 var batchQueryMessagingSubscriptionsForSpaceAlphaInput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput");
 var batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput");
 var breakdownBeta_1 = require("./breakdownBeta");
 var commonSourceSettingsV1_1 = require("./commonSourceSettingsV1");
-var computedTrait_1 = require("./computedTrait");
-var computedTraitSummary_1 = require("./computedTraitSummary");
 var contact_1 = require("./contact");
 var createCloudSourceRegulation200Response_1 = require("./createCloudSourceRegulation200Response");
 var createCloudSourceRegulationV1Input_1 = require("./createCloudSourceRegulationV1Input");
@@ -634,9 +595,6 @@ var createFunctionDeployment200Response_1 = require("./createFunctionDeployment2
 var createFunctionDeploymentV1Output_1 = require("./createFunctionDeploymentV1Output");
 var createFunctionV1Input_1 = require("./createFunctionV1Input");
 var createFunctionV1Output_1 = require("./createFunctionV1Output");
-var createInsertFunctionInstance200Response_1 = require("./createInsertFunctionInstance200Response");
-var createInsertFunctionInstanceAlphaInput_1 = require("./createInsertFunctionInstanceAlphaInput");
-var createInsertFunctionInstanceAlphaOutput_1 = require("./createInsertFunctionInstanceAlphaOutput");
 var createInvites200Response_1 = require("./createInvites200Response");
 var createInvitesV1Input_1 = require("./createInvitesV1Input");
 var createInvitesV1Output_1 = require("./createInvitesV1Output");
@@ -682,8 +640,6 @@ var deleteDestination200Response_1 = require("./deleteDestination200Response");
 var deleteDestinationV1Output_1 = require("./deleteDestinationV1Output");
 var deleteFunction200Response_1 = require("./deleteFunction200Response");
 var deleteFunctionV1Output_1 = require("./deleteFunctionV1Output");
-var deleteInsertFunctionInstance200Response_1 = require("./deleteInsertFunctionInstance200Response");
-var deleteInsertFunctionInstanceAlphaOutput_1 = require("./deleteInsertFunctionInstanceAlphaOutput");
 var deleteInvites200Response_1 = require("./deleteInvites200Response");
 var deleteInvitesV1Output_1 = require("./deleteInvitesV1Output");
 var deleteLabel200Response_1 = require("./deleteLabel200Response");
@@ -755,10 +711,6 @@ var generateUploadURLForEdgeFunctions200Response_1 = require("./generateUploadUR
 var generateUploadURLForEdgeFunctionsAlphaOutput_1 = require("./generateUploadURLForEdgeFunctionsAlphaOutput");
 var getAdvancedSyncScheduleFromWarehouse200Response_1 = require("./getAdvancedSyncScheduleFromWarehouse200Response");
 var getAdvancedSyncScheduleFromWarehouseV1Output_1 = require("./getAdvancedSyncScheduleFromWarehouseV1Output");
-var getAudience200Response_1 = require("./getAudience200Response");
-var getAudienceAlphaOutput_1 = require("./getAudienceAlphaOutput");
-var getComputedTrait200Response_1 = require("./getComputedTrait200Response");
-var getComputedTraitAlphaOutput_1 = require("./getComputedTraitAlphaOutput");
 var getConnectionStateFromWarehouse200Response_1 = require("./getConnectionStateFromWarehouse200Response");
 var getConnectionStateFromWarehouseV1Output_1 = require("./getConnectionStateFromWarehouseV1Output");
 var getDailyPerSourceAPICallsUsage200Response_1 = require("./getDailyPerSourceAPICallsUsage200Response");
@@ -832,9 +784,6 @@ var handleWebhookOutput_1 = require("./handleWebhookOutput");
 var identify_1 = require("./identify");
 var identifySourceSettingsV1_1 = require("./identifySourceSettingsV1");
 var input_1 = require("./input");
-var insertFunctionInstance_1 = require("./insertFunctionInstance");
-var insertFunctionInstance1_1 = require("./insertFunctionInstance1");
-var insertFunctionInstanceAlpha_1 = require("./insertFunctionInstanceAlpha");
 var integrationOptionBeta_1 = require("./integrationOptionBeta");
 var invitePermissionV1_1 = require("./invitePermissionV1");
 var inviteV1_1 = require("./inviteV1");
@@ -842,12 +791,8 @@ var label_1 = require("./label");
 var label1_1 = require("./label1");
 var labelAlpha_1 = require("./labelAlpha");
 var labelV1_1 = require("./labelV1");
-var listAudiences200Response_1 = require("./listAudiences200Response");
-var listAudiencesAlphaOutput_1 = require("./listAudiencesAlphaOutput");
 var listAuditEvents200Response_1 = require("./listAuditEvents200Response");
 var listAuditEventsV1Output_1 = require("./listAuditEventsV1Output");
-var listComputedTraits200Response_1 = require("./listComputedTraits200Response");
-var listComputedTraitsAlphaOutput_1 = require("./listComputedTraitsAlphaOutput");
 var listConnectedDestinationsFromSource200Response_1 = require("./listConnectedDestinationsFromSource200Response");
 var listConnectedDestinationsFromSource200Response1_1 = require("./listConnectedDestinationsFromSource200Response1");
 var listConnectedDestinationsFromSourceAlphaOutput_1 = require("./listConnectedDestinationsFromSourceAlphaOutput");
@@ -869,8 +814,6 @@ var listFunctionVersions200Response_1 = require("./listFunctionVersions200Respon
 var listFunctionVersionsAlphaOutput_1 = require("./listFunctionVersionsAlphaOutput");
 var listFunctions200Response_1 = require("./listFunctions200Response");
 var listFunctionsV1Output_1 = require("./listFunctionsV1Output");
-var listInsertFunctionInstances200Response_1 = require("./listInsertFunctionInstances200Response");
-var listInsertFunctionInstancesAlphaOutput_1 = require("./listInsertFunctionInstancesAlphaOutput");
 var listInvites200Response_1 = require("./listInvites200Response");
 var listInvitesFromUserGroup200Response_1 = require("./listInvitesFromUserGroup200Response");
 var listInvitesFromUserGroupV1Output_1 = require("./listInvitesFromUserGroupV1Output");
@@ -962,10 +905,6 @@ var propertyValueTransformationV1_1 = require("./propertyValueTransformationV1")
 var query_1 = require("./query");
 var regulation_1 = require("./regulation");
 var regulationListEntryV1_1 = require("./regulationListEntryV1");
-var removeAudienceFromSpace200Response_1 = require("./removeAudienceFromSpace200Response");
-var removeAudienceFromSpaceAlphaOutput_1 = require("./removeAudienceFromSpaceAlphaOutput");
-var removeComputedTraitFromSpace200Response_1 = require("./removeComputedTraitFromSpace200Response");
-var removeComputedTraitFromSpaceAlphaOutput_1 = require("./removeComputedTraitFromSpaceAlphaOutput");
 var removeFilterFromDestination200Response_1 = require("./removeFilterFromDestination200Response");
 var removeFilterFromDestinationV1Output_1 = require("./removeFilterFromDestinationV1Output");
 var removeProfilesWarehouseFromSpace200Response_1 = require("./removeProfilesWarehouseFromSpace200Response");
@@ -1059,12 +998,6 @@ var transformation4_1 = require("./transformation4");
 var transformation5_1 = require("./transformation5");
 var transformationBeta_1 = require("./transformationBeta");
 var transformationV1_1 = require("./transformationV1");
-var updateAudienceForSpace200Response_1 = require("./updateAudienceForSpace200Response");
-var updateAudienceForSpaceAlphaOutput_1 = require("./updateAudienceForSpaceAlphaOutput");
-var updateAudienceForSpaceInput_1 = require("./updateAudienceForSpaceInput");
-var updateComputedTraitForSpace200Response_1 = require("./updateComputedTraitForSpace200Response");
-var updateComputedTraitForSpaceAlphaInput_1 = require("./updateComputedTraitForSpaceAlphaInput");
-var updateComputedTraitForSpaceAlphaOutput_1 = require("./updateComputedTraitForSpaceAlphaOutput");
 var updateDestination200Response_1 = require("./updateDestination200Response");
 var updateDestinationV1Input_1 = require("./updateDestinationV1Input");
 var updateDestinationV1Output_1 = require("./updateDestinationV1Output");
@@ -1075,9 +1008,6 @@ var updateFunction200Response_1 = require("./updateFunction200Response");
 var updateFunctionV1Input_1 = require("./updateFunctionV1Input");
 var updateFunctionV1Output_1 = require("./updateFunctionV1Output");
 var updateGroupSubscriptionStatusResponse_1 = require("./updateGroupSubscriptionStatusResponse");
-var updateInsertFunctionInstance200Response_1 = require("./updateInsertFunctionInstance200Response");
-var updateInsertFunctionInstanceAlphaInput_1 = require("./updateInsertFunctionInstanceAlphaInput");
-var updateInsertFunctionInstanceAlphaOutput_1 = require("./updateInsertFunctionInstanceAlphaOutput");
 var updateProfilesWarehouseForSpaceWarehouse200Response_1 = require("./updateProfilesWarehouseForSpaceWarehouse200Response");
 var updateProfilesWarehouseForSpaceWarehouseAlphaInput_1 = require("./updateProfilesWarehouseForSpaceWarehouseAlphaInput");
 var updateProfilesWarehouseForSpaceWarehouseAlphaOutput_1 = require("./updateProfilesWarehouseForSpaceWarehouseAlphaOutput");
@@ -1157,7 +1087,6 @@ var enumsMap = {
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
     'CreateFunctionV1Input.ResourceTypeEnum': createFunctionV1Input_1.CreateFunctionV1Input.ResourceTypeEnum,
-    'CreateInsertFunctionInstanceAlphaInput.TypeEnum': createInsertFunctionInstanceAlphaInput_1.CreateInsertFunctionInstanceAlphaInput.TypeEnum,
     'CreateReverseEtlModelInput.ScheduleStrategyEnum': createReverseEtlModelInput_1.CreateReverseEtlModelInput.ScheduleStrategyEnum,
     'CreateSourceRegulationV1Input.RegulationTypeEnum': createSourceRegulationV1Input_1.CreateSourceRegulationV1Input.RegulationTypeEnum,
     'CreateSourceRegulationV1Input.SubjectTypeEnum': createSourceRegulationV1Input_1.CreateSourceRegulationV1Input.SubjectTypeEnum,
@@ -1167,7 +1096,6 @@ var enumsMap = {
     'CreateWorkspaceRegulationV1Input.SubjectTypeEnum': createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input.SubjectTypeEnum,
     'DeleteDestinationV1Output.StatusEnum': deleteDestinationV1Output_1.DeleteDestinationV1Output.StatusEnum,
     'DeleteFunctionV1Output.StatusEnum': deleteFunctionV1Output_1.DeleteFunctionV1Output.StatusEnum,
-    'DeleteInsertFunctionInstanceAlphaOutput.StatusEnum': deleteInsertFunctionInstanceAlphaOutput_1.DeleteInsertFunctionInstanceAlphaOutput.StatusEnum,
     'DeleteInvitesV1Output.StatusEnum': deleteInvitesV1Output_1.DeleteInvitesV1Output.StatusEnum,
     'DeleteLabelAlphaOutput.StatusEnum': deleteLabelAlphaOutput_1.DeleteLabelAlphaOutput.StatusEnum,
     'DeleteLabelV1Output.StatusEnum': deleteLabelV1Output_1.DeleteLabelV1Output.StatusEnum,
@@ -1220,8 +1148,6 @@ var enumsMap = {
     'Query.GranularityEnum': query_1.Query.GranularityEnum,
     'Regulation.OverallStatusEnum': regulation_1.Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': regulationListEntryV1_1.RegulationListEntryV1.StatusEnum,
-    'RemoveAudienceFromSpaceAlphaOutput.StatusEnum': removeAudienceFromSpaceAlphaOutput_1.RemoveAudienceFromSpaceAlphaOutput.StatusEnum,
-    'RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum': removeComputedTraitFromSpaceAlphaOutput_1.RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum': removeFilterFromDestinationV1Output_1.RemoveFilterFromDestinationV1Output.StatusEnum,
     'RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum': removeProfilesWarehouseFromSpaceAlphaOutput_1.RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum,
     'RemoveRuleV1.TypeEnum': removeRuleV1_1.RemoveRuleV1.TypeEnum,
@@ -1274,16 +1200,12 @@ var typeMap = {
     AdvancedWarehouseSyncScheduleV1Input: advancedWarehouseSyncScheduleV1Input_1.AdvancedWarehouseSyncScheduleV1Input,
     AdvancedWarehouseSyncScheduleV1Output: advancedWarehouseSyncScheduleV1Output_1.AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: allowedLabelBeta_1.AllowedLabelBeta,
-    Audience: audience_1.Audience,
-    AudienceSummary: audienceSummary_1.AudienceSummary,
     AuditEventV1: auditEventV1_1.AuditEventV1,
     BatchQueryMessagingSubscriptionsForSpace200Response: batchQueryMessagingSubscriptionsForSpace200Response_1.BatchQueryMessagingSubscriptionsForSpace200Response,
     BatchQueryMessagingSubscriptionsForSpaceAlphaInput: batchQueryMessagingSubscriptionsForSpaceAlphaInput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaInput,
     BatchQueryMessagingSubscriptionsForSpaceAlphaOutput: batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
     BreakdownBeta: breakdownBeta_1.BreakdownBeta,
     CommonSourceSettingsV1: commonSourceSettingsV1_1.CommonSourceSettingsV1,
-    ComputedTrait: computedTrait_1.ComputedTrait,
-    ComputedTraitSummary: computedTraitSummary_1.ComputedTraitSummary,
     Contact: contact_1.Contact,
     CreateCloudSourceRegulation200Response: createCloudSourceRegulation200Response_1.CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input,
@@ -1305,9 +1227,6 @@ var typeMap = {
     CreateFunctionDeploymentV1Output: createFunctionDeploymentV1Output_1.CreateFunctionDeploymentV1Output,
     CreateFunctionV1Input: createFunctionV1Input_1.CreateFunctionV1Input,
     CreateFunctionV1Output: createFunctionV1Output_1.CreateFunctionV1Output,
-    CreateInsertFunctionInstance200Response: createInsertFunctionInstance200Response_1.CreateInsertFunctionInstance200Response,
-    CreateInsertFunctionInstanceAlphaInput: createInsertFunctionInstanceAlphaInput_1.CreateInsertFunctionInstanceAlphaInput,
-    CreateInsertFunctionInstanceAlphaOutput: createInsertFunctionInstanceAlphaOutput_1.CreateInsertFunctionInstanceAlphaOutput,
     CreateInvites200Response: createInvites200Response_1.CreateInvites200Response,
     CreateInvitesV1Input: createInvitesV1Input_1.CreateInvitesV1Input,
     CreateInvitesV1Output: createInvitesV1Output_1.CreateInvitesV1Output,
@@ -1353,8 +1272,6 @@ var typeMap = {
     DeleteDestinationV1Output: deleteDestinationV1Output_1.DeleteDestinationV1Output,
     DeleteFunction200Response: deleteFunction200Response_1.DeleteFunction200Response,
     DeleteFunctionV1Output: deleteFunctionV1Output_1.DeleteFunctionV1Output,
-    DeleteInsertFunctionInstance200Response: deleteInsertFunctionInstance200Response_1.DeleteInsertFunctionInstance200Response,
-    DeleteInsertFunctionInstanceAlphaOutput: deleteInsertFunctionInstanceAlphaOutput_1.DeleteInsertFunctionInstanceAlphaOutput,
     DeleteInvites200Response: deleteInvites200Response_1.DeleteInvites200Response,
     DeleteInvitesV1Output: deleteInvitesV1Output_1.DeleteInvitesV1Output,
     DeleteLabel200Response: deleteLabel200Response_1.DeleteLabel200Response,
@@ -1426,10 +1343,6 @@ var typeMap = {
     GenerateUploadURLForEdgeFunctionsAlphaOutput: generateUploadURLForEdgeFunctionsAlphaOutput_1.GenerateUploadURLForEdgeFunctionsAlphaOutput,
     GetAdvancedSyncScheduleFromWarehouse200Response: getAdvancedSyncScheduleFromWarehouse200Response_1.GetAdvancedSyncScheduleFromWarehouse200Response,
     GetAdvancedSyncScheduleFromWarehouseV1Output: getAdvancedSyncScheduleFromWarehouseV1Output_1.GetAdvancedSyncScheduleFromWarehouseV1Output,
-    GetAudience200Response: getAudience200Response_1.GetAudience200Response,
-    GetAudienceAlphaOutput: getAudienceAlphaOutput_1.GetAudienceAlphaOutput,
-    GetComputedTrait200Response: getComputedTrait200Response_1.GetComputedTrait200Response,
-    GetComputedTraitAlphaOutput: getComputedTraitAlphaOutput_1.GetComputedTraitAlphaOutput,
     GetConnectionStateFromWarehouse200Response: getConnectionStateFromWarehouse200Response_1.GetConnectionStateFromWarehouse200Response,
     GetConnectionStateFromWarehouseV1Output: getConnectionStateFromWarehouseV1Output_1.GetConnectionStateFromWarehouseV1Output,
     GetDailyPerSourceAPICallsUsage200Response: getDailyPerSourceAPICallsUsage200Response_1.GetDailyPerSourceAPICallsUsage200Response,
@@ -1503,9 +1416,6 @@ var typeMap = {
     Identify: identify_1.Identify,
     IdentifySourceSettingsV1: identifySourceSettingsV1_1.IdentifySourceSettingsV1,
     Input: input_1.Input,
-    InsertFunctionInstance: insertFunctionInstance_1.InsertFunctionInstance,
-    InsertFunctionInstance1: insertFunctionInstance1_1.InsertFunctionInstance1,
-    InsertFunctionInstanceAlpha: insertFunctionInstanceAlpha_1.InsertFunctionInstanceAlpha,
     IntegrationOptionBeta: integrationOptionBeta_1.IntegrationOptionBeta,
     InvitePermissionV1: invitePermissionV1_1.InvitePermissionV1,
     InviteV1: inviteV1_1.InviteV1,
@@ -1513,12 +1423,8 @@ var typeMap = {
     Label1: label1_1.Label1,
     LabelAlpha: labelAlpha_1.LabelAlpha,
     LabelV1: labelV1_1.LabelV1,
-    ListAudiences200Response: listAudiences200Response_1.ListAudiences200Response,
-    ListAudiencesAlphaOutput: listAudiencesAlphaOutput_1.ListAudiencesAlphaOutput,
     ListAuditEvents200Response: listAuditEvents200Response_1.ListAuditEvents200Response,
     ListAuditEventsV1Output: listAuditEventsV1Output_1.ListAuditEventsV1Output,
-    ListComputedTraits200Response: listComputedTraits200Response_1.ListComputedTraits200Response,
-    ListComputedTraitsAlphaOutput: listComputedTraitsAlphaOutput_1.ListComputedTraitsAlphaOutput,
     ListConnectedDestinationsFromSource200Response: listConnectedDestinationsFromSource200Response_1.ListConnectedDestinationsFromSource200Response,
     ListConnectedDestinationsFromSource200Response1: listConnectedDestinationsFromSource200Response1_1.ListConnectedDestinationsFromSource200Response1,
     ListConnectedDestinationsFromSourceAlphaOutput: listConnectedDestinationsFromSourceAlphaOutput_1.ListConnectedDestinationsFromSourceAlphaOutput,
@@ -1540,8 +1446,6 @@ var typeMap = {
     ListFunctionVersionsAlphaOutput: listFunctionVersionsAlphaOutput_1.ListFunctionVersionsAlphaOutput,
     ListFunctions200Response: listFunctions200Response_1.ListFunctions200Response,
     ListFunctionsV1Output: listFunctionsV1Output_1.ListFunctionsV1Output,
-    ListInsertFunctionInstances200Response: listInsertFunctionInstances200Response_1.ListInsertFunctionInstances200Response,
-    ListInsertFunctionInstancesAlphaOutput: listInsertFunctionInstancesAlphaOutput_1.ListInsertFunctionInstancesAlphaOutput,
     ListInvites200Response: listInvites200Response_1.ListInvites200Response,
     ListInvitesFromUserGroup200Response: listInvitesFromUserGroup200Response_1.ListInvitesFromUserGroup200Response,
     ListInvitesFromUserGroupV1Output: listInvitesFromUserGroupV1Output_1.ListInvitesFromUserGroupV1Output,
@@ -1633,10 +1537,6 @@ var typeMap = {
     Query: query_1.Query,
     Regulation: regulation_1.Regulation,
     RegulationListEntryV1: regulationListEntryV1_1.RegulationListEntryV1,
-    RemoveAudienceFromSpace200Response: removeAudienceFromSpace200Response_1.RemoveAudienceFromSpace200Response,
-    RemoveAudienceFromSpaceAlphaOutput: removeAudienceFromSpaceAlphaOutput_1.RemoveAudienceFromSpaceAlphaOutput,
-    RemoveComputedTraitFromSpace200Response: removeComputedTraitFromSpace200Response_1.RemoveComputedTraitFromSpace200Response,
-    RemoveComputedTraitFromSpaceAlphaOutput: removeComputedTraitFromSpaceAlphaOutput_1.RemoveComputedTraitFromSpaceAlphaOutput,
     RemoveFilterFromDestination200Response: removeFilterFromDestination200Response_1.RemoveFilterFromDestination200Response,
     RemoveFilterFromDestinationV1Output: removeFilterFromDestinationV1Output_1.RemoveFilterFromDestinationV1Output,
     RemoveProfilesWarehouseFromSpace200Response: removeProfilesWarehouseFromSpace200Response_1.RemoveProfilesWarehouseFromSpace200Response,
@@ -1730,12 +1630,6 @@ var typeMap = {
     Transformation5: transformation5_1.Transformation5,
     TransformationBeta: transformationBeta_1.TransformationBeta,
     TransformationV1: transformationV1_1.TransformationV1,
-    UpdateAudienceForSpace200Response: updateAudienceForSpace200Response_1.UpdateAudienceForSpace200Response,
-    UpdateAudienceForSpaceAlphaOutput: updateAudienceForSpaceAlphaOutput_1.UpdateAudienceForSpaceAlphaOutput,
-    UpdateAudienceForSpaceInput: updateAudienceForSpaceInput_1.UpdateAudienceForSpaceInput,
-    UpdateComputedTraitForSpace200Response: updateComputedTraitForSpace200Response_1.UpdateComputedTraitForSpace200Response,
-    UpdateComputedTraitForSpaceAlphaInput: updateComputedTraitForSpaceAlphaInput_1.UpdateComputedTraitForSpaceAlphaInput,
-    UpdateComputedTraitForSpaceAlphaOutput: updateComputedTraitForSpaceAlphaOutput_1.UpdateComputedTraitForSpaceAlphaOutput,
     UpdateDestination200Response: updateDestination200Response_1.UpdateDestination200Response,
     UpdateDestinationV1Input: updateDestinationV1Input_1.UpdateDestinationV1Input,
     UpdateDestinationV1Output: updateDestinationV1Output_1.UpdateDestinationV1Output,
@@ -1746,9 +1640,6 @@ var typeMap = {
     UpdateFunctionV1Input: updateFunctionV1Input_1.UpdateFunctionV1Input,
     UpdateFunctionV1Output: updateFunctionV1Output_1.UpdateFunctionV1Output,
     UpdateGroupSubscriptionStatusResponse: updateGroupSubscriptionStatusResponse_1.UpdateGroupSubscriptionStatusResponse,
-    UpdateInsertFunctionInstance200Response: updateInsertFunctionInstance200Response_1.UpdateInsertFunctionInstance200Response,
-    UpdateInsertFunctionInstanceAlphaInput: updateInsertFunctionInstanceAlphaInput_1.UpdateInsertFunctionInstanceAlphaInput,
-    UpdateInsertFunctionInstanceAlphaOutput: updateInsertFunctionInstanceAlphaOutput_1.UpdateInsertFunctionInstanceAlphaOutput,
     UpdateProfilesWarehouseForSpaceWarehouse200Response: updateProfilesWarehouseForSpaceWarehouse200Response_1.UpdateProfilesWarehouseForSpaceWarehouse200Response,
     UpdateProfilesWarehouseForSpaceWarehouseAlphaInput: updateProfilesWarehouseForSpaceWarehouseAlphaInput_1.UpdateProfilesWarehouseForSpaceWarehouseAlphaInput,
     UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput: updateProfilesWarehouseForSpaceWarehouseAlphaOutput_1.UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput,

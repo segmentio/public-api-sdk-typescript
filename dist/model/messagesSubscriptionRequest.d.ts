@@ -18,9 +18,7 @@ export declare class MessagesSubscriptionRequest {
 }
 export declare namespace MessagesSubscriptionRequest {
     enum TypeEnum {
-        ANDROID_PUSH,
         EMAIL,
-        IOS_PUSH,
         SMS,
         WHATSAPP
     }

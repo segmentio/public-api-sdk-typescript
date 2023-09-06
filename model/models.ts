@@ -25,16 +25,12 @@ export * from './addUsersToUserGroupV1Output';
 export * from './advancedWarehouseSyncScheduleV1Input';
 export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
-export * from './audience';
-export * from './audienceSummary';
 export * from './auditEventV1';
 export * from './batchQueryMessagingSubscriptionsForSpace200Response';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 export * from './breakdownBeta';
 export * from './commonSourceSettingsV1';
-export * from './computedTrait';
-export * from './computedTraitSummary';
 export * from './contact';
 export * from './createCloudSourceRegulation200Response';
 export * from './createCloudSourceRegulationV1Input';
@@ -56,9 +52,6 @@ export * from './createFunctionDeployment200Response';
 export * from './createFunctionDeploymentV1Output';
 export * from './createFunctionV1Input';
 export * from './createFunctionV1Output';
-export * from './createInsertFunctionInstance200Response';
-export * from './createInsertFunctionInstanceAlphaInput';
-export * from './createInsertFunctionInstanceAlphaOutput';
 export * from './createInvites200Response';
 export * from './createInvitesV1Input';
 export * from './createInvitesV1Output';
@@ -104,8 +97,6 @@ export * from './deleteDestination200Response';
 export * from './deleteDestinationV1Output';
 export * from './deleteFunction200Response';
 export * from './deleteFunctionV1Output';
-export * from './deleteInsertFunctionInstance200Response';
-export * from './deleteInsertFunctionInstanceAlphaOutput';
 export * from './deleteInvites200Response';
 export * from './deleteInvitesV1Output';
 export * from './deleteLabel200Response';
@@ -177,10 +168,6 @@ export * from './generateUploadURLForEdgeFunctions200Response';
 export * from './generateUploadURLForEdgeFunctionsAlphaOutput';
 export * from './getAdvancedSyncScheduleFromWarehouse200Response';
 export * from './getAdvancedSyncScheduleFromWarehouseV1Output';
-export * from './getAudience200Response';
-export * from './getAudienceAlphaOutput';
-export * from './getComputedTrait200Response';
-export * from './getComputedTraitAlphaOutput';
 export * from './getConnectionStateFromWarehouse200Response';
 export * from './getConnectionStateFromWarehouseV1Output';
 export * from './getDailyPerSourceAPICallsUsage200Response';
@@ -254,9 +241,6 @@ export * from './handleWebhookOutput';
 export * from './identify';
 export * from './identifySourceSettingsV1';
 export * from './input';
-export * from './insertFunctionInstance';
-export * from './insertFunctionInstance1';
-export * from './insertFunctionInstanceAlpha';
 export * from './integrationOptionBeta';
 export * from './invitePermissionV1';
 export * from './inviteV1';
@@ -264,12 +248,8 @@ export * from './label';
 export * from './label1';
 export * from './labelAlpha';
 export * from './labelV1';
-export * from './listAudiences200Response';
-export * from './listAudiencesAlphaOutput';
 export * from './listAuditEvents200Response';
 export * from './listAuditEventsV1Output';
-export * from './listComputedTraits200Response';
-export * from './listComputedTraitsAlphaOutput';
 export * from './listConnectedDestinationsFromSource200Response';
 export * from './listConnectedDestinationsFromSource200Response1';
 export * from './listConnectedDestinationsFromSourceAlphaOutput';
@@ -291,8 +271,6 @@ export * from './listFunctionVersions200Response';
 export * from './listFunctionVersionsAlphaOutput';
 export * from './listFunctions200Response';
 export * from './listFunctionsV1Output';
-export * from './listInsertFunctionInstances200Response';
-export * from './listInsertFunctionInstancesAlphaOutput';
 export * from './listInvites200Response';
 export * from './listInvitesFromUserGroup200Response';
 export * from './listInvitesFromUserGroupV1Output';
@@ -384,10 +362,6 @@ export * from './propertyValueTransformationV1';
 export * from './query';
 export * from './regulation';
 export * from './regulationListEntryV1';
-export * from './removeAudienceFromSpace200Response';
-export * from './removeAudienceFromSpaceAlphaOutput';
-export * from './removeComputedTraitFromSpace200Response';
-export * from './removeComputedTraitFromSpaceAlphaOutput';
 export * from './removeFilterFromDestination200Response';
 export * from './removeFilterFromDestinationV1Output';
 export * from './removeProfilesWarehouseFromSpace200Response';
@@ -481,12 +455,6 @@ export * from './transformation4';
 export * from './transformation5';
 export * from './transformationBeta';
 export * from './transformationV1';
-export * from './updateAudienceForSpace200Response';
-export * from './updateAudienceForSpaceAlphaOutput';
-export * from './updateAudienceForSpaceInput';
-export * from './updateComputedTraitForSpace200Response';
-export * from './updateComputedTraitForSpaceAlphaInput';
-export * from './updateComputedTraitForSpaceAlphaOutput';
 export * from './updateDestination200Response';
 export * from './updateDestinationV1Input';
 export * from './updateDestinationV1Output';
@@ -497,9 +465,6 @@ export * from './updateFunction200Response';
 export * from './updateFunctionV1Input';
 export * from './updateFunctionV1Output';
 export * from './updateGroupSubscriptionStatusResponse';
-export * from './updateInsertFunctionInstance200Response';
-export * from './updateInsertFunctionInstanceAlphaInput';
-export * from './updateInsertFunctionInstanceAlphaOutput';
 export * from './updateProfilesWarehouseForSpaceWarehouse200Response';
 export * from './updateProfilesWarehouseForSpaceWarehouseAlphaInput';
 export * from './updateProfilesWarehouseForSpaceWarehouseAlphaOutput';
@@ -601,16 +566,12 @@ import { AddUsersToUserGroupV1Output } from './addUsersToUserGroupV1Output';
 import { AdvancedWarehouseSyncScheduleV1Input } from './advancedWarehouseSyncScheduleV1Input';
 import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncScheduleV1Output';
 import { AllowedLabelBeta } from './allowedLabelBeta';
-import { Audience } from './audience';
-import { AudienceSummary } from './audienceSummary';
 import { AuditEventV1 } from './auditEventV1';
 import { BatchQueryMessagingSubscriptionsForSpace200Response } from './batchQueryMessagingSubscriptionsForSpace200Response';
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaInput } from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaOutput } from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 import { BreakdownBeta } from './breakdownBeta';
 import { CommonSourceSettingsV1 } from './commonSourceSettingsV1';
-import { ComputedTrait } from './computedTrait';
-import { ComputedTraitSummary } from './computedTraitSummary';
 import { Contact } from './contact';
 import { CreateCloudSourceRegulation200Response } from './createCloudSourceRegulation200Response';
 import { CreateCloudSourceRegulationV1Input } from './createCloudSourceRegulationV1Input';
@@ -632,9 +593,6 @@ import { CreateFunctionDeployment200Response } from './createFunctionDeployment2
 import { CreateFunctionDeploymentV1Output } from './createFunctionDeploymentV1Output';
 import { CreateFunctionV1Input } from './createFunctionV1Input';
 import { CreateFunctionV1Output } from './createFunctionV1Output';
-import { CreateInsertFunctionInstance200Response } from './createInsertFunctionInstance200Response';
-import { CreateInsertFunctionInstanceAlphaInput } from './createInsertFunctionInstanceAlphaInput';
-import { CreateInsertFunctionInstanceAlphaOutput } from './createInsertFunctionInstanceAlphaOutput';
 import { CreateInvites200Response } from './createInvites200Response';
 import { CreateInvitesV1Input } from './createInvitesV1Input';
 import { CreateInvitesV1Output } from './createInvitesV1Output';
@@ -680,8 +638,6 @@ import { DeleteDestination200Response } from './deleteDestination200Response';
 import { DeleteDestinationV1Output } from './deleteDestinationV1Output';
 import { DeleteFunction200Response } from './deleteFunction200Response';
 import { DeleteFunctionV1Output } from './deleteFunctionV1Output';
-import { DeleteInsertFunctionInstance200Response } from './deleteInsertFunctionInstance200Response';
-import { DeleteInsertFunctionInstanceAlphaOutput } from './deleteInsertFunctionInstanceAlphaOutput';
 import { DeleteInvites200Response } from './deleteInvites200Response';
 import { DeleteInvitesV1Output } from './deleteInvitesV1Output';
 import { DeleteLabel200Response } from './deleteLabel200Response';
@@ -753,10 +709,6 @@ import { GenerateUploadURLForEdgeFunctions200Response } from './generateUploadUR
 import { GenerateUploadURLForEdgeFunctionsAlphaOutput } from './generateUploadURLForEdgeFunctionsAlphaOutput';
 import { GetAdvancedSyncScheduleFromWarehouse200Response } from './getAdvancedSyncScheduleFromWarehouse200Response';
 import { GetAdvancedSyncScheduleFromWarehouseV1Output } from './getAdvancedSyncScheduleFromWarehouseV1Output';
-import { GetAudience200Response } from './getAudience200Response';
-import { GetAudienceAlphaOutput } from './getAudienceAlphaOutput';
-import { GetComputedTrait200Response } from './getComputedTrait200Response';
-import { GetComputedTraitAlphaOutput } from './getComputedTraitAlphaOutput';
 import { GetConnectionStateFromWarehouse200Response } from './getConnectionStateFromWarehouse200Response';
 import { GetConnectionStateFromWarehouseV1Output } from './getConnectionStateFromWarehouseV1Output';
 import { GetDailyPerSourceAPICallsUsage200Response } from './getDailyPerSourceAPICallsUsage200Response';
@@ -830,9 +782,6 @@ import { HandleWebhookOutput } from './handleWebhookOutput';
 import { Identify } from './identify';
 import { IdentifySourceSettingsV1 } from './identifySourceSettingsV1';
 import { Input } from './input';
-import { InsertFunctionInstance } from './insertFunctionInstance';
-import { InsertFunctionInstance1 } from './insertFunctionInstance1';
-import { InsertFunctionInstanceAlpha } from './insertFunctionInstanceAlpha';
 import { IntegrationOptionBeta } from './integrationOptionBeta';
 import { InvitePermissionV1 } from './invitePermissionV1';
 import { InviteV1 } from './inviteV1';
@@ -840,12 +789,8 @@ import { Label } from './label';
 import { Label1 } from './label1';
 import { LabelAlpha } from './labelAlpha';
 import { LabelV1 } from './labelV1';
-import { ListAudiences200Response } from './listAudiences200Response';
-import { ListAudiencesAlphaOutput } from './listAudiencesAlphaOutput';
 import { ListAuditEvents200Response } from './listAuditEvents200Response';
 import { ListAuditEventsV1Output } from './listAuditEventsV1Output';
-import { ListComputedTraits200Response } from './listComputedTraits200Response';
-import { ListComputedTraitsAlphaOutput } from './listComputedTraitsAlphaOutput';
 import { ListConnectedDestinationsFromSource200Response } from './listConnectedDestinationsFromSource200Response';
 import { ListConnectedDestinationsFromSource200Response1 } from './listConnectedDestinationsFromSource200Response1';
 import { ListConnectedDestinationsFromSourceAlphaOutput } from './listConnectedDestinationsFromSourceAlphaOutput';
@@ -867,8 +812,6 @@ import { ListFunctionVersions200Response } from './listFunctionVersions200Respon
 import { ListFunctionVersionsAlphaOutput } from './listFunctionVersionsAlphaOutput';
 import { ListFunctions200Response } from './listFunctions200Response';
 import { ListFunctionsV1Output } from './listFunctionsV1Output';
-import { ListInsertFunctionInstances200Response } from './listInsertFunctionInstances200Response';
-import { ListInsertFunctionInstancesAlphaOutput } from './listInsertFunctionInstancesAlphaOutput';
 import { ListInvites200Response } from './listInvites200Response';
 import { ListInvitesFromUserGroup200Response } from './listInvitesFromUserGroup200Response';
 import { ListInvitesFromUserGroupV1Output } from './listInvitesFromUserGroupV1Output';
@@ -960,10 +903,6 @@ import { PropertyValueTransformationV1 } from './propertyValueTransformationV1';
 import { Query } from './query';
 import { Regulation } from './regulation';
 import { RegulationListEntryV1 } from './regulationListEntryV1';
-import { RemoveAudienceFromSpace200Response } from './removeAudienceFromSpace200Response';
-import { RemoveAudienceFromSpaceAlphaOutput } from './removeAudienceFromSpaceAlphaOutput';
-import { RemoveComputedTraitFromSpace200Response } from './removeComputedTraitFromSpace200Response';
-import { RemoveComputedTraitFromSpaceAlphaOutput } from './removeComputedTraitFromSpaceAlphaOutput';
 import { RemoveFilterFromDestination200Response } from './removeFilterFromDestination200Response';
 import { RemoveFilterFromDestinationV1Output } from './removeFilterFromDestinationV1Output';
 import { RemoveProfilesWarehouseFromSpace200Response } from './removeProfilesWarehouseFromSpace200Response';
@@ -1057,12 +996,6 @@ import { Transformation4 } from './transformation4';
 import { Transformation5 } from './transformation5';
 import { TransformationBeta } from './transformationBeta';
 import { TransformationV1 } from './transformationV1';
-import { UpdateAudienceForSpace200Response } from './updateAudienceForSpace200Response';
-import { UpdateAudienceForSpaceAlphaOutput } from './updateAudienceForSpaceAlphaOutput';
-import { UpdateAudienceForSpaceInput } from './updateAudienceForSpaceInput';
-import { UpdateComputedTraitForSpace200Response } from './updateComputedTraitForSpace200Response';
-import { UpdateComputedTraitForSpaceAlphaInput } from './updateComputedTraitForSpaceAlphaInput';
-import { UpdateComputedTraitForSpaceAlphaOutput } from './updateComputedTraitForSpaceAlphaOutput';
 import { UpdateDestination200Response } from './updateDestination200Response';
 import { UpdateDestinationV1Input } from './updateDestinationV1Input';
 import { UpdateDestinationV1Output } from './updateDestinationV1Output';
@@ -1073,9 +1006,6 @@ import { UpdateFunction200Response } from './updateFunction200Response';
 import { UpdateFunctionV1Input } from './updateFunctionV1Input';
 import { UpdateFunctionV1Output } from './updateFunctionV1Output';
 import { UpdateGroupSubscriptionStatusResponse } from './updateGroupSubscriptionStatusResponse';
-import { UpdateInsertFunctionInstance200Response } from './updateInsertFunctionInstance200Response';
-import { UpdateInsertFunctionInstanceAlphaInput } from './updateInsertFunctionInstanceAlphaInput';
-import { UpdateInsertFunctionInstanceAlphaOutput } from './updateInsertFunctionInstanceAlphaOutput';
 import { UpdateProfilesWarehouseForSpaceWarehouse200Response } from './updateProfilesWarehouseForSpaceWarehouse200Response';
 import { UpdateProfilesWarehouseForSpaceWarehouseAlphaInput } from './updateProfilesWarehouseForSpaceWarehouseAlphaInput';
 import { UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput } from './updateProfilesWarehouseForSpaceWarehouseAlphaOutput';
@@ -1163,8 +1093,6 @@ let enumsMap: { [index: string]: any } = {
         CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
     'CreateFunctionV1Input.ResourceTypeEnum':
         CreateFunctionV1Input.ResourceTypeEnum,
-    'CreateInsertFunctionInstanceAlphaInput.TypeEnum':
-        CreateInsertFunctionInstanceAlphaInput.TypeEnum,
     'CreateReverseEtlModelInput.ScheduleStrategyEnum':
         CreateReverseEtlModelInput.ScheduleStrategyEnum,
     'CreateSourceRegulationV1Input.RegulationTypeEnum':
@@ -1181,8 +1109,6 @@ let enumsMap: { [index: string]: any } = {
     'DeleteDestinationV1Output.StatusEnum':
         DeleteDestinationV1Output.StatusEnum,
     'DeleteFunctionV1Output.StatusEnum': DeleteFunctionV1Output.StatusEnum,
-    'DeleteInsertFunctionInstanceAlphaOutput.StatusEnum':
-        DeleteInsertFunctionInstanceAlphaOutput.StatusEnum,
     'DeleteInvitesV1Output.StatusEnum': DeleteInvitesV1Output.StatusEnum,
     'DeleteLabelAlphaOutput.StatusEnum': DeleteLabelAlphaOutput.StatusEnum,
     'DeleteLabelV1Output.StatusEnum': DeleteLabelV1Output.StatusEnum,
@@ -1257,10 +1183,6 @@ let enumsMap: { [index: string]: any } = {
     'Query.GranularityEnum': Query.GranularityEnum,
     'Regulation.OverallStatusEnum': Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': RegulationListEntryV1.StatusEnum,
-    'RemoveAudienceFromSpaceAlphaOutput.StatusEnum':
-        RemoveAudienceFromSpaceAlphaOutput.StatusEnum,
-    'RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum':
-        RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum':
         RemoveFilterFromDestinationV1Output.StatusEnum,
     'RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum':
@@ -1334,8 +1256,6 @@ let typeMap: { [index: string]: any } = {
     AdvancedWarehouseSyncScheduleV1Output:
         AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: AllowedLabelBeta,
-    Audience: Audience,
-    AudienceSummary: AudienceSummary,
     AuditEventV1: AuditEventV1,
     BatchQueryMessagingSubscriptionsForSpace200Response:
         BatchQueryMessagingSubscriptionsForSpace200Response,
@@ -1345,8 +1265,6 @@ let typeMap: { [index: string]: any } = {
         BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
     BreakdownBeta: BreakdownBeta,
     CommonSourceSettingsV1: CommonSourceSettingsV1,
-    ComputedTrait: ComputedTrait,
-    ComputedTraitSummary: ComputedTraitSummary,
     Contact: Contact,
     CreateCloudSourceRegulation200Response:
         CreateCloudSourceRegulation200Response,
@@ -1373,12 +1291,6 @@ let typeMap: { [index: string]: any } = {
     CreateFunctionDeploymentV1Output: CreateFunctionDeploymentV1Output,
     CreateFunctionV1Input: CreateFunctionV1Input,
     CreateFunctionV1Output: CreateFunctionV1Output,
-    CreateInsertFunctionInstance200Response:
-        CreateInsertFunctionInstance200Response,
-    CreateInsertFunctionInstanceAlphaInput:
-        CreateInsertFunctionInstanceAlphaInput,
-    CreateInsertFunctionInstanceAlphaOutput:
-        CreateInsertFunctionInstanceAlphaOutput,
     CreateInvites200Response: CreateInvites200Response,
     CreateInvitesV1Input: CreateInvitesV1Input,
     CreateInvitesV1Output: CreateInvitesV1Output,
@@ -1425,10 +1337,6 @@ let typeMap: { [index: string]: any } = {
     DeleteDestinationV1Output: DeleteDestinationV1Output,
     DeleteFunction200Response: DeleteFunction200Response,
     DeleteFunctionV1Output: DeleteFunctionV1Output,
-    DeleteInsertFunctionInstance200Response:
-        DeleteInsertFunctionInstance200Response,
-    DeleteInsertFunctionInstanceAlphaOutput:
-        DeleteInsertFunctionInstanceAlphaOutput,
     DeleteInvites200Response: DeleteInvites200Response,
     DeleteInvitesV1Output: DeleteInvitesV1Output,
     DeleteLabel200Response: DeleteLabel200Response,
@@ -1505,10 +1413,6 @@ let typeMap: { [index: string]: any } = {
         GetAdvancedSyncScheduleFromWarehouse200Response,
     GetAdvancedSyncScheduleFromWarehouseV1Output:
         GetAdvancedSyncScheduleFromWarehouseV1Output,
-    GetAudience200Response: GetAudience200Response,
-    GetAudienceAlphaOutput: GetAudienceAlphaOutput,
-    GetComputedTrait200Response: GetComputedTrait200Response,
-    GetComputedTraitAlphaOutput: GetComputedTraitAlphaOutput,
     GetConnectionStateFromWarehouse200Response:
         GetConnectionStateFromWarehouse200Response,
     GetConnectionStateFromWarehouseV1Output:
@@ -1595,9 +1499,6 @@ let typeMap: { [index: string]: any } = {
     Identify: Identify,
     IdentifySourceSettingsV1: IdentifySourceSettingsV1,
     Input: Input,
-    InsertFunctionInstance: InsertFunctionInstance,
-    InsertFunctionInstance1: InsertFunctionInstance1,
-    InsertFunctionInstanceAlpha: InsertFunctionInstanceAlpha,
     IntegrationOptionBeta: IntegrationOptionBeta,
     InvitePermissionV1: InvitePermissionV1,
     InviteV1: InviteV1,
@@ -1605,12 +1506,8 @@ let typeMap: { [index: string]: any } = {
     Label1: Label1,
     LabelAlpha: LabelAlpha,
     LabelV1: LabelV1,
-    ListAudiences200Response: ListAudiences200Response,
-    ListAudiencesAlphaOutput: ListAudiencesAlphaOutput,
     ListAuditEvents200Response: ListAuditEvents200Response,
     ListAuditEventsV1Output: ListAuditEventsV1Output,
-    ListComputedTraits200Response: ListComputedTraits200Response,
-    ListComputedTraitsAlphaOutput: ListComputedTraitsAlphaOutput,
     ListConnectedDestinationsFromSource200Response:
         ListConnectedDestinationsFromSource200Response,
     ListConnectedDestinationsFromSource200Response1:
@@ -1645,10 +1542,6 @@ let typeMap: { [index: string]: any } = {
     ListFunctionVersionsAlphaOutput: ListFunctionVersionsAlphaOutput,
     ListFunctions200Response: ListFunctions200Response,
     ListFunctionsV1Output: ListFunctionsV1Output,
-    ListInsertFunctionInstances200Response:
-        ListInsertFunctionInstances200Response,
-    ListInsertFunctionInstancesAlphaOutput:
-        ListInsertFunctionInstancesAlphaOutput,
     ListInvites200Response: ListInvites200Response,
     ListInvitesFromUserGroup200Response: ListInvitesFromUserGroup200Response,
     ListInvitesFromUserGroupV1Output: ListInvitesFromUserGroupV1Output,
@@ -1752,12 +1645,6 @@ let typeMap: { [index: string]: any } = {
     Query: Query,
     Regulation: Regulation,
     RegulationListEntryV1: RegulationListEntryV1,
-    RemoveAudienceFromSpace200Response: RemoveAudienceFromSpace200Response,
-    RemoveAudienceFromSpaceAlphaOutput: RemoveAudienceFromSpaceAlphaOutput,
-    RemoveComputedTraitFromSpace200Response:
-        RemoveComputedTraitFromSpace200Response,
-    RemoveComputedTraitFromSpaceAlphaOutput:
-        RemoveComputedTraitFromSpaceAlphaOutput,
     RemoveFilterFromDestination200Response:
         RemoveFilterFromDestination200Response,
     RemoveFilterFromDestinationV1Output: RemoveFilterFromDestinationV1Output,
@@ -1870,15 +1757,6 @@ let typeMap: { [index: string]: any } = {
     Transformation5: Transformation5,
     TransformationBeta: TransformationBeta,
     TransformationV1: TransformationV1,
-    UpdateAudienceForSpace200Response: UpdateAudienceForSpace200Response,
-    UpdateAudienceForSpaceAlphaOutput: UpdateAudienceForSpaceAlphaOutput,
-    UpdateAudienceForSpaceInput: UpdateAudienceForSpaceInput,
-    UpdateComputedTraitForSpace200Response:
-        UpdateComputedTraitForSpace200Response,
-    UpdateComputedTraitForSpaceAlphaInput:
-        UpdateComputedTraitForSpaceAlphaInput,
-    UpdateComputedTraitForSpaceAlphaOutput:
-        UpdateComputedTraitForSpaceAlphaOutput,
     UpdateDestination200Response: UpdateDestination200Response,
     UpdateDestinationV1Input: UpdateDestinationV1Input,
     UpdateDestinationV1Output: UpdateDestinationV1Output,
@@ -1891,12 +1769,6 @@ let typeMap: { [index: string]: any } = {
     UpdateFunctionV1Output: UpdateFunctionV1Output,
     UpdateGroupSubscriptionStatusResponse:
         UpdateGroupSubscriptionStatusResponse,
-    UpdateInsertFunctionInstance200Response:
-        UpdateInsertFunctionInstance200Response,
-    UpdateInsertFunctionInstanceAlphaInput:
-        UpdateInsertFunctionInstanceAlphaInput,
-    UpdateInsertFunctionInstanceAlphaOutput:
-        UpdateInsertFunctionInstanceAlphaOutput,
     UpdateProfilesWarehouseForSpaceWarehouse200Response:
         UpdateProfilesWarehouseForSpaceWarehouse200Response,
     UpdateProfilesWarehouseForSpaceWarehouseAlphaInput:
