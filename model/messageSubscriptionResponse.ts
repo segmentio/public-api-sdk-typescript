@@ -77,7 +77,9 @@ export class MessageSubscriptionResponse {
 
 export namespace MessageSubscriptionResponse {
     export enum TypeEnum {
+        ANDROID_PUSH = <any>'ANDROID_PUSH',
         EMAIL = <any>'EMAIL',
+        IOS_PUSH = <any>'IOS_PUSH',
         SMS = <any>'SMS',
         WHATSAPP = <any>'WHATSAPP',
     }
