@@ -1,10 +1,14 @@
 /// <reference types="node" />
 export * from './aPICallsApi';
 import { APICallsApi } from './aPICallsApi';
+export * from './audiencesApi';
+import { AudiencesApi } from './audiencesApi';
 export * from './auditTrailApi';
 import { AuditTrailApi } from './auditTrailApi';
 export * from './catalogApi';
 import { CatalogApi } from './catalogApi';
+export * from './computedTraitsApi';
+import { ComputedTraitsApi } from './computedTraitsApi';
 export * from './deletionAndSuppressionApi';
 import { DeletionAndSuppressionApi } from './deletionAndSuppressionApi';
 export * from './destinationFiltersApi';
@@ -55,7 +59,7 @@ export declare class HttpError extends Error {
     constructor(response: http.IncomingMessage, body: any, statusCode?: number | undefined);
 }
 export { RequestFile } from '../model/models';
-export declare const APIS: (typeof APICallsApi | typeof AuditTrailApi | typeof CatalogApi | typeof DeletionAndSuppressionApi | typeof DestinationFiltersApi | typeof DestinationsApi | typeof EdgeFunctionsApi | typeof EventsApi | typeof FunctionsApi | typeof IAMGroupsApi | typeof IAMRolesApi | typeof IAMUsersApi | typeof LabelsApi | typeof MonthlyTrackedUsersApi | typeof ProfilesSyncApi | typeof ReverseETLApi | typeof SelectiveSyncApi | typeof SourcesApi | typeof SpacesApi | typeof TestingApi | typeof TrackingPlansApi | typeof TransformationsApi | typeof WarehousesApi | typeof WorkspacesApi)[];
+export declare const APIS: (typeof APICallsApi | typeof AudiencesApi | typeof AuditTrailApi | typeof CatalogApi | typeof ComputedTraitsApi | typeof DeletionAndSuppressionApi | typeof DestinationFiltersApi | typeof DestinationsApi | typeof EdgeFunctionsApi | typeof EventsApi | typeof FunctionsApi | typeof IAMGroupsApi | typeof IAMRolesApi | typeof IAMUsersApi | typeof LabelsApi | typeof MonthlyTrackedUsersApi | typeof ProfilesSyncApi | typeof ReverseETLApi | typeof SelectiveSyncApi | typeof SourcesApi | typeof SpacesApi | typeof TestingApi | typeof TrackingPlansApi | typeof TransformationsApi | typeof WarehousesApi | typeof WorkspacesApi)[];
 export interface Apis {
     apiCalls: APICallsApi;
     auditTrail: AuditTrailApi;

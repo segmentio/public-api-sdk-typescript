@@ -68,10 +68,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.unwrap = exports.configureEuApis = exports.configureApis = exports.APIS = exports.HttpError = void 0;
 __exportStar(require("./aPICallsApi"), exports);
 var aPICallsApi_1 = require("./aPICallsApi");
+__exportStar(require("./audiencesApi"), exports);
+var audiencesApi_1 = require("./audiencesApi");
 __exportStar(require("./auditTrailApi"), exports);
 var auditTrailApi_1 = require("./auditTrailApi");
 __exportStar(require("./catalogApi"), exports);
 var catalogApi_1 = require("./catalogApi");
+__exportStar(require("./computedTraitsApi"), exports);
+var computedTraitsApi_1 = require("./computedTraitsApi");
 __exportStar(require("./deletionAndSuppressionApi"), exports);
 var deletionAndSuppressionApi_1 = require("./deletionAndSuppressionApi");
 __exportStar(require("./destinationFiltersApi"), exports);
@@ -129,8 +133,10 @@ var HttpError = (function (_super) {
 exports.HttpError = HttpError;
 exports.APIS = [
     aPICallsApi_1.APICallsApi,
+    audiencesApi_1.AudiencesApi,
     auditTrailApi_1.AuditTrailApi,
     catalogApi_1.CatalogApi,
+    computedTraitsApi_1.ComputedTraitsApi,
     deletionAndSuppressionApi_1.DeletionAndSuppressionApi,
     destinationFiltersApi_1.DestinationFiltersApi,
     destinationsApi_1.DestinationsApi,
@@ -182,7 +188,7 @@ function configureApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 36.1.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 36.2.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -219,7 +225,7 @@ function configureEuApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 36.1.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 36.2.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
