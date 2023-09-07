@@ -25,12 +25,16 @@ export * from './addUsersToUserGroupV1Output';
 export * from './advancedWarehouseSyncScheduleV1Input';
 export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
+export * from './audience';
+export * from './audienceSummary';
 export * from './auditEventV1';
 export * from './batchQueryMessagingSubscriptionsForSpace200Response';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 export * from './breakdownBeta';
 export * from './commonSourceSettingsV1';
+export * from './computedTrait';
+export * from './computedTraitSummary';
 export * from './contact';
 export * from './createCloudSourceRegulation200Response';
 export * from './createCloudSourceRegulationV1Input';
@@ -173,6 +177,10 @@ export * from './generateUploadURLForEdgeFunctions200Response';
 export * from './generateUploadURLForEdgeFunctionsAlphaOutput';
 export * from './getAdvancedSyncScheduleFromWarehouse200Response';
 export * from './getAdvancedSyncScheduleFromWarehouseV1Output';
+export * from './getAudience200Response';
+export * from './getAudienceAlphaOutput';
+export * from './getComputedTrait200Response';
+export * from './getComputedTraitAlphaOutput';
 export * from './getConnectionStateFromWarehouse200Response';
 export * from './getConnectionStateFromWarehouseV1Output';
 export * from './getDailyPerSourceAPICallsUsage200Response';
@@ -256,8 +264,12 @@ export * from './label';
 export * from './label1';
 export * from './labelAlpha';
 export * from './labelV1';
+export * from './listAudiences200Response';
+export * from './listAudiencesAlphaOutput';
 export * from './listAuditEvents200Response';
 export * from './listAuditEventsV1Output';
+export * from './listComputedTraits200Response';
+export * from './listComputedTraitsAlphaOutput';
 export * from './listConnectedDestinationsFromSource200Response';
 export * from './listConnectedDestinationsFromSource200Response1';
 export * from './listConnectedDestinationsFromSourceAlphaOutput';
@@ -372,6 +384,10 @@ export * from './propertyValueTransformationV1';
 export * from './query';
 export * from './regulation';
 export * from './regulationListEntryV1';
+export * from './removeAudienceFromSpace200Response';
+export * from './removeAudienceFromSpaceAlphaOutput';
+export * from './removeComputedTraitFromSpace200Response';
+export * from './removeComputedTraitFromSpaceAlphaOutput';
 export * from './removeFilterFromDestination200Response';
 export * from './removeFilterFromDestinationV1Output';
 export * from './removeProfilesWarehouseFromSpace200Response';
@@ -465,6 +481,12 @@ export * from './transformation4';
 export * from './transformation5';
 export * from './transformationBeta';
 export * from './transformationV1';
+export * from './updateAudienceForSpace200Response';
+export * from './updateAudienceForSpaceAlphaOutput';
+export * from './updateAudienceForSpaceInput';
+export * from './updateComputedTraitForSpace200Response';
+export * from './updateComputedTraitForSpaceAlphaInput';
+export * from './updateComputedTraitForSpaceAlphaOutput';
 export * from './updateDestination200Response';
 export * from './updateDestinationV1Input';
 export * from './updateDestinationV1Output';
@@ -579,12 +601,16 @@ import { AddUsersToUserGroupV1Output } from './addUsersToUserGroupV1Output';
 import { AdvancedWarehouseSyncScheduleV1Input } from './advancedWarehouseSyncScheduleV1Input';
 import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncScheduleV1Output';
 import { AllowedLabelBeta } from './allowedLabelBeta';
+import { Audience } from './audience';
+import { AudienceSummary } from './audienceSummary';
 import { AuditEventV1 } from './auditEventV1';
 import { BatchQueryMessagingSubscriptionsForSpace200Response } from './batchQueryMessagingSubscriptionsForSpace200Response';
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaInput } from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaOutput } from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 import { BreakdownBeta } from './breakdownBeta';
 import { CommonSourceSettingsV1 } from './commonSourceSettingsV1';
+import { ComputedTrait } from './computedTrait';
+import { ComputedTraitSummary } from './computedTraitSummary';
 import { Contact } from './contact';
 import { CreateCloudSourceRegulation200Response } from './createCloudSourceRegulation200Response';
 import { CreateCloudSourceRegulationV1Input } from './createCloudSourceRegulationV1Input';
@@ -727,6 +753,10 @@ import { GenerateUploadURLForEdgeFunctions200Response } from './generateUploadUR
 import { GenerateUploadURLForEdgeFunctionsAlphaOutput } from './generateUploadURLForEdgeFunctionsAlphaOutput';
 import { GetAdvancedSyncScheduleFromWarehouse200Response } from './getAdvancedSyncScheduleFromWarehouse200Response';
 import { GetAdvancedSyncScheduleFromWarehouseV1Output } from './getAdvancedSyncScheduleFromWarehouseV1Output';
+import { GetAudience200Response } from './getAudience200Response';
+import { GetAudienceAlphaOutput } from './getAudienceAlphaOutput';
+import { GetComputedTrait200Response } from './getComputedTrait200Response';
+import { GetComputedTraitAlphaOutput } from './getComputedTraitAlphaOutput';
 import { GetConnectionStateFromWarehouse200Response } from './getConnectionStateFromWarehouse200Response';
 import { GetConnectionStateFromWarehouseV1Output } from './getConnectionStateFromWarehouseV1Output';
 import { GetDailyPerSourceAPICallsUsage200Response } from './getDailyPerSourceAPICallsUsage200Response';
@@ -810,8 +840,12 @@ import { Label } from './label';
 import { Label1 } from './label1';
 import { LabelAlpha } from './labelAlpha';
 import { LabelV1 } from './labelV1';
+import { ListAudiences200Response } from './listAudiences200Response';
+import { ListAudiencesAlphaOutput } from './listAudiencesAlphaOutput';
 import { ListAuditEvents200Response } from './listAuditEvents200Response';
 import { ListAuditEventsV1Output } from './listAuditEventsV1Output';
+import { ListComputedTraits200Response } from './listComputedTraits200Response';
+import { ListComputedTraitsAlphaOutput } from './listComputedTraitsAlphaOutput';
 import { ListConnectedDestinationsFromSource200Response } from './listConnectedDestinationsFromSource200Response';
 import { ListConnectedDestinationsFromSource200Response1 } from './listConnectedDestinationsFromSource200Response1';
 import { ListConnectedDestinationsFromSourceAlphaOutput } from './listConnectedDestinationsFromSourceAlphaOutput';
@@ -926,6 +960,10 @@ import { PropertyValueTransformationV1 } from './propertyValueTransformationV1';
 import { Query } from './query';
 import { Regulation } from './regulation';
 import { RegulationListEntryV1 } from './regulationListEntryV1';
+import { RemoveAudienceFromSpace200Response } from './removeAudienceFromSpace200Response';
+import { RemoveAudienceFromSpaceAlphaOutput } from './removeAudienceFromSpaceAlphaOutput';
+import { RemoveComputedTraitFromSpace200Response } from './removeComputedTraitFromSpace200Response';
+import { RemoveComputedTraitFromSpaceAlphaOutput } from './removeComputedTraitFromSpaceAlphaOutput';
 import { RemoveFilterFromDestination200Response } from './removeFilterFromDestination200Response';
 import { RemoveFilterFromDestinationV1Output } from './removeFilterFromDestinationV1Output';
 import { RemoveProfilesWarehouseFromSpace200Response } from './removeProfilesWarehouseFromSpace200Response';
@@ -1019,6 +1057,12 @@ import { Transformation4 } from './transformation4';
 import { Transformation5 } from './transformation5';
 import { TransformationBeta } from './transformationBeta';
 import { TransformationV1 } from './transformationV1';
+import { UpdateAudienceForSpace200Response } from './updateAudienceForSpace200Response';
+import { UpdateAudienceForSpaceAlphaOutput } from './updateAudienceForSpaceAlphaOutput';
+import { UpdateAudienceForSpaceInput } from './updateAudienceForSpaceInput';
+import { UpdateComputedTraitForSpace200Response } from './updateComputedTraitForSpace200Response';
+import { UpdateComputedTraitForSpaceAlphaInput } from './updateComputedTraitForSpaceAlphaInput';
+import { UpdateComputedTraitForSpaceAlphaOutput } from './updateComputedTraitForSpaceAlphaOutput';
 import { UpdateDestination200Response } from './updateDestination200Response';
 import { UpdateDestinationV1Input } from './updateDestinationV1Input';
 import { UpdateDestinationV1Output } from './updateDestinationV1Output';
@@ -1211,6 +1255,10 @@ let enumsMap: { [index: string]: any } = {
     'Query.GranularityEnum': Query.GranularityEnum,
     'Regulation.OverallStatusEnum': Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': RegulationListEntryV1.StatusEnum,
+    'RemoveAudienceFromSpaceAlphaOutput.StatusEnum':
+        RemoveAudienceFromSpaceAlphaOutput.StatusEnum,
+    'RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum':
+        RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum':
         RemoveFilterFromDestinationV1Output.StatusEnum,
     'RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum':
@@ -1284,6 +1332,8 @@ let typeMap: { [index: string]: any } = {
     AdvancedWarehouseSyncScheduleV1Output:
         AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: AllowedLabelBeta,
+    Audience: Audience,
+    AudienceSummary: AudienceSummary,
     AuditEventV1: AuditEventV1,
     BatchQueryMessagingSubscriptionsForSpace200Response:
         BatchQueryMessagingSubscriptionsForSpace200Response,
@@ -1293,6 +1343,8 @@ let typeMap: { [index: string]: any } = {
         BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
     BreakdownBeta: BreakdownBeta,
     CommonSourceSettingsV1: CommonSourceSettingsV1,
+    ComputedTrait: ComputedTrait,
+    ComputedTraitSummary: ComputedTraitSummary,
     Contact: Contact,
     CreateCloudSourceRegulation200Response:
         CreateCloudSourceRegulation200Response,
@@ -1451,6 +1503,10 @@ let typeMap: { [index: string]: any } = {
         GetAdvancedSyncScheduleFromWarehouse200Response,
     GetAdvancedSyncScheduleFromWarehouseV1Output:
         GetAdvancedSyncScheduleFromWarehouseV1Output,
+    GetAudience200Response: GetAudience200Response,
+    GetAudienceAlphaOutput: GetAudienceAlphaOutput,
+    GetComputedTrait200Response: GetComputedTrait200Response,
+    GetComputedTraitAlphaOutput: GetComputedTraitAlphaOutput,
     GetConnectionStateFromWarehouse200Response:
         GetConnectionStateFromWarehouse200Response,
     GetConnectionStateFromWarehouseV1Output:
@@ -1547,8 +1603,12 @@ let typeMap: { [index: string]: any } = {
     Label1: Label1,
     LabelAlpha: LabelAlpha,
     LabelV1: LabelV1,
+    ListAudiences200Response: ListAudiences200Response,
+    ListAudiencesAlphaOutput: ListAudiencesAlphaOutput,
     ListAuditEvents200Response: ListAuditEvents200Response,
     ListAuditEventsV1Output: ListAuditEventsV1Output,
+    ListComputedTraits200Response: ListComputedTraits200Response,
+    ListComputedTraitsAlphaOutput: ListComputedTraitsAlphaOutput,
     ListConnectedDestinationsFromSource200Response:
         ListConnectedDestinationsFromSource200Response,
     ListConnectedDestinationsFromSource200Response1:
@@ -1690,6 +1750,12 @@ let typeMap: { [index: string]: any } = {
     Query: Query,
     Regulation: Regulation,
     RegulationListEntryV1: RegulationListEntryV1,
+    RemoveAudienceFromSpace200Response: RemoveAudienceFromSpace200Response,
+    RemoveAudienceFromSpaceAlphaOutput: RemoveAudienceFromSpaceAlphaOutput,
+    RemoveComputedTraitFromSpace200Response:
+        RemoveComputedTraitFromSpace200Response,
+    RemoveComputedTraitFromSpaceAlphaOutput:
+        RemoveComputedTraitFromSpaceAlphaOutput,
     RemoveFilterFromDestination200Response:
         RemoveFilterFromDestination200Response,
     RemoveFilterFromDestinationV1Output: RemoveFilterFromDestinationV1Output,
@@ -1802,6 +1868,15 @@ let typeMap: { [index: string]: any } = {
     Transformation5: Transformation5,
     TransformationBeta: TransformationBeta,
     TransformationV1: TransformationV1,
+    UpdateAudienceForSpace200Response: UpdateAudienceForSpace200Response,
+    UpdateAudienceForSpaceAlphaOutput: UpdateAudienceForSpaceAlphaOutput,
+    UpdateAudienceForSpaceInput: UpdateAudienceForSpaceInput,
+    UpdateComputedTraitForSpace200Response:
+        UpdateComputedTraitForSpace200Response,
+    UpdateComputedTraitForSpaceAlphaInput:
+        UpdateComputedTraitForSpaceAlphaInput,
+    UpdateComputedTraitForSpaceAlphaOutput:
+        UpdateComputedTraitForSpaceAlphaOutput,
     UpdateDestination200Response: UpdateDestination200Response,
     UpdateDestinationV1Input: UpdateDestinationV1Input,
     UpdateDestinationV1Output: UpdateDestinationV1Output,
