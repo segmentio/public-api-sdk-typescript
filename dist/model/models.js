@@ -67,6 +67,9 @@ __exportStar(require("./createFunctionDeployment200Response"), exports);
 __exportStar(require("./createFunctionDeploymentV1Output"), exports);
 __exportStar(require("./createFunctionV1Input"), exports);
 __exportStar(require("./createFunctionV1Output"), exports);
+__exportStar(require("./createInsertFunctionInstance200Response"), exports);
+__exportStar(require("./createInsertFunctionInstanceAlphaInput"), exports);
+__exportStar(require("./createInsertFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./createInvites200Response"), exports);
 __exportStar(require("./createInvitesV1Input"), exports);
 __exportStar(require("./createInvitesV1Output"), exports);
@@ -112,6 +115,8 @@ __exportStar(require("./deleteDestination200Response"), exports);
 __exportStar(require("./deleteDestinationV1Output"), exports);
 __exportStar(require("./deleteFunction200Response"), exports);
 __exportStar(require("./deleteFunctionV1Output"), exports);
+__exportStar(require("./deleteInsertFunctionInstance200Response"), exports);
+__exportStar(require("./deleteInsertFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./deleteInvites200Response"), exports);
 __exportStar(require("./deleteInvitesV1Output"), exports);
 __exportStar(require("./deleteLabel200Response"), exports);
@@ -256,6 +261,9 @@ __exportStar(require("./handleWebhookOutput"), exports);
 __exportStar(require("./identify"), exports);
 __exportStar(require("./identifySourceSettingsV1"), exports);
 __exportStar(require("./input"), exports);
+__exportStar(require("./insertFunctionInstance"), exports);
+__exportStar(require("./insertFunctionInstance1"), exports);
+__exportStar(require("./insertFunctionInstanceAlpha"), exports);
 __exportStar(require("./integrationOptionBeta"), exports);
 __exportStar(require("./invitePermissionV1"), exports);
 __exportStar(require("./inviteV1"), exports);
@@ -286,6 +294,8 @@ __exportStar(require("./listFunctionVersions200Response"), exports);
 __exportStar(require("./listFunctionVersionsAlphaOutput"), exports);
 __exportStar(require("./listFunctions200Response"), exports);
 __exportStar(require("./listFunctionsV1Output"), exports);
+__exportStar(require("./listInsertFunctionInstances200Response"), exports);
+__exportStar(require("./listInsertFunctionInstancesAlphaOutput"), exports);
 __exportStar(require("./listInvites200Response"), exports);
 __exportStar(require("./listInvitesFromUserGroup200Response"), exports);
 __exportStar(require("./listInvitesFromUserGroupV1Output"), exports);
@@ -480,6 +490,9 @@ __exportStar(require("./updateFunction200Response"), exports);
 __exportStar(require("./updateFunctionV1Input"), exports);
 __exportStar(require("./updateFunctionV1Output"), exports);
 __exportStar(require("./updateGroupSubscriptionStatusResponse"), exports);
+__exportStar(require("./updateInsertFunctionInstance200Response"), exports);
+__exportStar(require("./updateInsertFunctionInstanceAlphaInput"), exports);
+__exportStar(require("./updateInsertFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./updateProfilesWarehouseForSpaceWarehouse200Response"), exports);
 __exportStar(require("./updateProfilesWarehouseForSpaceWarehouseAlphaInput"), exports);
 __exportStar(require("./updateProfilesWarehouseForSpaceWarehouseAlphaOutput"), exports);
@@ -595,6 +608,9 @@ var createFunctionDeployment200Response_1 = require("./createFunctionDeployment2
 var createFunctionDeploymentV1Output_1 = require("./createFunctionDeploymentV1Output");
 var createFunctionV1Input_1 = require("./createFunctionV1Input");
 var createFunctionV1Output_1 = require("./createFunctionV1Output");
+var createInsertFunctionInstance200Response_1 = require("./createInsertFunctionInstance200Response");
+var createInsertFunctionInstanceAlphaInput_1 = require("./createInsertFunctionInstanceAlphaInput");
+var createInsertFunctionInstanceAlphaOutput_1 = require("./createInsertFunctionInstanceAlphaOutput");
 var createInvites200Response_1 = require("./createInvites200Response");
 var createInvitesV1Input_1 = require("./createInvitesV1Input");
 var createInvitesV1Output_1 = require("./createInvitesV1Output");
@@ -640,6 +656,8 @@ var deleteDestination200Response_1 = require("./deleteDestination200Response");
 var deleteDestinationV1Output_1 = require("./deleteDestinationV1Output");
 var deleteFunction200Response_1 = require("./deleteFunction200Response");
 var deleteFunctionV1Output_1 = require("./deleteFunctionV1Output");
+var deleteInsertFunctionInstance200Response_1 = require("./deleteInsertFunctionInstance200Response");
+var deleteInsertFunctionInstanceAlphaOutput_1 = require("./deleteInsertFunctionInstanceAlphaOutput");
 var deleteInvites200Response_1 = require("./deleteInvites200Response");
 var deleteInvitesV1Output_1 = require("./deleteInvitesV1Output");
 var deleteLabel200Response_1 = require("./deleteLabel200Response");
@@ -784,6 +802,9 @@ var handleWebhookOutput_1 = require("./handleWebhookOutput");
 var identify_1 = require("./identify");
 var identifySourceSettingsV1_1 = require("./identifySourceSettingsV1");
 var input_1 = require("./input");
+var insertFunctionInstance_1 = require("./insertFunctionInstance");
+var insertFunctionInstance1_1 = require("./insertFunctionInstance1");
+var insertFunctionInstanceAlpha_1 = require("./insertFunctionInstanceAlpha");
 var integrationOptionBeta_1 = require("./integrationOptionBeta");
 var invitePermissionV1_1 = require("./invitePermissionV1");
 var inviteV1_1 = require("./inviteV1");
@@ -814,6 +835,8 @@ var listFunctionVersions200Response_1 = require("./listFunctionVersions200Respon
 var listFunctionVersionsAlphaOutput_1 = require("./listFunctionVersionsAlphaOutput");
 var listFunctions200Response_1 = require("./listFunctions200Response");
 var listFunctionsV1Output_1 = require("./listFunctionsV1Output");
+var listInsertFunctionInstances200Response_1 = require("./listInsertFunctionInstances200Response");
+var listInsertFunctionInstancesAlphaOutput_1 = require("./listInsertFunctionInstancesAlphaOutput");
 var listInvites200Response_1 = require("./listInvites200Response");
 var listInvitesFromUserGroup200Response_1 = require("./listInvitesFromUserGroup200Response");
 var listInvitesFromUserGroupV1Output_1 = require("./listInvitesFromUserGroupV1Output");
@@ -1008,6 +1031,9 @@ var updateFunction200Response_1 = require("./updateFunction200Response");
 var updateFunctionV1Input_1 = require("./updateFunctionV1Input");
 var updateFunctionV1Output_1 = require("./updateFunctionV1Output");
 var updateGroupSubscriptionStatusResponse_1 = require("./updateGroupSubscriptionStatusResponse");
+var updateInsertFunctionInstance200Response_1 = require("./updateInsertFunctionInstance200Response");
+var updateInsertFunctionInstanceAlphaInput_1 = require("./updateInsertFunctionInstanceAlphaInput");
+var updateInsertFunctionInstanceAlphaOutput_1 = require("./updateInsertFunctionInstanceAlphaOutput");
 var updateProfilesWarehouseForSpaceWarehouse200Response_1 = require("./updateProfilesWarehouseForSpaceWarehouse200Response");
 var updateProfilesWarehouseForSpaceWarehouseAlphaInput_1 = require("./updateProfilesWarehouseForSpaceWarehouseAlphaInput");
 var updateProfilesWarehouseForSpaceWarehouseAlphaOutput_1 = require("./updateProfilesWarehouseForSpaceWarehouseAlphaOutput");
@@ -1096,6 +1122,7 @@ var enumsMap = {
     'CreateWorkspaceRegulationV1Input.SubjectTypeEnum': createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input.SubjectTypeEnum,
     'DeleteDestinationV1Output.StatusEnum': deleteDestinationV1Output_1.DeleteDestinationV1Output.StatusEnum,
     'DeleteFunctionV1Output.StatusEnum': deleteFunctionV1Output_1.DeleteFunctionV1Output.StatusEnum,
+    'DeleteInsertFunctionInstanceAlphaOutput.StatusEnum': deleteInsertFunctionInstanceAlphaOutput_1.DeleteInsertFunctionInstanceAlphaOutput.StatusEnum,
     'DeleteInvitesV1Output.StatusEnum': deleteInvitesV1Output_1.DeleteInvitesV1Output.StatusEnum,
     'DeleteLabelAlphaOutput.StatusEnum': deleteLabelAlphaOutput_1.DeleteLabelAlphaOutput.StatusEnum,
     'DeleteLabelV1Output.StatusEnum': deleteLabelV1Output_1.DeleteLabelV1Output.StatusEnum,
@@ -1227,6 +1254,9 @@ var typeMap = {
     CreateFunctionDeploymentV1Output: createFunctionDeploymentV1Output_1.CreateFunctionDeploymentV1Output,
     CreateFunctionV1Input: createFunctionV1Input_1.CreateFunctionV1Input,
     CreateFunctionV1Output: createFunctionV1Output_1.CreateFunctionV1Output,
+    CreateInsertFunctionInstance200Response: createInsertFunctionInstance200Response_1.CreateInsertFunctionInstance200Response,
+    CreateInsertFunctionInstanceAlphaInput: createInsertFunctionInstanceAlphaInput_1.CreateInsertFunctionInstanceAlphaInput,
+    CreateInsertFunctionInstanceAlphaOutput: createInsertFunctionInstanceAlphaOutput_1.CreateInsertFunctionInstanceAlphaOutput,
     CreateInvites200Response: createInvites200Response_1.CreateInvites200Response,
     CreateInvitesV1Input: createInvitesV1Input_1.CreateInvitesV1Input,
     CreateInvitesV1Output: createInvitesV1Output_1.CreateInvitesV1Output,
@@ -1272,6 +1302,8 @@ var typeMap = {
     DeleteDestinationV1Output: deleteDestinationV1Output_1.DeleteDestinationV1Output,
     DeleteFunction200Response: deleteFunction200Response_1.DeleteFunction200Response,
     DeleteFunctionV1Output: deleteFunctionV1Output_1.DeleteFunctionV1Output,
+    DeleteInsertFunctionInstance200Response: deleteInsertFunctionInstance200Response_1.DeleteInsertFunctionInstance200Response,
+    DeleteInsertFunctionInstanceAlphaOutput: deleteInsertFunctionInstanceAlphaOutput_1.DeleteInsertFunctionInstanceAlphaOutput,
     DeleteInvites200Response: deleteInvites200Response_1.DeleteInvites200Response,
     DeleteInvitesV1Output: deleteInvitesV1Output_1.DeleteInvitesV1Output,
     DeleteLabel200Response: deleteLabel200Response_1.DeleteLabel200Response,
@@ -1416,6 +1448,9 @@ var typeMap = {
     Identify: identify_1.Identify,
     IdentifySourceSettingsV1: identifySourceSettingsV1_1.IdentifySourceSettingsV1,
     Input: input_1.Input,
+    InsertFunctionInstance: insertFunctionInstance_1.InsertFunctionInstance,
+    InsertFunctionInstance1: insertFunctionInstance1_1.InsertFunctionInstance1,
+    InsertFunctionInstanceAlpha: insertFunctionInstanceAlpha_1.InsertFunctionInstanceAlpha,
     IntegrationOptionBeta: integrationOptionBeta_1.IntegrationOptionBeta,
     InvitePermissionV1: invitePermissionV1_1.InvitePermissionV1,
     InviteV1: inviteV1_1.InviteV1,
@@ -1446,6 +1481,8 @@ var typeMap = {
     ListFunctionVersionsAlphaOutput: listFunctionVersionsAlphaOutput_1.ListFunctionVersionsAlphaOutput,
     ListFunctions200Response: listFunctions200Response_1.ListFunctions200Response,
     ListFunctionsV1Output: listFunctionsV1Output_1.ListFunctionsV1Output,
+    ListInsertFunctionInstances200Response: listInsertFunctionInstances200Response_1.ListInsertFunctionInstances200Response,
+    ListInsertFunctionInstancesAlphaOutput: listInsertFunctionInstancesAlphaOutput_1.ListInsertFunctionInstancesAlphaOutput,
     ListInvites200Response: listInvites200Response_1.ListInvites200Response,
     ListInvitesFromUserGroup200Response: listInvitesFromUserGroup200Response_1.ListInvitesFromUserGroup200Response,
     ListInvitesFromUserGroupV1Output: listInvitesFromUserGroupV1Output_1.ListInvitesFromUserGroupV1Output,
@@ -1640,6 +1677,9 @@ var typeMap = {
     UpdateFunctionV1Input: updateFunctionV1Input_1.UpdateFunctionV1Input,
     UpdateFunctionV1Output: updateFunctionV1Output_1.UpdateFunctionV1Output,
     UpdateGroupSubscriptionStatusResponse: updateGroupSubscriptionStatusResponse_1.UpdateGroupSubscriptionStatusResponse,
+    UpdateInsertFunctionInstance200Response: updateInsertFunctionInstance200Response_1.UpdateInsertFunctionInstance200Response,
+    UpdateInsertFunctionInstanceAlphaInput: updateInsertFunctionInstanceAlphaInput_1.UpdateInsertFunctionInstanceAlphaInput,
+    UpdateInsertFunctionInstanceAlphaOutput: updateInsertFunctionInstanceAlphaOutput_1.UpdateInsertFunctionInstanceAlphaOutput,
     UpdateProfilesWarehouseForSpaceWarehouse200Response: updateProfilesWarehouseForSpaceWarehouse200Response_1.UpdateProfilesWarehouseForSpaceWarehouse200Response,
     UpdateProfilesWarehouseForSpaceWarehouseAlphaInput: updateProfilesWarehouseForSpaceWarehouseAlphaInput_1.UpdateProfilesWarehouseForSpaceWarehouseAlphaInput,
     UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput: updateProfilesWarehouseForSpaceWarehouseAlphaOutput_1.UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput,
