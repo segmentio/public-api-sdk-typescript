@@ -437,6 +437,7 @@ export * from './restoreFunctionVersionAlphaOutput';
 export * from './reverseEtlModel';
 export * from './reverseEtlModel1';
 export * from './roleV1';
+export * from './ruleInputV1';
 export * from './ruleV1';
 export * from './schedule';
 export * from './schedule1';

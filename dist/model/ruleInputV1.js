@@ -1,23 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpsertRuleV1 = void 0;
-var UpsertRuleV1 = (function () {
-    function UpsertRuleV1() {
+exports.RuleInputV1 = void 0;
+var RuleInputV1 = (function () {
+    function RuleInputV1() {
     }
-    UpsertRuleV1.getAttributeTypeMap = function () {
-        return UpsertRuleV1.attributeTypeMap;
+    RuleInputV1.getAttributeTypeMap = function () {
+        return RuleInputV1.attributeTypeMap;
     };
-    UpsertRuleV1.discriminator = undefined;
-    UpsertRuleV1.attributeTypeMap = [
-        {
-            name: 'newKey',
-            baseName: 'newKey',
-            type: 'string',
-        },
+    RuleInputV1.discriminator = undefined;
+    RuleInputV1.attributeTypeMap = [
         {
             name: 'type',
             baseName: 'type',
-            type: 'UpsertRuleV1.TypeEnum',
+            type: 'RuleInputV1.TypeEnum',
         },
         {
             name: 'key',
@@ -35,10 +30,10 @@ var UpsertRuleV1 = (function () {
             type: 'number',
         },
     ];
-    return UpsertRuleV1;
+    return RuleInputV1;
 }());
-exports.UpsertRuleV1 = UpsertRuleV1;
-(function (UpsertRuleV1) {
+exports.RuleInputV1 = RuleInputV1;
+(function (RuleInputV1) {
     var TypeEnum;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["COMMON"] = 'COMMON'] = "COMMON";
@@ -47,7 +42,7 @@ exports.UpsertRuleV1 = UpsertRuleV1;
         TypeEnum[TypeEnum["PAGE"] = 'PAGE'] = "PAGE";
         TypeEnum[TypeEnum["SCREEN"] = 'SCREEN'] = "SCREEN";
         TypeEnum[TypeEnum["TRACK"] = 'TRACK'] = "TRACK";
-    })(TypeEnum = UpsertRuleV1.TypeEnum || (UpsertRuleV1.TypeEnum = {}));
-})(UpsertRuleV1 = exports.UpsertRuleV1 || (exports.UpsertRuleV1 = {}));
-exports.UpsertRuleV1 = UpsertRuleV1;
-//# sourceMappingURL=upsertRuleV1.js.map
+    })(TypeEnum = RuleInputV1.TypeEnum || (RuleInputV1.TypeEnum = {}));
+})(RuleInputV1 = exports.RuleInputV1 || (exports.RuleInputV1 = {}));
+exports.RuleInputV1 = RuleInputV1;
+//# sourceMappingURL=ruleInputV1.js.map

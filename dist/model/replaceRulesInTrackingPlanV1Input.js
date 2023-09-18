@@ -12,7 +12,7 @@ var ReplaceRulesInTrackingPlanV1Input = (function () {
         {
             name: 'rules',
             baseName: 'rules',
-            type: 'Array<RuleV1>',
+            type: 'Array<RuleInputV1>',
         },
     ];
     return ReplaceRulesInTrackingPlanV1Input;

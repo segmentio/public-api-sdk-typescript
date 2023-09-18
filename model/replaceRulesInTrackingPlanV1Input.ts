@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { RuleV1 } from './ruleV1';
+import { RuleInputV1 } from './ruleInputV1';
 
 /**
  * Replaces Tracking Plan rules.
@@ -20,7 +20,7 @@ export class ReplaceRulesInTrackingPlanV1Input {
     /**
      * Rules to replace.
      */
-    'rules': Array<RuleV1>;
+    'rules': Array<RuleInputV1>;
 
     static discriminator: string | undefined = undefined;
 
@@ -32,7 +32,7 @@ export class ReplaceRulesInTrackingPlanV1Input {
         {
             name: 'rules',
             baseName: 'rules',
-            type: 'Array<RuleV1>',
+            type: 'Array<RuleInputV1>',
         },
     ];
 

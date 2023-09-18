@@ -436,6 +436,7 @@ export * from './restoreFunctionVersionAlphaOutput';
 export * from './reverseEtlModel';
 export * from './reverseEtlModel1';
 export * from './roleV1';
+export * from './ruleInputV1';
 export * from './ruleV1';
 export * from './schedule';
 export * from './schedule1';
@@ -1012,6 +1013,7 @@ import { RestoreFunctionVersionAlphaOutput } from './restoreFunctionVersionAlpha
 import { ReverseEtlModel } from './reverseEtlModel';
 import { ReverseEtlModel1 } from './reverseEtlModel1';
 import { RoleV1 } from './roleV1';
+import { RuleInputV1 } from './ruleInputV1';
 import { RuleV1 } from './ruleV1';
 import { Schedule } from './schedule';
 import { Schedule1 } from './schedule1';
@@ -1277,6 +1279,7 @@ let enumsMap: { [index: string]: any } = {
     'ReplaceRulesInTrackingPlanV1Output.StatusEnum':
         ReplaceRulesInTrackingPlanV1Output.StatusEnum,
     'ResourceV1.TypeEnum': ResourceV1.TypeEnum,
+    'RuleInputV1.TypeEnum': RuleInputV1.TypeEnum,
     'RuleV1.TypeEnum': RuleV1.TypeEnum,
     'SupportedFeatures.CloudModeInstancesEnum':
         SupportedFeatures.CloudModeInstancesEnum,
@@ -1823,6 +1826,7 @@ let typeMap: { [index: string]: any } = {
     ReverseEtlModel: ReverseEtlModel,
     ReverseEtlModel1: ReverseEtlModel1,
     RoleV1: RoleV1,
+    RuleInputV1: RuleInputV1,
     RuleV1: RuleV1,
     Schedule: Schedule,
     Schedule1: Schedule1,

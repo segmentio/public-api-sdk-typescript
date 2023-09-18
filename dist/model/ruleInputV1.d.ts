@@ -1,6 +1,5 @@
-export declare class UpsertRuleV1 {
-    'newKey'?: string;
-    'type': UpsertRuleV1.TypeEnum;
+export declare class RuleInputV1 {
+    'type': RuleInputV1.TypeEnum;
     'key'?: string;
     'jsonSchema': any | null;
     'version': number;
@@ -16,7 +15,7 @@ export declare class UpsertRuleV1 {
         type: string;
     }[];
 }
-export declare namespace UpsertRuleV1 {
+export declare namespace RuleInputV1 {
     enum TypeEnum {
         COMMON,
         GROUP,

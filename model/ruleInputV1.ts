@@ -12,15 +12,14 @@
 
 import { RequestFile } from './models';
 
-export class UpsertRuleV1 {
-    /**
-     * This rule\'s new intended key.
-     */
-    'newKey'?: string;
+/**
+ * Represents a rule to add to a Tracking Plan.
+ */
+export class RuleInputV1 {
     /**
      * The type for this Tracking Plan rule.
      */
-    'type': UpsertRuleV1.TypeEnum;
+    'type': RuleInputV1.TypeEnum;
     /**
      * Key to this rule (free-form string like \'Button clicked\').
      */
@@ -42,14 +41,9 @@ export class UpsertRuleV1 {
         type: string;
     }> = [
         {
-            name: 'newKey',
-            baseName: 'newKey',
-            type: 'string',
-        },
-        {
             name: 'type',
             baseName: 'type',
-            type: 'UpsertRuleV1.TypeEnum',
+            type: 'RuleInputV1.TypeEnum',
         },
         {
             name: 'key',
@@ -69,11 +63,11 @@ export class UpsertRuleV1 {
     ];
 
     static getAttributeTypeMap() {
-        return UpsertRuleV1.attributeTypeMap;
+        return RuleInputV1.attributeTypeMap;
     }
 }
 
-export namespace UpsertRuleV1 {
+export namespace RuleInputV1 {
     export enum TypeEnum {
         COMMON = <any>'COMMON',
         GROUP = <any>'GROUP',

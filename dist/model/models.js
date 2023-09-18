@@ -451,6 +451,7 @@ __exportStar(require("./restoreFunctionVersionAlphaOutput"), exports);
 __exportStar(require("./reverseEtlModel"), exports);
 __exportStar(require("./reverseEtlModel1"), exports);
 __exportStar(require("./roleV1"), exports);
+__exportStar(require("./ruleInputV1"), exports);
 __exportStar(require("./ruleV1"), exports);
 __exportStar(require("./schedule"), exports);
 __exportStar(require("./schedule1"), exports);
@@ -1014,6 +1015,7 @@ var restoreFunctionVersionAlphaOutput_1 = require("./restoreFunctionVersionAlpha
 var reverseEtlModel_1 = require("./reverseEtlModel");
 var reverseEtlModel1_1 = require("./reverseEtlModel1");
 var roleV1_1 = require("./roleV1");
+var ruleInputV1_1 = require("./ruleInputV1");
 var ruleV1_1 = require("./ruleV1");
 var schedule_1 = require("./schedule");
 var schedule1_1 = require("./schedule1");
@@ -1231,6 +1233,7 @@ var enumsMap = {
     'RemoveUsersFromUserGroupV1Output.StatusEnum': removeUsersFromUserGroupV1Output_1.RemoveUsersFromUserGroupV1Output.StatusEnum,
     'ReplaceRulesInTrackingPlanV1Output.StatusEnum': replaceRulesInTrackingPlanV1Output_1.ReplaceRulesInTrackingPlanV1Output.StatusEnum,
     'ResourceV1.TypeEnum': resourceV1_1.ResourceV1.TypeEnum,
+    'RuleInputV1.TypeEnum': ruleInputV1_1.RuleInputV1.TypeEnum,
     'RuleV1.TypeEnum': ruleV1_1.RuleV1.TypeEnum,
     'SupportedFeatures.CloudModeInstancesEnum': supportedFeatures_1.SupportedFeatures.CloudModeInstancesEnum,
     'SupportedFeatures.DeviceModeInstancesEnum': supportedFeatures_1.SupportedFeatures.DeviceModeInstancesEnum,
@@ -1684,6 +1687,7 @@ var typeMap = {
     ReverseEtlModel: reverseEtlModel_1.ReverseEtlModel,
     ReverseEtlModel1: reverseEtlModel1_1.ReverseEtlModel1,
     RoleV1: roleV1_1.RoleV1,
+    RuleInputV1: ruleInputV1_1.RuleInputV1,
     RuleV1: ruleV1_1.RuleV1,
     Schedule: schedule_1.Schedule,
     Schedule1: schedule1_1.Schedule1,
