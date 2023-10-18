@@ -1,6 +1,6 @@
-import { RuleV1 } from './ruleV1';
+import { RuleInputV1 } from './ruleInputV1';
 export declare class ReplaceRulesInTrackingPlanV1Input {
-    'rules': Array<RuleV1>;
+    'rules': Array<RuleInputV1>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

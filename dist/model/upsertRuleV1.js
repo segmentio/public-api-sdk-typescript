@@ -34,21 +34,6 @@ var UpsertRuleV1 = (function () {
             baseName: 'version',
             type: 'number',
         },
-        {
-            name: 'createdAt',
-            baseName: 'createdAt',
-            type: 'string',
-        },
-        {
-            name: 'updatedAt',
-            baseName: 'updatedAt',
-            type: 'string',
-        },
-        {
-            name: 'deprecatedAt',
-            baseName: 'deprecatedAt',
-            type: 'string',
-        },
     ];
     return UpsertRuleV1;
 }());

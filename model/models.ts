@@ -56,6 +56,9 @@ export * from './createFunctionDeployment200Response';
 export * from './createFunctionDeploymentV1Output';
 export * from './createFunctionV1Input';
 export * from './createFunctionV1Output';
+export * from './createInsertFunctionInstance200Response';
+export * from './createInsertFunctionInstanceAlphaInput';
+export * from './createInsertFunctionInstanceAlphaOutput';
 export * from './createInvites200Response';
 export * from './createInvitesV1Input';
 export * from './createInvitesV1Output';
@@ -101,6 +104,8 @@ export * from './deleteDestination200Response';
 export * from './deleteDestinationV1Output';
 export * from './deleteFunction200Response';
 export * from './deleteFunctionV1Output';
+export * from './deleteInsertFunctionInstance200Response';
+export * from './deleteInsertFunctionInstanceAlphaOutput';
 export * from './deleteInvites200Response';
 export * from './deleteInvitesV1Output';
 export * from './deleteLabel200Response';
@@ -249,6 +254,9 @@ export * from './handleWebhookOutput';
 export * from './identify';
 export * from './identifySourceSettingsV1';
 export * from './input';
+export * from './insertFunctionInstance';
+export * from './insertFunctionInstance1';
+export * from './insertFunctionInstanceAlpha';
 export * from './integrationOptionBeta';
 export * from './invitePermissionV1';
 export * from './inviteV1';
@@ -283,6 +291,8 @@ export * from './listFunctionVersions200Response';
 export * from './listFunctionVersionsAlphaOutput';
 export * from './listFunctions200Response';
 export * from './listFunctionsV1Output';
+export * from './listInsertFunctionInstances200Response';
+export * from './listInsertFunctionInstancesAlphaOutput';
 export * from './listInvites200Response';
 export * from './listInvitesFromUserGroup200Response';
 export * from './listInvitesFromUserGroupV1Output';
@@ -426,6 +436,7 @@ export * from './restoreFunctionVersionAlphaOutput';
 export * from './reverseEtlModel';
 export * from './reverseEtlModel1';
 export * from './roleV1';
+export * from './ruleInputV1';
 export * from './ruleV1';
 export * from './schedule';
 export * from './schedule1';
@@ -487,6 +498,9 @@ export * from './updateFunction200Response';
 export * from './updateFunctionV1Input';
 export * from './updateFunctionV1Output';
 export * from './updateGroupSubscriptionStatusResponse';
+export * from './updateInsertFunctionInstance200Response';
+export * from './updateInsertFunctionInstanceAlphaInput';
+export * from './updateInsertFunctionInstanceAlphaOutput';
 export * from './updateProfilesWarehouseForSpaceWarehouse200Response';
 export * from './updateProfilesWarehouseForSpaceWarehouseAlphaInput';
 export * from './updateProfilesWarehouseForSpaceWarehouseAlphaOutput';
@@ -619,6 +633,9 @@ import { CreateFunctionDeployment200Response } from './createFunctionDeployment2
 import { CreateFunctionDeploymentV1Output } from './createFunctionDeploymentV1Output';
 import { CreateFunctionV1Input } from './createFunctionV1Input';
 import { CreateFunctionV1Output } from './createFunctionV1Output';
+import { CreateInsertFunctionInstance200Response } from './createInsertFunctionInstance200Response';
+import { CreateInsertFunctionInstanceAlphaInput } from './createInsertFunctionInstanceAlphaInput';
+import { CreateInsertFunctionInstanceAlphaOutput } from './createInsertFunctionInstanceAlphaOutput';
 import { CreateInvites200Response } from './createInvites200Response';
 import { CreateInvitesV1Input } from './createInvitesV1Input';
 import { CreateInvitesV1Output } from './createInvitesV1Output';
@@ -664,6 +681,8 @@ import { DeleteDestination200Response } from './deleteDestination200Response';
 import { DeleteDestinationV1Output } from './deleteDestinationV1Output';
 import { DeleteFunction200Response } from './deleteFunction200Response';
 import { DeleteFunctionV1Output } from './deleteFunctionV1Output';
+import { DeleteInsertFunctionInstance200Response } from './deleteInsertFunctionInstance200Response';
+import { DeleteInsertFunctionInstanceAlphaOutput } from './deleteInsertFunctionInstanceAlphaOutput';
 import { DeleteInvites200Response } from './deleteInvites200Response';
 import { DeleteInvitesV1Output } from './deleteInvitesV1Output';
 import { DeleteLabel200Response } from './deleteLabel200Response';
@@ -812,6 +831,9 @@ import { HandleWebhookOutput } from './handleWebhookOutput';
 import { Identify } from './identify';
 import { IdentifySourceSettingsV1 } from './identifySourceSettingsV1';
 import { Input } from './input';
+import { InsertFunctionInstance } from './insertFunctionInstance';
+import { InsertFunctionInstance1 } from './insertFunctionInstance1';
+import { InsertFunctionInstanceAlpha } from './insertFunctionInstanceAlpha';
 import { IntegrationOptionBeta } from './integrationOptionBeta';
 import { InvitePermissionV1 } from './invitePermissionV1';
 import { InviteV1 } from './inviteV1';
@@ -846,6 +868,8 @@ import { ListFunctionVersions200Response } from './listFunctionVersions200Respon
 import { ListFunctionVersionsAlphaOutput } from './listFunctionVersionsAlphaOutput';
 import { ListFunctions200Response } from './listFunctions200Response';
 import { ListFunctionsV1Output } from './listFunctionsV1Output';
+import { ListInsertFunctionInstances200Response } from './listInsertFunctionInstances200Response';
+import { ListInsertFunctionInstancesAlphaOutput } from './listInsertFunctionInstancesAlphaOutput';
 import { ListInvites200Response } from './listInvites200Response';
 import { ListInvitesFromUserGroup200Response } from './listInvitesFromUserGroup200Response';
 import { ListInvitesFromUserGroupV1Output } from './listInvitesFromUserGroupV1Output';
@@ -989,6 +1013,7 @@ import { RestoreFunctionVersionAlphaOutput } from './restoreFunctionVersionAlpha
 import { ReverseEtlModel } from './reverseEtlModel';
 import { ReverseEtlModel1 } from './reverseEtlModel1';
 import { RoleV1 } from './roleV1';
+import { RuleInputV1 } from './ruleInputV1';
 import { RuleV1 } from './ruleV1';
 import { Schedule } from './schedule';
 import { Schedule1 } from './schedule1';
@@ -1050,6 +1075,9 @@ import { UpdateFunction200Response } from './updateFunction200Response';
 import { UpdateFunctionV1Input } from './updateFunctionV1Input';
 import { UpdateFunctionV1Output } from './updateFunctionV1Output';
 import { UpdateGroupSubscriptionStatusResponse } from './updateGroupSubscriptionStatusResponse';
+import { UpdateInsertFunctionInstance200Response } from './updateInsertFunctionInstance200Response';
+import { UpdateInsertFunctionInstanceAlphaInput } from './updateInsertFunctionInstanceAlphaInput';
+import { UpdateInsertFunctionInstanceAlphaOutput } from './updateInsertFunctionInstanceAlphaOutput';
 import { UpdateProfilesWarehouseForSpaceWarehouse200Response } from './updateProfilesWarehouseForSpaceWarehouse200Response';
 import { UpdateProfilesWarehouseForSpaceWarehouseAlphaInput } from './updateProfilesWarehouseForSpaceWarehouseAlphaInput';
 import { UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput } from './updateProfilesWarehouseForSpaceWarehouseAlphaOutput';
@@ -1153,6 +1181,8 @@ let enumsMap: { [index: string]: any } = {
     'DeleteDestinationV1Output.StatusEnum':
         DeleteDestinationV1Output.StatusEnum,
     'DeleteFunctionV1Output.StatusEnum': DeleteFunctionV1Output.StatusEnum,
+    'DeleteInsertFunctionInstanceAlphaOutput.StatusEnum':
+        DeleteInsertFunctionInstanceAlphaOutput.StatusEnum,
     'DeleteInvitesV1Output.StatusEnum': DeleteInvitesV1Output.StatusEnum,
     'DeleteLabelAlphaOutput.StatusEnum': DeleteLabelAlphaOutput.StatusEnum,
     'DeleteLabelV1Output.StatusEnum': DeleteLabelV1Output.StatusEnum,
@@ -1249,6 +1279,7 @@ let enumsMap: { [index: string]: any } = {
     'ReplaceRulesInTrackingPlanV1Output.StatusEnum':
         ReplaceRulesInTrackingPlanV1Output.StatusEnum,
     'ResourceV1.TypeEnum': ResourceV1.TypeEnum,
+    'RuleInputV1.TypeEnum': RuleInputV1.TypeEnum,
     'RuleV1.TypeEnum': RuleV1.TypeEnum,
     'SupportedFeatures.CloudModeInstancesEnum':
         SupportedFeatures.CloudModeInstancesEnum,
@@ -1343,6 +1374,12 @@ let typeMap: { [index: string]: any } = {
     CreateFunctionDeploymentV1Output: CreateFunctionDeploymentV1Output,
     CreateFunctionV1Input: CreateFunctionV1Input,
     CreateFunctionV1Output: CreateFunctionV1Output,
+    CreateInsertFunctionInstance200Response:
+        CreateInsertFunctionInstance200Response,
+    CreateInsertFunctionInstanceAlphaInput:
+        CreateInsertFunctionInstanceAlphaInput,
+    CreateInsertFunctionInstanceAlphaOutput:
+        CreateInsertFunctionInstanceAlphaOutput,
     CreateInvites200Response: CreateInvites200Response,
     CreateInvitesV1Input: CreateInvitesV1Input,
     CreateInvitesV1Output: CreateInvitesV1Output,
@@ -1389,6 +1426,10 @@ let typeMap: { [index: string]: any } = {
     DeleteDestinationV1Output: DeleteDestinationV1Output,
     DeleteFunction200Response: DeleteFunction200Response,
     DeleteFunctionV1Output: DeleteFunctionV1Output,
+    DeleteInsertFunctionInstance200Response:
+        DeleteInsertFunctionInstance200Response,
+    DeleteInsertFunctionInstanceAlphaOutput:
+        DeleteInsertFunctionInstanceAlphaOutput,
     DeleteInvites200Response: DeleteInvites200Response,
     DeleteInvitesV1Output: DeleteInvitesV1Output,
     DeleteLabel200Response: DeleteLabel200Response,
@@ -1555,6 +1596,9 @@ let typeMap: { [index: string]: any } = {
     Identify: Identify,
     IdentifySourceSettingsV1: IdentifySourceSettingsV1,
     Input: Input,
+    InsertFunctionInstance: InsertFunctionInstance,
+    InsertFunctionInstance1: InsertFunctionInstance1,
+    InsertFunctionInstanceAlpha: InsertFunctionInstanceAlpha,
     IntegrationOptionBeta: IntegrationOptionBeta,
     InvitePermissionV1: InvitePermissionV1,
     InviteV1: InviteV1,
@@ -1602,6 +1646,10 @@ let typeMap: { [index: string]: any } = {
     ListFunctionVersionsAlphaOutput: ListFunctionVersionsAlphaOutput,
     ListFunctions200Response: ListFunctions200Response,
     ListFunctionsV1Output: ListFunctionsV1Output,
+    ListInsertFunctionInstances200Response:
+        ListInsertFunctionInstances200Response,
+    ListInsertFunctionInstancesAlphaOutput:
+        ListInsertFunctionInstancesAlphaOutput,
     ListInvites200Response: ListInvites200Response,
     ListInvitesFromUserGroup200Response: ListInvitesFromUserGroup200Response,
     ListInvitesFromUserGroupV1Output: ListInvitesFromUserGroupV1Output,
@@ -1778,6 +1826,7 @@ let typeMap: { [index: string]: any } = {
     ReverseEtlModel: ReverseEtlModel,
     ReverseEtlModel1: ReverseEtlModel1,
     RoleV1: RoleV1,
+    RuleInputV1: RuleInputV1,
     RuleV1: RuleV1,
     Schedule: Schedule,
     Schedule1: Schedule1,
@@ -1844,6 +1893,12 @@ let typeMap: { [index: string]: any } = {
     UpdateFunctionV1Output: UpdateFunctionV1Output,
     UpdateGroupSubscriptionStatusResponse:
         UpdateGroupSubscriptionStatusResponse,
+    UpdateInsertFunctionInstance200Response:
+        UpdateInsertFunctionInstance200Response,
+    UpdateInsertFunctionInstanceAlphaInput:
+        UpdateInsertFunctionInstanceAlphaInput,
+    UpdateInsertFunctionInstanceAlphaOutput:
+        UpdateInsertFunctionInstanceAlphaOutput,
     UpdateProfilesWarehouseForSpaceWarehouse200Response:
         UpdateProfilesWarehouseForSpaceWarehouse200Response,
     UpdateProfilesWarehouseForSpaceWarehouseAlphaInput:

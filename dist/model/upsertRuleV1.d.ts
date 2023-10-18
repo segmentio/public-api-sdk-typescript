@@ -4,9 +4,6 @@ export declare class UpsertRuleV1 {
     'key'?: string;
     'jsonSchema': any | null;
     'version': number;
-    'createdAt'?: string;
-    'updatedAt'?: string;
-    'deprecatedAt'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

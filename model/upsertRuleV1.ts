@@ -33,18 +33,6 @@ export class UpsertRuleV1 {
      * Version of this rule.
      */
     'version': number;
-    /**
-     * The timestamp of this rule\'s creation.
-     */
-    'createdAt'?: string;
-    /**
-     * The timestamp of this rule\'s last change.
-     */
-    'updatedAt'?: string;
-    /**
-     * The timestamp of this rule\'s deprecation.
-     */
-    'deprecatedAt'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -77,21 +65,6 @@ export class UpsertRuleV1 {
             name: 'version',
             baseName: 'version',
             type: 'number',
-        },
-        {
-            name: 'createdAt',
-            baseName: 'createdAt',
-            type: 'string',
-        },
-        {
-            name: 'updatedAt',
-            baseName: 'updatedAt',
-            type: 'string',
-        },
-        {
-            name: 'deprecatedAt',
-            baseName: 'deprecatedAt',
-            type: 'string',
         },
     ];
 
