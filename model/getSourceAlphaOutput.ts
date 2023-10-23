@@ -18,6 +18,10 @@ import { Source1 } from './source1';
  */
 export class GetSourceAlphaOutput {
     'source': Source1;
+    /**
+     * The id of the Tracking Plan connected to the Source.
+     */
+    'trackingPlanId': string | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -30,6 +34,11 @@ export class GetSourceAlphaOutput {
             name: 'source',
             baseName: 'source',
             type: 'Source1',
+        },
+        {
+            name: 'trackingPlanId',
+            baseName: 'trackingPlanId',
+            type: 'string',
         },
     ];
 
