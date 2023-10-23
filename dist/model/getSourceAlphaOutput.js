@@ -14,6 +14,11 @@ var GetSourceAlphaOutput = (function () {
             baseName: 'source',
             type: 'Source1',
         },
+        {
+            name: 'trackingPlanId',
+            baseName: 'trackingPlanId',
+            type: 'string',
+        },
     ];
     return GetSourceAlphaOutput;
 }());
