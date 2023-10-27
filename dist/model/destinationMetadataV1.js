@@ -32,7 +32,7 @@ var DestinationMetadataV1 = (function () {
         {
             name: 'logos',
             baseName: 'logos',
-            type: 'Logos',
+            type: 'LogosBeta',
         },
         {
             name: 'options',
@@ -67,17 +67,17 @@ var DestinationMetadataV1 = (function () {
         {
             name: 'supportedFeatures',
             baseName: 'supportedFeatures',
-            type: 'SupportedFeatures',
+            type: 'DestinationMetadataFeaturesV1',
         },
         {
             name: 'supportedMethods',
             baseName: 'supportedMethods',
-            type: 'SupportedMethods',
+            type: 'DestinationMetadataMethodsV1',
         },
         {
             name: 'supportedPlatforms',
             baseName: 'supportedPlatforms',
-            type: 'SupportedPlatforms',
+            type: 'DestinationMetadataPlatformsV1',
         },
         {
             name: 'actions',

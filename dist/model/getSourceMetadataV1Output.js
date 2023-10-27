@@ -12,7 +12,7 @@ var GetSourceMetadataV1Output = (function () {
         {
             name: 'sourceMetadata',
             baseName: 'sourceMetadata',
-            type: 'SourceMetadata',
+            type: 'SourceMetadataV1',
         },
     ];
     return GetSourceMetadataV1Output;

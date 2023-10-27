@@ -1,8 +1,8 @@
 import { MtuSnapshotV1 } from './mtuSnapshotV1';
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 export declare class GetDailyWorkspaceMTUUsageV1Output {
     'dailyWorkspaceMTUUsage': Array<MtuSnapshotV1>;
-    'pagination': Pagination;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

@@ -17,7 +17,7 @@ var ListReverseEtlModelsOutput = (function () {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'Pagination',
+            type: 'PaginationOutput',
         },
     ];
     return ListReverseEtlModelsOutput;

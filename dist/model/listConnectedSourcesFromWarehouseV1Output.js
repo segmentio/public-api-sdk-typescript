@@ -17,7 +17,7 @@ var ListConnectedSourcesFromWarehouseV1Output = (function () {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'Pagination',
+            type: 'PaginationOutput',
         },
     ];
     return ListConnectedSourcesFromWarehouseV1Output;

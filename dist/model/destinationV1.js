@@ -27,7 +27,7 @@ var DestinationV1 = (function () {
         {
             name: 'metadata',
             baseName: 'metadata',
-            type: 'Metadata',
+            type: 'DestinationMetadataV1',
         },
         {
             name: 'sourceId',

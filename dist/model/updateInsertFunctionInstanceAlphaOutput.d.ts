@@ -1,6 +1,6 @@
-import { InsertFunctionInstance1 } from './insertFunctionInstance1';
+import { InsertFunctionInstanceAlpha } from './insertFunctionInstanceAlpha';
 export declare class UpdateInsertFunctionInstanceAlphaOutput {
-    'insertFunctionInstance': InsertFunctionInstance1;
+    'insertFunctionInstance': InsertFunctionInstanceAlpha;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

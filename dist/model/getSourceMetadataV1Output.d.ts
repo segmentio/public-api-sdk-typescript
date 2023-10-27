@@ -1,6 +1,6 @@
-import { SourceMetadata } from './sourceMetadata';
+import { SourceMetadataV1 } from './sourceMetadataV1';
 export declare class GetSourceMetadataV1Output {
-    'sourceMetadata': SourceMetadata;
+    'sourceMetadata': SourceMetadataV1;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

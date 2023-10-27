@@ -1,6 +1,6 @@
-import { Audience } from './audience';
+import { AudienceSummary } from './audienceSummary';
 export declare class GetAudienceAlphaOutput {
-    'audience': Audience;
+    'audience': AudienceSummary;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

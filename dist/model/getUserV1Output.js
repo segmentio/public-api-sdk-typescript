@@ -12,7 +12,7 @@ var GetUserV1Output = (function () {
         {
             name: 'user',
             baseName: 'user',
-            type: 'User',
+            type: 'UserV1',
         },
     ];
     return GetUserV1Output;

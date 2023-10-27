@@ -12,7 +12,7 @@ var PreviewDestinationFilterV1Input = (function () {
         {
             name: 'filter',
             baseName: 'filter',
-            type: 'Filter',
+            type: 'PreviewDestinationFilterV1',
         },
         {
             name: 'payload',

@@ -27,7 +27,7 @@ var SourceV1 = (function () {
         {
             name: 'metadata',
             baseName: 'metadata',
-            type: 'Metadata2',
+            type: 'SourceMetadataV1',
         },
         {
             name: 'workspaceId',
@@ -47,7 +47,7 @@ var SourceV1 = (function () {
         {
             name: 'settings',
             baseName: 'settings',
-            type: 'any',
+            type: '{ [key: string]: any; }',
         },
         {
             name: 'labels',

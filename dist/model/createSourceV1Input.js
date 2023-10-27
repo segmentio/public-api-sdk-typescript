@@ -27,7 +27,7 @@ var CreateSourceV1Input = (function () {
         {
             name: 'settings',
             baseName: 'settings',
-            type: 'any',
+            type: '{ [key: string]: any; }',
         },
     ];
     return CreateSourceV1Input;

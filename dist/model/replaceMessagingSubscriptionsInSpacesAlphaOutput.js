@@ -22,7 +22,7 @@ var ReplaceMessagingSubscriptionsInSpacesAlphaOutput = (function () {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'Pagination',
+            type: 'PaginationOutput',
         },
     ];
     return ReplaceMessagingSubscriptionsInSpacesAlphaOutput;

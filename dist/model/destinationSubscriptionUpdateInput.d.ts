@@ -2,7 +2,9 @@ export declare class DestinationSubscriptionUpdateInput {
     'name'?: string;
     'trigger'?: string;
     'enabled'?: boolean;
-    'settings'?: any | null;
+    'settings'?: {
+        [key: string]: any;
+    };
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

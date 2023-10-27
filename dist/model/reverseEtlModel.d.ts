@@ -5,7 +5,9 @@ export declare class ReverseEtlModel {
     'description': string;
     'enabled': boolean;
     'scheduleStrategy': string;
-    'scheduleConfig': any | null;
+    'scheduleConfig': {
+        [key: string]: any;
+    };
     'query': string;
     'queryIdentifierColumn': string;
     static discriminator: string | undefined;

@@ -3,7 +3,9 @@ export declare class CreateSourceAlphaInput {
     'enabled': boolean;
     'name'?: string;
     'metadataId': string;
-    'settings'?: any | null;
+    'settings'?: {
+        [key: string]: any;
+    };
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

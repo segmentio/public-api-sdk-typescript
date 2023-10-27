@@ -32,7 +32,7 @@ var WarehouseMetadataV1 = (function () {
         {
             name: 'logos',
             baseName: 'logos',
-            type: 'Logos2',
+            type: 'LogosBeta',
         },
         {
             name: 'options',

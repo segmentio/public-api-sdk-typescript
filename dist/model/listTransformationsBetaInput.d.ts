@@ -1,6 +1,6 @@
-import { Pagination1 } from './pagination1';
+import { PaginationInput } from './paginationInput';
 export declare class ListTransformationsBetaInput {
-    'pagination': Pagination1;
+    'pagination': PaginationInput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

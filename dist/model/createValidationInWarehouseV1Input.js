@@ -17,7 +17,7 @@ var CreateValidationInWarehouseV1Input = (function () {
         {
             name: 'settings',
             baseName: 'settings',
-            type: 'any',
+            type: '{ [key: string]: any; }',
         },
     ];
     return CreateValidationInWarehouseV1Input;

@@ -12,7 +12,7 @@ var GetTrackingPlanV1Output = (function () {
         {
             name: 'trackingPlan',
             baseName: 'trackingPlan',
-            type: 'TrackingPlan',
+            type: 'TrackingPlanV1',
         },
     ];
     return GetTrackingPlanV1Output;

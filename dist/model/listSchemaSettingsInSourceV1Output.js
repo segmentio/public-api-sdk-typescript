@@ -17,7 +17,7 @@ var ListSchemaSettingsInSourceV1Output = (function () {
         {
             name: 'settings',
             baseName: 'settings',
-            type: 'Settings',
+            type: 'SourceSettingsOutputV1',
         },
     ];
     return ListSchemaSettingsInSourceV1Output;

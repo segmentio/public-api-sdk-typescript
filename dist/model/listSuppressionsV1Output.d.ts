@@ -1,8 +1,8 @@
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 import { SuppressedInner } from './suppressedInner';
 export declare class ListSuppressionsV1Output {
     'suppressed': Array<SuppressedInner>;
-    'pagination': Pagination;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

@@ -17,7 +17,7 @@ var ListTransformationsBetaOutput = (function () {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'Pagination',
+            type: 'PaginationOutput',
         },
     ];
     return ListTransformationsBetaOutput;

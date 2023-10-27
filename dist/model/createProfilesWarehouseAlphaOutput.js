@@ -12,7 +12,7 @@ var CreateProfilesWarehouseAlphaOutput = (function () {
         {
             name: 'profilesWarehouse',
             baseName: 'profilesWarehouse',
-            type: 'ProfilesWarehouse',
+            type: 'ProfilesWarehouseAlpha',
         },
     ];
     return CreateProfilesWarehouseAlphaOutput;

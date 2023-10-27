@@ -1,6 +1,6 @@
-import { Version1 } from './version1';
+import { Version } from './version';
 export declare class RestoreFunctionVersionAlphaOutput {
-    'version': Version1;
+    'version': Version;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

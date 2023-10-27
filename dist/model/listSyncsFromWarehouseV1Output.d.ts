@@ -1,8 +1,8 @@
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 import { SyncV1 } from './syncV1';
 export declare class ListSyncsFromWarehouseV1Output {
     'reports': Array<SyncV1>;
-    'pagination': Pagination;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

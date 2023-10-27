@@ -12,7 +12,7 @@ var CreateDestinationV1Output = (function () {
         {
             name: 'destination',
             baseName: 'destination',
-            type: 'Destination2',
+            type: 'DestinationV1',
         },
     ];
     return CreateDestinationV1Output;

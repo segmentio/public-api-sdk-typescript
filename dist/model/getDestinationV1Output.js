@@ -12,7 +12,7 @@ var GetDestinationV1Output = (function () {
         {
             name: 'destination',
             baseName: 'destination',
-            type: 'Destination',
+            type: 'DestinationV1',
         },
     ];
     return GetDestinationV1Output;

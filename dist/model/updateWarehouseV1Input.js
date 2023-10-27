@@ -22,7 +22,7 @@ var UpdateWarehouseV1Input = (function () {
         {
             name: 'settings',
             baseName: 'settings',
-            type: 'any',
+            type: '{ [key: string]: any; }',
         },
     ];
     return UpdateWarehouseV1Input;

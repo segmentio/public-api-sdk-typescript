@@ -1,6 +1,6 @@
-import { ReverseEtlModel1 } from './reverseEtlModel1';
+import { ReverseEtlModel } from './reverseEtlModel';
 export declare class GetReverseEtlModelOutput {
-    'reverseEtlModel': ReverseEtlModel1;
+    'reverseEtlModel': ReverseEtlModel;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

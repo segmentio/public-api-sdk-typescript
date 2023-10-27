@@ -3,7 +3,9 @@ export declare class CreateDestinationSubscriptionAlphaInput {
     'actionId': string;
     'trigger': string;
     'enabled': boolean;
-    'settings'?: any | null;
+    'settings'?: {
+        [key: string]: any;
+    };
     'modelId'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

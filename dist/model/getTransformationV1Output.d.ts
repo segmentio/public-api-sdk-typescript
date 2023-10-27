@@ -1,6 +1,6 @@
-import { Transformation3 } from './transformation3';
+import { TransformationV1 } from './transformationV1';
 export declare class GetTransformationV1Output {
-    'transformation': Transformation3;
+    'transformation': TransformationV1;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

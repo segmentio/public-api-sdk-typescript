@@ -17,7 +17,7 @@ var ListSyncsFromWarehouseV1Output = (function () {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'Pagination',
+            type: 'PaginationOutput',
         },
     ];
     return ListSyncsFromWarehouseV1Output;

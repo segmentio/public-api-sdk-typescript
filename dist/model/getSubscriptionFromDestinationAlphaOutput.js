@@ -12,7 +12,7 @@ var GetSubscriptionFromDestinationAlphaOutput = (function () {
         {
             name: 'subscription',
             baseName: 'subscription',
-            type: 'Subscription',
+            type: 'DestinationSubscription',
         },
     ];
     return GetSubscriptionFromDestinationAlphaOutput;

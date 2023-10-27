@@ -12,7 +12,7 @@ var CreateWarehouseV1Output = (function () {
         {
             name: 'warehouse',
             baseName: 'warehouse',
-            type: 'Warehouse1',
+            type: 'WarehouseV1',
         },
     ];
     return CreateWarehouseV1Output;

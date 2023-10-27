@@ -2,7 +2,9 @@ export declare class UpdateSourceAlphaInput {
     'name'?: string;
     'enabled'?: boolean;
     'slug'?: string;
-    'settings'?: any | null;
+    'settings'?: {
+        [key: string]: any;
+    };
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

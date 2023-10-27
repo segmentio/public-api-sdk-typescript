@@ -1,14 +1,16 @@
 import { LabelV1 } from './labelV1';
-import { Metadata2 } from './metadata2';
+import { SourceMetadataV1 } from './sourceMetadataV1';
 export declare class SourceAlpha {
     'id': string;
     'slug': string;
     'name'?: string;
-    'metadata': Metadata2;
+    'metadata': SourceMetadataV1;
     'workspaceId': string;
     'enabled': boolean;
     'writeKeys': Array<string>;
-    'settings'?: any | null;
+    'settings'?: {
+        [key: string]: any;
+    };
     'labels': Array<LabelV1>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

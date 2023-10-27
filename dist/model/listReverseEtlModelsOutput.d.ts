@@ -1,8 +1,8 @@
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 import { ReverseEtlModel } from './reverseEtlModel';
 export declare class ListReverseEtlModelsOutput {
     'models': Array<ReverseEtlModel>;
-    'pagination': Pagination;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
