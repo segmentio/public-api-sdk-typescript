@@ -25,11 +25,6 @@ var UpdateFunctionV1Input = (function () {
             type: 'string',
         },
         {
-            name: 'logoUrl',
-            baseName: 'logoUrl',
-            type: 'string',
-        },
-        {
             name: 'description',
             baseName: 'description',
             type: 'string',

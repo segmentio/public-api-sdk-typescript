@@ -25,11 +25,6 @@ var CreateFunctionV1Input = (function () {
             type: 'string',
         },
         {
-            name: 'logoUrl',
-            baseName: 'logoUrl',
-            type: 'string',
-        },
-        {
             name: 'resourceType',
             baseName: 'resourceType',
             type: 'CreateFunctionV1Input.ResourceTypeEnum',

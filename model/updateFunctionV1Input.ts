@@ -30,10 +30,6 @@ export class UpdateFunctionV1Input {
      */
     'displayName'?: string;
     /**
-     * A logo for this Function.
-     */
-    'logoUrl'?: string;
-    /**
      * A description for this Function.
      */
     'description'?: string;
@@ -58,11 +54,6 @@ export class UpdateFunctionV1Input {
         {
             name: 'displayName',
             baseName: 'displayName',
-            type: 'string',
-        },
-        {
-            name: 'logoUrl',
-            baseName: 'logoUrl',
             type: 'string',
         },
         {

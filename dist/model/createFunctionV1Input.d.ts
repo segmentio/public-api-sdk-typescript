@@ -3,7 +3,6 @@ export declare class CreateFunctionV1Input {
     'code': string;
     'settings'?: Array<FunctionSettingV1>;
     'displayName': string;
-    'logoUrl'?: string;
     'resourceType': CreateFunctionV1Input.ResourceTypeEnum;
     'description'?: string;
     static discriminator: string | undefined;

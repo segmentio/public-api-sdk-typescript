@@ -30,10 +30,6 @@ export class CreateFunctionV1Input {
      */
     'displayName': string;
     /**
-     * The URL of the logo for this Function.
-     */
-    'logoUrl'?: string;
-    /**
      * The Function type.  Config API note: equal to `type`.
      */
     'resourceType': CreateFunctionV1Input.ResourceTypeEnum;
@@ -62,11 +58,6 @@ export class CreateFunctionV1Input {
         {
             name: 'displayName',
             baseName: 'displayName',
-            type: 'string',
-        },
-        {
-            name: 'logoUrl',
-            baseName: 'logoUrl',
             type: 'string',
         },
         {
