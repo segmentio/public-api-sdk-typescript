@@ -12,7 +12,7 @@ var CreateEdgeFunctionsAlphaOutput = (function () {
         {
             name: 'edgeFunctions',
             baseName: 'edgeFunctions',
-            type: 'EdgeFunctions',
+            type: 'EdgeFunctionsAlpha',
         },
     ];
     return CreateEdgeFunctionsAlphaOutput;

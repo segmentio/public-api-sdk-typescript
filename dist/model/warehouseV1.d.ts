@@ -1,10 +1,12 @@
-import { Metadata1 } from './metadata1';
+import { WarehouseMetadataV1 } from './warehouseMetadataV1';
 export declare class WarehouseV1 {
     'id': string;
-    'metadata': Metadata1;
+    'metadata': WarehouseMetadataV1;
     'workspaceId': string;
     'enabled': boolean;
-    'settings': any | null;
+    'settings': {
+        [key: string]: any;
+    };
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

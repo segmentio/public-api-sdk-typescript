@@ -22,7 +22,7 @@ var ProfilesWarehouseAlpha = (function () {
         {
             name: 'metadata',
             baseName: 'metadata',
-            type: 'Metadata1',
+            type: 'WarehouseMetadataV1',
         },
         {
             name: 'workspaceId',
@@ -37,7 +37,7 @@ var ProfilesWarehouseAlpha = (function () {
         {
             name: 'settings',
             baseName: 'settings',
-            type: 'any',
+            type: '{ [key: string]: any; }',
         },
         {
             name: 'schemaName',

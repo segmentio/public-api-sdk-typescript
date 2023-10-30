@@ -12,7 +12,7 @@ var GetDestinationMetadataV1Output = (function () {
         {
             name: 'destinationMetadata',
             baseName: 'destinationMetadata',
-            type: 'DestinationMetadata',
+            type: 'DestinationMetadataV1',
         },
     ];
     return GetDestinationMetadataV1Output;

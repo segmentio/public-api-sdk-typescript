@@ -17,7 +17,7 @@ var UpdateSchemaSettingsInSourceV1Output = (function () {
         {
             name: 'settings',
             baseName: 'settings',
-            type: 'Settings1',
+            type: 'SourceSettingsOutputV1',
         },
     ];
     return UpdateSchemaSettingsInSourceV1Output;

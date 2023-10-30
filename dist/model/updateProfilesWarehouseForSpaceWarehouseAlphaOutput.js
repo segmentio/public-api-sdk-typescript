@@ -12,7 +12,7 @@ var UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput = (function () {
         {
             name: 'profilesWarehouse',
             baseName: 'profilesWarehouse',
-            type: 'ProfilesWarehouse1',
+            type: 'ProfilesWarehouseAlpha',
         },
     ];
     return UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput;

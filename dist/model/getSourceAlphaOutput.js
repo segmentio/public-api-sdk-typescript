@@ -12,7 +12,7 @@ var GetSourceAlphaOutput = (function () {
         {
             name: 'source',
             baseName: 'source',
-            type: 'Source1',
+            type: 'SourceAlpha',
         },
         {
             name: 'trackingPlanId',

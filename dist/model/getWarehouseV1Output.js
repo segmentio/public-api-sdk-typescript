@@ -12,7 +12,7 @@ var GetWarehouseV1Output = (function () {
         {
             name: 'warehouse',
             baseName: 'warehouse',
-            type: 'Warehouse',
+            type: 'WarehouseV1',
         },
     ];
     return GetWarehouseV1Output;

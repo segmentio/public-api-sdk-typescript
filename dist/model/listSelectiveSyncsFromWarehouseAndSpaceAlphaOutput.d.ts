@@ -1,9 +1,9 @@
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 import { SpaceWarehouseSelectiveSyncItemAlpha } from './spaceWarehouseSelectiveSyncItemAlpha';
 export declare class ListSelectiveSyncsFromWarehouseAndSpaceAlphaOutput {
     'items': Array<SpaceWarehouseSelectiveSyncItemAlpha>;
     'enableEventTables'?: boolean;
-    'pagination': Pagination;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

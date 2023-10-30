@@ -17,7 +17,7 @@ var ListSourcesFromTrackingPlanV1Output = (function () {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'Pagination',
+            type: 'PaginationOutput',
         },
     ];
     return ListSourcesFromTrackingPlanV1Output;

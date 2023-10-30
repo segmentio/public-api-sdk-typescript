@@ -12,7 +12,7 @@ var GetWorkspaceV1Output = (function () {
         {
             name: 'workspace',
             baseName: 'workspace',
-            type: 'Workspace',
+            type: 'WorkspaceV1',
         },
     ];
     return GetWorkspaceV1Output;

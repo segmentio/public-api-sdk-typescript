@@ -12,7 +12,7 @@ var GetReverseEtlModelOutput = (function () {
         {
             name: 'reverseEtlModel',
             baseName: 'reverseEtlModel',
-            type: 'ReverseEtlModel1',
+            type: 'ReverseEtlModel',
         },
     ];
     return GetReverseEtlModelOutput;

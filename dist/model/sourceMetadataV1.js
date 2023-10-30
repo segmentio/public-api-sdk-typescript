@@ -32,7 +32,7 @@ var SourceMetadataV1 = (function () {
         {
             name: 'logos',
             baseName: 'logos',
-            type: 'Logos1',
+            type: 'LogosBeta',
         },
         {
             name: 'options',

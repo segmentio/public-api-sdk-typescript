@@ -1,6 +1,6 @@
-import { Subscription } from './subscription';
+import { DestinationSubscription } from './destinationSubscription';
 export declare class GetSubscriptionFromDestinationAlphaOutput {
-    'subscription': Subscription;
+    'subscription': DestinationSubscription;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

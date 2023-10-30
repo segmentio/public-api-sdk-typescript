@@ -1,8 +1,8 @@
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 import { UserGroupV1 } from './userGroupV1';
 export declare class ListUserGroupsV1Output {
     'userGroups': Array<UserGroupV1>;
-    'pagination': Pagination;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

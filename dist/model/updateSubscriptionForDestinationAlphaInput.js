@@ -12,7 +12,7 @@ var UpdateSubscriptionForDestinationAlphaInput = (function () {
         {
             name: 'input',
             baseName: 'input',
-            type: 'Input',
+            type: 'DestinationSubscriptionUpdateInput',
         },
     ];
     return UpdateSubscriptionForDestinationAlphaInput;

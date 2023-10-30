@@ -17,7 +17,7 @@ var GetEventsVolumeFromWorkspaceV1Output = (function () {
         {
             name: 'query',
             baseName: 'query',
-            type: 'Query',
+            type: 'GetEventsVolumeFromWorkspaceV1Query',
         },
         {
             name: 'result',
@@ -27,7 +27,7 @@ var GetEventsVolumeFromWorkspaceV1Output = (function () {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'Pagination',
+            type: 'PaginationOutput',
         },
     ];
     return GetEventsVolumeFromWorkspaceV1Output;

@@ -17,7 +17,7 @@ var ListUsersV1Output = (function () {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'Pagination',
+            type: 'PaginationOutput',
         },
     ];
     return ListUsersV1Output;

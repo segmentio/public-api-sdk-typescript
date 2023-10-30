@@ -12,7 +12,7 @@ var CreateUserGroupV1Output = (function () {
         {
             name: 'userGroup',
             baseName: 'userGroup',
-            type: 'UserGroup',
+            type: 'UserGroupV1',
         },
     ];
     return CreateUserGroupV1Output;

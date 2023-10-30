@@ -17,7 +17,7 @@ var WarehouseV1 = (function () {
         {
             name: 'metadata',
             baseName: 'metadata',
-            type: 'Metadata1',
+            type: 'WarehouseMetadataV1',
         },
         {
             name: 'workspaceId',
@@ -32,7 +32,7 @@ var WarehouseV1 = (function () {
         {
             name: 'settings',
             baseName: 'settings',
-            type: 'any',
+            type: '{ [key: string]: any; }',
         },
     ];
     return WarehouseV1;

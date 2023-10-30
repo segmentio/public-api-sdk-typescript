@@ -4,7 +4,9 @@ export declare class CreateReverseEtlModelInput {
     'description': string;
     'enabled': boolean;
     'scheduleStrategy': CreateReverseEtlModelInput.ScheduleStrategyEnum;
-    'scheduleConfig': any | null;
+    'scheduleConfig': {
+        [key: string]: any;
+    };
     'query': string;
     'queryIdentifierColumn': string;
     static discriminator: string | undefined;

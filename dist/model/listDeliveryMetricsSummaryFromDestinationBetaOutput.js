@@ -12,7 +12,7 @@ var ListDeliveryMetricsSummaryFromDestinationBetaOutput = (function () {
         {
             name: 'deliveryMetricsSummary',
             baseName: 'deliveryMetricsSummary',
-            type: 'DeliveryMetricsSummary',
+            type: 'DeliveryMetricsSummaryBeta',
         },
     ];
     return ListDeliveryMetricsSummaryFromDestinationBetaOutput;

@@ -12,7 +12,7 @@ var GetLatestFromEdgeFunctionsAlphaOutput = (function () {
         {
             name: 'edgeFunctions',
             baseName: 'edgeFunctions',
-            type: 'EdgeFunctions1',
+            type: 'EdgeFunctionsAlpha',
         },
     ];
     return GetLatestFromEdgeFunctionsAlphaOutput;

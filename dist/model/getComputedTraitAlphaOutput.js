@@ -12,7 +12,7 @@ var GetComputedTraitAlphaOutput = (function () {
         {
             name: 'computedTrait',
             baseName: 'computedTrait',
-            type: 'ComputedTrait',
+            type: 'ComputedTraitSummary',
         },
     ];
     return GetComputedTraitAlphaOutput;

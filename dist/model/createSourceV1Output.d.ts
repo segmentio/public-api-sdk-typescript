@@ -1,6 +1,6 @@
-import { Source5 } from './source5';
+import { SourceV1 } from './sourceV1';
 export declare class CreateSourceV1Output {
-    'source': Source5;
+    'source': SourceV1;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

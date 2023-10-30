@@ -12,7 +12,7 @@ var CreateInsertFunctionInstanceAlphaOutput = (function () {
         {
             name: 'insertFunctionInstance',
             baseName: 'insertFunctionInstance',
-            type: 'InsertFunctionInstance',
+            type: 'InsertFunctionInstanceAlpha',
         },
     ];
     return CreateInsertFunctionInstanceAlphaOutput;

@@ -1,6 +1,6 @@
-import { Warehouse } from './warehouse';
+import { WarehouseV1 } from './warehouseV1';
 export declare class GetWarehouseV1Output {
-    'warehouse': Warehouse;
+    'warehouse': WarehouseV1;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

@@ -12,7 +12,7 @@ var RestoreFunctionVersionAlphaOutput = (function () {
         {
             name: 'version',
             baseName: 'version',
-            type: 'Version1',
+            type: 'Version',
         },
     ];
     return RestoreFunctionVersionAlphaOutput;

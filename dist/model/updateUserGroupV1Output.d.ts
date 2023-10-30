@@ -1,6 +1,6 @@
-import { UserGroup3 } from './userGroup3';
+import { UserGroupV1 } from './userGroupV1';
 export declare class UpdateUserGroupV1Output {
-    'userGroup': UserGroup3;
+    'userGroup': UserGroupV1;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

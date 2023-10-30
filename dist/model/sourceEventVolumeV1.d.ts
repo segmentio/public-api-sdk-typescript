@@ -1,7 +1,7 @@
-import { Source } from './source';
+import { EventSourceV1 } from './eventSourceV1';
 import { SourceEventVolumeDatapointV1 } from './sourceEventVolumeDatapointV1';
 export declare class SourceEventVolumeV1 {
-    'source'?: Source;
+    'source'?: EventSourceV1;
     'eventName'?: string;
     'eventType'?: string;
     'total': number;

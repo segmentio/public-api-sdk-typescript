@@ -1,11 +1,11 @@
-import { Pagination } from './pagination';
-import { Query } from './query';
+import { GetEventsVolumeFromWorkspaceV1Query } from './getEventsVolumeFromWorkspaceV1Query';
+import { PaginationOutput } from './paginationOutput';
 import { SourceEventVolumeV1 } from './sourceEventVolumeV1';
 export declare class GetEventsVolumeFromWorkspaceV1Output {
     'path': string;
-    'query': Query;
+    'query': GetEventsVolumeFromWorkspaceV1Query;
     'result': Array<SourceEventVolumeV1>;
-    'pagination'?: Pagination;
+    'pagination'?: PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

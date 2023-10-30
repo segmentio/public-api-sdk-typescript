@@ -17,7 +17,7 @@ var ListComputedTraitsAlphaOutput = (function () {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'Pagination',
+            type: 'PaginationOutput',
         },
     ];
     return ListComputedTraitsAlphaOutput;

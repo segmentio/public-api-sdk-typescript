@@ -179,18 +179,18 @@ exports[`Smoke tests sends correct request and parses response for create 2`] = 
 {
   "body": CreateSource200Response {
     "data": CreateSourceV1Output {
-      "source": Source5 {
+      "source": SourceV1 {
         "enabled": true,
         "id": "source-id",
         "labels": [],
-        "metadata": Metadata2 {
+        "metadata": SourceMetadataV1 {
           "categories": [
             "Website",
           ],
           "description": "This is our most flexible and powerful tracking system, using analytics.js.  Track and analyze information about your visitors and customers, and every action that they take, in any of our 140 integrations, business intelligence tools, or directly with SQL tools.",
           "id": "IqDTy1TpoU",
           "isCloudEventSource": false,
-          "logos": Logos1 {
+          "logos": LogosBeta {
             "alt": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
             "default": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
             "mark": "https://cdn.filepicker.io/api/file/kBpmEoSSaakidAvoFmzd",
@@ -458,7 +458,7 @@ exports[`Smoke tests sends correct request and parses response for list 2`] = `
 {
   "body": ListSources200Response {
     "data": ListSourcesV1Output {
-      "pagination": Pagination {
+      "pagination": PaginationOutput {
         "current": "MA==",
         "next": "MQ==",
         "previous": undefined,
@@ -469,14 +469,14 @@ exports[`Smoke tests sends correct request and parses response for list 2`] = `
           "enabled": true,
           "id": "source-id",
           "labels": [],
-          "metadata": Metadata2 {
+          "metadata": SourceMetadataV1 {
             "categories": [
               "Website",
             ],
             "description": "This is our most flexible and powerful tracking system, using analytics.js.  Track and analyze information about your visitors and customers, and every action that they take, in any of our 140 integrations, business intelligence tools, or directly with SQL tools.",
             "id": "IqDTy1TpoU",
             "isCloudEventSource": false,
-            "logos": Logos1 {
+            "logos": LogosBeta {
               "alt": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
               "default": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
               "mark": "https://cdn.filepicker.io/api/file/kBpmEoSSaakidAvoFmzd",
@@ -638,18 +638,18 @@ exports[`Smoke tests sends correct request and parses response for read 2`] = `
 {
   "body": GetSource200Response {
     "data": GetSourceV1Output {
-      "source": Source4 {
+      "source": SourceV1 {
         "enabled": true,
         "id": "source-id",
         "labels": [],
-        "metadata": Metadata2 {
+        "metadata": SourceMetadataV1 {
           "categories": [
             "Website",
           ],
           "description": "This is our most flexible and powerful tracking system, using analytics.js.  Track and analyze information about your visitors and customers, and every action that they take, in any of our 140 integrations, business intelligence tools, or directly with SQL tools.",
           "id": "IqDTy1TpoU",
           "isCloudEventSource": false,
-          "logos": Logos1 {
+          "logos": LogosBeta {
             "alt": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
             "default": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
             "mark": "https://cdn.filepicker.io/api/file/kBpmEoSSaakidAvoFmzd",
@@ -809,18 +809,18 @@ exports[`Smoke tests sends correct request and parses response for update 2`] = 
 {
   "body": UpdateSource200Response {
     "data": UpdateSourceV1Output {
-      "source": Source6 {
+      "source": SourceV1 {
         "enabled": false,
         "id": "source-id",
         "labels": [],
-        "metadata": Metadata2 {
+        "metadata": SourceMetadataV1 {
           "categories": [
             "Website",
           ],
           "description": "This is our most flexible and powerful tracking system, using analytics.js.  Track and analyze information about your visitors and customers, and every action that they take, in any of our 140 integrations, business intelligence tools, or directly with SQL tools.",
           "id": "IqDTy1TpoU",
           "isCloudEventSource": false,
-          "logos": Logos1 {
+          "logos": LogosBeta {
             "alt": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
             "default": "https://cdn.filepicker.io/api/file/aRgo4XJQZausZxD4gZQq",
             "mark": "https://cdn.filepicker.io/api/file/kBpmEoSSaakidAvoFmzd",

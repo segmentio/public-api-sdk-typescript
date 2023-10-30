@@ -12,7 +12,7 @@ var UpdateAudienceForSpaceAlphaOutput = (function () {
         {
             name: 'audience',
             baseName: 'audience',
-            type: 'Audience',
+            type: 'AudienceSummary',
         },
     ];
     return UpdateAudienceForSpaceAlphaOutput;

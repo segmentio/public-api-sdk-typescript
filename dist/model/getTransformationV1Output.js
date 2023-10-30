@@ -12,7 +12,7 @@ var GetTransformationV1Output = (function () {
         {
             name: 'transformation',
             baseName: 'transformation',
-            type: 'Transformation3',
+            type: 'TransformationV1',
         },
     ];
     return GetTransformationV1Output;

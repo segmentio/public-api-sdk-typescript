@@ -1,8 +1,8 @@
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 import { TrackingPlanV1 } from './trackingPlanV1';
 export declare class ListTrackingPlansV1Output {
     'trackingPlans': Array<TrackingPlanV1>;
-    'pagination': Pagination;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

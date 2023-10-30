@@ -5,7 +5,9 @@ export declare class DestinationSubscription {
     'actionSlug': string;
     'destinationId': string;
     'enabled': boolean;
-    'settings': any | null;
+    'settings': {
+        [key: string]: any;
+    };
     'trigger': string;
     'modelId'?: string;
     static discriminator: string | undefined;

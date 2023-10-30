@@ -17,7 +17,7 @@ var ListProfilesWarehouseInSpaceAlphaOutput = (function () {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'Pagination',
+            type: 'PaginationOutput',
         },
     ];
     return ListProfilesWarehouseInSpaceAlphaOutput;

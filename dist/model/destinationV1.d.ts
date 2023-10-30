@@ -1,9 +1,9 @@
-import { Metadata } from './metadata';
+import { DestinationMetadataV1 } from './destinationMetadataV1';
 export declare class DestinationV1 {
     'id': string;
     'name'?: string;
     'enabled': boolean;
-    'metadata': Metadata;
+    'metadata': DestinationMetadataV1;
     'sourceId': string;
     'settings': {
         [key: string]: any;

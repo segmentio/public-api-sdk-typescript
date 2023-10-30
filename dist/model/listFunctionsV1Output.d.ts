@@ -1,8 +1,8 @@
 import { ListFunctionItemV1 } from './listFunctionItemV1';
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 export declare class ListFunctionsV1Output {
     'functions': Array<ListFunctionItemV1>;
-    'pagination': Pagination;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

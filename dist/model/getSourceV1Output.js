@@ -12,7 +12,7 @@ var GetSourceV1Output = (function () {
         {
             name: 'source',
             baseName: 'source',
-            type: 'Source4',
+            type: 'SourceV1',
         },
     ];
     return GetSourceV1Output;

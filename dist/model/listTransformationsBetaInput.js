@@ -12,7 +12,7 @@ var ListTransformationsBetaInput = (function () {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'Pagination1',
+            type: 'PaginationInput',
         },
     ];
     return ListTransformationsBetaInput;

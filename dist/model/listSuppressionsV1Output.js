@@ -17,7 +17,7 @@ var ListSuppressionsV1Output = (function () {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'Pagination',
+            type: 'PaginationOutput',
         },
     ];
     return ListSuppressionsV1Output;

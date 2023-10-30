@@ -12,7 +12,7 @@ var GetUserGroupV1Output = (function () {
         {
             name: 'userGroup',
             baseName: 'userGroup',
-            type: 'UserGroup2',
+            type: 'UserGroupV1',
         },
     ];
     return GetUserGroupV1Output;

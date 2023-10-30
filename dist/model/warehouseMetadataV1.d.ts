@@ -1,11 +1,11 @@
 import { IntegrationOptionBeta } from './integrationOptionBeta';
-import { Logos2 } from './logos2';
+import { LogosBeta } from './logosBeta';
 export declare class WarehouseMetadataV1 {
     'id': string;
     'name': string;
     'slug': string;
     'description': string;
-    'logos': Logos2;
+    'logos': LogosBeta;
     'options': Array<IntegrationOptionBeta>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

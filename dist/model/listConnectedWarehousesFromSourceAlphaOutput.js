@@ -17,7 +17,7 @@ var ListConnectedWarehousesFromSourceAlphaOutput = (function () {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'Pagination',
+            type: 'PaginationOutput',
         },
     ];
     return ListConnectedWarehousesFromSourceAlphaOutput;

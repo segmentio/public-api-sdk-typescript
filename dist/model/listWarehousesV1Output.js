@@ -17,7 +17,7 @@ var ListWarehousesV1Output = (function () {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'Pagination',
+            type: 'PaginationOutput',
         },
     ];
     return ListWarehousesV1Output;

@@ -12,7 +12,7 @@ var AddUsersToUserGroupV1Output = (function () {
         {
             name: 'userGroup',
             baseName: 'userGroup',
-            type: 'UserGroup1',
+            type: 'UserGroupV1',
         },
     ];
     return AddUsersToUserGroupV1Output;

@@ -40,7 +40,6 @@ __exportStar(require("./addUsersToUserGroupV1Output"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Input"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Output"), exports);
 __exportStar(require("./allowedLabelBeta"), exports);
-__exportStar(require("./audience"), exports);
 __exportStar(require("./audienceSummary"), exports);
 __exportStar(require("./auditEventV1"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpace200Response"), exports);
@@ -48,7 +47,6 @@ __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput"), ex
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput"), exports);
 __exportStar(require("./breakdownBeta"), exports);
 __exportStar(require("./commonSourceSettingsV1"), exports);
-__exportStar(require("./computedTrait"), exports);
 __exportStar(require("./computedTraitSummary"), exports);
 __exportStar(require("./contact"), exports);
 __exportStar(require("./createCloudSourceRegulation200Response"), exports);
@@ -147,14 +145,9 @@ __exportStar(require("./deleteUsers200Response"), exports);
 __exportStar(require("./deleteUsersV1Output"), exports);
 __exportStar(require("./deleteWarehouse200Response"), exports);
 __exportStar(require("./deleteWarehouseV1Output"), exports);
-__exportStar(require("./deliveryMetricsSummary"), exports);
 __exportStar(require("./deliveryMetricsSummaryBeta"), exports);
-__exportStar(require("./destination"), exports);
-__exportStar(require("./destination1"), exports);
-__exportStar(require("./destination2"), exports);
 __exportStar(require("./destinationFilterActionV1"), exports);
 __exportStar(require("./destinationFilterV1"), exports);
-__exportStar(require("./destinationMetadata"), exports);
 __exportStar(require("./destinationMetadataActionFieldV1"), exports);
 __exportStar(require("./destinationMetadataActionV1"), exports);
 __exportStar(require("./destinationMetadataComponentV1"), exports);
@@ -173,18 +166,10 @@ __exportStar(require("./echo200Response"), exports);
 __exportStar(require("./echo200Response1"), exports);
 __exportStar(require("./echoAlphaOutput"), exports);
 __exportStar(require("./echoV1Output"), exports);
-__exportStar(require("./edgeFunctions"), exports);
-__exportStar(require("./edgeFunctions1"), exports);
 __exportStar(require("./edgeFunctionsAlpha"), exports);
 __exportStar(require("./eventSourceV1"), exports);
 __exportStar(require("./fQLDefinedPropertyV1"), exports);
-__exportStar(require("./filter"), exports);
-__exportStar(require("./filter1"), exports);
-__exportStar(require("./filter2"), exports);
-__exportStar(require("./filter3"), exports);
 __exportStar(require("./function"), exports);
-__exportStar(require("./function1"), exports);
-__exportStar(require("./function2"), exports);
 __exportStar(require("./functionDeployment"), exports);
 __exportStar(require("./functionSettingV1"), exports);
 __exportStar(require("./functionV1"), exports);
@@ -260,23 +245,16 @@ __exportStar(require("./getWarehousesCatalog200Response"), exports);
 __exportStar(require("./getWarehousesCatalogV1Output"), exports);
 __exportStar(require("./getWorkspace200Response"), exports);
 __exportStar(require("./getWorkspaceV1Output"), exports);
-__exportStar(require("./group"), exports);
 __exportStar(require("./groupSourceSettingsV1"), exports);
 __exportStar(require("./groupSubscriptionStatus"), exports);
 __exportStar(require("./groupSubscriptionStatusResponse"), exports);
 __exportStar(require("./handleWebhookInput"), exports);
 __exportStar(require("./handleWebhookOutput"), exports);
-__exportStar(require("./identify"), exports);
 __exportStar(require("./identifySourceSettingsV1"), exports);
-__exportStar(require("./input"), exports);
-__exportStar(require("./insertFunctionInstance"), exports);
-__exportStar(require("./insertFunctionInstance1"), exports);
 __exportStar(require("./insertFunctionInstanceAlpha"), exports);
 __exportStar(require("./integrationOptionBeta"), exports);
 __exportStar(require("./invitePermissionV1"), exports);
 __exportStar(require("./inviteV1"), exports);
-__exportStar(require("./label"), exports);
-__exportStar(require("./label1"), exports);
 __exportStar(require("./labelAlpha"), exports);
 __exportStar(require("./labelV1"), exports);
 __exportStar(require("./listAudiences200Response"), exports);
@@ -364,22 +342,14 @@ __exportStar(require("./listWarehouses200Response"), exports);
 __exportStar(require("./listWarehousesV1Output"), exports);
 __exportStar(require("./listWorkspaceRegulations200Response"), exports);
 __exportStar(require("./listWorkspaceRegulationsV1Output"), exports);
-__exportStar(require("./logos"), exports);
-__exportStar(require("./logos1"), exports);
-__exportStar(require("./logos2"), exports);
 __exportStar(require("./logosBeta"), exports);
 __exportStar(require("./messageSubscriptionResponse"), exports);
 __exportStar(require("./messageSubscriptionResponseError"), exports);
 __exportStar(require("./messagesSubscriptionRequest"), exports);
-__exportStar(require("./metadata"), exports);
-__exportStar(require("./metadata1"), exports);
-__exportStar(require("./metadata2"), exports);
 __exportStar(require("./metricBeta"), exports);
 __exportStar(require("./minimalUserGroupV1"), exports);
 __exportStar(require("./minimalUserV1"), exports);
 __exportStar(require("./mtuSnapshotV1"), exports);
-__exportStar(require("./pagination"), exports);
-__exportStar(require("./pagination1"), exports);
 __exportStar(require("./paginationInput"), exports);
 __exportStar(require("./paginationOutput"), exports);
 __exportStar(require("./permissionInputV1"), exports);
@@ -389,14 +359,11 @@ __exportStar(require("./previewDestinationFilter200Response"), exports);
 __exportStar(require("./previewDestinationFilterV1"), exports);
 __exportStar(require("./previewDestinationFilterV1Input"), exports);
 __exportStar(require("./previewDestinationFilterV1Output"), exports);
-__exportStar(require("./profilesWarehouse"), exports);
-__exportStar(require("./profilesWarehouse1"), exports);
 __exportStar(require("./profilesWarehouseAlpha"), exports);
 __exportStar(require("./propertyRenameBeta"), exports);
 __exportStar(require("./propertyRenameV1"), exports);
 __exportStar(require("./propertyValueTransformationBeta"), exports);
 __exportStar(require("./propertyValueTransformationV1"), exports);
-__exportStar(require("./query"), exports);
 __exportStar(require("./regulation"), exports);
 __exportStar(require("./regulationListEntryV1"), exports);
 __exportStar(require("./removeAudienceFromSpace200Response"), exports);
@@ -449,27 +416,13 @@ __exportStar(require("./restoreFunctionVersion200Response"), exports);
 __exportStar(require("./restoreFunctionVersionAlphaInput"), exports);
 __exportStar(require("./restoreFunctionVersionAlphaOutput"), exports);
 __exportStar(require("./reverseEtlModel"), exports);
-__exportStar(require("./reverseEtlModel1"), exports);
 __exportStar(require("./roleV1"), exports);
 __exportStar(require("./ruleInputV1"), exports);
 __exportStar(require("./ruleV1"), exports);
-__exportStar(require("./schedule"), exports);
-__exportStar(require("./schedule1"), exports);
-__exportStar(require("./schedule2"), exports);
-__exportStar(require("./settings"), exports);
-__exportStar(require("./settings1"), exports);
-__exportStar(require("./source"), exports);
-__exportStar(require("./source1"), exports);
-__exportStar(require("./source2"), exports);
-__exportStar(require("./source3"), exports);
-__exportStar(require("./source4"), exports);
-__exportStar(require("./source5"), exports);
-__exportStar(require("./source6"), exports);
 __exportStar(require("./sourceAPICallSnapshotV1"), exports);
 __exportStar(require("./sourceAlpha"), exports);
 __exportStar(require("./sourceEventVolumeDatapointV1"), exports);
 __exportStar(require("./sourceEventVolumeV1"), exports);
-__exportStar(require("./sourceMetadata"), exports);
 __exportStar(require("./sourceMetadataV1"), exports);
 __exportStar(require("./sourceSettingsOutputV1"), exports);
 __exportStar(require("./sourceV1"), exports);
@@ -477,24 +430,11 @@ __exportStar(require("./space"), exports);
 __exportStar(require("./spaceWarehouseSchemaOverride"), exports);
 __exportStar(require("./spaceWarehouseSelectiveSyncItemAlpha"), exports);
 __exportStar(require("./streamStatusV1"), exports);
-__exportStar(require("./subscription"), exports);
-__exportStar(require("./supportedFeatures"), exports);
-__exportStar(require("./supportedMethods"), exports);
-__exportStar(require("./supportedPlatforms"), exports);
 __exportStar(require("./suppressedInner"), exports);
 __exportStar(require("./syncNoticeV1"), exports);
 __exportStar(require("./syncV1"), exports);
-__exportStar(require("./track"), exports);
 __exportStar(require("./trackSourceSettingsV1"), exports);
-__exportStar(require("./trackingPlan"), exports);
-__exportStar(require("./trackingPlan1"), exports);
 __exportStar(require("./trackingPlanV1"), exports);
-__exportStar(require("./transformation"), exports);
-__exportStar(require("./transformation1"), exports);
-__exportStar(require("./transformation2"), exports);
-__exportStar(require("./transformation3"), exports);
-__exportStar(require("./transformation4"), exports);
-__exportStar(require("./transformation5"), exports);
 __exportStar(require("./transformationBeta"), exports);
 __exportStar(require("./transformationV1"), exports);
 __exportStar(require("./updateAudienceForSpace200Response"), exports);
@@ -558,26 +498,15 @@ __exportStar(require("./updateWarehouse200Response"), exports);
 __exportStar(require("./updateWarehouseV1Input"), exports);
 __exportStar(require("./updateWarehouseV1Output"), exports);
 __exportStar(require("./upsertRuleV1"), exports);
-__exportStar(require("./user"), exports);
-__exportStar(require("./userGroup"), exports);
-__exportStar(require("./userGroup1"), exports);
-__exportStar(require("./userGroup2"), exports);
-__exportStar(require("./userGroup3"), exports);
 __exportStar(require("./userGroupV1"), exports);
 __exportStar(require("./userV1"), exports);
 __exportStar(require("./usersPerSourceSnapshotV1"), exports);
 __exportStar(require("./version"), exports);
-__exportStar(require("./version1"), exports);
-__exportStar(require("./warehouse"), exports);
-__exportStar(require("./warehouse1"), exports);
-__exportStar(require("./warehouse2"), exports);
 __exportStar(require("./warehouseAdvancedSyncV1"), exports);
-__exportStar(require("./warehouseMetadata"), exports);
 __exportStar(require("./warehouseMetadataV1"), exports);
 __exportStar(require("./warehouseSelectiveSyncItemV1"), exports);
 __exportStar(require("./warehouseSyncOverrideV1"), exports);
 __exportStar(require("./warehouseV1"), exports);
-__exportStar(require("./workspace"), exports);
 __exportStar(require("./workspaceV1"), exports);
 var aPICallSnapshotV1_1 = require("./aPICallSnapshotV1");
 var accessPermissionV1_1 = require("./accessPermissionV1");
@@ -604,7 +533,6 @@ var addUsersToUserGroupV1Output_1 = require("./addUsersToUserGroupV1Output");
 var advancedWarehouseSyncScheduleV1Input_1 = require("./advancedWarehouseSyncScheduleV1Input");
 var advancedWarehouseSyncScheduleV1Output_1 = require("./advancedWarehouseSyncScheduleV1Output");
 var allowedLabelBeta_1 = require("./allowedLabelBeta");
-var audience_1 = require("./audience");
 var audienceSummary_1 = require("./audienceSummary");
 var auditEventV1_1 = require("./auditEventV1");
 var batchQueryMessagingSubscriptionsForSpace200Response_1 = require("./batchQueryMessagingSubscriptionsForSpace200Response");
@@ -612,7 +540,6 @@ var batchQueryMessagingSubscriptionsForSpaceAlphaInput_1 = require("./batchQuery
 var batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput");
 var breakdownBeta_1 = require("./breakdownBeta");
 var commonSourceSettingsV1_1 = require("./commonSourceSettingsV1");
-var computedTrait_1 = require("./computedTrait");
 var computedTraitSummary_1 = require("./computedTraitSummary");
 var contact_1 = require("./contact");
 var createCloudSourceRegulation200Response_1 = require("./createCloudSourceRegulation200Response");
@@ -711,14 +638,9 @@ var deleteUsers200Response_1 = require("./deleteUsers200Response");
 var deleteUsersV1Output_1 = require("./deleteUsersV1Output");
 var deleteWarehouse200Response_1 = require("./deleteWarehouse200Response");
 var deleteWarehouseV1Output_1 = require("./deleteWarehouseV1Output");
-var deliveryMetricsSummary_1 = require("./deliveryMetricsSummary");
 var deliveryMetricsSummaryBeta_1 = require("./deliveryMetricsSummaryBeta");
-var destination_1 = require("./destination");
-var destination1_1 = require("./destination1");
-var destination2_1 = require("./destination2");
 var destinationFilterActionV1_1 = require("./destinationFilterActionV1");
 var destinationFilterV1_1 = require("./destinationFilterV1");
-var destinationMetadata_1 = require("./destinationMetadata");
 var destinationMetadataActionFieldV1_1 = require("./destinationMetadataActionFieldV1");
 var destinationMetadataActionV1_1 = require("./destinationMetadataActionV1");
 var destinationMetadataComponentV1_1 = require("./destinationMetadataComponentV1");
@@ -737,18 +659,10 @@ var echo200Response_1 = require("./echo200Response");
 var echo200Response1_1 = require("./echo200Response1");
 var echoAlphaOutput_1 = require("./echoAlphaOutput");
 var echoV1Output_1 = require("./echoV1Output");
-var edgeFunctions_1 = require("./edgeFunctions");
-var edgeFunctions1_1 = require("./edgeFunctions1");
 var edgeFunctionsAlpha_1 = require("./edgeFunctionsAlpha");
 var eventSourceV1_1 = require("./eventSourceV1");
 var fQLDefinedPropertyV1_1 = require("./fQLDefinedPropertyV1");
-var filter_1 = require("./filter");
-var filter1_1 = require("./filter1");
-var filter2_1 = require("./filter2");
-var filter3_1 = require("./filter3");
 var function_1 = require("./function");
-var function1_1 = require("./function1");
-var function2_1 = require("./function2");
 var functionDeployment_1 = require("./functionDeployment");
 var functionSettingV1_1 = require("./functionSettingV1");
 var functionV1_1 = require("./functionV1");
@@ -824,23 +738,16 @@ var getWarehousesCatalog200Response_1 = require("./getWarehousesCatalog200Respon
 var getWarehousesCatalogV1Output_1 = require("./getWarehousesCatalogV1Output");
 var getWorkspace200Response_1 = require("./getWorkspace200Response");
 var getWorkspaceV1Output_1 = require("./getWorkspaceV1Output");
-var group_1 = require("./group");
 var groupSourceSettingsV1_1 = require("./groupSourceSettingsV1");
 var groupSubscriptionStatus_1 = require("./groupSubscriptionStatus");
 var groupSubscriptionStatusResponse_1 = require("./groupSubscriptionStatusResponse");
 var handleWebhookInput_1 = require("./handleWebhookInput");
 var handleWebhookOutput_1 = require("./handleWebhookOutput");
-var identify_1 = require("./identify");
 var identifySourceSettingsV1_1 = require("./identifySourceSettingsV1");
-var input_1 = require("./input");
-var insertFunctionInstance_1 = require("./insertFunctionInstance");
-var insertFunctionInstance1_1 = require("./insertFunctionInstance1");
 var insertFunctionInstanceAlpha_1 = require("./insertFunctionInstanceAlpha");
 var integrationOptionBeta_1 = require("./integrationOptionBeta");
 var invitePermissionV1_1 = require("./invitePermissionV1");
 var inviteV1_1 = require("./inviteV1");
-var label_1 = require("./label");
-var label1_1 = require("./label1");
 var labelAlpha_1 = require("./labelAlpha");
 var labelV1_1 = require("./labelV1");
 var listAudiences200Response_1 = require("./listAudiences200Response");
@@ -928,22 +835,14 @@ var listWarehouses200Response_1 = require("./listWarehouses200Response");
 var listWarehousesV1Output_1 = require("./listWarehousesV1Output");
 var listWorkspaceRegulations200Response_1 = require("./listWorkspaceRegulations200Response");
 var listWorkspaceRegulationsV1Output_1 = require("./listWorkspaceRegulationsV1Output");
-var logos_1 = require("./logos");
-var logos1_1 = require("./logos1");
-var logos2_1 = require("./logos2");
 var logosBeta_1 = require("./logosBeta");
 var messageSubscriptionResponse_1 = require("./messageSubscriptionResponse");
 var messageSubscriptionResponseError_1 = require("./messageSubscriptionResponseError");
 var messagesSubscriptionRequest_1 = require("./messagesSubscriptionRequest");
-var metadata_1 = require("./metadata");
-var metadata1_1 = require("./metadata1");
-var metadata2_1 = require("./metadata2");
 var metricBeta_1 = require("./metricBeta");
 var minimalUserGroupV1_1 = require("./minimalUserGroupV1");
 var minimalUserV1_1 = require("./minimalUserV1");
 var mtuSnapshotV1_1 = require("./mtuSnapshotV1");
-var pagination_1 = require("./pagination");
-var pagination1_1 = require("./pagination1");
 var paginationInput_1 = require("./paginationInput");
 var paginationOutput_1 = require("./paginationOutput");
 var permissionInputV1_1 = require("./permissionInputV1");
@@ -953,14 +852,11 @@ var previewDestinationFilter200Response_1 = require("./previewDestinationFilter2
 var previewDestinationFilterV1_1 = require("./previewDestinationFilterV1");
 var previewDestinationFilterV1Input_1 = require("./previewDestinationFilterV1Input");
 var previewDestinationFilterV1Output_1 = require("./previewDestinationFilterV1Output");
-var profilesWarehouse_1 = require("./profilesWarehouse");
-var profilesWarehouse1_1 = require("./profilesWarehouse1");
 var profilesWarehouseAlpha_1 = require("./profilesWarehouseAlpha");
 var propertyRenameBeta_1 = require("./propertyRenameBeta");
 var propertyRenameV1_1 = require("./propertyRenameV1");
 var propertyValueTransformationBeta_1 = require("./propertyValueTransformationBeta");
 var propertyValueTransformationV1_1 = require("./propertyValueTransformationV1");
-var query_1 = require("./query");
 var regulation_1 = require("./regulation");
 var regulationListEntryV1_1 = require("./regulationListEntryV1");
 var removeAudienceFromSpace200Response_1 = require("./removeAudienceFromSpace200Response");
@@ -1013,27 +909,13 @@ var restoreFunctionVersion200Response_1 = require("./restoreFunctionVersion200Re
 var restoreFunctionVersionAlphaInput_1 = require("./restoreFunctionVersionAlphaInput");
 var restoreFunctionVersionAlphaOutput_1 = require("./restoreFunctionVersionAlphaOutput");
 var reverseEtlModel_1 = require("./reverseEtlModel");
-var reverseEtlModel1_1 = require("./reverseEtlModel1");
 var roleV1_1 = require("./roleV1");
 var ruleInputV1_1 = require("./ruleInputV1");
 var ruleV1_1 = require("./ruleV1");
-var schedule_1 = require("./schedule");
-var schedule1_1 = require("./schedule1");
-var schedule2_1 = require("./schedule2");
-var settings_1 = require("./settings");
-var settings1_1 = require("./settings1");
-var source_1 = require("./source");
-var source1_1 = require("./source1");
-var source2_1 = require("./source2");
-var source3_1 = require("./source3");
-var source4_1 = require("./source4");
-var source5_1 = require("./source5");
-var source6_1 = require("./source6");
 var sourceAPICallSnapshotV1_1 = require("./sourceAPICallSnapshotV1");
 var sourceAlpha_1 = require("./sourceAlpha");
 var sourceEventVolumeDatapointV1_1 = require("./sourceEventVolumeDatapointV1");
 var sourceEventVolumeV1_1 = require("./sourceEventVolumeV1");
-var sourceMetadata_1 = require("./sourceMetadata");
 var sourceMetadataV1_1 = require("./sourceMetadataV1");
 var sourceSettingsOutputV1_1 = require("./sourceSettingsOutputV1");
 var sourceV1_1 = require("./sourceV1");
@@ -1041,24 +923,11 @@ var space_1 = require("./space");
 var spaceWarehouseSchemaOverride_1 = require("./spaceWarehouseSchemaOverride");
 var spaceWarehouseSelectiveSyncItemAlpha_1 = require("./spaceWarehouseSelectiveSyncItemAlpha");
 var streamStatusV1_1 = require("./streamStatusV1");
-var subscription_1 = require("./subscription");
-var supportedFeatures_1 = require("./supportedFeatures");
-var supportedMethods_1 = require("./supportedMethods");
-var supportedPlatforms_1 = require("./supportedPlatforms");
 var suppressedInner_1 = require("./suppressedInner");
 var syncNoticeV1_1 = require("./syncNoticeV1");
 var syncV1_1 = require("./syncV1");
-var track_1 = require("./track");
 var trackSourceSettingsV1_1 = require("./trackSourceSettingsV1");
-var trackingPlan_1 = require("./trackingPlan");
-var trackingPlan1_1 = require("./trackingPlan1");
 var trackingPlanV1_1 = require("./trackingPlanV1");
-var transformation_1 = require("./transformation");
-var transformation1_1 = require("./transformation1");
-var transformation2_1 = require("./transformation2");
-var transformation3_1 = require("./transformation3");
-var transformation4_1 = require("./transformation4");
-var transformation5_1 = require("./transformation5");
 var transformationBeta_1 = require("./transformationBeta");
 var transformationV1_1 = require("./transformationV1");
 var updateAudienceForSpace200Response_1 = require("./updateAudienceForSpace200Response");
@@ -1122,26 +991,15 @@ var updateWarehouse200Response_1 = require("./updateWarehouse200Response");
 var updateWarehouseV1Input_1 = require("./updateWarehouseV1Input");
 var updateWarehouseV1Output_1 = require("./updateWarehouseV1Output");
 var upsertRuleV1_1 = require("./upsertRuleV1");
-var user_1 = require("./user");
-var userGroup_1 = require("./userGroup");
-var userGroup1_1 = require("./userGroup1");
-var userGroup2_1 = require("./userGroup2");
-var userGroup3_1 = require("./userGroup3");
 var userGroupV1_1 = require("./userGroupV1");
 var userV1_1 = require("./userV1");
 var usersPerSourceSnapshotV1_1 = require("./usersPerSourceSnapshotV1");
 var version_1 = require("./version");
-var version1_1 = require("./version1");
-var warehouse_1 = require("./warehouse");
-var warehouse1_1 = require("./warehouse1");
-var warehouse2_1 = require("./warehouse2");
 var warehouseAdvancedSyncV1_1 = require("./warehouseAdvancedSyncV1");
-var warehouseMetadata_1 = require("./warehouseMetadata");
 var warehouseMetadataV1_1 = require("./warehouseMetadataV1");
 var warehouseSelectiveSyncItemV1_1 = require("./warehouseSelectiveSyncItemV1");
 var warehouseSyncOverrideV1_1 = require("./warehouseSyncOverrideV1");
 var warehouseV1_1 = require("./warehouseV1");
-var workspace_1 = require("./workspace");
 var workspaceV1_1 = require("./workspaceV1");
 var primitives = [
     'string',
@@ -1183,7 +1041,6 @@ var enumsMap = {
     'DeleteUsersV1Output.StatusEnum': deleteUsersV1Output_1.DeleteUsersV1Output.StatusEnum,
     'DeleteWarehouseV1Output.StatusEnum': deleteWarehouseV1Output_1.DeleteWarehouseV1Output.StatusEnum,
     'DestinationFilterActionV1.TypeEnum': destinationFilterActionV1_1.DestinationFilterActionV1.TypeEnum,
-    'DestinationMetadata.StatusEnum': destinationMetadata_1.DestinationMetadata.StatusEnum,
     'DestinationMetadataActionFieldV1.TypeEnum': destinationMetadataActionFieldV1_1.DestinationMetadataActionFieldV1.TypeEnum,
     'DestinationMetadataActionV1.PlatformEnum': destinationMetadataActionV1_1.DestinationMetadataActionV1.PlatformEnum,
     'DestinationMetadataComponentV1.TypeEnum': destinationMetadataComponentV1_1.DestinationMetadataComponentV1.TypeEnum,
@@ -1195,8 +1052,6 @@ var enumsMap = {
     'EchoAlphaOutput.MethodEnum': echoAlphaOutput_1.EchoAlphaOutput.MethodEnum,
     'EchoV1Output.MethodEnum': echoV1Output_1.EchoV1Output.MethodEnum,
     'Function.ResourceTypeEnum': function_1.Function.ResourceTypeEnum,
-    'Function1.ResourceTypeEnum': function1_1.Function1.ResourceTypeEnum,
-    'Function2.ResourceTypeEnum': function2_1.Function2.ResourceTypeEnum,
     'FunctionDeployment.StatusEnum': functionDeployment_1.FunctionDeployment.StatusEnum,
     'FunctionSettingV1.TypeEnum': functionSettingV1_1.FunctionSettingV1.TypeEnum,
     'FunctionV1.ResourceTypeEnum': functionV1_1.FunctionV1.ResourceTypeEnum,
@@ -1205,20 +1060,16 @@ var enumsMap = {
     'GetMessagingSubscriptionSuccessResponse.TypeEnum': getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse.TypeEnum,
     'GetMessagingSubscriptionSuccessResponse.StatusEnum': getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse.StatusEnum,
     'GetSubscriptionRequest.TypeEnum': getSubscriptionRequest_1.GetSubscriptionRequest.TypeEnum,
-    'Group.CommonEventOnViolationsEnum': group_1.Group.CommonEventOnViolationsEnum,
     'GroupSourceSettingsV1.CommonEventOnViolationsEnum': groupSourceSettingsV1_1.GroupSourceSettingsV1.CommonEventOnViolationsEnum,
     'GroupSubscriptionStatus.StatusEnum': groupSubscriptionStatus_1.GroupSubscriptionStatus.StatusEnum,
     'GroupSubscriptionStatusResponse.StatusEnum': groupSubscriptionStatusResponse_1.GroupSubscriptionStatusResponse.StatusEnum,
-    'Identify.CommonEventOnViolationsEnum': identify_1.Identify.CommonEventOnViolationsEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum': identifySourceSettingsV1_1.IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
     'ListFunctionItemV1.ResourceTypeEnum': listFunctionItemV1_1.ListFunctionItemV1.ResourceTypeEnum,
     'MessageSubscriptionResponse.TypeEnum': messageSubscriptionResponse_1.MessageSubscriptionResponse.TypeEnum,
     'MessageSubscriptionResponse.StatusEnum': messageSubscriptionResponse_1.MessageSubscriptionResponse.StatusEnum,
     'MessagesSubscriptionRequest.TypeEnum': messagesSubscriptionRequest_1.MessagesSubscriptionRequest.TypeEnum,
     'MessagesSubscriptionRequest.StatusEnum': messagesSubscriptionRequest_1.MessagesSubscriptionRequest.StatusEnum,
-    'Metadata.StatusEnum': metadata_1.Metadata.StatusEnum,
     'PermissionResourceV1.TypeEnum': permissionResourceV1_1.PermissionResourceV1.TypeEnum,
-    'Query.GranularityEnum': query_1.Query.GranularityEnum,
     'Regulation.OverallStatusEnum': regulation_1.Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': regulationListEntryV1_1.RegulationListEntryV1.StatusEnum,
     'RemoveAudienceFromSpaceAlphaOutput.StatusEnum': removeAudienceFromSpaceAlphaOutput_1.RemoveAudienceFromSpaceAlphaOutput.StatusEnum,
@@ -1235,12 +1086,7 @@ var enumsMap = {
     'ResourceV1.TypeEnum': resourceV1_1.ResourceV1.TypeEnum,
     'RuleInputV1.TypeEnum': ruleInputV1_1.RuleInputV1.TypeEnum,
     'RuleV1.TypeEnum': ruleV1_1.RuleV1.TypeEnum,
-    'SupportedFeatures.CloudModeInstancesEnum': supportedFeatures_1.SupportedFeatures.CloudModeInstancesEnum,
-    'SupportedFeatures.DeviceModeInstancesEnum': supportedFeatures_1.SupportedFeatures.DeviceModeInstancesEnum,
-    'Track.CommonEventOnViolationsEnum': track_1.Track.CommonEventOnViolationsEnum,
     'TrackSourceSettingsV1.CommonEventOnViolationsEnum': trackSourceSettingsV1_1.TrackSourceSettingsV1.CommonEventOnViolationsEnum,
-    'TrackingPlan.TypeEnum': trackingPlan_1.TrackingPlan.TypeEnum,
-    'TrackingPlan1.TypeEnum': trackingPlan1_1.TrackingPlan1.TypeEnum,
     'TrackingPlanV1.TypeEnum': trackingPlanV1_1.TrackingPlanV1.TypeEnum,
     'UpdateGroupSubscriptionStatusResponse.StatusEnum': updateGroupSubscriptionStatusResponse_1.UpdateGroupSubscriptionStatusResponse.StatusEnum,
     'UpdateReverseEtlModelInput.ScheduleStrategyEnum': updateReverseEtlModelInput_1.UpdateReverseEtlModelInput.ScheduleStrategyEnum,
@@ -1276,7 +1122,6 @@ var typeMap = {
     AdvancedWarehouseSyncScheduleV1Input: advancedWarehouseSyncScheduleV1Input_1.AdvancedWarehouseSyncScheduleV1Input,
     AdvancedWarehouseSyncScheduleV1Output: advancedWarehouseSyncScheduleV1Output_1.AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: allowedLabelBeta_1.AllowedLabelBeta,
-    Audience: audience_1.Audience,
     AudienceSummary: audienceSummary_1.AudienceSummary,
     AuditEventV1: auditEventV1_1.AuditEventV1,
     BatchQueryMessagingSubscriptionsForSpace200Response: batchQueryMessagingSubscriptionsForSpace200Response_1.BatchQueryMessagingSubscriptionsForSpace200Response,
@@ -1284,7 +1129,6 @@ var typeMap = {
     BatchQueryMessagingSubscriptionsForSpaceAlphaOutput: batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
     BreakdownBeta: breakdownBeta_1.BreakdownBeta,
     CommonSourceSettingsV1: commonSourceSettingsV1_1.CommonSourceSettingsV1,
-    ComputedTrait: computedTrait_1.ComputedTrait,
     ComputedTraitSummary: computedTraitSummary_1.ComputedTraitSummary,
     Contact: contact_1.Contact,
     CreateCloudSourceRegulation200Response: createCloudSourceRegulation200Response_1.CreateCloudSourceRegulation200Response,
@@ -1383,14 +1227,9 @@ var typeMap = {
     DeleteUsersV1Output: deleteUsersV1Output_1.DeleteUsersV1Output,
     DeleteWarehouse200Response: deleteWarehouse200Response_1.DeleteWarehouse200Response,
     DeleteWarehouseV1Output: deleteWarehouseV1Output_1.DeleteWarehouseV1Output,
-    DeliveryMetricsSummary: deliveryMetricsSummary_1.DeliveryMetricsSummary,
     DeliveryMetricsSummaryBeta: deliveryMetricsSummaryBeta_1.DeliveryMetricsSummaryBeta,
-    Destination: destination_1.Destination,
-    Destination1: destination1_1.Destination1,
-    Destination2: destination2_1.Destination2,
     DestinationFilterActionV1: destinationFilterActionV1_1.DestinationFilterActionV1,
     DestinationFilterV1: destinationFilterV1_1.DestinationFilterV1,
-    DestinationMetadata: destinationMetadata_1.DestinationMetadata,
     DestinationMetadataActionFieldV1: destinationMetadataActionFieldV1_1.DestinationMetadataActionFieldV1,
     DestinationMetadataActionV1: destinationMetadataActionV1_1.DestinationMetadataActionV1,
     DestinationMetadataComponentV1: destinationMetadataComponentV1_1.DestinationMetadataComponentV1,
@@ -1409,18 +1248,10 @@ var typeMap = {
     Echo200Response1: echo200Response1_1.Echo200Response1,
     EchoAlphaOutput: echoAlphaOutput_1.EchoAlphaOutput,
     EchoV1Output: echoV1Output_1.EchoV1Output,
-    EdgeFunctions: edgeFunctions_1.EdgeFunctions,
-    EdgeFunctions1: edgeFunctions1_1.EdgeFunctions1,
     EdgeFunctionsAlpha: edgeFunctionsAlpha_1.EdgeFunctionsAlpha,
     EventSourceV1: eventSourceV1_1.EventSourceV1,
     FQLDefinedPropertyV1: fQLDefinedPropertyV1_1.FQLDefinedPropertyV1,
-    Filter: filter_1.Filter,
-    Filter1: filter1_1.Filter1,
-    Filter2: filter2_1.Filter2,
-    Filter3: filter3_1.Filter3,
     Function: function_1.Function,
-    Function1: function1_1.Function1,
-    Function2: function2_1.Function2,
     FunctionDeployment: functionDeployment_1.FunctionDeployment,
     FunctionSettingV1: functionSettingV1_1.FunctionSettingV1,
     FunctionV1: functionV1_1.FunctionV1,
@@ -1496,23 +1327,16 @@ var typeMap = {
     GetWarehousesCatalogV1Output: getWarehousesCatalogV1Output_1.GetWarehousesCatalogV1Output,
     GetWorkspace200Response: getWorkspace200Response_1.GetWorkspace200Response,
     GetWorkspaceV1Output: getWorkspaceV1Output_1.GetWorkspaceV1Output,
-    Group: group_1.Group,
     GroupSourceSettingsV1: groupSourceSettingsV1_1.GroupSourceSettingsV1,
     GroupSubscriptionStatus: groupSubscriptionStatus_1.GroupSubscriptionStatus,
     GroupSubscriptionStatusResponse: groupSubscriptionStatusResponse_1.GroupSubscriptionStatusResponse,
     HandleWebhookInput: handleWebhookInput_1.HandleWebhookInput,
     HandleWebhookOutput: handleWebhookOutput_1.HandleWebhookOutput,
-    Identify: identify_1.Identify,
     IdentifySourceSettingsV1: identifySourceSettingsV1_1.IdentifySourceSettingsV1,
-    Input: input_1.Input,
-    InsertFunctionInstance: insertFunctionInstance_1.InsertFunctionInstance,
-    InsertFunctionInstance1: insertFunctionInstance1_1.InsertFunctionInstance1,
     InsertFunctionInstanceAlpha: insertFunctionInstanceAlpha_1.InsertFunctionInstanceAlpha,
     IntegrationOptionBeta: integrationOptionBeta_1.IntegrationOptionBeta,
     InvitePermissionV1: invitePermissionV1_1.InvitePermissionV1,
     InviteV1: inviteV1_1.InviteV1,
-    Label: label_1.Label,
-    Label1: label1_1.Label1,
     LabelAlpha: labelAlpha_1.LabelAlpha,
     LabelV1: labelV1_1.LabelV1,
     ListAudiences200Response: listAudiences200Response_1.ListAudiences200Response,
@@ -1600,22 +1424,14 @@ var typeMap = {
     ListWarehousesV1Output: listWarehousesV1Output_1.ListWarehousesV1Output,
     ListWorkspaceRegulations200Response: listWorkspaceRegulations200Response_1.ListWorkspaceRegulations200Response,
     ListWorkspaceRegulationsV1Output: listWorkspaceRegulationsV1Output_1.ListWorkspaceRegulationsV1Output,
-    Logos: logos_1.Logos,
-    Logos1: logos1_1.Logos1,
-    Logos2: logos2_1.Logos2,
     LogosBeta: logosBeta_1.LogosBeta,
     MessageSubscriptionResponse: messageSubscriptionResponse_1.MessageSubscriptionResponse,
     MessageSubscriptionResponseError: messageSubscriptionResponseError_1.MessageSubscriptionResponseError,
     MessagesSubscriptionRequest: messagesSubscriptionRequest_1.MessagesSubscriptionRequest,
-    Metadata: metadata_1.Metadata,
-    Metadata1: metadata1_1.Metadata1,
-    Metadata2: metadata2_1.Metadata2,
     MetricBeta: metricBeta_1.MetricBeta,
     MinimalUserGroupV1: minimalUserGroupV1_1.MinimalUserGroupV1,
     MinimalUserV1: minimalUserV1_1.MinimalUserV1,
     MtuSnapshotV1: mtuSnapshotV1_1.MtuSnapshotV1,
-    Pagination: pagination_1.Pagination,
-    Pagination1: pagination1_1.Pagination1,
     PaginationInput: paginationInput_1.PaginationInput,
     PaginationOutput: paginationOutput_1.PaginationOutput,
     PermissionInputV1: permissionInputV1_1.PermissionInputV1,
@@ -1625,14 +1441,11 @@ var typeMap = {
     PreviewDestinationFilterV1: previewDestinationFilterV1_1.PreviewDestinationFilterV1,
     PreviewDestinationFilterV1Input: previewDestinationFilterV1Input_1.PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: previewDestinationFilterV1Output_1.PreviewDestinationFilterV1Output,
-    ProfilesWarehouse: profilesWarehouse_1.ProfilesWarehouse,
-    ProfilesWarehouse1: profilesWarehouse1_1.ProfilesWarehouse1,
     ProfilesWarehouseAlpha: profilesWarehouseAlpha_1.ProfilesWarehouseAlpha,
     PropertyRenameBeta: propertyRenameBeta_1.PropertyRenameBeta,
     PropertyRenameV1: propertyRenameV1_1.PropertyRenameV1,
     PropertyValueTransformationBeta: propertyValueTransformationBeta_1.PropertyValueTransformationBeta,
     PropertyValueTransformationV1: propertyValueTransformationV1_1.PropertyValueTransformationV1,
-    Query: query_1.Query,
     Regulation: regulation_1.Regulation,
     RegulationListEntryV1: regulationListEntryV1_1.RegulationListEntryV1,
     RemoveAudienceFromSpace200Response: removeAudienceFromSpace200Response_1.RemoveAudienceFromSpace200Response,
@@ -1685,27 +1498,13 @@ var typeMap = {
     RestoreFunctionVersionAlphaInput: restoreFunctionVersionAlphaInput_1.RestoreFunctionVersionAlphaInput,
     RestoreFunctionVersionAlphaOutput: restoreFunctionVersionAlphaOutput_1.RestoreFunctionVersionAlphaOutput,
     ReverseEtlModel: reverseEtlModel_1.ReverseEtlModel,
-    ReverseEtlModel1: reverseEtlModel1_1.ReverseEtlModel1,
     RoleV1: roleV1_1.RoleV1,
     RuleInputV1: ruleInputV1_1.RuleInputV1,
     RuleV1: ruleV1_1.RuleV1,
-    Schedule: schedule_1.Schedule,
-    Schedule1: schedule1_1.Schedule1,
-    Schedule2: schedule2_1.Schedule2,
-    Settings: settings_1.Settings,
-    Settings1: settings1_1.Settings1,
-    Source: source_1.Source,
-    Source1: source1_1.Source1,
-    Source2: source2_1.Source2,
-    Source3: source3_1.Source3,
-    Source4: source4_1.Source4,
-    Source5: source5_1.Source5,
-    Source6: source6_1.Source6,
     SourceAPICallSnapshotV1: sourceAPICallSnapshotV1_1.SourceAPICallSnapshotV1,
     SourceAlpha: sourceAlpha_1.SourceAlpha,
     SourceEventVolumeDatapointV1: sourceEventVolumeDatapointV1_1.SourceEventVolumeDatapointV1,
     SourceEventVolumeV1: sourceEventVolumeV1_1.SourceEventVolumeV1,
-    SourceMetadata: sourceMetadata_1.SourceMetadata,
     SourceMetadataV1: sourceMetadataV1_1.SourceMetadataV1,
     SourceSettingsOutputV1: sourceSettingsOutputV1_1.SourceSettingsOutputV1,
     SourceV1: sourceV1_1.SourceV1,
@@ -1713,24 +1512,11 @@ var typeMap = {
     SpaceWarehouseSchemaOverride: spaceWarehouseSchemaOverride_1.SpaceWarehouseSchemaOverride,
     SpaceWarehouseSelectiveSyncItemAlpha: spaceWarehouseSelectiveSyncItemAlpha_1.SpaceWarehouseSelectiveSyncItemAlpha,
     StreamStatusV1: streamStatusV1_1.StreamStatusV1,
-    Subscription: subscription_1.Subscription,
-    SupportedFeatures: supportedFeatures_1.SupportedFeatures,
-    SupportedMethods: supportedMethods_1.SupportedMethods,
-    SupportedPlatforms: supportedPlatforms_1.SupportedPlatforms,
     SuppressedInner: suppressedInner_1.SuppressedInner,
     SyncNoticeV1: syncNoticeV1_1.SyncNoticeV1,
     SyncV1: syncV1_1.SyncV1,
-    Track: track_1.Track,
     TrackSourceSettingsV1: trackSourceSettingsV1_1.TrackSourceSettingsV1,
-    TrackingPlan: trackingPlan_1.TrackingPlan,
-    TrackingPlan1: trackingPlan1_1.TrackingPlan1,
     TrackingPlanV1: trackingPlanV1_1.TrackingPlanV1,
-    Transformation: transformation_1.Transformation,
-    Transformation1: transformation1_1.Transformation1,
-    Transformation2: transformation2_1.Transformation2,
-    Transformation3: transformation3_1.Transformation3,
-    Transformation4: transformation4_1.Transformation4,
-    Transformation5: transformation5_1.Transformation5,
     TransformationBeta: transformationBeta_1.TransformationBeta,
     TransformationV1: transformationV1_1.TransformationV1,
     UpdateAudienceForSpace200Response: updateAudienceForSpace200Response_1.UpdateAudienceForSpace200Response,
@@ -1794,26 +1580,15 @@ var typeMap = {
     UpdateWarehouseV1Input: updateWarehouseV1Input_1.UpdateWarehouseV1Input,
     UpdateWarehouseV1Output: updateWarehouseV1Output_1.UpdateWarehouseV1Output,
     UpsertRuleV1: upsertRuleV1_1.UpsertRuleV1,
-    User: user_1.User,
-    UserGroup: userGroup_1.UserGroup,
-    UserGroup1: userGroup1_1.UserGroup1,
-    UserGroup2: userGroup2_1.UserGroup2,
-    UserGroup3: userGroup3_1.UserGroup3,
     UserGroupV1: userGroupV1_1.UserGroupV1,
     UserV1: userV1_1.UserV1,
     UsersPerSourceSnapshotV1: usersPerSourceSnapshotV1_1.UsersPerSourceSnapshotV1,
     Version: version_1.Version,
-    Version1: version1_1.Version1,
-    Warehouse: warehouse_1.Warehouse,
-    Warehouse1: warehouse1_1.Warehouse1,
-    Warehouse2: warehouse2_1.Warehouse2,
     WarehouseAdvancedSyncV1: warehouseAdvancedSyncV1_1.WarehouseAdvancedSyncV1,
-    WarehouseMetadata: warehouseMetadata_1.WarehouseMetadata,
     WarehouseMetadataV1: warehouseMetadataV1_1.WarehouseMetadataV1,
     WarehouseSelectiveSyncItemV1: warehouseSelectiveSyncItemV1_1.WarehouseSelectiveSyncItemV1,
     WarehouseSyncOverrideV1: warehouseSyncOverrideV1_1.WarehouseSyncOverrideV1,
     WarehouseV1: warehouseV1_1.WarehouseV1,
-    Workspace: workspace_1.Workspace,
     WorkspaceV1: workspaceV1_1.WorkspaceV1,
 };
 var ObjectSerializer = (function () {

@@ -1,8 +1,8 @@
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 import { ProfilesWarehouseAlpha } from './profilesWarehouseAlpha';
 export declare class ListProfilesWarehouseInSpaceAlphaOutput {
     'profilesWarehouses': Array<ProfilesWarehouseAlpha>;
-    'pagination'?: Pagination;
+    'pagination'?: PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

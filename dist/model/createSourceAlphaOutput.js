@@ -12,7 +12,7 @@ var CreateSourceAlphaOutput = (function () {
         {
             name: 'source',
             baseName: 'source',
-            type: 'Source2',
+            type: 'SourceAlpha',
         },
     ];
     return CreateSourceAlphaOutput;

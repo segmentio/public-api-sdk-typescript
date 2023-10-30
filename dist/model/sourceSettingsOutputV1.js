@@ -12,17 +12,17 @@ var SourceSettingsOutputV1 = (function () {
         {
             name: 'track',
             baseName: 'track',
-            type: 'Track',
+            type: 'TrackSourceSettingsV1',
         },
         {
             name: 'identify',
             baseName: 'identify',
-            type: 'Identify',
+            type: 'IdentifySourceSettingsV1',
         },
         {
             name: 'group',
             baseName: 'group',
-            type: 'Group',
+            type: 'GroupSourceSettingsV1',
         },
         {
             name: 'forwardingViolationsTo',

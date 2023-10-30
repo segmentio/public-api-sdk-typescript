@@ -17,7 +17,7 @@ var ReplaceAdvancedSyncScheduleForWarehouseV1Output = (function () {
         {
             name: 'schedule',
             baseName: 'schedule',
-            type: 'Schedule2',
+            type: 'AdvancedWarehouseSyncScheduleV1Output',
         },
     ];
     return ReplaceAdvancedSyncScheduleForWarehouseV1Output;
