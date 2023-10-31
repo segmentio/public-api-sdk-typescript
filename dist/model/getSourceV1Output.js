@@ -14,6 +14,11 @@ var GetSourceV1Output = (function () {
             baseName: 'source',
             type: 'SourceV1',
         },
+        {
+            name: 'trackingPlanId',
+            baseName: 'trackingPlanId',
+            type: 'string',
+        },
     ];
     return GetSourceV1Output;
 }());

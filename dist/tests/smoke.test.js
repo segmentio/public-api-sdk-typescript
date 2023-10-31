@@ -157,6 +157,7 @@ describe('Smoke tests', function () {
                                 settings: {},
                                 labels: [],
                             },
+                            trackingPlanId: null,
                         },
                     })];
                 case 1:
