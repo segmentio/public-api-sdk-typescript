@@ -114,6 +114,7 @@ describe('Smoke tests', () => {
                     settings: {},
                     labels: [],
                 },
+                trackingPlanId: null,
             },
         });
 
