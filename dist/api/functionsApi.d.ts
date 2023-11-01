@@ -9,6 +9,7 @@ import { DeleteFunction200Response } from '../model/deleteFunction200Response';
 import { DeleteInsertFunctionInstance200Response } from '../model/deleteInsertFunctionInstance200Response';
 import { GetFunction200Response } from '../model/getFunction200Response';
 import { GetFunctionVersion200Response } from '../model/getFunctionVersion200Response';
+import { GetInsertFunctionInstance200Response } from '../model/getInsertFunctionInstance200Response';
 import { ListFunctionVersions200Response } from '../model/listFunctionVersions200Response';
 import { ListFunctions200Response } from '../model/listFunctions200Response';
 import { ListInsertFunctionInstances200Response } from '../model/listInsertFunctionInstances200Response';
@@ -97,6 +98,14 @@ export declare class FunctionsApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: GetFunctionVersion200Response;
+    }>;
+    getInsertFunctionInstance(instanceId: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: GetInsertFunctionInstance200Response;
     }>;
     listFunctionVersions(functionId: string, pagination: PaginationInput, options?: {
         headers: {

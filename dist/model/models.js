@@ -206,6 +206,8 @@ __exportStar(require("./getFunction200Response"), exports);
 __exportStar(require("./getFunctionV1Output"), exports);
 __exportStar(require("./getFunctionVersion200Response"), exports);
 __exportStar(require("./getFunctionVersionAlphaOutput"), exports);
+__exportStar(require("./getInsertFunctionInstance200Response"), exports);
+__exportStar(require("./getInsertFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./getLatestFromEdgeFunctions200Response"), exports);
 __exportStar(require("./getLatestFromEdgeFunctionsAlphaOutput"), exports);
 __exportStar(require("./getMessagingSubscriptionFailureResponse"), exports);
@@ -699,6 +701,8 @@ var getFunction200Response_1 = require("./getFunction200Response");
 var getFunctionV1Output_1 = require("./getFunctionV1Output");
 var getFunctionVersion200Response_1 = require("./getFunctionVersion200Response");
 var getFunctionVersionAlphaOutput_1 = require("./getFunctionVersionAlphaOutput");
+var getInsertFunctionInstance200Response_1 = require("./getInsertFunctionInstance200Response");
+var getInsertFunctionInstanceAlphaOutput_1 = require("./getInsertFunctionInstanceAlphaOutput");
 var getLatestFromEdgeFunctions200Response_1 = require("./getLatestFromEdgeFunctions200Response");
 var getLatestFromEdgeFunctionsAlphaOutput_1 = require("./getLatestFromEdgeFunctionsAlphaOutput");
 var getMessagingSubscriptionFailureResponse_1 = require("./getMessagingSubscriptionFailureResponse");
@@ -1288,6 +1292,8 @@ var typeMap = {
     GetFunctionV1Output: getFunctionV1Output_1.GetFunctionV1Output,
     GetFunctionVersion200Response: getFunctionVersion200Response_1.GetFunctionVersion200Response,
     GetFunctionVersionAlphaOutput: getFunctionVersionAlphaOutput_1.GetFunctionVersionAlphaOutput,
+    GetInsertFunctionInstance200Response: getInsertFunctionInstance200Response_1.GetInsertFunctionInstance200Response,
+    GetInsertFunctionInstanceAlphaOutput: getInsertFunctionInstanceAlphaOutput_1.GetInsertFunctionInstanceAlphaOutput,
     GetLatestFromEdgeFunctions200Response: getLatestFromEdgeFunctions200Response_1.GetLatestFromEdgeFunctions200Response,
     GetLatestFromEdgeFunctionsAlphaOutput: getLatestFromEdgeFunctionsAlphaOutput_1.GetLatestFromEdgeFunctionsAlphaOutput,
     GetMessagingSubscriptionFailureResponse: getMessagingSubscriptionFailureResponse_1.GetMessagingSubscriptionFailureResponse,

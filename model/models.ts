@@ -191,6 +191,8 @@ export * from './getFunction200Response';
 export * from './getFunctionV1Output';
 export * from './getFunctionVersion200Response';
 export * from './getFunctionVersionAlphaOutput';
+export * from './getInsertFunctionInstance200Response';
+export * from './getInsertFunctionInstanceAlphaOutput';
 export * from './getLatestFromEdgeFunctions200Response';
 export * from './getLatestFromEdgeFunctionsAlphaOutput';
 export * from './getMessagingSubscriptionFailureResponse';
@@ -697,6 +699,8 @@ import { GetFunction200Response } from './getFunction200Response';
 import { GetFunctionV1Output } from './getFunctionV1Output';
 import { GetFunctionVersion200Response } from './getFunctionVersion200Response';
 import { GetFunctionVersionAlphaOutput } from './getFunctionVersionAlphaOutput';
+import { GetInsertFunctionInstance200Response } from './getInsertFunctionInstance200Response';
+import { GetInsertFunctionInstanceAlphaOutput } from './getInsertFunctionInstanceAlphaOutput';
 import { GetLatestFromEdgeFunctions200Response } from './getLatestFromEdgeFunctions200Response';
 import { GetLatestFromEdgeFunctionsAlphaOutput } from './getLatestFromEdgeFunctionsAlphaOutput';
 import { GetMessagingSubscriptionFailureResponse } from './getMessagingSubscriptionFailureResponse';
@@ -1370,6 +1374,8 @@ let typeMap: { [index: string]: any } = {
     GetFunctionV1Output: GetFunctionV1Output,
     GetFunctionVersion200Response: GetFunctionVersion200Response,
     GetFunctionVersionAlphaOutput: GetFunctionVersionAlphaOutput,
+    GetInsertFunctionInstance200Response: GetInsertFunctionInstance200Response,
+    GetInsertFunctionInstanceAlphaOutput: GetInsertFunctionInstanceAlphaOutput,
     GetLatestFromEdgeFunctions200Response:
         GetLatestFromEdgeFunctions200Response,
     GetLatestFromEdgeFunctionsAlphaOutput:

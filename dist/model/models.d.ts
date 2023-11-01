@@ -192,6 +192,8 @@ export * from './getFunction200Response';
 export * from './getFunctionV1Output';
 export * from './getFunctionVersion200Response';
 export * from './getFunctionVersionAlphaOutput';
+export * from './getInsertFunctionInstance200Response';
+export * from './getInsertFunctionInstanceAlphaOutput';
 export * from './getLatestFromEdgeFunctions200Response';
 export * from './getLatestFromEdgeFunctionsAlphaOutput';
 export * from './getMessagingSubscriptionFailureResponse';
