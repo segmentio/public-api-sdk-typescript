@@ -1,8 +1,8 @@
 import { DestinationMetadataV1 } from './destinationMetadataV1';
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 export declare class GetDestinationsCatalogV1Output {
     'destinationsCatalog': Array<DestinationMetadataV1>;
-    'pagination': Pagination;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

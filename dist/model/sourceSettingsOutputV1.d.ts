@@ -1,10 +1,10 @@
-import { Group } from './group';
-import { Identify } from './identify';
-import { Track } from './track';
+import { GroupSourceSettingsV1 } from './groupSourceSettingsV1';
+import { IdentifySourceSettingsV1 } from './identifySourceSettingsV1';
+import { TrackSourceSettingsV1 } from './trackSourceSettingsV1';
 export declare class SourceSettingsOutputV1 {
-    'track'?: Track;
-    'identify'?: Identify;
-    'group'?: Group;
+    'track'?: TrackSourceSettingsV1;
+    'identify'?: IdentifySourceSettingsV1;
+    'group'?: GroupSourceSettingsV1;
     'forwardingViolationsTo'?: string;
     'forwardingBlockedEventsTo'?: string;
     static discriminator: string | undefined;

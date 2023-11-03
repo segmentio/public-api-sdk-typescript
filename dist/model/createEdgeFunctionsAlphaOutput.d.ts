@@ -1,6 +1,6 @@
-import { EdgeFunctions } from './edgeFunctions';
+import { EdgeFunctionsAlpha } from './edgeFunctionsAlpha';
 export declare class CreateEdgeFunctionsAlphaOutput {
-    'edgeFunctions': EdgeFunctions;
+    'edgeFunctions': EdgeFunctionsAlpha;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

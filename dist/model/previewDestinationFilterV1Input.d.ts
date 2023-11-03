@@ -1,6 +1,6 @@
-import { Filter } from './filter';
+import { PreviewDestinationFilterV1 } from './previewDestinationFilterV1';
 export declare class PreviewDestinationFilterV1Input {
-    'filter': Filter;
+    'filter': PreviewDestinationFilterV1;
     'payload': {
         [key: string]: any;
     };

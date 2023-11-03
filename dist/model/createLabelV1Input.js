@@ -12,7 +12,7 @@ var CreateLabelV1Input = (function () {
         {
             name: 'label',
             baseName: 'label',
-            type: 'Label',
+            type: 'LabelV1',
         },
     ];
     return CreateLabelV1Input;

@@ -1,8 +1,8 @@
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 import { WarehouseSelectiveSyncItemV1 } from './warehouseSelectiveSyncItemV1';
 export declare class ListSelectiveSyncsFromWarehouseAndSourceV1Output {
     'items': Array<WarehouseSelectiveSyncItemV1>;
-    'pagination': Pagination;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

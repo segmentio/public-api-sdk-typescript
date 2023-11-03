@@ -12,7 +12,7 @@ var GetTransformationBetaOutput = (function () {
         {
             name: 'transformation',
             baseName: 'transformation',
-            type: 'Transformation',
+            type: 'TransformationBeta',
         },
     ];
     return GetTransformationBetaOutput;

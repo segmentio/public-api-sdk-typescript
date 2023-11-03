@@ -12,7 +12,7 @@ var CreateSourceV1Output = (function () {
         {
             name: 'source',
             baseName: 'source',
-            type: 'Source5',
+            type: 'SourceV1',
         },
     ];
     return CreateSourceV1Output;

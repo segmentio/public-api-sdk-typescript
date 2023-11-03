@@ -12,7 +12,7 @@ var GetFilterInDestinationV1Output = (function () {
         {
             name: 'filter',
             baseName: 'filter',
-            type: 'Filter1',
+            type: 'DestinationFilterV1',
         },
     ];
     return GetFilterInDestinationV1Output;

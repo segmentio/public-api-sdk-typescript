@@ -32,7 +32,7 @@ var CreateSourceAlphaInput = (function () {
         {
             name: 'settings',
             baseName: 'settings',
-            type: 'any',
+            type: '{ [key: string]: any; }',
         },
     ];
     return CreateSourceAlphaInput;

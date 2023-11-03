@@ -12,7 +12,7 @@ var UpdateUserGroupV1Output = (function () {
         {
             name: 'userGroup',
             baseName: 'userGroup',
-            type: 'UserGroup3',
+            type: 'UserGroupV1',
         },
     ];
     return UpdateUserGroupV1Output;

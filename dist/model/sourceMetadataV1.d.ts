@@ -1,11 +1,11 @@
 import { IntegrationOptionBeta } from './integrationOptionBeta';
-import { Logos1 } from './logos1';
+import { LogosBeta } from './logosBeta';
 export declare class SourceMetadataV1 {
     'id': string;
     'name': string;
     'slug': string;
     'description': string;
-    'logos': Logos1;
+    'logos': LogosBeta;
     'options': Array<IntegrationOptionBeta>;
     'categories': Array<string>;
     'isCloudEventSource': boolean;

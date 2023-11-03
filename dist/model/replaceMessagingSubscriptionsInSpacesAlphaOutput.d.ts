@@ -1,9 +1,9 @@
 import { MessageSubscriptionResponse } from './messageSubscriptionResponse';
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 export declare class ReplaceMessagingSubscriptionsInSpacesAlphaOutput {
     'successes': Array<MessageSubscriptionResponse>;
     'failures': Array<MessageSubscriptionResponse>;
-    'pagination'?: Pagination;
+    'pagination'?: PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

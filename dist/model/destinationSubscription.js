@@ -42,7 +42,7 @@ var DestinationSubscription = (function () {
         {
             name: 'settings',
             baseName: 'settings',
-            type: 'any',
+            type: '{ [key: string]: any; }',
         },
         {
             name: 'trigger',

@@ -12,7 +12,7 @@ var CreateFilterForDestinationV1Output = (function () {
         {
             name: 'filter',
             baseName: 'filter',
-            type: 'Filter2',
+            type: 'DestinationFilterV1',
         },
     ];
     return CreateFilterForDestinationV1Output;

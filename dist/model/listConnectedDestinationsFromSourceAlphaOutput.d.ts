@@ -1,8 +1,8 @@
 import { DestinationV1 } from './destinationV1';
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 export declare class ListConnectedDestinationsFromSourceAlphaOutput {
     'destinations': Array<DestinationV1>;
-    'pagination': Pagination;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

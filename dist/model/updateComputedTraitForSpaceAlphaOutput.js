@@ -12,7 +12,7 @@ var UpdateComputedTraitForSpaceAlphaOutput = (function () {
         {
             name: 'computedTrait',
             baseName: 'computedTrait',
-            type: 'ComputedTrait',
+            type: 'ComputedTraitSummary',
         },
     ];
     return UpdateComputedTraitForSpaceAlphaOutput;

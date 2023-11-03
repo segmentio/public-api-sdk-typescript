@@ -2,7 +2,9 @@ export declare class CreateProfilesWarehouseAlphaInput {
     'metadataId': string;
     'name'?: string;
     'enabled'?: boolean;
-    'settings': any | null;
+    'settings': {
+        [key: string]: any;
+    };
     'schemaName'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

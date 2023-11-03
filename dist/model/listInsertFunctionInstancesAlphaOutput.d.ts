@@ -1,8 +1,8 @@
 import { InsertFunctionInstanceAlpha } from './insertFunctionInstanceAlpha';
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 export declare class ListInsertFunctionInstancesAlphaOutput {
     'instances': Array<InsertFunctionInstanceAlpha>;
-    'pagination': Pagination;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

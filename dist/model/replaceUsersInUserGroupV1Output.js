@@ -12,7 +12,7 @@ var ReplaceUsersInUserGroupV1Output = (function () {
         {
             name: 'userGroup',
             baseName: 'userGroup',
-            type: 'UserGroup1',
+            type: 'UserGroupV1',
         },
     ];
     return ReplaceUsersInUserGroupV1Output;

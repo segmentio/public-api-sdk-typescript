@@ -1,6 +1,6 @@
-import { DeliveryMetricsSummary } from './deliveryMetricsSummary';
+import { DeliveryMetricsSummaryBeta } from './deliveryMetricsSummaryBeta';
 export declare class ListDeliveryMetricsSummaryFromDestinationBetaOutput {
-    'deliveryMetricsSummary': DeliveryMetricsSummary;
+    'deliveryMetricsSummary': DeliveryMetricsSummaryBeta;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

@@ -27,7 +27,7 @@ var CreateProfilesWarehouseAlphaInput = (function () {
         {
             name: 'settings',
             baseName: 'settings',
-            type: 'any',
+            type: '{ [key: string]: any; }',
         },
         {
             name: 'schemaName',

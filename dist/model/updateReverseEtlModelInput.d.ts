@@ -3,7 +3,9 @@ export declare class UpdateReverseEtlModelInput {
     'description'?: string;
     'enabled'?: boolean;
     'scheduleStrategy'?: UpdateReverseEtlModelInput.ScheduleStrategyEnum;
-    'scheduleConfig'?: any | null;
+    'scheduleConfig'?: {
+        [key: string]: any;
+    };
     'query'?: string;
     'queryIdentifierColumn'?: string;
     static discriminator: string | undefined;

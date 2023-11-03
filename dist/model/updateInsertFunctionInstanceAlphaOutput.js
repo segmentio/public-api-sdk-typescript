@@ -12,7 +12,7 @@ var UpdateInsertFunctionInstanceAlphaOutput = (function () {
         {
             name: 'insertFunctionInstance',
             baseName: 'insertFunctionInstance',
-            type: 'InsertFunctionInstance1',
+            type: 'InsertFunctionInstanceAlpha',
         },
     ];
     return UpdateInsertFunctionInstanceAlphaOutput;

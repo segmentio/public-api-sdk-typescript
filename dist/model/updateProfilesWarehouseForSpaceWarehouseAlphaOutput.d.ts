@@ -1,6 +1,6 @@
-import { ProfilesWarehouse1 } from './profilesWarehouse1';
+import { ProfilesWarehouseAlpha } from './profilesWarehouseAlpha';
 export declare class UpdateProfilesWarehouseForSpaceWarehouseAlphaOutput {
-    'profilesWarehouse': ProfilesWarehouse1;
+    'profilesWarehouse': ProfilesWarehouseAlpha;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

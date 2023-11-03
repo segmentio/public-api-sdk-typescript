@@ -1,6 +1,6 @@
-import { Source1 } from './source1';
+import { SourceAlpha } from './sourceAlpha';
 export declare class GetSourceAlphaOutput {
-    'source': Source1;
+    'source': SourceAlpha;
     'trackingPlanId': string | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

@@ -1,6 +1,6 @@
-import { Warehouse2 } from './warehouse2';
+import { WarehouseV1 } from './warehouseV1';
 export declare class UpdateWarehouseV1Output {
-    'warehouse': Warehouse2;
+    'warehouse': WarehouseV1;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

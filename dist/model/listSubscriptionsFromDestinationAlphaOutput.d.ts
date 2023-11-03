@@ -1,8 +1,8 @@
 import { DestinationSubscription } from './destinationSubscription';
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 export declare class ListSubscriptionsFromDestinationAlphaOutput {
     'subscriptions': Array<DestinationSubscription>;
-    'pagination'?: Pagination;
+    'pagination'?: PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

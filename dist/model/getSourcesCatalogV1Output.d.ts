@@ -1,8 +1,8 @@
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 import { SourceMetadataV1 } from './sourceMetadataV1';
 export declare class GetSourcesCatalogV1Output {
     'sourcesCatalog': Array<SourceMetadataV1>;
-    'pagination': Pagination;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

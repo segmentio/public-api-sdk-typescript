@@ -1,6 +1,6 @@
-import { TrackingPlan1 } from './trackingPlan1';
+import { TrackingPlanV1 } from './trackingPlanV1';
 export declare class CreateTrackingPlanV1Output {
-    'trackingPlan': TrackingPlan1;
+    'trackingPlan': TrackingPlanV1;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

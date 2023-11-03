@@ -12,7 +12,7 @@ var SourceEventVolumeV1 = (function () {
         {
             name: 'source',
             baseName: 'source',
-            type: 'Source',
+            type: 'EventSourceV1',
         },
         {
             name: 'eventName',

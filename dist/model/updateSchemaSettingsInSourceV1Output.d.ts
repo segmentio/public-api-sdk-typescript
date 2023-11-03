@@ -1,7 +1,7 @@
-import { Settings1 } from './settings1';
+import { SourceSettingsOutputV1 } from './sourceSettingsOutputV1';
 export declare class UpdateSchemaSettingsInSourceV1Output {
     'sourceId': string;
-    'settings': Settings1;
+    'settings': SourceSettingsOutputV1;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

@@ -27,7 +27,7 @@ var DestinationSubscriptionUpdateInput = (function () {
         {
             name: 'settings',
             baseName: 'settings',
-            type: 'any',
+            type: '{ [key: string]: any; }',
         },
     ];
     return DestinationSubscriptionUpdateInput;

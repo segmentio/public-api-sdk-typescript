@@ -1,6 +1,6 @@
-import { ProfilesWarehouse } from './profilesWarehouse';
+import { ProfilesWarehouseAlpha } from './profilesWarehouseAlpha';
 export declare class CreateProfilesWarehouseAlphaOutput {
-    'profilesWarehouse': ProfilesWarehouse;
+    'profilesWarehouse': ProfilesWarehouseAlpha;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

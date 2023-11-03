@@ -12,7 +12,7 @@ var UpdateFilterForDestinationV1Output = (function () {
         {
             name: 'filter',
             baseName: 'filter',
-            type: 'Filter3',
+            type: 'DestinationFilterV1',
         },
     ];
     return UpdateFilterForDestinationV1Output;

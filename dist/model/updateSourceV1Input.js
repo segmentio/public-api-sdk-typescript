@@ -27,7 +27,7 @@ var UpdateSourceV1Input = (function () {
         {
             name: 'settings',
             baseName: 'settings',
-            type: 'any',
+            type: '{ [key: string]: any; }',
         },
     ];
     return UpdateSourceV1Input;

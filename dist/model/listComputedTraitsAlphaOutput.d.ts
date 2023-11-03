@@ -1,8 +1,8 @@
 import { ComputedTraitSummary } from './computedTraitSummary';
-import { Pagination } from './pagination';
+import { PaginationOutput } from './paginationOutput';
 export declare class ListComputedTraitsAlphaOutput {
     'computedTraits': Array<ComputedTraitSummary>;
-    'pagination': Pagination;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

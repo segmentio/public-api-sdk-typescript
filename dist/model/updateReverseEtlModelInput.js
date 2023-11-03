@@ -32,7 +32,7 @@ var UpdateReverseEtlModelInput = (function () {
         {
             name: 'scheduleConfig',
             baseName: 'scheduleConfig',
-            type: 'any',
+            type: '{ [key: string]: any; }',
         },
         {
             name: 'query',

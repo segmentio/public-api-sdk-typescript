@@ -12,7 +12,7 @@ var GetWarehouseMetadataV1Output = (function () {
         {
             name: 'warehouseMetadata',
             baseName: 'warehouseMetadata',
-            type: 'WarehouseMetadata',
+            type: 'WarehouseMetadataV1',
         },
     ];
     return GetWarehouseMetadataV1Output;

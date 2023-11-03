@@ -17,7 +17,7 @@ var GetAdvancedSyncScheduleFromWarehouseV1Output = (function () {
         {
             name: 'schedule',
             baseName: 'schedule',
-            type: 'Schedule',
+            type: 'AdvancedWarehouseSyncScheduleV1Output',
         },
     ];
     return GetAdvancedSyncScheduleFromWarehouseV1Output;
