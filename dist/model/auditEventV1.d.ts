@@ -3,6 +3,7 @@ export declare class AuditEventV1 {
     'timestamp': string;
     'type': string;
     'actor': string;
+    'actorEmail'?: string;
     'resourceId': string;
     'resourceType': string;
     'resourceName': string;
