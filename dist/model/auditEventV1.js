@@ -30,6 +30,11 @@ var AuditEventV1 = (function () {
             type: 'string',
         },
         {
+            name: 'actorEmail',
+            baseName: 'actorEmail',
+            type: 'string',
+        },
+        {
             name: 'resourceId',
             baseName: 'resourceId',
             type: 'string',
