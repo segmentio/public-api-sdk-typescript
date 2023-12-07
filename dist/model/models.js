@@ -81,6 +81,9 @@ __exportStar(require("./createLabelV1Output"), exports);
 __exportStar(require("./createProfilesWarehouse200Response"), exports);
 __exportStar(require("./createProfilesWarehouseAlphaInput"), exports);
 __exportStar(require("./createProfilesWarehouseAlphaOutput"), exports);
+__exportStar(require("./createReverseETLManualSync200Response"), exports);
+__exportStar(require("./createReverseETLManualSyncInput"), exports);
+__exportStar(require("./createReverseETLManualSyncOutput"), exports);
 __exportStar(require("./createReverseEtlModel200Response"), exports);
 __exportStar(require("./createReverseEtlModelInput"), exports);
 __exportStar(require("./createReverseEtlModelOutput"), exports);
@@ -417,6 +420,7 @@ __exportStar(require("./resourceV1"), exports);
 __exportStar(require("./restoreFunctionVersion200Response"), exports);
 __exportStar(require("./restoreFunctionVersionAlphaInput"), exports);
 __exportStar(require("./restoreFunctionVersionAlphaOutput"), exports);
+__exportStar(require("./reverseETLManualSyncJobOutput"), exports);
 __exportStar(require("./reverseEtlModel"), exports);
 __exportStar(require("./roleV1"), exports);
 __exportStar(require("./ruleInputV1"), exports);
@@ -576,6 +580,9 @@ var createLabelV1Output_1 = require("./createLabelV1Output");
 var createProfilesWarehouse200Response_1 = require("./createProfilesWarehouse200Response");
 var createProfilesWarehouseAlphaInput_1 = require("./createProfilesWarehouseAlphaInput");
 var createProfilesWarehouseAlphaOutput_1 = require("./createProfilesWarehouseAlphaOutput");
+var createReverseETLManualSync200Response_1 = require("./createReverseETLManualSync200Response");
+var createReverseETLManualSyncInput_1 = require("./createReverseETLManualSyncInput");
+var createReverseETLManualSyncOutput_1 = require("./createReverseETLManualSyncOutput");
 var createReverseEtlModel200Response_1 = require("./createReverseEtlModel200Response");
 var createReverseEtlModelInput_1 = require("./createReverseEtlModelInput");
 var createReverseEtlModelOutput_1 = require("./createReverseEtlModelOutput");
@@ -912,6 +919,7 @@ var resourceV1_1 = require("./resourceV1");
 var restoreFunctionVersion200Response_1 = require("./restoreFunctionVersion200Response");
 var restoreFunctionVersionAlphaInput_1 = require("./restoreFunctionVersionAlphaInput");
 var restoreFunctionVersionAlphaOutput_1 = require("./restoreFunctionVersionAlphaOutput");
+var reverseETLManualSyncJobOutput_1 = require("./reverseETLManualSyncJobOutput");
 var reverseEtlModel_1 = require("./reverseEtlModel");
 var roleV1_1 = require("./roleV1");
 var ruleInputV1_1 = require("./ruleInputV1");
@@ -1167,6 +1175,9 @@ var typeMap = {
     CreateProfilesWarehouse200Response: createProfilesWarehouse200Response_1.CreateProfilesWarehouse200Response,
     CreateProfilesWarehouseAlphaInput: createProfilesWarehouseAlphaInput_1.CreateProfilesWarehouseAlphaInput,
     CreateProfilesWarehouseAlphaOutput: createProfilesWarehouseAlphaOutput_1.CreateProfilesWarehouseAlphaOutput,
+    CreateReverseETLManualSync200Response: createReverseETLManualSync200Response_1.CreateReverseETLManualSync200Response,
+    CreateReverseETLManualSyncInput: createReverseETLManualSyncInput_1.CreateReverseETLManualSyncInput,
+    CreateReverseETLManualSyncOutput: createReverseETLManualSyncOutput_1.CreateReverseETLManualSyncOutput,
     CreateReverseEtlModel200Response: createReverseEtlModel200Response_1.CreateReverseEtlModel200Response,
     CreateReverseEtlModelInput: createReverseEtlModelInput_1.CreateReverseEtlModelInput,
     CreateReverseEtlModelOutput: createReverseEtlModelOutput_1.CreateReverseEtlModelOutput,
@@ -1503,6 +1514,7 @@ var typeMap = {
     RestoreFunctionVersion200Response: restoreFunctionVersion200Response_1.RestoreFunctionVersion200Response,
     RestoreFunctionVersionAlphaInput: restoreFunctionVersionAlphaInput_1.RestoreFunctionVersionAlphaInput,
     RestoreFunctionVersionAlphaOutput: restoreFunctionVersionAlphaOutput_1.RestoreFunctionVersionAlphaOutput,
+    ReverseETLManualSyncJobOutput: reverseETLManualSyncJobOutput_1.ReverseETLManualSyncJobOutput,
     ReverseEtlModel: reverseEtlModel_1.ReverseEtlModel,
     RoleV1: roleV1_1.RoleV1,
     RuleInputV1: ruleInputV1_1.RuleInputV1,

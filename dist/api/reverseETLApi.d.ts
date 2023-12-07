@@ -1,5 +1,7 @@
 /// <reference types="node" />
 import http from 'http';
+import { CreateReverseETLManualSync200Response } from '../model/createReverseETLManualSync200Response';
+import { CreateReverseETLManualSyncInput } from '../model/createReverseETLManualSyncInput';
 import { CreateReverseEtlModel200Response } from '../model/createReverseEtlModel200Response';
 import { CreateReverseEtlModelInput } from '../model/createReverseEtlModelInput';
 import { DeleteReverseEtlModel200Response } from '../model/deleteReverseEtlModel200Response';
@@ -31,6 +33,14 @@ export declare class ReverseETLApi {
     setApiKey(key: ReverseETLApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
+    createReverseETLManualSync(CreateReverseETLManualSyncInput: CreateReverseETLManualSyncInput, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: CreateReverseETLManualSync200Response;
+    }>;
     createReverseEtlModel(CreateReverseEtlModelInput: CreateReverseEtlModelInput, options?: {
         headers: {
             [name: string]: string;

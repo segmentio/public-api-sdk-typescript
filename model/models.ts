@@ -66,6 +66,9 @@ export * from './createLabelV1Output';
 export * from './createProfilesWarehouse200Response';
 export * from './createProfilesWarehouseAlphaInput';
 export * from './createProfilesWarehouseAlphaOutput';
+export * from './createReverseETLManualSync200Response';
+export * from './createReverseETLManualSyncInput';
+export * from './createReverseETLManualSyncOutput';
 export * from './createReverseEtlModel200Response';
 export * from './createReverseEtlModelInput';
 export * from './createReverseEtlModelOutput';
@@ -402,6 +405,7 @@ export * from './resourceV1';
 export * from './restoreFunctionVersion200Response';
 export * from './restoreFunctionVersionAlphaInput';
 export * from './restoreFunctionVersionAlphaOutput';
+export * from './reverseETLManualSyncJobOutput';
 export * from './reverseEtlModel';
 export * from './roleV1';
 export * from './ruleInputV1';
@@ -574,6 +578,9 @@ import { CreateLabelV1Output } from './createLabelV1Output';
 import { CreateProfilesWarehouse200Response } from './createProfilesWarehouse200Response';
 import { CreateProfilesWarehouseAlphaInput } from './createProfilesWarehouseAlphaInput';
 import { CreateProfilesWarehouseAlphaOutput } from './createProfilesWarehouseAlphaOutput';
+import { CreateReverseETLManualSync200Response } from './createReverseETLManualSync200Response';
+import { CreateReverseETLManualSyncInput } from './createReverseETLManualSyncInput';
+import { CreateReverseETLManualSyncOutput } from './createReverseETLManualSyncOutput';
 import { CreateReverseEtlModel200Response } from './createReverseEtlModel200Response';
 import { CreateReverseEtlModelInput } from './createReverseEtlModelInput';
 import { CreateReverseEtlModelOutput } from './createReverseEtlModelOutput';
@@ -910,6 +917,7 @@ import { ResourceV1 } from './resourceV1';
 import { RestoreFunctionVersion200Response } from './restoreFunctionVersion200Response';
 import { RestoreFunctionVersionAlphaInput } from './restoreFunctionVersionAlphaInput';
 import { RestoreFunctionVersionAlphaOutput } from './restoreFunctionVersionAlphaOutput';
+import { ReverseETLManualSyncJobOutput } from './reverseETLManualSyncJobOutput';
 import { ReverseEtlModel } from './reverseEtlModel';
 import { RoleV1 } from './roleV1';
 import { RuleInputV1 } from './ruleInputV1';
@@ -1234,6 +1242,10 @@ let typeMap: { [index: string]: any } = {
     CreateProfilesWarehouse200Response: CreateProfilesWarehouse200Response,
     CreateProfilesWarehouseAlphaInput: CreateProfilesWarehouseAlphaInput,
     CreateProfilesWarehouseAlphaOutput: CreateProfilesWarehouseAlphaOutput,
+    CreateReverseETLManualSync200Response:
+        CreateReverseETLManualSync200Response,
+    CreateReverseETLManualSyncInput: CreateReverseETLManualSyncInput,
+    CreateReverseETLManualSyncOutput: CreateReverseETLManualSyncOutput,
     CreateReverseEtlModel200Response: CreateReverseEtlModel200Response,
     CreateReverseEtlModelInput: CreateReverseEtlModelInput,
     CreateReverseEtlModelOutput: CreateReverseEtlModelOutput,
@@ -1639,6 +1651,7 @@ let typeMap: { [index: string]: any } = {
     RestoreFunctionVersion200Response: RestoreFunctionVersion200Response,
     RestoreFunctionVersionAlphaInput: RestoreFunctionVersionAlphaInput,
     RestoreFunctionVersionAlphaOutput: RestoreFunctionVersionAlphaOutput,
+    ReverseETLManualSyncJobOutput: ReverseETLManualSyncJobOutput,
     ReverseEtlModel: ReverseEtlModel,
     RoleV1: RoleV1,
     RuleInputV1: RuleInputV1,
