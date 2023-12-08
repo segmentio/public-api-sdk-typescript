@@ -255,6 +255,7 @@ __exportStar(require("./groupSubscriptionStatus"), exports);
 __exportStar(require("./groupSubscriptionStatusResponse"), exports);
 __exportStar(require("./handleWebhookInput"), exports);
 __exportStar(require("./handleWebhookOutput"), exports);
+__exportStar(require("./hashPropertiesConfiguration"), exports);
 __exportStar(require("./identifySourceSettingsV1"), exports);
 __exportStar(require("./insertFunctionInstanceAlpha"), exports);
 __exportStar(require("./integrationOptionBeta"), exports);
@@ -754,6 +755,7 @@ var groupSubscriptionStatus_1 = require("./groupSubscriptionStatus");
 var groupSubscriptionStatusResponse_1 = require("./groupSubscriptionStatusResponse");
 var handleWebhookInput_1 = require("./handleWebhookInput");
 var handleWebhookOutput_1 = require("./handleWebhookOutput");
+var hashPropertiesConfiguration_1 = require("./hashPropertiesConfiguration");
 var identifySourceSettingsV1_1 = require("./identifySourceSettingsV1");
 var insertFunctionInstanceAlpha_1 = require("./insertFunctionInstanceAlpha");
 var integrationOptionBeta_1 = require("./integrationOptionBeta");
@@ -1075,6 +1077,7 @@ var enumsMap = {
     'GroupSourceSettingsV1.CommonEventOnViolationsEnum': groupSourceSettingsV1_1.GroupSourceSettingsV1.CommonEventOnViolationsEnum,
     'GroupSubscriptionStatus.StatusEnum': groupSubscriptionStatus_1.GroupSubscriptionStatus.StatusEnum,
     'GroupSubscriptionStatusResponse.StatusEnum': groupSubscriptionStatusResponse_1.GroupSubscriptionStatusResponse.StatusEnum,
+    'HashPropertiesConfiguration.EncodingEnum': hashPropertiesConfiguration_1.HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum': identifySourceSettingsV1_1.IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
     'ListFunctionItemV1.ResourceTypeEnum': listFunctionItemV1_1.ListFunctionItemV1.ResourceTypeEnum,
     'MessageSubscriptionResponse.TypeEnum': messageSubscriptionResponse_1.MessageSubscriptionResponse.TypeEnum,
@@ -1349,6 +1352,7 @@ var typeMap = {
     GroupSubscriptionStatusResponse: groupSubscriptionStatusResponse_1.GroupSubscriptionStatusResponse,
     HandleWebhookInput: handleWebhookInput_1.HandleWebhookInput,
     HandleWebhookOutput: handleWebhookOutput_1.HandleWebhookOutput,
+    HashPropertiesConfiguration: hashPropertiesConfiguration_1.HashPropertiesConfiguration,
     IdentifySourceSettingsV1: identifySourceSettingsV1_1.IdentifySourceSettingsV1,
     InsertFunctionInstanceAlpha: insertFunctionInstanceAlpha_1.InsertFunctionInstanceAlpha,
     IntegrationOptionBeta: integrationOptionBeta_1.IntegrationOptionBeta,

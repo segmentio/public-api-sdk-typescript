@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
+import { HashPropertiesConfiguration } from './hashPropertiesConfiguration';
 import { PropertyRenameV1 } from './propertyRenameV1';
 import { PropertyValueTransformationV1 } from './propertyValueTransformationV1';
 
@@ -59,6 +60,11 @@ export class TransformationV1 {
      * Optional array for defining new properties in FQL. Limited to 1 property right now.
      */
     'fqlDefinedProperties'?: Array<FQLDefinedPropertyV1>;
+    /**
+     * Optional array for allowing properties from your events.
+     */
+    'allowProperties'?: Array<string>;
+    'hashPropertiesConfiguration'?: HashPropertiesConfiguration;
 
     static discriminator: string | undefined = undefined;
 
@@ -116,6 +122,16 @@ export class TransformationV1 {
             name: 'fqlDefinedProperties',
             baseName: 'fqlDefinedProperties',
             type: 'Array<FQLDefinedPropertyV1>',
+        },
+        {
+            name: 'allowProperties',
+            baseName: 'allowProperties',
+            type: 'Array<string>',
+        },
+        {
+            name: 'hashPropertiesConfiguration',
+            baseName: 'hashPropertiesConfiguration',
+            type: 'HashPropertiesConfiguration',
         },
     ];
 

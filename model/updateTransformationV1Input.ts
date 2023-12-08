@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
+import { HashPropertiesConfiguration } from './hashPropertiesConfiguration';
 import { PropertyRenameV1 } from './propertyRenameV1';
 import { PropertyValueTransformationV1 } from './propertyValueTransformationV1';
 
@@ -55,6 +56,11 @@ export class UpdateTransformationV1Input {
      * Optional array for updating properties defined in [FQL](https://segment.com/docs/config-api/fql/). Currently limited to 1 property.
      */
     'fqlDefinedProperties'?: Array<FQLDefinedPropertyV1>;
+    /**
+     * Optional array for allowing properties from your events.
+     */
+    'allowProperties'?: Array<string>;
+    'hashPropertiesConfiguration'?: HashPropertiesConfiguration;
 
     static discriminator: string | undefined = undefined;
 
@@ -107,6 +113,16 @@ export class UpdateTransformationV1Input {
             name: 'fqlDefinedProperties',
             baseName: 'fqlDefinedProperties',
             type: 'Array<FQLDefinedPropertyV1>',
+        },
+        {
+            name: 'allowProperties',
+            baseName: 'allowProperties',
+            type: 'Array<string>',
+        },
+        {
+            name: 'hashPropertiesConfiguration',
+            baseName: 'hashPropertiesConfiguration',
+            type: 'HashPropertiesConfiguration',
         },
     ];
 

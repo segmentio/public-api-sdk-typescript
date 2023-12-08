@@ -54,6 +54,16 @@ var UpdateTransformationV1Input = (function () {
             baseName: 'fqlDefinedProperties',
             type: 'Array<FQLDefinedPropertyV1>',
         },
+        {
+            name: 'allowProperties',
+            baseName: 'allowProperties',
+            type: 'Array<string>',
+        },
+        {
+            name: 'hashPropertiesConfiguration',
+            baseName: 'hashPropertiesConfiguration',
+            type: 'HashPropertiesConfiguration',
+        },
     ];
     return UpdateTransformationV1Input;
 }());
