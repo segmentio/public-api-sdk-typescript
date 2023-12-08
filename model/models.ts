@@ -237,6 +237,7 @@ export * from './groupSubscriptionStatus';
 export * from './groupSubscriptionStatusResponse';
 export * from './handleWebhookInput';
 export * from './handleWebhookOutput';
+export * from './hashPropertiesConfiguration';
 export * from './identifySourceSettingsV1';
 export * from './insertFunctionInstanceAlpha';
 export * from './integrationOptionBeta';
@@ -745,6 +746,7 @@ import { GroupSubscriptionStatus } from './groupSubscriptionStatus';
 import { GroupSubscriptionStatusResponse } from './groupSubscriptionStatusResponse';
 import { HandleWebhookInput } from './handleWebhookInput';
 import { HandleWebhookOutput } from './handleWebhookOutput';
+import { HashPropertiesConfiguration } from './hashPropertiesConfiguration';
 import { IdentifySourceSettingsV1 } from './identifySourceSettingsV1';
 import { InsertFunctionInstanceAlpha } from './insertFunctionInstanceAlpha';
 import { IntegrationOptionBeta } from './integrationOptionBeta';
@@ -1097,6 +1099,8 @@ let enumsMap: { [index: string]: any } = {
     'GroupSubscriptionStatus.StatusEnum': GroupSubscriptionStatus.StatusEnum,
     'GroupSubscriptionStatusResponse.StatusEnum':
         GroupSubscriptionStatusResponse.StatusEnum,
+    'HashPropertiesConfiguration.EncodingEnum':
+        HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum':
         IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
     'ListFunctionItemV1.ResourceTypeEnum': ListFunctionItemV1.ResourceTypeEnum,
@@ -1426,6 +1430,7 @@ let typeMap: { [index: string]: any } = {
     GroupSubscriptionStatusResponse: GroupSubscriptionStatusResponse,
     HandleWebhookInput: HandleWebhookInput,
     HandleWebhookOutput: HandleWebhookOutput,
+    HashPropertiesConfiguration: HashPropertiesConfiguration,
     IdentifySourceSettingsV1: IdentifySourceSettingsV1,
     InsertFunctionInstanceAlpha: InsertFunctionInstanceAlpha,
     IntegrationOptionBeta: IntegrationOptionBeta,

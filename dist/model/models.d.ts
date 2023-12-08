@@ -238,6 +238,7 @@ export * from './groupSubscriptionStatus';
 export * from './groupSubscriptionStatusResponse';
 export * from './handleWebhookInput';
 export * from './handleWebhookOutput';
+export * from './hashPropertiesConfiguration';
 export * from './identifySourceSettingsV1';
 export * from './insertFunctionInstanceAlpha';
 export * from './integrationOptionBeta';
