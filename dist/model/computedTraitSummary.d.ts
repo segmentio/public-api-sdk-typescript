@@ -1,3 +1,4 @@
+import { Definition } from './definition';
 export declare class ComputedTraitSummary {
     'id': string;
     'spaceId': string;
@@ -5,6 +6,8 @@ export declare class ComputedTraitSummary {
     'description': string;
     'key': string;
     'enabled': boolean;
+    'definition': Definition | null;
+    'status'?: string;
     'createdBy': string;
     'updatedBy': string;
     'createdAt': string;
