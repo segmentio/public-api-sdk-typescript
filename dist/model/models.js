@@ -40,6 +40,7 @@ __exportStar(require("./addUsersToUserGroupV1Output"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Input"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Output"), exports);
 __exportStar(require("./allowedLabelBeta"), exports);
+__exportStar(require("./audienceDefinition"), exports);
 __exportStar(require("./audienceSummary"), exports);
 __exportStar(require("./auditEventV1"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpace200Response"), exports);
@@ -48,6 +49,7 @@ __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput"), e
 __exportStar(require("./breakdownBeta"), exports);
 __exportStar(require("./commonSourceSettingsV1"), exports);
 __exportStar(require("./computedTraitSummary"), exports);
+__exportStar(require("./computedTraitsDefinition"), exports);
 __exportStar(require("./contact"), exports);
 __exportStar(require("./createCloudSourceRegulation200Response"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Input"), exports);
@@ -116,6 +118,8 @@ __exportStar(require("./createWarehouseV1Output"), exports);
 __exportStar(require("./createWorkspaceRegulation200Response"), exports);
 __exportStar(require("./createWorkspaceRegulationV1Input"), exports);
 __exportStar(require("./createWorkspaceRegulationV1Output"), exports);
+__exportStar(require("./definition"), exports);
+__exportStar(require("./definition1"), exports);
 __exportStar(require("./deleteDestination200Response"), exports);
 __exportStar(require("./deleteDestinationV1Output"), exports);
 __exportStar(require("./deleteFunction200Response"), exports);
@@ -540,6 +544,7 @@ var addUsersToUserGroupV1Output_1 = require("./addUsersToUserGroupV1Output");
 var advancedWarehouseSyncScheduleV1Input_1 = require("./advancedWarehouseSyncScheduleV1Input");
 var advancedWarehouseSyncScheduleV1Output_1 = require("./advancedWarehouseSyncScheduleV1Output");
 var allowedLabelBeta_1 = require("./allowedLabelBeta");
+var audienceDefinition_1 = require("./audienceDefinition");
 var audienceSummary_1 = require("./audienceSummary");
 var auditEventV1_1 = require("./auditEventV1");
 var batchQueryMessagingSubscriptionsForSpace200Response_1 = require("./batchQueryMessagingSubscriptionsForSpace200Response");
@@ -548,6 +553,7 @@ var batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1 = require("./batchQuer
 var breakdownBeta_1 = require("./breakdownBeta");
 var commonSourceSettingsV1_1 = require("./commonSourceSettingsV1");
 var computedTraitSummary_1 = require("./computedTraitSummary");
+var computedTraitsDefinition_1 = require("./computedTraitsDefinition");
 var contact_1 = require("./contact");
 var createCloudSourceRegulation200Response_1 = require("./createCloudSourceRegulation200Response");
 var createCloudSourceRegulationV1Input_1 = require("./createCloudSourceRegulationV1Input");
@@ -616,6 +622,8 @@ var createWarehouseV1Output_1 = require("./createWarehouseV1Output");
 var createWorkspaceRegulation200Response_1 = require("./createWorkspaceRegulation200Response");
 var createWorkspaceRegulationV1Input_1 = require("./createWorkspaceRegulationV1Input");
 var createWorkspaceRegulationV1Output_1 = require("./createWorkspaceRegulationV1Output");
+var definition_1 = require("./definition");
+var definition1_1 = require("./definition1");
 var deleteDestination200Response_1 = require("./deleteDestination200Response");
 var deleteDestinationV1Output_1 = require("./deleteDestinationV1Output");
 var deleteFunction200Response_1 = require("./deleteFunction200Response");
@@ -1137,6 +1145,7 @@ var typeMap = {
     AdvancedWarehouseSyncScheduleV1Input: advancedWarehouseSyncScheduleV1Input_1.AdvancedWarehouseSyncScheduleV1Input,
     AdvancedWarehouseSyncScheduleV1Output: advancedWarehouseSyncScheduleV1Output_1.AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: allowedLabelBeta_1.AllowedLabelBeta,
+    AudienceDefinition: audienceDefinition_1.AudienceDefinition,
     AudienceSummary: audienceSummary_1.AudienceSummary,
     AuditEventV1: auditEventV1_1.AuditEventV1,
     BatchQueryMessagingSubscriptionsForSpace200Response: batchQueryMessagingSubscriptionsForSpace200Response_1.BatchQueryMessagingSubscriptionsForSpace200Response,
@@ -1145,6 +1154,7 @@ var typeMap = {
     BreakdownBeta: breakdownBeta_1.BreakdownBeta,
     CommonSourceSettingsV1: commonSourceSettingsV1_1.CommonSourceSettingsV1,
     ComputedTraitSummary: computedTraitSummary_1.ComputedTraitSummary,
+    ComputedTraitsDefinition: computedTraitsDefinition_1.ComputedTraitsDefinition,
     Contact: contact_1.Contact,
     CreateCloudSourceRegulation200Response: createCloudSourceRegulation200Response_1.CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input,
@@ -1213,6 +1223,8 @@ var typeMap = {
     CreateWorkspaceRegulation200Response: createWorkspaceRegulation200Response_1.CreateWorkspaceRegulation200Response,
     CreateWorkspaceRegulationV1Input: createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input,
     CreateWorkspaceRegulationV1Output: createWorkspaceRegulationV1Output_1.CreateWorkspaceRegulationV1Output,
+    Definition: definition_1.Definition,
+    Definition1: definition1_1.Definition1,
     DeleteDestination200Response: deleteDestination200Response_1.DeleteDestination200Response,
     DeleteDestinationV1Output: deleteDestinationV1Output_1.DeleteDestinationV1Output,
     DeleteFunction200Response: deleteFunction200Response_1.DeleteFunction200Response,

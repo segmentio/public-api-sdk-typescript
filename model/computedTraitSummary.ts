@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { Definition } from './definition';
 
 /**
  * Defines a Computed trait.
@@ -40,6 +41,11 @@ export class ComputedTraitSummary {
      * Enabled/disabled status for the computed trait.
      */
     'enabled': boolean;
+    'definition': Definition | null;
+    /**
+     * Status for the computed trait.  Possible values: Backfilling, Computing, Failed, Live, Awaiting Destinations, Disabled.
+     */
+    'status'?: string;
     /**
      * User id who created the computed trait.
      */
@@ -93,6 +99,16 @@ export class ComputedTraitSummary {
             name: 'enabled',
             baseName: 'enabled',
             type: 'boolean',
+        },
+        {
+            name: 'definition',
+            baseName: 'definition',
+            type: 'Definition',
+        },
+        {
+            name: 'status',
+            baseName: 'status',
+            type: 'string',
         },
         {
             name: 'createdBy',

@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { Definition1 } from './definition1';
 
 /**
  * Defines an Audience.
@@ -40,6 +41,11 @@ export class AudienceSummary {
      * Enabled/disabled status for the audience.
      */
     'enabled': boolean;
+    'definition': Definition1 | null;
+    /**
+     * Status for the audience.  Possible values: Backfilling, Computing, Failed, Live, Awaiting Destinations, Disabled.
+     */
+    'status'?: string;
     /**
      * User id who created the audience.
      */
@@ -93,6 +99,16 @@ export class AudienceSummary {
             name: 'enabled',
             baseName: 'enabled',
             type: 'boolean',
+        },
+        {
+            name: 'definition',
+            baseName: 'definition',
+            type: 'Definition1',
+        },
+        {
+            name: 'status',
+            baseName: 'status',
+            type: 'string',
         },
         {
             name: 'createdBy',

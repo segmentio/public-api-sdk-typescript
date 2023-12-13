@@ -25,6 +25,7 @@ export * from './addUsersToUserGroupV1Output';
 export * from './advancedWarehouseSyncScheduleV1Input';
 export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
+export * from './audienceDefinition';
 export * from './audienceSummary';
 export * from './auditEventV1';
 export * from './batchQueryMessagingSubscriptionsForSpace200Response';
@@ -33,6 +34,7 @@ export * from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 export * from './breakdownBeta';
 export * from './commonSourceSettingsV1';
 export * from './computedTraitSummary';
+export * from './computedTraitsDefinition';
 export * from './contact';
 export * from './createCloudSourceRegulation200Response';
 export * from './createCloudSourceRegulationV1Input';
@@ -101,6 +103,8 @@ export * from './createWarehouseV1Output';
 export * from './createWorkspaceRegulation200Response';
 export * from './createWorkspaceRegulationV1Input';
 export * from './createWorkspaceRegulationV1Output';
+export * from './definition';
+export * from './definition1';
 export * from './deleteDestination200Response';
 export * from './deleteDestinationV1Output';
 export * from './deleteFunction200Response';
@@ -538,6 +542,7 @@ import { AddUsersToUserGroupV1Output } from './addUsersToUserGroupV1Output';
 import { AdvancedWarehouseSyncScheduleV1Input } from './advancedWarehouseSyncScheduleV1Input';
 import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncScheduleV1Output';
 import { AllowedLabelBeta } from './allowedLabelBeta';
+import { AudienceDefinition } from './audienceDefinition';
 import { AudienceSummary } from './audienceSummary';
 import { AuditEventV1 } from './auditEventV1';
 import { BatchQueryMessagingSubscriptionsForSpace200Response } from './batchQueryMessagingSubscriptionsForSpace200Response';
@@ -546,6 +551,7 @@ import { BatchQueryMessagingSubscriptionsForSpaceAlphaOutput } from './batchQuer
 import { BreakdownBeta } from './breakdownBeta';
 import { CommonSourceSettingsV1 } from './commonSourceSettingsV1';
 import { ComputedTraitSummary } from './computedTraitSummary';
+import { ComputedTraitsDefinition } from './computedTraitsDefinition';
 import { Contact } from './contact';
 import { CreateCloudSourceRegulation200Response } from './createCloudSourceRegulation200Response';
 import { CreateCloudSourceRegulationV1Input } from './createCloudSourceRegulationV1Input';
@@ -614,6 +620,8 @@ import { CreateWarehouseV1Output } from './createWarehouseV1Output';
 import { CreateWorkspaceRegulation200Response } from './createWorkspaceRegulation200Response';
 import { CreateWorkspaceRegulationV1Input } from './createWorkspaceRegulationV1Input';
 import { CreateWorkspaceRegulationV1Output } from './createWorkspaceRegulationV1Output';
+import { Definition } from './definition';
+import { Definition1 } from './definition1';
 import { DeleteDestination200Response } from './deleteDestination200Response';
 import { DeleteDestinationV1Output } from './deleteDestinationV1Output';
 import { DeleteFunction200Response } from './deleteFunction200Response';
@@ -1194,6 +1202,7 @@ let typeMap: { [index: string]: any } = {
     AdvancedWarehouseSyncScheduleV1Output:
         AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: AllowedLabelBeta,
+    AudienceDefinition: AudienceDefinition,
     AudienceSummary: AudienceSummary,
     AuditEventV1: AuditEventV1,
     BatchQueryMessagingSubscriptionsForSpace200Response:
@@ -1205,6 +1214,7 @@ let typeMap: { [index: string]: any } = {
     BreakdownBeta: BreakdownBeta,
     CommonSourceSettingsV1: CommonSourceSettingsV1,
     ComputedTraitSummary: ComputedTraitSummary,
+    ComputedTraitsDefinition: ComputedTraitsDefinition,
     Contact: Contact,
     CreateCloudSourceRegulation200Response:
         CreateCloudSourceRegulation200Response,
@@ -1283,6 +1293,8 @@ let typeMap: { [index: string]: any } = {
     CreateWorkspaceRegulation200Response: CreateWorkspaceRegulation200Response,
     CreateWorkspaceRegulationV1Input: CreateWorkspaceRegulationV1Input,
     CreateWorkspaceRegulationV1Output: CreateWorkspaceRegulationV1Output,
+    Definition: Definition,
+    Definition1: Definition1,
     DeleteDestination200Response: DeleteDestination200Response,
     DeleteDestinationV1Output: DeleteDestinationV1Output,
     DeleteFunction200Response: DeleteFunction200Response,

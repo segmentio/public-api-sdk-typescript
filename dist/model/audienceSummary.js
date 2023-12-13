@@ -40,6 +40,16 @@ var AudienceSummary = (function () {
             type: 'boolean',
         },
         {
+            name: 'definition',
+            baseName: 'definition',
+            type: 'Definition1',
+        },
+        {
+            name: 'status',
+            baseName: 'status',
+            type: 'string',
+        },
+        {
             name: 'createdBy',
             baseName: 'createdBy',
             type: 'string',
