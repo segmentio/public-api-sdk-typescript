@@ -24,6 +24,16 @@ var DestinationMetadataPlatformsV1 = (function () {
             baseName: 'mobile',
             type: 'boolean',
         },
+        {
+            name: 'warehouse',
+            baseName: 'warehouse',
+            type: 'boolean',
+        },
+        {
+            name: 'cloudAppObject',
+            baseName: 'cloudAppObject',
+            type: 'boolean',
+        },
     ];
     return DestinationMetadataPlatformsV1;
 }());
