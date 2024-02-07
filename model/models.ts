@@ -2,7 +2,7 @@ import localVarRequest from 'request';
 
 export * from './aPICallSnapshotV1';
 export * from './accessPermissionV1';
-export * from './addConnectionFromSourceToWarehouse200Response';
+export * from './addConnectionFromSourceToWarehouse201Response';
 export * from './addConnectionFromSourceToWarehouseV1Output';
 export * from './addLabelsToSource200Response';
 export * from './addLabelsToSource200Response1';
@@ -59,23 +59,23 @@ export * from './createFunctionV1Output';
 export * from './createInsertFunctionInstance200Response';
 export * from './createInsertFunctionInstanceAlphaInput';
 export * from './createInsertFunctionInstanceAlphaOutput';
-export * from './createInvites200Response';
+export * from './createInvites201Response';
 export * from './createInvitesV1Input';
 export * from './createInvitesV1Output';
-export * from './createLabel200Response';
+export * from './createLabel201Response';
 export * from './createLabelV1Input';
 export * from './createLabelV1Output';
-export * from './createProfilesWarehouse200Response';
+export * from './createProfilesWarehouse201Response';
 export * from './createProfilesWarehouseAlphaInput';
 export * from './createProfilesWarehouseAlphaOutput';
 export * from './createReverseETLManualSync200Response';
 export * from './createReverseETLManualSyncInput';
 export * from './createReverseETLManualSyncOutput';
-export * from './createReverseEtlModel200Response';
+export * from './createReverseEtlModel201Response';
 export * from './createReverseEtlModelInput';
 export * from './createReverseEtlModelOutput';
-export * from './createSource200Response';
-export * from './createSource200Response1';
+export * from './createSource201Response';
+export * from './createSource201Response1';
 export * from './createSourceAlphaInput';
 export * from './createSourceAlphaOutput';
 export * from './createSourceRegulation200Response';
@@ -97,7 +97,7 @@ export * from './createUserGroupV1Output';
 export * from './createValidationInWarehouse200Response';
 export * from './createValidationInWarehouseV1Input';
 export * from './createValidationInWarehouseV1Output';
-export * from './createWarehouse200Response';
+export * from './createWarehouse201Response';
 export * from './createWarehouseV1Input';
 export * from './createWarehouseV1Output';
 export * from './createWorkspaceRegulation200Response';
@@ -519,7 +519,7 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 import { APICallSnapshotV1 } from './aPICallSnapshotV1';
 import { AccessPermissionV1 } from './accessPermissionV1';
-import { AddConnectionFromSourceToWarehouse200Response } from './addConnectionFromSourceToWarehouse200Response';
+import { AddConnectionFromSourceToWarehouse201Response } from './addConnectionFromSourceToWarehouse201Response';
 import { AddConnectionFromSourceToWarehouseV1Output } from './addConnectionFromSourceToWarehouseV1Output';
 import { AddLabelsToSource200Response } from './addLabelsToSource200Response';
 import { AddLabelsToSource200Response1 } from './addLabelsToSource200Response1';
@@ -576,23 +576,23 @@ import { CreateFunctionV1Output } from './createFunctionV1Output';
 import { CreateInsertFunctionInstance200Response } from './createInsertFunctionInstance200Response';
 import { CreateInsertFunctionInstanceAlphaInput } from './createInsertFunctionInstanceAlphaInput';
 import { CreateInsertFunctionInstanceAlphaOutput } from './createInsertFunctionInstanceAlphaOutput';
-import { CreateInvites200Response } from './createInvites200Response';
+import { CreateInvites201Response } from './createInvites201Response';
 import { CreateInvitesV1Input } from './createInvitesV1Input';
 import { CreateInvitesV1Output } from './createInvitesV1Output';
-import { CreateLabel200Response } from './createLabel200Response';
+import { CreateLabel201Response } from './createLabel201Response';
 import { CreateLabelV1Input } from './createLabelV1Input';
 import { CreateLabelV1Output } from './createLabelV1Output';
-import { CreateProfilesWarehouse200Response } from './createProfilesWarehouse200Response';
+import { CreateProfilesWarehouse201Response } from './createProfilesWarehouse201Response';
 import { CreateProfilesWarehouseAlphaInput } from './createProfilesWarehouseAlphaInput';
 import { CreateProfilesWarehouseAlphaOutput } from './createProfilesWarehouseAlphaOutput';
 import { CreateReverseETLManualSync200Response } from './createReverseETLManualSync200Response';
 import { CreateReverseETLManualSyncInput } from './createReverseETLManualSyncInput';
 import { CreateReverseETLManualSyncOutput } from './createReverseETLManualSyncOutput';
-import { CreateReverseEtlModel200Response } from './createReverseEtlModel200Response';
+import { CreateReverseEtlModel201Response } from './createReverseEtlModel201Response';
 import { CreateReverseEtlModelInput } from './createReverseEtlModelInput';
 import { CreateReverseEtlModelOutput } from './createReverseEtlModelOutput';
-import { CreateSource200Response } from './createSource200Response';
-import { CreateSource200Response1 } from './createSource200Response1';
+import { CreateSource201Response } from './createSource201Response';
+import { CreateSource201Response1 } from './createSource201Response1';
 import { CreateSourceAlphaInput } from './createSourceAlphaInput';
 import { CreateSourceAlphaOutput } from './createSourceAlphaOutput';
 import { CreateSourceRegulation200Response } from './createSourceRegulation200Response';
@@ -614,7 +614,7 @@ import { CreateUserGroupV1Output } from './createUserGroupV1Output';
 import { CreateValidationInWarehouse200Response } from './createValidationInWarehouse200Response';
 import { CreateValidationInWarehouseV1Input } from './createValidationInWarehouseV1Input';
 import { CreateValidationInWarehouseV1Output } from './createValidationInWarehouseV1Output';
-import { CreateWarehouse200Response } from './createWarehouse200Response';
+import { CreateWarehouse201Response } from './createWarehouse201Response';
 import { CreateWarehouseV1Input } from './createWarehouseV1Input';
 import { CreateWarehouseV1Output } from './createWarehouseV1Output';
 import { CreateWorkspaceRegulation200Response } from './createWorkspaceRegulation200Response';
@@ -1176,8 +1176,8 @@ let enumsMap: { [index: string]: any } = {
 let typeMap: { [index: string]: any } = {
     APICallSnapshotV1: APICallSnapshotV1,
     AccessPermissionV1: AccessPermissionV1,
-    AddConnectionFromSourceToWarehouse200Response:
-        AddConnectionFromSourceToWarehouse200Response,
+    AddConnectionFromSourceToWarehouse201Response:
+        AddConnectionFromSourceToWarehouse201Response,
     AddConnectionFromSourceToWarehouseV1Output:
         AddConnectionFromSourceToWarehouseV1Output,
     AddLabelsToSource200Response: AddLabelsToSource200Response,
@@ -1247,24 +1247,24 @@ let typeMap: { [index: string]: any } = {
         CreateInsertFunctionInstanceAlphaInput,
     CreateInsertFunctionInstanceAlphaOutput:
         CreateInsertFunctionInstanceAlphaOutput,
-    CreateInvites200Response: CreateInvites200Response,
+    CreateInvites201Response: CreateInvites201Response,
     CreateInvitesV1Input: CreateInvitesV1Input,
     CreateInvitesV1Output: CreateInvitesV1Output,
-    CreateLabel200Response: CreateLabel200Response,
+    CreateLabel201Response: CreateLabel201Response,
     CreateLabelV1Input: CreateLabelV1Input,
     CreateLabelV1Output: CreateLabelV1Output,
-    CreateProfilesWarehouse200Response: CreateProfilesWarehouse200Response,
+    CreateProfilesWarehouse201Response: CreateProfilesWarehouse201Response,
     CreateProfilesWarehouseAlphaInput: CreateProfilesWarehouseAlphaInput,
     CreateProfilesWarehouseAlphaOutput: CreateProfilesWarehouseAlphaOutput,
     CreateReverseETLManualSync200Response:
         CreateReverseETLManualSync200Response,
     CreateReverseETLManualSyncInput: CreateReverseETLManualSyncInput,
     CreateReverseETLManualSyncOutput: CreateReverseETLManualSyncOutput,
-    CreateReverseEtlModel200Response: CreateReverseEtlModel200Response,
+    CreateReverseEtlModel201Response: CreateReverseEtlModel201Response,
     CreateReverseEtlModelInput: CreateReverseEtlModelInput,
     CreateReverseEtlModelOutput: CreateReverseEtlModelOutput,
-    CreateSource200Response: CreateSource200Response,
-    CreateSource200Response1: CreateSource200Response1,
+    CreateSource201Response: CreateSource201Response,
+    CreateSource201Response1: CreateSource201Response1,
     CreateSourceAlphaInput: CreateSourceAlphaInput,
     CreateSourceAlphaOutput: CreateSourceAlphaOutput,
     CreateSourceRegulation200Response: CreateSourceRegulation200Response,
@@ -1287,7 +1287,7 @@ let typeMap: { [index: string]: any } = {
         CreateValidationInWarehouse200Response,
     CreateValidationInWarehouseV1Input: CreateValidationInWarehouseV1Input,
     CreateValidationInWarehouseV1Output: CreateValidationInWarehouseV1Output,
-    CreateWarehouse200Response: CreateWarehouse200Response,
+    CreateWarehouse201Response: CreateWarehouse201Response,
     CreateWarehouseV1Input: CreateWarehouseV1Input,
     CreateWarehouseV1Output: CreateWarehouseV1Output,
     CreateWorkspaceRegulation200Response: CreateWorkspaceRegulation200Response,

@@ -17,7 +17,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.VoidAuth = exports.OAuth = exports.ApiKeyAuth = exports.HttpBearerAuth = exports.HttpBasicAuth = exports.ObjectSerializer = void 0;
 __exportStar(require("./aPICallSnapshotV1"), exports);
 __exportStar(require("./accessPermissionV1"), exports);
-__exportStar(require("./addConnectionFromSourceToWarehouse200Response"), exports);
+__exportStar(require("./addConnectionFromSourceToWarehouse201Response"), exports);
 __exportStar(require("./addConnectionFromSourceToWarehouseV1Output"), exports);
 __exportStar(require("./addLabelsToSource200Response"), exports);
 __exportStar(require("./addLabelsToSource200Response1"), exports);
@@ -74,23 +74,23 @@ __exportStar(require("./createFunctionV1Output"), exports);
 __exportStar(require("./createInsertFunctionInstance200Response"), exports);
 __exportStar(require("./createInsertFunctionInstanceAlphaInput"), exports);
 __exportStar(require("./createInsertFunctionInstanceAlphaOutput"), exports);
-__exportStar(require("./createInvites200Response"), exports);
+__exportStar(require("./createInvites201Response"), exports);
 __exportStar(require("./createInvitesV1Input"), exports);
 __exportStar(require("./createInvitesV1Output"), exports);
-__exportStar(require("./createLabel200Response"), exports);
+__exportStar(require("./createLabel201Response"), exports);
 __exportStar(require("./createLabelV1Input"), exports);
 __exportStar(require("./createLabelV1Output"), exports);
-__exportStar(require("./createProfilesWarehouse200Response"), exports);
+__exportStar(require("./createProfilesWarehouse201Response"), exports);
 __exportStar(require("./createProfilesWarehouseAlphaInput"), exports);
 __exportStar(require("./createProfilesWarehouseAlphaOutput"), exports);
 __exportStar(require("./createReverseETLManualSync200Response"), exports);
 __exportStar(require("./createReverseETLManualSyncInput"), exports);
 __exportStar(require("./createReverseETLManualSyncOutput"), exports);
-__exportStar(require("./createReverseEtlModel200Response"), exports);
+__exportStar(require("./createReverseEtlModel201Response"), exports);
 __exportStar(require("./createReverseEtlModelInput"), exports);
 __exportStar(require("./createReverseEtlModelOutput"), exports);
-__exportStar(require("./createSource200Response"), exports);
-__exportStar(require("./createSource200Response1"), exports);
+__exportStar(require("./createSource201Response"), exports);
+__exportStar(require("./createSource201Response1"), exports);
 __exportStar(require("./createSourceAlphaInput"), exports);
 __exportStar(require("./createSourceAlphaOutput"), exports);
 __exportStar(require("./createSourceRegulation200Response"), exports);
@@ -112,7 +112,7 @@ __exportStar(require("./createUserGroupV1Output"), exports);
 __exportStar(require("./createValidationInWarehouse200Response"), exports);
 __exportStar(require("./createValidationInWarehouseV1Input"), exports);
 __exportStar(require("./createValidationInWarehouseV1Output"), exports);
-__exportStar(require("./createWarehouse200Response"), exports);
+__exportStar(require("./createWarehouse201Response"), exports);
 __exportStar(require("./createWarehouseV1Input"), exports);
 __exportStar(require("./createWarehouseV1Output"), exports);
 __exportStar(require("./createWorkspaceRegulation200Response"), exports);
@@ -521,7 +521,7 @@ __exportStar(require("./warehouseV1"), exports);
 __exportStar(require("./workspaceV1"), exports);
 var aPICallSnapshotV1_1 = require("./aPICallSnapshotV1");
 var accessPermissionV1_1 = require("./accessPermissionV1");
-var addConnectionFromSourceToWarehouse200Response_1 = require("./addConnectionFromSourceToWarehouse200Response");
+var addConnectionFromSourceToWarehouse201Response_1 = require("./addConnectionFromSourceToWarehouse201Response");
 var addConnectionFromSourceToWarehouseV1Output_1 = require("./addConnectionFromSourceToWarehouseV1Output");
 var addLabelsToSource200Response_1 = require("./addLabelsToSource200Response");
 var addLabelsToSource200Response1_1 = require("./addLabelsToSource200Response1");
@@ -578,23 +578,23 @@ var createFunctionV1Output_1 = require("./createFunctionV1Output");
 var createInsertFunctionInstance200Response_1 = require("./createInsertFunctionInstance200Response");
 var createInsertFunctionInstanceAlphaInput_1 = require("./createInsertFunctionInstanceAlphaInput");
 var createInsertFunctionInstanceAlphaOutput_1 = require("./createInsertFunctionInstanceAlphaOutput");
-var createInvites200Response_1 = require("./createInvites200Response");
+var createInvites201Response_1 = require("./createInvites201Response");
 var createInvitesV1Input_1 = require("./createInvitesV1Input");
 var createInvitesV1Output_1 = require("./createInvitesV1Output");
-var createLabel200Response_1 = require("./createLabel200Response");
+var createLabel201Response_1 = require("./createLabel201Response");
 var createLabelV1Input_1 = require("./createLabelV1Input");
 var createLabelV1Output_1 = require("./createLabelV1Output");
-var createProfilesWarehouse200Response_1 = require("./createProfilesWarehouse200Response");
+var createProfilesWarehouse201Response_1 = require("./createProfilesWarehouse201Response");
 var createProfilesWarehouseAlphaInput_1 = require("./createProfilesWarehouseAlphaInput");
 var createProfilesWarehouseAlphaOutput_1 = require("./createProfilesWarehouseAlphaOutput");
 var createReverseETLManualSync200Response_1 = require("./createReverseETLManualSync200Response");
 var createReverseETLManualSyncInput_1 = require("./createReverseETLManualSyncInput");
 var createReverseETLManualSyncOutput_1 = require("./createReverseETLManualSyncOutput");
-var createReverseEtlModel200Response_1 = require("./createReverseEtlModel200Response");
+var createReverseEtlModel201Response_1 = require("./createReverseEtlModel201Response");
 var createReverseEtlModelInput_1 = require("./createReverseEtlModelInput");
 var createReverseEtlModelOutput_1 = require("./createReverseEtlModelOutput");
-var createSource200Response_1 = require("./createSource200Response");
-var createSource200Response1_1 = require("./createSource200Response1");
+var createSource201Response_1 = require("./createSource201Response");
+var createSource201Response1_1 = require("./createSource201Response1");
 var createSourceAlphaInput_1 = require("./createSourceAlphaInput");
 var createSourceAlphaOutput_1 = require("./createSourceAlphaOutput");
 var createSourceRegulation200Response_1 = require("./createSourceRegulation200Response");
@@ -616,7 +616,7 @@ var createUserGroupV1Output_1 = require("./createUserGroupV1Output");
 var createValidationInWarehouse200Response_1 = require("./createValidationInWarehouse200Response");
 var createValidationInWarehouseV1Input_1 = require("./createValidationInWarehouseV1Input");
 var createValidationInWarehouseV1Output_1 = require("./createValidationInWarehouseV1Output");
-var createWarehouse200Response_1 = require("./createWarehouse200Response");
+var createWarehouse201Response_1 = require("./createWarehouse201Response");
 var createWarehouseV1Input_1 = require("./createWarehouseV1Input");
 var createWarehouseV1Output_1 = require("./createWarehouseV1Output");
 var createWorkspaceRegulation200Response_1 = require("./createWorkspaceRegulation200Response");
@@ -1122,7 +1122,7 @@ var enumsMap = {
 var typeMap = {
     APICallSnapshotV1: aPICallSnapshotV1_1.APICallSnapshotV1,
     AccessPermissionV1: accessPermissionV1_1.AccessPermissionV1,
-    AddConnectionFromSourceToWarehouse200Response: addConnectionFromSourceToWarehouse200Response_1.AddConnectionFromSourceToWarehouse200Response,
+    AddConnectionFromSourceToWarehouse201Response: addConnectionFromSourceToWarehouse201Response_1.AddConnectionFromSourceToWarehouse201Response,
     AddConnectionFromSourceToWarehouseV1Output: addConnectionFromSourceToWarehouseV1Output_1.AddConnectionFromSourceToWarehouseV1Output,
     AddLabelsToSource200Response: addLabelsToSource200Response_1.AddLabelsToSource200Response,
     AddLabelsToSource200Response1: addLabelsToSource200Response1_1.AddLabelsToSource200Response1,
@@ -1179,23 +1179,23 @@ var typeMap = {
     CreateInsertFunctionInstance200Response: createInsertFunctionInstance200Response_1.CreateInsertFunctionInstance200Response,
     CreateInsertFunctionInstanceAlphaInput: createInsertFunctionInstanceAlphaInput_1.CreateInsertFunctionInstanceAlphaInput,
     CreateInsertFunctionInstanceAlphaOutput: createInsertFunctionInstanceAlphaOutput_1.CreateInsertFunctionInstanceAlphaOutput,
-    CreateInvites200Response: createInvites200Response_1.CreateInvites200Response,
+    CreateInvites201Response: createInvites201Response_1.CreateInvites201Response,
     CreateInvitesV1Input: createInvitesV1Input_1.CreateInvitesV1Input,
     CreateInvitesV1Output: createInvitesV1Output_1.CreateInvitesV1Output,
-    CreateLabel200Response: createLabel200Response_1.CreateLabel200Response,
+    CreateLabel201Response: createLabel201Response_1.CreateLabel201Response,
     CreateLabelV1Input: createLabelV1Input_1.CreateLabelV1Input,
     CreateLabelV1Output: createLabelV1Output_1.CreateLabelV1Output,
-    CreateProfilesWarehouse200Response: createProfilesWarehouse200Response_1.CreateProfilesWarehouse200Response,
+    CreateProfilesWarehouse201Response: createProfilesWarehouse201Response_1.CreateProfilesWarehouse201Response,
     CreateProfilesWarehouseAlphaInput: createProfilesWarehouseAlphaInput_1.CreateProfilesWarehouseAlphaInput,
     CreateProfilesWarehouseAlphaOutput: createProfilesWarehouseAlphaOutput_1.CreateProfilesWarehouseAlphaOutput,
     CreateReverseETLManualSync200Response: createReverseETLManualSync200Response_1.CreateReverseETLManualSync200Response,
     CreateReverseETLManualSyncInput: createReverseETLManualSyncInput_1.CreateReverseETLManualSyncInput,
     CreateReverseETLManualSyncOutput: createReverseETLManualSyncOutput_1.CreateReverseETLManualSyncOutput,
-    CreateReverseEtlModel200Response: createReverseEtlModel200Response_1.CreateReverseEtlModel200Response,
+    CreateReverseEtlModel201Response: createReverseEtlModel201Response_1.CreateReverseEtlModel201Response,
     CreateReverseEtlModelInput: createReverseEtlModelInput_1.CreateReverseEtlModelInput,
     CreateReverseEtlModelOutput: createReverseEtlModelOutput_1.CreateReverseEtlModelOutput,
-    CreateSource200Response: createSource200Response_1.CreateSource200Response,
-    CreateSource200Response1: createSource200Response1_1.CreateSource200Response1,
+    CreateSource201Response: createSource201Response_1.CreateSource201Response,
+    CreateSource201Response1: createSource201Response1_1.CreateSource201Response1,
     CreateSourceAlphaInput: createSourceAlphaInput_1.CreateSourceAlphaInput,
     CreateSourceAlphaOutput: createSourceAlphaOutput_1.CreateSourceAlphaOutput,
     CreateSourceRegulation200Response: createSourceRegulation200Response_1.CreateSourceRegulation200Response,
@@ -1217,7 +1217,7 @@ var typeMap = {
     CreateValidationInWarehouse200Response: createValidationInWarehouse200Response_1.CreateValidationInWarehouse200Response,
     CreateValidationInWarehouseV1Input: createValidationInWarehouseV1Input_1.CreateValidationInWarehouseV1Input,
     CreateValidationInWarehouseV1Output: createValidationInWarehouseV1Output_1.CreateValidationInWarehouseV1Output,
-    CreateWarehouse200Response: createWarehouse200Response_1.CreateWarehouse200Response,
+    CreateWarehouse201Response: createWarehouse201Response_1.CreateWarehouse201Response,
     CreateWarehouseV1Input: createWarehouseV1Input_1.CreateWarehouseV1Input,
     CreateWarehouseV1Output: createWarehouseV1Output_1.CreateWarehouseV1Output,
     CreateWorkspaceRegulation200Response: createWorkspaceRegulation200Response_1.CreateWorkspaceRegulation200Response,

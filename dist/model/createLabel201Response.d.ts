@@ -1,0 +1,15 @@
+import { CreateLabelV1Output } from './createLabelV1Output';
+export declare class CreateLabel201Response {
+    'data'?: CreateLabelV1Output;
+    static discriminator: string | undefined;
+    static attributeTypeMap: Array<{
+        name: string;
+        baseName: string;
+        type: string;
+    }>;
+    static getAttributeTypeMap(): {
+        name: string;
+        baseName: string;
+        type: string;
+    }[];
+}

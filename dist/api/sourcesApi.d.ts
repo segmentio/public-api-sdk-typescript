@@ -2,7 +2,7 @@
 import http from 'http';
 import { AddLabelsToSource200Response } from '../model/addLabelsToSource200Response';
 import { AddLabelsToSourceV1Input } from '../model/addLabelsToSourceV1Input';
-import { CreateSource200Response } from '../model/createSource200Response';
+import { CreateSource201Response } from '../model/createSource201Response';
 import { CreateSourceV1Input } from '../model/createSourceV1Input';
 import { DeleteSource200Response } from '../model/deleteSource200Response';
 import { GetSource200Response } from '../model/getSource200Response';
@@ -54,7 +54,7 @@ export declare class SourcesApi {
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: CreateSource200Response;
+        body: CreateSource201Response;
     }>;
     deleteSource(sourceId: string, options?: {
         headers: {

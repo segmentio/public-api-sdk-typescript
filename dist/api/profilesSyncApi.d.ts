@@ -1,6 +1,6 @@
 /// <reference types="node" />
 import http from 'http';
-import { CreateProfilesWarehouse200Response } from '../model/createProfilesWarehouse200Response';
+import { CreateProfilesWarehouse201Response } from '../model/createProfilesWarehouse201Response';
 import { CreateProfilesWarehouseAlphaInput } from '../model/createProfilesWarehouseAlphaInput';
 import { ListProfilesWarehouseInSpace200Response } from '../model/listProfilesWarehouseInSpace200Response';
 import { ListSelectiveSyncsFromWarehouseAndSpace200Response } from '../model/listSelectiveSyncsFromWarehouseAndSpace200Response';
@@ -39,7 +39,7 @@ export declare class ProfilesSyncApi {
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: CreateProfilesWarehouse200Response;
+        body: CreateProfilesWarehouse201Response;
     }>;
     listProfilesWarehouseInSpace(spaceId: string, pagination?: PaginationInput, options?: {
         headers: {

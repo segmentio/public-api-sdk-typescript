@@ -1,9 +1,9 @@
 /// <reference types="node" />
 import http from 'http';
-import { AddConnectionFromSourceToWarehouse200Response } from '../model/addConnectionFromSourceToWarehouse200Response';
+import { AddConnectionFromSourceToWarehouse201Response } from '../model/addConnectionFromSourceToWarehouse201Response';
 import { CreateValidationInWarehouse200Response } from '../model/createValidationInWarehouse200Response';
 import { CreateValidationInWarehouseV1Input } from '../model/createValidationInWarehouseV1Input';
-import { CreateWarehouse200Response } from '../model/createWarehouse200Response';
+import { CreateWarehouse201Response } from '../model/createWarehouse201Response';
 import { CreateWarehouseV1Input } from '../model/createWarehouseV1Input';
 import { DeleteWarehouse200Response } from '../model/deleteWarehouse200Response';
 import { GetConnectionStateFromWarehouse200Response } from '../model/getConnectionStateFromWarehouse200Response';
@@ -43,7 +43,7 @@ export declare class WarehousesApi {
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: AddConnectionFromSourceToWarehouse200Response;
+        body: AddConnectionFromSourceToWarehouse201Response;
     }>;
     createValidationInWarehouse(CreateValidationInWarehouseV1Input: CreateValidationInWarehouseV1Input, options?: {
         headers: {
@@ -59,7 +59,7 @@ export declare class WarehousesApi {
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: CreateWarehouse200Response;
+        body: CreateWarehouse201Response;
     }>;
     deleteWarehouse(warehouseId: string, options?: {
         headers: {

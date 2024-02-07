@@ -1,6 +1,6 @@
 /// <reference types="node" />
 import http from 'http';
-import { CreateLabel200Response } from '../model/createLabel200Response';
+import { CreateLabel201Response } from '../model/createLabel201Response';
 import { CreateLabelV1Input } from '../model/createLabelV1Input';
 import { DeleteLabel200Response } from '../model/deleteLabel200Response';
 import { ListLabels200Response } from '../model/listLabels200Response';
@@ -33,7 +33,7 @@ export declare class LabelsApi {
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: CreateLabel200Response;
+        body: CreateLabel201Response;
     }>;
     deleteLabel(key: string, value: string, options?: {
         headers: {
