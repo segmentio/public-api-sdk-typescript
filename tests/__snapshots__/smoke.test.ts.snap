@@ -177,7 +177,7 @@ exports[`Smoke tests sends correct request and parses response for create 1`] = 
 
 exports[`Smoke tests sends correct request and parses response for create 2`] = `
 {
-  "body": CreateSource200Response {
+  "body": CreateSource201Response {
     "data": CreateSourceV1Output {
       "source": SourceV1 {
         "enabled": true,

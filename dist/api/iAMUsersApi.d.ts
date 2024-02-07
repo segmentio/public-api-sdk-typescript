@@ -2,7 +2,7 @@
 import http from 'http';
 import { AddPermissionsToUser200Response } from '../model/addPermissionsToUser200Response';
 import { AddPermissionsToUserV1Input } from '../model/addPermissionsToUserV1Input';
-import { CreateInvites200Response } from '../model/createInvites200Response';
+import { CreateInvites201Response } from '../model/createInvites201Response';
 import { CreateInvitesV1Input } from '../model/createInvitesV1Input';
 import { DeleteInvites200Response } from '../model/deleteInvites200Response';
 import { DeleteUsers200Response } from '../model/deleteUsers200Response';
@@ -50,7 +50,7 @@ export declare class IAMUsersApi {
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: CreateInvites200Response;
+        body: CreateInvites201Response;
     }>;
     deleteInvites(emails: Array<string>, options?: {
         headers: {

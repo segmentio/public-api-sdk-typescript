@@ -2,7 +2,7 @@
 import http from 'http';
 import { CreateReverseETLManualSync200Response } from '../model/createReverseETLManualSync200Response';
 import { CreateReverseETLManualSyncInput } from '../model/createReverseETLManualSyncInput';
-import { CreateReverseEtlModel200Response } from '../model/createReverseEtlModel200Response';
+import { CreateReverseEtlModel201Response } from '../model/createReverseEtlModel201Response';
 import { CreateReverseEtlModelInput } from '../model/createReverseEtlModelInput';
 import { DeleteReverseEtlModel200Response } from '../model/deleteReverseEtlModel200Response';
 import { GetReverseEtlModel200Response } from '../model/getReverseEtlModel200Response';
@@ -47,7 +47,7 @@ export declare class ReverseETLApi {
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: CreateReverseEtlModel200Response;
+        body: CreateReverseEtlModel201Response;
     }>;
     deleteReverseEtlModel(modelId: string, options?: {
         headers: {

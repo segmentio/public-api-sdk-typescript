@@ -189,7 +189,7 @@ var ProfilesSyncApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateProfilesWarehouse200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateProfilesWarehouse201Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
