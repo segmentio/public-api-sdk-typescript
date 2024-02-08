@@ -4,6 +4,7 @@ export declare class RegulationListEntryV1 {
     'subjects': Array<string>;
     'status': RegulationListEntryV1.StatusEnum;
     'createdAt': string;
+    'regulationType': RegulationListEntryV1.RegulationTypeEnum;
     'finishedAt'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
@@ -26,5 +27,12 @@ export declare namespace RegulationListEntryV1 {
         NOT_SUPPORTED,
         PARTIAL_SUCCESS,
         RUNNING
+    }
+    enum RegulationTypeEnum {
+        DELETE_INTERNAL,
+        DELETE_ONLY,
+        SUPPRESS_ONLY,
+        SUPPRESS_WITH_DELETE,
+        UNSUPPRESS
     }
 }

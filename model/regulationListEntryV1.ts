@@ -13,11 +13,33 @@
 import { RequestFile } from './models';
 
 export class RegulationListEntryV1 {
+    /**
+     * The id of the regulate request.
+     */
     'id': string;
+    /**
+     * The subject type.
+     */
     'subjectType': string;
+    /**
+     * The list of `userId` or `objectId` values of the subjects to regulate.
+     */
     'subjects': Array<string>;
+    /**
+     * The current status of the regulate request.
+     */
     'status': RegulationListEntryV1.StatusEnum;
+    /**
+     * The timestamp of the creation of the request.
+     */
     'createdAt': string;
+    /**
+     * The regulation type.
+     */
+    'regulationType': RegulationListEntryV1.RegulationTypeEnum;
+    /**
+     * The timestamp of when the request finished.
+     */
     'finishedAt'?: string;
 
     static discriminator: string | undefined = undefined;
@@ -53,6 +75,11 @@ export class RegulationListEntryV1 {
             type: 'string',
         },
         {
+            name: 'regulationType',
+            baseName: 'regulationType',
+            type: 'RegulationListEntryV1.RegulationTypeEnum',
+        },
+        {
             name: 'finishedAt',
             baseName: 'finishedAt',
             type: 'string',
@@ -73,5 +100,12 @@ export namespace RegulationListEntryV1 {
         NOT_SUPPORTED = <any>'NOT_SUPPORTED',
         PARTIAL_SUCCESS = <any>'PARTIAL_SUCCESS',
         RUNNING = <any>'RUNNING',
+    }
+    export enum RegulationTypeEnum {
+        DELETE_INTERNAL = <any>'DELETE_INTERNAL',
+        DELETE_ONLY = <any>'DELETE_ONLY',
+        SUPPRESS_ONLY = <any>'SUPPRESS_ONLY',
+        SUPPRESS_WITH_DELETE = <any>'SUPPRESS_WITH_DELETE',
+        UNSUPPRESS = <any>'UNSUPPRESS',
     }
 }

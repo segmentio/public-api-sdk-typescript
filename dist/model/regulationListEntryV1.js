@@ -35,6 +35,11 @@ var RegulationListEntryV1 = (function () {
             type: 'string',
         },
         {
+            name: 'regulationType',
+            baseName: 'regulationType',
+            type: 'RegulationListEntryV1.RegulationTypeEnum',
+        },
+        {
             name: 'finishedAt',
             baseName: 'finishedAt',
             type: 'string',
@@ -54,6 +59,14 @@ exports.RegulationListEntryV1 = RegulationListEntryV1;
         StatusEnum[StatusEnum["PARTIAL_SUCCESS"] = 'PARTIAL_SUCCESS'] = "PARTIAL_SUCCESS";
         StatusEnum[StatusEnum["RUNNING"] = 'RUNNING'] = "RUNNING";
     })(StatusEnum = RegulationListEntryV1.StatusEnum || (RegulationListEntryV1.StatusEnum = {}));
+    var RegulationTypeEnum;
+    (function (RegulationTypeEnum) {
+        RegulationTypeEnum[RegulationTypeEnum["DELETE_INTERNAL"] = 'DELETE_INTERNAL'] = "DELETE_INTERNAL";
+        RegulationTypeEnum[RegulationTypeEnum["DELETE_ONLY"] = 'DELETE_ONLY'] = "DELETE_ONLY";
+        RegulationTypeEnum[RegulationTypeEnum["SUPPRESS_ONLY"] = 'SUPPRESS_ONLY'] = "SUPPRESS_ONLY";
+        RegulationTypeEnum[RegulationTypeEnum["SUPPRESS_WITH_DELETE"] = 'SUPPRESS_WITH_DELETE'] = "SUPPRESS_WITH_DELETE";
+        RegulationTypeEnum[RegulationTypeEnum["UNSUPPRESS"] = 'UNSUPPRESS'] = "UNSUPPRESS";
+    })(RegulationTypeEnum = RegulationListEntryV1.RegulationTypeEnum || (RegulationListEntryV1.RegulationTypeEnum = {}));
 })(RegulationListEntryV1 = exports.RegulationListEntryV1 || (exports.RegulationListEntryV1 = {}));
 exports.RegulationListEntryV1 = RegulationListEntryV1;
 //# sourceMappingURL=regulationListEntryV1.js.map
