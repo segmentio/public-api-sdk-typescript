@@ -1131,6 +1131,8 @@ let enumsMap: { [index: string]: any } = {
     'PermissionResourceV1.TypeEnum': PermissionResourceV1.TypeEnum,
     'Regulation.OverallStatusEnum': Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': RegulationListEntryV1.StatusEnum,
+    'RegulationListEntryV1.RegulationTypeEnum':
+        RegulationListEntryV1.RegulationTypeEnum,
     'RemoveAudienceFromSpaceAlphaOutput.StatusEnum':
         RemoveAudienceFromSpaceAlphaOutput.StatusEnum,
     'RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum':
