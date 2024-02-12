@@ -3,6 +3,7 @@ export declare class WarehouseSelectiveSyncItemV1 {
     'collection': string;
     'warehouseId': string;
     'enabled': boolean;
+    'source'?: string;
     'properties': {
         [key: string]: any;
     };

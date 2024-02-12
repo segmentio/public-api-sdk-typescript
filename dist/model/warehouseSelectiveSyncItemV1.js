@@ -30,6 +30,11 @@ var WarehouseSelectiveSyncItemV1 = (function () {
             type: 'boolean',
         },
         {
+            name: 'source',
+            baseName: 'source',
+            type: 'string',
+        },
+        {
             name: 'properties',
             baseName: 'properties',
             type: '{ [key: string]: any; }',
