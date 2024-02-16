@@ -221,6 +221,8 @@ __exportStar(require("./getMessagingSubscriptionFailureResponse"), exports);
 __exportStar(require("./getMessagingSubscriptionSuccessResponse"), exports);
 __exportStar(require("./getRegulation200Response"), exports);
 __exportStar(require("./getRegulationV1Output"), exports);
+__exportStar(require("./getReverseETLSyncFromModel200Response"), exports);
+__exportStar(require("./getReverseETLSyncFromModelOutput"), exports);
 __exportStar(require("./getReverseEtlModel200Response"), exports);
 __exportStar(require("./getReverseEtlModelOutput"), exports);
 __exportStar(require("./getSource200Response"), exports);
@@ -426,6 +428,7 @@ __exportStar(require("./restoreFunctionVersion200Response"), exports);
 __exportStar(require("./restoreFunctionVersionAlphaInput"), exports);
 __exportStar(require("./restoreFunctionVersionAlphaOutput"), exports);
 __exportStar(require("./reverseETLManualSyncJobOutput"), exports);
+__exportStar(require("./reverseETLSyncOutput"), exports);
 __exportStar(require("./reverseEtlModel"), exports);
 __exportStar(require("./roleV1"), exports);
 __exportStar(require("./ruleInputV1"), exports);
@@ -442,6 +445,8 @@ __exportStar(require("./spaceWarehouseSchemaOverride"), exports);
 __exportStar(require("./spaceWarehouseSelectiveSyncItemAlpha"), exports);
 __exportStar(require("./streamStatusV1"), exports);
 __exportStar(require("./suppressedInner"), exports);
+__exportStar(require("./syncExtractPhase"), exports);
+__exportStar(require("./syncLoadPhase"), exports);
 __exportStar(require("./syncNoticeV1"), exports);
 __exportStar(require("./syncV1"), exports);
 __exportStar(require("./trackSourceSettingsV1"), exports);
@@ -725,6 +730,8 @@ var getMessagingSubscriptionFailureResponse_1 = require("./getMessagingSubscript
 var getMessagingSubscriptionSuccessResponse_1 = require("./getMessagingSubscriptionSuccessResponse");
 var getRegulation200Response_1 = require("./getRegulation200Response");
 var getRegulationV1Output_1 = require("./getRegulationV1Output");
+var getReverseETLSyncFromModel200Response_1 = require("./getReverseETLSyncFromModel200Response");
+var getReverseETLSyncFromModelOutput_1 = require("./getReverseETLSyncFromModelOutput");
 var getReverseEtlModel200Response_1 = require("./getReverseEtlModel200Response");
 var getReverseEtlModelOutput_1 = require("./getReverseEtlModelOutput");
 var getSource200Response_1 = require("./getSource200Response");
@@ -930,6 +937,7 @@ var restoreFunctionVersion200Response_1 = require("./restoreFunctionVersion200Re
 var restoreFunctionVersionAlphaInput_1 = require("./restoreFunctionVersionAlphaInput");
 var restoreFunctionVersionAlphaOutput_1 = require("./restoreFunctionVersionAlphaOutput");
 var reverseETLManualSyncJobOutput_1 = require("./reverseETLManualSyncJobOutput");
+var reverseETLSyncOutput_1 = require("./reverseETLSyncOutput");
 var reverseEtlModel_1 = require("./reverseEtlModel");
 var roleV1_1 = require("./roleV1");
 var ruleInputV1_1 = require("./ruleInputV1");
@@ -946,6 +954,8 @@ var spaceWarehouseSchemaOverride_1 = require("./spaceWarehouseSchemaOverride");
 var spaceWarehouseSelectiveSyncItemAlpha_1 = require("./spaceWarehouseSelectiveSyncItemAlpha");
 var streamStatusV1_1 = require("./streamStatusV1");
 var suppressedInner_1 = require("./suppressedInner");
+var syncExtractPhase_1 = require("./syncExtractPhase");
+var syncLoadPhase_1 = require("./syncLoadPhase");
 var syncNoticeV1_1 = require("./syncNoticeV1");
 var syncV1_1 = require("./syncV1");
 var trackSourceSettingsV1_1 = require("./trackSourceSettingsV1");
@@ -1327,6 +1337,8 @@ var typeMap = {
     GetMessagingSubscriptionSuccessResponse: getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse,
     GetRegulation200Response: getRegulation200Response_1.GetRegulation200Response,
     GetRegulationV1Output: getRegulationV1Output_1.GetRegulationV1Output,
+    GetReverseETLSyncFromModel200Response: getReverseETLSyncFromModel200Response_1.GetReverseETLSyncFromModel200Response,
+    GetReverseETLSyncFromModelOutput: getReverseETLSyncFromModelOutput_1.GetReverseETLSyncFromModelOutput,
     GetReverseEtlModel200Response: getReverseEtlModel200Response_1.GetReverseEtlModel200Response,
     GetReverseEtlModelOutput: getReverseEtlModelOutput_1.GetReverseEtlModelOutput,
     GetSource200Response: getSource200Response_1.GetSource200Response,
@@ -1532,6 +1544,7 @@ var typeMap = {
     RestoreFunctionVersionAlphaInput: restoreFunctionVersionAlphaInput_1.RestoreFunctionVersionAlphaInput,
     RestoreFunctionVersionAlphaOutput: restoreFunctionVersionAlphaOutput_1.RestoreFunctionVersionAlphaOutput,
     ReverseETLManualSyncJobOutput: reverseETLManualSyncJobOutput_1.ReverseETLManualSyncJobOutput,
+    ReverseETLSyncOutput: reverseETLSyncOutput_1.ReverseETLSyncOutput,
     ReverseEtlModel: reverseEtlModel_1.ReverseEtlModel,
     RoleV1: roleV1_1.RoleV1,
     RuleInputV1: ruleInputV1_1.RuleInputV1,
@@ -1548,6 +1561,8 @@ var typeMap = {
     SpaceWarehouseSelectiveSyncItemAlpha: spaceWarehouseSelectiveSyncItemAlpha_1.SpaceWarehouseSelectiveSyncItemAlpha,
     StreamStatusV1: streamStatusV1_1.StreamStatusV1,
     SuppressedInner: suppressedInner_1.SuppressedInner,
+    SyncExtractPhase: syncExtractPhase_1.SyncExtractPhase,
+    SyncLoadPhase: syncLoadPhase_1.SyncLoadPhase,
     SyncNoticeV1: syncNoticeV1_1.SyncNoticeV1,
     SyncV1: syncV1_1.SyncV1,
     TrackSourceSettingsV1: trackSourceSettingsV1_1.TrackSourceSettingsV1,

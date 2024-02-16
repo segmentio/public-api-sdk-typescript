@@ -5,6 +5,7 @@ import { CreateReverseETLManualSyncInput } from '../model/createReverseETLManual
 import { CreateReverseEtlModel201Response } from '../model/createReverseEtlModel201Response';
 import { CreateReverseEtlModelInput } from '../model/createReverseEtlModelInput';
 import { DeleteReverseEtlModel200Response } from '../model/deleteReverseEtlModel200Response';
+import { GetReverseETLSyncFromModel200Response } from '../model/getReverseETLSyncFromModel200Response';
 import { GetReverseEtlModel200Response } from '../model/getReverseEtlModel200Response';
 import { ListReverseEtlModels200Response } from '../model/listReverseEtlModels200Response';
 import { PaginationInput } from '../model/paginationInput';
@@ -56,6 +57,14 @@ export declare class ReverseETLApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: DeleteReverseEtlModel200Response;
+    }>;
+    getReverseETLSyncFromModel(modelId: string, syncId: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: GetReverseETLSyncFromModel200Response;
     }>;
     getReverseEtlModel(modelId: string, options?: {
         headers: {

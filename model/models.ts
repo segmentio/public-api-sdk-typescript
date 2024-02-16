@@ -206,6 +206,8 @@ export * from './getMessagingSubscriptionFailureResponse';
 export * from './getMessagingSubscriptionSuccessResponse';
 export * from './getRegulation200Response';
 export * from './getRegulationV1Output';
+export * from './getReverseETLSyncFromModel200Response';
+export * from './getReverseETLSyncFromModelOutput';
 export * from './getReverseEtlModel200Response';
 export * from './getReverseEtlModelOutput';
 export * from './getSource200Response';
@@ -411,6 +413,7 @@ export * from './restoreFunctionVersion200Response';
 export * from './restoreFunctionVersionAlphaInput';
 export * from './restoreFunctionVersionAlphaOutput';
 export * from './reverseETLManualSyncJobOutput';
+export * from './reverseETLSyncOutput';
 export * from './reverseEtlModel';
 export * from './roleV1';
 export * from './ruleInputV1';
@@ -427,6 +430,8 @@ export * from './spaceWarehouseSchemaOverride';
 export * from './spaceWarehouseSelectiveSyncItemAlpha';
 export * from './streamStatusV1';
 export * from './suppressedInner';
+export * from './syncExtractPhase';
+export * from './syncLoadPhase';
 export * from './syncNoticeV1';
 export * from './syncV1';
 export * from './trackSourceSettingsV1';
@@ -723,6 +728,8 @@ import { GetMessagingSubscriptionFailureResponse } from './getMessagingSubscript
 import { GetMessagingSubscriptionSuccessResponse } from './getMessagingSubscriptionSuccessResponse';
 import { GetRegulation200Response } from './getRegulation200Response';
 import { GetRegulationV1Output } from './getRegulationV1Output';
+import { GetReverseETLSyncFromModel200Response } from './getReverseETLSyncFromModel200Response';
+import { GetReverseETLSyncFromModelOutput } from './getReverseETLSyncFromModelOutput';
 import { GetReverseEtlModel200Response } from './getReverseEtlModel200Response';
 import { GetReverseEtlModelOutput } from './getReverseEtlModelOutput';
 import { GetSource200Response } from './getSource200Response';
@@ -928,6 +935,7 @@ import { RestoreFunctionVersion200Response } from './restoreFunctionVersion200Re
 import { RestoreFunctionVersionAlphaInput } from './restoreFunctionVersionAlphaInput';
 import { RestoreFunctionVersionAlphaOutput } from './restoreFunctionVersionAlphaOutput';
 import { ReverseETLManualSyncJobOutput } from './reverseETLManualSyncJobOutput';
+import { ReverseETLSyncOutput } from './reverseETLSyncOutput';
 import { ReverseEtlModel } from './reverseEtlModel';
 import { RoleV1 } from './roleV1';
 import { RuleInputV1 } from './ruleInputV1';
@@ -944,6 +952,8 @@ import { SpaceWarehouseSchemaOverride } from './spaceWarehouseSchemaOverride';
 import { SpaceWarehouseSelectiveSyncItemAlpha } from './spaceWarehouseSelectiveSyncItemAlpha';
 import { StreamStatusV1 } from './streamStatusV1';
 import { SuppressedInner } from './suppressedInner';
+import { SyncExtractPhase } from './syncExtractPhase';
+import { SyncLoadPhase } from './syncLoadPhase';
 import { SyncNoticeV1 } from './syncNoticeV1';
 import { SyncV1 } from './syncV1';
 import { TrackSourceSettingsV1 } from './trackSourceSettingsV1';
@@ -1416,6 +1426,9 @@ let typeMap: { [index: string]: any } = {
         GetMessagingSubscriptionSuccessResponse,
     GetRegulation200Response: GetRegulation200Response,
     GetRegulationV1Output: GetRegulationV1Output,
+    GetReverseETLSyncFromModel200Response:
+        GetReverseETLSyncFromModel200Response,
+    GetReverseETLSyncFromModelOutput: GetReverseETLSyncFromModelOutput,
     GetReverseEtlModel200Response: GetReverseEtlModel200Response,
     GetReverseEtlModelOutput: GetReverseEtlModelOutput,
     GetSource200Response: GetSource200Response,
@@ -1671,6 +1684,7 @@ let typeMap: { [index: string]: any } = {
     RestoreFunctionVersionAlphaInput: RestoreFunctionVersionAlphaInput,
     RestoreFunctionVersionAlphaOutput: RestoreFunctionVersionAlphaOutput,
     ReverseETLManualSyncJobOutput: ReverseETLManualSyncJobOutput,
+    ReverseETLSyncOutput: ReverseETLSyncOutput,
     ReverseEtlModel: ReverseEtlModel,
     RoleV1: RoleV1,
     RuleInputV1: RuleInputV1,
@@ -1687,6 +1701,8 @@ let typeMap: { [index: string]: any } = {
     SpaceWarehouseSelectiveSyncItemAlpha: SpaceWarehouseSelectiveSyncItemAlpha,
     StreamStatusV1: StreamStatusV1,
     SuppressedInner: SuppressedInner,
+    SyncExtractPhase: SyncExtractPhase,
+    SyncLoadPhase: SyncLoadPhase,
     SyncNoticeV1: SyncNoticeV1,
     SyncV1: SyncV1,
     TrackSourceSettingsV1: TrackSourceSettingsV1,
