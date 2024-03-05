@@ -328,6 +328,8 @@ __exportStar(require("./listSourcesAlphaOutput"), exports);
 __exportStar(require("./listSourcesFromTrackingPlan200Response"), exports);
 __exportStar(require("./listSourcesFromTrackingPlanV1Output"), exports);
 __exportStar(require("./listSourcesV1Output"), exports);
+__exportStar(require("./listSpaces200Response"), exports);
+__exportStar(require("./listSpacesAlphaOutput"), exports);
 __exportStar(require("./listSubscriptionsFromDestination200Response"), exports);
 __exportStar(require("./listSubscriptionsFromDestinationAlphaOutput"), exports);
 __exportStar(require("./listSuppressions200Response"), exports);
@@ -837,6 +839,8 @@ var listSourcesAlphaOutput_1 = require("./listSourcesAlphaOutput");
 var listSourcesFromTrackingPlan200Response_1 = require("./listSourcesFromTrackingPlan200Response");
 var listSourcesFromTrackingPlanV1Output_1 = require("./listSourcesFromTrackingPlanV1Output");
 var listSourcesV1Output_1 = require("./listSourcesV1Output");
+var listSpaces200Response_1 = require("./listSpaces200Response");
+var listSpacesAlphaOutput_1 = require("./listSpacesAlphaOutput");
 var listSubscriptionsFromDestination200Response_1 = require("./listSubscriptionsFromDestination200Response");
 var listSubscriptionsFromDestinationAlphaOutput_1 = require("./listSubscriptionsFromDestinationAlphaOutput");
 var listSuppressions200Response_1 = require("./listSuppressions200Response");
@@ -1444,6 +1448,8 @@ var typeMap = {
     ListSourcesFromTrackingPlan200Response: listSourcesFromTrackingPlan200Response_1.ListSourcesFromTrackingPlan200Response,
     ListSourcesFromTrackingPlanV1Output: listSourcesFromTrackingPlanV1Output_1.ListSourcesFromTrackingPlanV1Output,
     ListSourcesV1Output: listSourcesV1Output_1.ListSourcesV1Output,
+    ListSpaces200Response: listSpaces200Response_1.ListSpaces200Response,
+    ListSpacesAlphaOutput: listSpacesAlphaOutput_1.ListSpacesAlphaOutput,
     ListSubscriptionsFromDestination200Response: listSubscriptionsFromDestination200Response_1.ListSubscriptionsFromDestination200Response,
     ListSubscriptionsFromDestinationAlphaOutput: listSubscriptionsFromDestinationAlphaOutput_1.ListSubscriptionsFromDestinationAlphaOutput,
     ListSuppressions200Response: listSuppressions200Response_1.ListSuppressions200Response,
