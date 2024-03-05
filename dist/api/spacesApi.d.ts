@@ -3,6 +3,8 @@ import http from 'http';
 import { BatchQueryMessagingSubscriptionsForSpace200Response } from '../model/batchQueryMessagingSubscriptionsForSpace200Response';
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaInput } from '../model/batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 import { GetSpace200Response } from '../model/getSpace200Response';
+import { ListSpaces200Response } from '../model/listSpaces200Response';
+import { PaginationInput } from '../model/paginationInput';
 import { ReplaceMessagingSubscriptionsInSpaces200Response } from '../model/replaceMessagingSubscriptionsInSpaces200Response';
 import { ReplaceMessagingSubscriptionsInSpacesAlphaInput } from '../model/replaceMessagingSubscriptionsInSpacesAlphaInput';
 import { Authentication, Interceptor } from '../model/models';
@@ -43,6 +45,14 @@ export declare class SpacesApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: GetSpace200Response;
+    }>;
+    listSpaces(pagination: PaginationInput, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: ListSpaces200Response;
     }>;
     replaceMessagingSubscriptionsInSpaces(spaceId: string, ReplaceMessagingSubscriptionsInSpacesAlphaInput: ReplaceMessagingSubscriptionsInSpacesAlphaInput, options?: {
         headers: {

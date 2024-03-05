@@ -313,6 +313,8 @@ export * from './listSourcesAlphaOutput';
 export * from './listSourcesFromTrackingPlan200Response';
 export * from './listSourcesFromTrackingPlanV1Output';
 export * from './listSourcesV1Output';
+export * from './listSpaces200Response';
+export * from './listSpacesAlphaOutput';
 export * from './listSubscriptionsFromDestination200Response';
 export * from './listSubscriptionsFromDestinationAlphaOutput';
 export * from './listSuppressions200Response';
@@ -835,6 +837,8 @@ import { ListSourcesAlphaOutput } from './listSourcesAlphaOutput';
 import { ListSourcesFromTrackingPlan200Response } from './listSourcesFromTrackingPlan200Response';
 import { ListSourcesFromTrackingPlanV1Output } from './listSourcesFromTrackingPlanV1Output';
 import { ListSourcesV1Output } from './listSourcesV1Output';
+import { ListSpaces200Response } from './listSpaces200Response';
+import { ListSpacesAlphaOutput } from './listSpacesAlphaOutput';
 import { ListSubscriptionsFromDestination200Response } from './listSubscriptionsFromDestination200Response';
 import { ListSubscriptionsFromDestinationAlphaOutput } from './listSubscriptionsFromDestinationAlphaOutput';
 import { ListSuppressions200Response } from './listSuppressions200Response';
@@ -1559,6 +1563,8 @@ let typeMap: { [index: string]: any } = {
         ListSourcesFromTrackingPlan200Response,
     ListSourcesFromTrackingPlanV1Output: ListSourcesFromTrackingPlanV1Output,
     ListSourcesV1Output: ListSourcesV1Output,
+    ListSpaces200Response: ListSpaces200Response,
+    ListSpacesAlphaOutput: ListSpacesAlphaOutput,
     ListSubscriptionsFromDestination200Response:
         ListSubscriptionsFromDestination200Response,
     ListSubscriptionsFromDestinationAlphaOutput:

@@ -314,6 +314,8 @@ export * from './listSourcesAlphaOutput';
 export * from './listSourcesFromTrackingPlan200Response';
 export * from './listSourcesFromTrackingPlanV1Output';
 export * from './listSourcesV1Output';
+export * from './listSpaces200Response';
+export * from './listSpacesAlphaOutput';
 export * from './listSubscriptionsFromDestination200Response';
 export * from './listSubscriptionsFromDestinationAlphaOutput';
 export * from './listSuppressions200Response';
