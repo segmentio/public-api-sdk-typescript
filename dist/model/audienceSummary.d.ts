@@ -1,4 +1,4 @@
-import { Definition } from './definition';
+import { Definition1 } from './definition1';
 export declare class AudienceSummary {
     'id': string;
     'spaceId': string;
@@ -6,7 +6,7 @@ export declare class AudienceSummary {
     'description': string;
     'key': string;
     'enabled': boolean;
-    'definition': Definition | null;
+    'definition': Definition1 | null;
     'status'?: string;
     'createdBy': string;
     'updatedBy': string;
