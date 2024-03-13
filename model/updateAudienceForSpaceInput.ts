@@ -19,7 +19,7 @@ export class UpdateAudienceForSpaceInput {
     /**
      * Enabled/disabled status for the audience.
      */
-    'enabled': boolean;
+    'enabled'?: boolean;
 
     static discriminator: string | undefined = undefined;
 

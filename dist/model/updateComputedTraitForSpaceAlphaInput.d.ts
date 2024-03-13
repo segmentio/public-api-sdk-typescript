@@ -1,5 +1,5 @@
 export declare class UpdateComputedTraitForSpaceAlphaInput {
-    'enabled': boolean;
+    'enabled'?: boolean;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
