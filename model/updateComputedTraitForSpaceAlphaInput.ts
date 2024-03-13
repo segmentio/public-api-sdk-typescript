@@ -19,7 +19,7 @@ export class UpdateComputedTraitForSpaceAlphaInput {
     /**
      * Enabled/disabled status for the computed trait.
      */
-    'enabled': boolean;
+    'enabled'?: boolean;
 
     static discriminator: string | undefined = undefined;
 

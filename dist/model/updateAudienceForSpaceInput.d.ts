@@ -1,5 +1,5 @@
 export declare class UpdateAudienceForSpaceInput {
-    'enabled': boolean;
+    'enabled'?: boolean;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
