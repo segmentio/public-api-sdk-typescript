@@ -153,6 +153,9 @@ __exportStar(require("./deleteUsersV1Output"), exports);
 __exportStar(require("./deleteWarehouse200Response"), exports);
 __exportStar(require("./deleteWarehouseV1Output"), exports);
 __exportStar(require("./deliveryMetricsSummaryBeta"), exports);
+__exportStar(require("./deliveryOverviewFilterBy"), exports);
+__exportStar(require("./deliveryOverviewMetricsDatapoint"), exports);
+__exportStar(require("./deliveryOverviewMetricsDataset"), exports);
 __exportStar(require("./destinationFilterActionV1"), exports);
 __exportStar(require("./destinationFilterV1"), exports);
 __exportStar(require("./destinationMetadataActionFieldV1"), exports);
@@ -198,12 +201,14 @@ __exportStar(require("./getDailyWorkspaceAPICallsUsage200Response"), exports);
 __exportStar(require("./getDailyWorkspaceAPICallsUsageV1Output"), exports);
 __exportStar(require("./getDailyWorkspaceMTUUsage200Response"), exports);
 __exportStar(require("./getDailyWorkspaceMTUUsageV1Output"), exports);
+__exportStar(require("./getDeliveryOverviewMetricsAlphaOutput"), exports);
 __exportStar(require("./getDestination200Response"), exports);
 __exportStar(require("./getDestinationMetadata200Response"), exports);
 __exportStar(require("./getDestinationMetadataV1Output"), exports);
 __exportStar(require("./getDestinationV1Output"), exports);
 __exportStar(require("./getDestinationsCatalog200Response"), exports);
 __exportStar(require("./getDestinationsCatalogV1Output"), exports);
+__exportStar(require("./getEgressFailedMetricsFromDeliveryOverview200Response"), exports);
 __exportStar(require("./getEventsVolumeFromWorkspace200Response"), exports);
 __exportStar(require("./getEventsVolumeFromWorkspaceV1Output"), exports);
 __exportStar(require("./getEventsVolumeFromWorkspaceV1Query"), exports);
@@ -664,6 +669,9 @@ var deleteUsersV1Output_1 = require("./deleteUsersV1Output");
 var deleteWarehouse200Response_1 = require("./deleteWarehouse200Response");
 var deleteWarehouseV1Output_1 = require("./deleteWarehouseV1Output");
 var deliveryMetricsSummaryBeta_1 = require("./deliveryMetricsSummaryBeta");
+var deliveryOverviewFilterBy_1 = require("./deliveryOverviewFilterBy");
+var deliveryOverviewMetricsDatapoint_1 = require("./deliveryOverviewMetricsDatapoint");
+var deliveryOverviewMetricsDataset_1 = require("./deliveryOverviewMetricsDataset");
 var destinationFilterActionV1_1 = require("./destinationFilterActionV1");
 var destinationFilterV1_1 = require("./destinationFilterV1");
 var destinationMetadataActionFieldV1_1 = require("./destinationMetadataActionFieldV1");
@@ -709,12 +717,14 @@ var getDailyWorkspaceAPICallsUsage200Response_1 = require("./getDailyWorkspaceAP
 var getDailyWorkspaceAPICallsUsageV1Output_1 = require("./getDailyWorkspaceAPICallsUsageV1Output");
 var getDailyWorkspaceMTUUsage200Response_1 = require("./getDailyWorkspaceMTUUsage200Response");
 var getDailyWorkspaceMTUUsageV1Output_1 = require("./getDailyWorkspaceMTUUsageV1Output");
+var getDeliveryOverviewMetricsAlphaOutput_1 = require("./getDeliveryOverviewMetricsAlphaOutput");
 var getDestination200Response_1 = require("./getDestination200Response");
 var getDestinationMetadata200Response_1 = require("./getDestinationMetadata200Response");
 var getDestinationMetadataV1Output_1 = require("./getDestinationMetadataV1Output");
 var getDestinationV1Output_1 = require("./getDestinationV1Output");
 var getDestinationsCatalog200Response_1 = require("./getDestinationsCatalog200Response");
 var getDestinationsCatalogV1Output_1 = require("./getDestinationsCatalogV1Output");
+var getEgressFailedMetricsFromDeliveryOverview200Response_1 = require("./getEgressFailedMetricsFromDeliveryOverview200Response");
 var getEventsVolumeFromWorkspace200Response_1 = require("./getEventsVolumeFromWorkspace200Response");
 var getEventsVolumeFromWorkspaceV1Output_1 = require("./getEventsVolumeFromWorkspaceV1Output");
 var getEventsVolumeFromWorkspaceV1Query_1 = require("./getEventsVolumeFromWorkspaceV1Query");
@@ -1273,6 +1283,9 @@ var typeMap = {
     DeleteWarehouse200Response: deleteWarehouse200Response_1.DeleteWarehouse200Response,
     DeleteWarehouseV1Output: deleteWarehouseV1Output_1.DeleteWarehouseV1Output,
     DeliveryMetricsSummaryBeta: deliveryMetricsSummaryBeta_1.DeliveryMetricsSummaryBeta,
+    DeliveryOverviewFilterBy: deliveryOverviewFilterBy_1.DeliveryOverviewFilterBy,
+    DeliveryOverviewMetricsDatapoint: deliveryOverviewMetricsDatapoint_1.DeliveryOverviewMetricsDatapoint,
+    DeliveryOverviewMetricsDataset: deliveryOverviewMetricsDataset_1.DeliveryOverviewMetricsDataset,
     DestinationFilterActionV1: destinationFilterActionV1_1.DestinationFilterActionV1,
     DestinationFilterV1: destinationFilterV1_1.DestinationFilterV1,
     DestinationMetadataActionFieldV1: destinationMetadataActionFieldV1_1.DestinationMetadataActionFieldV1,
@@ -1318,12 +1331,14 @@ var typeMap = {
     GetDailyWorkspaceAPICallsUsageV1Output: getDailyWorkspaceAPICallsUsageV1Output_1.GetDailyWorkspaceAPICallsUsageV1Output,
     GetDailyWorkspaceMTUUsage200Response: getDailyWorkspaceMTUUsage200Response_1.GetDailyWorkspaceMTUUsage200Response,
     GetDailyWorkspaceMTUUsageV1Output: getDailyWorkspaceMTUUsageV1Output_1.GetDailyWorkspaceMTUUsageV1Output,
+    GetDeliveryOverviewMetricsAlphaOutput: getDeliveryOverviewMetricsAlphaOutput_1.GetDeliveryOverviewMetricsAlphaOutput,
     GetDestination200Response: getDestination200Response_1.GetDestination200Response,
     GetDestinationMetadata200Response: getDestinationMetadata200Response_1.GetDestinationMetadata200Response,
     GetDestinationMetadataV1Output: getDestinationMetadataV1Output_1.GetDestinationMetadataV1Output,
     GetDestinationV1Output: getDestinationV1Output_1.GetDestinationV1Output,
     GetDestinationsCatalog200Response: getDestinationsCatalog200Response_1.GetDestinationsCatalog200Response,
     GetDestinationsCatalogV1Output: getDestinationsCatalogV1Output_1.GetDestinationsCatalogV1Output,
+    GetEgressFailedMetricsFromDeliveryOverview200Response: getEgressFailedMetricsFromDeliveryOverview200Response_1.GetEgressFailedMetricsFromDeliveryOverview200Response,
     GetEventsVolumeFromWorkspace200Response: getEventsVolumeFromWorkspace200Response_1.GetEventsVolumeFromWorkspace200Response,
     GetEventsVolumeFromWorkspaceV1Output: getEventsVolumeFromWorkspaceV1Output_1.GetEventsVolumeFromWorkspaceV1Output,
     GetEventsVolumeFromWorkspaceV1Query: getEventsVolumeFromWorkspaceV1Query_1.GetEventsVolumeFromWorkspaceV1Query,
