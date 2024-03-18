@@ -42,7 +42,7 @@ var ComputedTraitSummary = (function () {
         {
             name: 'definition',
             baseName: 'definition',
-            type: 'Definition1',
+            type: 'Definition',
         },
         {
             name: 'status',
