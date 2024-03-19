@@ -4,6 +4,7 @@ import { AddLabelsToSource200Response } from '../model/addLabelsToSource200Respo
 import { AddLabelsToSourceV1Input } from '../model/addLabelsToSourceV1Input';
 import { CreateSource201Response } from '../model/createSource201Response';
 import { CreateSourceV1Input } from '../model/createSourceV1Input';
+import { CreateWriteKeyForSource200Response } from '../model/createWriteKeyForSource200Response';
 import { DeleteSource200Response } from '../model/deleteSource200Response';
 import { GetSource200Response } from '../model/getSource200Response';
 import { ListConnectedDestinationsFromSource200Response } from '../model/listConnectedDestinationsFromSource200Response';
@@ -11,6 +12,7 @@ import { ListConnectedWarehousesFromSource200Response } from '../model/listConne
 import { ListSchemaSettingsInSource200Response } from '../model/listSchemaSettingsInSource200Response';
 import { ListSources200Response } from '../model/listSources200Response';
 import { PaginationInput } from '../model/paginationInput';
+import { RemoveWriteKeyFromSource200Response } from '../model/removeWriteKeyFromSource200Response';
 import { ReplaceLabelsInSource200Response } from '../model/replaceLabelsInSource200Response';
 import { ReplaceLabelsInSourceV1Input } from '../model/replaceLabelsInSourceV1Input';
 import { UpdateSchemaSettingsInSource200Response } from '../model/updateSchemaSettingsInSource200Response';
@@ -55,6 +57,14 @@ export declare class SourcesApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: CreateSource201Response;
+    }>;
+    createWriteKeyForSource(sourceId: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: CreateWriteKeyForSource200Response;
     }>;
     deleteSource(sourceId: string, options?: {
         headers: {
@@ -103,6 +113,14 @@ export declare class SourcesApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: ListSources200Response;
+    }>;
+    removeWriteKeyFromSource(sourceId: string, writeKey: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: RemoveWriteKeyFromSource200Response;
     }>;
     replaceLabelsInSource(sourceId: string, ReplaceLabelsInSourceV1Input: ReplaceLabelsInSourceV1Input, options?: {
         headers: {

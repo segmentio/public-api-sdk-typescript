@@ -103,6 +103,8 @@ export * from './createWarehouseV1Output';
 export * from './createWorkspaceRegulation200Response';
 export * from './createWorkspaceRegulationV1Input';
 export * from './createWorkspaceRegulationV1Output';
+export * from './createWriteKeyForSource200Response';
+export * from './createWriteKeyForSourceAlphaOutput';
 export * from './definition';
 export * from './definition1';
 export * from './deleteDestination200Response';
@@ -384,6 +386,8 @@ export * from './removeSubscriptionFromDestination200Response';
 export * from './removeSubscriptionFromDestinationAlphaOutput';
 export * from './removeUsersFromUserGroup200Response';
 export * from './removeUsersFromUserGroupV1Output';
+export * from './removeWriteKeyFromSource200Response';
+export * from './removeWriteKeyFromSourceAlphaOutput';
 export * from './replaceAdvancedSyncScheduleForWarehouse200Response';
 export * from './replaceAdvancedSyncScheduleForWarehouseV1Input';
 export * from './replaceAdvancedSyncScheduleForWarehouseV1Output';
@@ -627,6 +631,8 @@ import { CreateWarehouseV1Output } from './createWarehouseV1Output';
 import { CreateWorkspaceRegulation200Response } from './createWorkspaceRegulation200Response';
 import { CreateWorkspaceRegulationV1Input } from './createWorkspaceRegulationV1Input';
 import { CreateWorkspaceRegulationV1Output } from './createWorkspaceRegulationV1Output';
+import { CreateWriteKeyForSource200Response } from './createWriteKeyForSource200Response';
+import { CreateWriteKeyForSourceAlphaOutput } from './createWriteKeyForSourceAlphaOutput';
 import { Definition } from './definition';
 import { Definition1 } from './definition1';
 import { DeleteDestination200Response } from './deleteDestination200Response';
@@ -908,6 +914,8 @@ import { RemoveSubscriptionFromDestination200Response } from './removeSubscripti
 import { RemoveSubscriptionFromDestinationAlphaOutput } from './removeSubscriptionFromDestinationAlphaOutput';
 import { RemoveUsersFromUserGroup200Response } from './removeUsersFromUserGroup200Response';
 import { RemoveUsersFromUserGroupV1Output } from './removeUsersFromUserGroupV1Output';
+import { RemoveWriteKeyFromSource200Response } from './removeWriteKeyFromSource200Response';
+import { RemoveWriteKeyFromSourceAlphaOutput } from './removeWriteKeyFromSourceAlphaOutput';
 import { ReplaceAdvancedSyncScheduleForWarehouse200Response } from './replaceAdvancedSyncScheduleForWarehouse200Response';
 import { ReplaceAdvancedSyncScheduleForWarehouseV1Input } from './replaceAdvancedSyncScheduleForWarehouseV1Input';
 import { ReplaceAdvancedSyncScheduleForWarehouseV1Output } from './replaceAdvancedSyncScheduleForWarehouseV1Output';
@@ -1166,6 +1174,8 @@ let enumsMap: { [index: string]: any } = {
         RemoveSubscriptionFromDestinationAlphaOutput.StatusEnum,
     'RemoveUsersFromUserGroupV1Output.StatusEnum':
         RemoveUsersFromUserGroupV1Output.StatusEnum,
+    'RemoveWriteKeyFromSourceAlphaOutput.StatusEnum':
+        RemoveWriteKeyFromSourceAlphaOutput.StatusEnum,
     'ReplaceRulesInTrackingPlanV1Output.StatusEnum':
         ReplaceRulesInTrackingPlanV1Output.StatusEnum,
     'ResourceV1.TypeEnum': ResourceV1.TypeEnum,
@@ -1309,6 +1319,8 @@ let typeMap: { [index: string]: any } = {
     CreateWorkspaceRegulation200Response: CreateWorkspaceRegulation200Response,
     CreateWorkspaceRegulationV1Input: CreateWorkspaceRegulationV1Input,
     CreateWorkspaceRegulationV1Output: CreateWorkspaceRegulationV1Output,
+    CreateWriteKeyForSource200Response: CreateWriteKeyForSource200Response,
+    CreateWriteKeyForSourceAlphaOutput: CreateWriteKeyForSourceAlphaOutput,
     Definition: Definition,
     Definition1: Definition1,
     DeleteDestination200Response: DeleteDestination200Response,
@@ -1649,6 +1661,8 @@ let typeMap: { [index: string]: any } = {
         RemoveSubscriptionFromDestinationAlphaOutput,
     RemoveUsersFromUserGroup200Response: RemoveUsersFromUserGroup200Response,
     RemoveUsersFromUserGroupV1Output: RemoveUsersFromUserGroupV1Output,
+    RemoveWriteKeyFromSource200Response: RemoveWriteKeyFromSource200Response,
+    RemoveWriteKeyFromSourceAlphaOutput: RemoveWriteKeyFromSourceAlphaOutput,
     ReplaceAdvancedSyncScheduleForWarehouse200Response:
         ReplaceAdvancedSyncScheduleForWarehouse200Response,
     ReplaceAdvancedSyncScheduleForWarehouseV1Input:
