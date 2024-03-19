@@ -26,7 +26,7 @@ export declare class DeliveryOverviewApi {
     setApiKey(key: DeliveryOverviewApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    getEgressFailedMetricsFromDeliveryOverview(sourceId: string, startTime: string, endTime: string, granularity: 'day' | 'hour' | 'minute', destinationConfigId?: string, groupBy?: Array<string>, filter?: DeliveryOverviewFilterBy, pagination?: PaginationInput, subscriptionId?: string, options?: {
+    getEgressFailedMetricsFromDeliveryOverview(sourceId: string, destinationConfigId: string, startTime: string, endTime: string, granularity: 'day' | 'hour' | 'minute', pagination: PaginationInput, groupBy?: Array<string>, filter?: DeliveryOverviewFilterBy, subscriptionId?: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -50,7 +50,7 @@ export declare class DeliveryOverviewApi {
         response: http.IncomingMessage;
         body: GetEgressFailedMetricsFromDeliveryOverview200Response;
     }>;
-    getFilteredAtSourceMetricsFromDeliveryOverview(options?: {
+    getFilteredAtSourceMetricsFromDeliveryOverview(sourceId: string, startTime: string, endTime: string, granularity: 'day' | 'hour' | 'minute', pagination: PaginationInput, destinationConfigId?: string, groupBy?: Array<string>, filter?: DeliveryOverviewFilterBy, subscriptionId?: string, options?: {
         headers: {
             [name: string]: string;
         };

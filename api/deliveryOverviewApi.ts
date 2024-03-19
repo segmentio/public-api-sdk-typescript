@@ -112,24 +112,24 @@ export class DeliveryOverviewApi {
      * Get events that failed to be delivered to Destination.
      * @summary Get Egress Failed Metrics from Delivery Overview
      * @param sourceId The sourceId for the workspace.  This parameter exists in alpha.
+     * @param destinationConfigId The ID tied to a workspace destination. DestinationConfigId is required for Filtered at Destination, Failed Delivery, and Successful Delivery steps.  This parameter exists in alpha.
      * @param startTime The ISO8601 formatted timestamp corresponding to the beginning of the requested timeframe, inclusive.  This parameter exists in alpha.
      * @param endTime The ISO8601 formatted timestamp corresponding to the end of the requested timeframe, noninclusive.  This parameter exists in alpha.
      * @param granularity The size of each bucket in the requested window.  Based on the granularity chosen, there are restrictions on the time range you can query:  **Minute**: - Max time range: 4 hours - Oldest possible start time: 48 hours in the past  **Hour**: - Max Time range: 14 days - Oldest possible start time: 30 days in the past  **Day**: - Max time range: 30 days - Oldest possible start time: 30 days in the past  This parameter exists in alpha.
-     * @param destinationConfigId The ID tied to a workspace destination. DestinationConfigId is a required input for queries to Filtered at Destination, Failed Delivery, and Successful Delivery.  This parameter exists in alpha.
+     * @param pagination Params to specify the page cursor and count.  This parameter exists in alpha.
      * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and &#x60;appVersion&#x60;.  This parameter exists in alpha.
      * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;. Example: &#x60;filter: {discardReason: [\&#39;discard1\&#39;], eventName: [\&#39;name1\&#39;, \&#39;name2\&#39;], eventType: [\&#39;type1\&#39;]}&#x60;.  This parameter exists in alpha.
-     * @param pagination Optional params to specify the page cursor and count.  This parameter exists in alpha.
      * @param subscriptionId An optional filter for actions destinations, to filter by a specific action.  This parameter exists in alpha.
      */
     public async getEgressFailedMetricsFromDeliveryOverview(
         sourceId: string,
+        destinationConfigId: string,
         startTime: string,
         endTime: string,
         granularity: 'day' | 'hour' | 'minute',
-        destinationConfigId?: string,
+        pagination: PaginationInput,
         groupBy?: Array<string>,
         filter?: DeliveryOverviewFilterBy,
-        pagination?: PaginationInput,
         subscriptionId?: string,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
@@ -162,6 +162,13 @@ export class DeliveryOverviewApi {
             );
         }
 
+        // verify required parameter 'destinationConfigId' is not null or undefined
+        if (destinationConfigId === null || destinationConfigId === undefined) {
+            throw new Error(
+                'Required parameter destinationConfigId was null or undefined when calling getEgressFailedMetricsFromDeliveryOverview.'
+            );
+        }
+
         // verify required parameter 'startTime' is not null or undefined
         if (startTime === null || startTime === undefined) {
             throw new Error(
@@ -180,6 +187,13 @@ export class DeliveryOverviewApi {
         if (granularity === null || granularity === undefined) {
             throw new Error(
                 'Required parameter granularity was null or undefined when calling getEgressFailedMetricsFromDeliveryOverview.'
+            );
+        }
+
+        // verify required parameter 'pagination' is not null or undefined
+        if (pagination === null || pagination === undefined) {
+            throw new Error(
+                'Required parameter pagination was null or undefined when calling getEgressFailedMetricsFromDeliveryOverview.'
             );
         }
 
@@ -528,8 +542,26 @@ export class DeliveryOverviewApi {
     /**
      * Get events that were filtered at Source.
      * @summary Get Filtered At Source Metrics from Delivery Overview
+     * @param sourceId The sourceId for the workspace.  This parameter exists in alpha.
+     * @param startTime The ISO8601 formatted timestamp corresponding to the beginning of the requested timeframe, inclusive.  This parameter exists in alpha.
+     * @param endTime The ISO8601 formatted timestamp corresponding to the end of the requested timeframe, noninclusive.  This parameter exists in alpha.
+     * @param granularity The size of each bucket in the requested window.  Based on the granularity chosen, there are restrictions on the time range you can query:  **Minute**: - Max time range: 4 hours - Oldest possible start time: 48 hours in the past  **Hour**: - Max Time range: 14 days - Oldest possible start time: 30 days in the past  **Day**: - Max time range: 30 days - Oldest possible start time: 30 days in the past  This parameter exists in alpha.
+     * @param pagination Optional params to specify the page cursor and count.  This parameter exists in alpha.
+     * @param destinationConfigId The ID tied to a workspace destination.  This parameter exists in alpha.
+     * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and &#x60;appVersion&#x60;.  This parameter exists in alpha.
+     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;. Example: &#x60;filter: {discardReason: [\&#39;discard1\&#39;], eventName: [\&#39;name1\&#39;, \&#39;name2\&#39;], eventType: [\&#39;type1\&#39;]}&#x60;.  This parameter exists in alpha.
+     * @param subscriptionId An optional filter for actions destinations, to filter by a specific action.  This parameter exists in alpha.
      */
     public async getFilteredAtSourceMetricsFromDeliveryOverview(
+        sourceId: string,
+        startTime: string,
+        endTime: string,
+        granularity: 'day' | 'hour' | 'minute',
+        pagination: PaginationInput,
+        destinationConfigId?: string,
+        groupBy?: Array<string>,
+        filter?: DeliveryOverviewFilterBy,
+        subscriptionId?: string,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -553,6 +585,100 @@ export class DeliveryOverviewApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
+
+        // verify required parameter 'sourceId' is not null or undefined
+        if (sourceId === null || sourceId === undefined) {
+            throw new Error(
+                'Required parameter sourceId was null or undefined when calling getFilteredAtSourceMetricsFromDeliveryOverview.'
+            );
+        }
+
+        // verify required parameter 'startTime' is not null or undefined
+        if (startTime === null || startTime === undefined) {
+            throw new Error(
+                'Required parameter startTime was null or undefined when calling getFilteredAtSourceMetricsFromDeliveryOverview.'
+            );
+        }
+
+        // verify required parameter 'endTime' is not null or undefined
+        if (endTime === null || endTime === undefined) {
+            throw new Error(
+                'Required parameter endTime was null or undefined when calling getFilteredAtSourceMetricsFromDeliveryOverview.'
+            );
+        }
+
+        // verify required parameter 'granularity' is not null or undefined
+        if (granularity === null || granularity === undefined) {
+            throw new Error(
+                'Required parameter granularity was null or undefined when calling getFilteredAtSourceMetricsFromDeliveryOverview.'
+            );
+        }
+
+        // verify required parameter 'pagination' is not null or undefined
+        if (pagination === null || pagination === undefined) {
+            throw new Error(
+                'Required parameter pagination was null or undefined when calling getFilteredAtSourceMetricsFromDeliveryOverview.'
+            );
+        }
+
+        if (sourceId !== undefined) {
+            localVarQueryParameters['sourceId'] = ObjectSerializer.serialize(
+                sourceId,
+                'string'
+            );
+        }
+
+        if (destinationConfigId !== undefined) {
+            localVarQueryParameters['destinationConfigId'] =
+                ObjectSerializer.serialize(destinationConfigId, 'string');
+        }
+
+        if (startTime !== undefined) {
+            localVarQueryParameters['startTime'] = ObjectSerializer.serialize(
+                startTime,
+                'string'
+            );
+        }
+
+        if (endTime !== undefined) {
+            localVarQueryParameters['endTime'] = ObjectSerializer.serialize(
+                endTime,
+                'string'
+            );
+        }
+
+        if (groupBy !== undefined) {
+            localVarQueryParameters['groupBy'] = ObjectSerializer.serialize(
+                groupBy,
+                'Array<string>'
+            );
+        }
+
+        if (granularity !== undefined) {
+            localVarQueryParameters['granularity'] = ObjectSerializer.serialize(
+                granularity,
+                "'day' | 'hour' | 'minute'"
+            );
+        }
+
+        if (filter !== undefined) {
+            localVarQueryParameters['filter'] = ObjectSerializer.serialize(
+                filter,
+                'DeliveryOverviewFilterBy'
+            );
+        }
+
+        if (pagination !== undefined) {
+            localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
+                pagination,
+                'PaginationInput'
+            );
+        }
+
+        if (subscriptionId !== undefined) {
+            localVarQueryParameters['subscriptionId'] =
+                ObjectSerializer.serialize(subscriptionId, 'string');
+        }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
