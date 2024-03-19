@@ -140,9 +140,6 @@ export * from './deleteUsersV1Output';
 export * from './deleteWarehouse200Response';
 export * from './deleteWarehouseV1Output';
 export * from './deliveryMetricsSummaryBeta';
-export * from './deliveryOverviewFilterBy';
-export * from './deliveryOverviewMetricsDatapoint';
-export * from './deliveryOverviewMetricsDataset';
 export * from './destinationFilterActionV1';
 export * from './destinationFilterV1';
 export * from './destinationMetadataActionFieldV1';
@@ -188,14 +185,12 @@ export * from './getDailyWorkspaceAPICallsUsage200Response';
 export * from './getDailyWorkspaceAPICallsUsageV1Output';
 export * from './getDailyWorkspaceMTUUsage200Response';
 export * from './getDailyWorkspaceMTUUsageV1Output';
-export * from './getDeliveryOverviewMetricsAlphaOutput';
 export * from './getDestination200Response';
 export * from './getDestinationMetadata200Response';
 export * from './getDestinationMetadataV1Output';
 export * from './getDestinationV1Output';
 export * from './getDestinationsCatalog200Response';
 export * from './getDestinationsCatalogV1Output';
-export * from './getEgressFailedMetricsFromDeliveryOverview200Response';
 export * from './getEventsVolumeFromWorkspace200Response';
 export * from './getEventsVolumeFromWorkspaceV1Output';
 export * from './getEventsVolumeFromWorkspaceV1Query';
@@ -673,9 +668,6 @@ import { DeleteUsersV1Output } from './deleteUsersV1Output';
 import { DeleteWarehouse200Response } from './deleteWarehouse200Response';
 import { DeleteWarehouseV1Output } from './deleteWarehouseV1Output';
 import { DeliveryMetricsSummaryBeta } from './deliveryMetricsSummaryBeta';
-import { DeliveryOverviewFilterBy } from './deliveryOverviewFilterBy';
-import { DeliveryOverviewMetricsDatapoint } from './deliveryOverviewMetricsDatapoint';
-import { DeliveryOverviewMetricsDataset } from './deliveryOverviewMetricsDataset';
 import { DestinationFilterActionV1 } from './destinationFilterActionV1';
 import { DestinationFilterV1 } from './destinationFilterV1';
 import { DestinationMetadataActionFieldV1 } from './destinationMetadataActionFieldV1';
@@ -721,14 +713,12 @@ import { GetDailyWorkspaceAPICallsUsage200Response } from './getDailyWorkspaceAP
 import { GetDailyWorkspaceAPICallsUsageV1Output } from './getDailyWorkspaceAPICallsUsageV1Output';
 import { GetDailyWorkspaceMTUUsage200Response } from './getDailyWorkspaceMTUUsage200Response';
 import { GetDailyWorkspaceMTUUsageV1Output } from './getDailyWorkspaceMTUUsageV1Output';
-import { GetDeliveryOverviewMetricsAlphaOutput } from './getDeliveryOverviewMetricsAlphaOutput';
 import { GetDestination200Response } from './getDestination200Response';
 import { GetDestinationMetadata200Response } from './getDestinationMetadata200Response';
 import { GetDestinationMetadataV1Output } from './getDestinationMetadataV1Output';
 import { GetDestinationV1Output } from './getDestinationV1Output';
 import { GetDestinationsCatalog200Response } from './getDestinationsCatalog200Response';
 import { GetDestinationsCatalogV1Output } from './getDestinationsCatalogV1Output';
-import { GetEgressFailedMetricsFromDeliveryOverview200Response } from './getEgressFailedMetricsFromDeliveryOverview200Response';
 import { GetEventsVolumeFromWorkspace200Response } from './getEventsVolumeFromWorkspace200Response';
 import { GetEventsVolumeFromWorkspaceV1Output } from './getEventsVolumeFromWorkspaceV1Output';
 import { GetEventsVolumeFromWorkspaceV1Query } from './getEventsVolumeFromWorkspaceV1Query';
@@ -1368,9 +1358,6 @@ let typeMap: { [index: string]: any } = {
     DeleteWarehouse200Response: DeleteWarehouse200Response,
     DeleteWarehouseV1Output: DeleteWarehouseV1Output,
     DeliveryMetricsSummaryBeta: DeliveryMetricsSummaryBeta,
-    DeliveryOverviewFilterBy: DeliveryOverviewFilterBy,
-    DeliveryOverviewMetricsDatapoint: DeliveryOverviewMetricsDatapoint,
-    DeliveryOverviewMetricsDataset: DeliveryOverviewMetricsDataset,
     DestinationFilterActionV1: DestinationFilterActionV1,
     DestinationFilterV1: DestinationFilterV1,
     DestinationMetadataActionFieldV1: DestinationMetadataActionFieldV1,
@@ -1427,16 +1414,12 @@ let typeMap: { [index: string]: any } = {
         GetDailyWorkspaceAPICallsUsageV1Output,
     GetDailyWorkspaceMTUUsage200Response: GetDailyWorkspaceMTUUsage200Response,
     GetDailyWorkspaceMTUUsageV1Output: GetDailyWorkspaceMTUUsageV1Output,
-    GetDeliveryOverviewMetricsAlphaOutput:
-        GetDeliveryOverviewMetricsAlphaOutput,
     GetDestination200Response: GetDestination200Response,
     GetDestinationMetadata200Response: GetDestinationMetadata200Response,
     GetDestinationMetadataV1Output: GetDestinationMetadataV1Output,
     GetDestinationV1Output: GetDestinationV1Output,
     GetDestinationsCatalog200Response: GetDestinationsCatalog200Response,
     GetDestinationsCatalogV1Output: GetDestinationsCatalogV1Output,
-    GetEgressFailedMetricsFromDeliveryOverview200Response:
-        GetEgressFailedMetricsFromDeliveryOverview200Response,
     GetEventsVolumeFromWorkspace200Response:
         GetEventsVolumeFromWorkspace200Response,
     GetEventsVolumeFromWorkspaceV1Output: GetEventsVolumeFromWorkspaceV1Output,

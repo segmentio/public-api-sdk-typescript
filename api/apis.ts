@@ -10,8 +10,6 @@ export * from './computedTraitsApi';
 import { ComputedTraitsApi } from './computedTraitsApi';
 export * from './deletionAndSuppressionApi';
 import { DeletionAndSuppressionApi } from './deletionAndSuppressionApi';
-export * from './deliveryOverviewApi';
-import { DeliveryOverviewApi } from './deliveryOverviewApi';
 export * from './destinationFiltersApi';
 import { DestinationFiltersApi } from './destinationFiltersApi';
 export * from './destinationsApi';
@@ -74,7 +72,6 @@ export const APIS = [
     CatalogApi,
     ComputedTraitsApi,
     DeletionAndSuppressionApi,
-    DeliveryOverviewApi,
     DestinationFiltersApi,
     DestinationsApi,
     EdgeFunctionsApi,
@@ -159,7 +156,7 @@ export function configureApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 46.0.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 45.0.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -206,7 +203,7 @@ export function configureEuApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 46.0.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 45.0.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
