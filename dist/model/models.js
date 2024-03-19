@@ -118,6 +118,8 @@ __exportStar(require("./createWarehouseV1Output"), exports);
 __exportStar(require("./createWorkspaceRegulation200Response"), exports);
 __exportStar(require("./createWorkspaceRegulationV1Input"), exports);
 __exportStar(require("./createWorkspaceRegulationV1Output"), exports);
+__exportStar(require("./createWriteKeyForSource200Response"), exports);
+__exportStar(require("./createWriteKeyForSourceAlphaOutput"), exports);
 __exportStar(require("./definition"), exports);
 __exportStar(require("./definition1"), exports);
 __exportStar(require("./deleteDestination200Response"), exports);
@@ -404,6 +406,8 @@ __exportStar(require("./removeSubscriptionFromDestination200Response"), exports)
 __exportStar(require("./removeSubscriptionFromDestinationAlphaOutput"), exports);
 __exportStar(require("./removeUsersFromUserGroup200Response"), exports);
 __exportStar(require("./removeUsersFromUserGroupV1Output"), exports);
+__exportStar(require("./removeWriteKeyFromSource200Response"), exports);
+__exportStar(require("./removeWriteKeyFromSourceAlphaOutput"), exports);
 __exportStar(require("./replaceAdvancedSyncScheduleForWarehouse200Response"), exports);
 __exportStar(require("./replaceAdvancedSyncScheduleForWarehouseV1Input"), exports);
 __exportStar(require("./replaceAdvancedSyncScheduleForWarehouseV1Output"), exports);
@@ -634,6 +638,8 @@ var createWarehouseV1Output_1 = require("./createWarehouseV1Output");
 var createWorkspaceRegulation200Response_1 = require("./createWorkspaceRegulation200Response");
 var createWorkspaceRegulationV1Input_1 = require("./createWorkspaceRegulationV1Input");
 var createWorkspaceRegulationV1Output_1 = require("./createWorkspaceRegulationV1Output");
+var createWriteKeyForSource200Response_1 = require("./createWriteKeyForSource200Response");
+var createWriteKeyForSourceAlphaOutput_1 = require("./createWriteKeyForSourceAlphaOutput");
 var definition_1 = require("./definition");
 var definition1_1 = require("./definition1");
 var deleteDestination200Response_1 = require("./deleteDestination200Response");
@@ -920,6 +926,8 @@ var removeSubscriptionFromDestination200Response_1 = require("./removeSubscripti
 var removeSubscriptionFromDestinationAlphaOutput_1 = require("./removeSubscriptionFromDestinationAlphaOutput");
 var removeUsersFromUserGroup200Response_1 = require("./removeUsersFromUserGroup200Response");
 var removeUsersFromUserGroupV1Output_1 = require("./removeUsersFromUserGroupV1Output");
+var removeWriteKeyFromSource200Response_1 = require("./removeWriteKeyFromSource200Response");
+var removeWriteKeyFromSourceAlphaOutput_1 = require("./removeWriteKeyFromSourceAlphaOutput");
 var replaceAdvancedSyncScheduleForWarehouse200Response_1 = require("./replaceAdvancedSyncScheduleForWarehouse200Response");
 var replaceAdvancedSyncScheduleForWarehouseV1Input_1 = require("./replaceAdvancedSyncScheduleForWarehouseV1Input");
 var replaceAdvancedSyncScheduleForWarehouseV1Output_1 = require("./replaceAdvancedSyncScheduleForWarehouseV1Output");
@@ -1130,6 +1138,7 @@ var enumsMap = {
     'RemoveSourceFromTrackingPlanV1Output.StatusEnum': removeSourceFromTrackingPlanV1Output_1.RemoveSourceFromTrackingPlanV1Output.StatusEnum,
     'RemoveSubscriptionFromDestinationAlphaOutput.StatusEnum': removeSubscriptionFromDestinationAlphaOutput_1.RemoveSubscriptionFromDestinationAlphaOutput.StatusEnum,
     'RemoveUsersFromUserGroupV1Output.StatusEnum': removeUsersFromUserGroupV1Output_1.RemoveUsersFromUserGroupV1Output.StatusEnum,
+    'RemoveWriteKeyFromSourceAlphaOutput.StatusEnum': removeWriteKeyFromSourceAlphaOutput_1.RemoveWriteKeyFromSourceAlphaOutput.StatusEnum,
     'ReplaceRulesInTrackingPlanV1Output.StatusEnum': replaceRulesInTrackingPlanV1Output_1.ReplaceRulesInTrackingPlanV1Output.StatusEnum,
     'ResourceV1.TypeEnum': resourceV1_1.ResourceV1.TypeEnum,
     'RuleInputV1.TypeEnum': ruleInputV1_1.RuleInputV1.TypeEnum,
@@ -1248,6 +1257,8 @@ var typeMap = {
     CreateWorkspaceRegulation200Response: createWorkspaceRegulation200Response_1.CreateWorkspaceRegulation200Response,
     CreateWorkspaceRegulationV1Input: createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input,
     CreateWorkspaceRegulationV1Output: createWorkspaceRegulationV1Output_1.CreateWorkspaceRegulationV1Output,
+    CreateWriteKeyForSource200Response: createWriteKeyForSource200Response_1.CreateWriteKeyForSource200Response,
+    CreateWriteKeyForSourceAlphaOutput: createWriteKeyForSourceAlphaOutput_1.CreateWriteKeyForSourceAlphaOutput,
     Definition: definition_1.Definition,
     Definition1: definition1_1.Definition1,
     DeleteDestination200Response: deleteDestination200Response_1.DeleteDestination200Response,
@@ -1534,6 +1545,8 @@ var typeMap = {
     RemoveSubscriptionFromDestinationAlphaOutput: removeSubscriptionFromDestinationAlphaOutput_1.RemoveSubscriptionFromDestinationAlphaOutput,
     RemoveUsersFromUserGroup200Response: removeUsersFromUserGroup200Response_1.RemoveUsersFromUserGroup200Response,
     RemoveUsersFromUserGroupV1Output: removeUsersFromUserGroupV1Output_1.RemoveUsersFromUserGroupV1Output,
+    RemoveWriteKeyFromSource200Response: removeWriteKeyFromSource200Response_1.RemoveWriteKeyFromSource200Response,
+    RemoveWriteKeyFromSourceAlphaOutput: removeWriteKeyFromSourceAlphaOutput_1.RemoveWriteKeyFromSourceAlphaOutput,
     ReplaceAdvancedSyncScheduleForWarehouse200Response: replaceAdvancedSyncScheduleForWarehouse200Response_1.ReplaceAdvancedSyncScheduleForWarehouse200Response,
     ReplaceAdvancedSyncScheduleForWarehouseV1Input: replaceAdvancedSyncScheduleForWarehouseV1Input_1.ReplaceAdvancedSyncScheduleForWarehouseV1Input,
     ReplaceAdvancedSyncScheduleForWarehouseV1Output: replaceAdvancedSyncScheduleForWarehouseV1Output_1.ReplaceAdvancedSyncScheduleForWarehouseV1Output,
