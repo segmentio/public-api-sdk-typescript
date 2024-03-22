@@ -21,7 +21,7 @@ export class PaginationInput {
      */
     'cursor'?: string;
     /**
-     * The number of items to retrieve in a page, between 1 and 200.
+     * The number of items to retrieve in a page, between 1 and 1000.
      */
     'count': number;
 
