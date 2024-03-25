@@ -12,7 +12,7 @@ var GetEgressFailedMetricsFromDeliveryOverview200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'GetDeliveryOverviewMetricsAlphaOutput',
+            type: 'GetDeliveryOverviewMetricsBetaOutput',
         },
     ];
     return GetEgressFailedMetricsFromDeliveryOverview200Response;

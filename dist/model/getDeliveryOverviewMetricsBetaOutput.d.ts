@@ -1,6 +1,6 @@
 import { DeliveryOverviewMetricsDataset } from './deliveryOverviewMetricsDataset';
 import { PaginationOutput } from './paginationOutput';
-export declare class GetDeliveryOverviewMetricsAlphaOutput {
+export declare class GetDeliveryOverviewMetricsBetaOutput {
     'total': number;
     'dataset': Array<DeliveryOverviewMetricsDataset>;
     'pagination': PaginationOutput;
