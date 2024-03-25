@@ -188,9 +188,7 @@ export * from './getDailyWorkspaceAPICallsUsage200Response';
 export * from './getDailyWorkspaceAPICallsUsageV1Output';
 export * from './getDailyWorkspaceMTUUsage200Response';
 export * from './getDailyWorkspaceMTUUsageV1Output';
-export * from './getDeliveryOverviewDestMetricsBetaInput';
 export * from './getDeliveryOverviewMetricsBetaOutput';
-export * from './getDeliveryOverviewSourceMetricsBetaInput';
 export * from './getDestination200Response';
 export * from './getDestinationMetadata200Response';
 export * from './getDestinationMetadataV1Output';
@@ -723,9 +721,7 @@ import { GetDailyWorkspaceAPICallsUsage200Response } from './getDailyWorkspaceAP
 import { GetDailyWorkspaceAPICallsUsageV1Output } from './getDailyWorkspaceAPICallsUsageV1Output';
 import { GetDailyWorkspaceMTUUsage200Response } from './getDailyWorkspaceMTUUsage200Response';
 import { GetDailyWorkspaceMTUUsageV1Output } from './getDailyWorkspaceMTUUsageV1Output';
-import { GetDeliveryOverviewDestMetricsBetaInput } from './getDeliveryOverviewDestMetricsBetaInput';
 import { GetDeliveryOverviewMetricsBetaOutput } from './getDeliveryOverviewMetricsBetaOutput';
-import { GetDeliveryOverviewSourceMetricsBetaInput } from './getDeliveryOverviewSourceMetricsBetaInput';
 import { GetDestination200Response } from './getDestination200Response';
 import { GetDestinationMetadata200Response } from './getDestinationMetadata200Response';
 import { GetDestinationMetadataV1Output } from './getDestinationMetadataV1Output';
@@ -1139,10 +1135,6 @@ let enumsMap: { [index: string]: any } = {
     'FunctionV1.ResourceTypeEnum': FunctionV1.ResourceTypeEnum,
     'GetConnectionStateFromWarehouseV1Output.ConnectionStateEnum':
         GetConnectionStateFromWarehouseV1Output.ConnectionStateEnum,
-    'GetDeliveryOverviewDestMetricsBetaInput.GranularityEnum':
-        GetDeliveryOverviewDestMetricsBetaInput.GranularityEnum,
-    'GetDeliveryOverviewSourceMetricsBetaInput.GranularityEnum':
-        GetDeliveryOverviewSourceMetricsBetaInput.GranularityEnum,
     'GetEventsVolumeFromWorkspaceV1Query.GranularityEnum':
         GetEventsVolumeFromWorkspaceV1Query.GranularityEnum,
     'GetMessagingSubscriptionSuccessResponse.TypeEnum':
@@ -1435,11 +1427,7 @@ let typeMap: { [index: string]: any } = {
         GetDailyWorkspaceAPICallsUsageV1Output,
     GetDailyWorkspaceMTUUsage200Response: GetDailyWorkspaceMTUUsage200Response,
     GetDailyWorkspaceMTUUsageV1Output: GetDailyWorkspaceMTUUsageV1Output,
-    GetDeliveryOverviewDestMetricsBetaInput:
-        GetDeliveryOverviewDestMetricsBetaInput,
     GetDeliveryOverviewMetricsBetaOutput: GetDeliveryOverviewMetricsBetaOutput,
-    GetDeliveryOverviewSourceMetricsBetaInput:
-        GetDeliveryOverviewSourceMetricsBetaInput,
     GetDestination200Response: GetDestination200Response,
     GetDestinationMetadata200Response: GetDestinationMetadata200Response,
     GetDestinationMetadataV1Output: GetDestinationMetadataV1Output,

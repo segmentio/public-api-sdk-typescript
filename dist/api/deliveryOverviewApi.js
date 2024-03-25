@@ -113,7 +113,7 @@ var DeliveryOverviewApi = (function () {
     DeliveryOverviewApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    DeliveryOverviewApi.prototype.getEgressFailedMetricsFromDeliveryOverview = function (metrics, options) {
+    DeliveryOverviewApi.prototype.getEgressFailedMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, pagination, groupBy, filter, subscriptionId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -133,11 +133,52 @@ var DeliveryOverviewApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (metrics === null || metrics === undefined) {
-                    throw new Error('Required parameter metrics was null or undefined when calling getEgressFailedMetricsFromDeliveryOverview.');
+                if (sourceId === null || sourceId === undefined) {
+                    throw new Error('Required parameter sourceId was null or undefined when calling getEgressFailedMetricsFromDeliveryOverview.');
                 }
-                if (metrics !== undefined) {
-                    localVarQueryParameters['metrics'] = models_1.ObjectSerializer.serialize(metrics, 'GetDeliveryOverviewDestMetricsBetaInput');
+                if (destinationConfigId === null || destinationConfigId === undefined) {
+                    throw new Error('Required parameter destinationConfigId was null or undefined when calling getEgressFailedMetricsFromDeliveryOverview.');
+                }
+                if (startTime === null || startTime === undefined) {
+                    throw new Error('Required parameter startTime was null or undefined when calling getEgressFailedMetricsFromDeliveryOverview.');
+                }
+                if (endTime === null || endTime === undefined) {
+                    throw new Error('Required parameter endTime was null or undefined when calling getEgressFailedMetricsFromDeliveryOverview.');
+                }
+                if (granularity === null || granularity === undefined) {
+                    throw new Error('Required parameter granularity was null or undefined when calling getEgressFailedMetricsFromDeliveryOverview.');
+                }
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling getEgressFailedMetricsFromDeliveryOverview.');
+                }
+                if (sourceId !== undefined) {
+                    localVarQueryParameters['sourceId'] = models_1.ObjectSerializer.serialize(sourceId, 'string');
+                }
+                if (destinationConfigId !== undefined) {
+                    localVarQueryParameters['destinationConfigId'] =
+                        models_1.ObjectSerializer.serialize(destinationConfigId, 'string');
+                }
+                if (startTime !== undefined) {
+                    localVarQueryParameters['startTime'] = models_1.ObjectSerializer.serialize(startTime, 'string');
+                }
+                if (endTime !== undefined) {
+                    localVarQueryParameters['endTime'] = models_1.ObjectSerializer.serialize(endTime, 'string');
+                }
+                if (groupBy !== undefined) {
+                    localVarQueryParameters['groupBy'] = models_1.ObjectSerializer.serialize(groupBy, 'Array<string>');
+                }
+                if (granularity !== undefined) {
+                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'day' | 'hour' | 'minute'");
+                }
+                if (filter !== undefined) {
+                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewFilterBy');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                }
+                if (subscriptionId !== undefined) {
+                    localVarQueryParameters['subscriptionId'] =
+                        models_1.ObjectSerializer.serialize(subscriptionId, 'string');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -199,7 +240,7 @@ var DeliveryOverviewApi = (function () {
             });
         });
     };
-    DeliveryOverviewApi.prototype.getEgressSuccessMetricsFromDeliveryOverview = function (metrics, options) {
+    DeliveryOverviewApi.prototype.getEgressSuccessMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, pagination, groupBy, filter, subscriptionId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
@@ -219,11 +260,52 @@ var DeliveryOverviewApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (metrics === null || metrics === undefined) {
-                    throw new Error('Required parameter metrics was null or undefined when calling getEgressSuccessMetricsFromDeliveryOverview.');
+                if (sourceId === null || sourceId === undefined) {
+                    throw new Error('Required parameter sourceId was null or undefined when calling getEgressSuccessMetricsFromDeliveryOverview.');
                 }
-                if (metrics !== undefined) {
-                    localVarQueryParameters['metrics'] = models_1.ObjectSerializer.serialize(metrics, 'GetDeliveryOverviewDestMetricsBetaInput');
+                if (destinationConfigId === null || destinationConfigId === undefined) {
+                    throw new Error('Required parameter destinationConfigId was null or undefined when calling getEgressSuccessMetricsFromDeliveryOverview.');
+                }
+                if (startTime === null || startTime === undefined) {
+                    throw new Error('Required parameter startTime was null or undefined when calling getEgressSuccessMetricsFromDeliveryOverview.');
+                }
+                if (endTime === null || endTime === undefined) {
+                    throw new Error('Required parameter endTime was null or undefined when calling getEgressSuccessMetricsFromDeliveryOverview.');
+                }
+                if (granularity === null || granularity === undefined) {
+                    throw new Error('Required parameter granularity was null or undefined when calling getEgressSuccessMetricsFromDeliveryOverview.');
+                }
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling getEgressSuccessMetricsFromDeliveryOverview.');
+                }
+                if (sourceId !== undefined) {
+                    localVarQueryParameters['sourceId'] = models_1.ObjectSerializer.serialize(sourceId, 'string');
+                }
+                if (destinationConfigId !== undefined) {
+                    localVarQueryParameters['destinationConfigId'] =
+                        models_1.ObjectSerializer.serialize(destinationConfigId, 'string');
+                }
+                if (startTime !== undefined) {
+                    localVarQueryParameters['startTime'] = models_1.ObjectSerializer.serialize(startTime, 'string');
+                }
+                if (endTime !== undefined) {
+                    localVarQueryParameters['endTime'] = models_1.ObjectSerializer.serialize(endTime, 'string');
+                }
+                if (groupBy !== undefined) {
+                    localVarQueryParameters['groupBy'] = models_1.ObjectSerializer.serialize(groupBy, 'Array<string>');
+                }
+                if (granularity !== undefined) {
+                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'day' | 'hour' | 'minute'");
+                }
+                if (filter !== undefined) {
+                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewFilterBy');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                }
+                if (subscriptionId !== undefined) {
+                    localVarQueryParameters['subscriptionId'] =
+                        models_1.ObjectSerializer.serialize(subscriptionId, 'string');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -285,7 +367,7 @@ var DeliveryOverviewApi = (function () {
             });
         });
     };
-    DeliveryOverviewApi.prototype.getFilteredAtDestinationMetricsFromDeliveryOverview = function (metrics, options) {
+    DeliveryOverviewApi.prototype.getFilteredAtDestinationMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, pagination, groupBy, filter, subscriptionId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
@@ -305,11 +387,52 @@ var DeliveryOverviewApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (metrics === null || metrics === undefined) {
-                    throw new Error('Required parameter metrics was null or undefined when calling getFilteredAtDestinationMetricsFromDeliveryOverview.');
+                if (sourceId === null || sourceId === undefined) {
+                    throw new Error('Required parameter sourceId was null or undefined when calling getFilteredAtDestinationMetricsFromDeliveryOverview.');
                 }
-                if (metrics !== undefined) {
-                    localVarQueryParameters['metrics'] = models_1.ObjectSerializer.serialize(metrics, 'GetDeliveryOverviewDestMetricsBetaInput');
+                if (destinationConfigId === null || destinationConfigId === undefined) {
+                    throw new Error('Required parameter destinationConfigId was null or undefined when calling getFilteredAtDestinationMetricsFromDeliveryOverview.');
+                }
+                if (startTime === null || startTime === undefined) {
+                    throw new Error('Required parameter startTime was null or undefined when calling getFilteredAtDestinationMetricsFromDeliveryOverview.');
+                }
+                if (endTime === null || endTime === undefined) {
+                    throw new Error('Required parameter endTime was null or undefined when calling getFilteredAtDestinationMetricsFromDeliveryOverview.');
+                }
+                if (granularity === null || granularity === undefined) {
+                    throw new Error('Required parameter granularity was null or undefined when calling getFilteredAtDestinationMetricsFromDeliveryOverview.');
+                }
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling getFilteredAtDestinationMetricsFromDeliveryOverview.');
+                }
+                if (sourceId !== undefined) {
+                    localVarQueryParameters['sourceId'] = models_1.ObjectSerializer.serialize(sourceId, 'string');
+                }
+                if (destinationConfigId !== undefined) {
+                    localVarQueryParameters['destinationConfigId'] =
+                        models_1.ObjectSerializer.serialize(destinationConfigId, 'string');
+                }
+                if (startTime !== undefined) {
+                    localVarQueryParameters['startTime'] = models_1.ObjectSerializer.serialize(startTime, 'string');
+                }
+                if (endTime !== undefined) {
+                    localVarQueryParameters['endTime'] = models_1.ObjectSerializer.serialize(endTime, 'string');
+                }
+                if (groupBy !== undefined) {
+                    localVarQueryParameters['groupBy'] = models_1.ObjectSerializer.serialize(groupBy, 'Array<string>');
+                }
+                if (granularity !== undefined) {
+                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'day' | 'hour' | 'minute'");
+                }
+                if (filter !== undefined) {
+                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewFilterBy');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                }
+                if (subscriptionId !== undefined) {
+                    localVarQueryParameters['subscriptionId'] =
+                        models_1.ObjectSerializer.serialize(subscriptionId, 'string');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -371,7 +494,7 @@ var DeliveryOverviewApi = (function () {
             });
         });
     };
-    DeliveryOverviewApi.prototype.getFilteredAtSourceMetricsFromDeliveryOverview = function (metrics, options) {
+    DeliveryOverviewApi.prototype.getFilteredAtSourceMetricsFromDeliveryOverview = function (sourceId, startTime, endTime, granularity, pagination, destinationConfigId, groupBy, filter, subscriptionId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
@@ -391,11 +514,49 @@ var DeliveryOverviewApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (metrics === null || metrics === undefined) {
-                    throw new Error('Required parameter metrics was null or undefined when calling getFilteredAtSourceMetricsFromDeliveryOverview.');
+                if (sourceId === null || sourceId === undefined) {
+                    throw new Error('Required parameter sourceId was null or undefined when calling getFilteredAtSourceMetricsFromDeliveryOverview.');
                 }
-                if (metrics !== undefined) {
-                    localVarQueryParameters['metrics'] = models_1.ObjectSerializer.serialize(metrics, 'GetDeliveryOverviewSourceMetricsBetaInput');
+                if (startTime === null || startTime === undefined) {
+                    throw new Error('Required parameter startTime was null or undefined when calling getFilteredAtSourceMetricsFromDeliveryOverview.');
+                }
+                if (endTime === null || endTime === undefined) {
+                    throw new Error('Required parameter endTime was null or undefined when calling getFilteredAtSourceMetricsFromDeliveryOverview.');
+                }
+                if (granularity === null || granularity === undefined) {
+                    throw new Error('Required parameter granularity was null or undefined when calling getFilteredAtSourceMetricsFromDeliveryOverview.');
+                }
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling getFilteredAtSourceMetricsFromDeliveryOverview.');
+                }
+                if (sourceId !== undefined) {
+                    localVarQueryParameters['sourceId'] = models_1.ObjectSerializer.serialize(sourceId, 'string');
+                }
+                if (destinationConfigId !== undefined) {
+                    localVarQueryParameters['destinationConfigId'] =
+                        models_1.ObjectSerializer.serialize(destinationConfigId, 'string');
+                }
+                if (startTime !== undefined) {
+                    localVarQueryParameters['startTime'] = models_1.ObjectSerializer.serialize(startTime, 'string');
+                }
+                if (endTime !== undefined) {
+                    localVarQueryParameters['endTime'] = models_1.ObjectSerializer.serialize(endTime, 'string');
+                }
+                if (groupBy !== undefined) {
+                    localVarQueryParameters['groupBy'] = models_1.ObjectSerializer.serialize(groupBy, 'Array<string>');
+                }
+                if (granularity !== undefined) {
+                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'day' | 'hour' | 'minute'");
+                }
+                if (filter !== undefined) {
+                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewFilterBy');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                }
+                if (subscriptionId !== undefined) {
+                    localVarQueryParameters['subscriptionId'] =
+                        models_1.ObjectSerializer.serialize(subscriptionId, 'string');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -457,7 +618,7 @@ var DeliveryOverviewApi = (function () {
             });
         });
     };
-    DeliveryOverviewApi.prototype.getIngressFailedMetricsFromDeliveryOverview = function (metrics, options) {
+    DeliveryOverviewApi.prototype.getIngressFailedMetricsFromDeliveryOverview = function (sourceId, startTime, endTime, granularity, pagination, destinationConfigId, groupBy, filter, subscriptionId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_5, _i, _a, interceptor;
@@ -477,11 +638,49 @@ var DeliveryOverviewApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (metrics === null || metrics === undefined) {
-                    throw new Error('Required parameter metrics was null or undefined when calling getIngressFailedMetricsFromDeliveryOverview.');
+                if (sourceId === null || sourceId === undefined) {
+                    throw new Error('Required parameter sourceId was null or undefined when calling getIngressFailedMetricsFromDeliveryOverview.');
                 }
-                if (metrics !== undefined) {
-                    localVarQueryParameters['metrics'] = models_1.ObjectSerializer.serialize(metrics, 'GetDeliveryOverviewSourceMetricsBetaInput');
+                if (startTime === null || startTime === undefined) {
+                    throw new Error('Required parameter startTime was null or undefined when calling getIngressFailedMetricsFromDeliveryOverview.');
+                }
+                if (endTime === null || endTime === undefined) {
+                    throw new Error('Required parameter endTime was null or undefined when calling getIngressFailedMetricsFromDeliveryOverview.');
+                }
+                if (granularity === null || granularity === undefined) {
+                    throw new Error('Required parameter granularity was null or undefined when calling getIngressFailedMetricsFromDeliveryOverview.');
+                }
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling getIngressFailedMetricsFromDeliveryOverview.');
+                }
+                if (sourceId !== undefined) {
+                    localVarQueryParameters['sourceId'] = models_1.ObjectSerializer.serialize(sourceId, 'string');
+                }
+                if (destinationConfigId !== undefined) {
+                    localVarQueryParameters['destinationConfigId'] =
+                        models_1.ObjectSerializer.serialize(destinationConfigId, 'string');
+                }
+                if (startTime !== undefined) {
+                    localVarQueryParameters['startTime'] = models_1.ObjectSerializer.serialize(startTime, 'string');
+                }
+                if (endTime !== undefined) {
+                    localVarQueryParameters['endTime'] = models_1.ObjectSerializer.serialize(endTime, 'string');
+                }
+                if (groupBy !== undefined) {
+                    localVarQueryParameters['groupBy'] = models_1.ObjectSerializer.serialize(groupBy, 'Array<string>');
+                }
+                if (granularity !== undefined) {
+                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'day' | 'hour' | 'minute'");
+                }
+                if (filter !== undefined) {
+                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewFilterBy');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                }
+                if (subscriptionId !== undefined) {
+                    localVarQueryParameters['subscriptionId'] =
+                        models_1.ObjectSerializer.serialize(subscriptionId, 'string');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -543,7 +742,7 @@ var DeliveryOverviewApi = (function () {
             });
         });
     };
-    DeliveryOverviewApi.prototype.getIngressSuccessMetricsFromDeliveryOverview = function (metrics, options) {
+    DeliveryOverviewApi.prototype.getIngressSuccessMetricsFromDeliveryOverview = function (sourceId, startTime, endTime, granularity, pagination, destinationConfigId, groupBy, filter, subscriptionId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_6, _i, _a, interceptor;
@@ -563,11 +762,49 @@ var DeliveryOverviewApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (metrics === null || metrics === undefined) {
-                    throw new Error('Required parameter metrics was null or undefined when calling getIngressSuccessMetricsFromDeliveryOverview.');
+                if (sourceId === null || sourceId === undefined) {
+                    throw new Error('Required parameter sourceId was null or undefined when calling getIngressSuccessMetricsFromDeliveryOverview.');
                 }
-                if (metrics !== undefined) {
-                    localVarQueryParameters['metrics'] = models_1.ObjectSerializer.serialize(metrics, 'GetDeliveryOverviewSourceMetricsBetaInput');
+                if (startTime === null || startTime === undefined) {
+                    throw new Error('Required parameter startTime was null or undefined when calling getIngressSuccessMetricsFromDeliveryOverview.');
+                }
+                if (endTime === null || endTime === undefined) {
+                    throw new Error('Required parameter endTime was null or undefined when calling getIngressSuccessMetricsFromDeliveryOverview.');
+                }
+                if (granularity === null || granularity === undefined) {
+                    throw new Error('Required parameter granularity was null or undefined when calling getIngressSuccessMetricsFromDeliveryOverview.');
+                }
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling getIngressSuccessMetricsFromDeliveryOverview.');
+                }
+                if (sourceId !== undefined) {
+                    localVarQueryParameters['sourceId'] = models_1.ObjectSerializer.serialize(sourceId, 'string');
+                }
+                if (destinationConfigId !== undefined) {
+                    localVarQueryParameters['destinationConfigId'] =
+                        models_1.ObjectSerializer.serialize(destinationConfigId, 'string');
+                }
+                if (startTime !== undefined) {
+                    localVarQueryParameters['startTime'] = models_1.ObjectSerializer.serialize(startTime, 'string');
+                }
+                if (endTime !== undefined) {
+                    localVarQueryParameters['endTime'] = models_1.ObjectSerializer.serialize(endTime, 'string');
+                }
+                if (groupBy !== undefined) {
+                    localVarQueryParameters['groupBy'] = models_1.ObjectSerializer.serialize(groupBy, 'Array<string>');
+                }
+                if (granularity !== undefined) {
+                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'day' | 'hour' | 'minute'");
+                }
+                if (filter !== undefined) {
+                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewFilterBy');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                }
+                if (subscriptionId !== undefined) {
+                    localVarQueryParameters['subscriptionId'] =
+                        models_1.ObjectSerializer.serialize(subscriptionId, 'string');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;

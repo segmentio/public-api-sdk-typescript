@@ -203,9 +203,7 @@ __exportStar(require("./getDailyWorkspaceAPICallsUsage200Response"), exports);
 __exportStar(require("./getDailyWorkspaceAPICallsUsageV1Output"), exports);
 __exportStar(require("./getDailyWorkspaceMTUUsage200Response"), exports);
 __exportStar(require("./getDailyWorkspaceMTUUsageV1Output"), exports);
-__exportStar(require("./getDeliveryOverviewDestMetricsBetaInput"), exports);
 __exportStar(require("./getDeliveryOverviewMetricsBetaOutput"), exports);
-__exportStar(require("./getDeliveryOverviewSourceMetricsBetaInput"), exports);
 __exportStar(require("./getDestination200Response"), exports);
 __exportStar(require("./getDestinationMetadata200Response"), exports);
 __exportStar(require("./getDestinationMetadataV1Output"), exports);
@@ -725,9 +723,7 @@ var getDailyWorkspaceAPICallsUsage200Response_1 = require("./getDailyWorkspaceAP
 var getDailyWorkspaceAPICallsUsageV1Output_1 = require("./getDailyWorkspaceAPICallsUsageV1Output");
 var getDailyWorkspaceMTUUsage200Response_1 = require("./getDailyWorkspaceMTUUsage200Response");
 var getDailyWorkspaceMTUUsageV1Output_1 = require("./getDailyWorkspaceMTUUsageV1Output");
-var getDeliveryOverviewDestMetricsBetaInput_1 = require("./getDeliveryOverviewDestMetricsBetaInput");
 var getDeliveryOverviewMetricsBetaOutput_1 = require("./getDeliveryOverviewMetricsBetaOutput");
-var getDeliveryOverviewSourceMetricsBetaInput_1 = require("./getDeliveryOverviewSourceMetricsBetaInput");
 var getDestination200Response_1 = require("./getDestination200Response");
 var getDestinationMetadata200Response_1 = require("./getDestinationMetadata200Response");
 var getDestinationMetadataV1Output_1 = require("./getDestinationMetadataV1Output");
@@ -1114,8 +1110,6 @@ var enumsMap = {
     'FunctionSettingV1.TypeEnum': functionSettingV1_1.FunctionSettingV1.TypeEnum,
     'FunctionV1.ResourceTypeEnum': functionV1_1.FunctionV1.ResourceTypeEnum,
     'GetConnectionStateFromWarehouseV1Output.ConnectionStateEnum': getConnectionStateFromWarehouseV1Output_1.GetConnectionStateFromWarehouseV1Output.ConnectionStateEnum,
-    'GetDeliveryOverviewDestMetricsBetaInput.GranularityEnum': getDeliveryOverviewDestMetricsBetaInput_1.GetDeliveryOverviewDestMetricsBetaInput.GranularityEnum,
-    'GetDeliveryOverviewSourceMetricsBetaInput.GranularityEnum': getDeliveryOverviewSourceMetricsBetaInput_1.GetDeliveryOverviewSourceMetricsBetaInput.GranularityEnum,
     'GetEventsVolumeFromWorkspaceV1Query.GranularityEnum': getEventsVolumeFromWorkspaceV1Query_1.GetEventsVolumeFromWorkspaceV1Query.GranularityEnum,
     'GetMessagingSubscriptionSuccessResponse.TypeEnum': getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse.TypeEnum,
     'GetMessagingSubscriptionSuccessResponse.StatusEnum': getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse.StatusEnum,
@@ -1348,9 +1342,7 @@ var typeMap = {
     GetDailyWorkspaceAPICallsUsageV1Output: getDailyWorkspaceAPICallsUsageV1Output_1.GetDailyWorkspaceAPICallsUsageV1Output,
     GetDailyWorkspaceMTUUsage200Response: getDailyWorkspaceMTUUsage200Response_1.GetDailyWorkspaceMTUUsage200Response,
     GetDailyWorkspaceMTUUsageV1Output: getDailyWorkspaceMTUUsageV1Output_1.GetDailyWorkspaceMTUUsageV1Output,
-    GetDeliveryOverviewDestMetricsBetaInput: getDeliveryOverviewDestMetricsBetaInput_1.GetDeliveryOverviewDestMetricsBetaInput,
     GetDeliveryOverviewMetricsBetaOutput: getDeliveryOverviewMetricsBetaOutput_1.GetDeliveryOverviewMetricsBetaOutput,
-    GetDeliveryOverviewSourceMetricsBetaInput: getDeliveryOverviewSourceMetricsBetaInput_1.GetDeliveryOverviewSourceMetricsBetaInput,
     GetDestination200Response: getDestination200Response_1.GetDestination200Response,
     GetDestinationMetadata200Response: getDestinationMetadata200Response_1.GetDestinationMetadata200Response,
     GetDestinationMetadataV1Output: getDestinationMetadataV1Output_1.GetDestinationMetadataV1Output,
