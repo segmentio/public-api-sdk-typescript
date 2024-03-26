@@ -17,7 +17,7 @@ import { RequestFile } from './models';
  */
 export class DeliveryOverviewFilterBy {
     /**
-     * A list of strings of discard reasons. Can be used to filter all Source and Destination steps, except for Successfully Received. If you would like to view retry attempts for a successful delivery, you can filter from `successes.attempt.1` to `successes.attempt.10`.  See [Discard Record Documentation](https://segment.com/docs/connections/delivery-overview/#troubleshooting) for valid error codes.
+     * A list of strings of discard reasons. Can be used to filter all Source and Destination steps, except for Successfully Received.  See [Discard Record Documentation](https://segment.com/docs/connections/delivery-overview/#troubleshooting) for valid error codes.
      */
     'discardReason'?: Array<string>;
     /**

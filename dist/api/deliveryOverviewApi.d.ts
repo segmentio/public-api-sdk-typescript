@@ -50,7 +50,7 @@ export declare class DeliveryOverviewApi {
         response: http.IncomingMessage;
         body: GetEgressFailedMetricsFromDeliveryOverview200Response;
     }>;
-    getFilteredAtSourceMetricsFromDeliveryOverview(sourceId: string, startTime: string, endTime: string, granularity: 'day' | 'hour' | 'minute', pagination: PaginationInput, destinationConfigId?: string, groupBy?: Array<string>, filter?: DeliveryOverviewFilterBy, subscriptionId?: string, options?: {
+    getFilteredAtSourceMetricsFromDeliveryOverview(sourceId: string, startTime: string, endTime: string, granularity: 'day' | 'hour' | 'minute', pagination: PaginationInput, destinationConfigId?: string, groupBy?: Array<string>, filter?: DeliveryOverviewFilterBy, options?: {
         headers: {
             [name: string]: string;
         };
@@ -58,7 +58,7 @@ export declare class DeliveryOverviewApi {
         response: http.IncomingMessage;
         body: GetEgressFailedMetricsFromDeliveryOverview200Response;
     }>;
-    getIngressFailedMetricsFromDeliveryOverview(sourceId: string, startTime: string, endTime: string, granularity: 'day' | 'hour' | 'minute', pagination: PaginationInput, destinationConfigId?: string, groupBy?: Array<string>, filter?: DeliveryOverviewFilterBy, subscriptionId?: string, options?: {
+    getIngressFailedMetricsFromDeliveryOverview(sourceId: string, startTime: string, endTime: string, granularity: 'day' | 'hour' | 'minute', pagination: PaginationInput, destinationConfigId?: string, groupBy?: Array<string>, filter?: DeliveryOverviewFilterBy, options?: {
         headers: {
             [name: string]: string;
         };
@@ -66,7 +66,7 @@ export declare class DeliveryOverviewApi {
         response: http.IncomingMessage;
         body: GetEgressFailedMetricsFromDeliveryOverview200Response;
     }>;
-    getIngressSuccessMetricsFromDeliveryOverview(sourceId: string, startTime: string, endTime: string, granularity: 'day' | 'hour' | 'minute', pagination: PaginationInput, destinationConfigId?: string, groupBy?: Array<string>, filter?: DeliveryOverviewFilterBy, subscriptionId?: string, options?: {
+    getIngressSuccessMetricsFromDeliveryOverview(sourceId: string, startTime: string, endTime: string, granularity: 'day' | 'hour' | 'minute', pagination: PaginationInput, destinationConfigId?: string, groupBy?: Array<string>, filter?: DeliveryOverviewFilterBy, options?: {
         headers: {
             [name: string]: string;
         };

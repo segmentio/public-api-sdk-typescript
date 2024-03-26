@@ -118,7 +118,7 @@ export class DeliveryOverviewApi {
      * @param granularity The size of each bucket in the requested window.  Based on the granularity chosen, there are restrictions on the time range you can query:  **Minute**: - Max time range: 4 hours - Oldest possible start time: 48 hours in the past  **Hour**: - Max Time range: 14 days - Oldest possible start time: 30 days in the past  **Day**: - Max time range: 30 days - Oldest possible start time: 30 days in the past  This parameter exists in beta.
      * @param pagination Params to specify the page cursor and count.  This parameter exists in beta.
      * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and &#x60;appVersion&#x60;.  This parameter exists in beta.
-     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;. Example: &#x60;filter: {discardReason: [\&#39;discard1\&#39;], eventName: [\&#39;name1\&#39;, \&#39;name2\&#39;], eventType: [\&#39;type1\&#39;]}&#x60;.  This parameter exists in beta.
+     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;.  This parameter exists in beta.
      * @param subscriptionId An optional filter for actions destinations, to filter by a specific action.  This parameter exists in beta.
      */
     public async getEgressFailedMetricsFromDeliveryOverview(
@@ -341,7 +341,7 @@ export class DeliveryOverviewApi {
      * @param granularity The size of each bucket in the requested window.  Based on the granularity chosen, there are restrictions on the time range you can query:  **Minute**: - Max time range: 4 hours - Oldest possible start time: 48 hours in the past  **Hour**: - Max Time range: 14 days - Oldest possible start time: 30 days in the past  **Day**: - Max time range: 30 days - Oldest possible start time: 30 days in the past  This parameter exists in beta.
      * @param pagination Params to specify the page cursor and count.  This parameter exists in beta.
      * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and &#x60;appVersion&#x60;.  This parameter exists in beta.
-     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;. Example: &#x60;filter: {discardReason: [\&#39;discard1\&#39;], eventName: [\&#39;name1\&#39;, \&#39;name2\&#39;], eventType: [\&#39;type1\&#39;]}&#x60;.  This parameter exists in beta.
+     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;. If you would like to view retry attempts for a successful delivery, you can filter &#x60;discardReason&#x60; from &#x60;successes.attempt.1&#x60; through &#x60;successes.attempt.10&#x60;.  This parameter exists in beta.
      * @param subscriptionId An optional filter for actions destinations, to filter by a specific action.  This parameter exists in beta.
      */
     public async getEgressSuccessMetricsFromDeliveryOverview(
@@ -564,7 +564,7 @@ export class DeliveryOverviewApi {
      * @param granularity The size of each bucket in the requested window.  Based on the granularity chosen, there are restrictions on the time range you can query:  **Minute**: - Max time range: 4 hours - Oldest possible start time: 48 hours in the past  **Hour**: - Max Time range: 14 days - Oldest possible start time: 30 days in the past  **Day**: - Max time range: 30 days - Oldest possible start time: 30 days in the past  This parameter exists in beta.
      * @param pagination Params to specify the page cursor and count.  This parameter exists in beta.
      * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and &#x60;appVersion&#x60;.  This parameter exists in beta.
-     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;. Example: &#x60;filter: {discardReason: [\&#39;discard1\&#39;], eventName: [\&#39;name1\&#39;, \&#39;name2\&#39;], eventType: [\&#39;type1\&#39;]}&#x60;.  This parameter exists in beta.
+     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;.  This parameter exists in beta.
      * @param subscriptionId An optional filter for actions destinations, to filter by a specific action.  This parameter exists in beta.
      */
     public async getFilteredAtDestinationMetricsFromDeliveryOverview(
@@ -787,8 +787,7 @@ export class DeliveryOverviewApi {
      * @param pagination Optional params to specify the page cursor and count.  This parameter exists in beta.
      * @param destinationConfigId The id tied to a Workspace Destination.  This parameter exists in beta.
      * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and &#x60;appVersion&#x60;.  This parameter exists in beta.
-     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;. Example: &#x60;filter: {discardReason: [\&#39;discard1\&#39;], eventName: [\&#39;name1\&#39;, \&#39;name2\&#39;], eventType: [\&#39;type1\&#39;]}&#x60;.  This parameter exists in beta.
-     * @param subscriptionId An optional filter for actions destinations, to filter by a specific action.  This parameter exists in beta.
+     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;.  This parameter exists in beta.
      */
     public async getFilteredAtSourceMetricsFromDeliveryOverview(
         sourceId: string,
@@ -799,7 +798,6 @@ export class DeliveryOverviewApi {
         destinationConfigId?: string,
         groupBy?: Array<string>,
         filter?: DeliveryOverviewFilterBy,
-        subscriptionId?: string,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -913,11 +911,6 @@ export class DeliveryOverviewApi {
             );
         }
 
-        if (subscriptionId !== undefined) {
-            localVarQueryParameters['subscriptionId'] =
-                ObjectSerializer.serialize(subscriptionId, 'string');
-        }
-
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -1003,8 +996,7 @@ export class DeliveryOverviewApi {
      * @param pagination Optional params to specify the page cursor and count.  This parameter exists in beta.
      * @param destinationConfigId The id tied to a Workspace Destination.  This parameter exists in beta.
      * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and &#x60;appVersion&#x60;.  This parameter exists in beta.
-     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;. Example: &#x60;filter: {discardReason: [\&#39;discard1\&#39;], eventName: [\&#39;name1\&#39;, \&#39;name2\&#39;], eventType: [\&#39;type1\&#39;]}&#x60;.  This parameter exists in beta.
-     * @param subscriptionId An optional filter for actions destinations, to filter by a specific action.  This parameter exists in beta.
+     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;.  This parameter exists in beta.
      */
     public async getIngressFailedMetricsFromDeliveryOverview(
         sourceId: string,
@@ -1015,7 +1007,6 @@ export class DeliveryOverviewApi {
         destinationConfigId?: string,
         groupBy?: Array<string>,
         filter?: DeliveryOverviewFilterBy,
-        subscriptionId?: string,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -1129,11 +1120,6 @@ export class DeliveryOverviewApi {
             );
         }
 
-        if (subscriptionId !== undefined) {
-            localVarQueryParameters['subscriptionId'] =
-                ObjectSerializer.serialize(subscriptionId, 'string');
-        }
-
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -1218,9 +1204,8 @@ export class DeliveryOverviewApi {
      * @param granularity The size of each bucket in the requested window.  Based on the granularity chosen, there are restrictions on the time range you can query:  **Minute**: - Max time range: 4 hours - Oldest possible start time: 48 hours in the past  **Hour**: - Max Time range: 14 days - Oldest possible start time: 30 days in the past  **Day**: - Max time range: 30 days - Oldest possible start time: 30 days in the past  This parameter exists in beta.
      * @param pagination Optional params to specify the page cursor and count.  This parameter exists in beta.
      * @param destinationConfigId The id tied to a Workspace Destination.  This parameter exists in beta.
-     * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and &#x60;appVersion&#x60;.  This parameter exists in beta.
-     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;. Example: &#x60;filter: {discardReason: [\&#39;discard1\&#39;], eventName: [\&#39;name1\&#39;, \&#39;name2\&#39;], eventType: [\&#39;type1\&#39;]}&#x60;.  This parameter exists in beta.
-     * @param subscriptionId An optional filter for actions destinations, to filter by a specific action.  This parameter exists in beta.
+     * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, and &#x60;appVersion&#x60;.  This parameter exists in beta.
+     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;.  This parameter exists in beta.
      */
     public async getIngressSuccessMetricsFromDeliveryOverview(
         sourceId: string,
@@ -1231,7 +1216,6 @@ export class DeliveryOverviewApi {
         destinationConfigId?: string,
         groupBy?: Array<string>,
         filter?: DeliveryOverviewFilterBy,
-        subscriptionId?: string,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -1343,11 +1327,6 @@ export class DeliveryOverviewApi {
                 pagination,
                 'PaginationInput'
             );
-        }
-
-        if (subscriptionId !== undefined) {
-            localVarQueryParameters['subscriptionId'] =
-                ObjectSerializer.serialize(subscriptionId, 'string');
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
