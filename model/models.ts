@@ -188,7 +188,7 @@ export * from './getDailyWorkspaceAPICallsUsage200Response';
 export * from './getDailyWorkspaceAPICallsUsageV1Output';
 export * from './getDailyWorkspaceMTUUsage200Response';
 export * from './getDailyWorkspaceMTUUsageV1Output';
-export * from './getDeliveryOverviewMetricsAlphaOutput';
+export * from './getDeliveryOverviewMetricsBetaOutput';
 export * from './getDestination200Response';
 export * from './getDestinationMetadata200Response';
 export * from './getDestinationMetadataV1Output';
@@ -721,7 +721,7 @@ import { GetDailyWorkspaceAPICallsUsage200Response } from './getDailyWorkspaceAP
 import { GetDailyWorkspaceAPICallsUsageV1Output } from './getDailyWorkspaceAPICallsUsageV1Output';
 import { GetDailyWorkspaceMTUUsage200Response } from './getDailyWorkspaceMTUUsage200Response';
 import { GetDailyWorkspaceMTUUsageV1Output } from './getDailyWorkspaceMTUUsageV1Output';
-import { GetDeliveryOverviewMetricsAlphaOutput } from './getDeliveryOverviewMetricsAlphaOutput';
+import { GetDeliveryOverviewMetricsBetaOutput } from './getDeliveryOverviewMetricsBetaOutput';
 import { GetDestination200Response } from './getDestination200Response';
 import { GetDestinationMetadata200Response } from './getDestinationMetadata200Response';
 import { GetDestinationMetadataV1Output } from './getDestinationMetadataV1Output';
@@ -1427,8 +1427,7 @@ let typeMap: { [index: string]: any } = {
         GetDailyWorkspaceAPICallsUsageV1Output,
     GetDailyWorkspaceMTUUsage200Response: GetDailyWorkspaceMTUUsage200Response,
     GetDailyWorkspaceMTUUsageV1Output: GetDailyWorkspaceMTUUsageV1Output,
-    GetDeliveryOverviewMetricsAlphaOutput:
-        GetDeliveryOverviewMetricsAlphaOutput,
+    GetDeliveryOverviewMetricsBetaOutput: GetDeliveryOverviewMetricsBetaOutput,
     GetDestination200Response: GetDestination200Response,
     GetDestinationMetadata200Response: GetDestinationMetadata200Response,
     GetDestinationMetadataV1Output: GetDestinationMetadataV1Output,

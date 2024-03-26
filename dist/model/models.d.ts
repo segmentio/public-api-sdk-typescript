@@ -189,7 +189,7 @@ export * from './getDailyWorkspaceAPICallsUsage200Response';
 export * from './getDailyWorkspaceAPICallsUsageV1Output';
 export * from './getDailyWorkspaceMTUUsage200Response';
 export * from './getDailyWorkspaceMTUUsageV1Output';
-export * from './getDeliveryOverviewMetricsAlphaOutput';
+export * from './getDeliveryOverviewMetricsBetaOutput';
 export * from './getDestination200Response';
 export * from './getDestinationMetadata200Response';
 export * from './getDestinationMetadataV1Output';

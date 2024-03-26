@@ -1,6 +1,6 @@
-import { GetDeliveryOverviewMetricsAlphaOutput } from './getDeliveryOverviewMetricsAlphaOutput';
+import { GetDeliveryOverviewMetricsBetaOutput } from './getDeliveryOverviewMetricsBetaOutput';
 export declare class GetEgressFailedMetricsFromDeliveryOverview200Response {
-    'data'?: GetDeliveryOverviewMetricsAlphaOutput;
+    'data'?: GetDeliveryOverviewMetricsBetaOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

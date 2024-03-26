@@ -34,7 +34,7 @@ export declare class DeliveryOverviewApi {
         response: http.IncomingMessage;
         body: GetEgressFailedMetricsFromDeliveryOverview200Response;
     }>;
-    getEgressSuccessMetricsFromDeliveryOverview(options?: {
+    getEgressSuccessMetricsFromDeliveryOverview(sourceId: string, destinationConfigId: string, startTime: string, endTime: string, granularity: 'day' | 'hour' | 'minute', pagination: PaginationInput, groupBy?: Array<string>, filter?: DeliveryOverviewFilterBy, subscriptionId?: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -42,7 +42,7 @@ export declare class DeliveryOverviewApi {
         response: http.IncomingMessage;
         body: GetEgressFailedMetricsFromDeliveryOverview200Response;
     }>;
-    getFilteredAtDestinationMetricsFromDeliveryOverview(options?: {
+    getFilteredAtDestinationMetricsFromDeliveryOverview(sourceId: string, destinationConfigId: string, startTime: string, endTime: string, granularity: 'day' | 'hour' | 'minute', pagination: PaginationInput, groupBy?: Array<string>, filter?: DeliveryOverviewFilterBy, subscriptionId?: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -50,7 +50,7 @@ export declare class DeliveryOverviewApi {
         response: http.IncomingMessage;
         body: GetEgressFailedMetricsFromDeliveryOverview200Response;
     }>;
-    getFilteredAtSourceMetricsFromDeliveryOverview(sourceId: string, startTime: string, endTime: string, granularity: 'day' | 'hour' | 'minute', pagination: PaginationInput, destinationConfigId?: string, groupBy?: Array<string>, filter?: DeliveryOverviewFilterBy, subscriptionId?: string, options?: {
+    getFilteredAtSourceMetricsFromDeliveryOverview(sourceId: string, startTime: string, endTime: string, granularity: 'day' | 'hour' | 'minute', pagination: PaginationInput, groupBy?: Array<string>, filter?: DeliveryOverviewFilterBy, options?: {
         headers: {
             [name: string]: string;
         };
@@ -58,7 +58,7 @@ export declare class DeliveryOverviewApi {
         response: http.IncomingMessage;
         body: GetEgressFailedMetricsFromDeliveryOverview200Response;
     }>;
-    getIngressFailedMetricsFromDeliveryOverview(options?: {
+    getIngressFailedMetricsFromDeliveryOverview(sourceId: string, startTime: string, endTime: string, granularity: 'day' | 'hour' | 'minute', pagination: PaginationInput, groupBy?: Array<string>, filter?: DeliveryOverviewFilterBy, options?: {
         headers: {
             [name: string]: string;
         };
@@ -66,7 +66,7 @@ export declare class DeliveryOverviewApi {
         response: http.IncomingMessage;
         body: GetEgressFailedMetricsFromDeliveryOverview200Response;
     }>;
-    getIngressSuccessMetricsFromDeliveryOverview(options?: {
+    getIngressSuccessMetricsFromDeliveryOverview(sourceId: string, startTime: string, endTime: string, granularity: 'day' | 'hour' | 'minute', pagination: PaginationInput, groupBy?: Array<string>, filter?: DeliveryOverviewFilterBy, options?: {
         headers: {
             [name: string]: string;
         };
