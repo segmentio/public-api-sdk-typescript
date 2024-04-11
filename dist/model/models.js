@@ -155,9 +155,10 @@ __exportStar(require("./deleteUsersV1Output"), exports);
 __exportStar(require("./deleteWarehouse200Response"), exports);
 __exportStar(require("./deleteWarehouseV1Output"), exports);
 __exportStar(require("./deliveryMetricsSummaryBeta"), exports);
-__exportStar(require("./deliveryOverviewFilterBy"), exports);
+__exportStar(require("./deliveryOverviewDestinationFilterBy"), exports);
 __exportStar(require("./deliveryOverviewMetricsDatapoint"), exports);
 __exportStar(require("./deliveryOverviewMetricsDataset"), exports);
+__exportStar(require("./deliveryOverviewSourceFilterBy"), exports);
 __exportStar(require("./destinationFilterActionV1"), exports);
 __exportStar(require("./destinationFilterV1"), exports);
 __exportStar(require("./destinationMetadataActionFieldV1"), exports);
@@ -675,9 +676,10 @@ var deleteUsersV1Output_1 = require("./deleteUsersV1Output");
 var deleteWarehouse200Response_1 = require("./deleteWarehouse200Response");
 var deleteWarehouseV1Output_1 = require("./deleteWarehouseV1Output");
 var deliveryMetricsSummaryBeta_1 = require("./deliveryMetricsSummaryBeta");
-var deliveryOverviewFilterBy_1 = require("./deliveryOverviewFilterBy");
+var deliveryOverviewDestinationFilterBy_1 = require("./deliveryOverviewDestinationFilterBy");
 var deliveryOverviewMetricsDatapoint_1 = require("./deliveryOverviewMetricsDatapoint");
 var deliveryOverviewMetricsDataset_1 = require("./deliveryOverviewMetricsDataset");
+var deliveryOverviewSourceFilterBy_1 = require("./deliveryOverviewSourceFilterBy");
 var destinationFilterActionV1_1 = require("./destinationFilterActionV1");
 var destinationFilterV1_1 = require("./destinationFilterV1");
 var destinationMetadataActionFieldV1_1 = require("./destinationMetadataActionFieldV1");
@@ -1294,9 +1296,10 @@ var typeMap = {
     DeleteWarehouse200Response: deleteWarehouse200Response_1.DeleteWarehouse200Response,
     DeleteWarehouseV1Output: deleteWarehouseV1Output_1.DeleteWarehouseV1Output,
     DeliveryMetricsSummaryBeta: deliveryMetricsSummaryBeta_1.DeliveryMetricsSummaryBeta,
-    DeliveryOverviewFilterBy: deliveryOverviewFilterBy_1.DeliveryOverviewFilterBy,
+    DeliveryOverviewDestinationFilterBy: deliveryOverviewDestinationFilterBy_1.DeliveryOverviewDestinationFilterBy,
     DeliveryOverviewMetricsDatapoint: deliveryOverviewMetricsDatapoint_1.DeliveryOverviewMetricsDatapoint,
     DeliveryOverviewMetricsDataset: deliveryOverviewMetricsDataset_1.DeliveryOverviewMetricsDataset,
+    DeliveryOverviewSourceFilterBy: deliveryOverviewSourceFilterBy_1.DeliveryOverviewSourceFilterBy,
     DestinationFilterActionV1: destinationFilterActionV1_1.DestinationFilterActionV1,
     DestinationFilterV1: destinationFilterV1_1.DestinationFilterV1,
     DestinationMetadataActionFieldV1: destinationMetadataActionFieldV1_1.DestinationMetadataActionFieldV1,

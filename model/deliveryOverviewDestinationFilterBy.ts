@@ -13,11 +13,11 @@
 import { RequestFile } from './models';
 
 /**
- * The `DeliveryOverviewFilterBy` object is a map of the filterable fields and their values.
+ * The `DeliveryOverviewDestinationFilterBy` object is a map of the filterable fields and their values.
  */
-export class DeliveryOverviewFilterBy {
+export class DeliveryOverviewDestinationFilterBy {
     /**
-     * A list of strings of discard reasons. Can be used to filter all Source and Destination steps, except for Successfully Received.  See [Discard Record Documentation](https://segment.com/docs/connections/delivery-overview/#troubleshooting) for valid error codes.
+     * A list of strings of discard reasons. Can be used to filter all Delivery Overview steps, except for Successfully Received.  See [Discard Record Documentation](https://segment.com/docs/connections/delivery-overview/#troubleshooting) for valid error codes.
      */
     'discardReason'?: Array<string>;
     /**
@@ -32,6 +32,10 @@ export class DeliveryOverviewFilterBy {
      * A list of strings of app versions.
      */
     'appVersion'?: Array<string>;
+    /**
+     * A list of strings of subscriptionIDs.
+     */
+    'subscriptionId'?: Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -60,9 +64,14 @@ export class DeliveryOverviewFilterBy {
             baseName: 'appVersion',
             type: 'Array<string>',
         },
+        {
+            name: 'subscriptionId',
+            baseName: 'subscriptionId',
+            type: 'Array<string>',
+        },
     ];
 
     static getAttributeTypeMap() {
-        return DeliveryOverviewFilterBy.attributeTypeMap;
+        return DeliveryOverviewDestinationFilterBy.attributeTypeMap;
     }
 }

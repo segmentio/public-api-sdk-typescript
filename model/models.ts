@@ -140,9 +140,10 @@ export * from './deleteUsersV1Output';
 export * from './deleteWarehouse200Response';
 export * from './deleteWarehouseV1Output';
 export * from './deliveryMetricsSummaryBeta';
-export * from './deliveryOverviewFilterBy';
+export * from './deliveryOverviewDestinationFilterBy';
 export * from './deliveryOverviewMetricsDatapoint';
 export * from './deliveryOverviewMetricsDataset';
+export * from './deliveryOverviewSourceFilterBy';
 export * from './destinationFilterActionV1';
 export * from './destinationFilterV1';
 export * from './destinationMetadataActionFieldV1';
@@ -673,9 +674,10 @@ import { DeleteUsersV1Output } from './deleteUsersV1Output';
 import { DeleteWarehouse200Response } from './deleteWarehouse200Response';
 import { DeleteWarehouseV1Output } from './deleteWarehouseV1Output';
 import { DeliveryMetricsSummaryBeta } from './deliveryMetricsSummaryBeta';
-import { DeliveryOverviewFilterBy } from './deliveryOverviewFilterBy';
+import { DeliveryOverviewDestinationFilterBy } from './deliveryOverviewDestinationFilterBy';
 import { DeliveryOverviewMetricsDatapoint } from './deliveryOverviewMetricsDatapoint';
 import { DeliveryOverviewMetricsDataset } from './deliveryOverviewMetricsDataset';
+import { DeliveryOverviewSourceFilterBy } from './deliveryOverviewSourceFilterBy';
 import { DestinationFilterActionV1 } from './destinationFilterActionV1';
 import { DestinationFilterV1 } from './destinationFilterV1';
 import { DestinationMetadataActionFieldV1 } from './destinationMetadataActionFieldV1';
@@ -1368,9 +1370,10 @@ let typeMap: { [index: string]: any } = {
     DeleteWarehouse200Response: DeleteWarehouse200Response,
     DeleteWarehouseV1Output: DeleteWarehouseV1Output,
     DeliveryMetricsSummaryBeta: DeliveryMetricsSummaryBeta,
-    DeliveryOverviewFilterBy: DeliveryOverviewFilterBy,
+    DeliveryOverviewDestinationFilterBy: DeliveryOverviewDestinationFilterBy,
     DeliveryOverviewMetricsDatapoint: DeliveryOverviewMetricsDatapoint,
     DeliveryOverviewMetricsDataset: DeliveryOverviewMetricsDataset,
+    DeliveryOverviewSourceFilterBy: DeliveryOverviewSourceFilterBy,
     DestinationFilterActionV1: DestinationFilterActionV1,
     DestinationFilterV1: DestinationFilterV1,
     DestinationMetadataActionFieldV1: DestinationMetadataActionFieldV1,
