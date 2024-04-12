@@ -159,6 +159,7 @@ __exportStar(require("./deliveryOverviewDestinationFilterBy"), exports);
 __exportStar(require("./deliveryOverviewMetricsDatapoint"), exports);
 __exportStar(require("./deliveryOverviewMetricsDataset"), exports);
 __exportStar(require("./deliveryOverviewSourceFilterBy"), exports);
+__exportStar(require("./deliveryOverviewSuccessfullyReceivedFilterBy"), exports);
 __exportStar(require("./destinationFilterActionV1"), exports);
 __exportStar(require("./destinationFilterV1"), exports);
 __exportStar(require("./destinationMetadataActionFieldV1"), exports);
@@ -680,6 +681,7 @@ var deliveryOverviewDestinationFilterBy_1 = require("./deliveryOverviewDestinati
 var deliveryOverviewMetricsDatapoint_1 = require("./deliveryOverviewMetricsDatapoint");
 var deliveryOverviewMetricsDataset_1 = require("./deliveryOverviewMetricsDataset");
 var deliveryOverviewSourceFilterBy_1 = require("./deliveryOverviewSourceFilterBy");
+var deliveryOverviewSuccessfullyReceivedFilterBy_1 = require("./deliveryOverviewSuccessfullyReceivedFilterBy");
 var destinationFilterActionV1_1 = require("./destinationFilterActionV1");
 var destinationFilterV1_1 = require("./destinationFilterV1");
 var destinationMetadataActionFieldV1_1 = require("./destinationMetadataActionFieldV1");
@@ -1300,6 +1302,7 @@ var typeMap = {
     DeliveryOverviewMetricsDatapoint: deliveryOverviewMetricsDatapoint_1.DeliveryOverviewMetricsDatapoint,
     DeliveryOverviewMetricsDataset: deliveryOverviewMetricsDataset_1.DeliveryOverviewMetricsDataset,
     DeliveryOverviewSourceFilterBy: deliveryOverviewSourceFilterBy_1.DeliveryOverviewSourceFilterBy,
+    DeliveryOverviewSuccessfullyReceivedFilterBy: deliveryOverviewSuccessfullyReceivedFilterBy_1.DeliveryOverviewSuccessfullyReceivedFilterBy,
     DestinationFilterActionV1: destinationFilterActionV1_1.DestinationFilterActionV1,
     DestinationFilterV1: destinationFilterV1_1.DestinationFilterV1,
     DestinationMetadataActionFieldV1: destinationMetadataActionFieldV1_1.DestinationMetadataActionFieldV1,

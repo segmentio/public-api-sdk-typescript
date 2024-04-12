@@ -144,6 +144,7 @@ export * from './deliveryOverviewDestinationFilterBy';
 export * from './deliveryOverviewMetricsDatapoint';
 export * from './deliveryOverviewMetricsDataset';
 export * from './deliveryOverviewSourceFilterBy';
+export * from './deliveryOverviewSuccessfullyReceivedFilterBy';
 export * from './destinationFilterActionV1';
 export * from './destinationFilterV1';
 export * from './destinationMetadataActionFieldV1';
@@ -678,6 +679,7 @@ import { DeliveryOverviewDestinationFilterBy } from './deliveryOverviewDestinati
 import { DeliveryOverviewMetricsDatapoint } from './deliveryOverviewMetricsDatapoint';
 import { DeliveryOverviewMetricsDataset } from './deliveryOverviewMetricsDataset';
 import { DeliveryOverviewSourceFilterBy } from './deliveryOverviewSourceFilterBy';
+import { DeliveryOverviewSuccessfullyReceivedFilterBy } from './deliveryOverviewSuccessfullyReceivedFilterBy';
 import { DestinationFilterActionV1 } from './destinationFilterActionV1';
 import { DestinationFilterV1 } from './destinationFilterV1';
 import { DestinationMetadataActionFieldV1 } from './destinationMetadataActionFieldV1';
@@ -1374,6 +1376,8 @@ let typeMap: { [index: string]: any } = {
     DeliveryOverviewMetricsDatapoint: DeliveryOverviewMetricsDatapoint,
     DeliveryOverviewMetricsDataset: DeliveryOverviewMetricsDataset,
     DeliveryOverviewSourceFilterBy: DeliveryOverviewSourceFilterBy,
+    DeliveryOverviewSuccessfullyReceivedFilterBy:
+        DeliveryOverviewSuccessfullyReceivedFilterBy,
     DestinationFilterActionV1: DestinationFilterActionV1,
     DestinationFilterV1: DestinationFilterV1,
     DestinationMetadataActionFieldV1: DestinationMetadataActionFieldV1,

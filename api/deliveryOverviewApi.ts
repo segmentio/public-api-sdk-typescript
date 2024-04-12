@@ -16,6 +16,7 @@ import http from 'http';
 /* tslint:disable:no-unused-locals */
 import { DeliveryOverviewDestinationFilterBy } from '../model/deliveryOverviewDestinationFilterBy';
 import { DeliveryOverviewSourceFilterBy } from '../model/deliveryOverviewSourceFilterBy';
+import { DeliveryOverviewSuccessfullyReceivedFilterBy } from '../model/deliveryOverviewSuccessfullyReceivedFilterBy';
 import { GetEgressFailedMetricsFromDeliveryOverview200Response } from '../model/getEgressFailedMetricsFromDeliveryOverview200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { RequestErrorEnvelope } from '../model/requestErrorEnvelope';
@@ -1186,7 +1187,7 @@ export class DeliveryOverviewApi {
         granularity: 'DAY' | 'HOUR' | 'MINUTE',
         pagination: PaginationInput,
         groupBy?: Array<string>,
-        filter?: DeliveryOverviewSourceFilterBy,
+        filter?: DeliveryOverviewSuccessfullyReceivedFilterBy,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -1284,7 +1285,7 @@ export class DeliveryOverviewApi {
         if (filter !== undefined) {
             localVarQueryParameters['filter'] = ObjectSerializer.serialize(
                 filter,
-                'DeliveryOverviewSourceFilterBy'
+                'DeliveryOverviewSuccessfullyReceivedFilterBy'
             );
         }
 

@@ -2,6 +2,7 @@
 import http from 'http';
 import { DeliveryOverviewDestinationFilterBy } from '../model/deliveryOverviewDestinationFilterBy';
 import { DeliveryOverviewSourceFilterBy } from '../model/deliveryOverviewSourceFilterBy';
+import { DeliveryOverviewSuccessfullyReceivedFilterBy } from '../model/deliveryOverviewSuccessfullyReceivedFilterBy';
 import { GetEgressFailedMetricsFromDeliveryOverview200Response } from '../model/getEgressFailedMetricsFromDeliveryOverview200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { Authentication, Interceptor } from '../model/models';
@@ -67,7 +68,7 @@ export declare class DeliveryOverviewApi {
         response: http.IncomingMessage;
         body: GetEgressFailedMetricsFromDeliveryOverview200Response;
     }>;
-    getIngressSuccessMetricsFromDeliveryOverview(sourceId: string, startTime: string, endTime: string, granularity: 'DAY' | 'HOUR' | 'MINUTE', pagination: PaginationInput, groupBy?: Array<string>, filter?: DeliveryOverviewSourceFilterBy, options?: {
+    getIngressSuccessMetricsFromDeliveryOverview(sourceId: string, startTime: string, endTime: string, granularity: 'DAY' | 'HOUR' | 'MINUTE', pagination: PaginationInput, groupBy?: Array<string>, filter?: DeliveryOverviewSuccessfullyReceivedFilterBy, options?: {
         headers: {
             [name: string]: string;
         };

@@ -769,7 +769,7 @@ var DeliveryOverviewApi = (function () {
                     localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'DAY' | 'HOUR' | 'MINUTE'");
                 }
                 if (filter !== undefined) {
-                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewSourceFilterBy');
+                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewSuccessfullyReceivedFilterBy');
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');

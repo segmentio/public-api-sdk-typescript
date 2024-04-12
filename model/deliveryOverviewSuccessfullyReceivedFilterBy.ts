@@ -13,13 +13,9 @@
 import { RequestFile } from './models';
 
 /**
- * The `DeliveryOverviewSourceFilterBy` object is a map of the filterable fields and their values.
+ * The `DeliveryOverviewSuccessfullyReceivedFilterBy` object is a map of the filterable fields and their values for the Successfully Received pipeline step.
  */
-export class DeliveryOverviewSourceFilterBy {
-    /**
-     * A list of strings of discard reasons.  See [Discard Record Documentation](https://segment.com/docs/connections/delivery-overview/#troubleshooting) for valid error codes.
-     */
-    'discardReason'?: Array<string>;
+export class DeliveryOverviewSuccessfullyReceivedFilterBy {
     /**
      * A list of strings of event names.
      */
@@ -41,11 +37,6 @@ export class DeliveryOverviewSourceFilterBy {
         type: string;
     }> = [
         {
-            name: 'discardReason',
-            baseName: 'discardReason',
-            type: 'Array<string>',
-        },
-        {
             name: 'eventName',
             baseName: 'eventName',
             type: 'Array<string>',
@@ -63,6 +54,6 @@ export class DeliveryOverviewSourceFilterBy {
     ];
 
     static getAttributeTypeMap() {
-        return DeliveryOverviewSourceFilterBy.attributeTypeMap;
+        return DeliveryOverviewSuccessfullyReceivedFilterBy.attributeTypeMap;
     }
 }

@@ -145,6 +145,7 @@ export * from './deliveryOverviewDestinationFilterBy';
 export * from './deliveryOverviewMetricsDatapoint';
 export * from './deliveryOverviewMetricsDataset';
 export * from './deliveryOverviewSourceFilterBy';
+export * from './deliveryOverviewSuccessfullyReceivedFilterBy';
 export * from './destinationFilterActionV1';
 export * from './destinationFilterV1';
 export * from './destinationMetadataActionFieldV1';
