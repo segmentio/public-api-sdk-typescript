@@ -17,7 +17,7 @@ import { RequestFile } from './models';
  */
 export class DeliveryOverviewDestinationFilterBy {
     /**
-     * A list of strings of discard reasons. Can be used to filter all Delivery Overview steps, except for Successfully Received.  See [Discard Record Documentation](https://segment.com/docs/connections/delivery-overview/#troubleshooting) for valid error codes.
+     * A list of strings of discard reasons.  See [Discard Record Documentation](https://segment.com/docs/connections/delivery-overview/#troubleshooting) for valid error codes.
      */
     'discardReason'?: Array<string>;
     /**
@@ -33,7 +33,7 @@ export class DeliveryOverviewDestinationFilterBy {
      */
     'appVersion'?: Array<string>;
     /**
-     * A list of strings of subscriptionIDs.
+     * A list of strings of subscriptionIDs for Actions Destinations.
      */
     'subscriptionId'?: Array<string>;
 
