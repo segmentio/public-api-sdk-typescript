@@ -3,7 +3,7 @@ export declare class Regulation {
     'id': string;
     'workspaceId': string;
     'overallStatus': Regulation.OverallStatusEnum;
-    'finishedAt': string;
+    'finishedAt'?: string;
     'createdAt': string;
     'streamStatus': Array<StreamStatusV1>;
     static discriminator: string | undefined;
