@@ -14,7 +14,9 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { DeliveryOverviewFilterBy } from '../model/deliveryOverviewFilterBy';
+import { DeliveryOverviewDestinationFilterBy } from '../model/deliveryOverviewDestinationFilterBy';
+import { DeliveryOverviewSourceFilterBy } from '../model/deliveryOverviewSourceFilterBy';
+import { DeliveryOverviewSuccessfullyReceivedFilterBy } from '../model/deliveryOverviewSuccessfullyReceivedFilterBy';
 import { GetEgressFailedMetricsFromDeliveryOverview200Response } from '../model/getEgressFailedMetricsFromDeliveryOverview200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { RequestErrorEnvelope } from '../model/requestErrorEnvelope';
@@ -117,20 +119,18 @@ export class DeliveryOverviewApi {
      * @param endTime The ISO8601 formatted timestamp corresponding to the end of the requested timeframe, noninclusive.  This parameter exists in beta.
      * @param granularity The size of each bucket in the requested window.  Based on the granularity chosen, there are restrictions on the time range you can query:  **Minute**: - Max time range: 4 hours - Oldest possible start time: 48 hours in the past  **Hour**: - Max Time range: 14 days - Oldest possible start time: 30 days in the past  **Day**: - Max time range: 30 days - Oldest possible start time: 30 days in the past  This parameter exists in beta.
      * @param pagination Params to specify the page cursor and count.  This parameter exists in beta.
-     * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and &#x60;appVersion&#x60;.  This parameter exists in beta.
-     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;.  This parameter exists in beta.
-     * @param subscriptionId An optional filter for actions destinations, to filter by a specific action.  This parameter exists in beta.
+     * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, &#x60;appVersion&#x60;, and &#x60;subscriptionId&#x60;.  This parameter exists in beta.
+     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, &#x60;appVersion&#x60;, and/or &#x60;subscriptionId&#x60; that can be applied in addition to a &#x60;groupBy&#x60;.  This parameter exists in beta.
      */
     public async getEgressFailedMetricsFromDeliveryOverview(
         sourceId: string,
         destinationConfigId: string,
         startTime: string,
         endTime: string,
-        granularity: 'day' | 'hour' | 'minute',
+        granularity: 'DAY' | 'HOUR' | 'MINUTE',
         pagination: PaginationInput,
         groupBy?: Array<string>,
-        filter?: DeliveryOverviewFilterBy,
-        subscriptionId?: string,
+        filter?: DeliveryOverviewDestinationFilterBy,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -233,14 +233,14 @@ export class DeliveryOverviewApi {
         if (granularity !== undefined) {
             localVarQueryParameters['granularity'] = ObjectSerializer.serialize(
                 granularity,
-                "'day' | 'hour' | 'minute'"
+                "'DAY' | 'HOUR' | 'MINUTE'"
             );
         }
 
         if (filter !== undefined) {
             localVarQueryParameters['filter'] = ObjectSerializer.serialize(
                 filter,
-                'DeliveryOverviewFilterBy'
+                'DeliveryOverviewDestinationFilterBy'
             );
         }
 
@@ -249,11 +249,6 @@ export class DeliveryOverviewApi {
                 pagination,
                 'PaginationInput'
             );
-        }
-
-        if (subscriptionId !== undefined) {
-            localVarQueryParameters['subscriptionId'] =
-                ObjectSerializer.serialize(subscriptionId, 'string');
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
@@ -340,20 +335,18 @@ export class DeliveryOverviewApi {
      * @param endTime The ISO8601 formatted timestamp corresponding to the end of the requested timeframe, noninclusive.  This parameter exists in beta.
      * @param granularity The size of each bucket in the requested window.  Based on the granularity chosen, there are restrictions on the time range you can query:  **Minute**: - Max time range: 4 hours - Oldest possible start time: 48 hours in the past  **Hour**: - Max Time range: 14 days - Oldest possible start time: 30 days in the past  **Day**: - Max time range: 30 days - Oldest possible start time: 30 days in the past  This parameter exists in beta.
      * @param pagination Params to specify the page cursor and count.  This parameter exists in beta.
-     * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and &#x60;appVersion&#x60;.  This parameter exists in beta.
-     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;. If you would like to view retry attempts for a successful delivery, you can filter &#x60;discardReason&#x60; from &#x60;successes.attempt.1&#x60; through &#x60;successes.attempt.10&#x60;.  This parameter exists in beta.
-     * @param subscriptionId An optional filter for actions destinations, to filter by a specific action.  This parameter exists in beta.
+     * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, &#x60;appVersion&#x60;, and &#x60;subscriptionId&#x60;.  This parameter exists in beta.
+     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, &#x60;appVersion&#x60;, and/or &#x60;subscriptionId&#x60; that can be applied in addition to a &#x60;groupBy&#x60;. If you would like to view retry attempts for a successful delivery, you can filter &#x60;discardReason&#x60; from &#x60;successes.attempt.1&#x60; through &#x60;successes.attempt.10&#x60;.  This parameter exists in beta.
      */
     public async getEgressSuccessMetricsFromDeliveryOverview(
         sourceId: string,
         destinationConfigId: string,
         startTime: string,
         endTime: string,
-        granularity: 'day' | 'hour' | 'minute',
+        granularity: 'DAY' | 'HOUR' | 'MINUTE',
         pagination: PaginationInput,
         groupBy?: Array<string>,
-        filter?: DeliveryOverviewFilterBy,
-        subscriptionId?: string,
+        filter?: DeliveryOverviewDestinationFilterBy,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -456,14 +449,14 @@ export class DeliveryOverviewApi {
         if (granularity !== undefined) {
             localVarQueryParameters['granularity'] = ObjectSerializer.serialize(
                 granularity,
-                "'day' | 'hour' | 'minute'"
+                "'DAY' | 'HOUR' | 'MINUTE'"
             );
         }
 
         if (filter !== undefined) {
             localVarQueryParameters['filter'] = ObjectSerializer.serialize(
                 filter,
-                'DeliveryOverviewFilterBy'
+                'DeliveryOverviewDestinationFilterBy'
             );
         }
 
@@ -472,11 +465,6 @@ export class DeliveryOverviewApi {
                 pagination,
                 'PaginationInput'
             );
-        }
-
-        if (subscriptionId !== undefined) {
-            localVarQueryParameters['subscriptionId'] =
-                ObjectSerializer.serialize(subscriptionId, 'string');
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
@@ -563,8 +551,8 @@ export class DeliveryOverviewApi {
      * @param endTime The ISO8601 formatted timestamp corresponding to the end of the requested timeframe, noninclusive.  This parameter exists in beta.
      * @param granularity The size of each bucket in the requested window.  Based on the granularity chosen, there are restrictions on the time range you can query:  **Minute**: - Max time range: 4 hours - Oldest possible start time: 48 hours in the past  **Hour**: - Max Time range: 14 days - Oldest possible start time: 30 days in the past  **Day**: - Max time range: 30 days - Oldest possible start time: 30 days in the past  This parameter exists in beta.
      * @param pagination Params to specify the page cursor and count.  This parameter exists in beta.
-     * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and &#x60;appVersion&#x60;.  This parameter exists in beta.
-     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, and/or &#x60;appVersion&#x60; that can be applied in addition to a &#x60;groupBy&#x60;.  This parameter exists in beta.
+     * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, &#x60;appVersion&#x60;, and &#x60;subscriptionId&#x60;.  This parameter exists in beta.
+     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, &#x60;appVersion&#x60;, and/or &#x60;subscriptionId&#x60; that can be applied in addition to a &#x60;groupBy&#x60;.  This parameter exists in beta.
      * @param subscriptionId An optional filter for actions destinations, to filter by a specific action.  This parameter exists in beta.
      */
     public async getFilteredAtDestinationMetricsFromDeliveryOverview(
@@ -572,10 +560,10 @@ export class DeliveryOverviewApi {
         destinationConfigId: string,
         startTime: string,
         endTime: string,
-        granularity: 'day' | 'hour' | 'minute',
+        granularity: 'DAY' | 'HOUR' | 'MINUTE',
         pagination: PaginationInput,
         groupBy?: Array<string>,
-        filter?: DeliveryOverviewFilterBy,
+        filter?: DeliveryOverviewDestinationFilterBy,
         subscriptionId?: string,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
@@ -679,14 +667,14 @@ export class DeliveryOverviewApi {
         if (granularity !== undefined) {
             localVarQueryParameters['granularity'] = ObjectSerializer.serialize(
                 granularity,
-                "'day' | 'hour' | 'minute'"
+                "'DAY' | 'HOUR' | 'MINUTE'"
             );
         }
 
         if (filter !== undefined) {
             localVarQueryParameters['filter'] = ObjectSerializer.serialize(
                 filter,
-                'DeliveryOverviewFilterBy'
+                'DeliveryOverviewDestinationFilterBy'
             );
         }
 
@@ -792,10 +780,10 @@ export class DeliveryOverviewApi {
         sourceId: string,
         startTime: string,
         endTime: string,
-        granularity: 'day' | 'hour' | 'minute',
+        granularity: 'DAY' | 'HOUR' | 'MINUTE',
         pagination: PaginationInput,
         groupBy?: Array<string>,
-        filter?: DeliveryOverviewFilterBy,
+        filter?: DeliveryOverviewSourceFilterBy,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -886,14 +874,14 @@ export class DeliveryOverviewApi {
         if (granularity !== undefined) {
             localVarQueryParameters['granularity'] = ObjectSerializer.serialize(
                 granularity,
-                "'day' | 'hour' | 'minute'"
+                "'DAY' | 'HOUR' | 'MINUTE'"
             );
         }
 
         if (filter !== undefined) {
             localVarQueryParameters['filter'] = ObjectSerializer.serialize(
                 filter,
-                'DeliveryOverviewFilterBy'
+                'DeliveryOverviewSourceFilterBy'
             );
         }
 
@@ -994,10 +982,10 @@ export class DeliveryOverviewApi {
         sourceId: string,
         startTime: string,
         endTime: string,
-        granularity: 'day' | 'hour' | 'minute',
+        granularity: 'DAY' | 'HOUR' | 'MINUTE',
         pagination: PaginationInput,
         groupBy?: Array<string>,
-        filter?: DeliveryOverviewFilterBy,
+        filter?: DeliveryOverviewSourceFilterBy,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -1088,14 +1076,14 @@ export class DeliveryOverviewApi {
         if (granularity !== undefined) {
             localVarQueryParameters['granularity'] = ObjectSerializer.serialize(
                 granularity,
-                "'day' | 'hour' | 'minute'"
+                "'DAY' | 'HOUR' | 'MINUTE'"
             );
         }
 
         if (filter !== undefined) {
             localVarQueryParameters['filter'] = ObjectSerializer.serialize(
                 filter,
-                'DeliveryOverviewFilterBy'
+                'DeliveryOverviewSourceFilterBy'
             );
         }
 
@@ -1196,10 +1184,10 @@ export class DeliveryOverviewApi {
         sourceId: string,
         startTime: string,
         endTime: string,
-        granularity: 'day' | 'hour' | 'minute',
+        granularity: 'DAY' | 'HOUR' | 'MINUTE',
         pagination: PaginationInput,
         groupBy?: Array<string>,
-        filter?: DeliveryOverviewFilterBy,
+        filter?: DeliveryOverviewSuccessfullyReceivedFilterBy,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -1290,14 +1278,14 @@ export class DeliveryOverviewApi {
         if (granularity !== undefined) {
             localVarQueryParameters['granularity'] = ObjectSerializer.serialize(
                 granularity,
-                "'day' | 'hour' | 'minute'"
+                "'DAY' | 'HOUR' | 'MINUTE'"
             );
         }
 
         if (filter !== undefined) {
             localVarQueryParameters['filter'] = ObjectSerializer.serialize(
                 filter,
-                'DeliveryOverviewFilterBy'
+                'DeliveryOverviewSuccessfullyReceivedFilterBy'
             );
         }
 

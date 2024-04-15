@@ -1,4 +1,4 @@
-export declare class DeliveryOverviewFilterBy {
+export declare class DeliveryOverviewSourceFilterBy {
     'discardReason'?: Array<string>;
     'eventName'?: Array<string>;
     'eventType'?: Array<string>;

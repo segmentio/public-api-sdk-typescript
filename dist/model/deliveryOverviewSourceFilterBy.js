@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DeliveryOverviewFilterBy = void 0;
-var DeliveryOverviewFilterBy = (function () {
-    function DeliveryOverviewFilterBy() {
+exports.DeliveryOverviewSourceFilterBy = void 0;
+var DeliveryOverviewSourceFilterBy = (function () {
+    function DeliveryOverviewSourceFilterBy() {
     }
-    DeliveryOverviewFilterBy.getAttributeTypeMap = function () {
-        return DeliveryOverviewFilterBy.attributeTypeMap;
+    DeliveryOverviewSourceFilterBy.getAttributeTypeMap = function () {
+        return DeliveryOverviewSourceFilterBy.attributeTypeMap;
     };
-    DeliveryOverviewFilterBy.discriminator = undefined;
-    DeliveryOverviewFilterBy.attributeTypeMap = [
+    DeliveryOverviewSourceFilterBy.discriminator = undefined;
+    DeliveryOverviewSourceFilterBy.attributeTypeMap = [
         {
             name: 'discardReason',
             baseName: 'discardReason',
@@ -30,7 +30,7 @@ var DeliveryOverviewFilterBy = (function () {
             type: 'Array<string>',
         },
     ];
-    return DeliveryOverviewFilterBy;
+    return DeliveryOverviewSourceFilterBy;
 }());
-exports.DeliveryOverviewFilterBy = DeliveryOverviewFilterBy;
-//# sourceMappingURL=deliveryOverviewFilterBy.js.map
+exports.DeliveryOverviewSourceFilterBy = DeliveryOverviewSourceFilterBy;
+//# sourceMappingURL=deliveryOverviewSourceFilterBy.js.map

@@ -13,17 +13,21 @@
 import { RequestFile } from './models';
 
 /**
- * Query language definition and type.
+ * The `DeliveryOverviewSuccessfullyReceivedFilterBy` object is a map of the filterable fields and their values for the Successfully Received pipeline step.
  */
-export class Definition {
+export class DeliveryOverviewSuccessfullyReceivedFilterBy {
     /**
-     * The query language string defining the audience segmentation criteria.
+     * A list of strings of event names.
      */
-    'query': string;
+    'eventName'?: Array<string>;
     /**
-     * The underlying data type being segmented for this audience.  Possible values: users, accounts.
+     * A list of strings of event types. Valid options are: `alias`, `group`, `identify`, `page`, `screen`, and `track`.
      */
-    'type': string;
+    'eventType'?: Array<string>;
+    /**
+     * A list of strings of app versions.
+     */
+    'appVersion'?: Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -33,18 +37,23 @@ export class Definition {
         type: string;
     }> = [
         {
-            name: 'query',
-            baseName: 'query',
-            type: 'string',
+            name: 'eventName',
+            baseName: 'eventName',
+            type: 'Array<string>',
         },
         {
-            name: 'type',
-            baseName: 'type',
-            type: 'string',
+            name: 'eventType',
+            baseName: 'eventType',
+            type: 'Array<string>',
+        },
+        {
+            name: 'appVersion',
+            baseName: 'appVersion',
+            type: 'Array<string>',
         },
     ];
 
     static getAttributeTypeMap() {
-        return Definition.attributeTypeMap;
+        return DeliveryOverviewSuccessfullyReceivedFilterBy.attributeTypeMap;
     }
 }

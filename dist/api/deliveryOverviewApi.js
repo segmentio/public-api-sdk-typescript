@@ -113,7 +113,7 @@ var DeliveryOverviewApi = (function () {
     DeliveryOverviewApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    DeliveryOverviewApi.prototype.getEgressFailedMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, pagination, groupBy, filter, subscriptionId, options) {
+    DeliveryOverviewApi.prototype.getEgressFailedMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, pagination, groupBy, filter, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -168,17 +168,13 @@ var DeliveryOverviewApi = (function () {
                     localVarQueryParameters['groupBy'] = models_1.ObjectSerializer.serialize(groupBy, 'Array<string>');
                 }
                 if (granularity !== undefined) {
-                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'day' | 'hour' | 'minute'");
+                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'DAY' | 'HOUR' | 'MINUTE'");
                 }
                 if (filter !== undefined) {
-                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewFilterBy');
+                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewDestinationFilterBy');
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                if (subscriptionId !== undefined) {
-                    localVarQueryParameters['subscriptionId'] =
-                        models_1.ObjectSerializer.serialize(subscriptionId, 'string');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -240,7 +236,7 @@ var DeliveryOverviewApi = (function () {
             });
         });
     };
-    DeliveryOverviewApi.prototype.getEgressSuccessMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, pagination, groupBy, filter, subscriptionId, options) {
+    DeliveryOverviewApi.prototype.getEgressSuccessMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, pagination, groupBy, filter, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
@@ -295,17 +291,13 @@ var DeliveryOverviewApi = (function () {
                     localVarQueryParameters['groupBy'] = models_1.ObjectSerializer.serialize(groupBy, 'Array<string>');
                 }
                 if (granularity !== undefined) {
-                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'day' | 'hour' | 'minute'");
+                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'DAY' | 'HOUR' | 'MINUTE'");
                 }
                 if (filter !== undefined) {
-                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewFilterBy');
+                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewDestinationFilterBy');
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                if (subscriptionId !== undefined) {
-                    localVarQueryParameters['subscriptionId'] =
-                        models_1.ObjectSerializer.serialize(subscriptionId, 'string');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -422,10 +414,10 @@ var DeliveryOverviewApi = (function () {
                     localVarQueryParameters['groupBy'] = models_1.ObjectSerializer.serialize(groupBy, 'Array<string>');
                 }
                 if (granularity !== undefined) {
-                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'day' | 'hour' | 'minute'");
+                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'DAY' | 'HOUR' | 'MINUTE'");
                 }
                 if (filter !== undefined) {
-                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewFilterBy');
+                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewDestinationFilterBy');
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
@@ -542,10 +534,10 @@ var DeliveryOverviewApi = (function () {
                     localVarQueryParameters['groupBy'] = models_1.ObjectSerializer.serialize(groupBy, 'Array<string>');
                 }
                 if (granularity !== undefined) {
-                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'day' | 'hour' | 'minute'");
+                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'DAY' | 'HOUR' | 'MINUTE'");
                 }
                 if (filter !== undefined) {
-                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewFilterBy');
+                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewSourceFilterBy');
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
@@ -658,10 +650,10 @@ var DeliveryOverviewApi = (function () {
                     localVarQueryParameters['groupBy'] = models_1.ObjectSerializer.serialize(groupBy, 'Array<string>');
                 }
                 if (granularity !== undefined) {
-                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'day' | 'hour' | 'minute'");
+                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'DAY' | 'HOUR' | 'MINUTE'");
                 }
                 if (filter !== undefined) {
-                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewFilterBy');
+                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewSourceFilterBy');
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
@@ -774,10 +766,10 @@ var DeliveryOverviewApi = (function () {
                     localVarQueryParameters['groupBy'] = models_1.ObjectSerializer.serialize(groupBy, 'Array<string>');
                 }
                 if (granularity !== undefined) {
-                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'day' | 'hour' | 'minute'");
+                    localVarQueryParameters['granularity'] = models_1.ObjectSerializer.serialize(granularity, "'DAY' | 'HOUR' | 'MINUTE'");
                 }
                 if (filter !== undefined) {
-                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewFilterBy');
+                    localVarQueryParameters['filter'] = models_1.ObjectSerializer.serialize(filter, 'DeliveryOverviewSuccessfullyReceivedFilterBy');
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
