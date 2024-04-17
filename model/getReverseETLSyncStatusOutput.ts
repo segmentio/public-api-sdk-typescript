@@ -16,8 +16,8 @@ import { ReverseETLSyncOutput } from './reverseETLSyncOutput';
 /**
  * Output for triggering a manual sync for a RETL connection.
  */
-export class GetReverseETLSyncFromModelOutput {
-    'reverseETLSync': ReverseETLSyncOutput;
+export class GetReverseETLSyncStatusOutput {
+    'reverseETLSyncStatus': ReverseETLSyncOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -27,13 +27,13 @@ export class GetReverseETLSyncFromModelOutput {
         type: string;
     }> = [
         {
-            name: 'reverseETLSync',
-            baseName: 'reverseETLSync',
+            name: 'reverseETLSyncStatus',
+            baseName: 'reverseETLSyncStatus',
             type: 'ReverseETLSyncOutput',
         },
     ];
 
     static getAttributeTypeMap() {
-        return GetReverseETLSyncFromModelOutput.attributeTypeMap;
+        return GetReverseETLSyncStatusOutput.attributeTypeMap;
     }
 }

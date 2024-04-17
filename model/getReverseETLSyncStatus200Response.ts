@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { GetReverseETLSyncFromModelOutput } from './getReverseETLSyncFromModelOutput';
+import { GetReverseETLSyncStatusOutput } from './getReverseETLSyncStatusOutput';
 
-export class GetReverseETLSyncFromModel200Response {
-    'data'?: GetReverseETLSyncFromModelOutput;
+export class GetReverseETLSyncStatus200Response {
+    'data'?: GetReverseETLSyncStatusOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -26,11 +26,11 @@ export class GetReverseETLSyncFromModel200Response {
         {
             name: 'data',
             baseName: 'data',
-            type: 'GetReverseETLSyncFromModelOutput',
+            type: 'GetReverseETLSyncStatusOutput',
         },
     ];
 
     static getAttributeTypeMap() {
-        return GetReverseETLSyncFromModel200Response.attributeTypeMap;
+        return GetReverseETLSyncStatus200Response.attributeTypeMap;
     }
 }

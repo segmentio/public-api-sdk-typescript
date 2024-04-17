@@ -230,8 +230,8 @@ __exportStar(require("./getMessagingSubscriptionFailureResponse"), exports);
 __exportStar(require("./getMessagingSubscriptionSuccessResponse"), exports);
 __exportStar(require("./getRegulation200Response"), exports);
 __exportStar(require("./getRegulationV1Output"), exports);
-__exportStar(require("./getReverseETLSyncFromModel200Response"), exports);
-__exportStar(require("./getReverseETLSyncFromModelOutput"), exports);
+__exportStar(require("./getReverseETLSyncStatus200Response"), exports);
+__exportStar(require("./getReverseETLSyncStatusOutput"), exports);
 __exportStar(require("./getReverseEtlModel200Response"), exports);
 __exportStar(require("./getReverseEtlModelOutput"), exports);
 __exportStar(require("./getSource200Response"), exports);
@@ -752,8 +752,8 @@ var getMessagingSubscriptionFailureResponse_1 = require("./getMessagingSubscript
 var getMessagingSubscriptionSuccessResponse_1 = require("./getMessagingSubscriptionSuccessResponse");
 var getRegulation200Response_1 = require("./getRegulation200Response");
 var getRegulationV1Output_1 = require("./getRegulationV1Output");
-var getReverseETLSyncFromModel200Response_1 = require("./getReverseETLSyncFromModel200Response");
-var getReverseETLSyncFromModelOutput_1 = require("./getReverseETLSyncFromModelOutput");
+var getReverseETLSyncStatus200Response_1 = require("./getReverseETLSyncStatus200Response");
+var getReverseETLSyncStatusOutput_1 = require("./getReverseETLSyncStatusOutput");
 var getReverseEtlModel200Response_1 = require("./getReverseEtlModel200Response");
 var getReverseEtlModelOutput_1 = require("./getReverseEtlModelOutput");
 var getSource200Response_1 = require("./getSource200Response");
@@ -1373,8 +1373,8 @@ var typeMap = {
     GetMessagingSubscriptionSuccessResponse: getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse,
     GetRegulation200Response: getRegulation200Response_1.GetRegulation200Response,
     GetRegulationV1Output: getRegulationV1Output_1.GetRegulationV1Output,
-    GetReverseETLSyncFromModel200Response: getReverseETLSyncFromModel200Response_1.GetReverseETLSyncFromModel200Response,
-    GetReverseETLSyncFromModelOutput: getReverseETLSyncFromModelOutput_1.GetReverseETLSyncFromModelOutput,
+    GetReverseETLSyncStatus200Response: getReverseETLSyncStatus200Response_1.GetReverseETLSyncStatus200Response,
+    GetReverseETLSyncStatusOutput: getReverseETLSyncStatusOutput_1.GetReverseETLSyncStatusOutput,
     GetReverseEtlModel200Response: getReverseEtlModel200Response_1.GetReverseEtlModel200Response,
     GetReverseEtlModelOutput: getReverseEtlModelOutput_1.GetReverseEtlModelOutput,
     GetSource200Response: getSource200Response_1.GetSource200Response,

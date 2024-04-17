@@ -19,7 +19,7 @@ import { CreateReverseETLManualSyncInput } from '../model/createReverseETLManual
 import { CreateReverseEtlModel201Response } from '../model/createReverseEtlModel201Response';
 import { CreateReverseEtlModelInput } from '../model/createReverseEtlModelInput';
 import { DeleteReverseEtlModel200Response } from '../model/deleteReverseEtlModel200Response';
-import { GetReverseETLSyncFromModel200Response } from '../model/getReverseETLSyncFromModel200Response';
+import { GetReverseETLSyncStatus200Response } from '../model/getReverseETLSyncStatus200Response';
 import { GetReverseEtlModel200Response } from '../model/getReverseEtlModel200Response';
 import { ListReverseEtlModels200Response } from '../model/listReverseEtlModels200Response';
 import { PaginationInput } from '../model/paginationInput';
@@ -471,18 +471,18 @@ export class ReverseETLApi {
         });
     }
     /**
-     * Get the sync status for a Reverse ETL sync.   The rate limit for this endpoint is 250 requests per minute, which is lower than the default due to access pattern restrictions. Once reached, this endpoint will respond with the 429 HTTP status code with headers indicating the limit parameters. See [Rate Limiting](/#tag/Rate-Limits) for more information.
-     * @summary Get Reverse ETL Sync from Model
+     * Get the sync status for a Reverse ETL sync. The sync status includes all detailed information about the sync, like sync status, duration, details about the extract and load phase if applicable, etc...   The rate limit for this endpoint is 250 requests per minute, which is lower than the default due to access pattern restrictions. Once reached, this endpoint will respond with the 429 HTTP status code with headers indicating the limit parameters. See [Rate Limiting](/#tag/Rate-Limits) for more information.
+     * @summary Get Reverse ETL Sync Status
      * @param modelId
      * @param syncId
      */
-    public async getReverseETLSyncFromModel(
+    public async getReverseETLSyncStatus(
         modelId: string,
         syncId: string,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
-        body: GetReverseETLSyncFromModel200Response;
+        body: GetReverseETLSyncStatus200Response;
     }> {
         const localVarPath =
             this.basePath +
@@ -515,14 +515,14 @@ export class ReverseETLApi {
         // verify required parameter 'modelId' is not null or undefined
         if (modelId === null || modelId === undefined) {
             throw new Error(
-                'Required parameter modelId was null or undefined when calling getReverseETLSyncFromModel.'
+                'Required parameter modelId was null or undefined when calling getReverseETLSyncStatus.'
             );
         }
 
         // verify required parameter 'syncId' is not null or undefined
         if (syncId === null || syncId === undefined) {
             throw new Error(
-                'Required parameter syncId was null or undefined when calling getReverseETLSyncFromModel.'
+                'Required parameter syncId was null or undefined when calling getReverseETLSyncStatus.'
             );
         }
 
@@ -568,7 +568,7 @@ export class ReverseETLApi {
             }
             return new Promise<{
                 response: http.IncomingMessage;
-                body: GetReverseETLSyncFromModel200Response;
+                body: GetReverseETLSyncStatus200Response;
             }>((resolve, reject) => {
                 localVarRequest(
                     localVarRequestOptions,
@@ -583,7 +583,7 @@ export class ReverseETLApi {
                             ) {
                                 body = ObjectSerializer.deserialize(
                                     body,
-                                    'GetReverseETLSyncFromModel200Response'
+                                    'GetReverseETLSyncStatus200Response'
                                 );
                                 resolve({ response: response, body: body });
                             } else {
