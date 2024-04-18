@@ -106,6 +106,7 @@ export namespace RegulationListEntryV1 {
         DELETE_ONLY = <any>'DELETE_ONLY',
         SUPPRESS_ONLY = <any>'SUPPRESS_ONLY',
         SUPPRESS_WITH_DELETE = <any>'SUPPRESS_WITH_DELETE',
+        SUPPRESS_WITH_DELETE_INTERNAL = <any>'SUPPRESS_WITH_DELETE_INTERNAL',
         UNSUPPRESS = <any>'UNSUPPRESS',
     }
 }

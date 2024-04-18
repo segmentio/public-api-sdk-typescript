@@ -40,6 +40,7 @@ exports.CreateCloudSourceRegulationV1Input = CreateCloudSourceRegulationV1Input;
         RegulationTypeEnum[RegulationTypeEnum["DELETE_ONLY"] = 'DELETE_ONLY'] = "DELETE_ONLY";
         RegulationTypeEnum[RegulationTypeEnum["SUPPRESS_ONLY"] = 'SUPPRESS_ONLY'] = "SUPPRESS_ONLY";
         RegulationTypeEnum[RegulationTypeEnum["SUPPRESS_WITH_DELETE"] = 'SUPPRESS_WITH_DELETE'] = "SUPPRESS_WITH_DELETE";
+        RegulationTypeEnum[RegulationTypeEnum["SUPPRESS_WITH_DELETE_INTERNAL"] = 'SUPPRESS_WITH_DELETE_INTERNAL'] = "SUPPRESS_WITH_DELETE_INTERNAL";
         RegulationTypeEnum[RegulationTypeEnum["UNSUPPRESS"] = 'UNSUPPRESS'] = "UNSUPPRESS";
     })(RegulationTypeEnum = CreateCloudSourceRegulationV1Input.RegulationTypeEnum || (CreateCloudSourceRegulationV1Input.RegulationTypeEnum = {}));
     var SubjectTypeEnum;
