@@ -65,6 +65,7 @@ exports.RegulationListEntryV1 = RegulationListEntryV1;
         RegulationTypeEnum[RegulationTypeEnum["DELETE_ONLY"] = 'DELETE_ONLY'] = "DELETE_ONLY";
         RegulationTypeEnum[RegulationTypeEnum["SUPPRESS_ONLY"] = 'SUPPRESS_ONLY'] = "SUPPRESS_ONLY";
         RegulationTypeEnum[RegulationTypeEnum["SUPPRESS_WITH_DELETE"] = 'SUPPRESS_WITH_DELETE'] = "SUPPRESS_WITH_DELETE";
+        RegulationTypeEnum[RegulationTypeEnum["SUPPRESS_WITH_DELETE_INTERNAL"] = 'SUPPRESS_WITH_DELETE_INTERNAL'] = "SUPPRESS_WITH_DELETE_INTERNAL";
         RegulationTypeEnum[RegulationTypeEnum["UNSUPPRESS"] = 'UNSUPPRESS'] = "UNSUPPRESS";
     })(RegulationTypeEnum = RegulationListEntryV1.RegulationTypeEnum || (RegulationListEntryV1.RegulationTypeEnum = {}));
 })(RegulationListEntryV1 = exports.RegulationListEntryV1 || (exports.RegulationListEntryV1 = {}));
