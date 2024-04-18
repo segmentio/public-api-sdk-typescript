@@ -366,7 +366,7 @@ var ReverseETLApi = (function () {
             });
         });
     };
-    ReverseETLApi.prototype.getReverseETLSyncFromModel = function (modelId, syncId, options) {
+    ReverseETLApi.prototype.getReverseETLSyncStatus = function (modelId, syncId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
@@ -390,10 +390,10 @@ var ReverseETLApi = (function () {
                 }
                 localVarFormParams = {};
                 if (modelId === null || modelId === undefined) {
-                    throw new Error('Required parameter modelId was null or undefined when calling getReverseETLSyncFromModel.');
+                    throw new Error('Required parameter modelId was null or undefined when calling getReverseETLSyncStatus.');
                 }
                 if (syncId === null || syncId === undefined) {
-                    throw new Error('Required parameter syncId was null or undefined when calling getReverseETLSyncFromModel.');
+                    throw new Error('Required parameter syncId was null or undefined when calling getReverseETLSyncStatus.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -442,7 +442,7 @@ var ReverseETLApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetReverseETLSyncFromModel200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'GetReverseETLSyncStatus200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {

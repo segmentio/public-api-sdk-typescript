@@ -215,8 +215,8 @@ export * from './getMessagingSubscriptionFailureResponse';
 export * from './getMessagingSubscriptionSuccessResponse';
 export * from './getRegulation200Response';
 export * from './getRegulationV1Output';
-export * from './getReverseETLSyncFromModel200Response';
-export * from './getReverseETLSyncFromModelOutput';
+export * from './getReverseETLSyncStatus200Response';
+export * from './getReverseETLSyncStatusOutput';
 export * from './getReverseEtlModel200Response';
 export * from './getReverseEtlModelOutput';
 export * from './getSource200Response';
@@ -750,8 +750,8 @@ import { GetMessagingSubscriptionFailureResponse } from './getMessagingSubscript
 import { GetMessagingSubscriptionSuccessResponse } from './getMessagingSubscriptionSuccessResponse';
 import { GetRegulation200Response } from './getRegulation200Response';
 import { GetRegulationV1Output } from './getRegulationV1Output';
-import { GetReverseETLSyncFromModel200Response } from './getReverseETLSyncFromModel200Response';
-import { GetReverseETLSyncFromModelOutput } from './getReverseETLSyncFromModelOutput';
+import { GetReverseETLSyncStatus200Response } from './getReverseETLSyncStatus200Response';
+import { GetReverseETLSyncStatusOutput } from './getReverseETLSyncStatusOutput';
 import { GetReverseEtlModel200Response } from './getReverseEtlModel200Response';
 import { GetReverseEtlModelOutput } from './getReverseEtlModelOutput';
 import { GetSource200Response } from './getSource200Response';
@@ -1465,9 +1465,8 @@ let typeMap: { [index: string]: any } = {
         GetMessagingSubscriptionSuccessResponse,
     GetRegulation200Response: GetRegulation200Response,
     GetRegulationV1Output: GetRegulationV1Output,
-    GetReverseETLSyncFromModel200Response:
-        GetReverseETLSyncFromModel200Response,
-    GetReverseETLSyncFromModelOutput: GetReverseETLSyncFromModelOutput,
+    GetReverseETLSyncStatus200Response: GetReverseETLSyncStatus200Response,
+    GetReverseETLSyncStatusOutput: GetReverseETLSyncStatusOutput,
     GetReverseEtlModel200Response: GetReverseEtlModel200Response,
     GetReverseEtlModelOutput: GetReverseEtlModelOutput,
     GetSource200Response: GetSource200Response,
