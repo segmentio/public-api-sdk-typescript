@@ -75,7 +75,7 @@ export declare class DeletionAndSuppressionApi {
         response: http.IncomingMessage;
         body: GetRegulation200Response;
     }>;
-    listRegulationsFromSource(sourceId: string, pagination: PaginationInput, status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>, options?: {
+    listRegulationsFromSource(sourceId: string, pagination: PaginationInput, status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'SUPPRESS_WITH_DELETE_INTERNAL' | 'UNSUPPRESS'>, options?: {
         headers: {
             [name: string]: string;
         };
@@ -91,7 +91,7 @@ export declare class DeletionAndSuppressionApi {
         response: http.IncomingMessage;
         body: ListSuppressions200Response;
     }>;
-    listWorkspaceRegulations(pagination: PaginationInput, status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'UNSUPPRESS'>, options?: {
+    listWorkspaceRegulations(pagination: PaginationInput, status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'SUPPRESS_WITH_DELETE_INTERNAL' | 'UNSUPPRESS'>, options?: {
         headers: {
             [name: string]: string;
         };

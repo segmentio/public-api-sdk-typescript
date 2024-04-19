@@ -33,6 +33,7 @@ export declare namespace RegulationListEntryV1 {
         DELETE_ONLY,
         SUPPRESS_ONLY,
         SUPPRESS_WITH_DELETE,
+        SUPPRESS_WITH_DELETE_INTERNAL,
         UNSUPPRESS
     }
 }

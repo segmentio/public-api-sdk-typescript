@@ -20,6 +20,7 @@ export declare namespace CreateWorkspaceRegulationV1Input {
         DELETE_ONLY,
         SUPPRESS_ONLY,
         SUPPRESS_WITH_DELETE,
+        SUPPRESS_WITH_DELETE_INTERNAL,
         UNSUPPRESS
     }
     enum SubjectTypeEnum {
