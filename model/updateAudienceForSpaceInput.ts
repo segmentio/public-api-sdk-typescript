@@ -22,11 +22,11 @@ export class UpdateAudienceForSpaceInput {
      */
     'enabled'?: boolean;
     /**
-     * The name of the computation
+     * The name of the computation.
      */
     'name'?: string;
     /**
-     * The description of the computation
+     * The description of the computation.
      */
     'description'?: string;
     'definition'?: AudienceComputationDefinition;

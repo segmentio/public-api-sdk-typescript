@@ -44,6 +44,7 @@ export * from './createCloudSourceRegulation200Response';
 export * from './createCloudSourceRegulationV1Input';
 export * from './createCloudSourceRegulationV1Output';
 export * from './createComputedTrait200Response';
+export * from './createComputedTraitAlphaInput';
 export * from './createComputedTraitAlphaOutput';
 export * from './createDestination200Response';
 export * from './createDestinationSubscription200Response';
@@ -92,7 +93,6 @@ export * from './createSourceV1Output';
 export * from './createTrackingPlan200Response';
 export * from './createTrackingPlanV1Input';
 export * from './createTrackingPlanV1Output';
-export * from './createTraitAlphaInput';
 export * from './createTransformation200Response';
 export * from './createTransformationBetaInput';
 export * from './createTransformationBetaOutput';
@@ -587,6 +587,7 @@ import { CreateCloudSourceRegulation200Response } from './createCloudSourceRegul
 import { CreateCloudSourceRegulationV1Input } from './createCloudSourceRegulationV1Input';
 import { CreateCloudSourceRegulationV1Output } from './createCloudSourceRegulationV1Output';
 import { CreateComputedTrait200Response } from './createComputedTrait200Response';
+import { CreateComputedTraitAlphaInput } from './createComputedTraitAlphaInput';
 import { CreateComputedTraitAlphaOutput } from './createComputedTraitAlphaOutput';
 import { CreateDestination200Response } from './createDestination200Response';
 import { CreateDestinationSubscription200Response } from './createDestinationSubscription200Response';
@@ -635,7 +636,6 @@ import { CreateSourceV1Output } from './createSourceV1Output';
 import { CreateTrackingPlan200Response } from './createTrackingPlan200Response';
 import { CreateTrackingPlanV1Input } from './createTrackingPlanV1Input';
 import { CreateTrackingPlanV1Output } from './createTrackingPlanV1Output';
-import { CreateTraitAlphaInput } from './createTraitAlphaInput';
 import { CreateTransformation200Response } from './createTransformation200Response';
 import { CreateTransformationBetaInput } from './createTransformationBetaInput';
 import { CreateTransformationBetaOutput } from './createTransformationBetaOutput';
@@ -1281,6 +1281,7 @@ let typeMap: { [index: string]: any } = {
     CreateCloudSourceRegulationV1Input: CreateCloudSourceRegulationV1Input,
     CreateCloudSourceRegulationV1Output: CreateCloudSourceRegulationV1Output,
     CreateComputedTrait200Response: CreateComputedTrait200Response,
+    CreateComputedTraitAlphaInput: CreateComputedTraitAlphaInput,
     CreateComputedTraitAlphaOutput: CreateComputedTraitAlphaOutput,
     CreateDestination200Response: CreateDestination200Response,
     CreateDestinationSubscription200Response:
@@ -1337,7 +1338,6 @@ let typeMap: { [index: string]: any } = {
     CreateTrackingPlan200Response: CreateTrackingPlan200Response,
     CreateTrackingPlanV1Input: CreateTrackingPlanV1Input,
     CreateTrackingPlanV1Output: CreateTrackingPlanV1Output,
-    CreateTraitAlphaInput: CreateTraitAlphaInput,
     CreateTransformation200Response: CreateTransformation200Response,
     CreateTransformationBetaInput: CreateTransformationBetaInput,
     CreateTransformationBetaOutput: CreateTransformationBetaOutput,

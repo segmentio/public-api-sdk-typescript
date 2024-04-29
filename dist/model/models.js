@@ -59,6 +59,7 @@ __exportStar(require("./createCloudSourceRegulation200Response"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Input"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Output"), exports);
 __exportStar(require("./createComputedTrait200Response"), exports);
+__exportStar(require("./createComputedTraitAlphaInput"), exports);
 __exportStar(require("./createComputedTraitAlphaOutput"), exports);
 __exportStar(require("./createDestination200Response"), exports);
 __exportStar(require("./createDestinationSubscription200Response"), exports);
@@ -107,7 +108,6 @@ __exportStar(require("./createSourceV1Output"), exports);
 __exportStar(require("./createTrackingPlan200Response"), exports);
 __exportStar(require("./createTrackingPlanV1Input"), exports);
 __exportStar(require("./createTrackingPlanV1Output"), exports);
-__exportStar(require("./createTraitAlphaInput"), exports);
 __exportStar(require("./createTransformation200Response"), exports);
 __exportStar(require("./createTransformationBetaInput"), exports);
 __exportStar(require("./createTransformationBetaOutput"), exports);
@@ -589,6 +589,7 @@ var createCloudSourceRegulation200Response_1 = require("./createCloudSourceRegul
 var createCloudSourceRegulationV1Input_1 = require("./createCloudSourceRegulationV1Input");
 var createCloudSourceRegulationV1Output_1 = require("./createCloudSourceRegulationV1Output");
 var createComputedTrait200Response_1 = require("./createComputedTrait200Response");
+var createComputedTraitAlphaInput_1 = require("./createComputedTraitAlphaInput");
 var createComputedTraitAlphaOutput_1 = require("./createComputedTraitAlphaOutput");
 var createDestination200Response_1 = require("./createDestination200Response");
 var createDestinationSubscription200Response_1 = require("./createDestinationSubscription200Response");
@@ -637,7 +638,6 @@ var createSourceV1Output_1 = require("./createSourceV1Output");
 var createTrackingPlan200Response_1 = require("./createTrackingPlan200Response");
 var createTrackingPlanV1Input_1 = require("./createTrackingPlanV1Input");
 var createTrackingPlanV1Output_1 = require("./createTrackingPlanV1Output");
-var createTraitAlphaInput_1 = require("./createTraitAlphaInput");
 var createTransformation200Response_1 = require("./createTransformation200Response");
 var createTransformationBetaInput_1 = require("./createTransformationBetaInput");
 var createTransformationBetaOutput_1 = require("./createTransformationBetaOutput");
@@ -1218,6 +1218,7 @@ var typeMap = {
     CreateCloudSourceRegulationV1Input: createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input,
     CreateCloudSourceRegulationV1Output: createCloudSourceRegulationV1Output_1.CreateCloudSourceRegulationV1Output,
     CreateComputedTrait200Response: createComputedTrait200Response_1.CreateComputedTrait200Response,
+    CreateComputedTraitAlphaInput: createComputedTraitAlphaInput_1.CreateComputedTraitAlphaInput,
     CreateComputedTraitAlphaOutput: createComputedTraitAlphaOutput_1.CreateComputedTraitAlphaOutput,
     CreateDestination200Response: createDestination200Response_1.CreateDestination200Response,
     CreateDestinationSubscription200Response: createDestinationSubscription200Response_1.CreateDestinationSubscription200Response,
@@ -1266,7 +1267,6 @@ var typeMap = {
     CreateTrackingPlan200Response: createTrackingPlan200Response_1.CreateTrackingPlan200Response,
     CreateTrackingPlanV1Input: createTrackingPlanV1Input_1.CreateTrackingPlanV1Input,
     CreateTrackingPlanV1Output: createTrackingPlanV1Output_1.CreateTrackingPlanV1Output,
-    CreateTraitAlphaInput: createTraitAlphaInput_1.CreateTraitAlphaInput,
     CreateTransformation200Response: createTransformation200Response_1.CreateTransformation200Response,
     CreateTransformationBetaInput: createTransformationBetaInput_1.CreateTransformationBetaInput,
     CreateTransformationBetaOutput: createTransformationBetaOutput_1.CreateTransformationBetaOutput,

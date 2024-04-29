@@ -1,5 +1,5 @@
 import { TraitDefinition } from './traitDefinition';
-export declare class CreateTraitAlphaInput {
+export declare class CreateComputedTraitAlphaInput {
     'name': string;
     'description': string;
     'definition': TraitDefinition;

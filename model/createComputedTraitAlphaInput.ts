@@ -14,15 +14,15 @@ import { RequestFile } from './models';
 import { TraitDefinition } from './traitDefinition';
 
 /**
- * Input to create an audience.
+ * Input to create a trait.
  */
-export class CreateTraitAlphaInput {
+export class CreateComputedTraitAlphaInput {
     /**
-     * The name of the computation
+     * The name of the computation.
      */
     'name': string;
     /**
-     * The description of the computation
+     * The description of the computation.
      */
     'description': string;
     'definition': TraitDefinition;
@@ -52,6 +52,6 @@ export class CreateTraitAlphaInput {
     ];
 
     static getAttributeTypeMap() {
-        return CreateTraitAlphaInput.attributeTypeMap;
+        return CreateComputedTraitAlphaInput.attributeTypeMap;
     }
 }

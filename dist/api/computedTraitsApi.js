@@ -113,7 +113,7 @@ var ComputedTraitsApi = (function () {
     ComputedTraitsApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    ComputedTraitsApi.prototype.createComputedTrait = function (spaceId, CreateTraitAlphaInput, options) {
+    ComputedTraitsApi.prototype.createComputedTrait = function (spaceId, CreateComputedTraitAlphaInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -137,9 +137,9 @@ var ComputedTraitsApi = (function () {
                 if (spaceId === null || spaceId === undefined) {
                     throw new Error('Required parameter spaceId was null or undefined when calling createComputedTrait.');
                 }
-                if (CreateTraitAlphaInput === null ||
-                    CreateTraitAlphaInput === undefined) {
-                    throw new Error('Required parameter CreateTraitAlphaInput was null or undefined when calling createComputedTrait.');
+                if (CreateComputedTraitAlphaInput === null ||
+                    CreateComputedTraitAlphaInput === undefined) {
+                    throw new Error('Required parameter CreateComputedTraitAlphaInput was null or undefined when calling createComputedTrait.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -150,7 +150,7 @@ var ComputedTraitsApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateTraitAlphaInput, 'CreateTraitAlphaInput'),
+                    body: models_1.ObjectSerializer.serialize(CreateComputedTraitAlphaInput, 'CreateComputedTraitAlphaInput'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {

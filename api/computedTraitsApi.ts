@@ -15,7 +15,7 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { CreateComputedTrait200Response } from '../model/createComputedTrait200Response';
-import { CreateTraitAlphaInput } from '../model/createTraitAlphaInput';
+import { CreateComputedTraitAlphaInput } from '../model/createComputedTraitAlphaInput';
 import { GetComputedTrait200Response } from '../model/getComputedTrait200Response';
 import { ListComputedTraits200Response } from '../model/listComputedTraits200Response';
 import { PaginationInput } from '../model/paginationInput';
@@ -117,11 +117,11 @@ export class ComputedTraitsApi {
      * Creates a Computed Trait  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Computed Trait feature enabled. Please reach out to your customer success manager for more information.
      * @summary Create Computed Trait
      * @param spaceId
-     * @param CreateTraitAlphaInput
+     * @param CreateComputedTraitAlphaInput
      */
     public async createComputedTrait(
         spaceId: string,
-        CreateTraitAlphaInput: CreateTraitAlphaInput,
+        CreateComputedTraitAlphaInput: CreateComputedTraitAlphaInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -157,13 +157,13 @@ export class ComputedTraitsApi {
             );
         }
 
-        // verify required parameter 'CreateTraitAlphaInput' is not null or undefined
+        // verify required parameter 'CreateComputedTraitAlphaInput' is not null or undefined
         if (
-            CreateTraitAlphaInput === null ||
-            CreateTraitAlphaInput === undefined
+            CreateComputedTraitAlphaInput === null ||
+            CreateComputedTraitAlphaInput === undefined
         ) {
             throw new Error(
-                'Required parameter CreateTraitAlphaInput was null or undefined when calling createComputedTrait.'
+                'Required parameter CreateComputedTraitAlphaInput was null or undefined when calling createComputedTrait.'
             );
         }
 
@@ -179,8 +179,8 @@ export class ComputedTraitsApi {
             useQuerystring: this._useQuerystring,
             json: true,
             body: ObjectSerializer.serialize(
-                CreateTraitAlphaInput,
-                'CreateTraitAlphaInput'
+                CreateComputedTraitAlphaInput,
+                'CreateComputedTraitAlphaInput'
             ),
         };
 
