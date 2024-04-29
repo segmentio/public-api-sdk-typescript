@@ -39,10 +39,12 @@ export * from './computedTraitsDefinition';
 export * from './contact';
 export * from './createAudience200Response';
 export * from './createAudienceAlphaInput';
+export * from './createAudienceAlphaOutput';
 export * from './createCloudSourceRegulation200Response';
 export * from './createCloudSourceRegulationV1Input';
 export * from './createCloudSourceRegulationV1Output';
 export * from './createComputedTrait200Response';
+export * from './createComputedTraitAlphaOutput';
 export * from './createDestination200Response';
 export * from './createDestinationSubscription200Response';
 export * from './createDestinationSubscriptionAlphaInput';
@@ -181,7 +183,9 @@ export * from './generateUploadURLForEdgeFunctions200Response';
 export * from './generateUploadURLForEdgeFunctionsAlphaOutput';
 export * from './getAdvancedSyncScheduleFromWarehouse200Response';
 export * from './getAdvancedSyncScheduleFromWarehouseV1Output';
+export * from './getAudience200Response';
 export * from './getAudienceAlphaOutput';
+export * from './getComputedTrait200Response';
 export * from './getComputedTraitAlphaOutput';
 export * from './getConnectionStateFromWarehouse200Response';
 export * from './getConnectionStateFromWarehouseV1Output';
@@ -578,10 +582,12 @@ import { ComputedTraitsDefinition } from './computedTraitsDefinition';
 import { Contact } from './contact';
 import { CreateAudience200Response } from './createAudience200Response';
 import { CreateAudienceAlphaInput } from './createAudienceAlphaInput';
+import { CreateAudienceAlphaOutput } from './createAudienceAlphaOutput';
 import { CreateCloudSourceRegulation200Response } from './createCloudSourceRegulation200Response';
 import { CreateCloudSourceRegulationV1Input } from './createCloudSourceRegulationV1Input';
 import { CreateCloudSourceRegulationV1Output } from './createCloudSourceRegulationV1Output';
 import { CreateComputedTrait200Response } from './createComputedTrait200Response';
+import { CreateComputedTraitAlphaOutput } from './createComputedTraitAlphaOutput';
 import { CreateDestination200Response } from './createDestination200Response';
 import { CreateDestinationSubscription200Response } from './createDestinationSubscription200Response';
 import { CreateDestinationSubscriptionAlphaInput } from './createDestinationSubscriptionAlphaInput';
@@ -720,7 +726,9 @@ import { GenerateUploadURLForEdgeFunctions200Response } from './generateUploadUR
 import { GenerateUploadURLForEdgeFunctionsAlphaOutput } from './generateUploadURLForEdgeFunctionsAlphaOutput';
 import { GetAdvancedSyncScheduleFromWarehouse200Response } from './getAdvancedSyncScheduleFromWarehouse200Response';
 import { GetAdvancedSyncScheduleFromWarehouseV1Output } from './getAdvancedSyncScheduleFromWarehouseV1Output';
+import { GetAudience200Response } from './getAudience200Response';
 import { GetAudienceAlphaOutput } from './getAudienceAlphaOutput';
+import { GetComputedTrait200Response } from './getComputedTrait200Response';
 import { GetComputedTraitAlphaOutput } from './getComputedTraitAlphaOutput';
 import { GetConnectionStateFromWarehouse200Response } from './getConnectionStateFromWarehouse200Response';
 import { GetConnectionStateFromWarehouseV1Output } from './getConnectionStateFromWarehouseV1Output';
@@ -1267,11 +1275,13 @@ let typeMap: { [index: string]: any } = {
     Contact: Contact,
     CreateAudience200Response: CreateAudience200Response,
     CreateAudienceAlphaInput: CreateAudienceAlphaInput,
+    CreateAudienceAlphaOutput: CreateAudienceAlphaOutput,
     CreateCloudSourceRegulation200Response:
         CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: CreateCloudSourceRegulationV1Input,
     CreateCloudSourceRegulationV1Output: CreateCloudSourceRegulationV1Output,
     CreateComputedTrait200Response: CreateComputedTrait200Response,
+    CreateComputedTraitAlphaOutput: CreateComputedTraitAlphaOutput,
     CreateDestination200Response: CreateDestination200Response,
     CreateDestinationSubscription200Response:
         CreateDestinationSubscription200Response,
@@ -1427,7 +1437,9 @@ let typeMap: { [index: string]: any } = {
         GetAdvancedSyncScheduleFromWarehouse200Response,
     GetAdvancedSyncScheduleFromWarehouseV1Output:
         GetAdvancedSyncScheduleFromWarehouseV1Output,
+    GetAudience200Response: GetAudience200Response,
     GetAudienceAlphaOutput: GetAudienceAlphaOutput,
+    GetComputedTrait200Response: GetComputedTrait200Response,
     GetComputedTraitAlphaOutput: GetComputedTraitAlphaOutput,
     GetConnectionStateFromWarehouse200Response:
         GetConnectionStateFromWarehouse200Response,

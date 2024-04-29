@@ -16,6 +16,7 @@ import http from 'http';
 /* tslint:disable:no-unused-locals */
 import { CreateComputedTrait200Response } from '../model/createComputedTrait200Response';
 import { CreateTraitAlphaInput } from '../model/createTraitAlphaInput';
+import { GetComputedTrait200Response } from '../model/getComputedTrait200Response';
 import { ListComputedTraits200Response } from '../model/listComputedTraits200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveComputedTraitFromSpace200Response } from '../model/removeComputedTraitFromSpace200Response';
@@ -257,7 +258,7 @@ export class ComputedTraitsApi {
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
-        body: CreateComputedTrait200Response;
+        body: GetComputedTrait200Response;
     }> {
         const localVarPath =
             this.basePath +
@@ -340,7 +341,7 @@ export class ComputedTraitsApi {
             }
             return new Promise<{
                 response: http.IncomingMessage;
-                body: CreateComputedTrait200Response;
+                body: GetComputedTrait200Response;
             }>((resolve, reject) => {
                 localVarRequest(
                     localVarRequestOptions,
@@ -355,7 +356,7 @@ export class ComputedTraitsApi {
                             ) {
                                 body = ObjectSerializer.deserialize(
                                     body,
-                                    'CreateComputedTrait200Response'
+                                    'GetComputedTrait200Response'
                                 );
                                 resolve({ response: response, body: body });
                             } else {

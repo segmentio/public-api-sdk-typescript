@@ -11,13 +11,13 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceSummary } from './audienceSummary';
+import { ComputedTraitSummary } from './computedTraitSummary';
 
 /**
- * Audience output for update.
+ * Computed Trait output for create.
  */
-export class UpdateAudienceForSpaceAlphaOutput {
-    'audience': AudienceSummary;
+export class CreateComputedTraitAlphaOutput {
+    'computedTrait': ComputedTraitSummary;
 
     static discriminator: string | undefined = undefined;
 
@@ -27,13 +27,13 @@ export class UpdateAudienceForSpaceAlphaOutput {
         type: string;
     }> = [
         {
-            name: 'audience',
-            baseName: 'audience',
-            type: 'AudienceSummary',
+            name: 'computedTrait',
+            baseName: 'computedTrait',
+            type: 'ComputedTraitSummary',
         },
     ];
 
     static getAttributeTypeMap() {
-        return UpdateAudienceForSpaceAlphaOutput.attributeTypeMap;
+        return CreateComputedTraitAlphaOutput.attributeTypeMap;
     }
 }

@@ -1,6 +1,6 @@
-import { CreateAudienceAlphaOutput } from './createAudienceAlphaOutput';
-export declare class CreateAudience200Response {
-    'data'?: CreateAudienceAlphaOutput;
+import { GetAudienceAlphaOutput } from './getAudienceAlphaOutput';
+export declare class GetAudience200Response {
+    'data'?: GetAudienceAlphaOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

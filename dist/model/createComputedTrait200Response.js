@@ -12,7 +12,7 @@ var CreateComputedTrait200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'GetComputedTraitAlphaOutput',
+            type: 'CreateComputedTraitAlphaOutput',
         },
     ];
     return CreateComputedTrait200Response;

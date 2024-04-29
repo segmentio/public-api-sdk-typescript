@@ -2,6 +2,7 @@
 import http from 'http';
 import { CreateAudience200Response } from '../model/createAudience200Response';
 import { CreateAudienceAlphaInput } from '../model/createAudienceAlphaInput';
+import { GetAudience200Response } from '../model/getAudience200Response';
 import { ListAudiences200Response } from '../model/listAudiences200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromSpace200Response';
@@ -44,7 +45,7 @@ export declare class AudiencesApi {
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: CreateAudience200Response;
+        body: GetAudience200Response;
     }>;
     listAudiences(spaceId: string, pagination: PaginationInput, options?: {
         headers: {

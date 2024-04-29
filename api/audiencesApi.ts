@@ -16,6 +16,7 @@ import http from 'http';
 /* tslint:disable:no-unused-locals */
 import { CreateAudience200Response } from '../model/createAudience200Response';
 import { CreateAudienceAlphaInput } from '../model/createAudienceAlphaInput';
+import { GetAudience200Response } from '../model/getAudience200Response';
 import { ListAudiences200Response } from '../model/listAudiences200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromSpace200Response';
@@ -256,7 +257,7 @@ export class AudiencesApi {
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
-        body: CreateAudience200Response;
+        body: GetAudience200Response;
     }> {
         const localVarPath =
             this.basePath +
@@ -339,7 +340,7 @@ export class AudiencesApi {
             }
             return new Promise<{
                 response: http.IncomingMessage;
-                body: CreateAudience200Response;
+                body: GetAudience200Response;
             }>((resolve, reject) => {
                 localVarRequest(
                     localVarRequestOptions,
@@ -354,7 +355,7 @@ export class AudiencesApi {
                             ) {
                                 body = ObjectSerializer.deserialize(
                                     body,
-                                    'CreateAudience200Response'
+                                    'GetAudience200Response'
                                 );
                                 resolve({ response: response, body: body });
                             } else {

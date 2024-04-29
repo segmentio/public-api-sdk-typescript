@@ -2,6 +2,7 @@
 import http from 'http';
 import { CreateComputedTrait200Response } from '../model/createComputedTrait200Response';
 import { CreateTraitAlphaInput } from '../model/createTraitAlphaInput';
+import { GetComputedTrait200Response } from '../model/getComputedTrait200Response';
 import { ListComputedTraits200Response } from '../model/listComputedTraits200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveComputedTraitFromSpace200Response } from '../model/removeComputedTraitFromSpace200Response';
@@ -44,7 +45,7 @@ export declare class ComputedTraitsApi {
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: CreateComputedTrait200Response;
+        body: GetComputedTrait200Response;
     }>;
     listComputedTraits(spaceId: string, pagination: PaginationInput, options?: {
         headers: {

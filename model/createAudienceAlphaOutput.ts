@@ -14,9 +14,9 @@ import { RequestFile } from './models';
 import { AudienceSummary } from './audienceSummary';
 
 /**
- * Audience output for update.
+ * Audience output for create.
  */
-export class UpdateAudienceForSpaceAlphaOutput {
+export class CreateAudienceAlphaOutput {
     'audience': AudienceSummary;
 
     static discriminator: string | undefined = undefined;
@@ -34,6 +34,6 @@ export class UpdateAudienceForSpaceAlphaOutput {
     ];
 
     static getAttributeTypeMap() {
-        return UpdateAudienceForSpaceAlphaOutput.attributeTypeMap;
+        return CreateAudienceAlphaOutput.attributeTypeMap;
     }
 }

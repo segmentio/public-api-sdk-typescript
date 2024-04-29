@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { GetComputedTraitAlphaOutput } from './getComputedTraitAlphaOutput';
+import { CreateComputedTraitAlphaOutput } from './createComputedTraitAlphaOutput';
 
 export class CreateComputedTrait200Response {
-    'data'?: GetComputedTraitAlphaOutput;
+    'data'?: CreateComputedTraitAlphaOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -26,7 +26,7 @@ export class CreateComputedTrait200Response {
         {
             name: 'data',
             baseName: 'data',
-            type: 'GetComputedTraitAlphaOutput',
+            type: 'CreateComputedTraitAlphaOutput',
         },
     ];
 

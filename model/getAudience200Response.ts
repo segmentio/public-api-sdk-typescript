@@ -11,13 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceSummary } from './audienceSummary';
+import { GetAudienceAlphaOutput } from './getAudienceAlphaOutput';
 
-/**
- * Audience output for update.
- */
-export class UpdateAudienceForSpaceAlphaOutput {
-    'audience': AudienceSummary;
+export class GetAudience200Response {
+    'data'?: GetAudienceAlphaOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -27,13 +24,13 @@ export class UpdateAudienceForSpaceAlphaOutput {
         type: string;
     }> = [
         {
-            name: 'audience',
-            baseName: 'audience',
-            type: 'AudienceSummary',
+            name: 'data',
+            baseName: 'data',
+            type: 'GetAudienceAlphaOutput',
         },
     ];
 
     static getAttributeTypeMap() {
-        return UpdateAudienceForSpaceAlphaOutput.attributeTypeMap;
+        return GetAudience200Response.attributeTypeMap;
     }
 }

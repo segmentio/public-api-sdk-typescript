@@ -1,6 +1,6 @@
-import { GetComputedTraitAlphaOutput } from './getComputedTraitAlphaOutput';
+import { CreateComputedTraitAlphaOutput } from './createComputedTraitAlphaOutput';
 export declare class CreateComputedTrait200Response {
-    'data'?: GetComputedTraitAlphaOutput;
+    'data'?: CreateComputedTraitAlphaOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

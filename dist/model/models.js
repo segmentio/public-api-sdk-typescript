@@ -54,10 +54,12 @@ __exportStar(require("./computedTraitsDefinition"), exports);
 __exportStar(require("./contact"), exports);
 __exportStar(require("./createAudience200Response"), exports);
 __exportStar(require("./createAudienceAlphaInput"), exports);
+__exportStar(require("./createAudienceAlphaOutput"), exports);
 __exportStar(require("./createCloudSourceRegulation200Response"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Input"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Output"), exports);
 __exportStar(require("./createComputedTrait200Response"), exports);
+__exportStar(require("./createComputedTraitAlphaOutput"), exports);
 __exportStar(require("./createDestination200Response"), exports);
 __exportStar(require("./createDestinationSubscription200Response"), exports);
 __exportStar(require("./createDestinationSubscriptionAlphaInput"), exports);
@@ -196,7 +198,9 @@ __exportStar(require("./generateUploadURLForEdgeFunctions200Response"), exports)
 __exportStar(require("./generateUploadURLForEdgeFunctionsAlphaOutput"), exports);
 __exportStar(require("./getAdvancedSyncScheduleFromWarehouse200Response"), exports);
 __exportStar(require("./getAdvancedSyncScheduleFromWarehouseV1Output"), exports);
+__exportStar(require("./getAudience200Response"), exports);
 __exportStar(require("./getAudienceAlphaOutput"), exports);
+__exportStar(require("./getComputedTrait200Response"), exports);
 __exportStar(require("./getComputedTraitAlphaOutput"), exports);
 __exportStar(require("./getConnectionStateFromWarehouse200Response"), exports);
 __exportStar(require("./getConnectionStateFromWarehouseV1Output"), exports);
@@ -580,10 +584,12 @@ var computedTraitsDefinition_1 = require("./computedTraitsDefinition");
 var contact_1 = require("./contact");
 var createAudience200Response_1 = require("./createAudience200Response");
 var createAudienceAlphaInput_1 = require("./createAudienceAlphaInput");
+var createAudienceAlphaOutput_1 = require("./createAudienceAlphaOutput");
 var createCloudSourceRegulation200Response_1 = require("./createCloudSourceRegulation200Response");
 var createCloudSourceRegulationV1Input_1 = require("./createCloudSourceRegulationV1Input");
 var createCloudSourceRegulationV1Output_1 = require("./createCloudSourceRegulationV1Output");
 var createComputedTrait200Response_1 = require("./createComputedTrait200Response");
+var createComputedTraitAlphaOutput_1 = require("./createComputedTraitAlphaOutput");
 var createDestination200Response_1 = require("./createDestination200Response");
 var createDestinationSubscription200Response_1 = require("./createDestinationSubscription200Response");
 var createDestinationSubscriptionAlphaInput_1 = require("./createDestinationSubscriptionAlphaInput");
@@ -722,7 +728,9 @@ var generateUploadURLForEdgeFunctions200Response_1 = require("./generateUploadUR
 var generateUploadURLForEdgeFunctionsAlphaOutput_1 = require("./generateUploadURLForEdgeFunctionsAlphaOutput");
 var getAdvancedSyncScheduleFromWarehouse200Response_1 = require("./getAdvancedSyncScheduleFromWarehouse200Response");
 var getAdvancedSyncScheduleFromWarehouseV1Output_1 = require("./getAdvancedSyncScheduleFromWarehouseV1Output");
+var getAudience200Response_1 = require("./getAudience200Response");
 var getAudienceAlphaOutput_1 = require("./getAudienceAlphaOutput");
+var getComputedTrait200Response_1 = require("./getComputedTrait200Response");
 var getComputedTraitAlphaOutput_1 = require("./getComputedTraitAlphaOutput");
 var getConnectionStateFromWarehouse200Response_1 = require("./getConnectionStateFromWarehouse200Response");
 var getConnectionStateFromWarehouseV1Output_1 = require("./getConnectionStateFromWarehouseV1Output");
@@ -1205,10 +1213,12 @@ var typeMap = {
     Contact: contact_1.Contact,
     CreateAudience200Response: createAudience200Response_1.CreateAudience200Response,
     CreateAudienceAlphaInput: createAudienceAlphaInput_1.CreateAudienceAlphaInput,
+    CreateAudienceAlphaOutput: createAudienceAlphaOutput_1.CreateAudienceAlphaOutput,
     CreateCloudSourceRegulation200Response: createCloudSourceRegulation200Response_1.CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input,
     CreateCloudSourceRegulationV1Output: createCloudSourceRegulationV1Output_1.CreateCloudSourceRegulationV1Output,
     CreateComputedTrait200Response: createComputedTrait200Response_1.CreateComputedTrait200Response,
+    CreateComputedTraitAlphaOutput: createComputedTraitAlphaOutput_1.CreateComputedTraitAlphaOutput,
     CreateDestination200Response: createDestination200Response_1.CreateDestination200Response,
     CreateDestinationSubscription200Response: createDestinationSubscription200Response_1.CreateDestinationSubscription200Response,
     CreateDestinationSubscriptionAlphaInput: createDestinationSubscriptionAlphaInput_1.CreateDestinationSubscriptionAlphaInput,
@@ -1347,7 +1357,9 @@ var typeMap = {
     GenerateUploadURLForEdgeFunctionsAlphaOutput: generateUploadURLForEdgeFunctionsAlphaOutput_1.GenerateUploadURLForEdgeFunctionsAlphaOutput,
     GetAdvancedSyncScheduleFromWarehouse200Response: getAdvancedSyncScheduleFromWarehouse200Response_1.GetAdvancedSyncScheduleFromWarehouse200Response,
     GetAdvancedSyncScheduleFromWarehouseV1Output: getAdvancedSyncScheduleFromWarehouseV1Output_1.GetAdvancedSyncScheduleFromWarehouseV1Output,
+    GetAudience200Response: getAudience200Response_1.GetAudience200Response,
     GetAudienceAlphaOutput: getAudienceAlphaOutput_1.GetAudienceAlphaOutput,
+    GetComputedTrait200Response: getComputedTrait200Response_1.GetComputedTrait200Response,
     GetComputedTraitAlphaOutput: getComputedTraitAlphaOutput_1.GetComputedTraitAlphaOutput,
     GetConnectionStateFromWarehouse200Response: getConnectionStateFromWarehouse200Response_1.GetConnectionStateFromWarehouse200Response,
     GetConnectionStateFromWarehouseV1Output: getConnectionStateFromWarehouseV1Output_1.GetConnectionStateFromWarehouseV1Output,
