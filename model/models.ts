@@ -25,6 +25,7 @@ export * from './addUsersToUserGroupV1Output';
 export * from './advancedWarehouseSyncScheduleV1Input';
 export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
+export * from './audienceComputationDefinition';
 export * from './audienceDefinition';
 export * from './audienceSummary';
 export * from './auditEventV1';
@@ -36,9 +37,15 @@ export * from './commonSourceSettingsV1';
 export * from './computedTraitSummary';
 export * from './computedTraitsDefinition';
 export * from './contact';
+export * from './createAudience200Response';
+export * from './createAudienceAlphaInput';
+export * from './createAudienceAlphaOutput';
 export * from './createCloudSourceRegulation200Response';
 export * from './createCloudSourceRegulationV1Input';
 export * from './createCloudSourceRegulationV1Output';
+export * from './createComputedTrait200Response';
+export * from './createComputedTraitAlphaInput';
+export * from './createComputedTraitAlphaOutput';
 export * from './createDestination200Response';
 export * from './createDestinationSubscription200Response';
 export * from './createDestinationSubscriptionAlphaInput';
@@ -449,6 +456,7 @@ export * from './syncNoticeV1';
 export * from './syncV1';
 export * from './trackSourceSettingsV1';
 export * from './trackingPlanV1';
+export * from './traitDefinition';
 export * from './transformationBeta';
 export * from './transformationV1';
 export * from './updateAudienceForSpace200Response';
@@ -560,6 +568,7 @@ import { AddUsersToUserGroupV1Output } from './addUsersToUserGroupV1Output';
 import { AdvancedWarehouseSyncScheduleV1Input } from './advancedWarehouseSyncScheduleV1Input';
 import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncScheduleV1Output';
 import { AllowedLabelBeta } from './allowedLabelBeta';
+import { AudienceComputationDefinition } from './audienceComputationDefinition';
 import { AudienceDefinition } from './audienceDefinition';
 import { AudienceSummary } from './audienceSummary';
 import { AuditEventV1 } from './auditEventV1';
@@ -571,9 +580,15 @@ import { CommonSourceSettingsV1 } from './commonSourceSettingsV1';
 import { ComputedTraitSummary } from './computedTraitSummary';
 import { ComputedTraitsDefinition } from './computedTraitsDefinition';
 import { Contact } from './contact';
+import { CreateAudience200Response } from './createAudience200Response';
+import { CreateAudienceAlphaInput } from './createAudienceAlphaInput';
+import { CreateAudienceAlphaOutput } from './createAudienceAlphaOutput';
 import { CreateCloudSourceRegulation200Response } from './createCloudSourceRegulation200Response';
 import { CreateCloudSourceRegulationV1Input } from './createCloudSourceRegulationV1Input';
 import { CreateCloudSourceRegulationV1Output } from './createCloudSourceRegulationV1Output';
+import { CreateComputedTrait200Response } from './createComputedTrait200Response';
+import { CreateComputedTraitAlphaInput } from './createComputedTraitAlphaInput';
+import { CreateComputedTraitAlphaOutput } from './createComputedTraitAlphaOutput';
 import { CreateDestination200Response } from './createDestination200Response';
 import { CreateDestinationSubscription200Response } from './createDestinationSubscription200Response';
 import { CreateDestinationSubscriptionAlphaInput } from './createDestinationSubscriptionAlphaInput';
@@ -984,6 +999,7 @@ import { SyncNoticeV1 } from './syncNoticeV1';
 import { SyncV1 } from './syncV1';
 import { TrackSourceSettingsV1 } from './trackSourceSettingsV1';
 import { TrackingPlanV1 } from './trackingPlanV1';
+import { TraitDefinition } from './traitDefinition';
 import { TransformationBeta } from './transformationBeta';
 import { TransformationV1 } from './transformationV1';
 import { UpdateAudienceForSpace200Response } from './updateAudienceForSpace200Response';
@@ -1242,6 +1258,7 @@ let typeMap: { [index: string]: any } = {
     AdvancedWarehouseSyncScheduleV1Output:
         AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: AllowedLabelBeta,
+    AudienceComputationDefinition: AudienceComputationDefinition,
     AudienceDefinition: AudienceDefinition,
     AudienceSummary: AudienceSummary,
     AuditEventV1: AuditEventV1,
@@ -1256,10 +1273,16 @@ let typeMap: { [index: string]: any } = {
     ComputedTraitSummary: ComputedTraitSummary,
     ComputedTraitsDefinition: ComputedTraitsDefinition,
     Contact: Contact,
+    CreateAudience200Response: CreateAudience200Response,
+    CreateAudienceAlphaInput: CreateAudienceAlphaInput,
+    CreateAudienceAlphaOutput: CreateAudienceAlphaOutput,
     CreateCloudSourceRegulation200Response:
         CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: CreateCloudSourceRegulationV1Input,
     CreateCloudSourceRegulationV1Output: CreateCloudSourceRegulationV1Output,
+    CreateComputedTrait200Response: CreateComputedTrait200Response,
+    CreateComputedTraitAlphaInput: CreateComputedTraitAlphaInput,
+    CreateComputedTraitAlphaOutput: CreateComputedTraitAlphaOutput,
     CreateDestination200Response: CreateDestination200Response,
     CreateDestinationSubscription200Response:
         CreateDestinationSubscription200Response,
@@ -1749,6 +1772,7 @@ let typeMap: { [index: string]: any } = {
     SyncV1: SyncV1,
     TrackSourceSettingsV1: TrackSourceSettingsV1,
     TrackingPlanV1: TrackingPlanV1,
+    TraitDefinition: TraitDefinition,
     TransformationBeta: TransformationBeta,
     TransformationV1: TransformationV1,
     UpdateAudienceForSpace200Response: UpdateAudienceForSpace200Response,
