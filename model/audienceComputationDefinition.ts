@@ -11,25 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceComputationDefinition } from './audienceComputationDefinition';
 
-/**
- * Input to update an audience.
- */
-export class UpdateAudienceForSpaceInput {
-    /**
-     * Enabled/disabled status for the audience.
-     */
-    'enabled'?: boolean;
-    /**
-     * The name of the computation
-     */
-    'name'?: string;
-    /**
-     * The description of the computation
-     */
-    'description'?: string;
-    'definition'?: AudienceComputationDefinition;
+export class AudienceComputationDefinition {
+    'type': string;
+    'query': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -39,28 +24,18 @@ export class UpdateAudienceForSpaceInput {
         type: string;
     }> = [
         {
-            name: 'enabled',
-            baseName: 'enabled',
-            type: 'boolean',
-        },
-        {
-            name: 'name',
-            baseName: 'name',
+            name: 'type',
+            baseName: 'type',
             type: 'string',
         },
         {
-            name: 'description',
-            baseName: 'description',
+            name: 'query',
+            baseName: 'query',
             type: 'string',
-        },
-        {
-            name: 'definition',
-            baseName: 'definition',
-            type: 'AudienceComputationDefinition',
         },
     ];
 
     static getAttributeTypeMap() {
-        return UpdateAudienceForSpaceInput.attributeTypeMap;
+        return AudienceComputationDefinition.attributeTypeMap;
     }
 }

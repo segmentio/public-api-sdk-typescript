@@ -113,16 +113,14 @@ var ComputedTraitsApi = (function () {
     ComputedTraitsApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    ComputedTraitsApi.prototype.getComputedTrait = function (spaceId, id, options) {
+    ComputedTraitsApi.prototype.createComputedTrait = function (spaceId, CreateTraitAlphaInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/spaces/{spaceId}/computed-traits/{id}'
-                        .replace('{' + 'spaceId' + '}', encodeURIComponent(String(spaceId)))
-                        .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
+                    '/spaces/{spaceId}/computed-traits'.replace('{' + 'spaceId' + '}', encodeURIComponent(String(spaceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
@@ -137,20 +135,22 @@ var ComputedTraitsApi = (function () {
                 }
                 localVarFormParams = {};
                 if (spaceId === null || spaceId === undefined) {
-                    throw new Error('Required parameter spaceId was null or undefined when calling getComputedTrait.');
+                    throw new Error('Required parameter spaceId was null or undefined when calling createComputedTrait.');
                 }
-                if (id === null || id === undefined) {
-                    throw new Error('Required parameter id was null or undefined when calling getComputedTrait.');
+                if (CreateTraitAlphaInput === null ||
+                    CreateTraitAlphaInput === undefined) {
+                    throw new Error('Required parameter CreateTraitAlphaInput was null or undefined when calling createComputedTrait.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'GET',
+                    method: 'POST',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
+                    body: models_1.ObjectSerializer.serialize(CreateTraitAlphaInput, 'CreateTraitAlphaInput'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -189,7 +189,7 @@ var ComputedTraitsApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetComputedTrait200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateComputedTrait200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -202,14 +202,16 @@ var ComputedTraitsApi = (function () {
             });
         });
     };
-    ComputedTraitsApi.prototype.listComputedTraits = function (spaceId, pagination, options) {
+    ComputedTraitsApi.prototype.getComputedTrait = function (spaceId, id, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/spaces/{spaceId}/computed-traits'.replace('{' + 'spaceId' + '}', encodeURIComponent(String(spaceId)));
+                    '/spaces/{spaceId}/computed-traits/{id}'
+                        .replace('{' + 'spaceId' + '}', encodeURIComponent(String(spaceId)))
+                        .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
@@ -224,13 +226,10 @@ var ComputedTraitsApi = (function () {
                 }
                 localVarFormParams = {};
                 if (spaceId === null || spaceId === undefined) {
-                    throw new Error('Required parameter spaceId was null or undefined when calling listComputedTraits.');
+                    throw new Error('Required parameter spaceId was null or undefined when calling getComputedTrait.');
                 }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listComputedTraits.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                if (id === null || id === undefined) {
+                    throw new Error('Required parameter id was null or undefined when calling getComputedTrait.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -279,6 +278,96 @@ var ComputedTraitsApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
+                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateComputedTrait200Response');
+                                        resolve({ response: response, body: body });
+                                    }
+                                    else {
+                                        reject(new apis_1.HttpError(response, body, response.statusCode));
+                                    }
+                                }
+                            });
+                        });
+                    })];
+            });
+        });
+    };
+    ComputedTraitsApi.prototype.listComputedTraits = function (spaceId, pagination, options) {
+        if (options === void 0) { options = { headers: {} }; }
+        return __awaiter(this, void 0, void 0, function () {
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
+            var _this = this;
+            return __generator(this, function (_b) {
+                localVarPath = this.basePath +
+                    '/spaces/{spaceId}/computed-traits'.replace('{' + 'spaceId' + '}', encodeURIComponent(String(spaceId)));
+                localVarQueryParameters = {};
+                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
+                produces = [
+                    'application/vnd.segment.v1alpha+json',
+                    'application/json',
+                ];
+                if (produces.indexOf('application/json') >= 0) {
+                    localVarHeaderParams.Accept = 'application/json';
+                }
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
+                }
+                localVarFormParams = {};
+                if (spaceId === null || spaceId === undefined) {
+                    throw new Error('Required parameter spaceId was null or undefined when calling listComputedTraits.');
+                }
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling listComputedTraits.');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                }
+                Object.assign(localVarHeaderParams, options.headers);
+                localVarUseFormData = false;
+                localVarRequestOptions = {
+                    method: 'GET',
+                    qs: localVarQueryParameters,
+                    headers: localVarHeaderParams,
+                    uri: localVarPath,
+                    useQuerystring: this._useQuerystring,
+                    json: true,
+                };
+                authenticationPromise = Promise.resolve();
+                if (this.authentications.token.accessToken) {
+                    authenticationPromise = authenticationPromise.then(function () {
+                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
+                    });
+                }
+                authenticationPromise = authenticationPromise.then(function () {
+                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
+                });
+                interceptorPromise = authenticationPromise;
+                _loop_3 = function (interceptor) {
+                    interceptorPromise = interceptorPromise.then(function () {
+                        return interceptor(localVarRequestOptions);
+                    });
+                };
+                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
+                    interceptor = _a[_i];
+                    _loop_3(interceptor);
+                }
+                return [2, interceptorPromise.then(function () {
+                        if (Object.keys(localVarFormParams).length) {
+                            if (localVarUseFormData) {
+                                localVarRequestOptions.formData = localVarFormParams;
+                            }
+                            else {
+                                localVarRequestOptions.form = localVarFormParams;
+                            }
+                        }
+                        return new Promise(function (resolve, reject) {
+                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
+                                if (error) {
+                                    reject(error);
+                                }
+                                else {
+                                    if (response.statusCode &&
+                                        response.statusCode >= 200 &&
+                                        response.statusCode <= 299) {
                                         body = models_1.ObjectSerializer.deserialize(body, 'ListComputedTraits200Response');
                                         resolve({ response: response, body: body });
                                     }
@@ -295,7 +384,7 @@ var ComputedTraitsApi = (function () {
     ComputedTraitsApi.prototype.removeComputedTraitFromSpace = function (spaceId, id, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
@@ -341,14 +430,14 @@ var ComputedTraitsApi = (function () {
                     return _this.authentications.default.applyToRequest(localVarRequestOptions);
                 });
                 interceptorPromise = authenticationPromise;
-                _loop_3 = function (interceptor) {
+                _loop_4 = function (interceptor) {
                     interceptorPromise = interceptorPromise.then(function () {
                         return interceptor(localVarRequestOptions);
                     });
                 };
                 for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
                     interceptor = _a[_i];
-                    _loop_3(interceptor);
+                    _loop_4(interceptor);
                 }
                 return [2, interceptorPromise.then(function () {
                         if (Object.keys(localVarFormParams).length) {
@@ -384,7 +473,7 @@ var ComputedTraitsApi = (function () {
     ComputedTraitsApi.prototype.updateComputedTraitForSpace = function (spaceId, id, UpdateComputedTraitForSpaceAlphaInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_5, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
@@ -435,14 +524,14 @@ var ComputedTraitsApi = (function () {
                     return _this.authentications.default.applyToRequest(localVarRequestOptions);
                 });
                 interceptorPromise = authenticationPromise;
-                _loop_4 = function (interceptor) {
+                _loop_5 = function (interceptor) {
                     interceptorPromise = interceptorPromise.then(function () {
                         return interceptor(localVarRequestOptions);
                     });
                 };
                 for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
                     interceptor = _a[_i];
-                    _loop_4(interceptor);
+                    _loop_5(interceptor);
                 }
                 return [2, interceptorPromise.then(function () {
                         if (Object.keys(localVarFormParams).length) {

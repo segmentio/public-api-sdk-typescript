@@ -1,9 +1,6 @@
-import { TraitDefinition } from './traitDefinition';
-export declare class UpdateComputedTraitForSpaceAlphaInput {
-    'enabled'?: boolean;
-    'name'?: string;
-    'description'?: string;
-    'definition'?: TraitDefinition;
+export declare class AudienceComputationDefinition {
+    'type': string;
+    'query': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

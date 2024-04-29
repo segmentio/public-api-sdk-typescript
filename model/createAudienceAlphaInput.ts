@@ -11,10 +11,21 @@
  */
 
 import { RequestFile } from './models';
-import { GetAudienceAlphaOutput } from './getAudienceAlphaOutput';
+import { AudienceComputationDefinition } from './audienceComputationDefinition';
 
-export class GetAudience200Response {
-    'data'?: GetAudienceAlphaOutput;
+/**
+ * Input to create an audience.
+ */
+export class CreateAudienceAlphaInput {
+    /**
+     * The name of the computation
+     */
+    'name': string;
+    /**
+     * The description of the computation
+     */
+    'description': string;
+    'definition': AudienceComputationDefinition;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,13 +35,23 @@ export class GetAudience200Response {
         type: string;
     }> = [
         {
-            name: 'data',
-            baseName: 'data',
-            type: 'GetAudienceAlphaOutput',
+            name: 'name',
+            baseName: 'name',
+            type: 'string',
+        },
+        {
+            name: 'description',
+            baseName: 'description',
+            type: 'string',
+        },
+        {
+            name: 'definition',
+            baseName: 'definition',
+            type: 'AudienceComputationDefinition',
         },
     ];
 
     static getAttributeTypeMap() {
-        return GetAudience200Response.attributeTypeMap;
+        return CreateAudienceAlphaInput.attributeTypeMap;
     }
 }

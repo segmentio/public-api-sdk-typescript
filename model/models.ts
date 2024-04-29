@@ -25,6 +25,7 @@ export * from './addUsersToUserGroupV1Output';
 export * from './advancedWarehouseSyncScheduleV1Input';
 export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
+export * from './audienceComputationDefinition';
 export * from './audienceDefinition';
 export * from './audienceSummary';
 export * from './auditEventV1';
@@ -36,9 +37,12 @@ export * from './commonSourceSettingsV1';
 export * from './computedTraitSummary';
 export * from './computedTraitsDefinition';
 export * from './contact';
+export * from './createAudience200Response';
+export * from './createAudienceAlphaInput';
 export * from './createCloudSourceRegulation200Response';
 export * from './createCloudSourceRegulationV1Input';
 export * from './createCloudSourceRegulationV1Output';
+export * from './createComputedTrait200Response';
 export * from './createDestination200Response';
 export * from './createDestinationSubscription200Response';
 export * from './createDestinationSubscriptionAlphaInput';
@@ -86,6 +90,7 @@ export * from './createSourceV1Output';
 export * from './createTrackingPlan200Response';
 export * from './createTrackingPlanV1Input';
 export * from './createTrackingPlanV1Output';
+export * from './createTraitAlphaInput';
 export * from './createTransformation200Response';
 export * from './createTransformationBetaInput';
 export * from './createTransformationBetaOutput';
@@ -176,9 +181,7 @@ export * from './generateUploadURLForEdgeFunctions200Response';
 export * from './generateUploadURLForEdgeFunctionsAlphaOutput';
 export * from './getAdvancedSyncScheduleFromWarehouse200Response';
 export * from './getAdvancedSyncScheduleFromWarehouseV1Output';
-export * from './getAudience200Response';
 export * from './getAudienceAlphaOutput';
-export * from './getComputedTrait200Response';
 export * from './getComputedTraitAlphaOutput';
 export * from './getConnectionStateFromWarehouse200Response';
 export * from './getConnectionStateFromWarehouseV1Output';
@@ -449,6 +452,7 @@ export * from './syncNoticeV1';
 export * from './syncV1';
 export * from './trackSourceSettingsV1';
 export * from './trackingPlanV1';
+export * from './traitDefinition';
 export * from './transformationBeta';
 export * from './transformationV1';
 export * from './updateAudienceForSpace200Response';
@@ -560,6 +564,7 @@ import { AddUsersToUserGroupV1Output } from './addUsersToUserGroupV1Output';
 import { AdvancedWarehouseSyncScheduleV1Input } from './advancedWarehouseSyncScheduleV1Input';
 import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncScheduleV1Output';
 import { AllowedLabelBeta } from './allowedLabelBeta';
+import { AudienceComputationDefinition } from './audienceComputationDefinition';
 import { AudienceDefinition } from './audienceDefinition';
 import { AudienceSummary } from './audienceSummary';
 import { AuditEventV1 } from './auditEventV1';
@@ -571,9 +576,12 @@ import { CommonSourceSettingsV1 } from './commonSourceSettingsV1';
 import { ComputedTraitSummary } from './computedTraitSummary';
 import { ComputedTraitsDefinition } from './computedTraitsDefinition';
 import { Contact } from './contact';
+import { CreateAudience200Response } from './createAudience200Response';
+import { CreateAudienceAlphaInput } from './createAudienceAlphaInput';
 import { CreateCloudSourceRegulation200Response } from './createCloudSourceRegulation200Response';
 import { CreateCloudSourceRegulationV1Input } from './createCloudSourceRegulationV1Input';
 import { CreateCloudSourceRegulationV1Output } from './createCloudSourceRegulationV1Output';
+import { CreateComputedTrait200Response } from './createComputedTrait200Response';
 import { CreateDestination200Response } from './createDestination200Response';
 import { CreateDestinationSubscription200Response } from './createDestinationSubscription200Response';
 import { CreateDestinationSubscriptionAlphaInput } from './createDestinationSubscriptionAlphaInput';
@@ -621,6 +629,7 @@ import { CreateSourceV1Output } from './createSourceV1Output';
 import { CreateTrackingPlan200Response } from './createTrackingPlan200Response';
 import { CreateTrackingPlanV1Input } from './createTrackingPlanV1Input';
 import { CreateTrackingPlanV1Output } from './createTrackingPlanV1Output';
+import { CreateTraitAlphaInput } from './createTraitAlphaInput';
 import { CreateTransformation200Response } from './createTransformation200Response';
 import { CreateTransformationBetaInput } from './createTransformationBetaInput';
 import { CreateTransformationBetaOutput } from './createTransformationBetaOutput';
@@ -711,9 +720,7 @@ import { GenerateUploadURLForEdgeFunctions200Response } from './generateUploadUR
 import { GenerateUploadURLForEdgeFunctionsAlphaOutput } from './generateUploadURLForEdgeFunctionsAlphaOutput';
 import { GetAdvancedSyncScheduleFromWarehouse200Response } from './getAdvancedSyncScheduleFromWarehouse200Response';
 import { GetAdvancedSyncScheduleFromWarehouseV1Output } from './getAdvancedSyncScheduleFromWarehouseV1Output';
-import { GetAudience200Response } from './getAudience200Response';
 import { GetAudienceAlphaOutput } from './getAudienceAlphaOutput';
-import { GetComputedTrait200Response } from './getComputedTrait200Response';
 import { GetComputedTraitAlphaOutput } from './getComputedTraitAlphaOutput';
 import { GetConnectionStateFromWarehouse200Response } from './getConnectionStateFromWarehouse200Response';
 import { GetConnectionStateFromWarehouseV1Output } from './getConnectionStateFromWarehouseV1Output';
@@ -984,6 +991,7 @@ import { SyncNoticeV1 } from './syncNoticeV1';
 import { SyncV1 } from './syncV1';
 import { TrackSourceSettingsV1 } from './trackSourceSettingsV1';
 import { TrackingPlanV1 } from './trackingPlanV1';
+import { TraitDefinition } from './traitDefinition';
 import { TransformationBeta } from './transformationBeta';
 import { TransformationV1 } from './transformationV1';
 import { UpdateAudienceForSpace200Response } from './updateAudienceForSpace200Response';
@@ -1242,6 +1250,7 @@ let typeMap: { [index: string]: any } = {
     AdvancedWarehouseSyncScheduleV1Output:
         AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: AllowedLabelBeta,
+    AudienceComputationDefinition: AudienceComputationDefinition,
     AudienceDefinition: AudienceDefinition,
     AudienceSummary: AudienceSummary,
     AuditEventV1: AuditEventV1,
@@ -1256,10 +1265,13 @@ let typeMap: { [index: string]: any } = {
     ComputedTraitSummary: ComputedTraitSummary,
     ComputedTraitsDefinition: ComputedTraitsDefinition,
     Contact: Contact,
+    CreateAudience200Response: CreateAudience200Response,
+    CreateAudienceAlphaInput: CreateAudienceAlphaInput,
     CreateCloudSourceRegulation200Response:
         CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: CreateCloudSourceRegulationV1Input,
     CreateCloudSourceRegulationV1Output: CreateCloudSourceRegulationV1Output,
+    CreateComputedTrait200Response: CreateComputedTrait200Response,
     CreateDestination200Response: CreateDestination200Response,
     CreateDestinationSubscription200Response:
         CreateDestinationSubscription200Response,
@@ -1315,6 +1327,7 @@ let typeMap: { [index: string]: any } = {
     CreateTrackingPlan200Response: CreateTrackingPlan200Response,
     CreateTrackingPlanV1Input: CreateTrackingPlanV1Input,
     CreateTrackingPlanV1Output: CreateTrackingPlanV1Output,
+    CreateTraitAlphaInput: CreateTraitAlphaInput,
     CreateTransformation200Response: CreateTransformation200Response,
     CreateTransformationBetaInput: CreateTransformationBetaInput,
     CreateTransformationBetaOutput: CreateTransformationBetaOutput,
@@ -1414,9 +1427,7 @@ let typeMap: { [index: string]: any } = {
         GetAdvancedSyncScheduleFromWarehouse200Response,
     GetAdvancedSyncScheduleFromWarehouseV1Output:
         GetAdvancedSyncScheduleFromWarehouseV1Output,
-    GetAudience200Response: GetAudience200Response,
     GetAudienceAlphaOutput: GetAudienceAlphaOutput,
-    GetComputedTrait200Response: GetComputedTrait200Response,
     GetComputedTraitAlphaOutput: GetComputedTraitAlphaOutput,
     GetConnectionStateFromWarehouse200Response:
         GetConnectionStateFromWarehouse200Response,
@@ -1749,6 +1760,7 @@ let typeMap: { [index: string]: any } = {
     SyncV1: SyncV1,
     TrackSourceSettingsV1: TrackSourceSettingsV1,
     TrackingPlanV1: TrackingPlanV1,
+    TraitDefinition: TraitDefinition,
     TransformationBeta: TransformationBeta,
     TransformationV1: TransformationV1,
     UpdateAudienceForSpace200Response: UpdateAudienceForSpace200Response,

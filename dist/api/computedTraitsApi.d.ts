@@ -1,6 +1,7 @@
 /// <reference types="node" />
 import http from 'http';
-import { GetComputedTrait200Response } from '../model/getComputedTrait200Response';
+import { CreateComputedTrait200Response } from '../model/createComputedTrait200Response';
+import { CreateTraitAlphaInput } from '../model/createTraitAlphaInput';
 import { ListComputedTraits200Response } from '../model/listComputedTraits200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveComputedTraitFromSpace200Response } from '../model/removeComputedTraitFromSpace200Response';
@@ -29,13 +30,21 @@ export declare class ComputedTraitsApi {
     setApiKey(key: ComputedTraitsApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
+    createComputedTrait(spaceId: string, CreateTraitAlphaInput: CreateTraitAlphaInput, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: CreateComputedTrait200Response;
+    }>;
     getComputedTrait(spaceId: string, id: string, options?: {
         headers: {
             [name: string]: string;
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: GetComputedTrait200Response;
+        body: CreateComputedTrait200Response;
     }>;
     listComputedTraits(spaceId: string, pagination: PaginationInput, options?: {
         headers: {

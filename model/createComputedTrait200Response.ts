@@ -11,25 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceComputationDefinition } from './audienceComputationDefinition';
+import { GetComputedTraitAlphaOutput } from './getComputedTraitAlphaOutput';
 
-/**
- * Input to update an audience.
- */
-export class UpdateAudienceForSpaceInput {
-    /**
-     * Enabled/disabled status for the audience.
-     */
-    'enabled'?: boolean;
-    /**
-     * The name of the computation
-     */
-    'name'?: string;
-    /**
-     * The description of the computation
-     */
-    'description'?: string;
-    'definition'?: AudienceComputationDefinition;
+export class CreateComputedTrait200Response {
+    'data'?: GetComputedTraitAlphaOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -39,28 +24,13 @@ export class UpdateAudienceForSpaceInput {
         type: string;
     }> = [
         {
-            name: 'enabled',
-            baseName: 'enabled',
-            type: 'boolean',
-        },
-        {
-            name: 'name',
-            baseName: 'name',
-            type: 'string',
-        },
-        {
-            name: 'description',
-            baseName: 'description',
-            type: 'string',
-        },
-        {
-            name: 'definition',
-            baseName: 'definition',
-            type: 'AudienceComputationDefinition',
+            name: 'data',
+            baseName: 'data',
+            type: 'GetComputedTraitAlphaOutput',
         },
     ];
 
     static getAttributeTypeMap() {
-        return UpdateAudienceForSpaceInput.attributeTypeMap;
+        return CreateComputedTrait200Response.attributeTypeMap;
     }
 }

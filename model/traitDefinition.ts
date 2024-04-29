@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { GetComputedTraitAlphaOutput } from './getComputedTraitAlphaOutput';
 
-export class GetComputedTrait200Response {
-    'data'?: GetComputedTraitAlphaOutput;
+export class TraitDefinition {
+    'type': string;
+    'query': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,13 +24,18 @@ export class GetComputedTrait200Response {
         type: string;
     }> = [
         {
-            name: 'data',
-            baseName: 'data',
-            type: 'GetComputedTraitAlphaOutput',
+            name: 'type',
+            baseName: 'type',
+            type: 'string',
+        },
+        {
+            name: 'query',
+            baseName: 'query',
+            type: 'string',
         },
     ];
 
     static getAttributeTypeMap() {
-        return GetComputedTrait200Response.attributeTypeMap;
+        return TraitDefinition.attributeTypeMap;
     }
 }
