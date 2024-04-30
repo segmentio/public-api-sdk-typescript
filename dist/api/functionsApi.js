@@ -922,7 +922,7 @@ var FunctionsApi = (function () {
                 }
                 if (resourceType !== undefined) {
                     localVarQueryParameters['resourceType'] =
-                        models_1.ObjectSerializer.serialize(resourceType, "'DESTINATION' | 'INSERT_DESTINATION' | 'SOURCE'");
+                        models_1.ObjectSerializer.serialize(resourceType, "'DESTINATION' | 'INSERT_DESTINATION' | 'INSERT_SOURCE' | 'SOURCE'");
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
