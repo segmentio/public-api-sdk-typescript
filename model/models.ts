@@ -26,6 +26,7 @@ export * from './advancedWarehouseSyncScheduleV1Input';
 export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
 export * from './audienceComputationDefinition';
+export * from './audienceCreateOptions';
 export * from './audienceDefinition';
 export * from './audienceSummary';
 export * from './auditEventV1';
@@ -456,6 +457,7 @@ export * from './syncNoticeV1';
 export * from './syncV1';
 export * from './trackSourceSettingsV1';
 export * from './trackingPlanV1';
+export * from './traitCreateOptions';
 export * from './traitDefinition';
 export * from './transformationBeta';
 export * from './transformationV1';
@@ -569,6 +571,7 @@ import { AdvancedWarehouseSyncScheduleV1Input } from './advancedWarehouseSyncSch
 import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncScheduleV1Output';
 import { AllowedLabelBeta } from './allowedLabelBeta';
 import { AudienceComputationDefinition } from './audienceComputationDefinition';
+import { AudienceCreateOptions } from './audienceCreateOptions';
 import { AudienceDefinition } from './audienceDefinition';
 import { AudienceSummary } from './audienceSummary';
 import { AuditEventV1 } from './auditEventV1';
@@ -999,6 +1002,7 @@ import { SyncNoticeV1 } from './syncNoticeV1';
 import { SyncV1 } from './syncV1';
 import { TrackSourceSettingsV1 } from './trackSourceSettingsV1';
 import { TrackingPlanV1 } from './trackingPlanV1';
+import { TraitCreateOptions } from './traitCreateOptions';
 import { TraitDefinition } from './traitDefinition';
 import { TransformationBeta } from './transformationBeta';
 import { TransformationV1 } from './transformationV1';
@@ -1259,6 +1263,7 @@ let typeMap: { [index: string]: any } = {
         AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: AllowedLabelBeta,
     AudienceComputationDefinition: AudienceComputationDefinition,
+    AudienceCreateOptions: AudienceCreateOptions,
     AudienceDefinition: AudienceDefinition,
     AudienceSummary: AudienceSummary,
     AuditEventV1: AuditEventV1,
@@ -1772,6 +1777,7 @@ let typeMap: { [index: string]: any } = {
     SyncV1: SyncV1,
     TrackSourceSettingsV1: TrackSourceSettingsV1,
     TrackingPlanV1: TrackingPlanV1,
+    TraitCreateOptions: TraitCreateOptions,
     TraitDefinition: TraitDefinition,
     TransformationBeta: TransformationBeta,
     TransformationV1: TransformationV1,

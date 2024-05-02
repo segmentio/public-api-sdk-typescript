@@ -12,18 +12,9 @@
 
 import { RequestFile } from './models';
 
-/**
- * Query language definition and type.
- */
-export class Definition {
-    /**
-     * The query language string defining the computed trait aggregation criteria.
-     */
-    'query': string;
-    /**
-     * The underlying data type being aggregated for this computed trait.  Possible values: users, accounts.
-     */
-    'type': string;
+export class TraitCreateOptions {
+    'includeHistorical'?: boolean;
+    'includeAnonymous'?: boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -33,18 +24,18 @@ export class Definition {
         type: string;
     }> = [
         {
-            name: 'query',
-            baseName: 'query',
-            type: 'string',
+            name: 'includeHistorical',
+            baseName: 'includeHistorical',
+            type: 'boolean',
         },
         {
-            name: 'type',
-            baseName: 'type',
-            type: 'string',
+            name: 'includeAnonymous',
+            baseName: 'includeAnonymous',
+            type: 'boolean',
         },
     ];
 
     static getAttributeTypeMap() {
-        return Definition.attributeTypeMap;
+        return TraitCreateOptions.attributeTypeMap;
     }
 }

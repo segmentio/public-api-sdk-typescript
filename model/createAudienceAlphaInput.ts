@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { AudienceComputationDefinition } from './audienceComputationDefinition';
+import { AudienceCreateOptions } from './audienceCreateOptions';
 
 /**
  * Input to create an audience.
@@ -26,6 +27,7 @@ export class CreateAudienceAlphaInput {
      */
     'description': string;
     'definition': AudienceComputationDefinition;
+    'options'?: AudienceCreateOptions;
 
     static discriminator: string | undefined = undefined;
 
@@ -48,6 +50,11 @@ export class CreateAudienceAlphaInput {
             name: 'definition',
             baseName: 'definition',
             type: 'AudienceComputationDefinition',
+        },
+        {
+            name: 'options',
+            baseName: 'options',
+            type: 'AudienceCreateOptions',
         },
     ];
 
