@@ -43,7 +43,7 @@ export class ReverseEtlModel {
     /**
      * Defines a configuration object used for scheduling, which can vary depending on the configured strategy, but must always be an object with at least 1 level of keys.
      */
-    'scheduleConfig': { [key: string]: any };
+    'scheduleConfig'?: { [key: string]: any };
     /**
      * The SQL query that will be executed to extract data from the connected Source.
      */
