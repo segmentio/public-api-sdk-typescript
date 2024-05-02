@@ -24,6 +24,11 @@ var CreateAudienceAlphaInput = (function () {
             baseName: 'definition',
             type: 'AudienceComputationDefinition',
         },
+        {
+            name: 'options',
+            baseName: 'options',
+            type: 'AudienceCreateOptions',
+        },
     ];
     return CreateAudienceAlphaInput;
 }());

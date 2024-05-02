@@ -41,6 +41,7 @@ __exportStar(require("./advancedWarehouseSyncScheduleV1Input"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Output"), exports);
 __exportStar(require("./allowedLabelBeta"), exports);
 __exportStar(require("./audienceComputationDefinition"), exports);
+__exportStar(require("./audienceCreateOptions"), exports);
 __exportStar(require("./audienceDefinition"), exports);
 __exportStar(require("./audienceSummary"), exports);
 __exportStar(require("./auditEventV1"), exports);
@@ -471,6 +472,7 @@ __exportStar(require("./syncNoticeV1"), exports);
 __exportStar(require("./syncV1"), exports);
 __exportStar(require("./trackSourceSettingsV1"), exports);
 __exportStar(require("./trackingPlanV1"), exports);
+__exportStar(require("./traitCreateOptions"), exports);
 __exportStar(require("./traitDefinition"), exports);
 __exportStar(require("./transformationBeta"), exports);
 __exportStar(require("./transformationV1"), exports);
@@ -571,6 +573,7 @@ var advancedWarehouseSyncScheduleV1Input_1 = require("./advancedWarehouseSyncSch
 var advancedWarehouseSyncScheduleV1Output_1 = require("./advancedWarehouseSyncScheduleV1Output");
 var allowedLabelBeta_1 = require("./allowedLabelBeta");
 var audienceComputationDefinition_1 = require("./audienceComputationDefinition");
+var audienceCreateOptions_1 = require("./audienceCreateOptions");
 var audienceDefinition_1 = require("./audienceDefinition");
 var audienceSummary_1 = require("./audienceSummary");
 var auditEventV1_1 = require("./auditEventV1");
@@ -1001,6 +1004,7 @@ var syncNoticeV1_1 = require("./syncNoticeV1");
 var syncV1_1 = require("./syncV1");
 var trackSourceSettingsV1_1 = require("./trackSourceSettingsV1");
 var trackingPlanV1_1 = require("./trackingPlanV1");
+var traitCreateOptions_1 = require("./traitCreateOptions");
 var traitDefinition_1 = require("./traitDefinition");
 var transformationBeta_1 = require("./transformationBeta");
 var transformationV1_1 = require("./transformationV1");
@@ -1200,6 +1204,7 @@ var typeMap = {
     AdvancedWarehouseSyncScheduleV1Output: advancedWarehouseSyncScheduleV1Output_1.AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: allowedLabelBeta_1.AllowedLabelBeta,
     AudienceComputationDefinition: audienceComputationDefinition_1.AudienceComputationDefinition,
+    AudienceCreateOptions: audienceCreateOptions_1.AudienceCreateOptions,
     AudienceDefinition: audienceDefinition_1.AudienceDefinition,
     AudienceSummary: audienceSummary_1.AudienceSummary,
     AuditEventV1: auditEventV1_1.AuditEventV1,
@@ -1630,6 +1635,7 @@ var typeMap = {
     SyncV1: syncV1_1.SyncV1,
     TrackSourceSettingsV1: trackSourceSettingsV1_1.TrackSourceSettingsV1,
     TrackingPlanV1: trackingPlanV1_1.TrackingPlanV1,
+    TraitCreateOptions: traitCreateOptions_1.TraitCreateOptions,
     TraitDefinition: traitDefinition_1.TraitDefinition,
     TransformationBeta: transformationBeta_1.TransformationBeta,
     TransformationV1: transformationV1_1.TransformationV1,

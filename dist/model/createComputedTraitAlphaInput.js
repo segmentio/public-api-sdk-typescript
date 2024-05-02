@@ -24,6 +24,11 @@ var CreateComputedTraitAlphaInput = (function () {
             baseName: 'definition',
             type: 'TraitDefinition',
         },
+        {
+            name: 'options',
+            baseName: 'options',
+            type: 'TraitCreateOptions',
+        },
     ];
     return CreateComputedTraitAlphaInput;
 }());

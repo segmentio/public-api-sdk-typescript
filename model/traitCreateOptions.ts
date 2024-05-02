@@ -11,23 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceComputationDefinition } from './audienceComputationDefinition';
-import { AudienceCreateOptions } from './audienceCreateOptions';
 
-/**
- * Input to create an audience.
- */
-export class CreateAudienceAlphaInput {
-    /**
-     * The name of the computation .
-     */
-    'name': string;
-    /**
-     * The description of the computation.
-     */
-    'description': string;
-    'definition': AudienceComputationDefinition;
-    'options'?: AudienceCreateOptions;
+export class TraitCreateOptions {
+    'includeHistorical'?: boolean;
+    'includeAnonymous'?: boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -37,28 +24,18 @@ export class CreateAudienceAlphaInput {
         type: string;
     }> = [
         {
-            name: 'name',
-            baseName: 'name',
-            type: 'string',
+            name: 'includeHistorical',
+            baseName: 'includeHistorical',
+            type: 'boolean',
         },
         {
-            name: 'description',
-            baseName: 'description',
-            type: 'string',
-        },
-        {
-            name: 'definition',
-            baseName: 'definition',
-            type: 'AudienceComputationDefinition',
-        },
-        {
-            name: 'options',
-            baseName: 'options',
-            type: 'AudienceCreateOptions',
+            name: 'includeAnonymous',
+            baseName: 'includeAnonymous',
+            type: 'boolean',
         },
     ];
 
     static getAttributeTypeMap() {
-        return CreateAudienceAlphaInput.attributeTypeMap;
+        return TraitCreateOptions.attributeTypeMap;
     }
 }
