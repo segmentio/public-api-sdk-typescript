@@ -10,13 +10,13 @@ var TraitCreateOptions = (function () {
     TraitCreateOptions.discriminator = undefined;
     TraitCreateOptions.attributeTypeMap = [
         {
-            name: 'includeHistorical',
-            baseName: 'includeHistorical',
+            name: 'includeHistoricalData',
+            baseName: 'includeHistoricalData',
             type: 'boolean',
         },
         {
-            name: 'includeAnonymous',
-            baseName: 'includeAnonymous',
+            name: 'includeAnonymousUsers',
+            baseName: 'includeAnonymousUsers',
             type: 'boolean',
         },
     ];

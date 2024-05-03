@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class TraitCreateOptions {
-    'includeHistorical'?: boolean;
-    'includeAnonymous'?: boolean;
+    'includeHistoricalData'?: boolean;
+    'includeAnonymousUsers'?: boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,13 +24,13 @@ export class TraitCreateOptions {
         type: string;
     }> = [
         {
-            name: 'includeHistorical',
-            baseName: 'includeHistorical',
+            name: 'includeHistoricalData',
+            baseName: 'includeHistoricalData',
             type: 'boolean',
         },
         {
-            name: 'includeAnonymous',
-            baseName: 'includeAnonymous',
+            name: 'includeAnonymousUsers',
+            baseName: 'includeAnonymousUsers',
             type: 'boolean',
         },
     ];
