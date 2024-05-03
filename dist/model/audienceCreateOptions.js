@@ -10,13 +10,13 @@ var AudienceCreateOptions = (function () {
     AudienceCreateOptions.discriminator = undefined;
     AudienceCreateOptions.attributeTypeMap = [
         {
-            name: 'includeHistorical',
-            baseName: 'includeHistorical',
+            name: 'includeHistoricalData',
+            baseName: 'includeHistoricalData',
             type: 'boolean',
         },
         {
-            name: 'includeAnonymous',
-            baseName: 'includeAnonymous',
+            name: 'includeAnonymousUsers',
+            baseName: 'includeAnonymousUsers',
             type: 'boolean',
         },
     ];

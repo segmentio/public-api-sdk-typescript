@@ -1,6 +1,6 @@
 export declare class AudienceCreateOptions {
-    'includeHistorical'?: boolean;
-    'includeAnonymous'?: boolean;
+    'includeHistoricalData'?: boolean;
+    'includeAnonymousUsers'?: boolean;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
