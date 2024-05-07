@@ -1,6 +1,6 @@
 export declare class ComputedTraitsDefinition {
     'query': string;
-    'type': string;
+    'type': ComputedTraitsDefinition.TypeEnum;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -12,4 +12,10 @@ export declare class ComputedTraitsDefinition {
         baseName: string;
         type: string;
     }[];
+}
+export declare namespace ComputedTraitsDefinition {
+    enum TypeEnum {
+        accounts,
+        users
+    }
 }
