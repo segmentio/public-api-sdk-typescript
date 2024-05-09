@@ -82,7 +82,7 @@ export declare class SourcesApi {
         response: http.IncomingMessage;
         body: GetSource200Response;
     }>;
-    listConnectedDestinationsFromSource(sourceId: string, pagination: PaginationInput, options?: {
+    listConnectedDestinationsFromSource(sourceId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -90,7 +90,7 @@ export declare class SourcesApi {
         response: http.IncomingMessage;
         body: ListConnectedDestinationsFromSource200Response;
     }>;
-    listConnectedWarehousesFromSource(sourceId: string, pagination: PaginationInput, options?: {
+    listConnectedWarehousesFromSource(sourceId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -106,7 +106,7 @@ export declare class SourcesApi {
         response: http.IncomingMessage;
         body: ListSchemaSettingsInSource200Response;
     }>;
-    listSources(pagination: PaginationInput, options?: {
+    listSources(pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

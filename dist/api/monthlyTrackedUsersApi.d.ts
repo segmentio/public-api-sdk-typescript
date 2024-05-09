@@ -26,7 +26,7 @@ export declare class MonthlyTrackedUsersApi {
     setApiKey(key: MonthlyTrackedUsersApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    getDailyPerSourceMTUUsage(period: string, pagination: PaginationInput, options?: {
+    getDailyPerSourceMTUUsage(period: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -34,7 +34,7 @@ export declare class MonthlyTrackedUsersApi {
         response: http.IncomingMessage;
         body: GetDailyPerSourceMTUUsage200Response;
     }>;
-    getDailyWorkspaceMTUUsage(period: string, pagination: PaginationInput, options?: {
+    getDailyWorkspaceMTUUsage(period: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

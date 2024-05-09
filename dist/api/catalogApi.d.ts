@@ -54,7 +54,7 @@ export declare class CatalogApi {
         response: http.IncomingMessage;
         body: GetSourceMetadata200Response;
     }>;
-    getSourcesCatalog(pagination: PaginationInput, options?: {
+    getSourcesCatalog(pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -70,7 +70,7 @@ export declare class CatalogApi {
         response: http.IncomingMessage;
         body: GetWarehouseMetadata200Response;
     }>;
-    getWarehousesCatalog(pagination: PaginationInput, options?: {
+    getWarehousesCatalog(pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

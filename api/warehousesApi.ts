@@ -858,7 +858,7 @@ export class WarehousesApi {
      */
     public async listConnectedSourcesFromWarehouse(
         warehouseId: string,
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -893,13 +893,6 @@ export class WarehousesApi {
         if (warehouseId === null || warehouseId === undefined) {
             throw new Error(
                 'Required parameter warehouseId was null or undefined when calling listConnectedSourcesFromWarehouse.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listConnectedSourcesFromWarehouse.'
             );
         }
 
@@ -991,7 +984,7 @@ export class WarehousesApi {
      * @param pagination Defines the pagination parameters.  This parameter exists in v1.
      */
     public async listWarehouses(
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -1016,13 +1009,6 @@ export class WarehousesApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listWarehouses.'
-            );
-        }
 
         if (pagination !== undefined) {
             localVarQueryParameters['pagination'] = ObjectSerializer.serialize(

@@ -626,7 +626,7 @@ export class TrackingPlansApi {
      */
     public async listRulesFromTrackingPlan(
         trackingPlanId: string,
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -661,13 +661,6 @@ export class TrackingPlansApi {
         if (trackingPlanId === null || trackingPlanId === undefined) {
             throw new Error(
                 'Required parameter trackingPlanId was null or undefined when calling listRulesFromTrackingPlan.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listRulesFromTrackingPlan.'
             );
         }
 
@@ -761,7 +754,7 @@ export class TrackingPlansApi {
      */
     public async listSourcesFromTrackingPlan(
         trackingPlanId: string,
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -796,13 +789,6 @@ export class TrackingPlansApi {
         if (trackingPlanId === null || trackingPlanId === undefined) {
             throw new Error(
                 'Required parameter trackingPlanId was null or undefined when calling listSourcesFromTrackingPlan.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listSourcesFromTrackingPlan.'
             );
         }
 
@@ -891,17 +877,17 @@ export class TrackingPlansApi {
     /**
      * Returns a list of Tracking Plans.    • In order to successfully call this endpoint, the specified Workspace needs to have the Protocols feature enabled. Please reach out to your customer success manager for more information.
      * @summary List Tracking Plans
-     * @param pagination Pagination options.  This parameter exists in v1.
      * @param type Requests Tracking Plans of a certain type. If omitted, lists all types.  This parameter exists in v1.
+     * @param pagination Pagination options.  This parameter exists in v1.
      */
     public async listTrackingPlans(
-        pagination: PaginationInput,
         type?:
             | 'ENGAGE'
             | 'LIVE'
             | 'PROPERTY_LIBRARY'
             | 'RULE_LIBRARY'
             | 'TEMPLATE',
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -926,13 +912,6 @@ export class TrackingPlansApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listTrackingPlans.'
-            );
-        }
 
         if (type !== undefined) {
             localVarQueryParameters['type'] = ObjectSerializer.serialize(

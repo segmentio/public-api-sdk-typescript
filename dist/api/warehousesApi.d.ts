@@ -85,7 +85,7 @@ export declare class WarehousesApi {
         response: http.IncomingMessage;
         body: GetWarehouse200Response;
     }>;
-    listConnectedSourcesFromWarehouse(warehouseId: string, pagination: PaginationInput, options?: {
+    listConnectedSourcesFromWarehouse(warehouseId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -93,7 +93,7 @@ export declare class WarehousesApi {
         response: http.IncomingMessage;
         body: ListConnectedSourcesFromWarehouse200Response;
     }>;
-    listWarehouses(pagination: PaginationInput, options?: {
+    listWarehouses(pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

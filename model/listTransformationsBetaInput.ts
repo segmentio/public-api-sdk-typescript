@@ -17,7 +17,7 @@ import { PaginationInput } from './paginationInput';
  * Lists the Transformations associated with the current Workspace.
  */
 export class ListTransformationsBetaInput {
-    'pagination': PaginationInput;
+    'pagination'?: PaginationInput;
 
     static discriminator: string | undefined = undefined;
 

@@ -46,7 +46,7 @@ export declare class SpacesApi {
         response: http.IncomingMessage;
         body: GetSpace200Response;
     }>;
-    listSpaces(pagination: PaginationInput, options?: {
+    listSpaces(pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
