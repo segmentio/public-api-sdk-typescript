@@ -23,7 +23,6 @@ export declare namespace ListFunctionItemV1 {
     enum ResourceTypeEnum {
         DESTINATION,
         INSERT_DESTINATION,
-        INSERT_SOURCE,
         SOURCE
     }
 }

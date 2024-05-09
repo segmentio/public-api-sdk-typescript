@@ -553,7 +553,7 @@ var DeletionAndSuppressionApi = (function () {
             });
         });
     };
-    DeletionAndSuppressionApi.prototype.listRegulationsFromSource = function (sourceId, pagination, status, regulationTypes, options) {
+    DeletionAndSuppressionApi.prototype.listRegulationsFromSource = function (sourceId, status, regulationTypes, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_6, _i, _a, interceptor;
@@ -578,9 +578,6 @@ var DeletionAndSuppressionApi = (function () {
                 localVarFormParams = {};
                 if (sourceId === null || sourceId === undefined) {
                     throw new Error('Required parameter sourceId was null or undefined when calling listRegulationsFromSource.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listRegulationsFromSource.');
                 }
                 if (status !== undefined) {
                     localVarQueryParameters['status'] = models_1.ObjectSerializer.serialize(status, "'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING'");
@@ -674,9 +671,6 @@ var DeletionAndSuppressionApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSuppressions.');
-                }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
@@ -740,7 +734,7 @@ var DeletionAndSuppressionApi = (function () {
             });
         });
     };
-    DeletionAndSuppressionApi.prototype.listWorkspaceRegulations = function (pagination, status, regulationTypes, options) {
+    DeletionAndSuppressionApi.prototype.listWorkspaceRegulations = function (status, regulationTypes, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_8, _i, _a, interceptor;
@@ -762,9 +756,6 @@ var DeletionAndSuppressionApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listWorkspaceRegulations.');
-                }
                 if (status !== undefined) {
                     localVarQueryParameters['status'] = models_1.ObjectSerializer.serialize(status, "'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING'");
                 }

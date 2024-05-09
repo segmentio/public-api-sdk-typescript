@@ -38,7 +38,7 @@ export declare class CatalogApi {
         response: http.IncomingMessage;
         body: GetDestinationMetadata200Response;
     }>;
-    getDestinationsCatalog(pagination: PaginationInput, options?: {
+    getDestinationsCatalog(pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

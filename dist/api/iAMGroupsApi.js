@@ -579,9 +579,6 @@ var IAMGroupsApi = (function () {
                 if (userGroupId === null || userGroupId === undefined) {
                     throw new Error('Required parameter userGroupId was null or undefined when calling listInvitesFromUserGroup.');
                 }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listInvitesFromUserGroup.');
-                }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
@@ -667,9 +664,6 @@ var IAMGroupsApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listUserGroups.');
-                }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
@@ -758,9 +752,6 @@ var IAMGroupsApi = (function () {
                 localVarFormParams = {};
                 if (userGroupId === null || userGroupId === undefined) {
                     throw new Error('Required parameter userGroupId was null or undefined when calling listUsersFromUserGroup.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listUsersFromUserGroup.');
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');

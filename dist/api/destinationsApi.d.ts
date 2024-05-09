@@ -87,7 +87,7 @@ export declare class DestinationsApi {
         response: http.IncomingMessage;
         body: ListDeliveryMetricsSummaryFromDestination200Response;
     }>;
-    listDestinations(pagination: PaginationInput, options?: {
+    listDestinations(pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -95,7 +95,7 @@ export declare class DestinationsApi {
         response: http.IncomingMessage;
         body: ListDestinations200Response;
     }>;
-    listSubscriptionsFromDestination(destinationId: string, pagination: PaginationInput, options?: {
+    listSubscriptionsFromDestination(destinationId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

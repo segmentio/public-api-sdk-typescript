@@ -1,7 +1,5 @@
 /// <reference types="node" />
 import http from 'http';
-import { CreateAudience200Response } from '../model/createAudience200Response';
-import { CreateAudienceAlphaInput } from '../model/createAudienceAlphaInput';
 import { GetAudience200Response } from '../model/getAudience200Response';
 import { ListAudiences200Response } from '../model/listAudiences200Response';
 import { PaginationInput } from '../model/paginationInput';
@@ -31,14 +29,6 @@ export declare class AudiencesApi {
     setApiKey(key: AudiencesApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    createAudience(spaceId: string, CreateAudienceAlphaInput: CreateAudienceAlphaInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateAudience200Response;
-    }>;
     getAudience(spaceId: string, id: string, options?: {
         headers: {
             [name: string]: string;
@@ -47,7 +37,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: GetAudience200Response;
     }>;
-    listAudiences(spaceId: string, pagination: PaginationInput, options?: {
+    listAudiences(spaceId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

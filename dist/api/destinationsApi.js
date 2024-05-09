@@ -672,9 +672,6 @@ var DestinationsApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listDestinations.');
-                }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
@@ -761,9 +758,6 @@ var DestinationsApi = (function () {
                 localVarFormParams = {};
                 if (destinationId === null || destinationId === undefined) {
                     throw new Error('Required parameter destinationId was null or undefined when calling listSubscriptionsFromDestination.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSubscriptionsFromDestination.');
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
