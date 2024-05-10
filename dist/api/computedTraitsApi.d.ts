@@ -37,7 +37,7 @@ export declare class ComputedTraitsApi {
         response: http.IncomingMessage;
         body: GetComputedTrait200Response;
     }>;
-    listComputedTraits(spaceId: string, pagination?: PaginationInput, options?: {
+    listComputedTraits(spaceId: string, pagination: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

@@ -226,6 +226,9 @@ var ComputedTraitsApi = (function () {
                 if (spaceId === null || spaceId === undefined) {
                     throw new Error('Required parameter spaceId was null or undefined when calling listComputedTraits.');
                 }
+                if (pagination === null || pagination === undefined) {
+                    throw new Error('Required parameter pagination was null or undefined when calling listComputedTraits.');
+                }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }

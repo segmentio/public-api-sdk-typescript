@@ -247,7 +247,7 @@ export class ComputedTraitsApi {
      */
     public async listComputedTraits(
         spaceId: string,
-        pagination?: PaginationInput,
+        pagination: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -280,6 +280,13 @@ export class ComputedTraitsApi {
         if (spaceId === null || spaceId === undefined) {
             throw new Error(
                 'Required parameter spaceId was null or undefined when calling listComputedTraits.'
+            );
+        }
+
+        // verify required parameter 'pagination' is not null or undefined
+        if (pagination === null || pagination === undefined) {
+            throw new Error(
+                'Required parameter pagination was null or undefined when calling listComputedTraits.'
             );
         }
 
