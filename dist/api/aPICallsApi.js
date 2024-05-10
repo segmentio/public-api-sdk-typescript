@@ -137,9 +137,6 @@ var APICallsApi = (function () {
                 if (period === null || period === undefined) {
                     throw new Error('Required parameter period was null or undefined when calling getDailyPerSourceAPICallsUsage.');
                 }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling getDailyPerSourceAPICallsUsage.');
-                }
                 if (period !== undefined) {
                     localVarQueryParameters['period'] = models_1.ObjectSerializer.serialize(period, 'string');
                 }
@@ -230,9 +227,6 @@ var APICallsApi = (function () {
                 localVarFormParams = {};
                 if (period === null || period === undefined) {
                     throw new Error('Required parameter period was null or undefined when calling getDailyWorkspaceAPICallsUsage.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling getDailyWorkspaceAPICallsUsage.');
                 }
                 if (period !== undefined) {
                     localVarQueryParameters['period'] = models_1.ObjectSerializer.serialize(period, 'string');

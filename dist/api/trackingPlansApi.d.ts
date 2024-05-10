@@ -74,7 +74,7 @@ export declare class TrackingPlansApi {
         response: http.IncomingMessage;
         body: GetTrackingPlan200Response;
     }>;
-    listRulesFromTrackingPlan(trackingPlanId: string, pagination: PaginationInput, options?: {
+    listRulesFromTrackingPlan(trackingPlanId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -82,7 +82,7 @@ export declare class TrackingPlansApi {
         response: http.IncomingMessage;
         body: ListRulesFromTrackingPlan200Response;
     }>;
-    listSourcesFromTrackingPlan(trackingPlanId: string, pagination: PaginationInput, options?: {
+    listSourcesFromTrackingPlan(trackingPlanId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -90,7 +90,7 @@ export declare class TrackingPlansApi {
         response: http.IncomingMessage;
         body: ListSourcesFromTrackingPlan200Response;
     }>;
-    listTrackingPlans(pagination: PaginationInput, type?: 'ENGAGE' | 'LIVE' | 'PROPERTY_LIBRARY' | 'RULE_LIBRARY' | 'TEMPLATE', options?: {
+    listTrackingPlans(type?: 'ENGAGE' | 'LIVE' | 'PROPERTY_LIBRARY' | 'RULE_LIBRARY' | 'TEMPLATE', pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

@@ -25,7 +25,7 @@ export declare class AuditTrailApi {
     setApiKey(key: AuditTrailApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    listAuditEvents(pagination: PaginationInput, startTime?: string, endTime?: string, resourceId?: string, resourceType?: string, options?: {
+    listAuditEvents(startTime?: string, endTime?: string, resourceId?: string, resourceType?: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

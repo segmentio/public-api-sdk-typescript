@@ -74,7 +74,7 @@ export declare class ReverseETLApi {
         response: http.IncomingMessage;
         body: GetReverseEtlModel200Response;
     }>;
-    listReverseEtlModels(pagination: PaginationInput, options?: {
+    listReverseEtlModels(pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

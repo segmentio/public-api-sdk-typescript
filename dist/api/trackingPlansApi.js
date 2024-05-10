@@ -489,9 +489,6 @@ var TrackingPlansApi = (function () {
                 if (trackingPlanId === null || trackingPlanId === undefined) {
                     throw new Error('Required parameter trackingPlanId was null or undefined when calling listRulesFromTrackingPlan.');
                 }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listRulesFromTrackingPlan.');
-                }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
@@ -581,9 +578,6 @@ var TrackingPlansApi = (function () {
                 if (trackingPlanId === null || trackingPlanId === undefined) {
                     throw new Error('Required parameter trackingPlanId was null or undefined when calling listSourcesFromTrackingPlan.');
                 }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listSourcesFromTrackingPlan.');
-                }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
@@ -647,7 +641,7 @@ var TrackingPlansApi = (function () {
             });
         });
     };
-    TrackingPlansApi.prototype.listTrackingPlans = function (pagination, type, options) {
+    TrackingPlansApi.prototype.listTrackingPlans = function (type, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_7, _i, _a, interceptor;
@@ -669,9 +663,6 @@ var TrackingPlansApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listTrackingPlans.');
-                }
                 if (type !== undefined) {
                     localVarQueryParameters['type'] = models_1.ObjectSerializer.serialize(type, "'ENGAGE' | 'LIVE' | 'PROPERTY_LIBRARY' | 'RULE_LIBRARY' | 'TEMPLATE'");
                 }

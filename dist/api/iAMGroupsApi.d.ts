@@ -82,7 +82,7 @@ export declare class IAMGroupsApi {
         response: http.IncomingMessage;
         body: GetUserGroup200Response;
     }>;
-    listInvitesFromUserGroup(userGroupId: string, pagination: PaginationInput, options?: {
+    listInvitesFromUserGroup(userGroupId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -90,7 +90,7 @@ export declare class IAMGroupsApi {
         response: http.IncomingMessage;
         body: ListInvitesFromUserGroup200Response;
     }>;
-    listUserGroups(pagination: PaginationInput, options?: {
+    listUserGroups(pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -98,7 +98,7 @@ export declare class IAMGroupsApi {
         response: http.IncomingMessage;
         body: ListUserGroups200Response;
     }>;
-    listUsersFromUserGroup(userGroupId: string, pagination: PaginationInput, options?: {
+    listUsersFromUserGroup(userGroupId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

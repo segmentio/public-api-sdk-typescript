@@ -76,7 +76,7 @@ export declare class IAMUsersApi {
         response: http.IncomingMessage;
         body: GetUser200Response;
     }>;
-    listInvites(pagination: PaginationInput, options?: {
+    listInvites(pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -84,7 +84,7 @@ export declare class IAMUsersApi {
         response: http.IncomingMessage;
         body: ListInvites200Response;
     }>;
-    listUserGroupsFromUser(userId: string, pagination: PaginationInput, options?: {
+    listUserGroupsFromUser(userId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -92,7 +92,7 @@ export declare class IAMUsersApi {
         response: http.IncomingMessage;
         body: ListUserGroupsFromUser200Response;
     }>;
-    listUsers(pagination: PaginationInput, options?: {
+    listUsers(pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

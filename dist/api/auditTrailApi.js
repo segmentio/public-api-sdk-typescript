@@ -112,7 +112,7 @@ var AuditTrailApi = (function () {
     AuditTrailApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    AuditTrailApi.prototype.listAuditEvents = function (pagination, startTime, endTime, resourceId, resourceType, options) {
+    AuditTrailApi.prototype.listAuditEvents = function (startTime, endTime, resourceId, resourceType, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -134,9 +134,6 @@ var AuditTrailApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listAuditEvents.');
-                }
                 if (startTime !== undefined) {
                     localVarQueryParameters['startTime'] = models_1.ObjectSerializer.serialize(startTime, 'string');
                 }

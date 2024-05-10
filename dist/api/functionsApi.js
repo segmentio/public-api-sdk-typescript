@@ -823,9 +823,6 @@ var FunctionsApi = (function () {
                 if (functionId === null || functionId === undefined) {
                     throw new Error('Required parameter functionId was null or undefined when calling listFunctionVersions.');
                 }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listFunctionVersions.');
-                }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
@@ -889,7 +886,7 @@ var FunctionsApi = (function () {
             });
         });
     };
-    FunctionsApi.prototype.listFunctions = function (pagination, resourceType, options) {
+    FunctionsApi.prototype.listFunctions = function (resourceType, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_10, _i, _a, interceptor;
@@ -911,9 +908,6 @@ var FunctionsApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listFunctions.');
-                }
                 if (resourceType === null || resourceType === undefined) {
                     throw new Error('Required parameter resourceType was null or undefined when calling listFunctions.');
                 }
@@ -984,7 +978,7 @@ var FunctionsApi = (function () {
             });
         });
     };
-    FunctionsApi.prototype.listInsertFunctionInstances = function (pagination, functionId, options) {
+    FunctionsApi.prototype.listInsertFunctionInstances = function (functionId, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_11, _i, _a, interceptor;
@@ -1004,9 +998,6 @@ var FunctionsApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listInsertFunctionInstances.');
-                }
                 if (functionId === null || functionId === undefined) {
                     throw new Error('Required parameter functionId was null or undefined when calling listInsertFunctionInstances.');
                 }

@@ -75,7 +75,7 @@ export declare class DeletionAndSuppressionApi {
         response: http.IncomingMessage;
         body: GetRegulation200Response;
     }>;
-    listRegulationsFromSource(sourceId: string, pagination: PaginationInput, status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'SUPPRESS_WITH_DELETE_INTERNAL' | 'UNSUPPRESS'>, options?: {
+    listRegulationsFromSource(sourceId: string, status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'SUPPRESS_WITH_DELETE_INTERNAL' | 'UNSUPPRESS'>, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -83,7 +83,7 @@ export declare class DeletionAndSuppressionApi {
         response: http.IncomingMessage;
         body: ListRegulationsFromSource200Response;
     }>;
-    listSuppressions(pagination: PaginationInput, options?: {
+    listSuppressions(pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -91,7 +91,7 @@ export declare class DeletionAndSuppressionApi {
         response: http.IncomingMessage;
         body: ListSuppressions200Response;
     }>;
-    listWorkspaceRegulations(pagination: PaginationInput, status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'SUPPRESS_WITH_DELETE_INTERNAL' | 'UNSUPPRESS'>, options?: {
+    listWorkspaceRegulations(status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'SUPPRESS_WITH_DELETE_INTERNAL' | 'UNSUPPRESS'>, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
