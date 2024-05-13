@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { AudienceSummary } from './audienceSummary';
 
 /**
- * Audience output for update.
+ * Audience output for get.
  */
 export class GetAudienceAlphaOutput {
     'audience': AudienceSummary;
