@@ -11,7 +11,6 @@
  */
 
 import { RequestFile } from './models';
-import { TraitDefinition } from './traitDefinition';
 
 /**
  * Input to update a computed trait.
@@ -21,15 +20,6 @@ export class UpdateComputedTraitForSpaceAlphaInput {
      * Enabled/disabled status for the computed trait.
      */
     'enabled'?: boolean;
-    /**
-     * The name of the computation.
-     */
-    'name'?: string;
-    /**
-     * The description of the computation.
-     */
-    'description'?: string;
-    'definition'?: TraitDefinition;
 
     static discriminator: string | undefined = undefined;
 
@@ -42,21 +32,6 @@ export class UpdateComputedTraitForSpaceAlphaInput {
             name: 'enabled',
             baseName: 'enabled',
             type: 'boolean',
-        },
-        {
-            name: 'name',
-            baseName: 'name',
-            type: 'string',
-        },
-        {
-            name: 'description',
-            baseName: 'description',
-            type: 'string',
-        },
-        {
-            name: 'definition',
-            baseName: 'definition',
-            type: 'TraitDefinition',
         },
     ];
 

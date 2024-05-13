@@ -12,7 +12,6 @@
 
 import { RequestFile } from './models';
 import { Definition } from './definition';
-import { TraitOptions } from './traitOptions';
 
 /**
  * Defines a Computed trait.
@@ -63,7 +62,6 @@ export class ComputedTraitSummary {
      * The timestamp of the computed trait\'s last change.
      */
     'updatedAt': string;
-    'options'?: TraitOptions;
 
     static discriminator: string | undefined = undefined;
 
@@ -131,11 +129,6 @@ export class ComputedTraitSummary {
             name: 'updatedAt',
             baseName: 'updatedAt',
             type: 'string',
-        },
-        {
-            name: 'options',
-            baseName: 'options',
-            type: 'TraitOptions',
         },
     ];
 

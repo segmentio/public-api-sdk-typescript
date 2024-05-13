@@ -1,4 +1,3 @@
-import { AudienceOptions } from './audienceOptions';
 import { Definition1 } from './definition1';
 export declare class AudienceSummary {
     'id': string;
@@ -13,7 +12,6 @@ export declare class AudienceSummary {
     'updatedBy': string;
     'createdAt': string;
     'updatedAt': string;
-    'options'?: AudienceOptions;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

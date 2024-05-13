@@ -69,11 +69,6 @@ var ComputedTraitSummary = (function () {
             baseName: 'updatedAt',
             type: 'string',
         },
-        {
-            name: 'options',
-            baseName: 'options',
-            type: 'TraitOptions',
-        },
     ];
     return ComputedTraitSummary;
 }());

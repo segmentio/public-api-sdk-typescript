@@ -11,7 +11,6 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceOptions } from './audienceOptions';
 import { Definition1 } from './definition1';
 
 /**
@@ -63,7 +62,6 @@ export class AudienceSummary {
      * Date the audience was last updated.
      */
     'updatedAt': string;
-    'options'?: AudienceOptions;
 
     static discriminator: string | undefined = undefined;
 
@@ -131,11 +129,6 @@ export class AudienceSummary {
             name: 'updatedAt',
             baseName: 'updatedAt',
             type: 'string',
-        },
-        {
-            name: 'options',
-            baseName: 'options',
-            type: 'AudienceOptions',
         },
     ];
 

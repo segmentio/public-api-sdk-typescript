@@ -69,11 +69,6 @@ var AudienceSummary = (function () {
             baseName: 'updatedAt',
             type: 'string',
         },
-        {
-            name: 'options',
-            baseName: 'options',
-            type: 'AudienceOptions',
-        },
     ];
     return AudienceSummary;
 }());
