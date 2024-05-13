@@ -107,7 +107,7 @@ export declare class FunctionsApi {
         response: http.IncomingMessage;
         body: GetInsertFunctionInstance200Response;
     }>;
-    listFunctionVersions(functionId: string, pagination: PaginationInput, options?: {
+    listFunctionVersions(functionId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -115,7 +115,7 @@ export declare class FunctionsApi {
         response: http.IncomingMessage;
         body: ListFunctionVersions200Response;
     }>;
-    listFunctions(pagination: PaginationInput, resourceType: 'DESTINATION' | 'INSERT_DESTINATION' | 'SOURCE', options?: {
+    listFunctions(resourceType: 'DESTINATION' | 'INSERT_DESTINATION' | 'SOURCE', pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -123,7 +123,7 @@ export declare class FunctionsApi {
         response: http.IncomingMessage;
         body: ListFunctions200Response;
     }>;
-    listInsertFunctionInstances(pagination: PaginationInput, functionId: string, options?: {
+    listInsertFunctionInstances(functionId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

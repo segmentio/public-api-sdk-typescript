@@ -243,7 +243,7 @@ export class SelectiveSyncApi {
     public async listSelectiveSyncsFromWarehouseAndSource(
         warehouseId: string,
         sourceId: string,
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -290,13 +290,6 @@ export class SelectiveSyncApi {
         if (sourceId === null || sourceId === undefined) {
             throw new Error(
                 'Required parameter sourceId was null or undefined when calling listSelectiveSyncsFromWarehouseAndSource.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listSelectiveSyncsFromWarehouseAndSource.'
             );
         }
 
@@ -390,7 +383,7 @@ export class SelectiveSyncApi {
      */
     public async listSyncsFromWarehouse(
         warehouseId: string,
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -425,13 +418,6 @@ export class SelectiveSyncApi {
         if (warehouseId === null || warehouseId === undefined) {
             throw new Error(
                 'Required parameter warehouseId was null or undefined when calling listSyncsFromWarehouse.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listSyncsFromWarehouse.'
             );
         }
 
@@ -527,7 +513,7 @@ export class SelectiveSyncApi {
     public async listSyncsFromWarehouseAndSource(
         warehouseId: string,
         sourceId: string,
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -574,13 +560,6 @@ export class SelectiveSyncApi {
         if (sourceId === null || sourceId === undefined) {
             throw new Error(
                 'Required parameter sourceId was null or undefined when calling listSyncsFromWarehouseAndSource.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listSyncsFromWarehouseAndSource.'
             );
         }
 

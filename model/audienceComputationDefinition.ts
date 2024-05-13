@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 export class AudienceComputationDefinition {
-    'type': AudienceComputationDefinition.TypeEnum;
+    'type': string;
     'query': string;
 
     static discriminator: string | undefined = undefined;
@@ -26,7 +26,7 @@ export class AudienceComputationDefinition {
         {
             name: 'type',
             baseName: 'type',
-            type: 'AudienceComputationDefinition.TypeEnum',
+            type: 'string',
         },
         {
             name: 'query',
@@ -37,12 +37,5 @@ export class AudienceComputationDefinition {
 
     static getAttributeTypeMap() {
         return AudienceComputationDefinition.attributeTypeMap;
-    }
-}
-
-export namespace AudienceComputationDefinition {
-    export enum TypeEnum {
-        accounts = <any>'accounts',
-        users = <any>'users',
     }
 }

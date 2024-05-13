@@ -760,7 +760,7 @@ export class IAMGroupsApi {
      */
     public async listInvitesFromUserGroup(
         userGroupId: string,
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -795,13 +795,6 @@ export class IAMGroupsApi {
         if (userGroupId === null || userGroupId === undefined) {
             throw new Error(
                 'Required parameter userGroupId was null or undefined when calling listInvitesFromUserGroup.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listInvitesFromUserGroup.'
             );
         }
 
@@ -893,7 +886,7 @@ export class IAMGroupsApi {
      * @param pagination Pagination for user groups.  This parameter exists in v1.
      */
     public async listUserGroups(
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -918,13 +911,6 @@ export class IAMGroupsApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listUserGroups.'
-            );
-        }
 
         if (pagination !== undefined) {
             localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
@@ -1016,7 +1002,7 @@ export class IAMGroupsApi {
      */
     public async listUsersFromUserGroup(
         userGroupId: string,
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -1051,13 +1037,6 @@ export class IAMGroupsApi {
         if (userGroupId === null || userGroupId === undefined) {
             throw new Error(
                 'Required parameter userGroupId was null or undefined when calling listUsersFromUserGroup.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listUsersFromUserGroup.'
             );
         }
 

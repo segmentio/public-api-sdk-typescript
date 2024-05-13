@@ -751,13 +751,12 @@ export class DeletionAndSuppressionApi {
      * Lists all Source-scoped regulations.
      * @summary List Regulations from Source
      * @param sourceId
-     * @param pagination Pagination parameters.  This parameter exists in v1.
      * @param status The status on which to filter returned regulations.  This parameter exists in v1.
      * @param regulationTypes The regulation types on which to filter returned regulations.  This parameter exists in v1.
+     * @param pagination Pagination parameters.  This parameter exists in v1.
      */
     public async listRegulationsFromSource(
         sourceId: string,
-        pagination: PaginationInput,
         status?:
             | 'FAILED'
             | 'FINISHED'
@@ -774,6 +773,7 @@ export class DeletionAndSuppressionApi {
             | 'SUPPRESS_WITH_DELETE_INTERNAL'
             | 'UNSUPPRESS'
         >,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -808,13 +808,6 @@ export class DeletionAndSuppressionApi {
         if (sourceId === null || sourceId === undefined) {
             throw new Error(
                 'Required parameter sourceId was null or undefined when calling listRegulationsFromSource.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listRegulationsFromSource.'
             );
         }
 
@@ -921,7 +914,7 @@ export class DeletionAndSuppressionApi {
      * @param pagination Pagination parameters.  This parameter exists in v1.
      */
     public async listSuppressions(
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -946,13 +939,6 @@ export class DeletionAndSuppressionApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listSuppressions.'
-            );
-        }
 
         if (pagination !== undefined) {
             localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
@@ -1039,12 +1025,11 @@ export class DeletionAndSuppressionApi {
     /**
      * Lists all Workspace-scoped regulations.
      * @summary List Workspace Regulations
-     * @param pagination Pagination parameters.  This parameter exists in v1.
      * @param status The status on which to filter the returned regulations.  This parameter exists in v1.
      * @param regulationTypes The regulation types on which to filter returned regulations.  This parameter exists in v1.
+     * @param pagination Pagination parameters.  This parameter exists in v1.
      */
     public async listWorkspaceRegulations(
-        pagination: PaginationInput,
         status?:
             | 'FAILED'
             | 'FINISHED'
@@ -1061,6 +1046,7 @@ export class DeletionAndSuppressionApi {
             | 'SUPPRESS_WITH_DELETE_INTERNAL'
             | 'UNSUPPRESS'
         >,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -1085,13 +1071,6 @@ export class DeletionAndSuppressionApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listWorkspaceRegulations.'
-            );
-        }
 
         if (status !== undefined) {
             localVarQueryParameters['status'] = ObjectSerializer.serialize(

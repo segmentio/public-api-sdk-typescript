@@ -1095,10 +1095,6 @@ let enumsMap: { [index: string]: any } = {
         AddConnectionFromSourceToWarehouseV1Output.StatusEnum,
     'AddSourceToTrackingPlanV1Output.StatusEnum':
         AddSourceToTrackingPlanV1Output.StatusEnum,
-    'AudienceComputationDefinition.TypeEnum':
-        AudienceComputationDefinition.TypeEnum,
-    'AudienceDefinition.TypeEnum': AudienceDefinition.TypeEnum,
-    'ComputedTraitsDefinition.TypeEnum': ComputedTraitsDefinition.TypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum':
         CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum':
@@ -1118,8 +1114,6 @@ let enumsMap: { [index: string]: any } = {
         CreateWorkspaceRegulationV1Input.RegulationTypeEnum,
     'CreateWorkspaceRegulationV1Input.SubjectTypeEnum':
         CreateWorkspaceRegulationV1Input.SubjectTypeEnum,
-    'Definition.TypeEnum': Definition.TypeEnum,
-    'Definition1.TypeEnum': Definition1.TypeEnum,
     'DeleteDestinationV1Output.StatusEnum':
         DeleteDestinationV1Output.StatusEnum,
     'DeleteFunctionV1Output.StatusEnum': DeleteFunctionV1Output.StatusEnum,
@@ -1224,7 +1218,6 @@ let enumsMap: { [index: string]: any } = {
     'TrackSourceSettingsV1.CommonEventOnViolationsEnum':
         TrackSourceSettingsV1.CommonEventOnViolationsEnum,
     'TrackingPlanV1.TypeEnum': TrackingPlanV1.TypeEnum,
-    'TraitDefinition.TypeEnum': TraitDefinition.TypeEnum,
     'UpdateGroupSubscriptionStatusResponse.StatusEnum':
         UpdateGroupSubscriptionStatusResponse.StatusEnum,
     'UpdateReverseEtlModelInput.ScheduleStrategyEnum':

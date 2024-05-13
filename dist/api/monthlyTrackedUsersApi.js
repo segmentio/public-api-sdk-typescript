@@ -137,9 +137,6 @@ var MonthlyTrackedUsersApi = (function () {
                 if (period === null || period === undefined) {
                     throw new Error('Required parameter period was null or undefined when calling getDailyPerSourceMTUUsage.');
                 }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling getDailyPerSourceMTUUsage.');
-                }
                 if (period !== undefined) {
                     localVarQueryParameters['period'] = models_1.ObjectSerializer.serialize(period, 'string');
                 }
@@ -230,9 +227,6 @@ var MonthlyTrackedUsersApi = (function () {
                 localVarFormParams = {};
                 if (period === null || period === undefined) {
                     throw new Error('Required parameter period was null or undefined when calling getDailyWorkspaceMTUUsage.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling getDailyWorkspaceMTUUsage.');
                 }
                 if (period !== undefined) {
                     localVarQueryParameters['period'] = models_1.ObjectSerializer.serialize(period, 'string');

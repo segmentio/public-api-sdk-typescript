@@ -1,6 +1,6 @@
 export declare class AudienceDefinition {
     'query': string;
-    'type': AudienceDefinition.TypeEnum;
+    'type': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -12,10 +12,4 @@ export declare class AudienceDefinition {
         baseName: string;
         type: string;
     }[];
-}
-export declare namespace AudienceDefinition {
-    enum TypeEnum {
-        accounts,
-        users
-    }
 }

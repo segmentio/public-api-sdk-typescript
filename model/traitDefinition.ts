@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 export class TraitDefinition {
-    'type': TraitDefinition.TypeEnum;
+    'type': string;
     'query': string;
 
     static discriminator: string | undefined = undefined;
@@ -26,7 +26,7 @@ export class TraitDefinition {
         {
             name: 'type',
             baseName: 'type',
-            type: 'TraitDefinition.TypeEnum',
+            type: 'string',
         },
         {
             name: 'query',
@@ -37,12 +37,5 @@ export class TraitDefinition {
 
     static getAttributeTypeMap() {
         return TraitDefinition.attributeTypeMap;
-    }
-}
-
-export namespace TraitDefinition {
-    export enum TypeEnum {
-        accounts = <any>'accounts',
-        users = <any>'users',
     }
 }

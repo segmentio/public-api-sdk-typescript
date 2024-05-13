@@ -117,7 +117,7 @@ export class MonthlyTrackedUsersApi {
      */
     public async getDailyPerSourceMTUUsage(
         period: string,
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -147,13 +147,6 @@ export class MonthlyTrackedUsersApi {
         if (period === null || period === undefined) {
             throw new Error(
                 'Required parameter period was null or undefined when calling getDailyPerSourceMTUUsage.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling getDailyPerSourceMTUUsage.'
             );
         }
 
@@ -254,7 +247,7 @@ export class MonthlyTrackedUsersApi {
      */
     public async getDailyWorkspaceMTUUsage(
         period: string,
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -284,13 +277,6 @@ export class MonthlyTrackedUsersApi {
         if (period === null || period === undefined) {
             throw new Error(
                 'Required parameter period was null or undefined when calling getDailyWorkspaceMTUUsage.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling getDailyWorkspaceMTUUsage.'
             );
         }
 

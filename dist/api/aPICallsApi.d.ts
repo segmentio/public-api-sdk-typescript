@@ -26,7 +26,7 @@ export declare class APICallsApi {
     setApiKey(key: APICallsApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    getDailyPerSourceAPICallsUsage(period: string, pagination: PaginationInput, options?: {
+    getDailyPerSourceAPICallsUsage(period: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -34,7 +34,7 @@ export declare class APICallsApi {
         response: http.IncomingMessage;
         body: GetDailyPerSourceAPICallsUsage200Response;
     }>;
-    getDailyWorkspaceAPICallsUsage(period: string, pagination: PaginationInput, options?: {
+    getDailyWorkspaceAPICallsUsage(period: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

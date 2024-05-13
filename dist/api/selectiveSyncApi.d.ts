@@ -40,7 +40,7 @@ export declare class SelectiveSyncApi {
         response: http.IncomingMessage;
         body: GetAdvancedSyncScheduleFromWarehouse200Response;
     }>;
-    listSelectiveSyncsFromWarehouseAndSource(warehouseId: string, sourceId: string, pagination: PaginationInput, options?: {
+    listSelectiveSyncsFromWarehouseAndSource(warehouseId: string, sourceId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -48,7 +48,7 @@ export declare class SelectiveSyncApi {
         response: http.IncomingMessage;
         body: ListSelectiveSyncsFromWarehouseAndSource200Response;
     }>;
-    listSyncsFromWarehouse(warehouseId: string, pagination: PaginationInput, options?: {
+    listSyncsFromWarehouse(warehouseId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -56,7 +56,7 @@ export declare class SelectiveSyncApi {
         response: http.IncomingMessage;
         body: ListSyncsFromWarehouse200Response;
     }>;
-    listSyncsFromWarehouseAndSource(warehouseId: string, sourceId: string, pagination: PaginationInput, options?: {
+    listSyncsFromWarehouseAndSource(warehouseId: string, sourceId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

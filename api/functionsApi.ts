@@ -1094,7 +1094,7 @@ export class FunctionsApi {
      */
     public async listFunctionVersions(
         functionId: string,
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -1127,13 +1127,6 @@ export class FunctionsApi {
         if (functionId === null || functionId === undefined) {
             throw new Error(
                 'Required parameter functionId was null or undefined when calling listFunctionVersions.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listFunctionVersions.'
             );
         }
 
@@ -1222,12 +1215,12 @@ export class FunctionsApi {
     /**
      * Lists all Functions in a Workspace.    • In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
      * @summary List Functions
-     * @param pagination Pagination parameters.  This parameter exists in v1.
      * @param resourceType The Function type.  Config API note: equal to &#x60;type&#x60;.  This parameter exists in v1.
+     * @param pagination Pagination parameters.  This parameter exists in v1.
      */
     public async listFunctions(
-        pagination: PaginationInput,
         resourceType: 'DESTINATION' | 'INSERT_DESTINATION' | 'SOURCE',
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -1252,13 +1245,6 @@ export class FunctionsApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listFunctions.'
-            );
-        }
 
         // verify required parameter 'resourceType' is not null or undefined
         if (resourceType === null || resourceType === undefined) {
@@ -1360,12 +1346,12 @@ export class FunctionsApi {
     /**
      * Lists all insert Function instances connected to the given insert Function.    • In order to successfully call this endpoint, the specified Workspace needs to have the Functions feature enabled. Please reach out to your customer success manager for more information.
      * @summary List Insert Function Instances
-     * @param pagination Pagination parameters.  This parameter exists in alpha.
      * @param functionId The insert Function class id to lookup.  This parameter exists in alpha.
+     * @param pagination Pagination parameters.  This parameter exists in alpha.
      */
     public async listInsertFunctionInstances(
-        pagination: PaginationInput,
         functionId: string,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -1388,13 +1374,6 @@ export class FunctionsApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listInsertFunctionInstances.'
-            );
-        }
 
         // verify required parameter 'functionId' is not null or undefined
         if (functionId === null || functionId === undefined) {

@@ -17,18 +17,10 @@ var AudienceDefinition = (function () {
         {
             name: 'type',
             baseName: 'type',
-            type: 'AudienceDefinition.TypeEnum',
+            type: 'string',
         },
     ];
     return AudienceDefinition;
 }());
-exports.AudienceDefinition = AudienceDefinition;
-(function (AudienceDefinition) {
-    var TypeEnum;
-    (function (TypeEnum) {
-        TypeEnum[TypeEnum["accounts"] = 'accounts'] = "accounts";
-        TypeEnum[TypeEnum["users"] = 'users'] = "users";
-    })(TypeEnum = AudienceDefinition.TypeEnum || (AudienceDefinition.TypeEnum = {}));
-})(AudienceDefinition = exports.AudienceDefinition || (exports.AudienceDefinition = {}));
 exports.AudienceDefinition = AudienceDefinition;
 //# sourceMappingURL=audienceDefinition.js.map

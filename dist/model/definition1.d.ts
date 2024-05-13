@@ -1,6 +1,6 @@
 export declare class Definition1 {
     'query': string;
-    'type': Definition1.TypeEnum;
+    'type': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -12,10 +12,4 @@ export declare class Definition1 {
         baseName: string;
         type: string;
     }[];
-}
-export declare namespace Definition1 {
-    enum TypeEnum {
-        accounts,
-        users
-    }
 }

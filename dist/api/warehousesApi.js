@@ -661,9 +661,6 @@ var WarehousesApi = (function () {
                 if (warehouseId === null || warehouseId === undefined) {
                     throw new Error('Required parameter warehouseId was null or undefined when calling listConnectedSourcesFromWarehouse.');
                 }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listConnectedSourcesFromWarehouse.');
-                }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
@@ -749,9 +746,6 @@ var WarehousesApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling listWarehouses.');
-                }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }

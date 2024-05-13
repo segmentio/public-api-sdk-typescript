@@ -12,7 +12,7 @@ var AudienceComputationDefinition = (function () {
         {
             name: 'type',
             baseName: 'type',
-            type: 'AudienceComputationDefinition.TypeEnum',
+            type: 'string',
         },
         {
             name: 'query',
@@ -22,13 +22,5 @@ var AudienceComputationDefinition = (function () {
     ];
     return AudienceComputationDefinition;
 }());
-exports.AudienceComputationDefinition = AudienceComputationDefinition;
-(function (AudienceComputationDefinition) {
-    var TypeEnum;
-    (function (TypeEnum) {
-        TypeEnum[TypeEnum["accounts"] = 'accounts'] = "accounts";
-        TypeEnum[TypeEnum["users"] = 'users'] = "users";
-    })(TypeEnum = AudienceComputationDefinition.TypeEnum || (AudienceComputationDefinition.TypeEnum = {}));
-})(AudienceComputationDefinition = exports.AudienceComputationDefinition || (exports.AudienceComputationDefinition = {}));
 exports.AudienceComputationDefinition = AudienceComputationDefinition;
 //# sourceMappingURL=audienceComputationDefinition.js.map

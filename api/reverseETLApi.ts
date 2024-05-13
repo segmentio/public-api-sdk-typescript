@@ -724,7 +724,7 @@ export class ReverseETLApi {
      * @param pagination Defines the pagination parameters.  This parameter exists in alpha.
      */
     public async listReverseEtlModels(
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -747,13 +747,6 @@ export class ReverseETLApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listReverseEtlModels.'
-            );
-        }
 
         if (pagination !== undefined) {
             localVarQueryParameters['pagination'] = ObjectSerializer.serialize(

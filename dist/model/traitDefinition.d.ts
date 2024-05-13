@@ -1,5 +1,5 @@
 export declare class TraitDefinition {
-    'type': TraitDefinition.TypeEnum;
+    'type': string;
     'query': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
@@ -12,10 +12,4 @@ export declare class TraitDefinition {
         baseName: string;
         type: string;
     }[];
-}
-export declare namespace TraitDefinition {
-    enum TypeEnum {
-        accounts,
-        users
-    }
 }

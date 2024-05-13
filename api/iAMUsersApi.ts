@@ -737,7 +737,7 @@ export class IAMUsersApi {
      * @param pagination Defines the pagination parameters.  This parameter exists in v1.
      */
     public async listInvites(
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -762,13 +762,6 @@ export class IAMUsersApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listInvites.'
-            );
-        }
 
         if (pagination !== undefined) {
             localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
@@ -860,7 +853,7 @@ export class IAMUsersApi {
      */
     public async listUserGroupsFromUser(
         userId: string,
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -895,13 +888,6 @@ export class IAMUsersApi {
         if (userId === null || userId === undefined) {
             throw new Error(
                 'Required parameter userId was null or undefined when calling listUserGroupsFromUser.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listUserGroupsFromUser.'
             );
         }
 
@@ -993,7 +979,7 @@ export class IAMUsersApi {
      * @param pagination Pagination for users.  This parameter exists in v1.
      */
     public async listUsers(
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{ response: http.IncomingMessage; body: ListUsers200Response }> {
         const localVarPath = this.basePath + '/users';
@@ -1015,13 +1001,6 @@ export class IAMUsersApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listUsers.'
-            );
-        }
 
         if (pagination !== undefined) {
             localVarQueryParameters['pagination'] = ObjectSerializer.serialize(

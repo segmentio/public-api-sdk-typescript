@@ -113,7 +113,7 @@ var DeliveryOverviewApi = (function () {
     DeliveryOverviewApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    DeliveryOverviewApi.prototype.getEgressFailedMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, pagination, groupBy, filter, options) {
+    DeliveryOverviewApi.prototype.getEgressFailedMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, groupBy, filter, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -147,9 +147,6 @@ var DeliveryOverviewApi = (function () {
                 }
                 if (granularity === null || granularity === undefined) {
                     throw new Error('Required parameter granularity was null or undefined when calling getEgressFailedMetricsFromDeliveryOverview.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling getEgressFailedMetricsFromDeliveryOverview.');
                 }
                 if (sourceId !== undefined) {
                     localVarQueryParameters['sourceId'] = models_1.ObjectSerializer.serialize(sourceId, 'string');
@@ -236,7 +233,7 @@ var DeliveryOverviewApi = (function () {
             });
         });
     };
-    DeliveryOverviewApi.prototype.getEgressSuccessMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, pagination, groupBy, filter, options) {
+    DeliveryOverviewApi.prototype.getEgressSuccessMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, groupBy, filter, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
@@ -270,9 +267,6 @@ var DeliveryOverviewApi = (function () {
                 }
                 if (granularity === null || granularity === undefined) {
                     throw new Error('Required parameter granularity was null or undefined when calling getEgressSuccessMetricsFromDeliveryOverview.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling getEgressSuccessMetricsFromDeliveryOverview.');
                 }
                 if (sourceId !== undefined) {
                     localVarQueryParameters['sourceId'] = models_1.ObjectSerializer.serialize(sourceId, 'string');
@@ -359,7 +353,7 @@ var DeliveryOverviewApi = (function () {
             });
         });
     };
-    DeliveryOverviewApi.prototype.getFilteredAtDestinationMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, pagination, groupBy, filter, subscriptionId, options) {
+    DeliveryOverviewApi.prototype.getFilteredAtDestinationMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, groupBy, filter, pagination, subscriptionId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
@@ -393,9 +387,6 @@ var DeliveryOverviewApi = (function () {
                 }
                 if (granularity === null || granularity === undefined) {
                     throw new Error('Required parameter granularity was null or undefined when calling getFilteredAtDestinationMetricsFromDeliveryOverview.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling getFilteredAtDestinationMetricsFromDeliveryOverview.');
                 }
                 if (sourceId !== undefined) {
                     localVarQueryParameters['sourceId'] = models_1.ObjectSerializer.serialize(sourceId, 'string');
@@ -486,7 +477,7 @@ var DeliveryOverviewApi = (function () {
             });
         });
     };
-    DeliveryOverviewApi.prototype.getFilteredAtSourceMetricsFromDeliveryOverview = function (sourceId, startTime, endTime, granularity, pagination, groupBy, filter, options) {
+    DeliveryOverviewApi.prototype.getFilteredAtSourceMetricsFromDeliveryOverview = function (sourceId, startTime, endTime, granularity, groupBy, filter, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
@@ -517,9 +508,6 @@ var DeliveryOverviewApi = (function () {
                 }
                 if (granularity === null || granularity === undefined) {
                     throw new Error('Required parameter granularity was null or undefined when calling getFilteredAtSourceMetricsFromDeliveryOverview.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling getFilteredAtSourceMetricsFromDeliveryOverview.');
                 }
                 if (sourceId !== undefined) {
                     localVarQueryParameters['sourceId'] = models_1.ObjectSerializer.serialize(sourceId, 'string');
@@ -602,7 +590,7 @@ var DeliveryOverviewApi = (function () {
             });
         });
     };
-    DeliveryOverviewApi.prototype.getIngressFailedMetricsFromDeliveryOverview = function (sourceId, startTime, endTime, granularity, pagination, groupBy, filter, options) {
+    DeliveryOverviewApi.prototype.getIngressFailedMetricsFromDeliveryOverview = function (sourceId, startTime, endTime, granularity, groupBy, filter, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_5, _i, _a, interceptor;
@@ -633,9 +621,6 @@ var DeliveryOverviewApi = (function () {
                 }
                 if (granularity === null || granularity === undefined) {
                     throw new Error('Required parameter granularity was null or undefined when calling getIngressFailedMetricsFromDeliveryOverview.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling getIngressFailedMetricsFromDeliveryOverview.');
                 }
                 if (sourceId !== undefined) {
                     localVarQueryParameters['sourceId'] = models_1.ObjectSerializer.serialize(sourceId, 'string');
@@ -718,7 +703,7 @@ var DeliveryOverviewApi = (function () {
             });
         });
     };
-    DeliveryOverviewApi.prototype.getIngressSuccessMetricsFromDeliveryOverview = function (sourceId, startTime, endTime, granularity, pagination, groupBy, filter, options) {
+    DeliveryOverviewApi.prototype.getIngressSuccessMetricsFromDeliveryOverview = function (sourceId, startTime, endTime, granularity, groupBy, filter, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_6, _i, _a, interceptor;
@@ -749,9 +734,6 @@ var DeliveryOverviewApi = (function () {
                 }
                 if (granularity === null || granularity === undefined) {
                     throw new Error('Required parameter granularity was null or undefined when calling getIngressSuccessMetricsFromDeliveryOverview.');
-                }
-                if (pagination === null || pagination === undefined) {
-                    throw new Error('Required parameter pagination was null or undefined when calling getIngressSuccessMetricsFromDeliveryOverview.');
                 }
                 if (sourceId !== undefined) {
                     localVarQueryParameters['sourceId'] = models_1.ObjectSerializer.serialize(sourceId, 'string');

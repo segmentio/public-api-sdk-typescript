@@ -23,7 +23,7 @@ export class Definition1 {
     /**
      * The underlying data type being segmented for this audience.  Possible values: users, accounts.
      */
-    'type': Definition1.TypeEnum;
+    'type': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -40,18 +40,11 @@ export class Definition1 {
         {
             name: 'type',
             baseName: 'type',
-            type: 'Definition1.TypeEnum',
+            type: 'string',
         },
     ];
 
     static getAttributeTypeMap() {
         return Definition1.attributeTypeMap;
-    }
-}
-
-export namespace Definition1 {
-    export enum TypeEnum {
-        accounts = <any>'accounts',
-        users = <any>'users',
     }
 }

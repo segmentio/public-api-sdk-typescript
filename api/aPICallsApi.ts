@@ -115,7 +115,7 @@ export class APICallsApi {
      */
     public async getDailyPerSourceAPICallsUsage(
         period: string,
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -145,13 +145,6 @@ export class APICallsApi {
         if (period === null || period === undefined) {
             throw new Error(
                 'Required parameter period was null or undefined when calling getDailyPerSourceAPICallsUsage.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling getDailyPerSourceAPICallsUsage.'
             );
         }
 
@@ -252,7 +245,7 @@ export class APICallsApi {
      */
     public async getDailyWorkspaceAPICallsUsage(
         period: string,
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -282,13 +275,6 @@ export class APICallsApi {
         if (period === null || period === undefined) {
             throw new Error(
                 'Required parameter period was null or undefined when calling getDailyWorkspaceAPICallsUsage.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling getDailyWorkspaceAPICallsUsage.'
             );
         }
 

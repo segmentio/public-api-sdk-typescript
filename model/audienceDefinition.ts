@@ -23,7 +23,7 @@ export class AudienceDefinition {
     /**
      * The underlying data type being segmented for this audience.  Possible values: users, accounts.
      */
-    'type': AudienceDefinition.TypeEnum;
+    'type': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -40,18 +40,11 @@ export class AudienceDefinition {
         {
             name: 'type',
             baseName: 'type',
-            type: 'AudienceDefinition.TypeEnum',
+            type: 'string',
         },
     ];
 
     static getAttributeTypeMap() {
         return AudienceDefinition.attributeTypeMap;
-    }
-}
-
-export namespace AudienceDefinition {
-    export enum TypeEnum {
-        accounts = <any>'accounts',
-        users = <any>'users',
     }
 }

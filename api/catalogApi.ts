@@ -239,7 +239,7 @@ export class CatalogApi {
      * @param pagination Required pagination parameters used to filter the Destinations catalog.  This parameter exists in v1.
      */
     public async getDestinationsCatalog(
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -264,13 +264,6 @@ export class CatalogApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling getDestinationsCatalog.'
-            );
-        }
 
         if (pagination !== undefined) {
             localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
@@ -479,7 +472,7 @@ export class CatalogApi {
      * @param pagination Defines the pagination parameters.  This parameter exists in v1.
      */
     public async getSourcesCatalog(
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -504,13 +497,6 @@ export class CatalogApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling getSourcesCatalog.'
-            );
-        }
 
         if (pagination !== undefined) {
             localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
@@ -716,10 +702,10 @@ export class CatalogApi {
     /**
      * Returns a list of all available Warehouses in the Segment catalog.
      * @summary Get Warehouses Catalog
-     * @param pagination Required pagination params used to filter the Warehouses catalog.  This parameter exists in v1.
+     * @param pagination Optional pagination params used to filter the Warehouses catalog.  This parameter exists in v1.
      */
     public async getWarehousesCatalog(
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -744,13 +730,6 @@ export class CatalogApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling getWarehousesCatalog.'
-            );
-        }
 
         if (pagination !== undefined) {
             localVarQueryParameters['pagination'] = ObjectSerializer.serialize(

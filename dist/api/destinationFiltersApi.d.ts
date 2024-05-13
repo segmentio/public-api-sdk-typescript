@@ -49,7 +49,7 @@ export declare class DestinationFiltersApi {
         response: http.IncomingMessage;
         body: GetFilterInDestination200Response;
     }>;
-    listFiltersFromDestination(destinationId: string, pagination: PaginationInput, options?: {
+    listFiltersFromDestination(destinationId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

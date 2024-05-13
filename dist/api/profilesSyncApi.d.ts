@@ -49,7 +49,7 @@ export declare class ProfilesSyncApi {
         response: http.IncomingMessage;
         body: ListProfilesWarehouseInSpace200Response;
     }>;
-    listSelectiveSyncsFromWarehouseAndSpace(spaceId: string, warehouseId: string, pagination: PaginationInput, options?: {
+    listSelectiveSyncsFromWarehouseAndSpace(spaceId: string, warehouseId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

@@ -112,7 +112,7 @@ export class IAMRolesApi {
      * @param pagination Pagination for roles.  This parameter exists in v1.
      */
     public async listRoles(
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{ response: http.IncomingMessage; body: ListRoles200Response }> {
         const localVarPath = this.basePath + '/roles';
@@ -134,13 +134,6 @@ export class IAMRolesApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listRoles.'
-            );
-        }
 
         if (pagination !== undefined) {
             localVarQueryParameters['pagination'] = ObjectSerializer.serialize(

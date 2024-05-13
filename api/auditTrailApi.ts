@@ -109,18 +109,18 @@ export class AuditTrailApi {
     /**
      * Returns a list of Audit Trail events.
      * @summary List Audit Events
-     * @param pagination Defines the pagination parameters.  This parameter exists in v1.
      * @param startTime Filter response to events that happened after this time.  This parameter exists in v1.
      * @param endTime Filter response to events that happened before this time. Defaults to the current time, or the end time from the pagination cursor.  This parameter exists in v1.
      * @param resourceId Filter response to events that affect a specific resource, for example, a single Source.  This parameter exists in v1.
      * @param resourceType Filter response to events that affect a specific type, for example, Sources, Warehouses, and Tracking Plans.  This parameter exists in v1.
+     * @param pagination Defines the pagination parameters.  This parameter exists in v1.
      */
     public async listAuditEvents(
-        pagination: PaginationInput,
         startTime?: string,
         endTime?: string,
         resourceId?: string,
         resourceType?: string,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -145,13 +145,6 @@ export class AuditTrailApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listAuditEvents.'
-            );
-        }
 
         if (startTime !== undefined) {
             localVarQueryParameters['startTime'] = ObjectSerializer.serialize(

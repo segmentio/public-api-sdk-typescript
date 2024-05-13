@@ -55,7 +55,7 @@ export declare class TransformationsApi {
         response: http.IncomingMessage;
         body: GetTransformation200Response;
     }>;
-    listTransformations(pagination: PaginationInput, options?: {
+    listTransformations(pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

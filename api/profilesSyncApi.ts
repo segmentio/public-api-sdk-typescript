@@ -384,7 +384,7 @@ export class ProfilesSyncApi {
     public async listSelectiveSyncsFromWarehouseAndSpace(
         spaceId: string,
         warehouseId: string,
-        pagination: PaginationInput,
+        pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -429,13 +429,6 @@ export class ProfilesSyncApi {
         if (warehouseId === null || warehouseId === undefined) {
             throw new Error(
                 'Required parameter warehouseId was null or undefined when calling listSelectiveSyncsFromWarehouseAndSpace.'
-            );
-        }
-
-        // verify required parameter 'pagination' is not null or undefined
-        if (pagination === null || pagination === undefined) {
-            throw new Error(
-                'Required parameter pagination was null or undefined when calling listSelectiveSyncsFromWarehouseAndSpace.'
             );
         }
 

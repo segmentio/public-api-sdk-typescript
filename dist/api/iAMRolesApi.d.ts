@@ -25,7 +25,7 @@ export declare class IAMRolesApi {
     setApiKey(key: IAMRolesApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    listRoles(pagination: PaginationInput, options?: {
+    listRoles(pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
