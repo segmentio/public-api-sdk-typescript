@@ -12,7 +12,7 @@
 
 import { RequestFile } from './models';
 
-export class TraitCreateOptions {
+export class AudienceOptions {
     'includeHistoricalData'?: boolean;
     'includeAnonymousUsers'?: boolean;
 
@@ -36,6 +36,6 @@ export class TraitCreateOptions {
     ];
 
     static getAttributeTypeMap() {
-        return TraitCreateOptions.attributeTypeMap;
+        return AudienceOptions.attributeTypeMap;
     }
 }

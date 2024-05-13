@@ -11,8 +11,8 @@
  */
 
 import { RequestFile } from './models';
-import { TraitCreateOptions } from './traitCreateOptions';
 import { TraitDefinition } from './traitDefinition';
+import { TraitOptions } from './traitOptions';
 
 /**
  * Input to create a trait.
@@ -27,7 +27,7 @@ export class CreateComputedTraitAlphaInput {
      */
     'description': string;
     'definition': TraitDefinition;
-    'options'?: TraitCreateOptions;
+    'options'?: TraitOptions;
 
     static discriminator: string | undefined = undefined;
 
@@ -54,7 +54,7 @@ export class CreateComputedTraitAlphaInput {
         {
             name: 'options',
             baseName: 'options',
-            type: 'TraitCreateOptions',
+            type: 'TraitOptions',
         },
     ];
 

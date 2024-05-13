@@ -27,7 +27,7 @@ var CreateAudienceAlphaInput = (function () {
         {
             name: 'options',
             baseName: 'options',
-            type: 'AudienceCreateOptions',
+            type: 'AudienceOptions',
         },
     ];
     return CreateAudienceAlphaInput;

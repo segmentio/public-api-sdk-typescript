@@ -1,4 +1,4 @@
-export declare class AudienceCreateOptions {
+export declare class TraitOptions {
     'includeHistoricalData'?: boolean;
     'includeAnonymousUsers'?: boolean;
     static discriminator: string | undefined;

@@ -27,7 +27,7 @@ var CreateComputedTraitAlphaInput = (function () {
         {
             name: 'options',
             baseName: 'options',
-            type: 'TraitCreateOptions',
+            type: 'TraitOptions',
         },
     ];
     return CreateComputedTraitAlphaInput;

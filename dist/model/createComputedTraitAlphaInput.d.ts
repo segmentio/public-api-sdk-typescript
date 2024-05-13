@@ -1,10 +1,10 @@
-import { TraitCreateOptions } from './traitCreateOptions';
 import { TraitDefinition } from './traitDefinition';
+import { TraitOptions } from './traitOptions';
 export declare class CreateComputedTraitAlphaInput {
     'name': string;
     'description': string;
     'definition': TraitDefinition;
-    'options'?: TraitCreateOptions;
+    'options'?: TraitOptions;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
