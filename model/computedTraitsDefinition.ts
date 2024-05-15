@@ -17,7 +17,7 @@ import { RequestFile } from './models';
  */
 export class ComputedTraitsDefinition {
     /**
-     * The query language string defining the computed trait aggregation criteria.
+     * The query language string defining the computed trait aggregation criteria. For guidance on using the query language, see the [Segment documentation site](https://segment.com/docs/api/public-api/query-language).
      */
     'query': string;
     /**

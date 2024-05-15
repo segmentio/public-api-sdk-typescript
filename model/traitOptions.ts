@@ -13,7 +13,13 @@
 import { RequestFile } from './models';
 
 export class TraitOptions {
+    /**
+     * Determines whether data prior to the computed trait being created is included when determining the computed trait value.
+     */
     'includeHistoricalData'?: boolean;
+    /**
+     * Determines whether anonymous users should be included when determining the computed trait value.
+     */
     'includeAnonymousUsers'?: boolean;
 
     static discriminator: string | undefined = undefined;

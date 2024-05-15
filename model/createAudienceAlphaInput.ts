@@ -19,11 +19,11 @@ import { AudienceOptions } from './audienceOptions';
  */
 export class CreateAudienceAlphaInput {
     /**
-     * The name of the computation .
+     * Name of the audience.
      */
     'name': string;
     /**
-     * The description of the computation.
+     * Description of the audience.
      */
     'description': string;
     'definition': AudienceComputationDefinition;

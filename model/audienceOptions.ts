@@ -13,7 +13,13 @@
 import { RequestFile } from './models';
 
 export class AudienceOptions {
+    /**
+     * Determines whether data prior to the audience being created is included when determining audience membership.
+     */
     'includeHistoricalData'?: boolean;
+    /**
+     * Determines whether anonymous users should be included when determining audience membership.
+     */
     'includeAnonymousUsers'?: boolean;
 
     static discriminator: string | undefined = undefined;
