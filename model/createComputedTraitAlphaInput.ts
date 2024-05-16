@@ -23,6 +23,10 @@ export class CreateComputedTraitAlphaInput {
      */
     'name': string;
     /**
+     * Determines whether a computation is enabled
+     */
+    'enabled'?: boolean;
+    /**
      * The description of the computation.
      */
     'description': string;
@@ -40,6 +44,11 @@ export class CreateComputedTraitAlphaInput {
             name: 'name',
             baseName: 'name',
             type: 'string',
+        },
+        {
+            name: 'enabled',
+            baseName: 'enabled',
+            type: 'boolean',
         },
         {
             name: 'description',

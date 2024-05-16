@@ -2,6 +2,7 @@ import { TraitDefinition } from './traitDefinition';
 import { TraitOptions } from './traitOptions';
 export declare class CreateComputedTraitAlphaInput {
     'name': string;
+    'enabled'?: boolean;
     'description': string;
     'definition': TraitDefinition;
     'options'?: TraitOptions;
