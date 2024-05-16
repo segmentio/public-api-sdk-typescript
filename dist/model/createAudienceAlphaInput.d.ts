@@ -2,6 +2,7 @@ import { AudienceComputationDefinition } from './audienceComputationDefinition';
 import { AudienceOptions } from './audienceOptions';
 export declare class CreateAudienceAlphaInput {
     'name': string;
+    'enabled'?: boolean;
     'description': string;
     'definition': AudienceComputationDefinition;
     'options'?: AudienceOptions;

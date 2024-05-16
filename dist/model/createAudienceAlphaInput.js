@@ -15,6 +15,11 @@ var CreateAudienceAlphaInput = (function () {
             type: 'string',
         },
         {
+            name: 'enabled',
+            baseName: 'enabled',
+            type: 'boolean',
+        },
+        {
             name: 'description',
             baseName: 'description',
             type: 'string',
