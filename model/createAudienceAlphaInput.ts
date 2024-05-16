@@ -23,7 +23,7 @@ export class CreateAudienceAlphaInput {
      */
     'name': string;
     /**
-     * Determines whether a computation is enabled
+     * Determines whether a computation is enabled.
      */
     'enabled'?: boolean;
     /**
