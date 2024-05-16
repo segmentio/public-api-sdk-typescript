@@ -14,6 +14,21 @@ var UpdateAudienceForSpaceInput = (function () {
             baseName: 'enabled',
             type: 'boolean',
         },
+        {
+            name: 'name',
+            baseName: 'name',
+            type: 'string',
+        },
+        {
+            name: 'description',
+            baseName: 'description',
+            type: 'string',
+        },
+        {
+            name: 'definition',
+            baseName: 'definition',
+            type: 'AudienceComputationDefinition',
+        },
     ];
     return UpdateAudienceForSpaceInput;
 }());

@@ -40,7 +40,9 @@ __exportStar(require("./addUsersToUserGroupV1Output"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Input"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Output"), exports);
 __exportStar(require("./allowedLabelBeta"), exports);
+__exportStar(require("./audienceComputationDefinition"), exports);
 __exportStar(require("./audienceDefinition"), exports);
+__exportStar(require("./audienceOptions"), exports);
 __exportStar(require("./audienceSummary"), exports);
 __exportStar(require("./auditEventV1"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpace200Response"), exports);
@@ -51,9 +53,15 @@ __exportStar(require("./commonSourceSettingsV1"), exports);
 __exportStar(require("./computedTraitSummary"), exports);
 __exportStar(require("./computedTraitsDefinition"), exports);
 __exportStar(require("./contact"), exports);
+__exportStar(require("./createAudience200Response"), exports);
+__exportStar(require("./createAudienceAlphaInput"), exports);
+__exportStar(require("./createAudienceAlphaOutput"), exports);
 __exportStar(require("./createCloudSourceRegulation200Response"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Input"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Output"), exports);
+__exportStar(require("./createComputedTrait200Response"), exports);
+__exportStar(require("./createComputedTraitAlphaInput"), exports);
+__exportStar(require("./createComputedTraitAlphaOutput"), exports);
 __exportStar(require("./createDestination200Response"), exports);
 __exportStar(require("./createDestinationSubscription200Response"), exports);
 __exportStar(require("./createDestinationSubscriptionAlphaInput"), exports);
@@ -464,6 +472,8 @@ __exportStar(require("./syncNoticeV1"), exports);
 __exportStar(require("./syncV1"), exports);
 __exportStar(require("./trackSourceSettingsV1"), exports);
 __exportStar(require("./trackingPlanV1"), exports);
+__exportStar(require("./traitDefinition"), exports);
+__exportStar(require("./traitOptions"), exports);
 __exportStar(require("./transformationBeta"), exports);
 __exportStar(require("./transformationV1"), exports);
 __exportStar(require("./updateAudienceForSpace200Response"), exports);
@@ -562,7 +572,9 @@ var addUsersToUserGroupV1Output_1 = require("./addUsersToUserGroupV1Output");
 var advancedWarehouseSyncScheduleV1Input_1 = require("./advancedWarehouseSyncScheduleV1Input");
 var advancedWarehouseSyncScheduleV1Output_1 = require("./advancedWarehouseSyncScheduleV1Output");
 var allowedLabelBeta_1 = require("./allowedLabelBeta");
+var audienceComputationDefinition_1 = require("./audienceComputationDefinition");
 var audienceDefinition_1 = require("./audienceDefinition");
+var audienceOptions_1 = require("./audienceOptions");
 var audienceSummary_1 = require("./audienceSummary");
 var auditEventV1_1 = require("./auditEventV1");
 var batchQueryMessagingSubscriptionsForSpace200Response_1 = require("./batchQueryMessagingSubscriptionsForSpace200Response");
@@ -573,9 +585,15 @@ var commonSourceSettingsV1_1 = require("./commonSourceSettingsV1");
 var computedTraitSummary_1 = require("./computedTraitSummary");
 var computedTraitsDefinition_1 = require("./computedTraitsDefinition");
 var contact_1 = require("./contact");
+var createAudience200Response_1 = require("./createAudience200Response");
+var createAudienceAlphaInput_1 = require("./createAudienceAlphaInput");
+var createAudienceAlphaOutput_1 = require("./createAudienceAlphaOutput");
 var createCloudSourceRegulation200Response_1 = require("./createCloudSourceRegulation200Response");
 var createCloudSourceRegulationV1Input_1 = require("./createCloudSourceRegulationV1Input");
 var createCloudSourceRegulationV1Output_1 = require("./createCloudSourceRegulationV1Output");
+var createComputedTrait200Response_1 = require("./createComputedTrait200Response");
+var createComputedTraitAlphaInput_1 = require("./createComputedTraitAlphaInput");
+var createComputedTraitAlphaOutput_1 = require("./createComputedTraitAlphaOutput");
 var createDestination200Response_1 = require("./createDestination200Response");
 var createDestinationSubscription200Response_1 = require("./createDestinationSubscription200Response");
 var createDestinationSubscriptionAlphaInput_1 = require("./createDestinationSubscriptionAlphaInput");
@@ -986,6 +1004,8 @@ var syncNoticeV1_1 = require("./syncNoticeV1");
 var syncV1_1 = require("./syncV1");
 var trackSourceSettingsV1_1 = require("./trackSourceSettingsV1");
 var trackingPlanV1_1 = require("./trackingPlanV1");
+var traitDefinition_1 = require("./traitDefinition");
+var traitOptions_1 = require("./traitOptions");
 var transformationBeta_1 = require("./transformationBeta");
 var transformationV1_1 = require("./transformationV1");
 var updateAudienceForSpace200Response_1 = require("./updateAudienceForSpace200Response");
@@ -1183,7 +1203,9 @@ var typeMap = {
     AdvancedWarehouseSyncScheduleV1Input: advancedWarehouseSyncScheduleV1Input_1.AdvancedWarehouseSyncScheduleV1Input,
     AdvancedWarehouseSyncScheduleV1Output: advancedWarehouseSyncScheduleV1Output_1.AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: allowedLabelBeta_1.AllowedLabelBeta,
+    AudienceComputationDefinition: audienceComputationDefinition_1.AudienceComputationDefinition,
     AudienceDefinition: audienceDefinition_1.AudienceDefinition,
+    AudienceOptions: audienceOptions_1.AudienceOptions,
     AudienceSummary: audienceSummary_1.AudienceSummary,
     AuditEventV1: auditEventV1_1.AuditEventV1,
     BatchQueryMessagingSubscriptionsForSpace200Response: batchQueryMessagingSubscriptionsForSpace200Response_1.BatchQueryMessagingSubscriptionsForSpace200Response,
@@ -1194,9 +1216,15 @@ var typeMap = {
     ComputedTraitSummary: computedTraitSummary_1.ComputedTraitSummary,
     ComputedTraitsDefinition: computedTraitsDefinition_1.ComputedTraitsDefinition,
     Contact: contact_1.Contact,
+    CreateAudience200Response: createAudience200Response_1.CreateAudience200Response,
+    CreateAudienceAlphaInput: createAudienceAlphaInput_1.CreateAudienceAlphaInput,
+    CreateAudienceAlphaOutput: createAudienceAlphaOutput_1.CreateAudienceAlphaOutput,
     CreateCloudSourceRegulation200Response: createCloudSourceRegulation200Response_1.CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input,
     CreateCloudSourceRegulationV1Output: createCloudSourceRegulationV1Output_1.CreateCloudSourceRegulationV1Output,
+    CreateComputedTrait200Response: createComputedTrait200Response_1.CreateComputedTrait200Response,
+    CreateComputedTraitAlphaInput: createComputedTraitAlphaInput_1.CreateComputedTraitAlphaInput,
+    CreateComputedTraitAlphaOutput: createComputedTraitAlphaOutput_1.CreateComputedTraitAlphaOutput,
     CreateDestination200Response: createDestination200Response_1.CreateDestination200Response,
     CreateDestinationSubscription200Response: createDestinationSubscription200Response_1.CreateDestinationSubscription200Response,
     CreateDestinationSubscriptionAlphaInput: createDestinationSubscriptionAlphaInput_1.CreateDestinationSubscriptionAlphaInput,
@@ -1607,6 +1635,8 @@ var typeMap = {
     SyncV1: syncV1_1.SyncV1,
     TrackSourceSettingsV1: trackSourceSettingsV1_1.TrackSourceSettingsV1,
     TrackingPlanV1: trackingPlanV1_1.TrackingPlanV1,
+    TraitDefinition: traitDefinition_1.TraitDefinition,
+    TraitOptions: traitOptions_1.TraitOptions,
     TransformationBeta: transformationBeta_1.TransformationBeta,
     TransformationV1: transformationV1_1.TransformationV1,
     UpdateAudienceForSpace200Response: updateAudienceForSpace200Response_1.UpdateAudienceForSpace200Response,
