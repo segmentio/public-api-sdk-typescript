@@ -29,7 +29,7 @@ export class CreateComputedTraitAlphaInput {
     /**
      * The description of the computation.
      */
-    'description': string;
+    'description'?: string;
     'definition': TraitDefinition;
     'options'?: TraitOptions;
 
