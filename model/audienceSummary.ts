@@ -12,7 +12,7 @@
 
 import { RequestFile } from './models';
 import { AudienceOptions } from './audienceOptions';
-import { Definition1 } from './definition1';
+import { Definition } from './definition';
 
 /**
  * Defines an Audience.
@@ -33,7 +33,7 @@ export class AudienceSummary {
     /**
      * Description of the audience.
      */
-    'description': string;
+    'description'?: string;
     /**
      * Key for the audience.
      */
@@ -42,7 +42,7 @@ export class AudienceSummary {
      * Enabled/disabled status for the audience.
      */
     'enabled': boolean;
-    'definition': Definition1 | null;
+    'definition': Definition | null;
     /**
      * Status for the audience.  Possible values: Backfilling, Computing, Failed, Live, Awaiting Destinations, Disabled.
      */
@@ -105,7 +105,7 @@ export class AudienceSummary {
         {
             name: 'definition',
             baseName: 'definition',
-            type: 'Definition1',
+            type: 'Definition',
         },
         {
             name: 'status',

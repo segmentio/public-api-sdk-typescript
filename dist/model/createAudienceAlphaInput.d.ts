@@ -3,7 +3,7 @@ import { AudienceOptions } from './audienceOptions';
 export declare class CreateAudienceAlphaInput {
     'name': string;
     'enabled'?: boolean;
-    'description': string;
+    'description'?: string;
     'definition': AudienceComputationDefinition;
     'options'?: AudienceOptions;
     static discriminator: string | undefined;

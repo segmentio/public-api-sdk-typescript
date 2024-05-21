@@ -29,7 +29,7 @@ export class CreateAudienceAlphaInput {
     /**
      * Description of the audience.
      */
-    'description': string;
+    'description'?: string;
     'definition': AudienceComputationDefinition;
     'options'?: AudienceOptions;
 

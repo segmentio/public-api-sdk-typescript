@@ -1,13 +1,13 @@
 import { AudienceOptions } from './audienceOptions';
-import { Definition1 } from './definition1';
+import { Definition } from './definition';
 export declare class AudienceSummary {
     'id': string;
     'spaceId': string;
     'name': string;
-    'description': string;
+    'description'?: string;
     'key': string;
     'enabled': boolean;
-    'definition': Definition1 | null;
+    'definition': Definition | null;
     'status'?: string;
     'createdBy': string;
     'updatedBy': string;

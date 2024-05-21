@@ -3,7 +3,7 @@ import { TraitOptions } from './traitOptions';
 export declare class CreateComputedTraitAlphaInput {
     'name': string;
     'enabled'?: boolean;
-    'description': string;
+    'description'?: string;
     'definition': TraitDefinition;
     'options'?: TraitOptions;
     static discriminator: string | undefined;
