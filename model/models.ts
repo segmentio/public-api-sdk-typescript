@@ -1095,8 +1095,6 @@ let enumsMap: { [index: string]: any } = {
         AddConnectionFromSourceToWarehouseV1Output.StatusEnum,
     'AddSourceToTrackingPlanV1Output.StatusEnum':
         AddSourceToTrackingPlanV1Output.StatusEnum,
-    'AudienceComputationDefinition.TypeEnum':
-        AudienceComputationDefinition.TypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum':
         CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum':
@@ -1220,7 +1218,6 @@ let enumsMap: { [index: string]: any } = {
     'TrackSourceSettingsV1.CommonEventOnViolationsEnum':
         TrackSourceSettingsV1.CommonEventOnViolationsEnum,
     'TrackingPlanV1.TypeEnum': TrackingPlanV1.TypeEnum,
-    'TraitDefinition.TypeEnum': TraitDefinition.TypeEnum,
     'UpdateGroupSubscriptionStatusResponse.StatusEnum':
         UpdateGroupSubscriptionStatusResponse.StatusEnum,
     'UpdateReverseEtlModelInput.ScheduleStrategyEnum':

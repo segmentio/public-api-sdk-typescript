@@ -16,7 +16,7 @@ export class TraitDefinition {
     /**
      * The underlying data type being aggregated for this computed trait.  Possible values: users, accounts.
      */
-    'type': TraitDefinition.TypeEnum;
+    'type': string;
     /**
      * The query language string defining the computed trait aggregation criteria. For guidance on using the query language, see the [Segment documentation site](https://segment.com/docs/api/public-api/query-language).
      */
@@ -32,7 +32,7 @@ export class TraitDefinition {
         {
             name: 'type',
             baseName: 'type',
-            type: 'TraitDefinition.TypeEnum',
+            type: 'string',
         },
         {
             name: 'query',
@@ -43,12 +43,5 @@ export class TraitDefinition {
 
     static getAttributeTypeMap() {
         return TraitDefinition.attributeTypeMap;
-    }
-}
-
-export namespace TraitDefinition {
-    export enum TypeEnum {
-        accounts = <any>'accounts',
-        users = <any>'users',
     }
 }
