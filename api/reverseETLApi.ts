@@ -116,7 +116,7 @@ export class ReverseETLApi {
     }
 
     /**
-     * Triggers a manual sync for a Reverse ETL Connection.  The `subscriptionId` is the id that follows after /mappings/ in the URL of the mapping page.  For example, the `subscriptionId` would be \'2\' for this sync: https://app.segment.com/example-workspace/reverse-etl/destinations/example-destination/sources/example-source/instances/1/mappings/2/source-id/3/model-id/4/sync-details   The rate limit for this endpoint is 20 requests per minute, which is lower than the default due to access pattern restrictions. Once reached, this endpoint will respond with the 429 HTTP status code with headers indicating the limit parameters. See [Rate Limiting](/#tag/Rate-Limits) for more information.
+     * Triggers a manual sync for a Reverse ETL Connection.  The `subscriptionId` is the id that follows after /mappings/ in the URL of the mapping page.  For example, the `subscriptionId` would be \'2\' for this sync: https://.../example-workspace/reverse-etl/destinations/example-destination/sources/example-source/instances/1/mappings/2/source-id/3/model-id/4/sync-details   The rate limit for this endpoint is 20 requests per minute, which is lower than the default due to access pattern restrictions. Once reached, this endpoint will respond with the 429 HTTP status code with headers indicating the limit parameters. See [Rate Limiting](/#tag/Rate-Limits) for more information.
      * @summary Create Reverse ETL Manual Sync
      * @param CreateReverseETLManualSyncInput
      */
