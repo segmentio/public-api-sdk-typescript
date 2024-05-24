@@ -16,7 +16,7 @@ export class AudienceComputationDefinition {
     /**
      * The underlying data type being segmented for this audience.  Possible values: users, accounts.
      */
-    'type': string;
+    'type': AudienceComputationDefinition.TypeEnum;
     /**
      * The query language string defining the audience segmentation criteria.  For guidance on using the query language, see the [Segment documentation site](https://segment.com/docs/api/public-api/query-language).
      */
@@ -32,7 +32,7 @@ export class AudienceComputationDefinition {
         {
             name: 'type',
             baseName: 'type',
-            type: 'string',
+            type: 'AudienceComputationDefinition.TypeEnum',
         },
         {
             name: 'query',
@@ -43,5 +43,12 @@ export class AudienceComputationDefinition {
 
     static getAttributeTypeMap() {
         return AudienceComputationDefinition.attributeTypeMap;
+    }
+}
+
+export namespace AudienceComputationDefinition {
+    export enum TypeEnum {
+        ACCOUNTS = <any>'ACCOUNTS',
+        USERS = <any>'USERS',
     }
 }
