@@ -12,7 +12,7 @@ var TraitDefinition = (function () {
         {
             name: 'type',
             baseName: 'type',
-            type: 'string',
+            type: 'TraitDefinition.TypeEnum',
         },
         {
             name: 'query',
@@ -22,5 +22,13 @@ var TraitDefinition = (function () {
     ];
     return TraitDefinition;
 }());
+exports.TraitDefinition = TraitDefinition;
+(function (TraitDefinition) {
+    var TypeEnum;
+    (function (TypeEnum) {
+        TypeEnum[TypeEnum["ACCOUNTS"] = 'ACCOUNTS'] = "ACCOUNTS";
+        TypeEnum[TypeEnum["USERS"] = 'USERS'] = "USERS";
+    })(TypeEnum = TraitDefinition.TypeEnum || (TraitDefinition.TypeEnum = {}));
+})(TraitDefinition = exports.TraitDefinition || (exports.TraitDefinition = {}));
 exports.TraitDefinition = TraitDefinition;
 //# sourceMappingURL=traitDefinition.js.map

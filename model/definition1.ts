@@ -17,13 +17,13 @@ import { RequestFile } from './models';
  */
 export class Definition1 {
     /**
-     * The query language string defining the computed trait aggregation criteria. For guidance on using the query language, see the [Segment documentation site](https://segment.com/docs/api/public-api/query-language).
+     * The query language string defining the audience segmentation criteria.
      */
     'query': string;
     /**
-     * The underlying data type being aggregated for this computed trait.  Possible values: users, accounts.
+     * The underlying data type being segmented for this audience.  Possible values: users, accounts.
      */
-    'type': string;
+    'type': Definition1.TypeEnum;
 
     static discriminator: string | undefined = undefined;
 
@@ -40,11 +40,18 @@ export class Definition1 {
         {
             name: 'type',
             baseName: 'type',
-            type: 'string',
+            type: 'Definition1.TypeEnum',
         },
     ];
 
     static getAttributeTypeMap() {
         return Definition1.attributeTypeMap;
+    }
+}
+
+export namespace Definition1 {
+    export enum TypeEnum {
+        ACCOUNTS = <any>'ACCOUNTS',
+        USERS = <any>'USERS',
     }
 }

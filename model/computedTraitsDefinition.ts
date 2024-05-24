@@ -23,7 +23,7 @@ export class ComputedTraitsDefinition {
     /**
      * The underlying data type being aggregated for this computed trait.  Possible values: users, accounts.
      */
-    'type': string;
+    'type': ComputedTraitsDefinition.TypeEnum;
 
     static discriminator: string | undefined = undefined;
 
@@ -40,11 +40,18 @@ export class ComputedTraitsDefinition {
         {
             name: 'type',
             baseName: 'type',
-            type: 'string',
+            type: 'ComputedTraitsDefinition.TypeEnum',
         },
     ];
 
     static getAttributeTypeMap() {
         return ComputedTraitsDefinition.attributeTypeMap;
+    }
+}
+
+export namespace ComputedTraitsDefinition {
+    export enum TypeEnum {
+        ACCOUNTS = <any>'ACCOUNTS',
+        USERS = <any>'USERS',
     }
 }

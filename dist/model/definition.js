@@ -17,10 +17,18 @@ var Definition = (function () {
         {
             name: 'type',
             baseName: 'type',
-            type: 'string',
+            type: 'Definition.TypeEnum',
         },
     ];
     return Definition;
 }());
+exports.Definition = Definition;
+(function (Definition) {
+    var TypeEnum;
+    (function (TypeEnum) {
+        TypeEnum[TypeEnum["ACCOUNTS"] = 'ACCOUNTS'] = "ACCOUNTS";
+        TypeEnum[TypeEnum["USERS"] = 'USERS'] = "USERS";
+    })(TypeEnum = Definition.TypeEnum || (Definition.TypeEnum = {}));
+})(Definition = exports.Definition || (exports.Definition = {}));
 exports.Definition = Definition;
 //# sourceMappingURL=definition.js.map
