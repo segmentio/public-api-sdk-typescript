@@ -17,10 +17,18 @@ var ComputedTraitsDefinition = (function () {
         {
             name: 'type',
             baseName: 'type',
-            type: 'string',
+            type: 'ComputedTraitsDefinition.TypeEnum',
         },
     ];
     return ComputedTraitsDefinition;
 }());
+exports.ComputedTraitsDefinition = ComputedTraitsDefinition;
+(function (ComputedTraitsDefinition) {
+    var TypeEnum;
+    (function (TypeEnum) {
+        TypeEnum[TypeEnum["ACCOUNTS"] = 'ACCOUNTS'] = "ACCOUNTS";
+        TypeEnum[TypeEnum["USERS"] = 'USERS'] = "USERS";
+    })(TypeEnum = ComputedTraitsDefinition.TypeEnum || (ComputedTraitsDefinition.TypeEnum = {}));
+})(ComputedTraitsDefinition = exports.ComputedTraitsDefinition || (exports.ComputedTraitsDefinition = {}));
 exports.ComputedTraitsDefinition = ComputedTraitsDefinition;
 //# sourceMappingURL=computedTraitsDefinition.js.map

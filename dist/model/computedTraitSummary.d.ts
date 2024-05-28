@@ -1,9 +1,10 @@
 import { Definition } from './definition';
+import { TraitOptions } from './traitOptions';
 export declare class ComputedTraitSummary {
     'id': string;
     'spaceId': string;
     'name': string;
-    'description': string;
+    'description'?: string;
     'key': string;
     'enabled': boolean;
     'definition': Definition | null;
@@ -12,6 +13,7 @@ export declare class ComputedTraitSummary {
     'updatedBy': string;
     'createdAt': string;
     'updatedAt': string;
+    'options'?: TraitOptions;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
