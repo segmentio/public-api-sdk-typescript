@@ -47,7 +47,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: GetAudience200Response;
     }>;
-    listAudiences(spaceId: string, pagination: PaginationInput, options?: {
+    listAudiences(spaceId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
