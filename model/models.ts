@@ -148,6 +148,7 @@ export * from './deleteUsersV1Output';
 export * from './deleteWarehouse200Response';
 export * from './deleteWarehouseV1Output';
 export * from './deliveryMetricsSummaryBeta';
+export * from './deliveryOverviewAudienceFilterBy';
 export * from './deliveryOverviewDestinationFilterBy';
 export * from './deliveryOverviewMetricsDatapoint';
 export * from './deliveryOverviewMetricsDataset';
@@ -198,6 +199,7 @@ export * from './getDailyWorkspaceAPICallsUsage200Response';
 export * from './getDailyWorkspaceAPICallsUsageV1Output';
 export * from './getDailyWorkspaceMTUUsage200Response';
 export * from './getDailyWorkspaceMTUUsageV1Output';
+export * from './getDeliveryOverviewLinkedAudienceSuccessBetaInput';
 export * from './getDeliveryOverviewMetricsBetaOutput';
 export * from './getDestination200Response';
 export * from './getDestinationMetadata200Response';
@@ -693,6 +695,7 @@ import { DeleteUsersV1Output } from './deleteUsersV1Output';
 import { DeleteWarehouse200Response } from './deleteWarehouse200Response';
 import { DeleteWarehouseV1Output } from './deleteWarehouseV1Output';
 import { DeliveryMetricsSummaryBeta } from './deliveryMetricsSummaryBeta';
+import { DeliveryOverviewAudienceFilterBy } from './deliveryOverviewAudienceFilterBy';
 import { DeliveryOverviewDestinationFilterBy } from './deliveryOverviewDestinationFilterBy';
 import { DeliveryOverviewMetricsDatapoint } from './deliveryOverviewMetricsDatapoint';
 import { DeliveryOverviewMetricsDataset } from './deliveryOverviewMetricsDataset';
@@ -743,6 +746,7 @@ import { GetDailyWorkspaceAPICallsUsage200Response } from './getDailyWorkspaceAP
 import { GetDailyWorkspaceAPICallsUsageV1Output } from './getDailyWorkspaceAPICallsUsageV1Output';
 import { GetDailyWorkspaceMTUUsage200Response } from './getDailyWorkspaceMTUUsage200Response';
 import { GetDailyWorkspaceMTUUsageV1Output } from './getDailyWorkspaceMTUUsageV1Output';
+import { GetDeliveryOverviewLinkedAudienceSuccessBetaInput } from './getDeliveryOverviewLinkedAudienceSuccessBetaInput';
 import { GetDeliveryOverviewMetricsBetaOutput } from './getDeliveryOverviewMetricsBetaOutput';
 import { GetDestination200Response } from './getDestination200Response';
 import { GetDestinationMetadata200Response } from './getDestinationMetadata200Response';
@@ -1165,6 +1169,8 @@ let enumsMap: { [index: string]: any } = {
     'FunctionV1.ResourceTypeEnum': FunctionV1.ResourceTypeEnum,
     'GetConnectionStateFromWarehouseV1Output.ConnectionStateEnum':
         GetConnectionStateFromWarehouseV1Output.ConnectionStateEnum,
+    'GetDeliveryOverviewLinkedAudienceSuccessBetaInput.GranularityEnum':
+        GetDeliveryOverviewLinkedAudienceSuccessBetaInput.GranularityEnum,
     'GetEventsVolumeFromWorkspaceV1Query.GranularityEnum':
         GetEventsVolumeFromWorkspaceV1Query.GranularityEnum,
     'GetMessagingSubscriptionSuccessResponse.TypeEnum':
@@ -1407,6 +1413,7 @@ let typeMap: { [index: string]: any } = {
     DeleteWarehouse200Response: DeleteWarehouse200Response,
     DeleteWarehouseV1Output: DeleteWarehouseV1Output,
     DeliveryMetricsSummaryBeta: DeliveryMetricsSummaryBeta,
+    DeliveryOverviewAudienceFilterBy: DeliveryOverviewAudienceFilterBy,
     DeliveryOverviewDestinationFilterBy: DeliveryOverviewDestinationFilterBy,
     DeliveryOverviewMetricsDatapoint: DeliveryOverviewMetricsDatapoint,
     DeliveryOverviewMetricsDataset: DeliveryOverviewMetricsDataset,
@@ -1469,6 +1476,8 @@ let typeMap: { [index: string]: any } = {
         GetDailyWorkspaceAPICallsUsageV1Output,
     GetDailyWorkspaceMTUUsage200Response: GetDailyWorkspaceMTUUsage200Response,
     GetDailyWorkspaceMTUUsageV1Output: GetDailyWorkspaceMTUUsageV1Output,
+    GetDeliveryOverviewLinkedAudienceSuccessBetaInput:
+        GetDeliveryOverviewLinkedAudienceSuccessBetaInput,
     GetDeliveryOverviewMetricsBetaOutput: GetDeliveryOverviewMetricsBetaOutput,
     GetDestination200Response: GetDestination200Response,
     GetDestinationMetadata200Response: GetDestinationMetadata200Response,
