@@ -33,7 +33,7 @@ export class CreateProfilesWarehouseAlphaInput {
      */
     'settings': { [key: string]: any };
     /**
-     * The custom schema name that Segment uses on the Warehouse side. The space slug value is default otherwise.
+     * The custom schema name that Segment uses on the Warehouse side. The space slug value is default otherwise. The schema name cannot be an existing schema name in the Warehouse. To use an existing schema name, please create a profiles Warehouse through the Segment app UI.
      */
     'schemaName'?: string;
 
