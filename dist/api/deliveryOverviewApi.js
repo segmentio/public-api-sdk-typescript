@@ -353,7 +353,7 @@ var DeliveryOverviewApi = (function () {
             });
         });
     };
-    DeliveryOverviewApi.prototype.getFilteredAtDestinationMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, groupBy, filter, pagination, subscriptionId, options) {
+    DeliveryOverviewApi.prototype.getFilteredAtDestinationMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, groupBy, filter, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
@@ -412,10 +412,6 @@ var DeliveryOverviewApi = (function () {
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                if (subscriptionId !== undefined) {
-                    localVarQueryParameters['subscriptionId'] =
-                        models_1.ObjectSerializer.serialize(subscriptionId, 'string');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -784,6 +780,86 @@ var DeliveryOverviewApi = (function () {
                 for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
                     interceptor = _a[_i];
                     _loop_6(interceptor);
+                }
+                return [2, interceptorPromise.then(function () {
+                        if (Object.keys(localVarFormParams).length) {
+                            if (localVarUseFormData) {
+                                localVarRequestOptions.formData = localVarFormParams;
+                            }
+                            else {
+                                localVarRequestOptions.form = localVarFormParams;
+                            }
+                        }
+                        return new Promise(function (resolve, reject) {
+                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
+                                if (error) {
+                                    reject(error);
+                                }
+                                else {
+                                    if (response.statusCode &&
+                                        response.statusCode >= 200 &&
+                                        response.statusCode <= 299) {
+                                        body = models_1.ObjectSerializer.deserialize(body, 'GetEgressFailedMetricsFromDeliveryOverview200Response');
+                                        resolve({ response: response, body: body });
+                                    }
+                                    else {
+                                        reject(new apis_1.HttpError(response, body, response.statusCode));
+                                    }
+                                }
+                            });
+                        });
+                    })];
+            });
+        });
+    };
+    DeliveryOverviewApi.prototype.getLinkedAudienceSuccessMetricsFromDeliveryOverview = function (options) {
+        if (options === void 0) { options = { headers: {} }; }
+        return __awaiter(this, void 0, void 0, function () {
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_7, _i, _a, interceptor;
+            var _this = this;
+            return __generator(this, function (_b) {
+                localVarPath = this.basePath + '/delivery-overview/audience/success';
+                localVarQueryParameters = {};
+                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
+                produces = [
+                    'application/vnd.segment.v1beta+json',
+                    'application/json',
+                ];
+                if (produces.indexOf('application/json') >= 0) {
+                    localVarHeaderParams.Accept = 'application/json';
+                }
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
+                }
+                localVarFormParams = {};
+                Object.assign(localVarHeaderParams, options.headers);
+                localVarUseFormData = false;
+                localVarRequestOptions = {
+                    method: 'GET',
+                    qs: localVarQueryParameters,
+                    headers: localVarHeaderParams,
+                    uri: localVarPath,
+                    useQuerystring: this._useQuerystring,
+                    json: true,
+                };
+                authenticationPromise = Promise.resolve();
+                if (this.authentications.token.accessToken) {
+                    authenticationPromise = authenticationPromise.then(function () {
+                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
+                    });
+                }
+                authenticationPromise = authenticationPromise.then(function () {
+                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
+                });
+                interceptorPromise = authenticationPromise;
+                _loop_7 = function (interceptor) {
+                    interceptorPromise = interceptorPromise.then(function () {
+                        return interceptor(localVarRequestOptions);
+                    });
+                };
+                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
+                    interceptor = _a[_i];
+                    _loop_7(interceptor);
                 }
                 return [2, interceptorPromise.then(function () {
                         if (Object.keys(localVarFormParams).length) {
