@@ -214,7 +214,6 @@ __exportStar(require("./getDailyWorkspaceAPICallsUsage200Response"), exports);
 __exportStar(require("./getDailyWorkspaceAPICallsUsageV1Output"), exports);
 __exportStar(require("./getDailyWorkspaceMTUUsage200Response"), exports);
 __exportStar(require("./getDailyWorkspaceMTUUsageV1Output"), exports);
-__exportStar(require("./getDeliveryOverviewLinkedAudienceSuccessBetaInput"), exports);
 __exportStar(require("./getDeliveryOverviewMetricsBetaOutput"), exports);
 __exportStar(require("./getDestination200Response"), exports);
 __exportStar(require("./getDestinationMetadata200Response"), exports);
@@ -748,7 +747,6 @@ var getDailyWorkspaceAPICallsUsage200Response_1 = require("./getDailyWorkspaceAP
 var getDailyWorkspaceAPICallsUsageV1Output_1 = require("./getDailyWorkspaceAPICallsUsageV1Output");
 var getDailyWorkspaceMTUUsage200Response_1 = require("./getDailyWorkspaceMTUUsage200Response");
 var getDailyWorkspaceMTUUsageV1Output_1 = require("./getDailyWorkspaceMTUUsageV1Output");
-var getDeliveryOverviewLinkedAudienceSuccessBetaInput_1 = require("./getDeliveryOverviewLinkedAudienceSuccessBetaInput");
 var getDeliveryOverviewMetricsBetaOutput_1 = require("./getDeliveryOverviewMetricsBetaOutput");
 var getDestination200Response_1 = require("./getDestination200Response");
 var getDestinationMetadata200Response_1 = require("./getDestinationMetadata200Response");
@@ -1143,7 +1141,6 @@ var enumsMap = {
     'FunctionSettingV1.TypeEnum': functionSettingV1_1.FunctionSettingV1.TypeEnum,
     'FunctionV1.ResourceTypeEnum': functionV1_1.FunctionV1.ResourceTypeEnum,
     'GetConnectionStateFromWarehouseV1Output.ConnectionStateEnum': getConnectionStateFromWarehouseV1Output_1.GetConnectionStateFromWarehouseV1Output.ConnectionStateEnum,
-    'GetDeliveryOverviewLinkedAudienceSuccessBetaInput.GranularityEnum': getDeliveryOverviewLinkedAudienceSuccessBetaInput_1.GetDeliveryOverviewLinkedAudienceSuccessBetaInput.GranularityEnum,
     'GetEventsVolumeFromWorkspaceV1Query.GranularityEnum': getEventsVolumeFromWorkspaceV1Query_1.GetEventsVolumeFromWorkspaceV1Query.GranularityEnum,
     'GetMessagingSubscriptionSuccessResponse.TypeEnum': getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse.TypeEnum,
     'GetMessagingSubscriptionSuccessResponse.StatusEnum': getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse.StatusEnum,
@@ -1388,7 +1385,6 @@ var typeMap = {
     GetDailyWorkspaceAPICallsUsageV1Output: getDailyWorkspaceAPICallsUsageV1Output_1.GetDailyWorkspaceAPICallsUsageV1Output,
     GetDailyWorkspaceMTUUsage200Response: getDailyWorkspaceMTUUsage200Response_1.GetDailyWorkspaceMTUUsage200Response,
     GetDailyWorkspaceMTUUsageV1Output: getDailyWorkspaceMTUUsageV1Output_1.GetDailyWorkspaceMTUUsageV1Output,
-    GetDeliveryOverviewLinkedAudienceSuccessBetaInput: getDeliveryOverviewLinkedAudienceSuccessBetaInput_1.GetDeliveryOverviewLinkedAudienceSuccessBetaInput,
     GetDeliveryOverviewMetricsBetaOutput: getDeliveryOverviewMetricsBetaOutput_1.GetDeliveryOverviewMetricsBetaOutput,
     GetDestination200Response: getDestination200Response_1.GetDestination200Response,
     GetDestinationMetadata200Response: getDestinationMetadata200Response_1.GetDestinationMetadata200Response,

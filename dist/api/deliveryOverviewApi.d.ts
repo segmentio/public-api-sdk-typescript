@@ -1,5 +1,6 @@
 /// <reference types="node" />
 import http from 'http';
+import { DeliveryOverviewAudienceFilterBy } from '../model/deliveryOverviewAudienceFilterBy';
 import { DeliveryOverviewDestinationFilterBy } from '../model/deliveryOverviewDestinationFilterBy';
 import { DeliveryOverviewSourceFilterBy } from '../model/deliveryOverviewSourceFilterBy';
 import { DeliveryOverviewSuccessfullyReceivedFilterBy } from '../model/deliveryOverviewSuccessfullyReceivedFilterBy';
@@ -76,7 +77,7 @@ export declare class DeliveryOverviewApi {
         response: http.IncomingMessage;
         body: GetEgressFailedMetricsFromDeliveryOverview200Response;
     }>;
-    getLinkedAudienceSuccessMetricsFromDeliveryOverview(options?: {
+    getLinkedAudienceSuccessMetricsFromDeliveryOverview(sourceId: string, destinationConfigId: string, startTime: string, endTime: string, granularity: 'DAY' | 'HOUR' | 'MINUTE', groupBy?: Array<string>, filter?: DeliveryOverviewAudienceFilterBy, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
