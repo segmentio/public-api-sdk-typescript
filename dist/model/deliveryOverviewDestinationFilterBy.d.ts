@@ -4,9 +4,6 @@ export declare class DeliveryOverviewDestinationFilterBy {
     'eventType'?: Array<string>;
     'appVersion'?: Array<string>;
     'subscriptionId'?: Array<string>;
-    'activationId'?: Array<string>;
-    'audienceId'?: Array<string>;
-    'spaceId'?: Array<string>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

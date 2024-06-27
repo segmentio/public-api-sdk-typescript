@@ -1,6 +1,5 @@
 /// <reference types="node" />
 import http from 'http';
-import { DeliveryOverviewAudienceFilterBy } from '../model/deliveryOverviewAudienceFilterBy';
 import { DeliveryOverviewDestinationFilterBy } from '../model/deliveryOverviewDestinationFilterBy';
 import { DeliveryOverviewSourceFilterBy } from '../model/deliveryOverviewSourceFilterBy';
 import { DeliveryOverviewSuccessfullyReceivedFilterBy } from '../model/deliveryOverviewSuccessfullyReceivedFilterBy';
@@ -45,7 +44,7 @@ export declare class DeliveryOverviewApi {
         response: http.IncomingMessage;
         body: GetEgressFailedMetricsFromDeliveryOverview200Response;
     }>;
-    getFilteredAtDestinationMetricsFromDeliveryOverview(sourceId: string, destinationConfigId: string, startTime: string, endTime: string, granularity: 'DAY' | 'HOUR' | 'MINUTE', groupBy?: Array<string>, filter?: DeliveryOverviewDestinationFilterBy, pagination?: PaginationInput, options?: {
+    getFilteredAtDestinationMetricsFromDeliveryOverview(sourceId: string, destinationConfigId: string, startTime: string, endTime: string, granularity: 'DAY' | 'HOUR' | 'MINUTE', groupBy?: Array<string>, filter?: DeliveryOverviewDestinationFilterBy, pagination?: PaginationInput, subscriptionId?: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -70,14 +69,6 @@ export declare class DeliveryOverviewApi {
         body: GetEgressFailedMetricsFromDeliveryOverview200Response;
     }>;
     getIngressSuccessMetricsFromDeliveryOverview(sourceId: string, startTime: string, endTime: string, granularity: 'DAY' | 'HOUR' | 'MINUTE', groupBy?: Array<string>, filter?: DeliveryOverviewSuccessfullyReceivedFilterBy, pagination?: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetEgressFailedMetricsFromDeliveryOverview200Response;
-    }>;
-    getLinkedAudienceSuccessMetricsFromDeliveryOverview(sourceId: string, destinationConfigId: string, startTime: string, endTime: string, granularity: 'DAY' | 'HOUR' | 'MINUTE', groupBy?: Array<string>, filter?: DeliveryOverviewAudienceFilterBy, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

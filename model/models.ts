@@ -148,7 +148,6 @@ export * from './deleteUsersV1Output';
 export * from './deleteWarehouse200Response';
 export * from './deleteWarehouseV1Output';
 export * from './deliveryMetricsSummaryBeta';
-export * from './deliveryOverviewAudienceFilterBy';
 export * from './deliveryOverviewDestinationFilterBy';
 export * from './deliveryOverviewMetricsDatapoint';
 export * from './deliveryOverviewMetricsDataset';
@@ -694,7 +693,6 @@ import { DeleteUsersV1Output } from './deleteUsersV1Output';
 import { DeleteWarehouse200Response } from './deleteWarehouse200Response';
 import { DeleteWarehouseV1Output } from './deleteWarehouseV1Output';
 import { DeliveryMetricsSummaryBeta } from './deliveryMetricsSummaryBeta';
-import { DeliveryOverviewAudienceFilterBy } from './deliveryOverviewAudienceFilterBy';
 import { DeliveryOverviewDestinationFilterBy } from './deliveryOverviewDestinationFilterBy';
 import { DeliveryOverviewMetricsDatapoint } from './deliveryOverviewMetricsDatapoint';
 import { DeliveryOverviewMetricsDataset } from './deliveryOverviewMetricsDataset';
@@ -1409,7 +1407,6 @@ let typeMap: { [index: string]: any } = {
     DeleteWarehouse200Response: DeleteWarehouse200Response,
     DeleteWarehouseV1Output: DeleteWarehouseV1Output,
     DeliveryMetricsSummaryBeta: DeliveryMetricsSummaryBeta,
-    DeliveryOverviewAudienceFilterBy: DeliveryOverviewAudienceFilterBy,
     DeliveryOverviewDestinationFilterBy: DeliveryOverviewDestinationFilterBy,
     DeliveryOverviewMetricsDatapoint: DeliveryOverviewMetricsDatapoint,
     DeliveryOverviewMetricsDataset: DeliveryOverviewMetricsDataset,
