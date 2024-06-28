@@ -1219,7 +1219,11 @@ export class FunctionsApi {
      * @param pagination Pagination parameters.  This parameter exists in v1.
      */
     public async listFunctions(
-        resourceType: 'DESTINATION' | 'INSERT_DESTINATION' | 'SOURCE',
+        resourceType:
+            | 'DESTINATION'
+            | 'INSERT_DESTINATION'
+            | 'INSERT_SOURCE'
+            | 'SOURCE',
         pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
@@ -1264,7 +1268,7 @@ export class FunctionsApi {
             localVarQueryParameters['resourceType'] =
                 ObjectSerializer.serialize(
                     resourceType,
-                    "'DESTINATION' | 'INSERT_DESTINATION' | 'SOURCE'"
+                    "'DESTINATION' | 'INSERT_DESTINATION' | 'INSERT_SOURCE' | 'SOURCE'"
                 );
         }
 
