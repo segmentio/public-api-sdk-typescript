@@ -436,9 +436,14 @@ export * from './restoreFunctionVersionAlphaOutput';
 export * from './reverseETLManualSyncJobOutput';
 export * from './reverseETLSyncOutput';
 export * from './reverseEtlModel';
+export * from './reverseEtlPeriodicScheduleConfig';
+export * from './reverseEtlScheduleConfig';
+export * from './reverseEtlScheduleDefinition';
+export * from './reverseEtlSpecificTimeScheduleConfig';
 export * from './roleV1';
 export * from './ruleInputV1';
 export * from './ruleV1';
+export * from './scheduleConfig';
 export * from './sourceAPICallSnapshotV1';
 export * from './sourceAlpha';
 export * from './sourceEventVolumeDatapointV1';
@@ -981,9 +986,14 @@ import { RestoreFunctionVersionAlphaOutput } from './restoreFunctionVersionAlpha
 import { ReverseETLManualSyncJobOutput } from './reverseETLManualSyncJobOutput';
 import { ReverseETLSyncOutput } from './reverseETLSyncOutput';
 import { ReverseEtlModel } from './reverseEtlModel';
+import { ReverseEtlPeriodicScheduleConfig } from './reverseEtlPeriodicScheduleConfig';
+import { ReverseEtlScheduleConfig } from './reverseEtlScheduleConfig';
+import { ReverseEtlScheduleDefinition } from './reverseEtlScheduleDefinition';
+import { ReverseEtlSpecificTimeScheduleConfig } from './reverseEtlSpecificTimeScheduleConfig';
 import { RoleV1 } from './roleV1';
 import { RuleInputV1 } from './ruleInputV1';
 import { RuleV1 } from './ruleV1';
+import { ScheduleConfig } from './scheduleConfig';
 import { SourceAPICallSnapshotV1 } from './sourceAPICallSnapshotV1';
 import { SourceAlpha } from './sourceAlpha';
 import { SourceEventVolumeDatapointV1 } from './sourceEventVolumeDatapointV1';
@@ -1219,6 +1229,8 @@ let enumsMap: { [index: string]: any } = {
     'ReplaceRulesInTrackingPlanV1Output.StatusEnum':
         ReplaceRulesInTrackingPlanV1Output.StatusEnum,
     'ResourceV1.TypeEnum': ResourceV1.TypeEnum,
+    'ReverseEtlScheduleDefinition.StrategyEnum':
+        ReverseEtlScheduleDefinition.StrategyEnum,
     'RuleInputV1.TypeEnum': RuleInputV1.TypeEnum,
     'RuleV1.TypeEnum': RuleV1.TypeEnum,
     'TrackSourceSettingsV1.CommonEventOnViolationsEnum':
@@ -1763,9 +1775,14 @@ let typeMap: { [index: string]: any } = {
     ReverseETLManualSyncJobOutput: ReverseETLManualSyncJobOutput,
     ReverseETLSyncOutput: ReverseETLSyncOutput,
     ReverseEtlModel: ReverseEtlModel,
+    ReverseEtlPeriodicScheduleConfig: ReverseEtlPeriodicScheduleConfig,
+    ReverseEtlScheduleConfig: ReverseEtlScheduleConfig,
+    ReverseEtlScheduleDefinition: ReverseEtlScheduleDefinition,
+    ReverseEtlSpecificTimeScheduleConfig: ReverseEtlSpecificTimeScheduleConfig,
     RoleV1: RoleV1,
     RuleInputV1: RuleInputV1,
     RuleV1: RuleV1,
+    ScheduleConfig: ScheduleConfig,
     SourceAPICallSnapshotV1: SourceAPICallSnapshotV1,
     SourceAlpha: SourceAlpha,
     SourceEventVolumeDatapointV1: SourceEventVolumeDatapointV1,

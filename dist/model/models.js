@@ -451,9 +451,14 @@ __exportStar(require("./restoreFunctionVersionAlphaOutput"), exports);
 __exportStar(require("./reverseETLManualSyncJobOutput"), exports);
 __exportStar(require("./reverseETLSyncOutput"), exports);
 __exportStar(require("./reverseEtlModel"), exports);
+__exportStar(require("./reverseEtlPeriodicScheduleConfig"), exports);
+__exportStar(require("./reverseEtlScheduleConfig"), exports);
+__exportStar(require("./reverseEtlScheduleDefinition"), exports);
+__exportStar(require("./reverseEtlSpecificTimeScheduleConfig"), exports);
 __exportStar(require("./roleV1"), exports);
 __exportStar(require("./ruleInputV1"), exports);
 __exportStar(require("./ruleV1"), exports);
+__exportStar(require("./scheduleConfig"), exports);
 __exportStar(require("./sourceAPICallSnapshotV1"), exports);
 __exportStar(require("./sourceAlpha"), exports);
 __exportStar(require("./sourceEventVolumeDatapointV1"), exports);
@@ -983,9 +988,14 @@ var restoreFunctionVersionAlphaOutput_1 = require("./restoreFunctionVersionAlpha
 var reverseETLManualSyncJobOutput_1 = require("./reverseETLManualSyncJobOutput");
 var reverseETLSyncOutput_1 = require("./reverseETLSyncOutput");
 var reverseEtlModel_1 = require("./reverseEtlModel");
+var reverseEtlPeriodicScheduleConfig_1 = require("./reverseEtlPeriodicScheduleConfig");
+var reverseEtlScheduleConfig_1 = require("./reverseEtlScheduleConfig");
+var reverseEtlScheduleDefinition_1 = require("./reverseEtlScheduleDefinition");
+var reverseEtlSpecificTimeScheduleConfig_1 = require("./reverseEtlSpecificTimeScheduleConfig");
 var roleV1_1 = require("./roleV1");
 var ruleInputV1_1 = require("./ruleInputV1");
 var ruleV1_1 = require("./ruleV1");
+var scheduleConfig_1 = require("./scheduleConfig");
 var sourceAPICallSnapshotV1_1 = require("./sourceAPICallSnapshotV1");
 var sourceAlpha_1 = require("./sourceAlpha");
 var sourceEventVolumeDatapointV1_1 = require("./sourceEventVolumeDatapointV1");
@@ -1170,6 +1180,7 @@ var enumsMap = {
     'RemoveWriteKeyFromSourceAlphaOutput.StatusEnum': removeWriteKeyFromSourceAlphaOutput_1.RemoveWriteKeyFromSourceAlphaOutput.StatusEnum,
     'ReplaceRulesInTrackingPlanV1Output.StatusEnum': replaceRulesInTrackingPlanV1Output_1.ReplaceRulesInTrackingPlanV1Output.StatusEnum,
     'ResourceV1.TypeEnum': resourceV1_1.ResourceV1.TypeEnum,
+    'ReverseEtlScheduleDefinition.StrategyEnum': reverseEtlScheduleDefinition_1.ReverseEtlScheduleDefinition.StrategyEnum,
     'RuleInputV1.TypeEnum': ruleInputV1_1.RuleInputV1.TypeEnum,
     'RuleV1.TypeEnum': ruleV1_1.RuleV1.TypeEnum,
     'TrackSourceSettingsV1.CommonEventOnViolationsEnum': trackSourceSettingsV1_1.TrackSourceSettingsV1.CommonEventOnViolationsEnum,
@@ -1620,9 +1631,14 @@ var typeMap = {
     ReverseETLManualSyncJobOutput: reverseETLManualSyncJobOutput_1.ReverseETLManualSyncJobOutput,
     ReverseETLSyncOutput: reverseETLSyncOutput_1.ReverseETLSyncOutput,
     ReverseEtlModel: reverseEtlModel_1.ReverseEtlModel,
+    ReverseEtlPeriodicScheduleConfig: reverseEtlPeriodicScheduleConfig_1.ReverseEtlPeriodicScheduleConfig,
+    ReverseEtlScheduleConfig: reverseEtlScheduleConfig_1.ReverseEtlScheduleConfig,
+    ReverseEtlScheduleDefinition: reverseEtlScheduleDefinition_1.ReverseEtlScheduleDefinition,
+    ReverseEtlSpecificTimeScheduleConfig: reverseEtlSpecificTimeScheduleConfig_1.ReverseEtlSpecificTimeScheduleConfig,
     RoleV1: roleV1_1.RoleV1,
     RuleInputV1: ruleInputV1_1.RuleInputV1,
     RuleV1: ruleV1_1.RuleV1,
+    ScheduleConfig: scheduleConfig_1.ScheduleConfig,
     SourceAPICallSnapshotV1: sourceAPICallSnapshotV1_1.SourceAPICallSnapshotV1,
     SourceAlpha: sourceAlpha_1.SourceAlpha,
     SourceEventVolumeDatapointV1: sourceEventVolumeDatapointV1_1.SourceEventVolumeDatapointV1,
