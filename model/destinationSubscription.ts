@@ -49,10 +49,6 @@ export class DestinationSubscription {
      * The unique identifier for the linked ReverseETLModel, if this part of a Reverse ETL connection.
      */
     'modelId'?: string;
-    /**
-     * The schedule for the Reverse ETL subscription.
-     */
-    'reverseETLSchedule'?: object | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -105,11 +101,6 @@ export class DestinationSubscription {
             name: 'modelId',
             baseName: 'modelId',
             type: 'string',
-        },
-        {
-            name: 'reverseETLSchedule',
-            baseName: 'reverseETLSchedule',
-            type: 'object',
         },
     ];
 

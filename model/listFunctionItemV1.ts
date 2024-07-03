@@ -107,7 +107,6 @@ export namespace ListFunctionItemV1 {
     export enum ResourceTypeEnum {
         DESTINATION = <any>'DESTINATION',
         INSERT_DESTINATION = <any>'INSERT_DESTINATION',
-        INSERT_SOURCE = <any>'INSERT_SOURCE',
         SOURCE = <any>'SOURCE',
     }
 }

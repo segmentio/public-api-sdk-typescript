@@ -42,7 +42,7 @@ var ReverseEtlModel = (function () {
         {
             name: 'scheduleConfig',
             baseName: 'scheduleConfig',
-            type: 'ScheduleConfig',
+            type: '{ [key: string]: any; }',
         },
         {
             name: 'query',

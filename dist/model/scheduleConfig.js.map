@@ -1,1 +1,0 @@
-{"version":3,"file":"scheduleConfig.js","sourceRoot":"","sources":["../../model/scheduleConfig.ts"],"names":[],"mappings":";;;AAiBA;IAAA;IAuBA,CAAC;IAHU,kCAAmB,GAA1B;QACI,OAAO,cAAc,CAAC,gBAAgB,CAAC;IAC3C,CAAC;IAhBM,4BAAa,GAAuB,SAAS,CAAC;IAE9C,+BAAgB,GAIlB;QACD;YACI,IAAI,EAAE,UAAU;YAChB,QAAQ,EAAE,UAAU;YACpB,IAAI,EAAE,QAAQ;SACjB;KACJ,CAAC;IAKN,qBAAC;CAAA,AAvBD,IAuBC;AAvBY,wCAAc"}

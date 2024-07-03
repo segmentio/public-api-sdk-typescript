@@ -11,7 +11,6 @@
  */
 
 import { RequestFile } from './models';
-import { ScheduleConfig } from './scheduleConfig';
 
 /**
  * Defines a Reverse ETL Model.
@@ -41,7 +40,10 @@ export class ReverseEtlModel {
      * Determines the strategy used for triggering syncs, which will be used in conjunction with scheduleConfig.  Possible values: \"manual\", \"periodic\", \"specific_days\".
      */
     'scheduleStrategy': string;
-    'scheduleConfig'?: ScheduleConfig | null;
+    /**
+     * Defines a configuration object used for scheduling, which can vary depending on the configured strategy, but must always be an object with at least 1 level of keys.
+     */
+    'scheduleConfig'?: { [key: string]: any };
     /**
      * The SQL query that will be executed to extract data from the connected Source.
      */
@@ -91,7 +93,7 @@ export class ReverseEtlModel {
         {
             name: 'scheduleConfig',
             baseName: 'scheduleConfig',
-            type: 'ScheduleConfig',
+            type: '{ [key: string]: any; }',
         },
         {
             name: 'query',
