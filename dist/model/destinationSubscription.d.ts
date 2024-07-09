@@ -10,6 +10,7 @@ export declare class DestinationSubscription {
     };
     'trigger': string;
     'modelId'?: string;
+    'reverseETLSchedule'?: object | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
