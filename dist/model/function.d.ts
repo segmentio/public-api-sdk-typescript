@@ -30,6 +30,7 @@ export declare namespace Function {
     enum ResourceTypeEnum {
         DESTINATION,
         INSERT_DESTINATION,
+        INSERT_SOURCE,
         SOURCE
     }
 }
