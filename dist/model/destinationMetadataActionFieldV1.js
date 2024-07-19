@@ -74,6 +74,11 @@ var DestinationMetadataActionFieldV1 = (function () {
             baseName: 'allowNull',
             type: 'boolean',
         },
+        {
+            name: 'hidden',
+            baseName: 'hidden',
+            type: 'boolean',
+        },
     ];
     return DestinationMetadataActionFieldV1;
 }());
