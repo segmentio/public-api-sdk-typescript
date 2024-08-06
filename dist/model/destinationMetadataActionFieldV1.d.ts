@@ -12,6 +12,7 @@ export declare class DestinationMetadataActionFieldV1 {
     'choices'?: any | null;
     'dynamic': boolean;
     'allowNull': boolean;
+    'hidden'?: boolean;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
