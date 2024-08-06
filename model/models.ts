@@ -1235,6 +1235,7 @@ let enumsMap: { [index: string]: any } = {
         ReverseEtlScheduleDefinition.StrategyEnum,
     'RuleInputV1.TypeEnum': RuleInputV1.TypeEnum,
     'RuleV1.TypeEnum': RuleV1.TypeEnum,
+    'SourceMetadataV1.StatusEnum': SourceMetadataV1.StatusEnum,
     'TrackSourceSettingsV1.CommonEventOnViolationsEnum':
         TrackSourceSettingsV1.CommonEventOnViolationsEnum,
     'TrackingPlanV1.TypeEnum': TrackingPlanV1.TypeEnum,
