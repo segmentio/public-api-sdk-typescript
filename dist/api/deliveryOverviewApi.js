@@ -353,7 +353,7 @@ var DeliveryOverviewApi = (function () {
             });
         });
     };
-    DeliveryOverviewApi.prototype.getFilteredAtDestinationMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, groupBy, filter, pagination, subscriptionId, options) {
+    DeliveryOverviewApi.prototype.getFilteredAtDestinationMetricsFromDeliveryOverview = function (sourceId, destinationConfigId, startTime, endTime, granularity, groupBy, filter, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
@@ -412,10 +412,6 @@ var DeliveryOverviewApi = (function () {
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                if (subscriptionId !== undefined) {
-                    localVarQueryParameters['subscriptionId'] =
-                        models_1.ObjectSerializer.serialize(subscriptionId, 'string');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;

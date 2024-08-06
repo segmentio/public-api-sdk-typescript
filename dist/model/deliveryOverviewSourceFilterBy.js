@@ -29,6 +29,21 @@ var DeliveryOverviewSourceFilterBy = (function () {
             baseName: 'appVersion',
             type: 'Array<string>',
         },
+        {
+            name: 'activationId',
+            baseName: 'activationId',
+            type: 'Array<string>',
+        },
+        {
+            name: 'audienceId',
+            baseName: 'audienceId',
+            type: 'Array<string>',
+        },
+        {
+            name: 'spaceId',
+            baseName: 'spaceId',
+            type: 'Array<string>',
+        },
     ];
     return DeliveryOverviewSourceFilterBy;
 }());
