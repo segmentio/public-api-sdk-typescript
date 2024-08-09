@@ -41,6 +41,10 @@ export class CreateTransformationV1Input {
      */
     'if': string;
     /**
+     * Optional boolean value if the Transformation should drop the event entirely when the if statement matches, ignores all other transforms.
+     */
+    'drop'?: boolean;
+    /**
      * Optional new event name for renaming events. Works only for \'track\' event type.
      */
     'newEventName'?: string;
@@ -93,6 +97,11 @@ export class CreateTransformationV1Input {
             name: 'if',
             baseName: 'if',
             type: 'string',
+        },
+        {
+            name: 'drop',
+            baseName: 'drop',
+            type: 'boolean',
         },
         {
             name: 'newEventName',

@@ -8,6 +8,7 @@ export declare class CreateTransformationV1Input {
     'destinationMetadataId'?: string;
     'enabled': boolean;
     'if': string;
+    'drop'?: boolean;
     'newEventName'?: string;
     'propertyRenames'?: Array<PropertyRenameV1>;
     'propertyValueTransformations'?: Array<PropertyValueTransformationV1>;
