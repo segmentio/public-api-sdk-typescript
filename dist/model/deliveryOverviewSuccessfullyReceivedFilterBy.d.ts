@@ -2,9 +2,6 @@ export declare class DeliveryOverviewSuccessfullyReceivedFilterBy {
     'eventName'?: Array<string>;
     'eventType'?: Array<string>;
     'appVersion'?: Array<string>;
-    'activationId'?: Array<string>;
-    'audienceId'?: Array<string>;
-    'spaceId'?: Array<string>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

@@ -32,18 +32,6 @@ export class DeliveryOverviewSourceFilterBy {
      * A list of strings of app versions.
      */
     'appVersion'?: Array<string>;
-    /**
-     * A list of strings of event context IDs from a Linked Audience mapping/activation.
-     */
-    'activationId'?: Array<string>;
-    /**
-     * A list of strings of audienceIDs for a Linked Audience.
-     */
-    'audienceId'?: Array<string>;
-    /**
-     * A list of strings of spaceIDs for a Linked Audience.
-     */
-    'spaceId'?: Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -70,21 +58,6 @@ export class DeliveryOverviewSourceFilterBy {
         {
             name: 'appVersion',
             baseName: 'appVersion',
-            type: 'Array<string>',
-        },
-        {
-            name: 'activationId',
-            baseName: 'activationId',
-            type: 'Array<string>',
-        },
-        {
-            name: 'audienceId',
-            baseName: 'audienceId',
-            type: 'Array<string>',
-        },
-        {
-            name: 'spaceId',
-            baseName: 'spaceId',
             type: 'Array<string>',
         },
     ];
