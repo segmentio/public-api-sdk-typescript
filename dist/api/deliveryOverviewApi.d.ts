@@ -44,7 +44,7 @@ export declare class DeliveryOverviewApi {
         response: http.IncomingMessage;
         body: GetEgressFailedMetricsFromDeliveryOverview200Response;
     }>;
-    getFilteredAtDestinationMetricsFromDeliveryOverview(sourceId: string, destinationConfigId: string, startTime: string, endTime: string, granularity: 'DAY' | 'HOUR' | 'MINUTE', groupBy?: Array<string>, filter?: DeliveryOverviewDestinationFilterBy, pagination?: PaginationInput, subscriptionId?: string, options?: {
+    getFilteredAtDestinationMetricsFromDeliveryOverview(sourceId: string, destinationConfigId: string, startTime: string, endTime: string, granularity: 'DAY' | 'HOUR' | 'MINUTE', groupBy?: Array<string>, filter?: DeliveryOverviewDestinationFilterBy, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
