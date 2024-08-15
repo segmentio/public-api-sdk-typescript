@@ -35,11 +35,6 @@ var CreateTransformationV1Input = (function () {
             type: 'string',
         },
         {
-            name: 'drop',
-            baseName: 'drop',
-            type: 'boolean',
-        },
-        {
             name: 'newEventName',
             baseName: 'newEventName',
             type: 'string',
