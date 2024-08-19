@@ -5,6 +5,7 @@ export declare class CreateWarehouseV1Input {
     'settings': {
         [key: string]: any;
     };
+    'disconnectAllSources'?: boolean;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

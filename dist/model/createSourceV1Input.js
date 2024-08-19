@@ -29,6 +29,11 @@ var CreateSourceV1Input = (function () {
             baseName: 'settings',
             type: '{ [key: string]: any; }',
         },
+        {
+            name: 'disconnectAllWarehouses',
+            baseName: 'disconnectAllWarehouses',
+            type: 'boolean',
+        },
     ];
     return CreateSourceV1Input;
 }());
