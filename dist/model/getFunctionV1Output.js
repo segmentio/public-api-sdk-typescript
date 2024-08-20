@@ -12,7 +12,7 @@ var GetFunctionV1Output = (function () {
         {
             name: 'function',
             baseName: 'function',
-            type: 'Function',
+            type: 'FunctionV1',
         },
     ];
     return GetFunctionV1Output;
