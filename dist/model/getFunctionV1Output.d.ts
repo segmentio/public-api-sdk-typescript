@@ -1,6 +1,6 @@
-import { Function } from './function';
+import { FunctionV1 } from './functionV1';
 export declare class GetFunctionV1Output {
-    'function': Function | null;
+    'function': FunctionV1 | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
