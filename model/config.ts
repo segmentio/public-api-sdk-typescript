@@ -11,8 +11,6 @@
  */
 
 import { RequestFile } from './models';
-import { ReverseEtlPeriodicScheduleConfig } from './reverseEtlPeriodicScheduleConfig';
-import { ReverseEtlSpecificTimeScheduleConfig } from './reverseEtlSpecificTimeScheduleConfig';
 
 /**
  * Config contains interval duration in case of periodic or day and hours in case of specific_days. Empty if strategy is MANUAL.
@@ -22,18 +20,6 @@ export class Config {
      * Duration is specified as a string, eg: 15m, 3h25m30s.
      */
     'interval': string;
-    /**
-     * Days of the week.
-     */
-    'days': Array<number>;
-    /**
-     * Hours of the day.
-     */
-    'hours': Array<number>;
-    /**
-     * Timezone for the specified times.
-     */
-    'timezone': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -45,21 +31,6 @@ export class Config {
         {
             name: 'interval',
             baseName: 'interval',
-            type: 'string',
-        },
-        {
-            name: 'days',
-            baseName: 'days',
-            type: 'Array<number>',
-        },
-        {
-            name: 'hours',
-            baseName: 'hours',
-            type: 'Array<number>',
-        },
-        {
-            name: 'timezone',
-            baseName: 'timezone',
             type: 'string',
         },
     ];

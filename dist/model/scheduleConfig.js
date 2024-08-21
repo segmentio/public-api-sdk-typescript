@@ -14,21 +14,6 @@ var ScheduleConfig = (function () {
             baseName: 'interval',
             type: 'string',
         },
-        {
-            name: 'days',
-            baseName: 'days',
-            type: 'Array<number>',
-        },
-        {
-            name: 'hours',
-            baseName: 'hours',
-            type: 'Array<number>',
-        },
-        {
-            name: 'timezone',
-            baseName: 'timezone',
-            type: 'string',
-        },
     ];
     return ScheduleConfig;
 }());

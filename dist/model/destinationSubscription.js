@@ -57,7 +57,7 @@ var DestinationSubscription = (function () {
         {
             name: 'reverseETLSchedule',
             baseName: 'reverseETLSchedule',
-            type: 'any',
+            type: 'object',
         },
     ];
     return DestinationSubscription;

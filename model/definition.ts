@@ -13,12 +13,17 @@
 import { RequestFile } from './models';
 
 /**
- * Space matching the given id.
+ * Query language definition and type.
  */
-export class Space {
-    'id': string;
-    'slug': string;
-    'name': string;
+export class Definition {
+    /**
+     * The query language string defining the computed trait aggregation criteria. For guidance on using the query language, see the [Segment documentation site](https://segment.com/docs/api/public-api/query-language).
+     */
+    'query': string;
+    /**
+     * The underlying data type being aggregated for this computed trait.  Possible values: users, accounts.
+     */
+    'type': Definition.TypeEnum;
 
     static discriminator: string | undefined = undefined;
 
@@ -28,23 +33,25 @@ export class Space {
         type: string;
     }> = [
         {
-            name: 'id',
-            baseName: 'id',
+            name: 'query',
+            baseName: 'query',
             type: 'string',
         },
         {
-            name: 'slug',
-            baseName: 'slug',
-            type: 'string',
-        },
-        {
-            name: 'name',
-            baseName: 'name',
-            type: 'string',
+            name: 'type',
+            baseName: 'type',
+            type: 'Definition.TypeEnum',
         },
     ];
 
     static getAttributeTypeMap() {
-        return Space.attributeTypeMap;
+        return Definition.attributeTypeMap;
+    }
+}
+
+export namespace Definition {
+    export enum TypeEnum {
+        ACCOUNTS = <any>'ACCOUNTS',
+        USERS = <any>'USERS',
     }
 }

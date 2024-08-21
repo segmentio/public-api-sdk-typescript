@@ -52,7 +52,7 @@ export class DestinationSubscription {
     /**
      * The schedule for the Reverse ETL subscription.
      */
-    'reverseETLSchedule'?: any | null;
+    'reverseETLSchedule'?: object | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -109,7 +109,7 @@ export class DestinationSubscription {
         {
             name: 'reverseETLSchedule',
             baseName: 'reverseETLSchedule',
-            type: 'any',
+            type: 'object',
         },
     ];
 

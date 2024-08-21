@@ -13,12 +13,17 @@
 import { RequestFile } from './models';
 
 /**
- * Space matching the given id.
+ * Query language definition and type.
  */
-export class Space {
-    'id': string;
-    'slug': string;
-    'name': string;
+export class Definition1 {
+    /**
+     * The query language string defining the audience segmentation criteria.
+     */
+    'query': string;
+    /**
+     * The underlying data type being segmented for this audience.  Possible values: users, accounts.
+     */
+    'type': Definition1.TypeEnum;
 
     static discriminator: string | undefined = undefined;
 
@@ -28,23 +33,25 @@ export class Space {
         type: string;
     }> = [
         {
-            name: 'id',
-            baseName: 'id',
+            name: 'query',
+            baseName: 'query',
             type: 'string',
         },
         {
-            name: 'slug',
-            baseName: 'slug',
-            type: 'string',
-        },
-        {
-            name: 'name',
-            baseName: 'name',
-            type: 'string',
+            name: 'type',
+            baseName: 'type',
+            type: 'Definition1.TypeEnum',
         },
     ];
 
     static getAttributeTypeMap() {
-        return Space.attributeTypeMap;
+        return Definition1.attributeTypeMap;
+    }
+}
+
+export namespace Definition1 {
+    export enum TypeEnum {
+        ACCOUNTS = <any>'ACCOUNTS',
+        USERS = <any>'USERS',
     }
 }
