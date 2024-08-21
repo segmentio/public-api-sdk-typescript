@@ -11,13 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { ReverseETLSyncStatus } from './reverseETLSyncStatus';
+import { GetReverseETLSyncStatusesBySubscriptionIdOutput } from './getReverseETLSyncStatusesBySubscriptionIdOutput';
 
-/**
- * Output for triggering a manual sync for a RETL connection.
- */
-export class GetReverseETLSyncStatusOutput {
-    'reverseETLSyncStatus': ReverseETLSyncStatus;
+export class GetReverseETLSyncStatusesBySubscriptionId200Response {
+    'data'?: GetReverseETLSyncStatusesBySubscriptionIdOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -27,13 +24,13 @@ export class GetReverseETLSyncStatusOutput {
         type: string;
     }> = [
         {
-            name: 'reverseETLSyncStatus',
-            baseName: 'reverseETLSyncStatus',
-            type: 'ReverseETLSyncStatus',
+            name: 'data',
+            baseName: 'data',
+            type: 'GetReverseETLSyncStatusesBySubscriptionIdOutput',
         },
     ];
 
     static getAttributeTypeMap() {
-        return GetReverseETLSyncStatusOutput.attributeTypeMap;
+        return GetReverseETLSyncStatusesBySubscriptionId200Response.attributeTypeMap;
     }
 }

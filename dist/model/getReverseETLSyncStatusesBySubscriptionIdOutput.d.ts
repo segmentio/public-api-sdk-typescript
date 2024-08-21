@@ -1,6 +1,8 @@
+import { PaginationOutput } from './paginationOutput';
 import { ReverseETLSyncStatus } from './reverseETLSyncStatus';
-export declare class GetReverseETLSyncStatusOutput {
-    'reverseETLSyncStatus': ReverseETLSyncStatus;
+export declare class GetReverseETLSyncStatusesBySubscriptionIdOutput {
+    'syncStatuses': Array<ReverseETLSyncStatus>;
+    'pagination'?: PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

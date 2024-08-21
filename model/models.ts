@@ -223,6 +223,8 @@ export * from './getRegulation200Response';
 export * from './getRegulationV1Output';
 export * from './getReverseETLSyncStatus200Response';
 export * from './getReverseETLSyncStatusOutput';
+export * from './getReverseETLSyncStatusesBySubscriptionId200Response';
+export * from './getReverseETLSyncStatusesBySubscriptionIdOutput';
 export * from './getReverseEtlModel200Response';
 export * from './getReverseEtlModelOutput';
 export * from './getSource200Response';
@@ -432,7 +434,7 @@ export * from './restoreFunctionVersion200Response';
 export * from './restoreFunctionVersionAlphaInput';
 export * from './restoreFunctionVersionAlphaOutput';
 export * from './reverseETLManualSyncJobOutput';
-export * from './reverseETLSyncOutput';
+export * from './reverseETLSyncStatus';
 export * from './reverseEtlModel';
 export * from './reverseEtlPeriodicScheduleConfig';
 export * from './reverseEtlScheduleConfig';
@@ -771,6 +773,8 @@ import { GetRegulation200Response } from './getRegulation200Response';
 import { GetRegulationV1Output } from './getRegulationV1Output';
 import { GetReverseETLSyncStatus200Response } from './getReverseETLSyncStatus200Response';
 import { GetReverseETLSyncStatusOutput } from './getReverseETLSyncStatusOutput';
+import { GetReverseETLSyncStatusesBySubscriptionId200Response } from './getReverseETLSyncStatusesBySubscriptionId200Response';
+import { GetReverseETLSyncStatusesBySubscriptionIdOutput } from './getReverseETLSyncStatusesBySubscriptionIdOutput';
 import { GetReverseEtlModel200Response } from './getReverseEtlModel200Response';
 import { GetReverseEtlModelOutput } from './getReverseEtlModelOutput';
 import { GetSource200Response } from './getSource200Response';
@@ -980,7 +984,7 @@ import { RestoreFunctionVersion200Response } from './restoreFunctionVersion200Re
 import { RestoreFunctionVersionAlphaInput } from './restoreFunctionVersionAlphaInput';
 import { RestoreFunctionVersionAlphaOutput } from './restoreFunctionVersionAlphaOutput';
 import { ReverseETLManualSyncJobOutput } from './reverseETLManualSyncJobOutput';
-import { ReverseETLSyncOutput } from './reverseETLSyncOutput';
+import { ReverseETLSyncStatus } from './reverseETLSyncStatus';
 import { ReverseEtlModel } from './reverseEtlModel';
 import { ReverseEtlPeriodicScheduleConfig } from './reverseEtlPeriodicScheduleConfig';
 import { ReverseEtlScheduleConfig } from './reverseEtlScheduleConfig';
@@ -1506,6 +1510,10 @@ let typeMap: { [index: string]: any } = {
     GetRegulationV1Output: GetRegulationV1Output,
     GetReverseETLSyncStatus200Response: GetReverseETLSyncStatus200Response,
     GetReverseETLSyncStatusOutput: GetReverseETLSyncStatusOutput,
+    GetReverseETLSyncStatusesBySubscriptionId200Response:
+        GetReverseETLSyncStatusesBySubscriptionId200Response,
+    GetReverseETLSyncStatusesBySubscriptionIdOutput:
+        GetReverseETLSyncStatusesBySubscriptionIdOutput,
     GetReverseEtlModel200Response: GetReverseEtlModel200Response,
     GetReverseEtlModelOutput: GetReverseEtlModelOutput,
     GetSource200Response: GetSource200Response,
@@ -1765,7 +1773,7 @@ let typeMap: { [index: string]: any } = {
     RestoreFunctionVersionAlphaInput: RestoreFunctionVersionAlphaInput,
     RestoreFunctionVersionAlphaOutput: RestoreFunctionVersionAlphaOutput,
     ReverseETLManualSyncJobOutput: ReverseETLManualSyncJobOutput,
-    ReverseETLSyncOutput: ReverseETLSyncOutput,
+    ReverseETLSyncStatus: ReverseETLSyncStatus,
     ReverseEtlModel: ReverseEtlModel,
     ReverseEtlPeriodicScheduleConfig: ReverseEtlPeriodicScheduleConfig,
     ReverseEtlScheduleConfig: ReverseEtlScheduleConfig,

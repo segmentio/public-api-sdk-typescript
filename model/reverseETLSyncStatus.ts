@@ -17,7 +17,7 @@ import { SyncLoadPhase } from './syncLoadPhase';
 /**
  * Defines the result of getting the sync status of a RETL connection.
  */
-export class ReverseETLSyncOutput {
+export class ReverseETLSyncStatus {
     /**
      * The id of the sync.
      */
@@ -122,6 +122,6 @@ export class ReverseETLSyncOutput {
     ];
 
     static getAttributeTypeMap() {
-        return ReverseETLSyncOutput.attributeTypeMap;
+        return ReverseETLSyncStatus.attributeTypeMap;
     }
 }

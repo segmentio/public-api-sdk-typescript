@@ -11,13 +11,18 @@
  */
 
 import { RequestFile } from './models';
+import { PaginationOutput } from './paginationOutput';
 import { ReverseETLSyncStatus } from './reverseETLSyncStatus';
 
 /**
- * Output for triggering a manual sync for a RETL connection.
+ * The reverse ETL sync statuses that were looked up.
  */
-export class GetReverseETLSyncStatusOutput {
-    'reverseETLSyncStatus': ReverseETLSyncStatus;
+export class GetReverseETLSyncStatusesBySubscriptionIdOutput {
+    /**
+     * The reverse ETL sync statuses that were looked up of the subscriptionId.
+     */
+    'syncStatuses': Array<ReverseETLSyncStatus>;
+    'pagination'?: PaginationOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -27,13 +32,18 @@ export class GetReverseETLSyncStatusOutput {
         type: string;
     }> = [
         {
-            name: 'reverseETLSyncStatus',
-            baseName: 'reverseETLSyncStatus',
-            type: 'ReverseETLSyncStatus',
+            name: 'syncStatuses',
+            baseName: 'syncStatuses',
+            type: 'Array<ReverseETLSyncStatus>',
+        },
+        {
+            name: 'pagination',
+            baseName: 'pagination',
+            type: 'PaginationOutput',
         },
     ];
 
     static getAttributeTypeMap() {
-        return GetReverseETLSyncStatusOutput.attributeTypeMap;
+        return GetReverseETLSyncStatusesBySubscriptionIdOutput.attributeTypeMap;
     }
 }

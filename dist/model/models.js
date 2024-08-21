@@ -238,6 +238,8 @@ __exportStar(require("./getRegulation200Response"), exports);
 __exportStar(require("./getRegulationV1Output"), exports);
 __exportStar(require("./getReverseETLSyncStatus200Response"), exports);
 __exportStar(require("./getReverseETLSyncStatusOutput"), exports);
+__exportStar(require("./getReverseETLSyncStatusesBySubscriptionId200Response"), exports);
+__exportStar(require("./getReverseETLSyncStatusesBySubscriptionIdOutput"), exports);
 __exportStar(require("./getReverseEtlModel200Response"), exports);
 __exportStar(require("./getReverseEtlModelOutput"), exports);
 __exportStar(require("./getSource200Response"), exports);
@@ -447,7 +449,7 @@ __exportStar(require("./restoreFunctionVersion200Response"), exports);
 __exportStar(require("./restoreFunctionVersionAlphaInput"), exports);
 __exportStar(require("./restoreFunctionVersionAlphaOutput"), exports);
 __exportStar(require("./reverseETLManualSyncJobOutput"), exports);
-__exportStar(require("./reverseETLSyncOutput"), exports);
+__exportStar(require("./reverseETLSyncStatus"), exports);
 __exportStar(require("./reverseEtlModel"), exports);
 __exportStar(require("./reverseEtlPeriodicScheduleConfig"), exports);
 __exportStar(require("./reverseEtlScheduleConfig"), exports);
@@ -773,6 +775,8 @@ var getRegulation200Response_1 = require("./getRegulation200Response");
 var getRegulationV1Output_1 = require("./getRegulationV1Output");
 var getReverseETLSyncStatus200Response_1 = require("./getReverseETLSyncStatus200Response");
 var getReverseETLSyncStatusOutput_1 = require("./getReverseETLSyncStatusOutput");
+var getReverseETLSyncStatusesBySubscriptionId200Response_1 = require("./getReverseETLSyncStatusesBySubscriptionId200Response");
+var getReverseETLSyncStatusesBySubscriptionIdOutput_1 = require("./getReverseETLSyncStatusesBySubscriptionIdOutput");
 var getReverseEtlModel200Response_1 = require("./getReverseEtlModel200Response");
 var getReverseEtlModelOutput_1 = require("./getReverseEtlModelOutput");
 var getSource200Response_1 = require("./getSource200Response");
@@ -982,7 +986,7 @@ var restoreFunctionVersion200Response_1 = require("./restoreFunctionVersion200Re
 var restoreFunctionVersionAlphaInput_1 = require("./restoreFunctionVersionAlphaInput");
 var restoreFunctionVersionAlphaOutput_1 = require("./restoreFunctionVersionAlphaOutput");
 var reverseETLManualSyncJobOutput_1 = require("./reverseETLManualSyncJobOutput");
-var reverseETLSyncOutput_1 = require("./reverseETLSyncOutput");
+var reverseETLSyncStatus_1 = require("./reverseETLSyncStatus");
 var reverseEtlModel_1 = require("./reverseEtlModel");
 var reverseEtlPeriodicScheduleConfig_1 = require("./reverseEtlPeriodicScheduleConfig");
 var reverseEtlScheduleConfig_1 = require("./reverseEtlScheduleConfig");
@@ -1412,6 +1416,8 @@ var typeMap = {
     GetRegulationV1Output: getRegulationV1Output_1.GetRegulationV1Output,
     GetReverseETLSyncStatus200Response: getReverseETLSyncStatus200Response_1.GetReverseETLSyncStatus200Response,
     GetReverseETLSyncStatusOutput: getReverseETLSyncStatusOutput_1.GetReverseETLSyncStatusOutput,
+    GetReverseETLSyncStatusesBySubscriptionId200Response: getReverseETLSyncStatusesBySubscriptionId200Response_1.GetReverseETLSyncStatusesBySubscriptionId200Response,
+    GetReverseETLSyncStatusesBySubscriptionIdOutput: getReverseETLSyncStatusesBySubscriptionIdOutput_1.GetReverseETLSyncStatusesBySubscriptionIdOutput,
     GetReverseEtlModel200Response: getReverseEtlModel200Response_1.GetReverseEtlModel200Response,
     GetReverseEtlModelOutput: getReverseEtlModelOutput_1.GetReverseEtlModelOutput,
     GetSource200Response: getSource200Response_1.GetSource200Response,
@@ -1621,7 +1627,7 @@ var typeMap = {
     RestoreFunctionVersionAlphaInput: restoreFunctionVersionAlphaInput_1.RestoreFunctionVersionAlphaInput,
     RestoreFunctionVersionAlphaOutput: restoreFunctionVersionAlphaOutput_1.RestoreFunctionVersionAlphaOutput,
     ReverseETLManualSyncJobOutput: reverseETLManualSyncJobOutput_1.ReverseETLManualSyncJobOutput,
-    ReverseETLSyncOutput: reverseETLSyncOutput_1.ReverseETLSyncOutput,
+    ReverseETLSyncStatus: reverseETLSyncStatus_1.ReverseETLSyncStatus,
     ReverseEtlModel: reverseEtlModel_1.ReverseEtlModel,
     ReverseEtlPeriodicScheduleConfig: reverseEtlPeriodicScheduleConfig_1.ReverseEtlPeriodicScheduleConfig,
     ReverseEtlScheduleConfig: reverseEtlScheduleConfig_1.ReverseEtlScheduleConfig,
