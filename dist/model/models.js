@@ -325,8 +325,6 @@ __exportStar(require("./listProfilesWarehouseInSpace200Response"), exports);
 __exportStar(require("./listProfilesWarehouseInSpaceAlphaOutput"), exports);
 __exportStar(require("./listRegulationsFromSource200Response"), exports);
 __exportStar(require("./listRegulationsFromSourceV1Output"), exports);
-__exportStar(require("./listReverseETLSyncStatusesFromModelAndSubscriptionId200Response"), exports);
-__exportStar(require("./listReverseETLSyncStatusesFromModelAndSubscriptionIdOutput"), exports);
 __exportStar(require("./listReverseEtlModels200Response"), exports);
 __exportStar(require("./listReverseEtlModelsOutput"), exports);
 __exportStar(require("./listRoles200Response"), exports);
@@ -449,7 +447,7 @@ __exportStar(require("./restoreFunctionVersion200Response"), exports);
 __exportStar(require("./restoreFunctionVersionAlphaInput"), exports);
 __exportStar(require("./restoreFunctionVersionAlphaOutput"), exports);
 __exportStar(require("./reverseETLManualSyncJobOutput"), exports);
-__exportStar(require("./reverseETLSyncStatus"), exports);
+__exportStar(require("./reverseETLSyncOutput"), exports);
 __exportStar(require("./reverseEtlModel"), exports);
 __exportStar(require("./reverseEtlPeriodicScheduleConfig"), exports);
 __exportStar(require("./reverseEtlScheduleConfig"), exports);
@@ -862,8 +860,6 @@ var listProfilesWarehouseInSpace200Response_1 = require("./listProfilesWarehouse
 var listProfilesWarehouseInSpaceAlphaOutput_1 = require("./listProfilesWarehouseInSpaceAlphaOutput");
 var listRegulationsFromSource200Response_1 = require("./listRegulationsFromSource200Response");
 var listRegulationsFromSourceV1Output_1 = require("./listRegulationsFromSourceV1Output");
-var listReverseETLSyncStatusesFromModelAndSubscriptionId200Response_1 = require("./listReverseETLSyncStatusesFromModelAndSubscriptionId200Response");
-var listReverseETLSyncStatusesFromModelAndSubscriptionIdOutput_1 = require("./listReverseETLSyncStatusesFromModelAndSubscriptionIdOutput");
 var listReverseEtlModels200Response_1 = require("./listReverseEtlModels200Response");
 var listReverseEtlModelsOutput_1 = require("./listReverseEtlModelsOutput");
 var listRoles200Response_1 = require("./listRoles200Response");
@@ -986,7 +982,7 @@ var restoreFunctionVersion200Response_1 = require("./restoreFunctionVersion200Re
 var restoreFunctionVersionAlphaInput_1 = require("./restoreFunctionVersionAlphaInput");
 var restoreFunctionVersionAlphaOutput_1 = require("./restoreFunctionVersionAlphaOutput");
 var reverseETLManualSyncJobOutput_1 = require("./reverseETLManualSyncJobOutput");
-var reverseETLSyncStatus_1 = require("./reverseETLSyncStatus");
+var reverseETLSyncOutput_1 = require("./reverseETLSyncOutput");
 var reverseEtlModel_1 = require("./reverseEtlModel");
 var reverseEtlPeriodicScheduleConfig_1 = require("./reverseEtlPeriodicScheduleConfig");
 var reverseEtlScheduleConfig_1 = require("./reverseEtlScheduleConfig");
@@ -1503,8 +1499,6 @@ var typeMap = {
     ListProfilesWarehouseInSpaceAlphaOutput: listProfilesWarehouseInSpaceAlphaOutput_1.ListProfilesWarehouseInSpaceAlphaOutput,
     ListRegulationsFromSource200Response: listRegulationsFromSource200Response_1.ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: listRegulationsFromSourceV1Output_1.ListRegulationsFromSourceV1Output,
-    ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response: listReverseETLSyncStatusesFromModelAndSubscriptionId200Response_1.ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response,
-    ListReverseETLSyncStatusesFromModelAndSubscriptionIdOutput: listReverseETLSyncStatusesFromModelAndSubscriptionIdOutput_1.ListReverseETLSyncStatusesFromModelAndSubscriptionIdOutput,
     ListReverseEtlModels200Response: listReverseEtlModels200Response_1.ListReverseEtlModels200Response,
     ListReverseEtlModelsOutput: listReverseEtlModelsOutput_1.ListReverseEtlModelsOutput,
     ListRoles200Response: listRoles200Response_1.ListRoles200Response,
@@ -1627,7 +1621,7 @@ var typeMap = {
     RestoreFunctionVersionAlphaInput: restoreFunctionVersionAlphaInput_1.RestoreFunctionVersionAlphaInput,
     RestoreFunctionVersionAlphaOutput: restoreFunctionVersionAlphaOutput_1.RestoreFunctionVersionAlphaOutput,
     ReverseETLManualSyncJobOutput: reverseETLManualSyncJobOutput_1.ReverseETLManualSyncJobOutput,
-    ReverseETLSyncStatus: reverseETLSyncStatus_1.ReverseETLSyncStatus,
+    ReverseETLSyncOutput: reverseETLSyncOutput_1.ReverseETLSyncOutput,
     ReverseEtlModel: reverseEtlModel_1.ReverseEtlModel,
     ReverseEtlPeriodicScheduleConfig: reverseEtlPeriodicScheduleConfig_1.ReverseEtlPeriodicScheduleConfig,
     ReverseEtlScheduleConfig: reverseEtlScheduleConfig_1.ReverseEtlScheduleConfig,

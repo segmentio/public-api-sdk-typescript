@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ReverseETLSyncStatus = void 0;
-var ReverseETLSyncStatus = (function () {
-    function ReverseETLSyncStatus() {
+exports.ReverseETLSyncOutput = void 0;
+var ReverseETLSyncOutput = (function () {
+    function ReverseETLSyncOutput() {
     }
-    ReverseETLSyncStatus.getAttributeTypeMap = function () {
-        return ReverseETLSyncStatus.attributeTypeMap;
+    ReverseETLSyncOutput.getAttributeTypeMap = function () {
+        return ReverseETLSyncOutput.attributeTypeMap;
     };
-    ReverseETLSyncStatus.discriminator = undefined;
-    ReverseETLSyncStatus.attributeTypeMap = [
+    ReverseETLSyncOutput.discriminator = undefined;
+    ReverseETLSyncOutput.attributeTypeMap = [
         {
             name: 'syncId',
             baseName: 'syncId',
@@ -65,7 +65,7 @@ var ReverseETLSyncStatus = (function () {
             type: 'string',
         },
     ];
-    return ReverseETLSyncStatus;
+    return ReverseETLSyncOutput;
 }());
-exports.ReverseETLSyncStatus = ReverseETLSyncStatus;
-//# sourceMappingURL=reverseETLSyncStatus.js.map
+exports.ReverseETLSyncOutput = ReverseETLSyncOutput;
+//# sourceMappingURL=reverseETLSyncOutput.js.map

@@ -1,6 +1,6 @@
 import { SyncExtractPhase } from './syncExtractPhase';
 import { SyncLoadPhase } from './syncLoadPhase';
-export declare class ReverseETLSyncStatus {
+export declare class ReverseETLSyncOutput {
     'syncId': string;
     'modelId': string;
     'sourceId': string;

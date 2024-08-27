@@ -1,6 +1,6 @@
-import { ReverseETLSyncStatus } from './reverseETLSyncStatus';
+import { ReverseETLSyncOutput } from './reverseETLSyncOutput';
 export declare class GetReverseETLSyncStatusOutput {
-    'reverseETLSyncStatus': ReverseETLSyncStatus;
+    'reverseETLSyncStatus': ReverseETLSyncOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

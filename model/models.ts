@@ -310,8 +310,6 @@ export * from './listProfilesWarehouseInSpace200Response';
 export * from './listProfilesWarehouseInSpaceAlphaOutput';
 export * from './listRegulationsFromSource200Response';
 export * from './listRegulationsFromSourceV1Output';
-export * from './listReverseETLSyncStatusesFromModelAndSubscriptionId200Response';
-export * from './listReverseETLSyncStatusesFromModelAndSubscriptionIdOutput';
 export * from './listReverseEtlModels200Response';
 export * from './listReverseEtlModelsOutput';
 export * from './listRoles200Response';
@@ -434,7 +432,7 @@ export * from './restoreFunctionVersion200Response';
 export * from './restoreFunctionVersionAlphaInput';
 export * from './restoreFunctionVersionAlphaOutput';
 export * from './reverseETLManualSyncJobOutput';
-export * from './reverseETLSyncStatus';
+export * from './reverseETLSyncOutput';
 export * from './reverseEtlModel';
 export * from './reverseEtlPeriodicScheduleConfig';
 export * from './reverseEtlScheduleConfig';
@@ -860,8 +858,6 @@ import { ListProfilesWarehouseInSpace200Response } from './listProfilesWarehouse
 import { ListProfilesWarehouseInSpaceAlphaOutput } from './listProfilesWarehouseInSpaceAlphaOutput';
 import { ListRegulationsFromSource200Response } from './listRegulationsFromSource200Response';
 import { ListRegulationsFromSourceV1Output } from './listRegulationsFromSourceV1Output';
-import { ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response } from './listReverseETLSyncStatusesFromModelAndSubscriptionId200Response';
-import { ListReverseETLSyncStatusesFromModelAndSubscriptionIdOutput } from './listReverseETLSyncStatusesFromModelAndSubscriptionIdOutput';
 import { ListReverseEtlModels200Response } from './listReverseEtlModels200Response';
 import { ListReverseEtlModelsOutput } from './listReverseEtlModelsOutput';
 import { ListRoles200Response } from './listRoles200Response';
@@ -984,7 +980,7 @@ import { RestoreFunctionVersion200Response } from './restoreFunctionVersion200Re
 import { RestoreFunctionVersionAlphaInput } from './restoreFunctionVersionAlphaInput';
 import { RestoreFunctionVersionAlphaOutput } from './restoreFunctionVersionAlphaOutput';
 import { ReverseETLManualSyncJobOutput } from './reverseETLManualSyncJobOutput';
-import { ReverseETLSyncStatus } from './reverseETLSyncStatus';
+import { ReverseETLSyncOutput } from './reverseETLSyncOutput';
 import { ReverseEtlModel } from './reverseEtlModel';
 import { ReverseEtlPeriodicScheduleConfig } from './reverseEtlPeriodicScheduleConfig';
 import { ReverseEtlScheduleConfig } from './reverseEtlScheduleConfig';
@@ -1616,10 +1612,6 @@ let typeMap: { [index: string]: any } = {
         ListProfilesWarehouseInSpaceAlphaOutput,
     ListRegulationsFromSource200Response: ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: ListRegulationsFromSourceV1Output,
-    ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response:
-        ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response,
-    ListReverseETLSyncStatusesFromModelAndSubscriptionIdOutput:
-        ListReverseETLSyncStatusesFromModelAndSubscriptionIdOutput,
     ListReverseEtlModels200Response: ListReverseEtlModels200Response,
     ListReverseEtlModelsOutput: ListReverseEtlModelsOutput,
     ListRoles200Response: ListRoles200Response,
@@ -1773,7 +1765,7 @@ let typeMap: { [index: string]: any } = {
     RestoreFunctionVersionAlphaInput: RestoreFunctionVersionAlphaInput,
     RestoreFunctionVersionAlphaOutput: RestoreFunctionVersionAlphaOutput,
     ReverseETLManualSyncJobOutput: ReverseETLManualSyncJobOutput,
-    ReverseETLSyncStatus: ReverseETLSyncStatus,
+    ReverseETLSyncOutput: ReverseETLSyncOutput,
     ReverseEtlModel: ReverseEtlModel,
     ReverseEtlPeriodicScheduleConfig: ReverseEtlPeriodicScheduleConfig,
     ReverseEtlScheduleConfig: ReverseEtlScheduleConfig,
