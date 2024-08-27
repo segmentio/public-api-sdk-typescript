@@ -238,8 +238,6 @@ __exportStar(require("./getRegulation200Response"), exports);
 __exportStar(require("./getRegulationV1Output"), exports);
 __exportStar(require("./getReverseETLSyncStatus200Response"), exports);
 __exportStar(require("./getReverseETLSyncStatusOutput"), exports);
-__exportStar(require("./getReverseETLSyncStatusesBySubscriptionId200Response"), exports);
-__exportStar(require("./getReverseETLSyncStatusesBySubscriptionIdOutput"), exports);
 __exportStar(require("./getReverseEtlModel200Response"), exports);
 __exportStar(require("./getReverseEtlModelOutput"), exports);
 __exportStar(require("./getSource200Response"), exports);
@@ -327,6 +325,8 @@ __exportStar(require("./listProfilesWarehouseInSpace200Response"), exports);
 __exportStar(require("./listProfilesWarehouseInSpaceAlphaOutput"), exports);
 __exportStar(require("./listRegulationsFromSource200Response"), exports);
 __exportStar(require("./listRegulationsFromSourceV1Output"), exports);
+__exportStar(require("./listReverseETLSyncStatusesFromModelAndSubscriptionId200Response"), exports);
+__exportStar(require("./listReverseETLSyncStatusesFromModelAndSubscriptionIdOutput"), exports);
 __exportStar(require("./listReverseEtlModels200Response"), exports);
 __exportStar(require("./listReverseEtlModelsOutput"), exports);
 __exportStar(require("./listRoles200Response"), exports);
@@ -775,8 +775,6 @@ var getRegulation200Response_1 = require("./getRegulation200Response");
 var getRegulationV1Output_1 = require("./getRegulationV1Output");
 var getReverseETLSyncStatus200Response_1 = require("./getReverseETLSyncStatus200Response");
 var getReverseETLSyncStatusOutput_1 = require("./getReverseETLSyncStatusOutput");
-var getReverseETLSyncStatusesBySubscriptionId200Response_1 = require("./getReverseETLSyncStatusesBySubscriptionId200Response");
-var getReverseETLSyncStatusesBySubscriptionIdOutput_1 = require("./getReverseETLSyncStatusesBySubscriptionIdOutput");
 var getReverseEtlModel200Response_1 = require("./getReverseEtlModel200Response");
 var getReverseEtlModelOutput_1 = require("./getReverseEtlModelOutput");
 var getSource200Response_1 = require("./getSource200Response");
@@ -864,6 +862,8 @@ var listProfilesWarehouseInSpace200Response_1 = require("./listProfilesWarehouse
 var listProfilesWarehouseInSpaceAlphaOutput_1 = require("./listProfilesWarehouseInSpaceAlphaOutput");
 var listRegulationsFromSource200Response_1 = require("./listRegulationsFromSource200Response");
 var listRegulationsFromSourceV1Output_1 = require("./listRegulationsFromSourceV1Output");
+var listReverseETLSyncStatusesFromModelAndSubscriptionId200Response_1 = require("./listReverseETLSyncStatusesFromModelAndSubscriptionId200Response");
+var listReverseETLSyncStatusesFromModelAndSubscriptionIdOutput_1 = require("./listReverseETLSyncStatusesFromModelAndSubscriptionIdOutput");
 var listReverseEtlModels200Response_1 = require("./listReverseEtlModels200Response");
 var listReverseEtlModelsOutput_1 = require("./listReverseEtlModelsOutput");
 var listRoles200Response_1 = require("./listRoles200Response");
@@ -1416,8 +1416,6 @@ var typeMap = {
     GetRegulationV1Output: getRegulationV1Output_1.GetRegulationV1Output,
     GetReverseETLSyncStatus200Response: getReverseETLSyncStatus200Response_1.GetReverseETLSyncStatus200Response,
     GetReverseETLSyncStatusOutput: getReverseETLSyncStatusOutput_1.GetReverseETLSyncStatusOutput,
-    GetReverseETLSyncStatusesBySubscriptionId200Response: getReverseETLSyncStatusesBySubscriptionId200Response_1.GetReverseETLSyncStatusesBySubscriptionId200Response,
-    GetReverseETLSyncStatusesBySubscriptionIdOutput: getReverseETLSyncStatusesBySubscriptionIdOutput_1.GetReverseETLSyncStatusesBySubscriptionIdOutput,
     GetReverseEtlModel200Response: getReverseEtlModel200Response_1.GetReverseEtlModel200Response,
     GetReverseEtlModelOutput: getReverseEtlModelOutput_1.GetReverseEtlModelOutput,
     GetSource200Response: getSource200Response_1.GetSource200Response,
@@ -1505,6 +1503,8 @@ var typeMap = {
     ListProfilesWarehouseInSpaceAlphaOutput: listProfilesWarehouseInSpaceAlphaOutput_1.ListProfilesWarehouseInSpaceAlphaOutput,
     ListRegulationsFromSource200Response: listRegulationsFromSource200Response_1.ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: listRegulationsFromSourceV1Output_1.ListRegulationsFromSourceV1Output,
+    ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response: listReverseETLSyncStatusesFromModelAndSubscriptionId200Response_1.ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response,
+    ListReverseETLSyncStatusesFromModelAndSubscriptionIdOutput: listReverseETLSyncStatusesFromModelAndSubscriptionIdOutput_1.ListReverseETLSyncStatusesFromModelAndSubscriptionIdOutput,
     ListReverseEtlModels200Response: listReverseEtlModels200Response_1.ListReverseEtlModels200Response,
     ListReverseEtlModelsOutput: listReverseEtlModelsOutput_1.ListReverseEtlModelsOutput,
     ListRoles200Response: listRoles200Response_1.ListRoles200Response,

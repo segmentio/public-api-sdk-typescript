@@ -455,16 +455,14 @@ var ReverseETLApi = (function () {
             });
         });
     };
-    ReverseETLApi.prototype.getReverseETLSyncStatusesBySubscriptionId = function (modelId, subscriptionId, pagination, options) {
+    ReverseETLApi.prototype.getReverseEtlModel = function (modelId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_5, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/reverse-etl-models/{modelId}/subscriptionId/{subscriptionId}/syncs'
-                        .replace('{' + 'modelId' + '}', encodeURIComponent(String(modelId)))
-                        .replace('{' + 'subscriptionId' + '}', encodeURIComponent(String(subscriptionId)));
+                    '/reverse-etl-models/{modelId}'.replace('{' + 'modelId' + '}', encodeURIComponent(String(modelId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
@@ -479,13 +477,7 @@ var ReverseETLApi = (function () {
                 }
                 localVarFormParams = {};
                 if (modelId === null || modelId === undefined) {
-                    throw new Error('Required parameter modelId was null or undefined when calling getReverseETLSyncStatusesBySubscriptionId.');
-                }
-                if (subscriptionId === null || subscriptionId === undefined) {
-                    throw new Error('Required parameter subscriptionId was null or undefined when calling getReverseETLSyncStatusesBySubscriptionId.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                    throw new Error('Required parameter modelId was null or undefined when calling getReverseEtlModel.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -534,7 +526,7 @@ var ReverseETLApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetReverseETLSyncStatusesBySubscriptionId200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'GetReverseEtlModel200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -547,14 +539,16 @@ var ReverseETLApi = (function () {
             });
         });
     };
-    ReverseETLApi.prototype.getReverseEtlModel = function (modelId, options) {
+    ReverseETLApi.prototype.listReverseETLSyncStatusesFromModelAndSubscriptionId = function (modelId, subscriptionId, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_6, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/reverse-etl-models/{modelId}'.replace('{' + 'modelId' + '}', encodeURIComponent(String(modelId)));
+                    '/reverse-etl-models/{modelId}/subscriptionId/{subscriptionId}/syncs'
+                        .replace('{' + 'modelId' + '}', encodeURIComponent(String(modelId)))
+                        .replace('{' + 'subscriptionId' + '}', encodeURIComponent(String(subscriptionId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
@@ -569,7 +563,13 @@ var ReverseETLApi = (function () {
                 }
                 localVarFormParams = {};
                 if (modelId === null || modelId === undefined) {
-                    throw new Error('Required parameter modelId was null or undefined when calling getReverseEtlModel.');
+                    throw new Error('Required parameter modelId was null or undefined when calling listReverseETLSyncStatusesFromModelAndSubscriptionId.');
+                }
+                if (subscriptionId === null || subscriptionId === undefined) {
+                    throw new Error('Required parameter subscriptionId was null or undefined when calling listReverseETLSyncStatusesFromModelAndSubscriptionId.');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -618,7 +618,7 @@ var ReverseETLApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetReverseEtlModel200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {

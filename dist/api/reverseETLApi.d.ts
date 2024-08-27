@@ -6,8 +6,8 @@ import { CreateReverseEtlModel201Response } from '../model/createReverseEtlModel
 import { CreateReverseEtlModelInput } from '../model/createReverseEtlModelInput';
 import { DeleteReverseEtlModel200Response } from '../model/deleteReverseEtlModel200Response';
 import { GetReverseETLSyncStatus200Response } from '../model/getReverseETLSyncStatus200Response';
-import { GetReverseETLSyncStatusesBySubscriptionId200Response } from '../model/getReverseETLSyncStatusesBySubscriptionId200Response';
 import { GetReverseEtlModel200Response } from '../model/getReverseEtlModel200Response';
+import { ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response } from '../model/listReverseETLSyncStatusesFromModelAndSubscriptionId200Response';
 import { ListReverseEtlModels200Response } from '../model/listReverseEtlModels200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { UpdateReverseEtlModel200Response } from '../model/updateReverseEtlModel200Response';
@@ -67,14 +67,6 @@ export declare class ReverseETLApi {
         response: http.IncomingMessage;
         body: GetReverseETLSyncStatus200Response;
     }>;
-    getReverseETLSyncStatusesBySubscriptionId(modelId: string, subscriptionId: string, pagination?: PaginationInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetReverseETLSyncStatusesBySubscriptionId200Response;
-    }>;
     getReverseEtlModel(modelId: string, options?: {
         headers: {
             [name: string]: string;
@@ -82,6 +74,14 @@ export declare class ReverseETLApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: GetReverseEtlModel200Response;
+    }>;
+    listReverseETLSyncStatusesFromModelAndSubscriptionId(modelId: string, subscriptionId: string, pagination?: PaginationInput, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response;
     }>;
     listReverseEtlModels(pagination?: PaginationInput, options?: {
         headers: {

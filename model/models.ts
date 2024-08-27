@@ -223,8 +223,6 @@ export * from './getRegulation200Response';
 export * from './getRegulationV1Output';
 export * from './getReverseETLSyncStatus200Response';
 export * from './getReverseETLSyncStatusOutput';
-export * from './getReverseETLSyncStatusesBySubscriptionId200Response';
-export * from './getReverseETLSyncStatusesBySubscriptionIdOutput';
 export * from './getReverseEtlModel200Response';
 export * from './getReverseEtlModelOutput';
 export * from './getSource200Response';
@@ -312,6 +310,8 @@ export * from './listProfilesWarehouseInSpace200Response';
 export * from './listProfilesWarehouseInSpaceAlphaOutput';
 export * from './listRegulationsFromSource200Response';
 export * from './listRegulationsFromSourceV1Output';
+export * from './listReverseETLSyncStatusesFromModelAndSubscriptionId200Response';
+export * from './listReverseETLSyncStatusesFromModelAndSubscriptionIdOutput';
 export * from './listReverseEtlModels200Response';
 export * from './listReverseEtlModelsOutput';
 export * from './listRoles200Response';
@@ -773,8 +773,6 @@ import { GetRegulation200Response } from './getRegulation200Response';
 import { GetRegulationV1Output } from './getRegulationV1Output';
 import { GetReverseETLSyncStatus200Response } from './getReverseETLSyncStatus200Response';
 import { GetReverseETLSyncStatusOutput } from './getReverseETLSyncStatusOutput';
-import { GetReverseETLSyncStatusesBySubscriptionId200Response } from './getReverseETLSyncStatusesBySubscriptionId200Response';
-import { GetReverseETLSyncStatusesBySubscriptionIdOutput } from './getReverseETLSyncStatusesBySubscriptionIdOutput';
 import { GetReverseEtlModel200Response } from './getReverseEtlModel200Response';
 import { GetReverseEtlModelOutput } from './getReverseEtlModelOutput';
 import { GetSource200Response } from './getSource200Response';
@@ -862,6 +860,8 @@ import { ListProfilesWarehouseInSpace200Response } from './listProfilesWarehouse
 import { ListProfilesWarehouseInSpaceAlphaOutput } from './listProfilesWarehouseInSpaceAlphaOutput';
 import { ListRegulationsFromSource200Response } from './listRegulationsFromSource200Response';
 import { ListRegulationsFromSourceV1Output } from './listRegulationsFromSourceV1Output';
+import { ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response } from './listReverseETLSyncStatusesFromModelAndSubscriptionId200Response';
+import { ListReverseETLSyncStatusesFromModelAndSubscriptionIdOutput } from './listReverseETLSyncStatusesFromModelAndSubscriptionIdOutput';
 import { ListReverseEtlModels200Response } from './listReverseEtlModels200Response';
 import { ListReverseEtlModelsOutput } from './listReverseEtlModelsOutput';
 import { ListRoles200Response } from './listRoles200Response';
@@ -1510,10 +1510,6 @@ let typeMap: { [index: string]: any } = {
     GetRegulationV1Output: GetRegulationV1Output,
     GetReverseETLSyncStatus200Response: GetReverseETLSyncStatus200Response,
     GetReverseETLSyncStatusOutput: GetReverseETLSyncStatusOutput,
-    GetReverseETLSyncStatusesBySubscriptionId200Response:
-        GetReverseETLSyncStatusesBySubscriptionId200Response,
-    GetReverseETLSyncStatusesBySubscriptionIdOutput:
-        GetReverseETLSyncStatusesBySubscriptionIdOutput,
     GetReverseEtlModel200Response: GetReverseEtlModel200Response,
     GetReverseEtlModelOutput: GetReverseEtlModelOutput,
     GetSource200Response: GetSource200Response,
@@ -1620,6 +1616,10 @@ let typeMap: { [index: string]: any } = {
         ListProfilesWarehouseInSpaceAlphaOutput,
     ListRegulationsFromSource200Response: ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: ListRegulationsFromSourceV1Output,
+    ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response:
+        ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response,
+    ListReverseETLSyncStatusesFromModelAndSubscriptionIdOutput:
+        ListReverseETLSyncStatusesFromModelAndSubscriptionIdOutput,
     ListReverseEtlModels200Response: ListReverseEtlModels200Response,
     ListReverseEtlModelsOutput: ListReverseEtlModelsOutput,
     ListRoles200Response: ListRoles200Response,
