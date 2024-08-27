@@ -75,7 +75,7 @@ export declare class ReverseETLApi {
         response: http.IncomingMessage;
         body: GetReverseEtlModel200Response;
     }>;
-    listReverseETLSyncStatusesFromModelAndSubscriptionId(modelId: string, subscriptionId: string, pagination?: PaginationInput, options?: {
+    listReverseETLSyncStatusesFromModelAndSubscriptionId(modelId: string, subscriptionId: string, count?: number, cursor?: string, options?: {
         headers: {
             [name: string]: string;
         };

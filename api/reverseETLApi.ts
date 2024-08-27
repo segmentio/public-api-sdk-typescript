@@ -724,12 +724,14 @@ export class ReverseETLApi {
      * @summary List Reverse ETL Sync Statuses from Model And Subscription Id
      * @param modelId
      * @param subscriptionId
-     * @param pagination Optional pagination params.  This parameter exists in alpha.
+     * @param count The number of items to retrieve in a page, between 1 and 100. Default is 10  This parameter exists in alpha.
+     * @param cursor The page to request. Acceptable values to use here are in PaginationOutput objects, in the &#x60;current&#x60;, &#x60;next&#x60;, and &#x60;previous&#x60; keys.  This parameter exists in alpha.
      */
     public async listReverseETLSyncStatusesFromModelAndSubscriptionId(
         modelId: string,
         subscriptionId: string,
-        pagination?: PaginationInput,
+        count?: number,
+        cursor?: string,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -777,10 +779,17 @@ export class ReverseETLApi {
             );
         }
 
-        if (pagination !== undefined) {
-            localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
-                pagination,
-                'PaginationInput'
+        if (count !== undefined) {
+            localVarQueryParameters['count'] = ObjectSerializer.serialize(
+                count,
+                'number'
+            );
+        }
+
+        if (cursor !== undefined) {
+            localVarQueryParameters['cursor'] = ObjectSerializer.serialize(
+                cursor,
+                'string'
             );
         }
 

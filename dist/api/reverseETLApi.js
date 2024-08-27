@@ -539,7 +539,7 @@ var ReverseETLApi = (function () {
             });
         });
     };
-    ReverseETLApi.prototype.listReverseETLSyncStatusesFromModelAndSubscriptionId = function (modelId, subscriptionId, pagination, options) {
+    ReverseETLApi.prototype.listReverseETLSyncStatusesFromModelAndSubscriptionId = function (modelId, subscriptionId, count, cursor, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_6, _i, _a, interceptor;
@@ -568,8 +568,11 @@ var ReverseETLApi = (function () {
                 if (subscriptionId === null || subscriptionId === undefined) {
                     throw new Error('Required parameter subscriptionId was null or undefined when calling listReverseETLSyncStatusesFromModelAndSubscriptionId.');
                 }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                if (count !== undefined) {
+                    localVarQueryParameters['count'] = models_1.ObjectSerializer.serialize(count, 'number');
+                }
+                if (cursor !== undefined) {
+                    localVarQueryParameters['cursor'] = models_1.ObjectSerializer.serialize(cursor, 'string');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
