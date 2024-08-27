@@ -12,7 +12,7 @@ var GetReverseETLSyncStatusOutput = (function () {
         {
             name: 'reverseETLSyncStatus',
             baseName: 'reverseETLSyncStatus',
-            type: 'ReverseETLSyncOutput',
+            type: 'ReverseETLSyncStatus',
         },
     ];
     return GetReverseETLSyncStatusOutput;
