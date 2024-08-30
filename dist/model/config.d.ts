@@ -1,8 +1,5 @@
 export declare class Config {
     'interval': string;
-    'days': Array<number>;
-    'hours': Array<number>;
-    'timezone': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

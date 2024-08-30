@@ -1,7 +1,6 @@
-export declare class GetPersonalizationDataOutput {
-    'personalizationData': {
-        [key: string]: any;
-    };
+export declare class Definition {
+    'query': string;
+    'type': Definition.TypeEnum;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -13,4 +12,10 @@ export declare class GetPersonalizationDataOutput {
         baseName: string;
         type: string;
     }[];
+}
+export declare namespace Definition {
+    enum TypeEnum {
+        ACCOUNTS,
+        USERS
+    }
 }

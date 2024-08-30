@@ -1,5 +1,5 @@
-import { AudienceDefinition } from './audienceDefinition';
 import { AudienceOptions } from './audienceOptions';
+import { Definition } from './definition';
 export declare class AudienceSummary {
     'id': string;
     'spaceId': string;
@@ -7,7 +7,7 @@ export declare class AudienceSummary {
     'description'?: string;
     'key': string;
     'enabled': boolean;
-    'definition': AudienceDefinition | null;
+    'definition': Definition | null;
     'status'?: string;
     'createdBy': string;
     'updatedBy': string;
