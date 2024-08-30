@@ -1,8 +1,6 @@
-import { Filter } from './filter';
-import { ListFiltersPaginationOutput } from './listFiltersPaginationOutput';
-export declare class ListFiltersByIntegrationIdOutput {
-    'filters'?: Array<Filter>;
-    'pagination'?: ListFiltersPaginationOutput;
+export declare class ListFiltersPaginationInput {
+    'cursor'?: number;
+    'count': number;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

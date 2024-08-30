@@ -15,7 +15,7 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { CreateFilterInput } from '../model/createFilterInput';
-import { PaginationInput } from '../model/paginationInput';
+import { ListFiltersPaginationInput } from '../model/listFiltersPaginationInput';
 import { RequestErrorEnvelope } from '../model/requestErrorEnvelope';
 import { UpdateFilterByIdInput } from '../model/updateFilterByIdInput';
 
@@ -480,7 +480,7 @@ export class FiltersApi {
     public async listFiltersByIntegrationId(
         integrationId: string,
         productArea: string,
-        pagination?: PaginationInput,
+        pagination?: ListFiltersPaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{ response: http.IncomingMessage; body?: any }> {
         const localVarPath =
@@ -527,7 +527,7 @@ export class FiltersApi {
         if (pagination !== undefined) {
             localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
                 pagination,
-                'PaginationInput'
+                'ListFiltersPaginationInput'
             );
         }
 

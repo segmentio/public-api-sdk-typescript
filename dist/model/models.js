@@ -315,6 +315,8 @@ __exportStar(require("./listDestinationsV1Output"), exports);
 __exportStar(require("./listFiltersByIntegrationIdOutput"), exports);
 __exportStar(require("./listFiltersFromDestination200Response"), exports);
 __exportStar(require("./listFiltersFromDestinationV1Output"), exports);
+__exportStar(require("./listFiltersPaginationInput"), exports);
+__exportStar(require("./listFiltersPaginationOutput"), exports);
 __exportStar(require("./listFunctionItemV1"), exports);
 __exportStar(require("./listFunctionVersions200Response"), exports);
 __exportStar(require("./listFunctionVersionsAlphaOutput"), exports);
@@ -863,6 +865,8 @@ var listDestinationsV1Output_1 = require("./listDestinationsV1Output");
 var listFiltersByIntegrationIdOutput_1 = require("./listFiltersByIntegrationIdOutput");
 var listFiltersFromDestination200Response_1 = require("./listFiltersFromDestination200Response");
 var listFiltersFromDestinationV1Output_1 = require("./listFiltersFromDestinationV1Output");
+var listFiltersPaginationInput_1 = require("./listFiltersPaginationInput");
+var listFiltersPaginationOutput_1 = require("./listFiltersPaginationOutput");
 var listFunctionItemV1_1 = require("./listFunctionItemV1");
 var listFunctionVersions200Response_1 = require("./listFunctionVersions200Response");
 var listFunctionVersionsAlphaOutput_1 = require("./listFunctionVersionsAlphaOutput");
@@ -1518,6 +1522,8 @@ var typeMap = {
     ListFiltersByIntegrationIdOutput: listFiltersByIntegrationIdOutput_1.ListFiltersByIntegrationIdOutput,
     ListFiltersFromDestination200Response: listFiltersFromDestination200Response_1.ListFiltersFromDestination200Response,
     ListFiltersFromDestinationV1Output: listFiltersFromDestinationV1Output_1.ListFiltersFromDestinationV1Output,
+    ListFiltersPaginationInput: listFiltersPaginationInput_1.ListFiltersPaginationInput,
+    ListFiltersPaginationOutput: listFiltersPaginationOutput_1.ListFiltersPaginationOutput,
     ListFunctionItemV1: listFunctionItemV1_1.ListFunctionItemV1,
     ListFunctionVersions200Response: listFunctionVersions200Response_1.ListFunctionVersions200Response,
     ListFunctionVersionsAlphaOutput: listFunctionVersionsAlphaOutput_1.ListFunctionVersionsAlphaOutput,

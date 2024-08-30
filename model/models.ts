@@ -300,6 +300,8 @@ export * from './listDestinationsV1Output';
 export * from './listFiltersByIntegrationIdOutput';
 export * from './listFiltersFromDestination200Response';
 export * from './listFiltersFromDestinationV1Output';
+export * from './listFiltersPaginationInput';
+export * from './listFiltersPaginationOutput';
 export * from './listFunctionItemV1';
 export * from './listFunctionVersions200Response';
 export * from './listFunctionVersionsAlphaOutput';
@@ -861,6 +863,8 @@ import { ListDestinationsV1Output } from './listDestinationsV1Output';
 import { ListFiltersByIntegrationIdOutput } from './listFiltersByIntegrationIdOutput';
 import { ListFiltersFromDestination200Response } from './listFiltersFromDestination200Response';
 import { ListFiltersFromDestinationV1Output } from './listFiltersFromDestinationV1Output';
+import { ListFiltersPaginationInput } from './listFiltersPaginationInput';
+import { ListFiltersPaginationOutput } from './listFiltersPaginationOutput';
 import { ListFunctionItemV1 } from './listFunctionItemV1';
 import { ListFunctionVersions200Response } from './listFunctionVersions200Response';
 import { ListFunctionVersionsAlphaOutput } from './listFunctionVersionsAlphaOutput';
@@ -1627,6 +1631,8 @@ let typeMap: { [index: string]: any } = {
     ListFiltersFromDestination200Response:
         ListFiltersFromDestination200Response,
     ListFiltersFromDestinationV1Output: ListFiltersFromDestinationV1Output,
+    ListFiltersPaginationInput: ListFiltersPaginationInput,
+    ListFiltersPaginationOutput: ListFiltersPaginationOutput,
     ListFunctionItemV1: ListFunctionItemV1,
     ListFunctionVersions200Response: ListFunctionVersions200Response,
     ListFunctionVersionsAlphaOutput: ListFunctionVersionsAlphaOutput,

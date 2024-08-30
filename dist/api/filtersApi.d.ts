@@ -1,7 +1,7 @@
 /// <reference types="node" />
 import http from 'http';
 import { CreateFilterInput } from '../model/createFilterInput';
-import { PaginationInput } from '../model/paginationInput';
+import { ListFiltersPaginationInput } from '../model/listFiltersPaginationInput';
 import { UpdateFilterByIdInput } from '../model/updateFilterByIdInput';
 import { Authentication, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
@@ -50,7 +50,7 @@ export declare class FiltersApi {
         response: http.IncomingMessage;
         body?: any;
     }>;
-    listFiltersByIntegrationId(integrationId: string, productArea: string, pagination?: PaginationInput, options?: {
+    listFiltersByIntegrationId(integrationId: string, productArea: string, pagination?: ListFiltersPaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

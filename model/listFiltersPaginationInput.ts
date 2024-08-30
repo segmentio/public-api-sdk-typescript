@@ -13,17 +13,17 @@
 import { RequestFile } from './models';
 
 /**
- * Query language definition and type.
+ * Pagination for list filters
  */
-export class Definition {
+export class ListFiltersPaginationInput {
     /**
-     * The query language string defining the computed trait aggregation criteria. For guidance on using the query language, see the [Segment documentation site](https://segment.com/docs/api/public-api/query-language).
+     * The offset.
      */
-    'query': string;
+    'cursor'?: number;
     /**
-     * The underlying data type being aggregated for this computed trait.  Possible values: users, accounts.
+     * The number of items to retrieve in a page, between 1 and 1000.
      */
-    'type': Definition.TypeEnum;
+    'count': number;
 
     static discriminator: string | undefined = undefined;
 
@@ -33,25 +33,18 @@ export class Definition {
         type: string;
     }> = [
         {
-            name: 'query',
-            baseName: 'query',
-            type: 'string',
+            name: 'cursor',
+            baseName: 'cursor',
+            type: 'number',
         },
         {
-            name: 'type',
-            baseName: 'type',
-            type: 'Definition.TypeEnum',
+            name: 'count',
+            baseName: 'count',
+            type: 'number',
         },
     ];
 
     static getAttributeTypeMap() {
-        return Definition.attributeTypeMap;
-    }
-}
-
-export namespace Definition {
-    export enum TypeEnum {
-        ACCOUNTS = <any>'ACCOUNTS',
-        USERS = <any>'USERS',
+        return ListFiltersPaginationInput.attributeTypeMap;
     }
 }

@@ -17,7 +17,7 @@ var ListFiltersByIntegrationIdOutput = (function () {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'PaginationOutput',
+            type: 'ListFiltersPaginationOutput',
         },
     ];
     return ListFiltersByIntegrationIdOutput;

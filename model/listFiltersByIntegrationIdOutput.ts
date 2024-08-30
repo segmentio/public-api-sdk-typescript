@@ -12,7 +12,7 @@
 
 import { RequestFile } from './models';
 import { Filter } from './filter';
-import { PaginationOutput } from './paginationOutput';
+import { ListFiltersPaginationOutput } from './listFiltersPaginationOutput';
 
 /**
  * Output for ListFiltersByIntegrationId
@@ -22,7 +22,7 @@ export class ListFiltersByIntegrationIdOutput {
      * Filter output.
      */
     'filters'?: Array<Filter>;
-    'pagination'?: PaginationOutput;
+    'pagination'?: ListFiltersPaginationOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -39,7 +39,7 @@ export class ListFiltersByIntegrationIdOutput {
         {
             name: 'pagination',
             baseName: 'pagination',
-            type: 'PaginationOutput',
+            type: 'ListFiltersPaginationOutput',
         },
     ];
 

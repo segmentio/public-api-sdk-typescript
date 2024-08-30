@@ -301,6 +301,8 @@ export * from './listDestinationsV1Output';
 export * from './listFiltersByIntegrationIdOutput';
 export * from './listFiltersFromDestination200Response';
 export * from './listFiltersFromDestinationV1Output';
+export * from './listFiltersPaginationInput';
+export * from './listFiltersPaginationOutput';
 export * from './listFunctionItemV1';
 export * from './listFunctionVersions200Response';
 export * from './listFunctionVersionsAlphaOutput';

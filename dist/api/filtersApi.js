@@ -396,7 +396,7 @@ var FiltersApi = (function () {
                     localVarQueryParameters['productArea'] = models_1.ObjectSerializer.serialize(productArea, 'string');
                 }
                 if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'ListFiltersPaginationInput');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
