@@ -11,19 +11,18 @@
  */
 
 import { RequestFile } from './models';
+import { Filter } from './filter';
+import { PaginationOutput } from './paginationOutput';
 
 /**
- * Query language definition and type.
+ * Output for ListFiltersByIntegrationId
  */
-export class Definition {
+export class ListFiltersByIntegrationIdOutput {
     /**
-     * The query language string defining the audience segmentation criteria.
+     * Filter output.
      */
-    'query': string;
-    /**
-     * The underlying data type being segmented for this audience.  Possible values: users, accounts.
-     */
-    'type': Definition.TypeEnum;
+    'filters'?: Array<Filter>;
+    'pagination'?: PaginationOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -33,25 +32,18 @@ export class Definition {
         type: string;
     }> = [
         {
-            name: 'query',
-            baseName: 'query',
-            type: 'string',
+            name: 'filters',
+            baseName: 'filters',
+            type: 'Array<Filter>',
         },
         {
-            name: 'type',
-            baseName: 'type',
-            type: 'Definition.TypeEnum',
+            name: 'pagination',
+            baseName: 'pagination',
+            type: 'PaginationOutput',
         },
     ];
 
     static getAttributeTypeMap() {
-        return Definition.attributeTypeMap;
-    }
-}
-
-export namespace Definition {
-    export enum TypeEnum {
-        ACCOUNTS = <any>'ACCOUNTS',
-        USERS = <any>'USERS',
+        return ListFiltersByIntegrationIdOutput.attributeTypeMap;
     }
 }

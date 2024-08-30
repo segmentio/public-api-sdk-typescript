@@ -13,17 +13,13 @@
 import { RequestFile } from './models';
 
 /**
- * Query language definition and type.
+ * Output for DeleteFilterById
  */
-export class Definition {
+export class DeleteFilterByIdOutput {
     /**
-     * The query language string defining the audience segmentation criteria.
+     * Filter deleted by filter id.
      */
-    'query': string;
-    /**
-     * The underlying data type being segmented for this audience.  Possible values: users, accounts.
-     */
-    'type': Definition.TypeEnum;
+    'deleted': boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -33,25 +29,13 @@ export class Definition {
         type: string;
     }> = [
         {
-            name: 'query',
-            baseName: 'query',
-            type: 'string',
-        },
-        {
-            name: 'type',
-            baseName: 'type',
-            type: 'Definition.TypeEnum',
+            name: 'deleted',
+            baseName: 'deleted',
+            type: 'boolean',
         },
     ];
 
     static getAttributeTypeMap() {
-        return Definition.attributeTypeMap;
-    }
-}
-
-export namespace Definition {
-    export enum TypeEnum {
-        ACCOUNTS = <any>'ACCOUNTS',
-        USERS = <any>'USERS',
+        return DeleteFilterByIdOutput.attributeTypeMap;
     }
 }

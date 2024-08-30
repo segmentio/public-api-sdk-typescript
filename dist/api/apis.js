@@ -88,6 +88,8 @@ __exportStar(require("./edgeFunctionsApi"), exports);
 var edgeFunctionsApi_1 = require("./edgeFunctionsApi");
 __exportStar(require("./eventsApi"), exports);
 var eventsApi_1 = require("./eventsApi");
+__exportStar(require("./filtersApi"), exports);
+var filtersApi_1 = require("./filtersApi");
 __exportStar(require("./functionsApi"), exports);
 var functionsApi_1 = require("./functionsApi");
 __exportStar(require("./iAMGroupsApi"), exports);
@@ -145,6 +147,7 @@ exports.APIS = [
     destinationsApi_1.DestinationsApi,
     edgeFunctionsApi_1.EdgeFunctionsApi,
     eventsApi_1.EventsApi,
+    filtersApi_1.FiltersApi,
     functionsApi_1.FunctionsApi,
     iAMGroupsApi_1.IAMGroupsApi,
     iAMRolesApi_1.IAMRolesApi,

@@ -21,6 +21,8 @@ export * from './edgeFunctionsApi';
 import { EdgeFunctionsApi } from './edgeFunctionsApi';
 export * from './eventsApi';
 import { EventsApi } from './eventsApi';
+export * from './filtersApi';
+import { FiltersApi } from './filtersApi';
 export * from './functionsApi';
 import { FunctionsApi } from './functionsApi';
 export * from './iAMGroupsApi';
@@ -61,7 +63,7 @@ export declare class HttpError extends Error {
     constructor(response: http.IncomingMessage, body: any, statusCode?: number | undefined);
 }
 export { RequestFile } from '../model/models';
-export declare const APIS: (typeof APICallsApi | typeof AudiencesApi | typeof AuditTrailApi | typeof CatalogApi | typeof ComputedTraitsApi | typeof DeletionAndSuppressionApi | typeof DeliveryOverviewApi | typeof DestinationFiltersApi | typeof DestinationsApi | typeof EdgeFunctionsApi | typeof EventsApi | typeof FunctionsApi | typeof IAMGroupsApi | typeof IAMRolesApi | typeof IAMUsersApi | typeof LabelsApi | typeof MonthlyTrackedUsersApi | typeof ProfilesSyncApi | typeof ReverseETLApi | typeof SelectiveSyncApi | typeof SourcesApi | typeof SpacesApi | typeof TestingApi | typeof TrackingPlansApi | typeof TransformationsApi | typeof WarehousesApi | typeof WorkspacesApi)[];
+export declare const APIS: (typeof APICallsApi | typeof AudiencesApi | typeof AuditTrailApi | typeof CatalogApi | typeof ComputedTraitsApi | typeof DeletionAndSuppressionApi | typeof DeliveryOverviewApi | typeof DestinationFiltersApi | typeof DestinationsApi | typeof EdgeFunctionsApi | typeof EventsApi | typeof FiltersApi | typeof FunctionsApi | typeof IAMGroupsApi | typeof IAMRolesApi | typeof IAMUsersApi | typeof LabelsApi | typeof MonthlyTrackedUsersApi | typeof ProfilesSyncApi | typeof ReverseETLApi | typeof SelectiveSyncApi | typeof SourcesApi | typeof SpacesApi | typeof TestingApi | typeof TrackingPlansApi | typeof TransformationsApi | typeof WarehousesApi | typeof WorkspacesApi)[];
 export interface Apis {
     apiCalls: APICallsApi;
     auditTrail: AuditTrailApi;

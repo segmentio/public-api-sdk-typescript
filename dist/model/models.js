@@ -75,6 +75,8 @@ __exportStar(require("./createEdgeFunctionsAlphaOutput"), exports);
 __exportStar(require("./createFilterForDestination200Response"), exports);
 __exportStar(require("./createFilterForDestinationV1Input"), exports);
 __exportStar(require("./createFilterForDestinationV1Output"), exports);
+__exportStar(require("./createFilterInput"), exports);
+__exportStar(require("./createFilterOutput"), exports);
 __exportStar(require("./createFunction200Response"), exports);
 __exportStar(require("./createFunctionDeployment200Response"), exports);
 __exportStar(require("./createFunctionDeploymentV1Output"), exports);
@@ -133,6 +135,7 @@ __exportStar(require("./definition"), exports);
 __exportStar(require("./definition1"), exports);
 __exportStar(require("./deleteDestination200Response"), exports);
 __exportStar(require("./deleteDestinationV1Output"), exports);
+__exportStar(require("./deleteFilterByIdOutput"), exports);
 __exportStar(require("./deleteFunction200Response"), exports);
 __exportStar(require("./deleteFunctionV1Output"), exports);
 __exportStar(require("./deleteInsertFunctionInstance200Response"), exports);
@@ -192,6 +195,7 @@ __exportStar(require("./echoV1Output"), exports);
 __exportStar(require("./edgeFunctionsAlpha"), exports);
 __exportStar(require("./eventSourceV1"), exports);
 __exportStar(require("./fQLDefinedPropertyV1"), exports);
+__exportStar(require("./filter"), exports);
 __exportStar(require("./function"), exports);
 __exportStar(require("./functionDeployment"), exports);
 __exportStar(require("./functionSettingV1"), exports);
@@ -225,6 +229,7 @@ __exportStar(require("./getEgressFailedMetricsFromDeliveryOverview200Response"),
 __exportStar(require("./getEventsVolumeFromWorkspace200Response"), exports);
 __exportStar(require("./getEventsVolumeFromWorkspaceV1Output"), exports);
 __exportStar(require("./getEventsVolumeFromWorkspaceV1Query"), exports);
+__exportStar(require("./getFilterByIdOutput"), exports);
 __exportStar(require("./getFilterInDestination200Response"), exports);
 __exportStar(require("./getFilterInDestinationV1Output"), exports);
 __exportStar(require("./getFunction200Response"), exports);
@@ -307,6 +312,7 @@ __exportStar(require("./listDeliveryMetricsSummaryFromDestination200Response"), 
 __exportStar(require("./listDeliveryMetricsSummaryFromDestinationBetaOutput"), exports);
 __exportStar(require("./listDestinations200Response"), exports);
 __exportStar(require("./listDestinationsV1Output"), exports);
+__exportStar(require("./listFiltersByIntegrationIdOutput"), exports);
 __exportStar(require("./listFiltersFromDestination200Response"), exports);
 __exportStar(require("./listFiltersFromDestinationV1Output"), exports);
 __exportStar(require("./listFunctionItemV1"), exports);
@@ -493,6 +499,8 @@ __exportStar(require("./updateComputedTraitForSpaceAlphaOutput"), exports);
 __exportStar(require("./updateDestination200Response"), exports);
 __exportStar(require("./updateDestinationV1Input"), exports);
 __exportStar(require("./updateDestinationV1Output"), exports);
+__exportStar(require("./updateFilterByIdInput"), exports);
+__exportStar(require("./updateFilterByIdOutput"), exports);
 __exportStar(require("./updateFilterForDestination200Response"), exports);
 __exportStar(require("./updateFilterForDestinationV1Input"), exports);
 __exportStar(require("./updateFilterForDestinationV1Output"), exports);
@@ -615,6 +623,8 @@ var createEdgeFunctionsAlphaOutput_1 = require("./createEdgeFunctionsAlphaOutput
 var createFilterForDestination200Response_1 = require("./createFilterForDestination200Response");
 var createFilterForDestinationV1Input_1 = require("./createFilterForDestinationV1Input");
 var createFilterForDestinationV1Output_1 = require("./createFilterForDestinationV1Output");
+var createFilterInput_1 = require("./createFilterInput");
+var createFilterOutput_1 = require("./createFilterOutput");
 var createFunction200Response_1 = require("./createFunction200Response");
 var createFunctionDeployment200Response_1 = require("./createFunctionDeployment200Response");
 var createFunctionDeploymentV1Output_1 = require("./createFunctionDeploymentV1Output");
@@ -673,6 +683,7 @@ var definition_1 = require("./definition");
 var definition1_1 = require("./definition1");
 var deleteDestination200Response_1 = require("./deleteDestination200Response");
 var deleteDestinationV1Output_1 = require("./deleteDestinationV1Output");
+var deleteFilterByIdOutput_1 = require("./deleteFilterByIdOutput");
 var deleteFunction200Response_1 = require("./deleteFunction200Response");
 var deleteFunctionV1Output_1 = require("./deleteFunctionV1Output");
 var deleteInsertFunctionInstance200Response_1 = require("./deleteInsertFunctionInstance200Response");
@@ -732,6 +743,7 @@ var echoV1Output_1 = require("./echoV1Output");
 var edgeFunctionsAlpha_1 = require("./edgeFunctionsAlpha");
 var eventSourceV1_1 = require("./eventSourceV1");
 var fQLDefinedPropertyV1_1 = require("./fQLDefinedPropertyV1");
+var filter_1 = require("./filter");
 var function_1 = require("./function");
 var functionDeployment_1 = require("./functionDeployment");
 var functionSettingV1_1 = require("./functionSettingV1");
@@ -765,6 +777,7 @@ var getEgressFailedMetricsFromDeliveryOverview200Response_1 = require("./getEgre
 var getEventsVolumeFromWorkspace200Response_1 = require("./getEventsVolumeFromWorkspace200Response");
 var getEventsVolumeFromWorkspaceV1Output_1 = require("./getEventsVolumeFromWorkspaceV1Output");
 var getEventsVolumeFromWorkspaceV1Query_1 = require("./getEventsVolumeFromWorkspaceV1Query");
+var getFilterByIdOutput_1 = require("./getFilterByIdOutput");
 var getFilterInDestination200Response_1 = require("./getFilterInDestination200Response");
 var getFilterInDestinationV1Output_1 = require("./getFilterInDestinationV1Output");
 var getFunction200Response_1 = require("./getFunction200Response");
@@ -847,6 +860,7 @@ var listDeliveryMetricsSummaryFromDestination200Response_1 = require("./listDeli
 var listDeliveryMetricsSummaryFromDestinationBetaOutput_1 = require("./listDeliveryMetricsSummaryFromDestinationBetaOutput");
 var listDestinations200Response_1 = require("./listDestinations200Response");
 var listDestinationsV1Output_1 = require("./listDestinationsV1Output");
+var listFiltersByIntegrationIdOutput_1 = require("./listFiltersByIntegrationIdOutput");
 var listFiltersFromDestination200Response_1 = require("./listFiltersFromDestination200Response");
 var listFiltersFromDestinationV1Output_1 = require("./listFiltersFromDestinationV1Output");
 var listFunctionItemV1_1 = require("./listFunctionItemV1");
@@ -1033,6 +1047,8 @@ var updateComputedTraitForSpaceAlphaOutput_1 = require("./updateComputedTraitFor
 var updateDestination200Response_1 = require("./updateDestination200Response");
 var updateDestinationV1Input_1 = require("./updateDestinationV1Input");
 var updateDestinationV1Output_1 = require("./updateDestinationV1Output");
+var updateFilterByIdInput_1 = require("./updateFilterByIdInput");
+var updateFilterByIdOutput_1 = require("./updateFilterByIdOutput");
 var updateFilterForDestination200Response_1 = require("./updateFilterForDestination200Response");
 var updateFilterForDestinationV1Input_1 = require("./updateFilterForDestinationV1Input");
 var updateFilterForDestinationV1Output_1 = require("./updateFilterForDestinationV1Output");
@@ -1262,6 +1278,8 @@ var typeMap = {
     CreateFilterForDestination200Response: createFilterForDestination200Response_1.CreateFilterForDestination200Response,
     CreateFilterForDestinationV1Input: createFilterForDestinationV1Input_1.CreateFilterForDestinationV1Input,
     CreateFilterForDestinationV1Output: createFilterForDestinationV1Output_1.CreateFilterForDestinationV1Output,
+    CreateFilterInput: createFilterInput_1.CreateFilterInput,
+    CreateFilterOutput: createFilterOutput_1.CreateFilterOutput,
     CreateFunction200Response: createFunction200Response_1.CreateFunction200Response,
     CreateFunctionDeployment200Response: createFunctionDeployment200Response_1.CreateFunctionDeployment200Response,
     CreateFunctionDeploymentV1Output: createFunctionDeploymentV1Output_1.CreateFunctionDeploymentV1Output,
@@ -1320,6 +1338,7 @@ var typeMap = {
     Definition1: definition1_1.Definition1,
     DeleteDestination200Response: deleteDestination200Response_1.DeleteDestination200Response,
     DeleteDestinationV1Output: deleteDestinationV1Output_1.DeleteDestinationV1Output,
+    DeleteFilterByIdOutput: deleteFilterByIdOutput_1.DeleteFilterByIdOutput,
     DeleteFunction200Response: deleteFunction200Response_1.DeleteFunction200Response,
     DeleteFunctionV1Output: deleteFunctionV1Output_1.DeleteFunctionV1Output,
     DeleteInsertFunctionInstance200Response: deleteInsertFunctionInstance200Response_1.DeleteInsertFunctionInstance200Response,
@@ -1379,6 +1398,7 @@ var typeMap = {
     EdgeFunctionsAlpha: edgeFunctionsAlpha_1.EdgeFunctionsAlpha,
     EventSourceV1: eventSourceV1_1.EventSourceV1,
     FQLDefinedPropertyV1: fQLDefinedPropertyV1_1.FQLDefinedPropertyV1,
+    Filter: filter_1.Filter,
     Function: function_1.Function,
     FunctionDeployment: functionDeployment_1.FunctionDeployment,
     FunctionSettingV1: functionSettingV1_1.FunctionSettingV1,
@@ -1412,6 +1432,7 @@ var typeMap = {
     GetEventsVolumeFromWorkspace200Response: getEventsVolumeFromWorkspace200Response_1.GetEventsVolumeFromWorkspace200Response,
     GetEventsVolumeFromWorkspaceV1Output: getEventsVolumeFromWorkspaceV1Output_1.GetEventsVolumeFromWorkspaceV1Output,
     GetEventsVolumeFromWorkspaceV1Query: getEventsVolumeFromWorkspaceV1Query_1.GetEventsVolumeFromWorkspaceV1Query,
+    GetFilterByIdOutput: getFilterByIdOutput_1.GetFilterByIdOutput,
     GetFilterInDestination200Response: getFilterInDestination200Response_1.GetFilterInDestination200Response,
     GetFilterInDestinationV1Output: getFilterInDestinationV1Output_1.GetFilterInDestinationV1Output,
     GetFunction200Response: getFunction200Response_1.GetFunction200Response,
@@ -1494,6 +1515,7 @@ var typeMap = {
     ListDeliveryMetricsSummaryFromDestinationBetaOutput: listDeliveryMetricsSummaryFromDestinationBetaOutput_1.ListDeliveryMetricsSummaryFromDestinationBetaOutput,
     ListDestinations200Response: listDestinations200Response_1.ListDestinations200Response,
     ListDestinationsV1Output: listDestinationsV1Output_1.ListDestinationsV1Output,
+    ListFiltersByIntegrationIdOutput: listFiltersByIntegrationIdOutput_1.ListFiltersByIntegrationIdOutput,
     ListFiltersFromDestination200Response: listFiltersFromDestination200Response_1.ListFiltersFromDestination200Response,
     ListFiltersFromDestinationV1Output: listFiltersFromDestinationV1Output_1.ListFiltersFromDestinationV1Output,
     ListFunctionItemV1: listFunctionItemV1_1.ListFunctionItemV1,
@@ -1680,6 +1702,8 @@ var typeMap = {
     UpdateDestination200Response: updateDestination200Response_1.UpdateDestination200Response,
     UpdateDestinationV1Input: updateDestinationV1Input_1.UpdateDestinationV1Input,
     UpdateDestinationV1Output: updateDestinationV1Output_1.UpdateDestinationV1Output,
+    UpdateFilterByIdInput: updateFilterByIdInput_1.UpdateFilterByIdInput,
+    UpdateFilterByIdOutput: updateFilterByIdOutput_1.UpdateFilterByIdOutput,
     UpdateFilterForDestination200Response: updateFilterForDestination200Response_1.UpdateFilterForDestination200Response,
     UpdateFilterForDestinationV1Input: updateFilterForDestinationV1Input_1.UpdateFilterForDestinationV1Input,
     UpdateFilterForDestinationV1Output: updateFilterForDestinationV1Output_1.UpdateFilterForDestinationV1Output,

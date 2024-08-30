@@ -11,59 +11,55 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceOptions } from './audienceOptions';
-import { Definition } from './definition';
 
 /**
- * Defines an Audience.
+ * Filter output
  */
-export class AudienceSummary {
+export class Filter {
     /**
-     * Audience id.
+     * The newly created filter ID
      */
     'id': string;
     /**
-     * Space id for the audience.
+     * The workspace id to create the filter
      */
-    'spaceId': string;
+    'workspaceId': string;
     /**
-     * Name of the audience.
+     * The integration id of the resource
+     */
+    'integrationId': string;
+    /**
+     * Whether the filter is enabled
+     */
+    'enabled'?: boolean;
+    /**
+     * Whether the event is dropped
+     */
+    'drop'?: boolean;
+    /**
+     * The name of the filter
      */
     'name': string;
     /**
-     * Description of the audience.
+     * The description of the filter
      */
     'description'?: string;
     /**
-     * Key for the audience.
+     * The \"if\" statement for a filter
      */
-    'key': string;
+    'if': string;
     /**
-     * Enabled/disabled status for the audience.
+     * The product area of the filter, which should be spaces
      */
-    'enabled': boolean;
-    'definition': Definition | null;
+    'productArea'?: string;
     /**
-     * Status for the audience.  Possible values: Backfilling, Computing, Failed, Live, Awaiting Destinations, Disabled.
+     * Describes the properties to be dropped on events that match the \"if\" statement.
      */
-    'status'?: string;
+    'propertyDrops'?: Array<string>;
     /**
-     * User id who created the audience.
+     * Describes the properties allowed on events that match the \"if\" statement.
      */
-    'createdBy': string;
-    /**
-     * User id who last updated the audience.
-     */
-    'updatedBy': string;
-    /**
-     * Date the audience was created.
-     */
-    'createdAt': string;
-    /**
-     * Date the audience was last updated.
-     */
-    'updatedAt': string;
-    'options'?: AudienceOptions;
+    'allowProperties'?: Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -78,9 +74,24 @@ export class AudienceSummary {
             type: 'string',
         },
         {
-            name: 'spaceId',
-            baseName: 'spaceId',
+            name: 'workspaceId',
+            baseName: 'workspaceId',
             type: 'string',
+        },
+        {
+            name: 'integrationId',
+            baseName: 'integrationId',
+            type: 'string',
+        },
+        {
+            name: 'enabled',
+            baseName: 'enabled',
+            type: 'boolean',
+        },
+        {
+            name: 'drop',
+            baseName: 'drop',
+            type: 'boolean',
         },
         {
             name: 'name',
@@ -93,53 +104,28 @@ export class AudienceSummary {
             type: 'string',
         },
         {
-            name: 'key',
-            baseName: 'key',
+            name: 'if',
+            baseName: 'if',
             type: 'string',
         },
         {
-            name: 'enabled',
-            baseName: 'enabled',
-            type: 'boolean',
-        },
-        {
-            name: 'definition',
-            baseName: 'definition',
-            type: 'Definition',
-        },
-        {
-            name: 'status',
-            baseName: 'status',
+            name: 'productArea',
+            baseName: 'productArea',
             type: 'string',
         },
         {
-            name: 'createdBy',
-            baseName: 'createdBy',
-            type: 'string',
+            name: 'propertyDrops',
+            baseName: 'propertyDrops',
+            type: 'Array<string>',
         },
         {
-            name: 'updatedBy',
-            baseName: 'updatedBy',
-            type: 'string',
-        },
-        {
-            name: 'createdAt',
-            baseName: 'createdAt',
-            type: 'string',
-        },
-        {
-            name: 'updatedAt',
-            baseName: 'updatedAt',
-            type: 'string',
-        },
-        {
-            name: 'options',
-            baseName: 'options',
-            type: 'AudienceOptions',
+            name: 'allowProperties',
+            baseName: 'allowProperties',
+            type: 'Array<string>',
         },
     ];
 
     static getAttributeTypeMap() {
-        return AudienceSummary.attributeTypeMap;
+        return Filter.attributeTypeMap;
     }
 }

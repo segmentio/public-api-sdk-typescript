@@ -20,6 +20,8 @@ export * from './edgeFunctionsApi';
 import { EdgeFunctionsApi } from './edgeFunctionsApi';
 export * from './eventsApi';
 import { EventsApi } from './eventsApi';
+export * from './filtersApi';
+import { FiltersApi } from './filtersApi';
 export * from './functionsApi';
 import { FunctionsApi } from './functionsApi';
 export * from './iAMGroupsApi';
@@ -79,6 +81,7 @@ export const APIS = [
     DestinationsApi,
     EdgeFunctionsApi,
     EventsApi,
+    FiltersApi,
     FunctionsApi,
     IAMGroupsApi,
     IAMRolesApi,

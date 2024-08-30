@@ -60,6 +60,8 @@ export * from './createEdgeFunctionsAlphaOutput';
 export * from './createFilterForDestination200Response';
 export * from './createFilterForDestinationV1Input';
 export * from './createFilterForDestinationV1Output';
+export * from './createFilterInput';
+export * from './createFilterOutput';
 export * from './createFunction200Response';
 export * from './createFunctionDeployment200Response';
 export * from './createFunctionDeploymentV1Output';
@@ -118,6 +120,7 @@ export * from './definition';
 export * from './definition1';
 export * from './deleteDestination200Response';
 export * from './deleteDestinationV1Output';
+export * from './deleteFilterByIdOutput';
 export * from './deleteFunction200Response';
 export * from './deleteFunctionV1Output';
 export * from './deleteInsertFunctionInstance200Response';
@@ -177,6 +180,7 @@ export * from './echoV1Output';
 export * from './edgeFunctionsAlpha';
 export * from './eventSourceV1';
 export * from './fQLDefinedPropertyV1';
+export * from './filter';
 export * from './function';
 export * from './functionDeployment';
 export * from './functionSettingV1';
@@ -210,6 +214,7 @@ export * from './getEgressFailedMetricsFromDeliveryOverview200Response';
 export * from './getEventsVolumeFromWorkspace200Response';
 export * from './getEventsVolumeFromWorkspaceV1Output';
 export * from './getEventsVolumeFromWorkspaceV1Query';
+export * from './getFilterByIdOutput';
 export * from './getFilterInDestination200Response';
 export * from './getFilterInDestinationV1Output';
 export * from './getFunction200Response';
@@ -292,6 +297,7 @@ export * from './listDeliveryMetricsSummaryFromDestination200Response';
 export * from './listDeliveryMetricsSummaryFromDestinationBetaOutput';
 export * from './listDestinations200Response';
 export * from './listDestinationsV1Output';
+export * from './listFiltersByIntegrationIdOutput';
 export * from './listFiltersFromDestination200Response';
 export * from './listFiltersFromDestinationV1Output';
 export * from './listFunctionItemV1';
@@ -478,6 +484,8 @@ export * from './updateComputedTraitForSpaceAlphaOutput';
 export * from './updateDestination200Response';
 export * from './updateDestinationV1Input';
 export * from './updateDestinationV1Output';
+export * from './updateFilterByIdInput';
+export * from './updateFilterByIdOutput';
 export * from './updateFilterForDestination200Response';
 export * from './updateFilterForDestinationV1Input';
 export * from './updateFilterForDestinationV1Output';
@@ -613,6 +621,8 @@ import { CreateEdgeFunctionsAlphaOutput } from './createEdgeFunctionsAlphaOutput
 import { CreateFilterForDestination200Response } from './createFilterForDestination200Response';
 import { CreateFilterForDestinationV1Input } from './createFilterForDestinationV1Input';
 import { CreateFilterForDestinationV1Output } from './createFilterForDestinationV1Output';
+import { CreateFilterInput } from './createFilterInput';
+import { CreateFilterOutput } from './createFilterOutput';
 import { CreateFunction200Response } from './createFunction200Response';
 import { CreateFunctionDeployment200Response } from './createFunctionDeployment200Response';
 import { CreateFunctionDeploymentV1Output } from './createFunctionDeploymentV1Output';
@@ -671,6 +681,7 @@ import { Definition } from './definition';
 import { Definition1 } from './definition1';
 import { DeleteDestination200Response } from './deleteDestination200Response';
 import { DeleteDestinationV1Output } from './deleteDestinationV1Output';
+import { DeleteFilterByIdOutput } from './deleteFilterByIdOutput';
 import { DeleteFunction200Response } from './deleteFunction200Response';
 import { DeleteFunctionV1Output } from './deleteFunctionV1Output';
 import { DeleteInsertFunctionInstance200Response } from './deleteInsertFunctionInstance200Response';
@@ -730,6 +741,7 @@ import { EchoV1Output } from './echoV1Output';
 import { EdgeFunctionsAlpha } from './edgeFunctionsAlpha';
 import { EventSourceV1 } from './eventSourceV1';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
+import { Filter } from './filter';
 import { Function } from './function';
 import { FunctionDeployment } from './functionDeployment';
 import { FunctionSettingV1 } from './functionSettingV1';
@@ -763,6 +775,7 @@ import { GetEgressFailedMetricsFromDeliveryOverview200Response } from './getEgre
 import { GetEventsVolumeFromWorkspace200Response } from './getEventsVolumeFromWorkspace200Response';
 import { GetEventsVolumeFromWorkspaceV1Output } from './getEventsVolumeFromWorkspaceV1Output';
 import { GetEventsVolumeFromWorkspaceV1Query } from './getEventsVolumeFromWorkspaceV1Query';
+import { GetFilterByIdOutput } from './getFilterByIdOutput';
 import { GetFilterInDestination200Response } from './getFilterInDestination200Response';
 import { GetFilterInDestinationV1Output } from './getFilterInDestinationV1Output';
 import { GetFunction200Response } from './getFunction200Response';
@@ -845,6 +858,7 @@ import { ListDeliveryMetricsSummaryFromDestination200Response } from './listDeli
 import { ListDeliveryMetricsSummaryFromDestinationBetaOutput } from './listDeliveryMetricsSummaryFromDestinationBetaOutput';
 import { ListDestinations200Response } from './listDestinations200Response';
 import { ListDestinationsV1Output } from './listDestinationsV1Output';
+import { ListFiltersByIntegrationIdOutput } from './listFiltersByIntegrationIdOutput';
 import { ListFiltersFromDestination200Response } from './listFiltersFromDestination200Response';
 import { ListFiltersFromDestinationV1Output } from './listFiltersFromDestinationV1Output';
 import { ListFunctionItemV1 } from './listFunctionItemV1';
@@ -1031,6 +1045,8 @@ import { UpdateComputedTraitForSpaceAlphaOutput } from './updateComputedTraitFor
 import { UpdateDestination200Response } from './updateDestination200Response';
 import { UpdateDestinationV1Input } from './updateDestinationV1Input';
 import { UpdateDestinationV1Output } from './updateDestinationV1Output';
+import { UpdateFilterByIdInput } from './updateFilterByIdInput';
+import { UpdateFilterByIdOutput } from './updateFilterByIdOutput';
 import { UpdateFilterForDestination200Response } from './updateFilterForDestination200Response';
 import { UpdateFilterForDestinationV1Input } from './updateFilterForDestinationV1Input';
 import { UpdateFilterForDestinationV1Output } from './updateFilterForDestinationV1Output';
@@ -1331,6 +1347,8 @@ let typeMap: { [index: string]: any } = {
         CreateFilterForDestination200Response,
     CreateFilterForDestinationV1Input: CreateFilterForDestinationV1Input,
     CreateFilterForDestinationV1Output: CreateFilterForDestinationV1Output,
+    CreateFilterInput: CreateFilterInput,
+    CreateFilterOutput: CreateFilterOutput,
     CreateFunction200Response: CreateFunction200Response,
     CreateFunctionDeployment200Response: CreateFunctionDeployment200Response,
     CreateFunctionDeploymentV1Output: CreateFunctionDeploymentV1Output,
@@ -1394,6 +1412,7 @@ let typeMap: { [index: string]: any } = {
     Definition1: Definition1,
     DeleteDestination200Response: DeleteDestination200Response,
     DeleteDestinationV1Output: DeleteDestinationV1Output,
+    DeleteFilterByIdOutput: DeleteFilterByIdOutput,
     DeleteFunction200Response: DeleteFunction200Response,
     DeleteFunctionV1Output: DeleteFunctionV1Output,
     DeleteInsertFunctionInstance200Response:
@@ -1457,6 +1476,7 @@ let typeMap: { [index: string]: any } = {
     EdgeFunctionsAlpha: EdgeFunctionsAlpha,
     EventSourceV1: EventSourceV1,
     FQLDefinedPropertyV1: FQLDefinedPropertyV1,
+    Filter: Filter,
     Function: Function,
     FunctionDeployment: FunctionDeployment,
     FunctionSettingV1: FunctionSettingV1,
@@ -1502,6 +1522,7 @@ let typeMap: { [index: string]: any } = {
         GetEventsVolumeFromWorkspace200Response,
     GetEventsVolumeFromWorkspaceV1Output: GetEventsVolumeFromWorkspaceV1Output,
     GetEventsVolumeFromWorkspaceV1Query: GetEventsVolumeFromWorkspaceV1Query,
+    GetFilterByIdOutput: GetFilterByIdOutput,
     GetFilterInDestination200Response: GetFilterInDestination200Response,
     GetFilterInDestinationV1Output: GetFilterInDestinationV1Output,
     GetFunction200Response: GetFunction200Response,
@@ -1602,6 +1623,7 @@ let typeMap: { [index: string]: any } = {
         ListDeliveryMetricsSummaryFromDestinationBetaOutput,
     ListDestinations200Response: ListDestinations200Response,
     ListDestinationsV1Output: ListDestinationsV1Output,
+    ListFiltersByIntegrationIdOutput: ListFiltersByIntegrationIdOutput,
     ListFiltersFromDestination200Response:
         ListFiltersFromDestination200Response,
     ListFiltersFromDestinationV1Output: ListFiltersFromDestinationV1Output,
@@ -1829,6 +1851,8 @@ let typeMap: { [index: string]: any } = {
     UpdateDestination200Response: UpdateDestination200Response,
     UpdateDestinationV1Input: UpdateDestinationV1Input,
     UpdateDestinationV1Output: UpdateDestinationV1Output,
+    UpdateFilterByIdInput: UpdateFilterByIdInput,
+    UpdateFilterByIdOutput: UpdateFilterByIdOutput,
     UpdateFilterForDestination200Response:
         UpdateFilterForDestination200Response,
     UpdateFilterForDestinationV1Input: UpdateFilterForDestinationV1Input,

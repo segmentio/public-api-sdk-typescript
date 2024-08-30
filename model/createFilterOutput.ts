@@ -11,19 +11,13 @@
  */
 
 import { RequestFile } from './models';
+import { Filter } from './filter';
 
 /**
- * Query language definition and type.
+ * Output for CreateFilter.
  */
-export class Definition {
-    /**
-     * The query language string defining the audience segmentation criteria.
-     */
-    'query': string;
-    /**
-     * The underlying data type being segmented for this audience.  Possible values: users, accounts.
-     */
-    'type': Definition.TypeEnum;
+export class CreateFilterOutput {
+    'filter': Filter;
 
     static discriminator: string | undefined = undefined;
 
@@ -33,25 +27,13 @@ export class Definition {
         type: string;
     }> = [
         {
-            name: 'query',
-            baseName: 'query',
-            type: 'string',
-        },
-        {
-            name: 'type',
-            baseName: 'type',
-            type: 'Definition.TypeEnum',
+            name: 'filter',
+            baseName: 'filter',
+            type: 'Filter',
         },
     ];
 
     static getAttributeTypeMap() {
-        return Definition.attributeTypeMap;
-    }
-}
-
-export namespace Definition {
-    export enum TypeEnum {
-        ACCOUNTS = <any>'ACCOUNTS',
-        USERS = <any>'USERS',
+        return CreateFilterOutput.attributeTypeMap;
     }
 }
