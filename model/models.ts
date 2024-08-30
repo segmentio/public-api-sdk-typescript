@@ -114,8 +114,6 @@ export * from './createWorkspaceRegulationV1Input';
 export * from './createWorkspaceRegulationV1Output';
 export * from './createWriteKeyForSource200Response';
 export * from './createWriteKeyForSourceAlphaOutput';
-export * from './definition';
-export * from './definition1';
 export * from './deleteDestination200Response';
 export * from './deleteDestinationV1Output';
 export * from './deleteFunction200Response';
@@ -177,7 +175,6 @@ export * from './echoV1Output';
 export * from './edgeFunctionsAlpha';
 export * from './eventSourceV1';
 export * from './fQLDefinedPropertyV1';
-export * from './function';
 export * from './functionDeployment';
 export * from './functionSettingV1';
 export * from './functionV1';
@@ -222,6 +219,8 @@ export * from './getLatestFromEdgeFunctions200Response';
 export * from './getLatestFromEdgeFunctionsAlphaOutput';
 export * from './getMessagingSubscriptionFailureResponse';
 export * from './getMessagingSubscriptionSuccessResponse';
+export * from './getPersonalizationDataInput';
+export * from './getPersonalizationDataOutput';
 export * from './getRegulation200Response';
 export * from './getRegulationV1Output';
 export * from './getReverseETLSyncStatus200Response';
@@ -667,8 +666,6 @@ import { CreateWorkspaceRegulationV1Input } from './createWorkspaceRegulationV1I
 import { CreateWorkspaceRegulationV1Output } from './createWorkspaceRegulationV1Output';
 import { CreateWriteKeyForSource200Response } from './createWriteKeyForSource200Response';
 import { CreateWriteKeyForSourceAlphaOutput } from './createWriteKeyForSourceAlphaOutput';
-import { Definition } from './definition';
-import { Definition1 } from './definition1';
 import { DeleteDestination200Response } from './deleteDestination200Response';
 import { DeleteDestinationV1Output } from './deleteDestinationV1Output';
 import { DeleteFunction200Response } from './deleteFunction200Response';
@@ -730,7 +727,6 @@ import { EchoV1Output } from './echoV1Output';
 import { EdgeFunctionsAlpha } from './edgeFunctionsAlpha';
 import { EventSourceV1 } from './eventSourceV1';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
-import { Function } from './function';
 import { FunctionDeployment } from './functionDeployment';
 import { FunctionSettingV1 } from './functionSettingV1';
 import { FunctionV1 } from './functionV1';
@@ -775,6 +771,8 @@ import { GetLatestFromEdgeFunctions200Response } from './getLatestFromEdgeFuncti
 import { GetLatestFromEdgeFunctionsAlphaOutput } from './getLatestFromEdgeFunctionsAlphaOutput';
 import { GetMessagingSubscriptionFailureResponse } from './getMessagingSubscriptionFailureResponse';
 import { GetMessagingSubscriptionSuccessResponse } from './getMessagingSubscriptionSuccessResponse';
+import { GetPersonalizationDataInput } from './getPersonalizationDataInput';
+import { GetPersonalizationDataOutput } from './getPersonalizationDataOutput';
 import { GetRegulation200Response } from './getRegulation200Response';
 import { GetRegulationV1Output } from './getRegulationV1Output';
 import { GetReverseETLSyncStatus200Response } from './getReverseETLSyncStatus200Response';
@@ -1134,8 +1132,6 @@ let enumsMap: { [index: string]: any } = {
         CreateWorkspaceRegulationV1Input.RegulationTypeEnum,
     'CreateWorkspaceRegulationV1Input.SubjectTypeEnum':
         CreateWorkspaceRegulationV1Input.SubjectTypeEnum,
-    'Definition.TypeEnum': Definition.TypeEnum,
-    'Definition1.TypeEnum': Definition1.TypeEnum,
     'DeleteDestinationV1Output.StatusEnum':
         DeleteDestinationV1Output.StatusEnum,
     'DeleteFunctionV1Output.StatusEnum': DeleteFunctionV1Output.StatusEnum,
@@ -1175,7 +1171,6 @@ let enumsMap: { [index: string]: any } = {
     'DestinationStatusV1.StatusEnum': DestinationStatusV1.StatusEnum,
     'EchoAlphaOutput.MethodEnum': EchoAlphaOutput.MethodEnum,
     'EchoV1Output.MethodEnum': EchoV1Output.MethodEnum,
-    'Function.ResourceTypeEnum': Function.ResourceTypeEnum,
     'FunctionDeployment.StatusEnum': FunctionDeployment.StatusEnum,
     'FunctionSettingV1.TypeEnum': FunctionSettingV1.TypeEnum,
     'FunctionV1.ResourceTypeEnum': FunctionV1.ResourceTypeEnum,
@@ -1390,8 +1385,6 @@ let typeMap: { [index: string]: any } = {
     CreateWorkspaceRegulationV1Output: CreateWorkspaceRegulationV1Output,
     CreateWriteKeyForSource200Response: CreateWriteKeyForSource200Response,
     CreateWriteKeyForSourceAlphaOutput: CreateWriteKeyForSourceAlphaOutput,
-    Definition: Definition,
-    Definition1: Definition1,
     DeleteDestination200Response: DeleteDestination200Response,
     DeleteDestinationV1Output: DeleteDestinationV1Output,
     DeleteFunction200Response: DeleteFunction200Response,
@@ -1457,7 +1450,6 @@ let typeMap: { [index: string]: any } = {
     EdgeFunctionsAlpha: EdgeFunctionsAlpha,
     EventSourceV1: EventSourceV1,
     FQLDefinedPropertyV1: FQLDefinedPropertyV1,
-    Function: Function,
     FunctionDeployment: FunctionDeployment,
     FunctionSettingV1: FunctionSettingV1,
     FunctionV1: FunctionV1,
@@ -1518,6 +1510,8 @@ let typeMap: { [index: string]: any } = {
         GetMessagingSubscriptionFailureResponse,
     GetMessagingSubscriptionSuccessResponse:
         GetMessagingSubscriptionSuccessResponse,
+    GetPersonalizationDataInput: GetPersonalizationDataInput,
+    GetPersonalizationDataOutput: GetPersonalizationDataOutput,
     GetRegulation200Response: GetRegulation200Response,
     GetRegulationV1Output: GetRegulationV1Output,
     GetReverseETLSyncStatus200Response: GetReverseETLSyncStatus200Response,

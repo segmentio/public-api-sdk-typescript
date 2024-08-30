@@ -13,17 +13,13 @@
 import { RequestFile } from './models';
 
 /**
- * Query language definition and type.
+ * Response for the getEntityDataForProfile endpoint.
  */
-export class Definition1 {
+export class GetPersonalizationDataOutput {
     /**
-     * The query language string defining the audience segmentation criteria.
+     * A key-value object that contains instance-specific Warehouse settings.
      */
-    'query': string;
-    /**
-     * The underlying data type being segmented for this audience.  Possible values: users, accounts.
-     */
-    'type': Definition1.TypeEnum;
+    'personalizationData': { [key: string]: any };
 
     static discriminator: string | undefined = undefined;
 
@@ -33,25 +29,13 @@ export class Definition1 {
         type: string;
     }> = [
         {
-            name: 'query',
-            baseName: 'query',
-            type: 'string',
-        },
-        {
-            name: 'type',
-            baseName: 'type',
-            type: 'Definition1.TypeEnum',
+            name: 'personalizationData',
+            baseName: 'personalizationData',
+            type: '{ [key: string]: any; }',
         },
     ];
 
     static getAttributeTypeMap() {
-        return Definition1.attributeTypeMap;
-    }
-}
-
-export namespace Definition1 {
-    export enum TypeEnum {
-        ACCOUNTS = <any>'ACCOUNTS',
-        USERS = <any>'USERS',
+        return GetPersonalizationDataOutput.attributeTypeMap;
     }
 }

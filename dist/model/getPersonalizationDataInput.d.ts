@@ -1,6 +1,8 @@
-export declare class Definition1 {
-    'query': string;
-    'type': Definition1.TypeEnum;
+export declare class GetPersonalizationDataInput {
+    'spaceId': string;
+    'entityType': string;
+    'entityId': string;
+    'childEntityType'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -12,10 +14,4 @@ export declare class Definition1 {
         baseName: string;
         type: string;
     }[];
-}
-export declare namespace Definition1 {
-    enum TypeEnum {
-        ACCOUNTS,
-        USERS
-    }
 }

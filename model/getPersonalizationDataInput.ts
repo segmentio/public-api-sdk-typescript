@@ -13,17 +13,25 @@
 import { RequestFile } from './models';
 
 /**
- * Query language definition and type.
+ * Input for the getEntityDataForProfile endpoint.
  */
-export class Definition {
+export class GetPersonalizationDataInput {
     /**
-     * The query language string defining the computed trait aggregation criteria. For guidance on using the query language, see the [Segment documentation site](https://segment.com/docs/api/public-api/query-language).
+     * The space id.
      */
-    'query': string;
+    'spaceId': string;
     /**
-     * The underlying data type being aggregated for this computed trait.  Possible values: users, accounts.
+     * Entity type.
      */
-    'type': Definition.TypeEnum;
+    'entityType': string;
+    /**
+     * Entity id - if type is profile, should have the shape \"<type>:<identifier>\".
+     */
+    'entityId': string;
+    /**
+     * Child entity type.
+     */
+    'childEntityType'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -33,25 +41,28 @@ export class Definition {
         type: string;
     }> = [
         {
-            name: 'query',
-            baseName: 'query',
+            name: 'spaceId',
+            baseName: 'spaceId',
             type: 'string',
         },
         {
-            name: 'type',
-            baseName: 'type',
-            type: 'Definition.TypeEnum',
+            name: 'entityType',
+            baseName: 'entityType',
+            type: 'string',
+        },
+        {
+            name: 'entityId',
+            baseName: 'entityId',
+            type: 'string',
+        },
+        {
+            name: 'childEntityType',
+            baseName: 'childEntityType',
+            type: 'string',
         },
     ];
 
     static getAttributeTypeMap() {
-        return Definition.attributeTypeMap;
-    }
-}
-
-export namespace Definition {
-    export enum TypeEnum {
-        ACCOUNTS = <any>'ACCOUNTS',
-        USERS = <any>'USERS',
+        return GetPersonalizationDataInput.attributeTypeMap;
     }
 }

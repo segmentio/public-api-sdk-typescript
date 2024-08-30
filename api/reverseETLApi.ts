@@ -725,7 +725,7 @@ export class ReverseETLApi {
      * @param modelId
      * @param subscriptionId
      * @param count The number of items to retrieve in a page, between 1 and 100. Default is 10  This parameter exists in alpha.
-     * @param cursor The page to request. Acceptable values to use are from the &#x60;current&#x60;, &#x60;next&#x60;, and &#x60;previous&#x60; keys.  This parameter exists in alpha.
+     * @param cursor The page to request. Acceptable values to use here are in the &#x60;current&#x60;, &#x60;next&#x60;, and &#x60;previous&#x60; keys.  This parameter exists in alpha.
      */
     public async listReverseETLSyncStatusesFromModelAndSubscriptionId(
         modelId: string,

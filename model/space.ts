@@ -12,9 +12,6 @@
 
 import { RequestFile } from './models';
 
-/**
- * Space matching the given id.
- */
 export class Space {
     'id': string;
     'slug': string;
