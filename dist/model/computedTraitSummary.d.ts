@@ -1,4 +1,4 @@
-import { Definition } from './definition';
+import { ComputedTraitsDefinition } from './computedTraitsDefinition';
 import { TraitOptions } from './traitOptions';
 export declare class ComputedTraitSummary {
     'id': string;
@@ -7,7 +7,7 @@ export declare class ComputedTraitSummary {
     'description'?: string;
     'key': string;
     'enabled': boolean;
-    'definition': Definition | null;
+    'definition': ComputedTraitsDefinition | null;
     'status'?: string;
     'createdBy': string;
     'updatedBy': string;

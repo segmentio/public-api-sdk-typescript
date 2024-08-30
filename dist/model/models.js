@@ -129,8 +129,6 @@ __exportStar(require("./createWorkspaceRegulationV1Input"), exports);
 __exportStar(require("./createWorkspaceRegulationV1Output"), exports);
 __exportStar(require("./createWriteKeyForSource200Response"), exports);
 __exportStar(require("./createWriteKeyForSourceAlphaOutput"), exports);
-__exportStar(require("./definition"), exports);
-__exportStar(require("./definition1"), exports);
 __exportStar(require("./deleteDestination200Response"), exports);
 __exportStar(require("./deleteDestinationV1Output"), exports);
 __exportStar(require("./deleteFunction200Response"), exports);
@@ -192,7 +190,6 @@ __exportStar(require("./echoV1Output"), exports);
 __exportStar(require("./edgeFunctionsAlpha"), exports);
 __exportStar(require("./eventSourceV1"), exports);
 __exportStar(require("./fQLDefinedPropertyV1"), exports);
-__exportStar(require("./function"), exports);
 __exportStar(require("./functionDeployment"), exports);
 __exportStar(require("./functionSettingV1"), exports);
 __exportStar(require("./functionV1"), exports);
@@ -237,6 +234,8 @@ __exportStar(require("./getLatestFromEdgeFunctions200Response"), exports);
 __exportStar(require("./getLatestFromEdgeFunctionsAlphaOutput"), exports);
 __exportStar(require("./getMessagingSubscriptionFailureResponse"), exports);
 __exportStar(require("./getMessagingSubscriptionSuccessResponse"), exports);
+__exportStar(require("./getPersonalizationData200Response"), exports);
+__exportStar(require("./getPersonalizationDataOutput"), exports);
 __exportStar(require("./getRegulation200Response"), exports);
 __exportStar(require("./getRegulationV1Output"), exports);
 __exportStar(require("./getReverseETLSyncStatus200Response"), exports);
@@ -669,8 +668,6 @@ var createWorkspaceRegulationV1Input_1 = require("./createWorkspaceRegulationV1I
 var createWorkspaceRegulationV1Output_1 = require("./createWorkspaceRegulationV1Output");
 var createWriteKeyForSource200Response_1 = require("./createWriteKeyForSource200Response");
 var createWriteKeyForSourceAlphaOutput_1 = require("./createWriteKeyForSourceAlphaOutput");
-var definition_1 = require("./definition");
-var definition1_1 = require("./definition1");
 var deleteDestination200Response_1 = require("./deleteDestination200Response");
 var deleteDestinationV1Output_1 = require("./deleteDestinationV1Output");
 var deleteFunction200Response_1 = require("./deleteFunction200Response");
@@ -732,7 +729,6 @@ var echoV1Output_1 = require("./echoV1Output");
 var edgeFunctionsAlpha_1 = require("./edgeFunctionsAlpha");
 var eventSourceV1_1 = require("./eventSourceV1");
 var fQLDefinedPropertyV1_1 = require("./fQLDefinedPropertyV1");
-var function_1 = require("./function");
 var functionDeployment_1 = require("./functionDeployment");
 var functionSettingV1_1 = require("./functionSettingV1");
 var functionV1_1 = require("./functionV1");
@@ -777,6 +773,8 @@ var getLatestFromEdgeFunctions200Response_1 = require("./getLatestFromEdgeFuncti
 var getLatestFromEdgeFunctionsAlphaOutput_1 = require("./getLatestFromEdgeFunctionsAlphaOutput");
 var getMessagingSubscriptionFailureResponse_1 = require("./getMessagingSubscriptionFailureResponse");
 var getMessagingSubscriptionSuccessResponse_1 = require("./getMessagingSubscriptionSuccessResponse");
+var getPersonalizationData200Response_1 = require("./getPersonalizationData200Response");
+var getPersonalizationDataOutput_1 = require("./getPersonalizationDataOutput");
 var getRegulation200Response_1 = require("./getRegulation200Response");
 var getRegulationV1Output_1 = require("./getRegulationV1Output");
 var getReverseETLSyncStatus200Response_1 = require("./getReverseETLSyncStatus200Response");
@@ -1121,8 +1119,6 @@ var enumsMap = {
     'CreateValidationInWarehouseV1Output.StatusEnum': createValidationInWarehouseV1Output_1.CreateValidationInWarehouseV1Output.StatusEnum,
     'CreateWorkspaceRegulationV1Input.RegulationTypeEnum': createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input.RegulationTypeEnum,
     'CreateWorkspaceRegulationV1Input.SubjectTypeEnum': createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input.SubjectTypeEnum,
-    'Definition.TypeEnum': definition_1.Definition.TypeEnum,
-    'Definition1.TypeEnum': definition1_1.Definition1.TypeEnum,
     'DeleteDestinationV1Output.StatusEnum': deleteDestinationV1Output_1.DeleteDestinationV1Output.StatusEnum,
     'DeleteFunctionV1Output.StatusEnum': deleteFunctionV1Output_1.DeleteFunctionV1Output.StatusEnum,
     'DeleteInsertFunctionInstanceAlphaOutput.StatusEnum': deleteInsertFunctionInstanceAlphaOutput_1.DeleteInsertFunctionInstanceAlphaOutput.StatusEnum,
@@ -1150,7 +1146,6 @@ var enumsMap = {
     'DestinationStatusV1.StatusEnum': destinationStatusV1_1.DestinationStatusV1.StatusEnum,
     'EchoAlphaOutput.MethodEnum': echoAlphaOutput_1.EchoAlphaOutput.MethodEnum,
     'EchoV1Output.MethodEnum': echoV1Output_1.EchoV1Output.MethodEnum,
-    'Function.ResourceTypeEnum': function_1.Function.ResourceTypeEnum,
     'FunctionDeployment.StatusEnum': functionDeployment_1.FunctionDeployment.StatusEnum,
     'FunctionSettingV1.TypeEnum': functionSettingV1_1.FunctionSettingV1.TypeEnum,
     'FunctionV1.ResourceTypeEnum': functionV1_1.FunctionV1.ResourceTypeEnum,
@@ -1316,8 +1311,6 @@ var typeMap = {
     CreateWorkspaceRegulationV1Output: createWorkspaceRegulationV1Output_1.CreateWorkspaceRegulationV1Output,
     CreateWriteKeyForSource200Response: createWriteKeyForSource200Response_1.CreateWriteKeyForSource200Response,
     CreateWriteKeyForSourceAlphaOutput: createWriteKeyForSourceAlphaOutput_1.CreateWriteKeyForSourceAlphaOutput,
-    Definition: definition_1.Definition,
-    Definition1: definition1_1.Definition1,
     DeleteDestination200Response: deleteDestination200Response_1.DeleteDestination200Response,
     DeleteDestinationV1Output: deleteDestinationV1Output_1.DeleteDestinationV1Output,
     DeleteFunction200Response: deleteFunction200Response_1.DeleteFunction200Response,
@@ -1379,7 +1372,6 @@ var typeMap = {
     EdgeFunctionsAlpha: edgeFunctionsAlpha_1.EdgeFunctionsAlpha,
     EventSourceV1: eventSourceV1_1.EventSourceV1,
     FQLDefinedPropertyV1: fQLDefinedPropertyV1_1.FQLDefinedPropertyV1,
-    Function: function_1.Function,
     FunctionDeployment: functionDeployment_1.FunctionDeployment,
     FunctionSettingV1: functionSettingV1_1.FunctionSettingV1,
     FunctionV1: functionV1_1.FunctionV1,
@@ -1424,6 +1416,8 @@ var typeMap = {
     GetLatestFromEdgeFunctionsAlphaOutput: getLatestFromEdgeFunctionsAlphaOutput_1.GetLatestFromEdgeFunctionsAlphaOutput,
     GetMessagingSubscriptionFailureResponse: getMessagingSubscriptionFailureResponse_1.GetMessagingSubscriptionFailureResponse,
     GetMessagingSubscriptionSuccessResponse: getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse,
+    GetPersonalizationData200Response: getPersonalizationData200Response_1.GetPersonalizationData200Response,
+    GetPersonalizationDataOutput: getPersonalizationDataOutput_1.GetPersonalizationDataOutput,
     GetRegulation200Response: getRegulation200Response_1.GetRegulation200Response,
     GetRegulationV1Output: getRegulationV1Output_1.GetRegulationV1Output,
     GetReverseETLSyncStatus200Response: getReverseETLSyncStatus200Response_1.GetReverseETLSyncStatus200Response,
