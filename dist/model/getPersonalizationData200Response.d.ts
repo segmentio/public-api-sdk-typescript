@@ -1,8 +1,6 @@
-export declare class GetPersonalizationDataInput {
-    'spaceId': string;
-    'entityType': string;
-    'entityId': string;
-    'childEntityType'?: string;
+import { GetPersonalizationDataOutput } from './getPersonalizationDataOutput';
+export declare class GetPersonalizationData200Response {
+    'data'?: GetPersonalizationDataOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
