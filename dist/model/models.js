@@ -234,6 +234,8 @@ __exportStar(require("./getLatestFromEdgeFunctions200Response"), exports);
 __exportStar(require("./getLatestFromEdgeFunctionsAlphaOutput"), exports);
 __exportStar(require("./getMessagingSubscriptionFailureResponse"), exports);
 __exportStar(require("./getMessagingSubscriptionSuccessResponse"), exports);
+__exportStar(require("./getPersonalizationDataInput"), exports);
+__exportStar(require("./getPersonalizationDataOutput"), exports);
 __exportStar(require("./getRegulation200Response"), exports);
 __exportStar(require("./getRegulationV1Output"), exports);
 __exportStar(require("./getReverseETLSyncStatus200Response"), exports);
@@ -771,6 +773,8 @@ var getLatestFromEdgeFunctions200Response_1 = require("./getLatestFromEdgeFuncti
 var getLatestFromEdgeFunctionsAlphaOutput_1 = require("./getLatestFromEdgeFunctionsAlphaOutput");
 var getMessagingSubscriptionFailureResponse_1 = require("./getMessagingSubscriptionFailureResponse");
 var getMessagingSubscriptionSuccessResponse_1 = require("./getMessagingSubscriptionSuccessResponse");
+var getPersonalizationDataInput_1 = require("./getPersonalizationDataInput");
+var getPersonalizationDataOutput_1 = require("./getPersonalizationDataOutput");
 var getRegulation200Response_1 = require("./getRegulation200Response");
 var getRegulationV1Output_1 = require("./getRegulationV1Output");
 var getReverseETLSyncStatus200Response_1 = require("./getReverseETLSyncStatus200Response");
@@ -1412,6 +1416,8 @@ var typeMap = {
     GetLatestFromEdgeFunctionsAlphaOutput: getLatestFromEdgeFunctionsAlphaOutput_1.GetLatestFromEdgeFunctionsAlphaOutput,
     GetMessagingSubscriptionFailureResponse: getMessagingSubscriptionFailureResponse_1.GetMessagingSubscriptionFailureResponse,
     GetMessagingSubscriptionSuccessResponse: getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse,
+    GetPersonalizationDataInput: getPersonalizationDataInput_1.GetPersonalizationDataInput,
+    GetPersonalizationDataOutput: getPersonalizationDataOutput_1.GetPersonalizationDataOutput,
     GetRegulation200Response: getRegulation200Response_1.GetRegulation200Response,
     GetRegulationV1Output: getRegulationV1Output_1.GetRegulationV1Output,
     GetReverseETLSyncStatus200Response: getReverseETLSyncStatus200Response_1.GetReverseETLSyncStatus200Response,

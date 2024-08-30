@@ -219,6 +219,8 @@ export * from './getLatestFromEdgeFunctions200Response';
 export * from './getLatestFromEdgeFunctionsAlphaOutput';
 export * from './getMessagingSubscriptionFailureResponse';
 export * from './getMessagingSubscriptionSuccessResponse';
+export * from './getPersonalizationDataInput';
+export * from './getPersonalizationDataOutput';
 export * from './getRegulation200Response';
 export * from './getRegulationV1Output';
 export * from './getReverseETLSyncStatus200Response';
@@ -769,6 +771,8 @@ import { GetLatestFromEdgeFunctions200Response } from './getLatestFromEdgeFuncti
 import { GetLatestFromEdgeFunctionsAlphaOutput } from './getLatestFromEdgeFunctionsAlphaOutput';
 import { GetMessagingSubscriptionFailureResponse } from './getMessagingSubscriptionFailureResponse';
 import { GetMessagingSubscriptionSuccessResponse } from './getMessagingSubscriptionSuccessResponse';
+import { GetPersonalizationDataInput } from './getPersonalizationDataInput';
+import { GetPersonalizationDataOutput } from './getPersonalizationDataOutput';
 import { GetRegulation200Response } from './getRegulation200Response';
 import { GetRegulationV1Output } from './getRegulationV1Output';
 import { GetReverseETLSyncStatus200Response } from './getReverseETLSyncStatus200Response';
@@ -1506,6 +1510,8 @@ let typeMap: { [index: string]: any } = {
         GetMessagingSubscriptionFailureResponse,
     GetMessagingSubscriptionSuccessResponse:
         GetMessagingSubscriptionSuccessResponse,
+    GetPersonalizationDataInput: GetPersonalizationDataInput,
+    GetPersonalizationDataOutput: GetPersonalizationDataOutput,
     GetRegulation200Response: GetRegulation200Response,
     GetRegulationV1Output: GetRegulationV1Output,
     GetReverseETLSyncStatus200Response: GetReverseETLSyncStatus200Response,

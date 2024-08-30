@@ -220,6 +220,8 @@ export * from './getLatestFromEdgeFunctions200Response';
 export * from './getLatestFromEdgeFunctionsAlphaOutput';
 export * from './getMessagingSubscriptionFailureResponse';
 export * from './getMessagingSubscriptionSuccessResponse';
+export * from './getPersonalizationDataInput';
+export * from './getPersonalizationDataOutput';
 export * from './getRegulation200Response';
 export * from './getRegulationV1Output';
 export * from './getReverseETLSyncStatus200Response';
