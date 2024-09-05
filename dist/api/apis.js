@@ -100,6 +100,8 @@ __exportStar(require("./labelsApi"), exports);
 var labelsApi_1 = require("./labelsApi");
 __exportStar(require("./monthlyTrackedUsersApi"), exports);
 var monthlyTrackedUsersApi_1 = require("./monthlyTrackedUsersApi");
+__exportStar(require("./personalizationApi"), exports);
+var personalizationApi_1 = require("./personalizationApi");
 __exportStar(require("./profilesSyncApi"), exports);
 var profilesSyncApi_1 = require("./profilesSyncApi");
 __exportStar(require("./reverseETLApi"), exports);
@@ -151,6 +153,7 @@ exports.APIS = [
     iAMUsersApi_1.IAMUsersApi,
     labelsApi_1.LabelsApi,
     monthlyTrackedUsersApi_1.MonthlyTrackedUsersApi,
+    personalizationApi_1.PersonalizationApi,
     profilesSyncApi_1.ProfilesSyncApi,
     reverseETLApi_1.ReverseETLApi,
     selectiveSyncApi_1.SelectiveSyncApi,
@@ -191,7 +194,7 @@ function configureApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 53.2.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 53.3.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -228,7 +231,7 @@ function configureEuApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 53.2.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 53.3.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
