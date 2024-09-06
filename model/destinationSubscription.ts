@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { ReverseEtlScheduleDefinition } from './reverseEtlScheduleDefinition';
 
 export class DestinationSubscription {
     /**
@@ -49,10 +50,7 @@ export class DestinationSubscription {
      * The unique identifier for the linked ReverseETLModel, if this part of a Reverse ETL connection.
      */
     'modelId'?: string;
-    /**
-     * The schedule for the Reverse ETL subscription.
-     */
-    'reverseETLSchedule'?: object | null;
+    'reverseETLSchedule'?: ReverseEtlScheduleDefinition;
 
     static discriminator: string | undefined = undefined;
 
@@ -109,7 +107,7 @@ export class DestinationSubscription {
         {
             name: 'reverseETLSchedule',
             baseName: 'reverseETLSchedule',
-            type: 'object',
+            type: 'ReverseEtlScheduleDefinition',
         },
     ];
 

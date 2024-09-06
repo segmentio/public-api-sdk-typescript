@@ -11,13 +11,13 @@
  */
 
 import { RequestFile } from './models';
-import { Function } from './function';
+import { FunctionV1 } from './functionV1';
 
 /**
  * Gets a single Function.
  */
 export class GetFunctionV1Output {
-    'function': Function | null;
+    'function': FunctionV1 | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -29,7 +29,7 @@ export class GetFunctionV1Output {
         {
             name: 'function',
             baseName: 'function',
-            type: 'Function',
+            type: 'FunctionV1',
         },
     ];
 
