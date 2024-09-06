@@ -112,14 +112,13 @@ var FiltersApi = (function () {
     FiltersApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    FiltersApi.prototype.createFilter = function (integrationId, CreateFilterInput, options) {
+    FiltersApi.prototype.createFilter = function (CreateFilterInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/filters/create/{integrationId}'.replace('{' + 'integrationId' + '}', encodeURIComponent(String(integrationId)));
+                localVarPath = this.basePath + '/filters';
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = ['application/json'];
@@ -130,9 +129,6 @@ var FiltersApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (integrationId === null || integrationId === undefined) {
-                    throw new Error('Required parameter integrationId was null or undefined when calling createFilter.');
-                }
                 if (CreateFilterInput === null || CreateFilterInput === undefined) {
                     throw new Error('Required parameter CreateFilterInput was null or undefined when calling createFilter.');
                 }
@@ -203,7 +199,7 @@ var FiltersApi = (function () {
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/filters/delete/{id}'.replace('{' + 'id' + '}', encodeURIComponent(String(id)));
+                    '/filters/{id}'.replace('{' + 'id' + '}', encodeURIComponent(String(id)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = ['application/json'];
@@ -289,7 +285,7 @@ var FiltersApi = (function () {
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/filters/filter/{id}'.replace('{' + 'id' + '}', encodeURIComponent(String(id)));
+                    '/filters/{id}'.replace('{' + 'id' + '}', encodeURIComponent(String(id)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = ['application/json'];
@@ -374,8 +370,7 @@ var FiltersApi = (function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/filters/{integrationId}'.replace('{' + 'integrationId' + '}', encodeURIComponent(String(integrationId)));
+                localVarPath = this.basePath + '/filters';
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = ['application/json'];
@@ -391,6 +386,10 @@ var FiltersApi = (function () {
                 }
                 if (productArea === null || productArea === undefined) {
                     throw new Error('Required parameter productArea was null or undefined when calling listFiltersByIntegrationId.');
+                }
+                if (integrationId !== undefined) {
+                    localVarQueryParameters['integrationId'] =
+                        models_1.ObjectSerializer.serialize(integrationId, 'string');
                 }
                 if (productArea !== undefined) {
                     localVarQueryParameters['productArea'] = models_1.ObjectSerializer.serialize(productArea, 'string');
@@ -464,7 +463,7 @@ var FiltersApi = (function () {
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/filters/update/{id}'.replace('{' + 'id' + '}', encodeURIComponent(String(id)));
+                    '/filters/{id}'.replace('{' + 'id' + '}', encodeURIComponent(String(id)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = ['application/json'];

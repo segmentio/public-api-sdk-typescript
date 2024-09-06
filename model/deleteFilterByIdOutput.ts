@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 /**
- * Output for DeleteFilterById
+ * Output for DeleteFilterById.
  */
 export class DeleteFilterByIdOutput {
     /**

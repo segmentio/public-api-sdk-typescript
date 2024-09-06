@@ -26,7 +26,7 @@ export declare class FiltersApi {
     setApiKey(key: FiltersApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    createFilter(integrationId: string, CreateFilterInput: CreateFilterInput, options?: {
+    createFilter(CreateFilterInput: CreateFilterInput, options?: {
         headers: {
             [name: string]: string;
         };

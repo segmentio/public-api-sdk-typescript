@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 /**
- * Pagination for list filters
+ * Pagination for list filters.
  */
 export class ListFiltersPaginationInput {
     /**

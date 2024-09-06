@@ -13,35 +13,35 @@
 import { RequestFile } from './models';
 
 /**
- * Input for UpdateFilterById
+ * Input for UpdateFilterById.
  */
 export class UpdateFilterByIdInput {
     /**
-     * The integration id of the resource
+     * The integration id of the resource.
      */
     'integrationId': string;
     /**
-     * Whether the filter is enabled
+     * Whether the filter is enabled.
      */
     'enabled'?: boolean;
     /**
-     * Whether the event is dropped
+     * Whether the event is dropped.
      */
     'drop'?: boolean;
     /**
-     * The name of the filter
+     * The name of the filter.
      */
     'name': string;
     /**
-     * The description of the filter
+     * The description of the filter.
      */
     'description'?: string;
     /**
-     * The \"if\" statement for a filter
+     * The \"if\" statement for a filter.
      */
     'if': string;
     /**
-     * The product area of the filter, which should be spaces (endpoint table should be able to determine the resource)
+     * The product area of the filter, which should be spaces (endpoint table should be able to determine the resource).
      */
     'productArea'?: string;
     /**

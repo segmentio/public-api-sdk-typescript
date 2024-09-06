@@ -10,6 +10,11 @@ var CreateFilterInput = (function () {
     CreateFilterInput.discriminator = undefined;
     CreateFilterInput.attributeTypeMap = [
         {
+            name: 'integrationId',
+            baseName: 'integrationId',
+            type: 'string',
+        },
+        {
             name: 'enabled',
             baseName: 'enabled',
             type: 'boolean',

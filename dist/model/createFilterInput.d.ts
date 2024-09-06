@@ -1,4 +1,5 @@
 export declare class CreateFilterInput {
+    'integrationId': string;
     'enabled'?: boolean;
     'drop'?: boolean;
     'name': string;

@@ -15,7 +15,7 @@ import { Filter } from './filter';
 import { ListFiltersPaginationOutput } from './listFiltersPaginationOutput';
 
 /**
- * Output for ListFiltersByIntegrationId
+ * Output for ListFiltersByIntegrationId.
  */
 export class ListFiltersByIntegrationIdOutput {
     /**

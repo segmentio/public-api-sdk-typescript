@@ -110,20 +110,13 @@ export class FiltersApi {
     /**
      * Creates a filter.    • When called, this endpoint may generate the `Filter Created` event in the [audit trail](/tag/Audit-Trail).
      * @summary Create Filter
-     * @param integrationId
      * @param CreateFilterInput
      */
     public async createFilter(
-        integrationId: string,
         CreateFilterInput: CreateFilterInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{ response: http.IncomingMessage; body?: any }> {
-        const localVarPath =
-            this.basePath +
-            '/filters/create/{integrationId}'.replace(
-                '{' + 'integrationId' + '}',
-                encodeURIComponent(String(integrationId))
-            );
+        const localVarPath = this.basePath + '/filters';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign(
             {},
@@ -137,13 +130,6 @@ export class FiltersApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
-
-        // verify required parameter 'integrationId' is not null or undefined
-        if (integrationId === null || integrationId === undefined) {
-            throw new Error(
-                'Required parameter integrationId was null or undefined when calling createFilter.'
-            );
-        }
 
         // verify required parameter 'CreateFilterInput' is not null or undefined
         if (CreateFilterInput === null || CreateFilterInput === undefined) {
@@ -230,7 +216,7 @@ export class FiltersApi {
      * Deletes a filter by id.    • When called, this endpoint may generate the `Filter Deleted` event in the [audit trail](/tag/Audit-Trail).
      * @summary Delete Filter By Id
      * @param id
-     * @param productArea The product area of the filter  This parameter exists in alpha.
+     * @param productArea The product area of the filter.  This parameter exists in alpha.
      */
     public async deleteFilterById(
         id: string,
@@ -239,7 +225,7 @@ export class FiltersApi {
     ): Promise<{ response: http.IncomingMessage; body?: any }> {
         const localVarPath =
             this.basePath +
-            '/filters/delete/{id}'.replace(
+            '/filters/{id}'.replace(
                 '{' + 'id' + '}',
                 encodeURIComponent(String(id))
             );
@@ -352,7 +338,7 @@ export class FiltersApi {
      * Gets a filter by id.
      * @summary Get Filter By Id
      * @param id
-     * @param productArea The product area of the filter, which should be spaces (endpoint table should be able to determine the resource)  This parameter exists in alpha.
+     * @param productArea The product area of the filter, which should be spaces (endpoint table should be able to determine the resource).  This parameter exists in alpha.
      */
     public async getFilterById(
         id: string,
@@ -361,7 +347,7 @@ export class FiltersApi {
     ): Promise<{ response: http.IncomingMessage; body?: any }> {
         const localVarPath =
             this.basePath +
-            '/filters/filter/{id}'.replace(
+            '/filters/{id}'.replace(
                 '{' + 'id' + '}',
                 encodeURIComponent(String(id))
             );
@@ -473,8 +459,8 @@ export class FiltersApi {
     /**
      * Lists filters by integration id.
      * @summary List Filters By Integration Id
-     * @param integrationId
-     * @param productArea The product area of the filter, which should be spaces (endpoint table should be able to determine the resource)  This parameter exists in alpha.
+     * @param integrationId The integration id used to fetch filters.  This parameter exists in alpha.
+     * @param productArea The product area of the filter, which should be spaces (endpoint table should be able to determine the resource).  This parameter exists in alpha.
      * @param pagination Pagination parameters.  This parameter exists in alpha.
      */
     public async listFiltersByIntegrationId(
@@ -483,12 +469,7 @@ export class FiltersApi {
         pagination?: ListFiltersPaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{ response: http.IncomingMessage; body?: any }> {
-        const localVarPath =
-            this.basePath +
-            '/filters/{integrationId}'.replace(
-                '{' + 'integrationId' + '}',
-                encodeURIComponent(String(integrationId))
-            );
+        const localVarPath = this.basePath + '/filters';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign(
             {},
@@ -515,6 +496,11 @@ export class FiltersApi {
             throw new Error(
                 'Required parameter productArea was null or undefined when calling listFiltersByIntegrationId.'
             );
+        }
+
+        if (integrationId !== undefined) {
+            localVarQueryParameters['integrationId'] =
+                ObjectSerializer.serialize(integrationId, 'string');
         }
 
         if (productArea !== undefined) {
@@ -614,7 +600,7 @@ export class FiltersApi {
     ): Promise<{ response: http.IncomingMessage; body?: any }> {
         const localVarPath =
             this.basePath +
-            '/filters/update/{id}'.replace(
+            '/filters/{id}'.replace(
                 '{' + 'id' + '}',
                 encodeURIComponent(String(id))
             );

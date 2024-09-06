@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { Filter } from './filter';
 
 /**
- * Output for GetFilterById
+ * Output for GetFilterById.
  */
 export class GetFilterByIdOutput {
     'filter': Filter;
