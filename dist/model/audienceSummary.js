@@ -42,7 +42,7 @@ var AudienceSummary = (function () {
         {
             name: 'definition',
             baseName: 'definition',
-            type: 'Definition',
+            type: 'AudienceDefinition',
         },
         {
             name: 'status',
