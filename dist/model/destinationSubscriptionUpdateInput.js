@@ -29,6 +29,16 @@ var DestinationSubscriptionUpdateInput = (function () {
             baseName: 'settings',
             type: '{ [key: string]: any; }',
         },
+        {
+            name: 'reverseETLModelId',
+            baseName: 'reverseETLModelId',
+            type: 'string',
+        },
+        {
+            name: 'reverseETLSchedule',
+            baseName: 'reverseETLSchedule',
+            type: 'ReverseEtlScheduleDefinition',
+        },
     ];
     return DestinationSubscriptionUpdateInput;
 }());
