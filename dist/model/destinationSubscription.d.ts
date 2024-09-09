@@ -1,3 +1,4 @@
+import { ReverseEtlScheduleDefinition } from './reverseEtlScheduleDefinition';
 export declare class DestinationSubscription {
     'id': string;
     'name': string;
@@ -10,7 +11,7 @@ export declare class DestinationSubscription {
     };
     'trigger': string;
     'modelId'?: string;
-    'reverseETLSchedule'?: object | null;
+    'reverseETLSchedule'?: ReverseEtlScheduleDefinition;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
