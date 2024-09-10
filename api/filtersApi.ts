@@ -113,7 +113,7 @@ export class FiltersApi {
     }
 
     /**
-     * Creates a filter.    • When called, this endpoint may generate the `Filter Created` event in the [audit trail](/tag/Audit-Trail).
+     * Creates a filter.    • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.    • In order to successfully call this endpoint, the specified Workspace needs to have the Filters feature enabled. Please reach out to your customer success manager for more information.   • When called, this endpoint may generate the `Filter Created` event in the [audit trail](/tag/Audit-Trail).
      * @summary Create Filter
      * @param CreateFilterInput
      */
@@ -229,7 +229,7 @@ export class FiltersApi {
         });
     }
     /**
-     * Deletes a filter by id.    • When called, this endpoint may generate the `Filter Deleted` event in the [audit trail](/tag/Audit-Trail).
+     * Deletes a filter by id.    • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.    • In order to successfully call this endpoint, the specified Workspace needs to have the Filters feature enabled. Please reach out to your customer success manager for more information.   • When called, this endpoint may generate the `Filter Deleted` event in the [audit trail](/tag/Audit-Trail).
      * @summary Delete Filter By Id
      * @param id
      */
@@ -346,7 +346,7 @@ export class FiltersApi {
         });
     }
     /**
-     * Gets a filter by id.
+     * Gets a filter by id.  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Filters feature enabled. Please reach out to your customer success manager for more information.
      * @summary Get Filter By Id
      * @param id
      */
@@ -463,7 +463,7 @@ export class FiltersApi {
         });
     }
     /**
-     * Lists filters by Integration id.
+     * Lists filters by Integration id.  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Filters feature enabled. Please reach out to your customer success manager for more information.
      * @summary List Filters By Integration Id
      * @param integrationId The integration id used to fetch filters.  This parameter exists in alpha.
      * @param pagination Pagination parameters.  This parameter exists in alpha.
@@ -589,7 +589,7 @@ export class FiltersApi {
         });
     }
     /**
-     * Updates a filter by id.    • When called, this endpoint may generate the `Filter Updated` event in the [audit trail](/tag/Audit-Trail).
+     * Updates a filter by id and replaces the existing filter.    • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.    • In order to successfully call this endpoint, the specified Workspace needs to have the Filters feature enabled. Please reach out to your customer success manager for more information.   • When called, this endpoint may generate the `Filter Updated` event in the [audit trail](/tag/Audit-Trail).
      * @summary Update Filter By Id
      * @param id
      * @param UpdateFilterByIdInput
