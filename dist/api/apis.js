@@ -88,6 +88,8 @@ __exportStar(require("./edgeFunctionsApi"), exports);
 var edgeFunctionsApi_1 = require("./edgeFunctionsApi");
 __exportStar(require("./eventsApi"), exports);
 var eventsApi_1 = require("./eventsApi");
+__exportStar(require("./filtersApi"), exports);
+var filtersApi_1 = require("./filtersApi");
 __exportStar(require("./functionsApi"), exports);
 var functionsApi_1 = require("./functionsApi");
 __exportStar(require("./iAMGroupsApi"), exports);
@@ -145,6 +147,7 @@ exports.APIS = [
     destinationsApi_1.DestinationsApi,
     edgeFunctionsApi_1.EdgeFunctionsApi,
     eventsApi_1.EventsApi,
+    filtersApi_1.FiltersApi,
     functionsApi_1.FunctionsApi,
     iAMGroupsApi_1.IAMGroupsApi,
     iAMRolesApi_1.IAMRolesApi,
@@ -191,7 +194,7 @@ function configureApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 54.1.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 54.2.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -228,7 +231,7 @@ function configureEuApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 54.1.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 54.2.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
