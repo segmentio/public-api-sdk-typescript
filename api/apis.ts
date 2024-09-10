@@ -20,8 +20,6 @@ export * from './edgeFunctionsApi';
 import { EdgeFunctionsApi } from './edgeFunctionsApi';
 export * from './eventsApi';
 import { EventsApi } from './eventsApi';
-export * from './filtersApi';
-import { FiltersApi } from './filtersApi';
 export * from './functionsApi';
 import { FunctionsApi } from './functionsApi';
 export * from './iAMGroupsApi';
@@ -42,6 +40,8 @@ export * from './selectiveSyncApi';
 import { SelectiveSyncApi } from './selectiveSyncApi';
 export * from './sourcesApi';
 import { SourcesApi } from './sourcesApi';
+export * from './spaceFiltersApi';
+import { SpaceFiltersApi } from './spaceFiltersApi';
 export * from './spacesApi';
 import { SpacesApi } from './spacesApi';
 export * from './testingApi';
@@ -81,7 +81,6 @@ export const APIS = [
     DestinationsApi,
     EdgeFunctionsApi,
     EventsApi,
-    FiltersApi,
     FunctionsApi,
     IAMGroupsApi,
     IAMRolesApi,
@@ -92,6 +91,7 @@ export const APIS = [
     ReverseETLApi,
     SelectiveSyncApi,
     SourcesApi,
+    SpaceFiltersApi,
     SpacesApi,
     TestingApi,
     TrackingPlansApi,

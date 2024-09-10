@@ -39,17 +39,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FiltersApi = exports.FiltersApiApiKeys = void 0;
+exports.SpaceFiltersApi = exports.SpaceFiltersApiApiKeys = void 0;
 var request_1 = __importDefault(require("request"));
 var models_1 = require("../model/models");
 var models_2 = require("../model/models");
 var apis_1 = require("./apis");
 var defaultBasePath = 'https://api.segmentapis.com';
-var FiltersApiApiKeys;
-(function (FiltersApiApiKeys) {
-})(FiltersApiApiKeys = exports.FiltersApiApiKeys || (exports.FiltersApiApiKeys = {}));
-var FiltersApi = (function () {
-    function FiltersApi(basePathOrUsername, password, basePath) {
+var SpaceFiltersApiApiKeys;
+(function (SpaceFiltersApiApiKeys) {
+})(SpaceFiltersApiApiKeys = exports.SpaceFiltersApiApiKeys || (exports.SpaceFiltersApiApiKeys = {}));
+var SpaceFiltersApi = (function () {
+    function SpaceFiltersApi(basePathOrUsername, password, basePath) {
         this._basePath = defaultBasePath;
         this._defaultHeaders = {};
         this._useQuerystring = false;
@@ -69,14 +69,14 @@ var FiltersApi = (function () {
             }
         }
     }
-    Object.defineProperty(FiltersApi.prototype, "useQuerystring", {
+    Object.defineProperty(SpaceFiltersApi.prototype, "useQuerystring", {
         set: function (value) {
             this._useQuerystring = value;
         },
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(FiltersApi.prototype, "basePath", {
+    Object.defineProperty(SpaceFiltersApi.prototype, "basePath", {
         get: function () {
             return this._basePath;
         },
@@ -86,7 +86,7 @@ var FiltersApi = (function () {
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(FiltersApi.prototype, "defaultHeaders", {
+    Object.defineProperty(SpaceFiltersApi.prototype, "defaultHeaders", {
         get: function () {
             return this._defaultHeaders;
         },
@@ -96,23 +96,24 @@ var FiltersApi = (function () {
         enumerable: false,
         configurable: true
     });
-    FiltersApi.prototype.setDefaultAuthentication = function (auth) {
+    SpaceFiltersApi.prototype.setDefaultAuthentication = function (auth) {
         this.authentications.default = auth;
     };
-    FiltersApi.prototype.setApiKey = function (key, value) {
-        this.authentications[FiltersApiApiKeys[key]].apiKey = value;
+    SpaceFiltersApi.prototype.setApiKey = function (key, value) {
+        this.authentications[SpaceFiltersApiApiKeys[key]].apiKey =
+            value;
     };
-    Object.defineProperty(FiltersApi.prototype, "accessToken", {
+    Object.defineProperty(SpaceFiltersApi.prototype, "accessToken", {
         set: function (accessToken) {
             this.authentications.token.accessToken = accessToken;
         },
         enumerable: false,
         configurable: true
     });
-    FiltersApi.prototype.addInterceptor = function (interceptor) {
+    SpaceFiltersApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    FiltersApi.prototype.createFilter = function (CreateFilterInput, options) {
+    SpaceFiltersApi.prototype.createFilter = function (CreateFilterInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -196,7 +197,7 @@ var FiltersApi = (function () {
             });
         });
     };
-    FiltersApi.prototype.deleteFilterById = function (id, options) {
+    SpaceFiltersApi.prototype.deleteFilterById = function (id, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
@@ -280,7 +281,7 @@ var FiltersApi = (function () {
             });
         });
     };
-    FiltersApi.prototype.getFilterById = function (id, options) {
+    SpaceFiltersApi.prototype.getFilterById = function (id, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
@@ -364,7 +365,7 @@ var FiltersApi = (function () {
             });
         });
     };
-    FiltersApi.prototype.listFiltersByIntegrationId = function (integrationId, pagination, options) {
+    SpaceFiltersApi.prototype.listFiltersByIntegrationId = function (integrationId, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
@@ -454,7 +455,7 @@ var FiltersApi = (function () {
             });
         });
     };
-    FiltersApi.prototype.updateFilterById = function (id, UpdateFilterByIdInput, options) {
+    SpaceFiltersApi.prototype.updateFilterById = function (id, UpdateFilterByIdInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_5, _i, _a, interceptor;
@@ -543,7 +544,7 @@ var FiltersApi = (function () {
             });
         });
     };
-    return FiltersApi;
+    return SpaceFiltersApi;
 }());
-exports.FiltersApi = FiltersApi;
-//# sourceMappingURL=filtersApi.js.map
+exports.SpaceFiltersApi = SpaceFiltersApi;
+//# sourceMappingURL=spaceFiltersApi.js.map

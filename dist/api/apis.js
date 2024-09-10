@@ -88,8 +88,6 @@ __exportStar(require("./edgeFunctionsApi"), exports);
 var edgeFunctionsApi_1 = require("./edgeFunctionsApi");
 __exportStar(require("./eventsApi"), exports);
 var eventsApi_1 = require("./eventsApi");
-__exportStar(require("./filtersApi"), exports);
-var filtersApi_1 = require("./filtersApi");
 __exportStar(require("./functionsApi"), exports);
 var functionsApi_1 = require("./functionsApi");
 __exportStar(require("./iAMGroupsApi"), exports);
@@ -110,6 +108,8 @@ __exportStar(require("./selectiveSyncApi"), exports);
 var selectiveSyncApi_1 = require("./selectiveSyncApi");
 __exportStar(require("./sourcesApi"), exports);
 var sourcesApi_1 = require("./sourcesApi");
+__exportStar(require("./spaceFiltersApi"), exports);
+var spaceFiltersApi_1 = require("./spaceFiltersApi");
 __exportStar(require("./spacesApi"), exports);
 var spacesApi_1 = require("./spacesApi");
 __exportStar(require("./testingApi"), exports);
@@ -147,7 +147,6 @@ exports.APIS = [
     destinationsApi_1.DestinationsApi,
     edgeFunctionsApi_1.EdgeFunctionsApi,
     eventsApi_1.EventsApi,
-    filtersApi_1.FiltersApi,
     functionsApi_1.FunctionsApi,
     iAMGroupsApi_1.IAMGroupsApi,
     iAMRolesApi_1.IAMRolesApi,
@@ -158,6 +157,7 @@ exports.APIS = [
     reverseETLApi_1.ReverseETLApi,
     selectiveSyncApi_1.SelectiveSyncApi,
     sourcesApi_1.SourcesApi,
+    spaceFiltersApi_1.SpaceFiltersApi,
     spacesApi_1.SpacesApi,
     testingApi_1.TestingApi,
     trackingPlansApi_1.TrackingPlansApi,

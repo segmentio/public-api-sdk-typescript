@@ -10,9 +10,9 @@ import { UpdateFilterById200Response } from '../model/updateFilterById200Respons
 import { UpdateFilterByIdInput } from '../model/updateFilterByIdInput';
 import { Authentication, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
-export declare enum FiltersApiApiKeys {
+export declare enum SpaceFiltersApiApiKeys {
 }
-export declare class FiltersApi {
+export declare class SpaceFiltersApi {
     protected _basePath: string;
     protected _defaultHeaders: any;
     protected _useQuerystring: boolean;
@@ -28,7 +28,7 @@ export declare class FiltersApi {
     get defaultHeaders(): any;
     get basePath(): string;
     setDefaultAuthentication(auth: Authentication): void;
-    setApiKey(key: FiltersApiApiKeys, value: string): void;
+    setApiKey(key: SpaceFiltersApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
     createFilter(CreateFilterInput: CreateFilterInput, options?: {
