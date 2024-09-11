@@ -448,6 +448,7 @@ export * from './restoreFunctionVersionAlphaInput';
 export * from './restoreFunctionVersionAlphaOutput';
 export * from './reverseETLManualSyncJobOutput';
 export * from './reverseETLSyncStatus';
+export * from './reverseEtlCronScheduleConfig';
 export * from './reverseEtlModel';
 export * from './reverseEtlPeriodicScheduleConfig';
 export * from './reverseEtlScheduleConfig';

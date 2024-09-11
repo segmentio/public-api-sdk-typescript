@@ -447,6 +447,7 @@ export * from './restoreFunctionVersionAlphaInput';
 export * from './restoreFunctionVersionAlphaOutput';
 export * from './reverseETLManualSyncJobOutput';
 export * from './reverseETLSyncStatus';
+export * from './reverseEtlCronScheduleConfig';
 export * from './reverseEtlModel';
 export * from './reverseEtlPeriodicScheduleConfig';
 export * from './reverseEtlScheduleConfig';
@@ -1012,6 +1013,7 @@ import { RestoreFunctionVersionAlphaInput } from './restoreFunctionVersionAlphaI
 import { RestoreFunctionVersionAlphaOutput } from './restoreFunctionVersionAlphaOutput';
 import { ReverseETLManualSyncJobOutput } from './reverseETLManualSyncJobOutput';
 import { ReverseETLSyncStatus } from './reverseETLSyncStatus';
+import { ReverseEtlCronScheduleConfig } from './reverseEtlCronScheduleConfig';
 import { ReverseEtlModel } from './reverseEtlModel';
 import { ReverseEtlPeriodicScheduleConfig } from './reverseEtlPeriodicScheduleConfig';
 import { ReverseEtlScheduleConfig } from './reverseEtlScheduleConfig';
@@ -1817,6 +1819,7 @@ let typeMap: { [index: string]: any } = {
     RestoreFunctionVersionAlphaOutput: RestoreFunctionVersionAlphaOutput,
     ReverseETLManualSyncJobOutput: ReverseETLManualSyncJobOutput,
     ReverseETLSyncStatus: ReverseETLSyncStatus,
+    ReverseEtlCronScheduleConfig: ReverseEtlCronScheduleConfig,
     ReverseEtlModel: ReverseEtlModel,
     ReverseEtlPeriodicScheduleConfig: ReverseEtlPeriodicScheduleConfig,
     ReverseEtlScheduleConfig: ReverseEtlScheduleConfig,
