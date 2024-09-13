@@ -25,10 +25,6 @@ export class CreateFilterInput {
      */
     'enabled'?: boolean;
     /**
-     * Whether the event is dropped.
-     */
-    'drop'?: boolean;
-    /**
      * The name of the filter.
      */
     'name': string;
@@ -41,9 +37,13 @@ export class CreateFilterInput {
      */
     'if': string;
     /**
+     * Whether the event is dropped.
+     */
+    'drop'?: boolean;
+    /**
      * Describes the properties to be dropped on events that match the \"if\" statement.
      */
-    'propertyDrops'?: Array<string>;
+    'dropProperties'?: Array<string>;
     /**
      * Describes the properties allowed on events that match the \"if\" statement.
      */
@@ -67,11 +67,6 @@ export class CreateFilterInput {
             type: 'boolean',
         },
         {
-            name: 'drop',
-            baseName: 'drop',
-            type: 'boolean',
-        },
-        {
             name: 'name',
             baseName: 'name',
             type: 'string',
@@ -87,8 +82,13 @@ export class CreateFilterInput {
             type: 'string',
         },
         {
-            name: 'propertyDrops',
-            baseName: 'propertyDrops',
+            name: 'drop',
+            baseName: 'drop',
+            type: 'boolean',
+        },
+        {
+            name: 'dropProperties',
+            baseName: 'dropProperties',
             type: 'Array<string>',
         },
         {

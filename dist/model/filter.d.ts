@@ -3,11 +3,11 @@ export declare class Filter {
     'workspaceId': string;
     'integrationId': string;
     'enabled'?: boolean;
-    'drop'?: boolean;
     'name'?: string;
     'description'?: string;
     'if'?: string;
-    'propertyDrops'?: Array<string>;
+    'drop'?: boolean;
+    'dropProperties'?: Array<string>;
     'allowProperties'?: Array<string>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
