@@ -15,9 +15,9 @@ import { RequestFile } from './models';
 /**
  * Input for CreateFilter.
  */
-export class CreateFilterInput {
+export class CreateFilterForSpaceInput {
     /**
-     * The Integration id of the resource.
+     * The Space id to filer on.
      */
     'integrationId': string;
     /**
@@ -99,6 +99,6 @@ export class CreateFilterInput {
     ];
 
     static getAttributeTypeMap() {
-        return CreateFilterInput.attributeTypeMap;
+        return CreateFilterForSpaceInput.attributeTypeMap;
     }
 }

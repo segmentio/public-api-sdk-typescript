@@ -14,11 +14,11 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { CreateFilter200Response } from '../model/createFilter200Response';
-import { CreateFilterInput } from '../model/createFilterInput';
+import { CreateFilterForSpace200Response } from '../model/createFilterForSpace200Response';
+import { CreateFilterForSpaceInput } from '../model/createFilterForSpaceInput';
 import { DeleteFilterById200Response } from '../model/deleteFilterById200Response';
 import { GetFilterById200Response } from '../model/getFilterById200Response';
-import { ListFiltersByIntegrationId200Response } from '../model/listFiltersByIntegrationId200Response';
+import { ListFiltersForSpace200Response } from '../model/listFiltersForSpace200Response';
 import { ListFiltersPaginationInput } from '../model/listFiltersPaginationInput';
 import { RequestErrorEnvelope } from '../model/requestErrorEnvelope';
 import { UpdateFilterById200Response } from '../model/updateFilterById200Response';
@@ -114,16 +114,16 @@ export class SpaceFiltersApi {
     }
 
     /**
-     * Creates a filter.    • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.    • In order to successfully call this endpoint, the specified Workspace needs to have the Space Filters feature enabled. Please reach out to your customer success manager for more information.   • When called, this endpoint may generate the `Filter Created` event in the [audit trail](/tag/Audit-Trail).
-     * @summary Create Filter
-     * @param CreateFilterInput
+     * Creates a filter for a space. A space filter applies to events coming from all Sources connected to a space.    • This endpoint is in **Beta** testing.  Please submit any feedback by sending an email to friends@segment.com.    • In order to successfully call this endpoint, the specified Workspace needs to have the Space Filters feature enabled. Please reach out to your customer success manager for more information.   • When called, this endpoint may generate the `Filter Created` event in the [audit trail](/tag/Audit-Trail).
+     * @summary Create Filter for Space
+     * @param CreateFilterForSpaceInput
      */
-    public async createFilter(
-        CreateFilterInput: CreateFilterInput,
+    public async createFilterForSpace(
+        CreateFilterForSpaceInput: CreateFilterForSpaceInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
-        body: CreateFilter200Response;
+        body: CreateFilterForSpace200Response;
     }> {
         const localVarPath = this.basePath + '/filters';
         let localVarQueryParameters: any = {};
@@ -132,6 +132,7 @@ export class SpaceFiltersApi {
             this._defaultHeaders
         );
         const produces = [
+            'application/vnd.segment.v1beta+json',
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
@@ -143,10 +144,13 @@ export class SpaceFiltersApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'CreateFilterInput' is not null or undefined
-        if (CreateFilterInput === null || CreateFilterInput === undefined) {
+        // verify required parameter 'CreateFilterForSpaceInput' is not null or undefined
+        if (
+            CreateFilterForSpaceInput === null ||
+            CreateFilterForSpaceInput === undefined
+        ) {
             throw new Error(
-                'Required parameter CreateFilterInput was null or undefined when calling createFilter.'
+                'Required parameter CreateFilterForSpaceInput was null or undefined when calling createFilterForSpace.'
             );
         }
 
@@ -162,8 +166,8 @@ export class SpaceFiltersApi {
             useQuerystring: this._useQuerystring,
             json: true,
             body: ObjectSerializer.serialize(
-                CreateFilterInput,
-                'CreateFilterInput'
+                CreateFilterForSpaceInput,
+                'CreateFilterForSpaceInput'
             ),
         };
 
@@ -196,7 +200,7 @@ export class SpaceFiltersApi {
             }
             return new Promise<{
                 response: http.IncomingMessage;
-                body: CreateFilter200Response;
+                body: CreateFilterForSpace200Response;
             }>((resolve, reject) => {
                 localVarRequest(
                     localVarRequestOptions,
@@ -211,7 +215,7 @@ export class SpaceFiltersApi {
                             ) {
                                 body = ObjectSerializer.deserialize(
                                     body,
-                                    'CreateFilter200Response'
+                                    'CreateFilterForSpace200Response'
                                 );
                                 resolve({ response: response, body: body });
                             } else {
@@ -230,7 +234,7 @@ export class SpaceFiltersApi {
         });
     }
     /**
-     * Deletes a filter by id.    • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.    • In order to successfully call this endpoint, the specified Workspace needs to have the Space Filters feature enabled. Please reach out to your customer success manager for more information.   • When called, this endpoint may generate the `Filter Deleted` event in the [audit trail](/tag/Audit-Trail).
+     * Deletes a filter by id.    • This endpoint is in **Beta** testing.  Please submit any feedback by sending an email to friends@segment.com.    • In order to successfully call this endpoint, the specified Workspace needs to have the Space Filters feature enabled. Please reach out to your customer success manager for more information.   • When called, this endpoint may generate the `Filter Deleted` event in the [audit trail](/tag/Audit-Trail).
      * @summary Delete Filter By Id
      * @param id
      */
@@ -253,6 +257,7 @@ export class SpaceFiltersApi {
             this._defaultHeaders
         );
         const produces = [
+            'application/vnd.segment.v1beta+json',
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
@@ -347,7 +352,7 @@ export class SpaceFiltersApi {
         });
     }
     /**
-     * Gets a filter by id.  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Space Filters feature enabled. Please reach out to your customer success manager for more information.
+     * Gets a filter by id.  • This endpoint is in **Beta** testing.  Please submit any feedback by sending an email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Space Filters feature enabled. Please reach out to your customer success manager for more information.
      * @summary Get Filter By Id
      * @param id
      */
@@ -370,6 +375,7 @@ export class SpaceFiltersApi {
             this._defaultHeaders
         );
         const produces = [
+            'application/vnd.segment.v1beta+json',
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
@@ -464,18 +470,18 @@ export class SpaceFiltersApi {
         });
     }
     /**
-     * Lists filters by Integration id.  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Space Filters feature enabled. Please reach out to your customer success manager for more information.
-     * @summary List Filters By Integration Id
-     * @param integrationId The integration id used to fetch filters.  This parameter exists in alpha.
-     * @param pagination Pagination parameters.  This parameter exists in alpha.
+     * Lists filters for a space.  • This endpoint is in **Beta** testing.  Please submit any feedback by sending an email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Space Filters feature enabled. Please reach out to your customer success manager for more information.
+     * @summary List Filters for Space
+     * @param integrationId The Space Id for which to fetch filters  This parameter exists in beta.
+     * @param pagination Pagination parameters.  This parameter exists in beta.
      */
-    public async listFiltersByIntegrationId(
+    public async listFiltersForSpace(
         integrationId: string,
         pagination?: ListFiltersPaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
-        body: ListFiltersByIntegrationId200Response;
+        body: ListFiltersForSpace200Response;
     }> {
         const localVarPath = this.basePath + '/filters';
         let localVarQueryParameters: any = {};
@@ -484,6 +490,7 @@ export class SpaceFiltersApi {
             this._defaultHeaders
         );
         const produces = [
+            'application/vnd.segment.v1beta+json',
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
@@ -498,7 +505,7 @@ export class SpaceFiltersApi {
         // verify required parameter 'integrationId' is not null or undefined
         if (integrationId === null || integrationId === undefined) {
             throw new Error(
-                'Required parameter integrationId was null or undefined when calling listFiltersByIntegrationId.'
+                'Required parameter integrationId was null or undefined when calling listFiltersForSpace.'
             );
         }
 
@@ -556,7 +563,7 @@ export class SpaceFiltersApi {
             }
             return new Promise<{
                 response: http.IncomingMessage;
-                body: ListFiltersByIntegrationId200Response;
+                body: ListFiltersForSpace200Response;
             }>((resolve, reject) => {
                 localVarRequest(
                     localVarRequestOptions,
@@ -571,7 +578,7 @@ export class SpaceFiltersApi {
                             ) {
                                 body = ObjectSerializer.deserialize(
                                     body,
-                                    'ListFiltersByIntegrationId200Response'
+                                    'ListFiltersForSpace200Response'
                                 );
                                 resolve({ response: response, body: body });
                             } else {
@@ -590,7 +597,7 @@ export class SpaceFiltersApi {
         });
     }
     /**
-     * Updates a filter by id and replaces the existing filter.    • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.    • In order to successfully call this endpoint, the specified Workspace needs to have the Space Filters feature enabled. Please reach out to your customer success manager for more information.   • When called, this endpoint may generate the `Filter Updated` event in the [audit trail](/tag/Audit-Trail).
+     * Updates a filter by id and replaces the existing filter.    • This endpoint is in **Beta** testing.  Please submit any feedback by sending an email to friends@segment.com.    • In order to successfully call this endpoint, the specified Workspace needs to have the Space Filters feature enabled. Please reach out to your customer success manager for more information.   • When called, this endpoint may generate the `Filter Updated` event in the [audit trail](/tag/Audit-Trail).
      * @summary Update Filter By Id
      * @param id
      * @param UpdateFilterByIdInput
@@ -615,6 +622,7 @@ export class SpaceFiltersApi {
             this._defaultHeaders
         );
         const produces = [
+            'application/vnd.segment.v1beta+json',
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];

@@ -11,10 +11,18 @@
  */
 
 import { RequestFile } from './models';
-import { ListFiltersByIntegrationIdOutput } from './listFiltersByIntegrationIdOutput';
+import { Filter } from './filter';
+import { ListFiltersPaginationOutput } from './listFiltersPaginationOutput';
 
-export class ListFiltersByIntegrationId200Response {
-    'data'?: ListFiltersByIntegrationIdOutput;
+/**
+ * Output for ListFiltersByIntegrationId.
+ */
+export class ListFiltersForSpaceOutput {
+    /**
+     * Filter output.
+     */
+    'filters'?: Array<Filter>;
+    'pagination'?: ListFiltersPaginationOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,13 +32,18 @@ export class ListFiltersByIntegrationId200Response {
         type: string;
     }> = [
         {
-            name: 'data',
-            baseName: 'data',
-            type: 'ListFiltersByIntegrationIdOutput',
+            name: 'filters',
+            baseName: 'filters',
+            type: 'Array<Filter>',
+        },
+        {
+            name: 'pagination',
+            baseName: 'pagination',
+            type: 'ListFiltersPaginationOutput',
         },
     ];
 
     static getAttributeTypeMap() {
-        return ListFiltersByIntegrationId200Response.attributeTypeMap;
+        return ListFiltersForSpaceOutput.attributeTypeMap;
     }
 }
