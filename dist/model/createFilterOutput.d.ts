@@ -1,8 +1,6 @@
 import { Filter } from './filter';
-import { ListFiltersPaginationOutput } from './listFiltersPaginationOutput';
-export declare class ListFiltersForSpaceOutput {
-    'filters'?: Array<Filter>;
-    'pagination'?: ListFiltersPaginationOutput;
+export declare class CreateFilterOutput {
+    'filter': Filter;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

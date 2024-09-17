@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateFilterForSpaceInput = void 0;
-var CreateFilterForSpaceInput = (function () {
-    function CreateFilterForSpaceInput() {
+exports.CreateFilterInput = void 0;
+var CreateFilterInput = (function () {
+    function CreateFilterInput() {
     }
-    CreateFilterForSpaceInput.getAttributeTypeMap = function () {
-        return CreateFilterForSpaceInput.attributeTypeMap;
+    CreateFilterInput.getAttributeTypeMap = function () {
+        return CreateFilterInput.attributeTypeMap;
     };
-    CreateFilterForSpaceInput.discriminator = undefined;
-    CreateFilterForSpaceInput.attributeTypeMap = [
+    CreateFilterInput.discriminator = undefined;
+    CreateFilterInput.attributeTypeMap = [
         {
             name: 'integrationId',
             baseName: 'integrationId',
@@ -50,7 +50,7 @@ var CreateFilterForSpaceInput = (function () {
             type: 'Array<string>',
         },
     ];
-    return CreateFilterForSpaceInput;
+    return CreateFilterInput;
 }());
-exports.CreateFilterForSpaceInput = CreateFilterForSpaceInput;
-//# sourceMappingURL=createFilterForSpaceInput.js.map
+exports.CreateFilterInput = CreateFilterInput;
+//# sourceMappingURL=createFilterInput.js.map

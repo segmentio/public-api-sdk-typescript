@@ -11,10 +11,13 @@
  */
 
 import { RequestFile } from './models';
-import { ListFiltersForSpaceOutput } from './listFiltersForSpaceOutput';
+import { Filter } from './filter';
 
-export class ListFiltersForSpace200Response {
-    'data'?: ListFiltersForSpaceOutput;
+/**
+ * Output for CreateFilter.
+ */
+export class CreateFilterOutput {
+    'filter': Filter;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,13 +27,13 @@ export class ListFiltersForSpace200Response {
         type: string;
     }> = [
         {
-            name: 'data',
-            baseName: 'data',
-            type: 'ListFiltersForSpaceOutput',
+            name: 'filter',
+            baseName: 'filter',
+            type: 'Filter',
         },
     ];
 
     static getAttributeTypeMap() {
-        return ListFiltersForSpace200Response.attributeTypeMap;
+        return CreateFilterOutput.attributeTypeMap;
     }
 }

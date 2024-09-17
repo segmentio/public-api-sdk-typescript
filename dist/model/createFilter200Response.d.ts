@@ -1,6 +1,6 @@
-import { ListFiltersForSpaceOutput } from './listFiltersForSpaceOutput';
-export declare class ListFiltersForSpace200Response {
-    'data'?: ListFiltersForSpaceOutput;
+import { CreateFilterOutput } from './createFilterOutput';
+export declare class CreateFilter200Response {
+    'data'?: CreateFilterOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

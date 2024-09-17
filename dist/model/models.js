@@ -72,12 +72,12 @@ __exportStar(require("./createDestinationV1Output"), exports);
 __exportStar(require("./createEdgeFunctions200Response"), exports);
 __exportStar(require("./createEdgeFunctionsAlphaInput"), exports);
 __exportStar(require("./createEdgeFunctionsAlphaOutput"), exports);
+__exportStar(require("./createFilter200Response"), exports);
 __exportStar(require("./createFilterForDestination200Response"), exports);
 __exportStar(require("./createFilterForDestinationV1Input"), exports);
 __exportStar(require("./createFilterForDestinationV1Output"), exports);
-__exportStar(require("./createFilterForSpace200Response"), exports);
-__exportStar(require("./createFilterForSpaceInput"), exports);
-__exportStar(require("./createFilterForSpaceOutput"), exports);
+__exportStar(require("./createFilterInput"), exports);
+__exportStar(require("./createFilterOutput"), exports);
 __exportStar(require("./createFunction200Response"), exports);
 __exportStar(require("./createFunctionDeployment200Response"), exports);
 __exportStar(require("./createFunctionDeploymentV1Output"), exports);
@@ -312,8 +312,8 @@ __exportStar(require("./listDeliveryMetricsSummaryFromDestination200Response"), 
 __exportStar(require("./listDeliveryMetricsSummaryFromDestinationBetaOutput"), exports);
 __exportStar(require("./listDestinations200Response"), exports);
 __exportStar(require("./listDestinationsV1Output"), exports);
-__exportStar(require("./listFiltersForSpace200Response"), exports);
-__exportStar(require("./listFiltersForSpaceOutput"), exports);
+__exportStar(require("./listFiltersByIntegrationId200Response"), exports);
+__exportStar(require("./listFiltersByIntegrationIdOutput"), exports);
 __exportStar(require("./listFiltersFromDestination200Response"), exports);
 __exportStar(require("./listFiltersFromDestinationV1Output"), exports);
 __exportStar(require("./listFiltersPaginationInput"), exports);
@@ -624,12 +624,12 @@ var createDestinationV1Output_1 = require("./createDestinationV1Output");
 var createEdgeFunctions200Response_1 = require("./createEdgeFunctions200Response");
 var createEdgeFunctionsAlphaInput_1 = require("./createEdgeFunctionsAlphaInput");
 var createEdgeFunctionsAlphaOutput_1 = require("./createEdgeFunctionsAlphaOutput");
+var createFilter200Response_1 = require("./createFilter200Response");
 var createFilterForDestination200Response_1 = require("./createFilterForDestination200Response");
 var createFilterForDestinationV1Input_1 = require("./createFilterForDestinationV1Input");
 var createFilterForDestinationV1Output_1 = require("./createFilterForDestinationV1Output");
-var createFilterForSpace200Response_1 = require("./createFilterForSpace200Response");
-var createFilterForSpaceInput_1 = require("./createFilterForSpaceInput");
-var createFilterForSpaceOutput_1 = require("./createFilterForSpaceOutput");
+var createFilterInput_1 = require("./createFilterInput");
+var createFilterOutput_1 = require("./createFilterOutput");
 var createFunction200Response_1 = require("./createFunction200Response");
 var createFunctionDeployment200Response_1 = require("./createFunctionDeployment200Response");
 var createFunctionDeploymentV1Output_1 = require("./createFunctionDeploymentV1Output");
@@ -864,8 +864,8 @@ var listDeliveryMetricsSummaryFromDestination200Response_1 = require("./listDeli
 var listDeliveryMetricsSummaryFromDestinationBetaOutput_1 = require("./listDeliveryMetricsSummaryFromDestinationBetaOutput");
 var listDestinations200Response_1 = require("./listDestinations200Response");
 var listDestinationsV1Output_1 = require("./listDestinationsV1Output");
-var listFiltersForSpace200Response_1 = require("./listFiltersForSpace200Response");
-var listFiltersForSpaceOutput_1 = require("./listFiltersForSpaceOutput");
+var listFiltersByIntegrationId200Response_1 = require("./listFiltersByIntegrationId200Response");
+var listFiltersByIntegrationIdOutput_1 = require("./listFiltersByIntegrationIdOutput");
 var listFiltersFromDestination200Response_1 = require("./listFiltersFromDestination200Response");
 var listFiltersFromDestinationV1Output_1 = require("./listFiltersFromDestinationV1Output");
 var listFiltersPaginationInput_1 = require("./listFiltersPaginationInput");
@@ -1280,12 +1280,12 @@ var typeMap = {
     CreateEdgeFunctions200Response: createEdgeFunctions200Response_1.CreateEdgeFunctions200Response,
     CreateEdgeFunctionsAlphaInput: createEdgeFunctionsAlphaInput_1.CreateEdgeFunctionsAlphaInput,
     CreateEdgeFunctionsAlphaOutput: createEdgeFunctionsAlphaOutput_1.CreateEdgeFunctionsAlphaOutput,
+    CreateFilter200Response: createFilter200Response_1.CreateFilter200Response,
     CreateFilterForDestination200Response: createFilterForDestination200Response_1.CreateFilterForDestination200Response,
     CreateFilterForDestinationV1Input: createFilterForDestinationV1Input_1.CreateFilterForDestinationV1Input,
     CreateFilterForDestinationV1Output: createFilterForDestinationV1Output_1.CreateFilterForDestinationV1Output,
-    CreateFilterForSpace200Response: createFilterForSpace200Response_1.CreateFilterForSpace200Response,
-    CreateFilterForSpaceInput: createFilterForSpaceInput_1.CreateFilterForSpaceInput,
-    CreateFilterForSpaceOutput: createFilterForSpaceOutput_1.CreateFilterForSpaceOutput,
+    CreateFilterInput: createFilterInput_1.CreateFilterInput,
+    CreateFilterOutput: createFilterOutput_1.CreateFilterOutput,
     CreateFunction200Response: createFunction200Response_1.CreateFunction200Response,
     CreateFunctionDeployment200Response: createFunctionDeployment200Response_1.CreateFunctionDeployment200Response,
     CreateFunctionDeploymentV1Output: createFunctionDeploymentV1Output_1.CreateFunctionDeploymentV1Output,
@@ -1520,8 +1520,8 @@ var typeMap = {
     ListDeliveryMetricsSummaryFromDestinationBetaOutput: listDeliveryMetricsSummaryFromDestinationBetaOutput_1.ListDeliveryMetricsSummaryFromDestinationBetaOutput,
     ListDestinations200Response: listDestinations200Response_1.ListDestinations200Response,
     ListDestinationsV1Output: listDestinationsV1Output_1.ListDestinationsV1Output,
-    ListFiltersForSpace200Response: listFiltersForSpace200Response_1.ListFiltersForSpace200Response,
-    ListFiltersForSpaceOutput: listFiltersForSpaceOutput_1.ListFiltersForSpaceOutput,
+    ListFiltersByIntegrationId200Response: listFiltersByIntegrationId200Response_1.ListFiltersByIntegrationId200Response,
+    ListFiltersByIntegrationIdOutput: listFiltersByIntegrationIdOutput_1.ListFiltersByIntegrationIdOutput,
     ListFiltersFromDestination200Response: listFiltersFromDestination200Response_1.ListFiltersFromDestination200Response,
     ListFiltersFromDestinationV1Output: listFiltersFromDestinationV1Output_1.ListFiltersFromDestinationV1Output,
     ListFiltersPaginationInput: listFiltersPaginationInput_1.ListFiltersPaginationInput,

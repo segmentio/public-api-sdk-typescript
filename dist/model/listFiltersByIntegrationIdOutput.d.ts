@@ -1,12 +1,8 @@
-export declare class CreateFilterForSpaceInput {
-    'integrationId': string;
-    'enabled'?: boolean;
-    'name': string;
-    'description'?: string;
-    'if': string;
-    'drop'?: boolean;
-    'dropProperties'?: Array<string>;
-    'allowProperties'?: Array<string>;
+import { Filter } from './filter';
+import { ListFiltersPaginationOutput } from './listFiltersPaginationOutput';
+export declare class ListFiltersByIntegrationIdOutput {
+    'filters'?: Array<Filter>;
+    'pagination'?: ListFiltersPaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

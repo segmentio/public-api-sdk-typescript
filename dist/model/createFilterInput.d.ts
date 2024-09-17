@@ -1,6 +1,12 @@
-import { Filter } from './filter';
-export declare class CreateFilterForSpaceOutput {
-    'filter': Filter;
+export declare class CreateFilterInput {
+    'integrationId': string;
+    'enabled'?: boolean;
+    'name': string;
+    'description'?: string;
+    'if': string;
+    'drop'?: boolean;
+    'dropProperties'?: Array<string>;
+    'allowProperties'?: Array<string>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
