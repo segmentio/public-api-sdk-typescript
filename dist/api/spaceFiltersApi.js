@@ -113,7 +113,7 @@ var SpaceFiltersApi = (function () {
     SpaceFiltersApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    SpaceFiltersApi.prototype.createFilter = function (CreateFilterInput, options) {
+    SpaceFiltersApi.prototype.createFilterForSpace = function (CreateFilterForSpaceInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -123,6 +123,7 @@ var SpaceFiltersApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
                     'application/json',
                 ];
@@ -133,8 +134,9 @@ var SpaceFiltersApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (CreateFilterInput === null || CreateFilterInput === undefined) {
-                    throw new Error('Required parameter CreateFilterInput was null or undefined when calling createFilter.');
+                if (CreateFilterForSpaceInput === null ||
+                    CreateFilterForSpaceInput === undefined) {
+                    throw new Error('Required parameter CreateFilterForSpaceInput was null or undefined when calling createFilterForSpace.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -145,7 +147,7 @@ var SpaceFiltersApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateFilterInput, 'CreateFilterInput'),
+                    body: models_1.ObjectSerializer.serialize(CreateFilterForSpaceInput, 'CreateFilterForSpaceInput'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -184,7 +186,7 @@ var SpaceFiltersApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateFilter200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateFilterForSpace200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -208,6 +210,7 @@ var SpaceFiltersApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
                     'application/json',
                 ];
@@ -292,6 +295,7 @@ var SpaceFiltersApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
                     'application/json',
                 ];
@@ -365,7 +369,7 @@ var SpaceFiltersApi = (function () {
             });
         });
     };
-    SpaceFiltersApi.prototype.listFiltersByIntegrationId = function (integrationId, pagination, options) {
+    SpaceFiltersApi.prototype.listFiltersForSpace = function (integrationId, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
@@ -375,6 +379,7 @@ var SpaceFiltersApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
                     'application/json',
                 ];
@@ -386,7 +391,7 @@ var SpaceFiltersApi = (function () {
                 }
                 localVarFormParams = {};
                 if (integrationId === null || integrationId === undefined) {
-                    throw new Error('Required parameter integrationId was null or undefined when calling listFiltersByIntegrationId.');
+                    throw new Error('Required parameter integrationId was null or undefined when calling listFiltersForSpace.');
                 }
                 if (integrationId !== undefined) {
                     localVarQueryParameters['integrationId'] =
@@ -442,7 +447,7 @@ var SpaceFiltersApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListFiltersByIntegrationId200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ListFiltersForSpace200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -466,6 +471,7 @@ var SpaceFiltersApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
                     'application/json',
                 ];

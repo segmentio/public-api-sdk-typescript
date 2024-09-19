@@ -1,6 +1,6 @@
-export declare class ReverseEtlCronScheduleConfig {
-    'spec': string;
-    'timezone': string;
+import { ListFiltersForSpaceOutput } from './listFiltersForSpaceOutput';
+export declare class ListFiltersForSpace200Response {
+    'data'?: ListFiltersForSpaceOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

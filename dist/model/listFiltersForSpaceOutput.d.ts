@@ -1,6 +1,8 @@
-import { CreateFilterOutput } from './createFilterOutput';
-export declare class CreateFilter200Response {
-    'data'?: CreateFilterOutput;
+import { Filter } from './filter';
+import { ListFiltersPaginationOutput } from './listFiltersPaginationOutput';
+export declare class ListFiltersForSpaceOutput {
+    'filters'?: Array<Filter>;
+    'pagination'?: ListFiltersPaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

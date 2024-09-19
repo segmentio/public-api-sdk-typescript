@@ -30,11 +30,6 @@ var Filter = (function () {
             type: 'boolean',
         },
         {
-            name: 'drop',
-            baseName: 'drop',
-            type: 'boolean',
-        },
-        {
             name: 'name',
             baseName: 'name',
             type: 'string',
@@ -50,8 +45,13 @@ var Filter = (function () {
             type: 'string',
         },
         {
-            name: 'propertyDrops',
-            baseName: 'propertyDrops',
+            name: 'drop',
+            baseName: 'drop',
+            type: 'boolean',
+        },
+        {
+            name: 'dropProperties',
+            baseName: 'dropProperties',
             type: 'Array<string>',
         },
         {

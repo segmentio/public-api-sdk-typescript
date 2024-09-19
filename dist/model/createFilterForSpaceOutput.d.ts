@@ -1,6 +1,6 @@
-import { ListFiltersByIntegrationIdOutput } from './listFiltersByIntegrationIdOutput';
-export declare class ListFiltersByIntegrationId200Response {
-    'data'?: ListFiltersByIntegrationIdOutput;
+import { Filter } from './filter';
+export declare class CreateFilterForSpaceOutput {
+    'filter': Filter;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

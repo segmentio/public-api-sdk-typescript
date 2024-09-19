@@ -57,12 +57,12 @@ export * from './createDestinationV1Output';
 export * from './createEdgeFunctions200Response';
 export * from './createEdgeFunctionsAlphaInput';
 export * from './createEdgeFunctionsAlphaOutput';
-export * from './createFilter200Response';
 export * from './createFilterForDestination200Response';
 export * from './createFilterForDestinationV1Input';
 export * from './createFilterForDestinationV1Output';
-export * from './createFilterInput';
-export * from './createFilterOutput';
+export * from './createFilterForSpace200Response';
+export * from './createFilterForSpaceInput';
+export * from './createFilterForSpaceOutput';
 export * from './createFunction200Response';
 export * from './createFunctionDeployment200Response';
 export * from './createFunctionDeploymentV1Output';
@@ -297,8 +297,8 @@ export * from './listDeliveryMetricsSummaryFromDestination200Response';
 export * from './listDeliveryMetricsSummaryFromDestinationBetaOutput';
 export * from './listDestinations200Response';
 export * from './listDestinationsV1Output';
-export * from './listFiltersByIntegrationId200Response';
-export * from './listFiltersByIntegrationIdOutput';
+export * from './listFiltersForSpace200Response';
+export * from './listFiltersForSpaceOutput';
 export * from './listFiltersFromDestination200Response';
 export * from './listFiltersFromDestinationV1Output';
 export * from './listFiltersPaginationInput';
@@ -447,7 +447,6 @@ export * from './restoreFunctionVersionAlphaInput';
 export * from './restoreFunctionVersionAlphaOutput';
 export * from './reverseETLManualSyncJobOutput';
 export * from './reverseETLSyncStatus';
-export * from './reverseEtlCronScheduleConfig';
 export * from './reverseEtlModel';
 export * from './reverseEtlPeriodicScheduleConfig';
 export * from './reverseEtlScheduleConfig';
@@ -623,12 +622,12 @@ import { CreateDestinationV1Output } from './createDestinationV1Output';
 import { CreateEdgeFunctions200Response } from './createEdgeFunctions200Response';
 import { CreateEdgeFunctionsAlphaInput } from './createEdgeFunctionsAlphaInput';
 import { CreateEdgeFunctionsAlphaOutput } from './createEdgeFunctionsAlphaOutput';
-import { CreateFilter200Response } from './createFilter200Response';
 import { CreateFilterForDestination200Response } from './createFilterForDestination200Response';
 import { CreateFilterForDestinationV1Input } from './createFilterForDestinationV1Input';
 import { CreateFilterForDestinationV1Output } from './createFilterForDestinationV1Output';
-import { CreateFilterInput } from './createFilterInput';
-import { CreateFilterOutput } from './createFilterOutput';
+import { CreateFilterForSpace200Response } from './createFilterForSpace200Response';
+import { CreateFilterForSpaceInput } from './createFilterForSpaceInput';
+import { CreateFilterForSpaceOutput } from './createFilterForSpaceOutput';
 import { CreateFunction200Response } from './createFunction200Response';
 import { CreateFunctionDeployment200Response } from './createFunctionDeployment200Response';
 import { CreateFunctionDeploymentV1Output } from './createFunctionDeploymentV1Output';
@@ -863,8 +862,8 @@ import { ListDeliveryMetricsSummaryFromDestination200Response } from './listDeli
 import { ListDeliveryMetricsSummaryFromDestinationBetaOutput } from './listDeliveryMetricsSummaryFromDestinationBetaOutput';
 import { ListDestinations200Response } from './listDestinations200Response';
 import { ListDestinationsV1Output } from './listDestinationsV1Output';
-import { ListFiltersByIntegrationId200Response } from './listFiltersByIntegrationId200Response';
-import { ListFiltersByIntegrationIdOutput } from './listFiltersByIntegrationIdOutput';
+import { ListFiltersForSpace200Response } from './listFiltersForSpace200Response';
+import { ListFiltersForSpaceOutput } from './listFiltersForSpaceOutput';
 import { ListFiltersFromDestination200Response } from './listFiltersFromDestination200Response';
 import { ListFiltersFromDestinationV1Output } from './listFiltersFromDestinationV1Output';
 import { ListFiltersPaginationInput } from './listFiltersPaginationInput';
@@ -1013,7 +1012,6 @@ import { RestoreFunctionVersionAlphaInput } from './restoreFunctionVersionAlphaI
 import { RestoreFunctionVersionAlphaOutput } from './restoreFunctionVersionAlphaOutput';
 import { ReverseETLManualSyncJobOutput } from './reverseETLManualSyncJobOutput';
 import { ReverseETLSyncStatus } from './reverseETLSyncStatus';
-import { ReverseEtlCronScheduleConfig } from './reverseEtlCronScheduleConfig';
 import { ReverseEtlModel } from './reverseEtlModel';
 import { ReverseEtlPeriodicScheduleConfig } from './reverseEtlPeriodicScheduleConfig';
 import { ReverseEtlScheduleConfig } from './reverseEtlScheduleConfig';
@@ -1350,13 +1348,13 @@ let typeMap: { [index: string]: any } = {
     CreateEdgeFunctions200Response: CreateEdgeFunctions200Response,
     CreateEdgeFunctionsAlphaInput: CreateEdgeFunctionsAlphaInput,
     CreateEdgeFunctionsAlphaOutput: CreateEdgeFunctionsAlphaOutput,
-    CreateFilter200Response: CreateFilter200Response,
     CreateFilterForDestination200Response:
         CreateFilterForDestination200Response,
     CreateFilterForDestinationV1Input: CreateFilterForDestinationV1Input,
     CreateFilterForDestinationV1Output: CreateFilterForDestinationV1Output,
-    CreateFilterInput: CreateFilterInput,
-    CreateFilterOutput: CreateFilterOutput,
+    CreateFilterForSpace200Response: CreateFilterForSpace200Response,
+    CreateFilterForSpaceInput: CreateFilterForSpaceInput,
+    CreateFilterForSpaceOutput: CreateFilterForSpaceOutput,
     CreateFunction200Response: CreateFunction200Response,
     CreateFunctionDeployment200Response: CreateFunctionDeployment200Response,
     CreateFunctionDeploymentV1Output: CreateFunctionDeploymentV1Output,
@@ -1630,9 +1628,8 @@ let typeMap: { [index: string]: any } = {
         ListDeliveryMetricsSummaryFromDestinationBetaOutput,
     ListDestinations200Response: ListDestinations200Response,
     ListDestinationsV1Output: ListDestinationsV1Output,
-    ListFiltersByIntegrationId200Response:
-        ListFiltersByIntegrationId200Response,
-    ListFiltersByIntegrationIdOutput: ListFiltersByIntegrationIdOutput,
+    ListFiltersForSpace200Response: ListFiltersForSpace200Response,
+    ListFiltersForSpaceOutput: ListFiltersForSpaceOutput,
     ListFiltersFromDestination200Response:
         ListFiltersFromDestination200Response,
     ListFiltersFromDestinationV1Output: ListFiltersFromDestinationV1Output,
@@ -1819,7 +1816,6 @@ let typeMap: { [index: string]: any } = {
     RestoreFunctionVersionAlphaOutput: RestoreFunctionVersionAlphaOutput,
     ReverseETLManualSyncJobOutput: ReverseETLManualSyncJobOutput,
     ReverseETLSyncStatus: ReverseETLSyncStatus,
-    ReverseEtlCronScheduleConfig: ReverseEtlCronScheduleConfig,
     ReverseEtlModel: ReverseEtlModel,
     ReverseEtlPeriodicScheduleConfig: ReverseEtlPeriodicScheduleConfig,
     ReverseEtlScheduleConfig: ReverseEtlScheduleConfig,

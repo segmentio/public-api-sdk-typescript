@@ -1,10 +1,10 @@
 /// <reference types="node" />
 import http from 'http';
-import { CreateFilter200Response } from '../model/createFilter200Response';
-import { CreateFilterInput } from '../model/createFilterInput';
+import { CreateFilterForSpace200Response } from '../model/createFilterForSpace200Response';
+import { CreateFilterForSpaceInput } from '../model/createFilterForSpaceInput';
 import { DeleteFilterById200Response } from '../model/deleteFilterById200Response';
 import { GetFilterById200Response } from '../model/getFilterById200Response';
-import { ListFiltersByIntegrationId200Response } from '../model/listFiltersByIntegrationId200Response';
+import { ListFiltersForSpace200Response } from '../model/listFiltersForSpace200Response';
 import { ListFiltersPaginationInput } from '../model/listFiltersPaginationInput';
 import { UpdateFilterById200Response } from '../model/updateFilterById200Response';
 import { UpdateFilterByIdInput } from '../model/updateFilterByIdInput';
@@ -31,13 +31,13 @@ export declare class SpaceFiltersApi {
     setApiKey(key: SpaceFiltersApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    createFilter(CreateFilterInput: CreateFilterInput, options?: {
+    createFilterForSpace(CreateFilterForSpaceInput: CreateFilterForSpaceInput, options?: {
         headers: {
             [name: string]: string;
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: CreateFilter200Response;
+        body: CreateFilterForSpace200Response;
     }>;
     deleteFilterById(id: string, options?: {
         headers: {
@@ -55,13 +55,13 @@ export declare class SpaceFiltersApi {
         response: http.IncomingMessage;
         body: GetFilterById200Response;
     }>;
-    listFiltersByIntegrationId(integrationId: string, pagination?: ListFiltersPaginationInput, options?: {
+    listFiltersForSpace(integrationId: string, pagination?: ListFiltersPaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: ListFiltersByIntegrationId200Response;
+        body: ListFiltersForSpace200Response;
     }>;
     updateFilterById(id: string, UpdateFilterByIdInput: UpdateFilterByIdInput, options?: {
         headers: {
