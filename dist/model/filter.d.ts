@@ -9,6 +9,8 @@ export declare class Filter {
     'drop'?: boolean;
     'dropProperties'?: Array<string>;
     'allowProperties'?: Array<string>;
+    'createdAt': string;
+    'updatedAt': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

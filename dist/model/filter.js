@@ -59,6 +59,16 @@ var Filter = (function () {
             baseName: 'allowProperties',
             type: 'Array<string>',
         },
+        {
+            name: 'createdAt',
+            baseName: 'createdAt',
+            type: 'string',
+        },
+        {
+            name: 'updatedAt',
+            baseName: 'updatedAt',
+            type: 'string',
+        },
     ];
     return Filter;
 }());
