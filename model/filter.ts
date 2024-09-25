@@ -56,6 +56,14 @@ export class Filter {
      * Describes the properties allowed on events that match the \"if\" statement.
      */
     'allowProperties'?: Array<string>;
+    /**
+     * The timestamp of this filter\'s creation.
+     */
+    'createdAt': string;
+    /**
+     * The timestamp of this filter\'s last change.
+     */
+    'updatedAt': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -113,6 +121,16 @@ export class Filter {
             name: 'allowProperties',
             baseName: 'allowProperties',
             type: 'Array<string>',
+        },
+        {
+            name: 'createdAt',
+            baseName: 'createdAt',
+            type: 'string',
+        },
+        {
+            name: 'updatedAt',
+            baseName: 'updatedAt',
+            type: 'string',
         },
     ];
 

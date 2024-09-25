@@ -17,7 +17,7 @@ import { RequestFile } from './models';
  */
 export class CreateFilterForSpaceInput {
     /**
-     * The Space id to filer on.
+     * The Space id to filter on.
      */
     'integrationId': string;
     /**
