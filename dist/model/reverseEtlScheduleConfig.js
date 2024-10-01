@@ -29,6 +29,11 @@ var ReverseEtlScheduleConfig = (function () {
             baseName: 'timezone',
             type: 'string',
         },
+        {
+            name: 'spec',
+            baseName: 'spec',
+            type: 'string',
+        },
     ];
     return ReverseEtlScheduleConfig;
 }());
