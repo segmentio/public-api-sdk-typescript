@@ -9,6 +9,7 @@ export declare class TransformationV1 {
     'destinationMetadataId'?: string;
     'enabled': boolean;
     'if': string;
+    'drop'?: boolean;
     'newEventName'?: string;
     'propertyRenames'?: Array<PropertyRenameV1>;
     'propertyValueTransformations'?: Array<PropertyValueTransformationV1>;
