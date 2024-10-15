@@ -93,6 +93,10 @@ export class DestinationMetadataV1 {
      * The list of regional endpoints for this Destination.
      */
     'regionEndpoints'?: Array<string>;
+    /**
+     * This Destination\'s support for multiple instance types.
+     */
+    'multiInstanceSupportedVersion'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -200,6 +204,11 @@ export class DestinationMetadataV1 {
             name: 'regionEndpoints',
             baseName: 'regionEndpoints',
             type: 'Array<string>',
+        },
+        {
+            name: 'multiInstanceSupportedVersion',
+            baseName: 'multiInstanceSupportedVersion',
+            type: 'string',
         },
     ];
 
