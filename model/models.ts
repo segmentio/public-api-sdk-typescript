@@ -34,6 +34,9 @@ export * from './batchQueryMessagingSubscriptionsForSpace200Response';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 export * from './breakdownBeta';
+export * from './cancelReverseETLSyncForModel200Response';
+export * from './cancelReverseETLSyncForModelInput';
+export * from './cancelReverseETLSyncForModelOutput';
 export * from './commonSourceSettingsV1';
 export * from './computedTraitSummary';
 export * from './computedTraitsDefinition';
@@ -447,6 +450,7 @@ export * from './restoreFunctionVersionAlphaInput';
 export * from './restoreFunctionVersionAlphaOutput';
 export * from './reverseETLManualSyncJobOutput';
 export * from './reverseETLSyncStatus';
+export * from './reverseEtlCronScheduleConfig';
 export * from './reverseEtlModel';
 export * from './reverseEtlPeriodicScheduleConfig';
 export * from './reverseEtlScheduleConfig';
@@ -599,6 +603,9 @@ import { BatchQueryMessagingSubscriptionsForSpace200Response } from './batchQuer
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaInput } from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaOutput } from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 import { BreakdownBeta } from './breakdownBeta';
+import { CancelReverseETLSyncForModel200Response } from './cancelReverseETLSyncForModel200Response';
+import { CancelReverseETLSyncForModelInput } from './cancelReverseETLSyncForModelInput';
+import { CancelReverseETLSyncForModelOutput } from './cancelReverseETLSyncForModelOutput';
 import { CommonSourceSettingsV1 } from './commonSourceSettingsV1';
 import { ComputedTraitSummary } from './computedTraitSummary';
 import { ComputedTraitsDefinition } from './computedTraitsDefinition';
@@ -1012,6 +1019,7 @@ import { RestoreFunctionVersionAlphaInput } from './restoreFunctionVersionAlphaI
 import { RestoreFunctionVersionAlphaOutput } from './restoreFunctionVersionAlphaOutput';
 import { ReverseETLManualSyncJobOutput } from './reverseETLManualSyncJobOutput';
 import { ReverseETLSyncStatus } from './reverseETLSyncStatus';
+import { ReverseEtlCronScheduleConfig } from './reverseEtlCronScheduleConfig';
 import { ReverseEtlModel } from './reverseEtlModel';
 import { ReverseEtlPeriodicScheduleConfig } from './reverseEtlPeriodicScheduleConfig';
 import { ReverseEtlScheduleConfig } from './reverseEtlScheduleConfig';
@@ -1321,6 +1329,10 @@ let typeMap: { [index: string]: any } = {
     BatchQueryMessagingSubscriptionsForSpaceAlphaOutput:
         BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
     BreakdownBeta: BreakdownBeta,
+    CancelReverseETLSyncForModel200Response:
+        CancelReverseETLSyncForModel200Response,
+    CancelReverseETLSyncForModelInput: CancelReverseETLSyncForModelInput,
+    CancelReverseETLSyncForModelOutput: CancelReverseETLSyncForModelOutput,
     CommonSourceSettingsV1: CommonSourceSettingsV1,
     ComputedTraitSummary: ComputedTraitSummary,
     ComputedTraitsDefinition: ComputedTraitsDefinition,
@@ -1816,6 +1828,7 @@ let typeMap: { [index: string]: any } = {
     RestoreFunctionVersionAlphaOutput: RestoreFunctionVersionAlphaOutput,
     ReverseETLManualSyncJobOutput: ReverseETLManualSyncJobOutput,
     ReverseETLSyncStatus: ReverseETLSyncStatus,
+    ReverseEtlCronScheduleConfig: ReverseEtlCronScheduleConfig,
     ReverseEtlModel: ReverseEtlModel,
     ReverseEtlPeriodicScheduleConfig: ReverseEtlPeriodicScheduleConfig,
     ReverseEtlScheduleConfig: ReverseEtlScheduleConfig,
