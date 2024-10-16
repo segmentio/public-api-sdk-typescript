@@ -109,11 +109,6 @@ var DestinationMetadataV1 = (function () {
             baseName: 'regionEndpoints',
             type: 'Array<string>',
         },
-        {
-            name: 'multiInstanceSupportedVersion',
-            baseName: 'multiInstanceSupportedVersion',
-            type: 'string',
-        },
     ];
     return DestinationMetadataV1;
 }());
