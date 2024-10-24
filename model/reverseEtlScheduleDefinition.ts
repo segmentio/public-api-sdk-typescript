@@ -18,7 +18,7 @@ import { Config } from './config';
  */
 export class ReverseEtlScheduleDefinition {
     /**
-     * Strategy supports three modes: Periodic, Specific Days, or Manual.
+     * Strategy supports: Periodic, Specific Days, Manual, CRON.
      */
     'strategy': ReverseEtlScheduleDefinition.StrategyEnum;
     'config'?: Config | null;
@@ -49,6 +49,7 @@ export class ReverseEtlScheduleDefinition {
 
 export namespace ReverseEtlScheduleDefinition {
     export enum StrategyEnum {
+        CRON = <any>'CRON',
         MANUAL = <any>'MANUAL',
         PERIODIC = <any>'PERIODIC',
         SPECIFIC_DAYS = <any>'SPECIFIC_DAYS',

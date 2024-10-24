@@ -16,6 +16,7 @@ export declare class ReverseEtlScheduleDefinition {
 }
 export declare namespace ReverseEtlScheduleDefinition {
     enum StrategyEnum {
+        CRON,
         MANUAL,
         PERIODIC,
         SPECIFIC_DAYS

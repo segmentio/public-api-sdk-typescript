@@ -29,14 +29,6 @@ export class UpdateReverseEtlModelInput {
      */
     'enabled'?: boolean;
     /**
-     * Determines the strategy used for triggering syncs, which will be used in conjunction with scheduleConfig.
-     */
-    'scheduleStrategy'?: UpdateReverseEtlModelInput.ScheduleStrategyEnum;
-    /**
-     * Defines a configuration object used for scheduling, which can vary depending on the configured strategy, but must always be an object with at least 1 level of keys.
-     */
-    'scheduleConfig'?: { [key: string]: any };
-    /**
      * The SQL query that will be executed to extract data from the connected Source.
      */
     'query'?: string;
@@ -68,16 +60,6 @@ export class UpdateReverseEtlModelInput {
             type: 'boolean',
         },
         {
-            name: 'scheduleStrategy',
-            baseName: 'scheduleStrategy',
-            type: 'UpdateReverseEtlModelInput.ScheduleStrategyEnum',
-        },
-        {
-            name: 'scheduleConfig',
-            baseName: 'scheduleConfig',
-            type: '{ [key: string]: any; }',
-        },
-        {
             name: 'query',
             baseName: 'query',
             type: 'string',
@@ -91,13 +73,5 @@ export class UpdateReverseEtlModelInput {
 
     static getAttributeTypeMap() {
         return UpdateReverseEtlModelInput.attributeTypeMap;
-    }
-}
-
-export namespace UpdateReverseEtlModelInput {
-    export enum ScheduleStrategyEnum {
-        MANUAL = <any>'MANUAL',
-        PERIODIC = <any>'PERIODIC',
-        SPECIFIC_DAYS = <any>'SPECIFIC_DAYS',
     }
 }

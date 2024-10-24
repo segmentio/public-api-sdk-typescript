@@ -29,7 +29,7 @@ export class ReverseEtlScheduleConfig {
      */
     'hours': Array<number>;
     /**
-     * Timezone for the specified times.
+     * Timezone respected by the cron string. Format must be in IANA Timezone Identifier. Example: \'America/Los_Angeles\'.
      */
     'timezone': string;
     /**

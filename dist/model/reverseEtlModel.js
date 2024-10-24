@@ -35,16 +35,6 @@ var ReverseEtlModel = (function () {
             type: 'boolean',
         },
         {
-            name: 'scheduleStrategy',
-            baseName: 'scheduleStrategy',
-            type: 'string',
-        },
-        {
-            name: 'scheduleConfig',
-            baseName: 'scheduleConfig',
-            type: 'ScheduleConfig',
-        },
-        {
             name: 'query',
             baseName: 'query',
             type: 'string',

@@ -3,10 +3,6 @@ export declare class CreateReverseEtlModelInput {
     'name': string;
     'description': string;
     'enabled': boolean;
-    'scheduleStrategy': CreateReverseEtlModelInput.ScheduleStrategyEnum;
-    'scheduleConfig': {
-        [key: string]: any;
-    };
     'query': string;
     'queryIdentifierColumn': string;
     static discriminator: string | undefined;
@@ -20,11 +16,4 @@ export declare class CreateReverseEtlModelInput {
         baseName: string;
         type: string;
     }[];
-}
-export declare namespace CreateReverseEtlModelInput {
-    enum ScheduleStrategyEnum {
-        MANUAL,
-        PERIODIC,
-        SPECIFIC_DAYS
-    }
 }

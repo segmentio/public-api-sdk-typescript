@@ -11,7 +11,6 @@
  */
 
 import { RequestFile } from './models';
-import { ScheduleConfig } from './scheduleConfig';
 
 /**
  * Defines a Reverse ETL Model.
@@ -37,11 +36,6 @@ export class ReverseEtlModel {
      * Indicates whether the Model should have syncs enabled. When disabled, no syncs will be triggered, regardless of the enabled status of the attached destinations/subscriptions.
      */
     'enabled': boolean;
-    /**
-     * Determines the strategy used for triggering syncs, which will be used in conjunction with scheduleConfig.  Possible values: \"manual\", \"periodic\", \"specific_days\".
-     */
-    'scheduleStrategy': string;
-    'scheduleConfig'?: ScheduleConfig | null;
     /**
      * The SQL query that will be executed to extract data from the connected Source.
      */
@@ -82,16 +76,6 @@ export class ReverseEtlModel {
             name: 'enabled',
             baseName: 'enabled',
             type: 'boolean',
-        },
-        {
-            name: 'scheduleStrategy',
-            baseName: 'scheduleStrategy',
-            type: 'string',
-        },
-        {
-            name: 'scheduleConfig',
-            baseName: 'scheduleConfig',
-            type: 'ScheduleConfig',
         },
         {
             name: 'query',

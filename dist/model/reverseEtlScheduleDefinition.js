@@ -26,6 +26,7 @@ exports.ReverseEtlScheduleDefinition = ReverseEtlScheduleDefinition;
 (function (ReverseEtlScheduleDefinition) {
     var StrategyEnum;
     (function (StrategyEnum) {
+        StrategyEnum[StrategyEnum["CRON"] = 'CRON'] = "CRON";
         StrategyEnum[StrategyEnum["MANUAL"] = 'MANUAL'] = "MANUAL";
         StrategyEnum[StrategyEnum["PERIODIC"] = 'PERIODIC'] = "PERIODIC";
         StrategyEnum[StrategyEnum["SPECIFIC_DAYS"] = 'SPECIFIC_DAYS'] = "SPECIFIC_DAYS";

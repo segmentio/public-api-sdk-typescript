@@ -25,16 +25,6 @@ var UpdateReverseEtlModelInput = (function () {
             type: 'boolean',
         },
         {
-            name: 'scheduleStrategy',
-            baseName: 'scheduleStrategy',
-            type: 'UpdateReverseEtlModelInput.ScheduleStrategyEnum',
-        },
-        {
-            name: 'scheduleConfig',
-            baseName: 'scheduleConfig',
-            type: '{ [key: string]: any; }',
-        },
-        {
             name: 'query',
             baseName: 'query',
             type: 'string',
@@ -47,14 +37,5 @@ var UpdateReverseEtlModelInput = (function () {
     ];
     return UpdateReverseEtlModelInput;
 }());
-exports.UpdateReverseEtlModelInput = UpdateReverseEtlModelInput;
-(function (UpdateReverseEtlModelInput) {
-    var ScheduleStrategyEnum;
-    (function (ScheduleStrategyEnum) {
-        ScheduleStrategyEnum[ScheduleStrategyEnum["MANUAL"] = 'MANUAL'] = "MANUAL";
-        ScheduleStrategyEnum[ScheduleStrategyEnum["PERIODIC"] = 'PERIODIC'] = "PERIODIC";
-        ScheduleStrategyEnum[ScheduleStrategyEnum["SPECIFIC_DAYS"] = 'SPECIFIC_DAYS'] = "SPECIFIC_DAYS";
-    })(ScheduleStrategyEnum = UpdateReverseEtlModelInput.ScheduleStrategyEnum || (UpdateReverseEtlModelInput.ScheduleStrategyEnum = {}));
-})(UpdateReverseEtlModelInput = exports.UpdateReverseEtlModelInput || (exports.UpdateReverseEtlModelInput = {}));
 exports.UpdateReverseEtlModelInput = UpdateReverseEtlModelInput;
 //# sourceMappingURL=updateReverseEtlModelInput.js.map
