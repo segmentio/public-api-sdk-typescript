@@ -106,7 +106,7 @@ export class WorkspacesApi {
     }
 
     /**
-     * Returns the Workspace associated with the token used to access this resource.
+     * Returns the Workspace associated with the token used to access this resource.   The rate limit for this endpoint is 5 requests per minute, which is lower than the default due to access pattern restrictions. Once reached, this endpoint will respond with the 429 HTTP status code with headers indicating the limit parameters. See [Rate Limiting](/#tag/Rate-Limits) for more information.
      * @summary Get Workspace
      */
     public async getWorkspace(
