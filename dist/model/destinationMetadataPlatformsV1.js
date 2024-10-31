@@ -34,6 +34,11 @@ var DestinationMetadataPlatformsV1 = (function () {
             baseName: 'cloudAppObject',
             type: 'boolean',
         },
+        {
+            name: 'linkedAudiences',
+            baseName: 'linkedAudiences',
+            type: 'boolean',
+        },
     ];
     return DestinationMetadataPlatformsV1;
 }());
