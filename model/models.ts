@@ -456,7 +456,6 @@ export * from './reverseEtlSpecificTimeScheduleConfig';
 export * from './roleV1';
 export * from './ruleInputV1';
 export * from './ruleV1';
-export * from './scheduleConfig';
 export * from './sourceAPICallSnapshotV1';
 export * from './sourceAlpha';
 export * from './sourceEventVolumeDatapointV1';
@@ -1022,7 +1021,6 @@ import { ReverseEtlSpecificTimeScheduleConfig } from './reverseEtlSpecificTimeSc
 import { RoleV1 } from './roleV1';
 import { RuleInputV1 } from './ruleInputV1';
 import { RuleV1 } from './ruleV1';
-import { ScheduleConfig } from './scheduleConfig';
 import { SourceAPICallSnapshotV1 } from './sourceAPICallSnapshotV1';
 import { SourceAlpha } from './sourceAlpha';
 import { SourceEventVolumeDatapointV1 } from './sourceEventVolumeDatapointV1';
@@ -1147,8 +1145,6 @@ let enumsMap: { [index: string]: any } = {
         CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
     'CreateFunctionV1Input.ResourceTypeEnum':
         CreateFunctionV1Input.ResourceTypeEnum,
-    'CreateReverseEtlModelInput.ScheduleStrategyEnum':
-        CreateReverseEtlModelInput.ScheduleStrategyEnum,
     'CreateSourceRegulationV1Input.RegulationTypeEnum':
         CreateSourceRegulationV1Input.RegulationTypeEnum,
     'CreateSourceRegulationV1Input.SubjectTypeEnum':
@@ -1269,8 +1265,6 @@ let enumsMap: { [index: string]: any } = {
     'TraitDefinition.TypeEnum': TraitDefinition.TypeEnum,
     'UpdateGroupSubscriptionStatusResponse.StatusEnum':
         UpdateGroupSubscriptionStatusResponse.StatusEnum,
-    'UpdateReverseEtlModelInput.ScheduleStrategyEnum':
-        UpdateReverseEtlModelInput.ScheduleStrategyEnum,
     'UpdateRulesInTrackingPlanV1Output.StatusEnum':
         UpdateRulesInTrackingPlanV1Output.StatusEnum,
     'UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum':
@@ -1827,7 +1821,6 @@ let typeMap: { [index: string]: any } = {
     RoleV1: RoleV1,
     RuleInputV1: RuleInputV1,
     RuleV1: RuleV1,
-    ScheduleConfig: ScheduleConfig,
     SourceAPICallSnapshotV1: SourceAPICallSnapshotV1,
     SourceAlpha: SourceAlpha,
     SourceEventVolumeDatapointV1: SourceEventVolumeDatapointV1,

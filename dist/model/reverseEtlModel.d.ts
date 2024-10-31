@@ -1,12 +1,9 @@
-import { ScheduleConfig } from './scheduleConfig';
 export declare class ReverseEtlModel {
     'id': string;
     'sourceId': string;
     'name': string;
     'description': string;
     'enabled': boolean;
-    'scheduleStrategy': string;
-    'scheduleConfig'?: ScheduleConfig | null;
     'query': string;
     'queryIdentifierColumn': string;
     static discriminator: string | undefined;
