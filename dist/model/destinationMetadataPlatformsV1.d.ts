@@ -4,6 +4,7 @@ export declare class DestinationMetadataPlatformsV1 {
     'mobile'?: boolean;
     'warehouse'?: boolean;
     'cloudAppObject'?: boolean;
+    'linkedAudiences'?: boolean;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
