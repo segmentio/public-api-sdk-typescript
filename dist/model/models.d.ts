@@ -156,6 +156,7 @@ export * from './deleteUsersV1Output';
 export * from './deleteWarehouse200Response';
 export * from './deleteWarehouseV1Output';
 export * from './deliveryMetricsSummaryBeta';
+export * from './deliveryOverviewAudienceFilterBy';
 export * from './deliveryOverviewDestinationFilterBy';
 export * from './deliveryOverviewMetricsDatapoint';
 export * from './deliveryOverviewMetricsDataset';

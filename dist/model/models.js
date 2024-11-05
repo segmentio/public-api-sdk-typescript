@@ -170,6 +170,7 @@ __exportStar(require("./deleteUsersV1Output"), exports);
 __exportStar(require("./deleteWarehouse200Response"), exports);
 __exportStar(require("./deleteWarehouseV1Output"), exports);
 __exportStar(require("./deliveryMetricsSummaryBeta"), exports);
+__exportStar(require("./deliveryOverviewAudienceFilterBy"), exports);
 __exportStar(require("./deliveryOverviewDestinationFilterBy"), exports);
 __exportStar(require("./deliveryOverviewMetricsDatapoint"), exports);
 __exportStar(require("./deliveryOverviewMetricsDataset"), exports);
@@ -725,6 +726,7 @@ var deleteUsersV1Output_1 = require("./deleteUsersV1Output");
 var deleteWarehouse200Response_1 = require("./deleteWarehouse200Response");
 var deleteWarehouseV1Output_1 = require("./deleteWarehouseV1Output");
 var deliveryMetricsSummaryBeta_1 = require("./deliveryMetricsSummaryBeta");
+var deliveryOverviewAudienceFilterBy_1 = require("./deliveryOverviewAudienceFilterBy");
 var deliveryOverviewDestinationFilterBy_1 = require("./deliveryOverviewDestinationFilterBy");
 var deliveryOverviewMetricsDatapoint_1 = require("./deliveryOverviewMetricsDatapoint");
 var deliveryOverviewMetricsDataset_1 = require("./deliveryOverviewMetricsDataset");
@@ -1382,6 +1384,7 @@ var typeMap = {
     DeleteWarehouse200Response: deleteWarehouse200Response_1.DeleteWarehouse200Response,
     DeleteWarehouseV1Output: deleteWarehouseV1Output_1.DeleteWarehouseV1Output,
     DeliveryMetricsSummaryBeta: deliveryMetricsSummaryBeta_1.DeliveryMetricsSummaryBeta,
+    DeliveryOverviewAudienceFilterBy: deliveryOverviewAudienceFilterBy_1.DeliveryOverviewAudienceFilterBy,
     DeliveryOverviewDestinationFilterBy: deliveryOverviewDestinationFilterBy_1.DeliveryOverviewDestinationFilterBy,
     DeliveryOverviewMetricsDatapoint: deliveryOverviewMetricsDatapoint_1.DeliveryOverviewMetricsDatapoint,
     DeliveryOverviewMetricsDataset: deliveryOverviewMetricsDataset_1.DeliveryOverviewMetricsDataset,

@@ -1,10 +1,9 @@
-export declare class DestinationMetadataPlatformsV1 {
-    'browser'?: boolean;
-    'server'?: boolean;
-    'mobile'?: boolean;
-    'warehouse'?: boolean;
-    'cloudAppObject'?: boolean;
-    'linkedAudiences'?: boolean;
+export declare class DeliveryOverviewAudienceFilterBy {
+    'eventName'?: Array<string>;
+    'eventType'?: Array<string>;
+    'activationId'?: Array<string>;
+    'audienceId'?: Array<string>;
+    'spaceId'?: Array<string>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

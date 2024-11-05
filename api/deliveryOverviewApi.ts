@@ -14,6 +14,7 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
+import { DeliveryOverviewAudienceFilterBy } from '../model/deliveryOverviewAudienceFilterBy';
 import { DeliveryOverviewDestinationFilterBy } from '../model/deliveryOverviewDestinationFilterBy';
 import { DeliveryOverviewSourceFilterBy } from '../model/deliveryOverviewSourceFilterBy';
 import { DeliveryOverviewSuccessfullyReceivedFilterBy } from '../model/deliveryOverviewSuccessfullyReceivedFilterBy';
@@ -327,8 +328,8 @@ export class DeliveryOverviewApi {
      * @param startTime The ISO8601 formatted timestamp corresponding to the beginning of the requested time frame, inclusive.  This parameter exists in beta.
      * @param endTime The ISO8601 formatted timestamp corresponding to the end of the requested time frame, noninclusive.  This parameter exists in beta.
      * @param granularity The size of each bucket in the requested window.  Based on the granularity chosen, there are restrictions on the time range you can query:  **Minute**: - Max time range: 4 hours - Oldest possible start time: 48 hours in the past  **Hour**: - Max Time range: 14 days - Oldest possible start time: 30 days in the past  **Day**: - Max time range: 30 days - Oldest possible start time: 30 days in the past  This parameter exists in beta.
-     * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;event Name&#x60;, &#x60;event Type&#x60;, &#x60;discard Reason&#x60;, &#x60;app Version&#x60;, &#x60;subscription Id&#x60;, &#x60;activationId&#x60;, &#x60;audienceId&#x60;, and &#x60;spaceId&#x60;.  This parameter exists in beta.
-     * @param filter An optional filter for &#x60;event Name&#x60;, &#x60;event Type&#x60;, &#x60;discard Reason&#x60;, &#x60;appVersion&#x60;, &#x60;subscription Id&#x60;, &#x60;activationId&#x60;, &#x60;audienceId&#x60;, or &#x60;spaceId&#x60; that can be applied in addition to a &#x60;group By&#x60;. If you would like to view retry attempts for a successful delivery, you can filter &#x60;discard Reason&#x60; from &#x60;successes.attempt.1&#x60; through &#x60;successes.attempt.10&#x60;.  This parameter exists in beta.
+     * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, &#x60;appVersion&#x60;, &#x60;subscriptionId&#x60;, &#x60;activationId&#x60;, &#x60;audienceId&#x60;, and &#x60;spaceId&#x60;.  This parameter exists in beta.
+     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, &#x60;appVersion&#x60;, &#x60;subscriptionId&#x60;, &#x60;activationId&#x60;, &#x60;audienceId&#x60;, and/or &#x60;spaceId&#x60; that can be applied in addition to a &#x60;groupBy&#x60;. If you would like to view retry attempts for a successful delivery, you can filter &#x60;discardReason&#x60; from &#x60;successes.attempt.1&#x60; through &#x60;successes.attempt.10&#x60;.  This parameter exists in beta.
      * @param pagination Params to specify the page cursor and count.  This parameter exists in beta.
      */
     public async getEgressSuccessMetricsFromDeliveryOverview(
@@ -537,7 +538,7 @@ export class DeliveryOverviewApi {
      * @param endTime The ISO8601 formatted timestamp corresponding to the end of the requested time frame, noninclusive.  This parameter exists in beta.
      * @param granularity The size of each bucket in the requested window.  Based on the granularity chosen, there are restrictions on the time range you can query:  **Minute**: - Max time range: 4 hours - Oldest possible start time: 48 hours in the past  **Hour**: - Max Time range: 14 days - Oldest possible start time: 30 days in the past  **Day**: - Max time range: 30 days - Oldest possible start time: 30 days in the past  This parameter exists in beta.
      * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;event Name&#x60;, &#x60;event Type&#x60;, &#x60;discard Reason&#x60;, &#x60;app Version&#x60;, &#x60;subscription Id&#x60;, &#x60;activationId&#x60;, &#x60;audienceId&#x60;, and &#x60;spaceId&#x60;.  This parameter exists in beta.
-     * @param filter An optional filter for &#x60;event Name&#x60;, &#x60;event Type&#x60;, &#x60;discard Reason&#x60;, &#x60;app Version&#x60;, &#x60;subscription Id&#x60;, &#x60;activationId&#x60;, &#x60;audienceId&#x60;, and/or &#x60;spaceId&#x60; that can be applied in addition to a &#x60;group By&#x60;.  This parameter exists in beta.
+     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;discardReason&#x60;, &#x60;appVersion&#x60;, &#x60;subscriptionId&#x60;, &#x60;activationId&#x60;, &#x60;audienceId&#x60;, and/or &#x60;spaceId&#x60; that can be applied in addition to a &#x60;groupBy&#x60;.  This parameter exists in beta.
      * @param pagination Params to specify the page cursor and count.  This parameter exists in beta.
      */
     public async getFilteredAtDestinationMetricsFromDeliveryOverview(
@@ -1237,6 +1238,215 @@ export class DeliveryOverviewApi {
             localVarQueryParameters['filter'] = ObjectSerializer.serialize(
                 filter,
                 'DeliveryOverviewSuccessfullyReceivedFilterBy'
+            );
+        }
+
+        if (pagination !== undefined) {
+            localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
+                pagination,
+                'PaginationInput'
+            );
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications.token.accessToken) {
+            authenticationPromise = authenticationPromise.then(() =>
+                this.authentications.token.applyToRequest(
+                    localVarRequestOptions
+                )
+            );
+        }
+        authenticationPromise = authenticationPromise.then(() =>
+            this.authentications.default.applyToRequest(localVarRequestOptions)
+        );
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() =>
+                interceptor(localVarRequestOptions)
+            );
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{
+                response: http.IncomingMessage;
+                body: GetEgressFailedMetricsFromDeliveryOverview200Response;
+            }>((resolve, reject) => {
+                localVarRequest(
+                    localVarRequestOptions,
+                    (error, response, body) => {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            if (
+                                response.statusCode &&
+                                response.statusCode >= 200 &&
+                                response.statusCode <= 299
+                            ) {
+                                body = ObjectSerializer.deserialize(
+                                    body,
+                                    'GetEgressFailedMetricsFromDeliveryOverview200Response'
+                                );
+                                resolve({ response: response, body: body });
+                            } else {
+                                reject(
+                                    new HttpError(
+                                        response,
+                                        body,
+                                        response.statusCode
+                                    )
+                                );
+                            }
+                        }
+                    }
+                );
+            });
+        });
+    }
+    /**
+     * Get events successfully delivered for Linked Audiences.
+     * @summary Get Linked Audience Success Metrics from Delivery Overview
+     * @param sourceId The sourceId for the Workspace.  This parameter exists in beta.
+     * @param destinationConfigId The id tied to a Workspace Destination.  This parameter exists in beta.
+     * @param startTime The ISO8601 formatted timestamp corresponding to the beginning of the requested timeframe, inclusive.  This parameter exists in beta.
+     * @param endTime The ISO8601 formatted timestamp corresponding to the end of the requested timeframe, noninclusive.  This parameter exists in beta.
+     * @param granularity The size of each bucket in the requested window.  Based on the granularity chosen, there are restrictions on the time range you can query:  **Minute**: - Max time range: 4 hours - Oldest possible start time: 48 hours in the past  **Hour**: - Max Time range: 14 days - Oldest possible start time: 30 days in the past  **Day**: - Max time range: 30 days - Oldest possible start time: 30 days in the past  This parameter exists in beta.
+     * @param groupBy A comma-delimited list of strings representing one or more dimensions to group the result by.  Valid options are: &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;activationId&#x60;, &#x60;audienceId&#x60;, and &#x60;spaceId&#x60;.  This parameter exists in beta.
+     * @param filter An optional filter for &#x60;eventName&#x60;, &#x60;eventType&#x60;, &#x60;activationId&#x60;, &#x60;audienceId&#x60;, and/or &#x60;spaceId&#x60; that can be applied in addition to a &#x60;groupBy&#x60;.  This parameter exists in beta.
+     * @param pagination Params to specify the page cursor and count.  This parameter exists in beta.
+     */
+    public async getLinkedAudienceSuccessMetricsFromDeliveryOverview(
+        sourceId: string,
+        destinationConfigId: string,
+        startTime: string,
+        endTime: string,
+        granularity: 'DAY' | 'HOUR' | 'MINUTE',
+        groupBy?: Array<string>,
+        filter?: DeliveryOverviewAudienceFilterBy,
+        pagination?: PaginationInput,
+        options: { headers: { [name: string]: string } } = { headers: {} }
+    ): Promise<{
+        response: http.IncomingMessage;
+        body: GetEgressFailedMetricsFromDeliveryOverview200Response;
+    }> {
+        const localVarPath =
+            this.basePath + '/delivery-overview/audience/success';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign(
+            {},
+            this._defaultHeaders
+        );
+        const produces = [
+            'application/vnd.segment.v1beta+json',
+            'application/json',
+        ];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'sourceId' is not null or undefined
+        if (sourceId === null || sourceId === undefined) {
+            throw new Error(
+                'Required parameter sourceId was null or undefined when calling getLinkedAudienceSuccessMetricsFromDeliveryOverview.'
+            );
+        }
+
+        // verify required parameter 'destinationConfigId' is not null or undefined
+        if (destinationConfigId === null || destinationConfigId === undefined) {
+            throw new Error(
+                'Required parameter destinationConfigId was null or undefined when calling getLinkedAudienceSuccessMetricsFromDeliveryOverview.'
+            );
+        }
+
+        // verify required parameter 'startTime' is not null or undefined
+        if (startTime === null || startTime === undefined) {
+            throw new Error(
+                'Required parameter startTime was null or undefined when calling getLinkedAudienceSuccessMetricsFromDeliveryOverview.'
+            );
+        }
+
+        // verify required parameter 'endTime' is not null or undefined
+        if (endTime === null || endTime === undefined) {
+            throw new Error(
+                'Required parameter endTime was null or undefined when calling getLinkedAudienceSuccessMetricsFromDeliveryOverview.'
+            );
+        }
+
+        // verify required parameter 'granularity' is not null or undefined
+        if (granularity === null || granularity === undefined) {
+            throw new Error(
+                'Required parameter granularity was null or undefined when calling getLinkedAudienceSuccessMetricsFromDeliveryOverview.'
+            );
+        }
+
+        if (sourceId !== undefined) {
+            localVarQueryParameters['sourceId'] = ObjectSerializer.serialize(
+                sourceId,
+                'string'
+            );
+        }
+
+        if (destinationConfigId !== undefined) {
+            localVarQueryParameters['destinationConfigId'] =
+                ObjectSerializer.serialize(destinationConfigId, 'string');
+        }
+
+        if (startTime !== undefined) {
+            localVarQueryParameters['startTime'] = ObjectSerializer.serialize(
+                startTime,
+                'string'
+            );
+        }
+
+        if (endTime !== undefined) {
+            localVarQueryParameters['endTime'] = ObjectSerializer.serialize(
+                endTime,
+                'string'
+            );
+        }
+
+        if (groupBy !== undefined) {
+            localVarQueryParameters['groupBy'] = ObjectSerializer.serialize(
+                groupBy,
+                'Array<string>'
+            );
+        }
+
+        if (granularity !== undefined) {
+            localVarQueryParameters['granularity'] = ObjectSerializer.serialize(
+                granularity,
+                "'DAY' | 'HOUR' | 'MINUTE'"
+            );
+        }
+
+        if (filter !== undefined) {
+            localVarQueryParameters['filter'] = ObjectSerializer.serialize(
+                filter,
+                'DeliveryOverviewAudienceFilterBy'
             );
         }
 

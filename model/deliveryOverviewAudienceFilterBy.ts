@@ -13,13 +13,9 @@
 import { RequestFile } from './models';
 
 /**
- * The `DeliveryOverviewDestinationFilterBy` object is a map of the filterable fields and their values.
+ * The `DeliveryOverviewAudienceFilterBy` object is a map of the filterable fields and their values.
  */
-export class DeliveryOverviewDestinationFilterBy {
-    /**
-     * A list of strings of discard reasons.  See [Discard Record Documentation](https://segment.com/docs/connections/delivery-overview/#troubleshooting) for valid error codes.
-     */
-    'discardReason'?: Array<string>;
+export class DeliveryOverviewAudienceFilterBy {
     /**
      * A list of strings of event names.
      */
@@ -29,23 +25,15 @@ export class DeliveryOverviewDestinationFilterBy {
      */
     'eventType'?: Array<string>;
     /**
-     * A list of strings of app versions.
-     */
-    'appVersion'?: Array<string>;
-    /**
-     * A list of strings of subscription IDs for Actions Destinations.
-     */
-    'subscriptionId'?: Array<string>;
-    /**
      * A list of strings of event context IDs from a Linked Audience mapping/activation.
      */
     'activationId'?: Array<string>;
     /**
-     * A list of strings of audienceIDs for a Linked Audience.
+     * A list of strings of audience IDs for a Linked Audience.
      */
     'audienceId'?: Array<string>;
     /**
-     * A list of strings of spaceIDs for a Linked Audience.
+     * A list of strings of space IDs for a Linked Audience.
      */
     'spaceId'?: Array<string>;
 
@@ -57,11 +45,6 @@ export class DeliveryOverviewDestinationFilterBy {
         type: string;
     }> = [
         {
-            name: 'discardReason',
-            baseName: 'discardReason',
-            type: 'Array<string>',
-        },
-        {
             name: 'eventName',
             baseName: 'eventName',
             type: 'Array<string>',
@@ -69,16 +52,6 @@ export class DeliveryOverviewDestinationFilterBy {
         {
             name: 'eventType',
             baseName: 'eventType',
-            type: 'Array<string>',
-        },
-        {
-            name: 'appVersion',
-            baseName: 'appVersion',
-            type: 'Array<string>',
-        },
-        {
-            name: 'subscriptionId',
-            baseName: 'subscriptionId',
             type: 'Array<string>',
         },
         {
@@ -99,6 +72,6 @@ export class DeliveryOverviewDestinationFilterBy {
     ];
 
     static getAttributeTypeMap() {
-        return DeliveryOverviewDestinationFilterBy.attributeTypeMap;
+        return DeliveryOverviewAudienceFilterBy.attributeTypeMap;
     }
 }

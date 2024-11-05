@@ -15,7 +15,7 @@ import { DeliveryOverviewMetricsDataset } from './deliveryOverviewMetricsDataset
 import { PaginationOutput } from './paginationOutput';
 
 /**
- * Output of the Delivery Overview public API endpoints.
+ * Output of the Delivery Overview public api endpoints.
  */
 export class GetDeliveryOverviewMetricsBetaOutput {
     /**

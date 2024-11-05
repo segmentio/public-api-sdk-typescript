@@ -36,6 +36,10 @@ export class DestinationMetadataPlatformsV1 {
      * Whether this Destination supports cloud app object events.
      */
     'cloudAppObject'?: boolean;
+    /**
+     * Whether this Destination supports linked audiences.
+     */
+    'linkedAudiences'?: boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -67,6 +71,11 @@ export class DestinationMetadataPlatformsV1 {
         {
             name: 'cloudAppObject',
             baseName: 'cloudAppObject',
+            type: 'boolean',
+        },
+        {
+            name: 'linkedAudiences',
+            baseName: 'linkedAudiences',
             type: 'boolean',
         },
     ];
