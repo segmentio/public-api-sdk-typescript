@@ -28,6 +28,7 @@ export declare class DestinationMetadataV1 {
     'partnerOwned'?: boolean;
     'supportedRegions'?: Array<string>;
     'regionEndpoints'?: Array<string>;
+    'multiInstanceSupportedVersion'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
