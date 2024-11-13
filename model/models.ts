@@ -34,9 +34,6 @@ export * from './batchQueryMessagingSubscriptionsForSpace200Response';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 export * from './breakdownBeta';
-export * from './cancelReverseETLSyncForModel200Response';
-export * from './cancelReverseETLSyncForModelInput';
-export * from './cancelReverseETLSyncForModelOutput';
 export * from './commonSourceSettingsV1';
 export * from './computedTraitSummary';
 export * from './computedTraitsDefinition';
@@ -155,7 +152,6 @@ export * from './deleteUsersV1Output';
 export * from './deleteWarehouse200Response';
 export * from './deleteWarehouseV1Output';
 export * from './deliveryMetricsSummaryBeta';
-export * from './deliveryOverviewAudienceFilterBy';
 export * from './deliveryOverviewDestinationFilterBy';
 export * from './deliveryOverviewMetricsDatapoint';
 export * from './deliveryOverviewMetricsDataset';
@@ -603,9 +599,6 @@ import { BatchQueryMessagingSubscriptionsForSpace200Response } from './batchQuer
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaInput } from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaOutput } from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 import { BreakdownBeta } from './breakdownBeta';
-import { CancelReverseETLSyncForModel200Response } from './cancelReverseETLSyncForModel200Response';
-import { CancelReverseETLSyncForModelInput } from './cancelReverseETLSyncForModelInput';
-import { CancelReverseETLSyncForModelOutput } from './cancelReverseETLSyncForModelOutput';
 import { CommonSourceSettingsV1 } from './commonSourceSettingsV1';
 import { ComputedTraitSummary } from './computedTraitSummary';
 import { ComputedTraitsDefinition } from './computedTraitsDefinition';
@@ -724,7 +717,6 @@ import { DeleteUsersV1Output } from './deleteUsersV1Output';
 import { DeleteWarehouse200Response } from './deleteWarehouse200Response';
 import { DeleteWarehouseV1Output } from './deleteWarehouseV1Output';
 import { DeliveryMetricsSummaryBeta } from './deliveryMetricsSummaryBeta';
-import { DeliveryOverviewAudienceFilterBy } from './deliveryOverviewAudienceFilterBy';
 import { DeliveryOverviewDestinationFilterBy } from './deliveryOverviewDestinationFilterBy';
 import { DeliveryOverviewMetricsDatapoint } from './deliveryOverviewMetricsDatapoint';
 import { DeliveryOverviewMetricsDataset } from './deliveryOverviewMetricsDataset';
@@ -1325,10 +1317,6 @@ let typeMap: { [index: string]: any } = {
     BatchQueryMessagingSubscriptionsForSpaceAlphaOutput:
         BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
     BreakdownBeta: BreakdownBeta,
-    CancelReverseETLSyncForModel200Response:
-        CancelReverseETLSyncForModel200Response,
-    CancelReverseETLSyncForModelInput: CancelReverseETLSyncForModelInput,
-    CancelReverseETLSyncForModelOutput: CancelReverseETLSyncForModelOutput,
     CommonSourceSettingsV1: CommonSourceSettingsV1,
     ComputedTraitSummary: ComputedTraitSummary,
     ComputedTraitsDefinition: ComputedTraitsDefinition,
@@ -1459,7 +1447,6 @@ let typeMap: { [index: string]: any } = {
     DeleteWarehouse200Response: DeleteWarehouse200Response,
     DeleteWarehouseV1Output: DeleteWarehouseV1Output,
     DeliveryMetricsSummaryBeta: DeliveryMetricsSummaryBeta,
-    DeliveryOverviewAudienceFilterBy: DeliveryOverviewAudienceFilterBy,
     DeliveryOverviewDestinationFilterBy: DeliveryOverviewDestinationFilterBy,
     DeliveryOverviewMetricsDatapoint: DeliveryOverviewMetricsDatapoint,
     DeliveryOverviewMetricsDataset: DeliveryOverviewMetricsDataset,
