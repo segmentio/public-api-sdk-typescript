@@ -48,6 +48,9 @@ export * from './createCloudSourceRegulationV1Output';
 export * from './createComputedTrait200Response';
 export * from './createComputedTraitAlphaInput';
 export * from './createComputedTraitAlphaOutput';
+export * from './createDbtModelSyncTrigger200Response';
+export * from './createDbtModelSyncTriggerInput';
+export * from './createDbtModelSyncTriggerOutput';
 export * from './createDestination200Response';
 export * from './createDestinationSubscription200Response';
 export * from './createDestinationSubscriptionAlphaInput';
@@ -117,6 +120,7 @@ export * from './createWorkspaceRegulationV1Input';
 export * from './createWorkspaceRegulationV1Output';
 export * from './createWriteKeyForSource200Response';
 export * from './createWriteKeyForSourceAlphaOutput';
+export * from './dbtModelSyncTrigger';
 export * from './deleteDestination200Response';
 export * from './deleteDestinationV1Output';
 export * from './deleteFilterById200Response';
@@ -613,6 +617,9 @@ import { CreateCloudSourceRegulationV1Output } from './createCloudSourceRegulati
 import { CreateComputedTrait200Response } from './createComputedTrait200Response';
 import { CreateComputedTraitAlphaInput } from './createComputedTraitAlphaInput';
 import { CreateComputedTraitAlphaOutput } from './createComputedTraitAlphaOutput';
+import { CreateDbtModelSyncTrigger200Response } from './createDbtModelSyncTrigger200Response';
+import { CreateDbtModelSyncTriggerInput } from './createDbtModelSyncTriggerInput';
+import { CreateDbtModelSyncTriggerOutput } from './createDbtModelSyncTriggerOutput';
 import { CreateDestination200Response } from './createDestination200Response';
 import { CreateDestinationSubscription200Response } from './createDestinationSubscription200Response';
 import { CreateDestinationSubscriptionAlphaInput } from './createDestinationSubscriptionAlphaInput';
@@ -682,6 +689,7 @@ import { CreateWorkspaceRegulationV1Input } from './createWorkspaceRegulationV1I
 import { CreateWorkspaceRegulationV1Output } from './createWorkspaceRegulationV1Output';
 import { CreateWriteKeyForSource200Response } from './createWriteKeyForSource200Response';
 import { CreateWriteKeyForSourceAlphaOutput } from './createWriteKeyForSourceAlphaOutput';
+import { DbtModelSyncTrigger } from './dbtModelSyncTrigger';
 import { DeleteDestination200Response } from './deleteDestination200Response';
 import { DeleteDestinationV1Output } from './deleteDestinationV1Output';
 import { DeleteFilterById200Response } from './deleteFilterById200Response';
@@ -1332,6 +1340,9 @@ let typeMap: { [index: string]: any } = {
     CreateComputedTrait200Response: CreateComputedTrait200Response,
     CreateComputedTraitAlphaInput: CreateComputedTraitAlphaInput,
     CreateComputedTraitAlphaOutput: CreateComputedTraitAlphaOutput,
+    CreateDbtModelSyncTrigger200Response: CreateDbtModelSyncTrigger200Response,
+    CreateDbtModelSyncTriggerInput: CreateDbtModelSyncTriggerInput,
+    CreateDbtModelSyncTriggerOutput: CreateDbtModelSyncTriggerOutput,
     CreateDestination200Response: CreateDestination200Response,
     CreateDestinationSubscription200Response:
         CreateDestinationSubscription200Response,
@@ -1410,6 +1421,7 @@ let typeMap: { [index: string]: any } = {
     CreateWorkspaceRegulationV1Output: CreateWorkspaceRegulationV1Output,
     CreateWriteKeyForSource200Response: CreateWriteKeyForSource200Response,
     CreateWriteKeyForSourceAlphaOutput: CreateWriteKeyForSourceAlphaOutput,
+    DbtModelSyncTrigger: DbtModelSyncTrigger,
     DeleteDestination200Response: DeleteDestination200Response,
     DeleteDestinationV1Output: DeleteDestinationV1Output,
     DeleteFilterById200Response: DeleteFilterById200Response,
