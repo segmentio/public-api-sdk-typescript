@@ -115,7 +115,7 @@ export declare class FunctionsApi {
         response: http.IncomingMessage;
         body: ListFunctionVersions200Response;
     }>;
-    listFunctions(resourceType: 'DESTINATION' | 'INSERT_DESTINATION' | 'SOURCE', pagination?: PaginationInput, options?: {
+    listFunctions(resourceType: 'DESTINATION' | 'INSERT_DESTINATION' | 'INSERT_SOURCE' | 'SOURCE', pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

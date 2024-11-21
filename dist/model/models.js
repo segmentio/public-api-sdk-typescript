@@ -49,6 +49,9 @@ __exportStar(require("./batchQueryMessagingSubscriptionsForSpace200Response"), e
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput"), exports);
 __exportStar(require("./breakdownBeta"), exports);
+__exportStar(require("./cancelReverseETLSyncForModel200Response"), exports);
+__exportStar(require("./cancelReverseETLSyncForModelInput"), exports);
+__exportStar(require("./cancelReverseETLSyncForModelOutput"), exports);
 __exportStar(require("./commonSourceSettingsV1"), exports);
 __exportStar(require("./computedTraitSummary"), exports);
 __exportStar(require("./computedTraitsDefinition"), exports);
@@ -605,6 +608,9 @@ var batchQueryMessagingSubscriptionsForSpace200Response_1 = require("./batchQuer
 var batchQueryMessagingSubscriptionsForSpaceAlphaInput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput");
 var batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput");
 var breakdownBeta_1 = require("./breakdownBeta");
+var cancelReverseETLSyncForModel200Response_1 = require("./cancelReverseETLSyncForModel200Response");
+var cancelReverseETLSyncForModelInput_1 = require("./cancelReverseETLSyncForModelInput");
+var cancelReverseETLSyncForModelOutput_1 = require("./cancelReverseETLSyncForModelOutput");
 var commonSourceSettingsV1_1 = require("./commonSourceSettingsV1");
 var computedTraitSummary_1 = require("./computedTraitSummary");
 var computedTraitsDefinition_1 = require("./computedTraitsDefinition");
@@ -1263,6 +1269,9 @@ var typeMap = {
     BatchQueryMessagingSubscriptionsForSpaceAlphaInput: batchQueryMessagingSubscriptionsForSpaceAlphaInput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaInput,
     BatchQueryMessagingSubscriptionsForSpaceAlphaOutput: batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
     BreakdownBeta: breakdownBeta_1.BreakdownBeta,
+    CancelReverseETLSyncForModel200Response: cancelReverseETLSyncForModel200Response_1.CancelReverseETLSyncForModel200Response,
+    CancelReverseETLSyncForModelInput: cancelReverseETLSyncForModelInput_1.CancelReverseETLSyncForModelInput,
+    CancelReverseETLSyncForModelOutput: cancelReverseETLSyncForModelOutput_1.CancelReverseETLSyncForModelOutput,
     CommonSourceSettingsV1: commonSourceSettingsV1_1.CommonSourceSettingsV1,
     ComputedTraitSummary: computedTraitSummary_1.ComputedTraitSummary,
     ComputedTraitsDefinition: computedTraitsDefinition_1.ComputedTraitsDefinition,
