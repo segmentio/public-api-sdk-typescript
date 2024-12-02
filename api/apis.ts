@@ -115,6 +115,7 @@ export interface Apis {
     iamUsers: IAMUsersApi;
     labels: LabelsApi;
     monthlyTrackedUsers: MonthlyTrackedUsersApi;
+    profilesSync: ProfilesSyncApi;
     selectiveSync: SelectiveSyncApi;
     sources: SourcesApi;
     spaces: SpacesApi;
@@ -150,6 +151,7 @@ export function configureApis(
         iamUsers: new IAMUsersApi(),
         labels: new LabelsApi(),
         monthlyTrackedUsers: new MonthlyTrackedUsersApi(),
+        profilesSync: new ProfilesSyncApi(),
         selectiveSync: new SelectiveSyncApi(),
         sources: new SourcesApi(),
         spaces: new SpacesApi(),
@@ -197,6 +199,7 @@ export function configureEuApis(
         iamUsers: new IAMUsersApi(basePath),
         labels: new LabelsApi(basePath),
         monthlyTrackedUsers: new MonthlyTrackedUsersApi(basePath),
+        profilesSync: new ProfilesSyncApi(basePath),
         selectiveSync: new SelectiveSyncApi(basePath),
         sources: new SourcesApi(basePath),
         spaces: new SpacesApi(basePath),
