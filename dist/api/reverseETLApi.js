@@ -112,104 +112,10 @@ var ReverseETLApi = (function () {
     ReverseETLApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    ReverseETLApi.prototype.cancelReverseETLSyncForModel = function (modelId, syncId, CancelReverseETLSyncForModelInput, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/reverse-etl-models/{modelId}/syncs/{syncId}/cancel'
-                        .replace('{' + 'modelId' + '}', encodeURIComponent(String(modelId)))
-                        .replace('{' + 'syncId' + '}', encodeURIComponent(String(syncId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                else {
-                    localVarHeaderParams.Accept = produces.join(',');
-                }
-                localVarFormParams = {};
-                if (modelId === null || modelId === undefined) {
-                    throw new Error('Required parameter modelId was null or undefined when calling cancelReverseETLSyncForModel.');
-                }
-                if (syncId === null || syncId === undefined) {
-                    throw new Error('Required parameter syncId was null or undefined when calling cancelReverseETLSyncForModel.');
-                }
-                if (CancelReverseETLSyncForModelInput === null ||
-                    CancelReverseETLSyncForModelInput === undefined) {
-                    throw new Error('Required parameter CancelReverseETLSyncForModelInput was null or undefined when calling cancelReverseETLSyncForModel.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'POST',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                    body: models_1.ObjectSerializer.serialize(CancelReverseETLSyncForModelInput, 'CancelReverseETLSyncForModelInput'),
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_1 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_1(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CancelReverseETLSyncForModel200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
     ReverseETLApi.prototype.createReverseETLManualSync = function (CreateReverseETLManualSyncInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath + '/reverse-etl-syncs';
@@ -251,14 +157,14 @@ var ReverseETLApi = (function () {
                     return _this.authentications.default.applyToRequest(localVarRequestOptions);
                 });
                 interceptorPromise = authenticationPromise;
-                _loop_2 = function (interceptor) {
+                _loop_1 = function (interceptor) {
                     interceptorPromise = interceptorPromise.then(function () {
                         return interceptor(localVarRequestOptions);
                     });
                 };
                 for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
                     interceptor = _a[_i];
-                    _loop_2(interceptor);
+                    _loop_1(interceptor);
                 }
                 return [2, interceptorPromise.then(function () {
                         if (Object.keys(localVarFormParams).length) {
@@ -294,7 +200,7 @@ var ReverseETLApi = (function () {
     ReverseETLApi.prototype.createReverseEtlModel = function (CreateReverseEtlModelInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath + '/reverse-etl-models';
@@ -336,14 +242,14 @@ var ReverseETLApi = (function () {
                     return _this.authentications.default.applyToRequest(localVarRequestOptions);
                 });
                 interceptorPromise = authenticationPromise;
-                _loop_3 = function (interceptor) {
+                _loop_2 = function (interceptor) {
                     interceptorPromise = interceptorPromise.then(function () {
                         return interceptor(localVarRequestOptions);
                     });
                 };
                 for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
                     interceptor = _a[_i];
-                    _loop_3(interceptor);
+                    _loop_2(interceptor);
                 }
                 return [2, interceptorPromise.then(function () {
                         if (Object.keys(localVarFormParams).length) {
@@ -379,7 +285,7 @@ var ReverseETLApi = (function () {
     ReverseETLApi.prototype.deleteReverseEtlModel = function (modelId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
@@ -404,6 +310,95 @@ var ReverseETLApi = (function () {
                 localVarUseFormData = false;
                 localVarRequestOptions = {
                     method: 'DELETE',
+                    qs: localVarQueryParameters,
+                    headers: localVarHeaderParams,
+                    uri: localVarPath,
+                    useQuerystring: this._useQuerystring,
+                    json: true,
+                };
+                authenticationPromise = Promise.resolve();
+                if (this.authentications.token.accessToken) {
+                    authenticationPromise = authenticationPromise.then(function () {
+                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
+                    });
+                }
+                authenticationPromise = authenticationPromise.then(function () {
+                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
+                });
+                interceptorPromise = authenticationPromise;
+                _loop_3 = function (interceptor) {
+                    interceptorPromise = interceptorPromise.then(function () {
+                        return interceptor(localVarRequestOptions);
+                    });
+                };
+                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
+                    interceptor = _a[_i];
+                    _loop_3(interceptor);
+                }
+                return [2, interceptorPromise.then(function () {
+                        if (Object.keys(localVarFormParams).length) {
+                            if (localVarUseFormData) {
+                                localVarRequestOptions.formData = localVarFormParams;
+                            }
+                            else {
+                                localVarRequestOptions.form = localVarFormParams;
+                            }
+                        }
+                        return new Promise(function (resolve, reject) {
+                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
+                                if (error) {
+                                    reject(error);
+                                }
+                                else {
+                                    if (response.statusCode &&
+                                        response.statusCode >= 200 &&
+                                        response.statusCode <= 299) {
+                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteReverseEtlModel200Response');
+                                        resolve({ response: response, body: body });
+                                    }
+                                    else {
+                                        reject(new apis_1.HttpError(response, body, response.statusCode));
+                                    }
+                                }
+                            });
+                        });
+                    })];
+            });
+        });
+    };
+    ReverseETLApi.prototype.getReverseETLSyncStatus = function (modelId, syncId, options) {
+        if (options === void 0) { options = { headers: {} }; }
+        return __awaiter(this, void 0, void 0, function () {
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
+            var _this = this;
+            return __generator(this, function (_b) {
+                localVarPath = this.basePath +
+                    '/reverse-etl-models/{modelId}/syncs/{syncId}'
+                        .replace('{' + 'modelId' + '}', encodeURIComponent(String(modelId)))
+                        .replace('{' + 'syncId' + '}', encodeURIComponent(String(syncId)));
+                localVarQueryParameters = {};
+                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
+                produces = [
+                    'application/vnd.segment.v1alpha+json',
+                    'application/json',
+                ];
+                if (produces.indexOf('application/json') >= 0) {
+                    localVarHeaderParams.Accept = 'application/json';
+                }
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
+                }
+                localVarFormParams = {};
+                if (modelId === null || modelId === undefined) {
+                    throw new Error('Required parameter modelId was null or undefined when calling getReverseETLSyncStatus.');
+                }
+                if (syncId === null || syncId === undefined) {
+                    throw new Error('Required parameter syncId was null or undefined when calling getReverseETLSyncStatus.');
+                }
+                Object.assign(localVarHeaderParams, options.headers);
+                localVarUseFormData = false;
+                localVarRequestOptions = {
+                    method: 'GET',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
@@ -447,7 +442,7 @@ var ReverseETLApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteReverseEtlModel200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'GetReverseETLSyncStatus200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -460,16 +455,14 @@ var ReverseETLApi = (function () {
             });
         });
     };
-    ReverseETLApi.prototype.getReverseETLSyncStatus = function (modelId, syncId, options) {
+    ReverseETLApi.prototype.getReverseEtlModel = function (modelId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_5, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/reverse-etl-models/{modelId}/syncs/{syncId}'
-                        .replace('{' + 'modelId' + '}', encodeURIComponent(String(modelId)))
-                        .replace('{' + 'syncId' + '}', encodeURIComponent(String(syncId)));
+                    '/reverse-etl-models/{modelId}'.replace('{' + 'modelId' + '}', encodeURIComponent(String(modelId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
@@ -484,10 +477,7 @@ var ReverseETLApi = (function () {
                 }
                 localVarFormParams = {};
                 if (modelId === null || modelId === undefined) {
-                    throw new Error('Required parameter modelId was null or undefined when calling getReverseETLSyncStatus.');
-                }
-                if (syncId === null || syncId === undefined) {
-                    throw new Error('Required parameter syncId was null or undefined when calling getReverseETLSyncStatus.');
+                    throw new Error('Required parameter modelId was null or undefined when calling getReverseEtlModel.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -536,90 +526,6 @@ var ReverseETLApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetReverseETLSyncStatus200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    ReverseETLApi.prototype.getReverseEtlModel = function (modelId, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_6, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/reverse-etl-models/{modelId}'.replace('{' + 'modelId' + '}', encodeURIComponent(String(modelId)));
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                else {
-                    localVarHeaderParams.Accept = produces.join(',');
-                }
-                localVarFormParams = {};
-                if (modelId === null || modelId === undefined) {
-                    throw new Error('Required parameter modelId was null or undefined when calling getReverseEtlModel.');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_6 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_6(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
                                         body = models_1.ObjectSerializer.deserialize(body, 'GetReverseEtlModel200Response');
                                         resolve({ response: response, body: body });
                                     }
@@ -636,7 +542,7 @@ var ReverseETLApi = (function () {
     ReverseETLApi.prototype.listReverseETLSyncStatusesFromModelAndSubscriptionId = function (modelId, subscriptionId, count, cursor, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_7, _i, _a, interceptor;
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_6, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
@@ -688,14 +594,14 @@ var ReverseETLApi = (function () {
                     return _this.authentications.default.applyToRequest(localVarRequestOptions);
                 });
                 interceptorPromise = authenticationPromise;
-                _loop_7 = function (interceptor) {
+                _loop_6 = function (interceptor) {
                     interceptorPromise = interceptorPromise.then(function () {
                         return interceptor(localVarRequestOptions);
                     });
                 };
                 for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
                     interceptor = _a[_i];
-                    _loop_7(interceptor);
+                    _loop_6(interceptor);
                 }
                 return [2, interceptorPromise.then(function () {
                         if (Object.keys(localVarFormParams).length) {
@@ -731,7 +637,7 @@ var ReverseETLApi = (function () {
     ReverseETLApi.prototype.listReverseEtlModels = function (pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_8, _i, _a, interceptor;
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_7, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath + '/reverse-etl-models';
@@ -771,14 +677,14 @@ var ReverseETLApi = (function () {
                     return _this.authentications.default.applyToRequest(localVarRequestOptions);
                 });
                 interceptorPromise = authenticationPromise;
-                _loop_8 = function (interceptor) {
+                _loop_7 = function (interceptor) {
                     interceptorPromise = interceptorPromise.then(function () {
                         return interceptor(localVarRequestOptions);
                     });
                 };
                 for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
                     interceptor = _a[_i];
-                    _loop_8(interceptor);
+                    _loop_7(interceptor);
                 }
                 return [2, interceptorPromise.then(function () {
                         if (Object.keys(localVarFormParams).length) {
@@ -814,7 +720,7 @@ var ReverseETLApi = (function () {
     ReverseETLApi.prototype.updateReverseEtlModel = function (modelId, UpdateReverseEtlModelInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_9, _i, _a, interceptor;
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_8, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
@@ -860,14 +766,14 @@ var ReverseETLApi = (function () {
                     return _this.authentications.default.applyToRequest(localVarRequestOptions);
                 });
                 interceptorPromise = authenticationPromise;
-                _loop_9 = function (interceptor) {
+                _loop_8 = function (interceptor) {
                     interceptorPromise = interceptorPromise.then(function () {
                         return interceptor(localVarRequestOptions);
                     });
                 };
                 for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
                     interceptor = _a[_i];
-                    _loop_9(interceptor);
+                    _loop_8(interceptor);
                 }
                 return [2, interceptorPromise.then(function () {
                         if (Object.keys(localVarFormParams).length) {

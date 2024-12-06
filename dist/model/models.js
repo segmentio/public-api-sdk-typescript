@@ -49,9 +49,6 @@ __exportStar(require("./batchQueryMessagingSubscriptionsForSpace200Response"), e
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput"), exports);
 __exportStar(require("./breakdownBeta"), exports);
-__exportStar(require("./cancelReverseETLSyncForModel200Response"), exports);
-__exportStar(require("./cancelReverseETLSyncForModelInput"), exports);
-__exportStar(require("./cancelReverseETLSyncForModelOutput"), exports);
 __exportStar(require("./commonSourceSettingsV1"), exports);
 __exportStar(require("./computedTraitSummary"), exports);
 __exportStar(require("./computedTraitsDefinition"), exports);
@@ -66,9 +63,6 @@ __exportStar(require("./createCloudSourceRegulationV1Output"), exports);
 __exportStar(require("./createComputedTrait200Response"), exports);
 __exportStar(require("./createComputedTraitAlphaInput"), exports);
 __exportStar(require("./createComputedTraitAlphaOutput"), exports);
-__exportStar(require("./createDbtModelSyncTrigger200Response"), exports);
-__exportStar(require("./createDbtModelSyncTriggerInput"), exports);
-__exportStar(require("./createDbtModelSyncTriggerOutput"), exports);
 __exportStar(require("./createDestination200Response"), exports);
 __exportStar(require("./createDestinationSubscription200Response"), exports);
 __exportStar(require("./createDestinationSubscriptionAlphaInput"), exports);
@@ -138,7 +132,6 @@ __exportStar(require("./createWorkspaceRegulationV1Input"), exports);
 __exportStar(require("./createWorkspaceRegulationV1Output"), exports);
 __exportStar(require("./createWriteKeyForSource200Response"), exports);
 __exportStar(require("./createWriteKeyForSourceAlphaOutput"), exports);
-__exportStar(require("./dbtModelSyncTrigger"), exports);
 __exportStar(require("./deleteDestination200Response"), exports);
 __exportStar(require("./deleteDestinationV1Output"), exports);
 __exportStar(require("./deleteFilterById200Response"), exports);
@@ -608,9 +601,6 @@ var batchQueryMessagingSubscriptionsForSpace200Response_1 = require("./batchQuer
 var batchQueryMessagingSubscriptionsForSpaceAlphaInput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput");
 var batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput");
 var breakdownBeta_1 = require("./breakdownBeta");
-var cancelReverseETLSyncForModel200Response_1 = require("./cancelReverseETLSyncForModel200Response");
-var cancelReverseETLSyncForModelInput_1 = require("./cancelReverseETLSyncForModelInput");
-var cancelReverseETLSyncForModelOutput_1 = require("./cancelReverseETLSyncForModelOutput");
 var commonSourceSettingsV1_1 = require("./commonSourceSettingsV1");
 var computedTraitSummary_1 = require("./computedTraitSummary");
 var computedTraitsDefinition_1 = require("./computedTraitsDefinition");
@@ -625,9 +615,6 @@ var createCloudSourceRegulationV1Output_1 = require("./createCloudSourceRegulati
 var createComputedTrait200Response_1 = require("./createComputedTrait200Response");
 var createComputedTraitAlphaInput_1 = require("./createComputedTraitAlphaInput");
 var createComputedTraitAlphaOutput_1 = require("./createComputedTraitAlphaOutput");
-var createDbtModelSyncTrigger200Response_1 = require("./createDbtModelSyncTrigger200Response");
-var createDbtModelSyncTriggerInput_1 = require("./createDbtModelSyncTriggerInput");
-var createDbtModelSyncTriggerOutput_1 = require("./createDbtModelSyncTriggerOutput");
 var createDestination200Response_1 = require("./createDestination200Response");
 var createDestinationSubscription200Response_1 = require("./createDestinationSubscription200Response");
 var createDestinationSubscriptionAlphaInput_1 = require("./createDestinationSubscriptionAlphaInput");
@@ -697,7 +684,6 @@ var createWorkspaceRegulationV1Input_1 = require("./createWorkspaceRegulationV1I
 var createWorkspaceRegulationV1Output_1 = require("./createWorkspaceRegulationV1Output");
 var createWriteKeyForSource200Response_1 = require("./createWriteKeyForSource200Response");
 var createWriteKeyForSourceAlphaOutput_1 = require("./createWriteKeyForSourceAlphaOutput");
-var dbtModelSyncTrigger_1 = require("./dbtModelSyncTrigger");
 var deleteDestination200Response_1 = require("./deleteDestination200Response");
 var deleteDestinationV1Output_1 = require("./deleteDestinationV1Output");
 var deleteFilterById200Response_1 = require("./deleteFilterById200Response");
@@ -1269,9 +1255,6 @@ var typeMap = {
     BatchQueryMessagingSubscriptionsForSpaceAlphaInput: batchQueryMessagingSubscriptionsForSpaceAlphaInput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaInput,
     BatchQueryMessagingSubscriptionsForSpaceAlphaOutput: batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
     BreakdownBeta: breakdownBeta_1.BreakdownBeta,
-    CancelReverseETLSyncForModel200Response: cancelReverseETLSyncForModel200Response_1.CancelReverseETLSyncForModel200Response,
-    CancelReverseETLSyncForModelInput: cancelReverseETLSyncForModelInput_1.CancelReverseETLSyncForModelInput,
-    CancelReverseETLSyncForModelOutput: cancelReverseETLSyncForModelOutput_1.CancelReverseETLSyncForModelOutput,
     CommonSourceSettingsV1: commonSourceSettingsV1_1.CommonSourceSettingsV1,
     ComputedTraitSummary: computedTraitSummary_1.ComputedTraitSummary,
     ComputedTraitsDefinition: computedTraitsDefinition_1.ComputedTraitsDefinition,
@@ -1286,9 +1269,6 @@ var typeMap = {
     CreateComputedTrait200Response: createComputedTrait200Response_1.CreateComputedTrait200Response,
     CreateComputedTraitAlphaInput: createComputedTraitAlphaInput_1.CreateComputedTraitAlphaInput,
     CreateComputedTraitAlphaOutput: createComputedTraitAlphaOutput_1.CreateComputedTraitAlphaOutput,
-    CreateDbtModelSyncTrigger200Response: createDbtModelSyncTrigger200Response_1.CreateDbtModelSyncTrigger200Response,
-    CreateDbtModelSyncTriggerInput: createDbtModelSyncTriggerInput_1.CreateDbtModelSyncTriggerInput,
-    CreateDbtModelSyncTriggerOutput: createDbtModelSyncTriggerOutput_1.CreateDbtModelSyncTriggerOutput,
     CreateDestination200Response: createDestination200Response_1.CreateDestination200Response,
     CreateDestinationSubscription200Response: createDestinationSubscription200Response_1.CreateDestinationSubscription200Response,
     CreateDestinationSubscriptionAlphaInput: createDestinationSubscriptionAlphaInput_1.CreateDestinationSubscriptionAlphaInput,
@@ -1358,7 +1338,6 @@ var typeMap = {
     CreateWorkspaceRegulationV1Output: createWorkspaceRegulationV1Output_1.CreateWorkspaceRegulationV1Output,
     CreateWriteKeyForSource200Response: createWriteKeyForSource200Response_1.CreateWriteKeyForSource200Response,
     CreateWriteKeyForSourceAlphaOutput: createWriteKeyForSourceAlphaOutput_1.CreateWriteKeyForSourceAlphaOutput,
-    DbtModelSyncTrigger: dbtModelSyncTrigger_1.DbtModelSyncTrigger,
     DeleteDestination200Response: deleteDestination200Response_1.DeleteDestination200Response,
     DeleteDestinationV1Output: deleteDestinationV1Output_1.DeleteDestinationV1Output,
     DeleteFilterById200Response: deleteFilterById200Response_1.DeleteFilterById200Response,
