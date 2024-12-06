@@ -34,6 +34,9 @@ export * from './batchQueryMessagingSubscriptionsForSpace200Response';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 export * from './breakdownBeta';
+export * from './cancelReverseETLSyncForModel200Response';
+export * from './cancelReverseETLSyncForModelInput';
+export * from './cancelReverseETLSyncForModelOutput';
 export * from './commonSourceSettingsV1';
 export * from './computedTraitSummary';
 export * from './computedTraitsDefinition';
@@ -599,6 +602,9 @@ import { BatchQueryMessagingSubscriptionsForSpace200Response } from './batchQuer
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaInput } from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaOutput } from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 import { BreakdownBeta } from './breakdownBeta';
+import { CancelReverseETLSyncForModel200Response } from './cancelReverseETLSyncForModel200Response';
+import { CancelReverseETLSyncForModelInput } from './cancelReverseETLSyncForModelInput';
+import { CancelReverseETLSyncForModelOutput } from './cancelReverseETLSyncForModelOutput';
 import { CommonSourceSettingsV1 } from './commonSourceSettingsV1';
 import { ComputedTraitSummary } from './computedTraitSummary';
 import { ComputedTraitsDefinition } from './computedTraitsDefinition';
@@ -1317,6 +1323,10 @@ let typeMap: { [index: string]: any } = {
     BatchQueryMessagingSubscriptionsForSpaceAlphaOutput:
         BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
     BreakdownBeta: BreakdownBeta,
+    CancelReverseETLSyncForModel200Response:
+        CancelReverseETLSyncForModel200Response,
+    CancelReverseETLSyncForModelInput: CancelReverseETLSyncForModelInput,
+    CancelReverseETLSyncForModelOutput: CancelReverseETLSyncForModelOutput,
     CommonSourceSettingsV1: CommonSourceSettingsV1,
     ComputedTraitSummary: ComputedTraitSummary,
     ComputedTraitsDefinition: ComputedTraitsDefinition,
