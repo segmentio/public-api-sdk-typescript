@@ -102,6 +102,7 @@ export namespace RegulationListEntryV1 {
         RUNNING = <any>'RUNNING',
     }
     export enum RegulationTypeEnum {
+        DELETE_ARCHIVE_ONLY = <any>'DELETE_ARCHIVE_ONLY',
         DELETE_INTERNAL = <any>'DELETE_INTERNAL',
         DELETE_ONLY = <any>'DELETE_ONLY',
         SUPPRESS_ONLY = <any>'SUPPRESS_ONLY',

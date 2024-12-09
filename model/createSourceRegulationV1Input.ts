@@ -60,6 +60,7 @@ export class CreateSourceRegulationV1Input {
 
 export namespace CreateSourceRegulationV1Input {
     export enum RegulationTypeEnum {
+        DELETE_ARCHIVE_ONLY = <any>'DELETE_ARCHIVE_ONLY',
         DELETE_INTERNAL = <any>'DELETE_INTERNAL',
         DELETE_ONLY = <any>'DELETE_ONLY',
         SUPPRESS_ONLY = <any>'SUPPRESS_ONLY',
@@ -68,6 +69,7 @@ export namespace CreateSourceRegulationV1Input {
         UNSUPPRESS = <any>'UNSUPPRESS',
     }
     export enum SubjectTypeEnum {
+        ANONYMOUS_ID = <any>'ANONYMOUS_ID',
         USER_ID = <any>'USER_ID',
     }
 }

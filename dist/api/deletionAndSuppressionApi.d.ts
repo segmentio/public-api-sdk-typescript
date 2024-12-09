@@ -91,7 +91,7 @@ export declare class DeletionAndSuppressionApi {
         response: http.IncomingMessage;
         body: ListSuppressions200Response;
     }>;
-    listWorkspaceRegulations(status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'SUPPRESS_WITH_DELETE_INTERNAL' | 'UNSUPPRESS'>, pagination?: PaginationInput, options?: {
+    listWorkspaceRegulations(status?: 'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING', regulationTypes?: Array<'DELETE_ARCHIVE_ONLY' | 'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'SUPPRESS_WITH_DELETE_INTERNAL' | 'UNSUPPRESS'>, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };

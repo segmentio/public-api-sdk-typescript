@@ -29,6 +29,7 @@ export declare namespace RegulationListEntryV1 {
         RUNNING
     }
     enum RegulationTypeEnum {
+        DELETE_ARCHIVE_ONLY,
         DELETE_INTERNAL,
         DELETE_ONLY,
         SUPPRESS_ONLY,
