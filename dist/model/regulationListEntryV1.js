@@ -61,6 +61,7 @@ exports.RegulationListEntryV1 = RegulationListEntryV1;
     })(StatusEnum = RegulationListEntryV1.StatusEnum || (RegulationListEntryV1.StatusEnum = {}));
     var RegulationTypeEnum;
     (function (RegulationTypeEnum) {
+        RegulationTypeEnum[RegulationTypeEnum["DELETE_ARCHIVE_ONLY"] = 'DELETE_ARCHIVE_ONLY'] = "DELETE_ARCHIVE_ONLY";
         RegulationTypeEnum[RegulationTypeEnum["DELETE_INTERNAL"] = 'DELETE_INTERNAL'] = "DELETE_INTERNAL";
         RegulationTypeEnum[RegulationTypeEnum["DELETE_ONLY"] = 'DELETE_ONLY'] = "DELETE_ONLY";
         RegulationTypeEnum[RegulationTypeEnum["SUPPRESS_ONLY"] = 'SUPPRESS_ONLY'] = "SUPPRESS_ONLY";

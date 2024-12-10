@@ -31,6 +31,7 @@ exports.CreateWorkspaceRegulationV1Input = CreateWorkspaceRegulationV1Input;
 (function (CreateWorkspaceRegulationV1Input) {
     var RegulationTypeEnum;
     (function (RegulationTypeEnum) {
+        RegulationTypeEnum[RegulationTypeEnum["DELETE_ARCHIVE_ONLY"] = 'DELETE_ARCHIVE_ONLY'] = "DELETE_ARCHIVE_ONLY";
         RegulationTypeEnum[RegulationTypeEnum["DELETE_INTERNAL"] = 'DELETE_INTERNAL'] = "DELETE_INTERNAL";
         RegulationTypeEnum[RegulationTypeEnum["DELETE_ONLY"] = 'DELETE_ONLY'] = "DELETE_ONLY";
         RegulationTypeEnum[RegulationTypeEnum["SUPPRESS_ONLY"] = 'SUPPRESS_ONLY'] = "SUPPRESS_ONLY";
@@ -40,6 +41,7 @@ exports.CreateWorkspaceRegulationV1Input = CreateWorkspaceRegulationV1Input;
     })(RegulationTypeEnum = CreateWorkspaceRegulationV1Input.RegulationTypeEnum || (CreateWorkspaceRegulationV1Input.RegulationTypeEnum = {}));
     var SubjectTypeEnum;
     (function (SubjectTypeEnum) {
+        SubjectTypeEnum[SubjectTypeEnum["ANONYMOUS_ID"] = 'ANONYMOUS_ID'] = "ANONYMOUS_ID";
         SubjectTypeEnum[SubjectTypeEnum["OBJECT_ID"] = 'OBJECT_ID'] = "OBJECT_ID";
         SubjectTypeEnum[SubjectTypeEnum["USER_ID"] = 'USER_ID'] = "USER_ID";
     })(SubjectTypeEnum = CreateWorkspaceRegulationV1Input.SubjectTypeEnum || (CreateWorkspaceRegulationV1Input.SubjectTypeEnum = {}));

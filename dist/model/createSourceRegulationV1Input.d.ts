@@ -16,6 +16,7 @@ export declare class CreateSourceRegulationV1Input {
 }
 export declare namespace CreateSourceRegulationV1Input {
     enum RegulationTypeEnum {
+        DELETE_ARCHIVE_ONLY,
         DELETE_INTERNAL,
         DELETE_ONLY,
         SUPPRESS_ONLY,
@@ -24,6 +25,7 @@ export declare namespace CreateSourceRegulationV1Input {
         UNSUPPRESS
     }
     enum SubjectTypeEnum {
+        ANONYMOUS_ID,
         USER_ID
     }
 }
