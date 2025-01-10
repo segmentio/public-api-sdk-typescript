@@ -470,6 +470,7 @@ __exportStar(require("./restoreFunctionVersionAlphaOutput"), exports);
 __exportStar(require("./reverseETLManualSyncJobOutput"), exports);
 __exportStar(require("./reverseETLSyncStatus"), exports);
 __exportStar(require("./reverseEtlCronScheduleConfig"), exports);
+__exportStar(require("./reverseEtlDbtCloudScheduleConfig"), exports);
 __exportStar(require("./reverseEtlModel"), exports);
 __exportStar(require("./reverseEtlPeriodicScheduleConfig"), exports);
 __exportStar(require("./reverseEtlScheduleConfig"), exports);
@@ -1029,6 +1030,7 @@ var restoreFunctionVersionAlphaOutput_1 = require("./restoreFunctionVersionAlpha
 var reverseETLManualSyncJobOutput_1 = require("./reverseETLManualSyncJobOutput");
 var reverseETLSyncStatus_1 = require("./reverseETLSyncStatus");
 var reverseEtlCronScheduleConfig_1 = require("./reverseEtlCronScheduleConfig");
+var reverseEtlDbtCloudScheduleConfig_1 = require("./reverseEtlDbtCloudScheduleConfig");
 var reverseEtlModel_1 = require("./reverseEtlModel");
 var reverseEtlPeriodicScheduleConfig_1 = require("./reverseEtlPeriodicScheduleConfig");
 var reverseEtlScheduleConfig_1 = require("./reverseEtlScheduleConfig");
@@ -1690,6 +1692,7 @@ var typeMap = {
     ReverseETLManualSyncJobOutput: reverseETLManualSyncJobOutput_1.ReverseETLManualSyncJobOutput,
     ReverseETLSyncStatus: reverseETLSyncStatus_1.ReverseETLSyncStatus,
     ReverseEtlCronScheduleConfig: reverseEtlCronScheduleConfig_1.ReverseEtlCronScheduleConfig,
+    ReverseEtlDbtCloudScheduleConfig: reverseEtlDbtCloudScheduleConfig_1.ReverseEtlDbtCloudScheduleConfig,
     ReverseEtlModel: reverseEtlModel_1.ReverseEtlModel,
     ReverseEtlPeriodicScheduleConfig: reverseEtlPeriodicScheduleConfig_1.ReverseEtlPeriodicScheduleConfig,
     ReverseEtlScheduleConfig: reverseEtlScheduleConfig_1.ReverseEtlScheduleConfig,

@@ -11,32 +11,11 @@
  */
 
 import { RequestFile } from './models';
-import { ReverseEtlCronScheduleConfig } from './reverseEtlCronScheduleConfig';
-import { ReverseEtlDbtCloudScheduleConfig } from './reverseEtlDbtCloudScheduleConfig';
-import { ReverseEtlPeriodicScheduleConfig } from './reverseEtlPeriodicScheduleConfig';
-import { ReverseEtlSpecificTimeScheduleConfig } from './reverseEtlSpecificTimeScheduleConfig';
 
-export class ReverseEtlScheduleConfig {
-    /**
-     * Duration is specified as a string, EG: 15m, 3h25m30s.
-     */
-    'interval': string;
-    /**
-     * Days of the week.
-     */
-    'days': Array<number>;
-    /**
-     * Hours of the day.
-     */
-    'hours': Array<number>;
-    /**
-     * Timezone respected by the cron string. Format must be in IANA Timezone Identifier. Example: \'America/Los_Angeles\'.
-     */
-    'timezone': string;
-    /**
-     * 5 field cron string expression. The cron expression must be larger than 15 minutes.
-     */
-    'spec': string;
+/**
+ * Definition for dbt cloud job event schedule.
+ */
+export class ReverseEtlDbtCloudScheduleConfig {
     /**
      * The dbt cloud job id used to start a reverse ETL sync.
      */
@@ -54,31 +33,6 @@ export class ReverseEtlScheduleConfig {
         type: string;
     }> = [
         {
-            name: 'interval',
-            baseName: 'interval',
-            type: 'string',
-        },
-        {
-            name: 'days',
-            baseName: 'days',
-            type: 'Array<number>',
-        },
-        {
-            name: 'hours',
-            baseName: 'hours',
-            type: 'Array<number>',
-        },
-        {
-            name: 'timezone',
-            baseName: 'timezone',
-            type: 'string',
-        },
-        {
-            name: 'spec',
-            baseName: 'spec',
-            type: 'string',
-        },
-        {
             name: 'jobId',
             baseName: 'jobId',
             type: 'string',
@@ -91,6 +45,6 @@ export class ReverseEtlScheduleConfig {
     ];
 
     static getAttributeTypeMap() {
-        return ReverseEtlScheduleConfig.attributeTypeMap;
+        return ReverseEtlDbtCloudScheduleConfig.attributeTypeMap;
     }
 }

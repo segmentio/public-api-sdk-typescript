@@ -18,7 +18,7 @@ import { Config } from './config';
  */
 export class ReverseEtlScheduleDefinition {
     /**
-     * Strategy supports: Periodic, Specific Days, Manual, CRON.
+     * Strategy supports: Periodic, Specific Days, Manual, CRON and DBT_CLOUD.
      */
     'strategy': ReverseEtlScheduleDefinition.StrategyEnum;
     'config'?: Config | null;
@@ -50,6 +50,7 @@ export class ReverseEtlScheduleDefinition {
 export namespace ReverseEtlScheduleDefinition {
     export enum StrategyEnum {
         CRON = <any>'CRON',
+        DBT_CLOUD = <any>'DBT_CLOUD',
         MANUAL = <any>'MANUAL',
         PERIODIC = <any>'PERIODIC',
         SPECIFIC_DAYS = <any>'SPECIFIC_DAYS',

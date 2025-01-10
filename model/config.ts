@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { ReverseEtlCronScheduleConfig } from './reverseEtlCronScheduleConfig';
+import { ReverseEtlDbtCloudScheduleConfig } from './reverseEtlDbtCloudScheduleConfig';
 import { ReverseEtlPeriodicScheduleConfig } from './reverseEtlPeriodicScheduleConfig';
 import { ReverseEtlSpecificTimeScheduleConfig } from './reverseEtlSpecificTimeScheduleConfig';
 
@@ -39,6 +40,14 @@ export class Config {
      * 5 field cron string expression. The cron expression must be larger than 15 minutes.
      */
     'spec': string;
+    /**
+     * The dbt cloud job id used to start a reverse ETL sync.
+     */
+    'jobId': string;
+    /**
+     * The dbt cloud account id where the job belongs to.
+     */
+    'accountId': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -70,6 +79,16 @@ export class Config {
         {
             name: 'spec',
             baseName: 'spec',
+            type: 'string',
+        },
+        {
+            name: 'jobId',
+            baseName: 'jobId',
+            type: 'string',
+        },
+        {
+            name: 'accountId',
+            baseName: 'accountId',
             type: 'string',
         },
     ];

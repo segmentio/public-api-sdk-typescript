@@ -1,9 +1,4 @@
-export declare class ReverseEtlScheduleConfig {
-    'interval': string;
-    'days': Array<number>;
-    'hours': Array<number>;
-    'timezone': string;
-    'spec': string;
+export declare class ReverseEtlDbtCloudScheduleConfig {
     'jobId': string;
     'accountId': string;
     static discriminator: string | undefined;
