@@ -39,17 +39,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DBTApi = exports.DBTApiApiKeys = void 0;
+exports.DbtApi = exports.DbtApiApiKeys = void 0;
 var request_1 = __importDefault(require("request"));
 var models_1 = require("../model/models");
 var models_2 = require("../model/models");
 var apis_1 = require("./apis");
 var defaultBasePath = 'https://api.segmentapis.com';
-var DBTApiApiKeys;
-(function (DBTApiApiKeys) {
-})(DBTApiApiKeys = exports.DBTApiApiKeys || (exports.DBTApiApiKeys = {}));
-var DBTApi = (function () {
-    function DBTApi(basePathOrUsername, password, basePath) {
+var DbtApiApiKeys;
+(function (DbtApiApiKeys) {
+})(DbtApiApiKeys = exports.DbtApiApiKeys || (exports.DbtApiApiKeys = {}));
+var DbtApi = (function () {
+    function DbtApi(basePathOrUsername, password, basePath) {
         this._basePath = defaultBasePath;
         this._defaultHeaders = {};
         this._useQuerystring = false;
@@ -69,14 +69,14 @@ var DBTApi = (function () {
             }
         }
     }
-    Object.defineProperty(DBTApi.prototype, "useQuerystring", {
+    Object.defineProperty(DbtApi.prototype, "useQuerystring", {
         set: function (value) {
             this._useQuerystring = value;
         },
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(DBTApi.prototype, "basePath", {
+    Object.defineProperty(DbtApi.prototype, "basePath", {
         get: function () {
             return this._basePath;
         },
@@ -86,7 +86,7 @@ var DBTApi = (function () {
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(DBTApi.prototype, "defaultHeaders", {
+    Object.defineProperty(DbtApi.prototype, "defaultHeaders", {
         get: function () {
             return this._defaultHeaders;
         },
@@ -96,23 +96,23 @@ var DBTApi = (function () {
         enumerable: false,
         configurable: true
     });
-    DBTApi.prototype.setDefaultAuthentication = function (auth) {
+    DbtApi.prototype.setDefaultAuthentication = function (auth) {
         this.authentications.default = auth;
     };
-    DBTApi.prototype.setApiKey = function (key, value) {
-        this.authentications[DBTApiApiKeys[key]].apiKey = value;
+    DbtApi.prototype.setApiKey = function (key, value) {
+        this.authentications[DbtApiApiKeys[key]].apiKey = value;
     };
-    Object.defineProperty(DBTApi.prototype, "accessToken", {
+    Object.defineProperty(DbtApi.prototype, "accessToken", {
         set: function (accessToken) {
             this.authentications.token.accessToken = accessToken;
         },
         enumerable: false,
         configurable: true
     });
-    DBTApi.prototype.addInterceptor = function (interceptor) {
+    DbtApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    DBTApi.prototype.createDbtModelSyncTrigger = function (CreateDbtModelSyncTriggerInput, options) {
+    DbtApi.prototype.createDbtModelSyncTrigger = function (CreateDbtModelSyncTriggerInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -197,7 +197,7 @@ var DBTApi = (function () {
             });
         });
     };
-    return DBTApi;
+    return DbtApi;
 }());
-exports.DBTApi = DBTApi;
-//# sourceMappingURL=dBTApi.js.map
+exports.DbtApi = DbtApi;
+//# sourceMappingURL=dbtApi.js.map

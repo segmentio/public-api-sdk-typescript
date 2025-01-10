@@ -4,9 +4,9 @@ import { CreateDbtModelSyncTrigger200Response } from '../model/createDbtModelSyn
 import { CreateDbtModelSyncTriggerInput } from '../model/createDbtModelSyncTriggerInput';
 import { Authentication, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
-export declare enum DBTApiApiKeys {
+export declare enum DbtApiApiKeys {
 }
-export declare class DBTApi {
+export declare class DbtApi {
     protected _basePath: string;
     protected _defaultHeaders: any;
     protected _useQuerystring: boolean;
@@ -22,7 +22,7 @@ export declare class DBTApi {
     get defaultHeaders(): any;
     get basePath(): string;
     setDefaultAuthentication(auth: Authentication): void;
-    setApiKey(key: DBTApiApiKeys, value: string): void;
+    setApiKey(key: DbtApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
     createDbtModelSyncTrigger(CreateDbtModelSyncTriggerInput: CreateDbtModelSyncTriggerInput, options?: {
