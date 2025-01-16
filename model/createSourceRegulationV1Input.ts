@@ -17,7 +17,7 @@ import { RequestFile } from './models';
  */
 export class CreateSourceRegulationV1Input {
     /**
-     * The regulation type to create.
+     * The regulation type to create. Please note that `DELETE_ARCHIVE_ONLY` is only supported for limited Workspaces for Source-scoped regulations.
      */
     'regulationType': CreateSourceRegulationV1Input.RegulationTypeEnum;
     /**
