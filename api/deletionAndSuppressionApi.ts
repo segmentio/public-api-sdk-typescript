@@ -119,7 +119,7 @@ export class DeletionAndSuppressionApi {
     }
 
     /**
-     * Creates a Source-scoped regulation.        Config API omitted fields: - `attributes`, - `userAgent`
+     * Creates a Source-scoped regulation.        Please Note: Suppression rules at the workspace level take precedence over those at the source level. If a user has been suppressed at the workspace level, any attempt to unsuppress them at the source level is not supported and the processing of the request will fail in the Segment        Config API omitted fields: - `attributes`, - `userAgent`
      * @summary Create Cloud Source Regulation
      * @param sourceId
      * @param CreateCloudSourceRegulationV1Input
@@ -254,7 +254,7 @@ export class DeletionAndSuppressionApi {
         });
     }
     /**
-     * Creates a Source-scoped regulation.    • When called, this endpoint may generate the `Source Regulation Created` event in the [audit trail](/tag/Audit-Trail).  Config API omitted fields: - `attributes`, - `userAgent`
+     * Creates a Source-scoped regulation.        Please Note: Suppression rules at the workspace level take precedence over those at the source level. If a user has been suppressed at the workspace level, any attempt to unsuppress them at the source level is not supported and the processing of the request will fail in the Segment    • When called, this endpoint may generate the `Source Regulation Created` event in the [audit trail](/tag/Audit-Trail).  Config API omitted fields: - `attributes`, - `userAgent`
      * @summary Create Source Regulation
      * @param sourceId
      * @param CreateSourceRegulationV1Input
