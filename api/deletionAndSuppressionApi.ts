@@ -119,7 +119,7 @@ export class DeletionAndSuppressionApi {
     }
 
     /**
-     * Creates a Source-scoped regulation.        Please Note: Suppression rules at the Workspace level take precedence over those at the Source level. If a user has been suppressed at the Workspace level, any attempt to un-suppress at the Source level is not supported and the processing of the request will fail in Segment        Config API omitted fields: - `attributes`, - `userAgent`
+     * Creates a Source-scoped regulation.    Please Note: Suppression rules at the Workspace level take precedence over those at the Source level. If a user has been suppressed at the Workspace level, any attempt to un-suppress at the Source level is not supported and the processing of the request will fail in Segment        Config API omitted fields: - `attributes`, - `userAgent`
      * @summary Create Cloud Source Regulation
      * @param sourceId
      * @param CreateCloudSourceRegulationV1Input
@@ -254,7 +254,7 @@ export class DeletionAndSuppressionApi {
         });
     }
     /**
-     * Creates a Source-scoped regulation.        Please Note: Suppression rules at the Workspace level take precedence over those at the Source level. If a user has been suppressed at the Workspace level, any attempt to un-suppress at the Source level is not supported and the processing of the request will fail in Segment     • When called, this endpoint may generate the `Source Regulation Created` event in the [audit trail](/tag/Audit-Trail).  Config API omitted fields: - `attributes`, - `userAgent`
+     * Creates a Source-scoped regulation.    Please Note: Suppression rules at the Workspace level take precedence over those at the Source level. If a user has been suppressed at the Workspace level, any attempt to un-suppress at the Source level is not supported and the processing of the request will fail in Segment    • When called, this endpoint may generate the `Source Regulation Created` event in the [audit trail](/tag/Audit-Trail).  Config API omitted fields: - `attributes`, - `userAgent`
      * @summary Create Source Regulation
      * @param sourceId
      * @param CreateSourceRegulationV1Input
