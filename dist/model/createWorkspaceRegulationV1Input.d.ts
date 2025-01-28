@@ -16,7 +16,6 @@ export declare class CreateWorkspaceRegulationV1Input {
 }
 export declare namespace CreateWorkspaceRegulationV1Input {
     enum RegulationTypeEnum {
-        DELETE_ARCHIVE_ONLY,
         DELETE_INTERNAL,
         DELETE_ONLY,
         SUPPRESS_ONLY,
@@ -25,7 +24,6 @@ export declare namespace CreateWorkspaceRegulationV1Input {
         UNSUPPRESS
     }
     enum SubjectTypeEnum {
-        ANONYMOUS_ID,
         OBJECT_ID,
         USER_ID
     }

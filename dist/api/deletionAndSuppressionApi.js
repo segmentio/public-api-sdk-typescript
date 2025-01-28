@@ -584,7 +584,7 @@ var DeletionAndSuppressionApi = (function () {
                 }
                 if (regulationTypes !== undefined) {
                     localVarQueryParameters['regulationTypes'] =
-                        models_1.ObjectSerializer.serialize(regulationTypes, "Array<'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'SUPPRESS_WITH_DELETE_INTERNAL' | 'UNSUPPRESS'>");
+                        models_1.ObjectSerializer.serialize(regulationTypes, "Array<'DELETE_ARCHIVE_ONLY' | 'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'SUPPRESS_WITH_DELETE_INTERNAL' | 'UNSUPPRESS'>");
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
@@ -761,7 +761,7 @@ var DeletionAndSuppressionApi = (function () {
                 }
                 if (regulationTypes !== undefined) {
                     localVarQueryParameters['regulationTypes'] =
-                        models_1.ObjectSerializer.serialize(regulationTypes, "Array<'DELETE_ARCHIVE_ONLY' | 'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'SUPPRESS_WITH_DELETE_INTERNAL' | 'UNSUPPRESS'>");
+                        models_1.ObjectSerializer.serialize(regulationTypes, "Array<'DELETE_INTERNAL' | 'DELETE_ONLY' | 'SUPPRESS_ONLY' | 'SUPPRESS_WITH_DELETE' | 'SUPPRESS_WITH_DELETE_INTERNAL' | 'UNSUPPRESS'>");
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
