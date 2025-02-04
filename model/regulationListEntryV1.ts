@@ -97,9 +97,9 @@ export namespace RegulationListEntryV1 {
         FINISHED = <any>'FINISHED',
         INITIALIZED = <any>'INITIALIZED',
         INVALID = <any>'INVALID',
+        IN_PROGRESS = <any>'IN_PROGRESS',
         NOT_SUPPORTED = <any>'NOT_SUPPORTED',
         PARTIAL_SUCCESS = <any>'PARTIAL_SUCCESS',
-        RUNNING = <any>'RUNNING',
     }
     export enum RegulationTypeEnum {
         DELETE_ARCHIVE_ONLY = <any>'DELETE_ARCHIVE_ONLY',

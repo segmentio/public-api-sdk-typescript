@@ -24,9 +24,9 @@ export declare namespace RegulationListEntryV1 {
         FINISHED,
         INITIALIZED,
         INVALID,
+        IN_PROGRESS,
         NOT_SUPPORTED,
-        PARTIAL_SUCCESS,
-        RUNNING
+        PARTIAL_SUCCESS
     }
     enum RegulationTypeEnum {
         DELETE_ARCHIVE_ONLY,

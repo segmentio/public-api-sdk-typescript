@@ -762,9 +762,9 @@ export class DeletionAndSuppressionApi {
             | 'FINISHED'
             | 'INITIALIZED'
             | 'INVALID'
+            | 'IN_PROGRESS'
             | 'NOT_SUPPORTED'
-            | 'PARTIAL_SUCCESS'
-            | 'RUNNING',
+            | 'PARTIAL_SUCCESS',
         regulationTypes?: Array<
             | 'DELETE_ARCHIVE_ONLY'
             | 'DELETE_INTERNAL'
@@ -815,7 +815,7 @@ export class DeletionAndSuppressionApi {
         if (status !== undefined) {
             localVarQueryParameters['status'] = ObjectSerializer.serialize(
                 status,
-                "'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING'"
+                "'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'IN_PROGRESS' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS'"
             );
         }
 
@@ -1036,9 +1036,9 @@ export class DeletionAndSuppressionApi {
             | 'FINISHED'
             | 'INITIALIZED'
             | 'INVALID'
+            | 'IN_PROGRESS'
             | 'NOT_SUPPORTED'
-            | 'PARTIAL_SUCCESS'
-            | 'RUNNING',
+            | 'PARTIAL_SUCCESS',
         regulationTypes?: Array<
             | 'DELETE_INTERNAL'
             | 'DELETE_ONLY'
@@ -1076,7 +1076,7 @@ export class DeletionAndSuppressionApi {
         if (status !== undefined) {
             localVarQueryParameters['status'] = ObjectSerializer.serialize(
                 status,
-                "'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING'"
+                "'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'IN_PROGRESS' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS'"
             );
         }
 

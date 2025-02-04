@@ -22,8 +22,8 @@ export declare namespace DestinationStatusV1 {
         FINISHED,
         INITIALIZED,
         INVALID,
+        IN_PROGRESS,
         NOT_SUPPORTED,
-        PARTIAL_SUCCESS,
-        RUNNING
+        PARTIAL_SUCCESS
     }
 }

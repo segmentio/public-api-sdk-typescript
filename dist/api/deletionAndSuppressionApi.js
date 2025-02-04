@@ -580,7 +580,7 @@ var DeletionAndSuppressionApi = (function () {
                     throw new Error('Required parameter sourceId was null or undefined when calling listRegulationsFromSource.');
                 }
                 if (status !== undefined) {
-                    localVarQueryParameters['status'] = models_1.ObjectSerializer.serialize(status, "'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING'");
+                    localVarQueryParameters['status'] = models_1.ObjectSerializer.serialize(status, "'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'IN_PROGRESS' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS'");
                 }
                 if (regulationTypes !== undefined) {
                     localVarQueryParameters['regulationTypes'] =
@@ -757,7 +757,7 @@ var DeletionAndSuppressionApi = (function () {
                 }
                 localVarFormParams = {};
                 if (status !== undefined) {
-                    localVarQueryParameters['status'] = models_1.ObjectSerializer.serialize(status, "'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS' | 'RUNNING'");
+                    localVarQueryParameters['status'] = models_1.ObjectSerializer.serialize(status, "'FAILED' | 'FINISHED' | 'INITIALIZED' | 'INVALID' | 'IN_PROGRESS' | 'NOT_SUPPORTED' | 'PARTIAL_SUCCESS'");
                 }
                 if (regulationTypes !== undefined) {
                     localVarQueryParameters['regulationTypes'] =
