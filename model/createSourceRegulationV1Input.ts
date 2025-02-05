@@ -21,11 +21,11 @@ export class CreateSourceRegulationV1Input {
      */
     'regulationType': CreateSourceRegulationV1Input.RegulationTypeEnum;
     /**
-     * The subject type.
+     * The subject type. Note: `ANONYMOUS_ID` is only supported for limited Workspaces for Source-scoped regulations. `ANONYMOUS_ID` is only supported when regulationType is `DELETE_ARCHIVE_ONLY`.
      */
     'subjectType': CreateSourceRegulationV1Input.SubjectTypeEnum;
     /**
-     * The list of `userId` or `objectId` values of the subjects to regulate.  Config API note: equal to `parent` but allows an array.
+     * The list of `userId` or `objectId` or `anonymousId` values of the subjects to regulate.  Config API note: equal to `parent` but allows an array.
      */
     'subjectIds': Array<string>;
 
