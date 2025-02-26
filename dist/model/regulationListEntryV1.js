@@ -55,9 +55,9 @@ exports.RegulationListEntryV1 = RegulationListEntryV1;
         StatusEnum[StatusEnum["FINISHED"] = 'FINISHED'] = "FINISHED";
         StatusEnum[StatusEnum["INITIALIZED"] = 'INITIALIZED'] = "INITIALIZED";
         StatusEnum[StatusEnum["INVALID"] = 'INVALID'] = "INVALID";
-        StatusEnum[StatusEnum["IN_PROGRESS"] = 'IN_PROGRESS'] = "IN_PROGRESS";
         StatusEnum[StatusEnum["NOT_SUPPORTED"] = 'NOT_SUPPORTED'] = "NOT_SUPPORTED";
         StatusEnum[StatusEnum["PARTIAL_SUCCESS"] = 'PARTIAL_SUCCESS'] = "PARTIAL_SUCCESS";
+        StatusEnum[StatusEnum["RUNNING"] = 'RUNNING'] = "RUNNING";
     })(StatusEnum = RegulationListEntryV1.StatusEnum || (RegulationListEntryV1.StatusEnum = {}));
     var RegulationTypeEnum;
     (function (RegulationTypeEnum) {
