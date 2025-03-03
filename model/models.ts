@@ -2,6 +2,8 @@ import localVarRequest from 'request';
 
 export * from './aPICallSnapshotV1';
 export * from './accessPermissionV1';
+export * from './actionDefinition';
+export * from './activation';
 export * from './addConnectionFromSourceToWarehouse201Response';
 export * from './addConnectionFromSourceToWarehouseV1Output';
 export * from './addLabelsToSource200Response';
@@ -25,11 +27,15 @@ export * from './addUsersToUserGroupV1Output';
 export * from './advancedWarehouseSyncScheduleV1Input';
 export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
+export * from './analytics';
 export * from './audienceComputationDefinition';
 export * from './audienceDefinition';
+export * from './audienceEntryState';
+export * from './audienceExitRule';
 export * from './audienceOptions';
 export * from './audienceSummary';
 export * from './auditEventV1';
+export * from './baseState';
 export * from './batchQueryMessagingSubscriptionsForSpace200Response';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
@@ -40,6 +46,9 @@ export * from './cancelReverseETLSyncForModelOutput';
 export * from './commonSourceSettingsV1';
 export * from './computedTraitSummary';
 export * from './computedTraitsDefinition';
+export * from './concurrencyConfig';
+export * from './conditionBranch';
+export * from './conditionSplitState';
 export * from './config';
 export * from './contact';
 export * from './createAudience200Response';
@@ -80,6 +89,9 @@ export * from './createInsertFunctionInstanceAlphaOutput';
 export * from './createInvites201Response';
 export * from './createInvitesV1Input';
 export * from './createInvitesV1Output';
+export * from './createJourney201Response';
+export * from './createJourneyAlphaInput';
+export * from './createJourneyAlphaOutput';
 export * from './createLabel201Response';
 export * from './createLabelV1Input';
 export * from './createLabelV1Output';
@@ -124,6 +136,7 @@ export * from './createWorkspaceRegulationV1Output';
 export * from './createWriteKeyForSource200Response';
 export * from './createWriteKeyForSourceAlphaOutput';
 export * from './dbtModelSyncTrigger';
+export * from './defaultBranch';
 export * from './deleteDestination200Response';
 export * from './deleteDestinationV1Output';
 export * from './deleteFilterById200Response';
@@ -164,6 +177,7 @@ export * from './deliveryOverviewMetricsDatapoint';
 export * from './deliveryOverviewMetricsDataset';
 export * from './deliveryOverviewSourceFilterBy';
 export * from './deliveryOverviewSuccessfullyReceivedFilterBy';
+export * from './destination';
 export * from './destinationFilterActionV1';
 export * from './destinationFilterV1';
 export * from './destinationMetadataActionFieldV1';
@@ -174,6 +188,7 @@ export * from './destinationMetadataMethodsV1';
 export * from './destinationMetadataPlatformsV1';
 export * from './destinationMetadataSubscriptionPresetV1';
 export * from './destinationMetadataV1';
+export * from './destinationState';
 export * from './destinationStatusV1';
 export * from './destinationSubscription';
 export * from './destinationSubscriptionUpdateInput';
@@ -185,7 +200,14 @@ export * from './echo200Response1';
 export * from './echoAlphaOutput';
 export * from './echoV1Output';
 export * from './edgeFunctionsAlpha';
+export * from './entryRules';
+export * from './eventEntryState';
+export * from './eventExitRule';
 export * from './eventSourceV1';
+export * from './eventSplitWithTimeoutState';
+export * from './exitRule';
+export * from './exitRulesConfig';
+export * from './exitState';
 export * from './fQLDefinedPropertyV1';
 export * from './filter';
 export * from './functionDeployment';
@@ -230,6 +252,10 @@ export * from './getFunctionVersion200Response';
 export * from './getFunctionVersionAlphaOutput';
 export * from './getInsertFunctionInstance200Response';
 export * from './getInsertFunctionInstanceAlphaOutput';
+export * from './getJourney200Response';
+export * from './getJourneyAlphaOutput';
+export * from './getJourneyAnalytics200Response';
+export * from './getJourneyAnalyticsAlphaOutput';
 export * from './getLatestFromEdgeFunctions200Response';
 export * from './getLatestFromEdgeFunctionsAlphaOutput';
 export * from './getMessagingSubscriptionFailureResponse';
@@ -282,6 +308,13 @@ export * from './insertFunctionInstanceAlpha';
 export * from './integrationOptionBeta';
 export * from './invitePermissionV1';
 export * from './inviteV1';
+export * from './journeyAnalytics';
+export * from './journeyDefinition';
+export * from './journeyDetails';
+export * from './journeyInfo';
+export * from './journeyState';
+export * from './journeyVersionOutput';
+export * from './key';
 export * from './labelAlpha';
 export * from './labelV1';
 export * from './listAudiences200Response';
@@ -397,8 +430,11 @@ export * from './previewDestinationFilterV1Output';
 export * from './profilesWarehouseAlpha';
 export * from './propertyRenameBeta';
 export * from './propertyRenameV1';
+export * from './propertySelectionsConfig';
 export * from './propertyValueTransformationBeta';
 export * from './propertyValueTransformationV1';
+export * from './randomSplitBranch';
+export * from './randomSplitState';
 export * from './regulation';
 export * from './regulationListEntryV1';
 export * from './removeAudienceFromSpace200Response';
@@ -407,6 +443,8 @@ export * from './removeComputedTraitFromSpace200Response';
 export * from './removeComputedTraitFromSpaceAlphaOutput';
 export * from './removeFilterFromDestination200Response';
 export * from './removeFilterFromDestinationV1Output';
+export * from './removeJourneyFromSpace200Response';
+export * from './removeJourneyFromSpaceAlphaOutput';
 export * from './removeProfilesWarehouseFromSpace200Response';
 export * from './removeProfilesWarehouseFromSpaceAlphaOutput';
 export * from './removeRuleV1';
@@ -443,6 +481,9 @@ export * from './replacePermissionsForUserV1Output';
 export * from './replaceRulesInTrackingPlan200Response';
 export * from './replaceRulesInTrackingPlanV1Input';
 export * from './replaceRulesInTrackingPlanV1Output';
+export * from './replaceStepsForJourney200Response';
+export * from './replaceStepsForJourneyAlphaInput';
+export * from './replaceStepsForJourneyAlphaOutput';
 export * from './replaceUsersInUserGroup200Response';
 export * from './replaceUsersInUserGroupV1Input';
 export * from './replaceUsersInUserGroupV1Output';
@@ -464,6 +505,7 @@ export * from './reverseEtlSpecificTimeScheduleConfig';
 export * from './roleV1';
 export * from './ruleInputV1';
 export * from './ruleV1';
+export * from './simpleDelayState';
 export * from './sourceAPICallSnapshotV1';
 export * from './sourceAlpha';
 export * from './sourceEventVolumeDatapointV1';
@@ -474,18 +516,26 @@ export * from './sourceV1';
 export * from './space';
 export * from './spaceWarehouseSchemaOverride';
 export * from './spaceWarehouseSelectiveSyncItemAlpha';
+export * from './statesInner';
+export * from './stepLevelAnalytics';
 export * from './streamStatusV1';
 export * from './suppressedInner';
 export * from './syncExtractPhase';
 export * from './syncLoadPhase';
 export * from './syncNoticeV1';
 export * from './syncV1';
+export * from './timeOutBranch';
+export * from './topLevelAnalytics';
 export * from './trackSourceSettingsV1';
 export * from './trackingPlanV1';
 export * from './traitDefinition';
 export * from './traitOptions';
 export * from './transformationBeta';
 export * from './transformationV1';
+export * from './transitionState';
+export * from './transitions';
+export * from './transitionsInner';
+export * from './transitionsInner1';
 export * from './updateAudienceForSpace200Response';
 export * from './updateAudienceForSpaceAlphaOutput';
 export * from './updateAudienceForSpaceInput';
@@ -495,6 +545,10 @@ export * from './updateComputedTraitForSpaceAlphaOutput';
 export * from './updateDestination200Response';
 export * from './updateDestinationV1Input';
 export * from './updateDestinationV1Output';
+export * from './updateDestinationsForJourney200Response';
+export * from './updateDestinationsForJourneyAlphaInput';
+export * from './updateDestinationsForJourneyAlphaOutput';
+export * from './updateDestinationsInput';
 export * from './updateFilterById200Response';
 export * from './updateFilterByIdInput';
 export * from './updateFilterByIdOutput';
@@ -532,6 +586,9 @@ export * from './updateSourceAlphaInput';
 export * from './updateSourceAlphaOutput';
 export * from './updateSourceV1Input';
 export * from './updateSourceV1Output';
+export * from './updateStatusForJourney200Response';
+export * from './updateStatusForJourneyAlphaInput';
+export * from './updateStatusForJourneyAlphaOutput';
 export * from './updateSubscriptionForDestination200Response';
 export * from './updateSubscriptionForDestinationAlphaInput';
 export * from './updateSubscriptionForDestinationAlphaOutput';
@@ -575,6 +632,8 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 import { APICallSnapshotV1 } from './aPICallSnapshotV1';
 import { AccessPermissionV1 } from './accessPermissionV1';
+import { ActionDefinition } from './actionDefinition';
+import { Activation } from './activation';
 import { AddConnectionFromSourceToWarehouse201Response } from './addConnectionFromSourceToWarehouse201Response';
 import { AddConnectionFromSourceToWarehouseV1Output } from './addConnectionFromSourceToWarehouseV1Output';
 import { AddLabelsToSource200Response } from './addLabelsToSource200Response';
@@ -598,11 +657,15 @@ import { AddUsersToUserGroupV1Output } from './addUsersToUserGroupV1Output';
 import { AdvancedWarehouseSyncScheduleV1Input } from './advancedWarehouseSyncScheduleV1Input';
 import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncScheduleV1Output';
 import { AllowedLabelBeta } from './allowedLabelBeta';
+import { Analytics } from './analytics';
 import { AudienceComputationDefinition } from './audienceComputationDefinition';
 import { AudienceDefinition } from './audienceDefinition';
+import { AudienceEntryState } from './audienceEntryState';
+import { AudienceExitRule } from './audienceExitRule';
 import { AudienceOptions } from './audienceOptions';
 import { AudienceSummary } from './audienceSummary';
 import { AuditEventV1 } from './auditEventV1';
+import { BaseState } from './baseState';
 import { BatchQueryMessagingSubscriptionsForSpace200Response } from './batchQueryMessagingSubscriptionsForSpace200Response';
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaInput } from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaOutput } from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
@@ -613,6 +676,9 @@ import { CancelReverseETLSyncForModelOutput } from './cancelReverseETLSyncForMod
 import { CommonSourceSettingsV1 } from './commonSourceSettingsV1';
 import { ComputedTraitSummary } from './computedTraitSummary';
 import { ComputedTraitsDefinition } from './computedTraitsDefinition';
+import { ConcurrencyConfig } from './concurrencyConfig';
+import { ConditionBranch } from './conditionBranch';
+import { ConditionSplitState } from './conditionSplitState';
 import { Config } from './config';
 import { Contact } from './contact';
 import { CreateAudience200Response } from './createAudience200Response';
@@ -653,6 +719,9 @@ import { CreateInsertFunctionInstanceAlphaOutput } from './createInsertFunctionI
 import { CreateInvites201Response } from './createInvites201Response';
 import { CreateInvitesV1Input } from './createInvitesV1Input';
 import { CreateInvitesV1Output } from './createInvitesV1Output';
+import { CreateJourney201Response } from './createJourney201Response';
+import { CreateJourneyAlphaInput } from './createJourneyAlphaInput';
+import { CreateJourneyAlphaOutput } from './createJourneyAlphaOutput';
 import { CreateLabel201Response } from './createLabel201Response';
 import { CreateLabelV1Input } from './createLabelV1Input';
 import { CreateLabelV1Output } from './createLabelV1Output';
@@ -697,6 +766,7 @@ import { CreateWorkspaceRegulationV1Output } from './createWorkspaceRegulationV1
 import { CreateWriteKeyForSource200Response } from './createWriteKeyForSource200Response';
 import { CreateWriteKeyForSourceAlphaOutput } from './createWriteKeyForSourceAlphaOutput';
 import { DbtModelSyncTrigger } from './dbtModelSyncTrigger';
+import { DefaultBranch } from './defaultBranch';
 import { DeleteDestination200Response } from './deleteDestination200Response';
 import { DeleteDestinationV1Output } from './deleteDestinationV1Output';
 import { DeleteFilterById200Response } from './deleteFilterById200Response';
@@ -737,6 +807,7 @@ import { DeliveryOverviewMetricsDatapoint } from './deliveryOverviewMetricsDatap
 import { DeliveryOverviewMetricsDataset } from './deliveryOverviewMetricsDataset';
 import { DeliveryOverviewSourceFilterBy } from './deliveryOverviewSourceFilterBy';
 import { DeliveryOverviewSuccessfullyReceivedFilterBy } from './deliveryOverviewSuccessfullyReceivedFilterBy';
+import { Destination } from './destination';
 import { DestinationFilterActionV1 } from './destinationFilterActionV1';
 import { DestinationFilterV1 } from './destinationFilterV1';
 import { DestinationMetadataActionFieldV1 } from './destinationMetadataActionFieldV1';
@@ -747,6 +818,7 @@ import { DestinationMetadataMethodsV1 } from './destinationMetadataMethodsV1';
 import { DestinationMetadataPlatformsV1 } from './destinationMetadataPlatformsV1';
 import { DestinationMetadataSubscriptionPresetV1 } from './destinationMetadataSubscriptionPresetV1';
 import { DestinationMetadataV1 } from './destinationMetadataV1';
+import { DestinationState } from './destinationState';
 import { DestinationStatusV1 } from './destinationStatusV1';
 import { DestinationSubscription } from './destinationSubscription';
 import { DestinationSubscriptionUpdateInput } from './destinationSubscriptionUpdateInput';
@@ -758,7 +830,14 @@ import { Echo200Response1 } from './echo200Response1';
 import { EchoAlphaOutput } from './echoAlphaOutput';
 import { EchoV1Output } from './echoV1Output';
 import { EdgeFunctionsAlpha } from './edgeFunctionsAlpha';
+import { EntryRules } from './entryRules';
+import { EventEntryState } from './eventEntryState';
+import { EventExitRule } from './eventExitRule';
 import { EventSourceV1 } from './eventSourceV1';
+import { EventSplitWithTimeoutState } from './eventSplitWithTimeoutState';
+import { ExitRule } from './exitRule';
+import { ExitRulesConfig } from './exitRulesConfig';
+import { ExitState } from './exitState';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
 import { Filter } from './filter';
 import { FunctionDeployment } from './functionDeployment';
@@ -803,6 +882,10 @@ import { GetFunctionVersion200Response } from './getFunctionVersion200Response';
 import { GetFunctionVersionAlphaOutput } from './getFunctionVersionAlphaOutput';
 import { GetInsertFunctionInstance200Response } from './getInsertFunctionInstance200Response';
 import { GetInsertFunctionInstanceAlphaOutput } from './getInsertFunctionInstanceAlphaOutput';
+import { GetJourney200Response } from './getJourney200Response';
+import { GetJourneyAlphaOutput } from './getJourneyAlphaOutput';
+import { GetJourneyAnalytics200Response } from './getJourneyAnalytics200Response';
+import { GetJourneyAnalyticsAlphaOutput } from './getJourneyAnalyticsAlphaOutput';
 import { GetLatestFromEdgeFunctions200Response } from './getLatestFromEdgeFunctions200Response';
 import { GetLatestFromEdgeFunctionsAlphaOutput } from './getLatestFromEdgeFunctionsAlphaOutput';
 import { GetMessagingSubscriptionFailureResponse } from './getMessagingSubscriptionFailureResponse';
@@ -855,6 +938,13 @@ import { InsertFunctionInstanceAlpha } from './insertFunctionInstanceAlpha';
 import { IntegrationOptionBeta } from './integrationOptionBeta';
 import { InvitePermissionV1 } from './invitePermissionV1';
 import { InviteV1 } from './inviteV1';
+import { JourneyAnalytics } from './journeyAnalytics';
+import { JourneyDefinition } from './journeyDefinition';
+import { JourneyDetails } from './journeyDetails';
+import { JourneyInfo } from './journeyInfo';
+import { JourneyState } from './journeyState';
+import { JourneyVersionOutput } from './journeyVersionOutput';
+import { Key } from './key';
 import { LabelAlpha } from './labelAlpha';
 import { LabelV1 } from './labelV1';
 import { ListAudiences200Response } from './listAudiences200Response';
@@ -970,8 +1060,11 @@ import { PreviewDestinationFilterV1Output } from './previewDestinationFilterV1Ou
 import { ProfilesWarehouseAlpha } from './profilesWarehouseAlpha';
 import { PropertyRenameBeta } from './propertyRenameBeta';
 import { PropertyRenameV1 } from './propertyRenameV1';
+import { PropertySelectionsConfig } from './propertySelectionsConfig';
 import { PropertyValueTransformationBeta } from './propertyValueTransformationBeta';
 import { PropertyValueTransformationV1 } from './propertyValueTransformationV1';
+import { RandomSplitBranch } from './randomSplitBranch';
+import { RandomSplitState } from './randomSplitState';
 import { Regulation } from './regulation';
 import { RegulationListEntryV1 } from './regulationListEntryV1';
 import { RemoveAudienceFromSpace200Response } from './removeAudienceFromSpace200Response';
@@ -980,6 +1073,8 @@ import { RemoveComputedTraitFromSpace200Response } from './removeComputedTraitFr
 import { RemoveComputedTraitFromSpaceAlphaOutput } from './removeComputedTraitFromSpaceAlphaOutput';
 import { RemoveFilterFromDestination200Response } from './removeFilterFromDestination200Response';
 import { RemoveFilterFromDestinationV1Output } from './removeFilterFromDestinationV1Output';
+import { RemoveJourneyFromSpace200Response } from './removeJourneyFromSpace200Response';
+import { RemoveJourneyFromSpaceAlphaOutput } from './removeJourneyFromSpaceAlphaOutput';
 import { RemoveProfilesWarehouseFromSpace200Response } from './removeProfilesWarehouseFromSpace200Response';
 import { RemoveProfilesWarehouseFromSpaceAlphaOutput } from './removeProfilesWarehouseFromSpaceAlphaOutput';
 import { RemoveRuleV1 } from './removeRuleV1';
@@ -1016,6 +1111,9 @@ import { ReplacePermissionsForUserV1Output } from './replacePermissionsForUserV1
 import { ReplaceRulesInTrackingPlan200Response } from './replaceRulesInTrackingPlan200Response';
 import { ReplaceRulesInTrackingPlanV1Input } from './replaceRulesInTrackingPlanV1Input';
 import { ReplaceRulesInTrackingPlanV1Output } from './replaceRulesInTrackingPlanV1Output';
+import { ReplaceStepsForJourney200Response } from './replaceStepsForJourney200Response';
+import { ReplaceStepsForJourneyAlphaInput } from './replaceStepsForJourneyAlphaInput';
+import { ReplaceStepsForJourneyAlphaOutput } from './replaceStepsForJourneyAlphaOutput';
 import { ReplaceUsersInUserGroup200Response } from './replaceUsersInUserGroup200Response';
 import { ReplaceUsersInUserGroupV1Input } from './replaceUsersInUserGroupV1Input';
 import { ReplaceUsersInUserGroupV1Output } from './replaceUsersInUserGroupV1Output';
@@ -1037,6 +1135,7 @@ import { ReverseEtlSpecificTimeScheduleConfig } from './reverseEtlSpecificTimeSc
 import { RoleV1 } from './roleV1';
 import { RuleInputV1 } from './ruleInputV1';
 import { RuleV1 } from './ruleV1';
+import { SimpleDelayState } from './simpleDelayState';
 import { SourceAPICallSnapshotV1 } from './sourceAPICallSnapshotV1';
 import { SourceAlpha } from './sourceAlpha';
 import { SourceEventVolumeDatapointV1 } from './sourceEventVolumeDatapointV1';
@@ -1047,18 +1146,26 @@ import { SourceV1 } from './sourceV1';
 import { Space } from './space';
 import { SpaceWarehouseSchemaOverride } from './spaceWarehouseSchemaOverride';
 import { SpaceWarehouseSelectiveSyncItemAlpha } from './spaceWarehouseSelectiveSyncItemAlpha';
+import { StatesInner } from './statesInner';
+import { StepLevelAnalytics } from './stepLevelAnalytics';
 import { StreamStatusV1 } from './streamStatusV1';
 import { SuppressedInner } from './suppressedInner';
 import { SyncExtractPhase } from './syncExtractPhase';
 import { SyncLoadPhase } from './syncLoadPhase';
 import { SyncNoticeV1 } from './syncNoticeV1';
 import { SyncV1 } from './syncV1';
+import { TimeOutBranch } from './timeOutBranch';
+import { TopLevelAnalytics } from './topLevelAnalytics';
 import { TrackSourceSettingsV1 } from './trackSourceSettingsV1';
 import { TrackingPlanV1 } from './trackingPlanV1';
 import { TraitDefinition } from './traitDefinition';
 import { TraitOptions } from './traitOptions';
 import { TransformationBeta } from './transformationBeta';
 import { TransformationV1 } from './transformationV1';
+import { TransitionState } from './transitionState';
+import { Transitions } from './transitions';
+import { TransitionsInner } from './transitionsInner';
+import { TransitionsInner1 } from './transitionsInner1';
 import { UpdateAudienceForSpace200Response } from './updateAudienceForSpace200Response';
 import { UpdateAudienceForSpaceAlphaOutput } from './updateAudienceForSpaceAlphaOutput';
 import { UpdateAudienceForSpaceInput } from './updateAudienceForSpaceInput';
@@ -1068,6 +1175,10 @@ import { UpdateComputedTraitForSpaceAlphaOutput } from './updateComputedTraitFor
 import { UpdateDestination200Response } from './updateDestination200Response';
 import { UpdateDestinationV1Input } from './updateDestinationV1Input';
 import { UpdateDestinationV1Output } from './updateDestinationV1Output';
+import { UpdateDestinationsForJourney200Response } from './updateDestinationsForJourney200Response';
+import { UpdateDestinationsForJourneyAlphaInput } from './updateDestinationsForJourneyAlphaInput';
+import { UpdateDestinationsForJourneyAlphaOutput } from './updateDestinationsForJourneyAlphaOutput';
+import { UpdateDestinationsInput } from './updateDestinationsInput';
 import { UpdateFilterById200Response } from './updateFilterById200Response';
 import { UpdateFilterByIdInput } from './updateFilterByIdInput';
 import { UpdateFilterByIdOutput } from './updateFilterByIdOutput';
@@ -1105,6 +1216,9 @@ import { UpdateSourceAlphaInput } from './updateSourceAlphaInput';
 import { UpdateSourceAlphaOutput } from './updateSourceAlphaOutput';
 import { UpdateSourceV1Input } from './updateSourceV1Input';
 import { UpdateSourceV1Output } from './updateSourceV1Output';
+import { UpdateStatusForJourney200Response } from './updateStatusForJourney200Response';
+import { UpdateStatusForJourneyAlphaInput } from './updateStatusForJourneyAlphaInput';
+import { UpdateStatusForJourneyAlphaOutput } from './updateStatusForJourneyAlphaOutput';
 import { UpdateSubscriptionForDestination200Response } from './updateSubscriptionForDestination200Response';
 import { UpdateSubscriptionForDestinationAlphaInput } from './updateSubscriptionForDestinationAlphaInput';
 import { UpdateSubscriptionForDestinationAlphaOutput } from './updateSubscriptionForDestinationAlphaOutput';
@@ -1154,7 +1268,14 @@ let enumsMap: { [index: string]: any } = {
     'AudienceComputationDefinition.TypeEnum':
         AudienceComputationDefinition.TypeEnum,
     'AudienceDefinition.TypeEnum': AudienceDefinition.TypeEnum,
+    'AudienceEntryState.TypeEnum': AudienceEntryState.TypeEnum,
+    'AudienceExitRule.ExitTypeEnum': AudienceExitRule.ExitTypeEnum,
+    'AudienceExitRule.TypeEnum': AudienceExitRule.TypeEnum,
+    'BaseState.TypeEnum': BaseState.TypeEnum,
+    'BaseState.ExitTypeEnum': BaseState.ExitTypeEnum,
     'ComputedTraitsDefinition.TypeEnum': ComputedTraitsDefinition.TypeEnum,
+    'ConditionBranch.TypeEnum': ConditionBranch.TypeEnum,
+    'ConditionSplitState.TypeEnum': ConditionSplitState.TypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum':
         CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum':
@@ -1172,6 +1293,7 @@ let enumsMap: { [index: string]: any } = {
         CreateWorkspaceRegulationV1Input.RegulationTypeEnum,
     'CreateWorkspaceRegulationV1Input.SubjectTypeEnum':
         CreateWorkspaceRegulationV1Input.SubjectTypeEnum,
+    'DefaultBranch.TypeEnum': DefaultBranch.TypeEnum,
     'DeleteDestinationV1Output.StatusEnum':
         DeleteDestinationV1Output.StatusEnum,
     'DeleteFunctionV1Output.StatusEnum': DeleteFunctionV1Output.StatusEnum,
@@ -1208,9 +1330,18 @@ let enumsMap: { [index: string]: any } = {
     'DestinationMetadataFeaturesV1.DeviceModeInstancesEnum':
         DestinationMetadataFeaturesV1.DeviceModeInstancesEnum,
     'DestinationMetadataV1.StatusEnum': DestinationMetadataV1.StatusEnum,
+    'DestinationState.TypeEnum': DestinationState.TypeEnum,
     'DestinationStatusV1.StatusEnum': DestinationStatusV1.StatusEnum,
     'EchoAlphaOutput.MethodEnum': EchoAlphaOutput.MethodEnum,
     'EchoV1Output.MethodEnum': EchoV1Output.MethodEnum,
+    'EntryRules.TypeEnum': EntryRules.TypeEnum,
+    'EventEntryState.TypeEnum': EventEntryState.TypeEnum,
+    'EventExitRule.ExitTypeEnum': EventExitRule.ExitTypeEnum,
+    'EventExitRule.TypeEnum': EventExitRule.TypeEnum,
+    'EventSplitWithTimeoutState.TypeEnum': EventSplitWithTimeoutState.TypeEnum,
+    'ExitRule.TypeEnum': ExitRule.TypeEnum,
+    'ExitRule.ExitTypeEnum': ExitRule.ExitTypeEnum,
+    'ExitState.TypeEnum': ExitState.TypeEnum,
     'FunctionDeployment.StatusEnum': FunctionDeployment.StatusEnum,
     'FunctionSettingV1.TypeEnum': FunctionSettingV1.TypeEnum,
     'FunctionV1.ResourceTypeEnum': FunctionV1.ResourceTypeEnum,
@@ -1232,6 +1363,8 @@ let enumsMap: { [index: string]: any } = {
         HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum':
         IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
+    'JourneyState.TypeEnum': JourneyState.TypeEnum,
+    'JourneyVersionOutput.StatusEnum': JourneyVersionOutput.StatusEnum,
     'ListFunctionItemV1.ResourceTypeEnum': ListFunctionItemV1.ResourceTypeEnum,
     'MessageSubscriptionResponse.TypeEnum':
         MessageSubscriptionResponse.TypeEnum,
@@ -1242,6 +1375,7 @@ let enumsMap: { [index: string]: any } = {
     'MessagesSubscriptionRequest.StatusEnum':
         MessagesSubscriptionRequest.StatusEnum,
     'PermissionResourceV1.TypeEnum': PermissionResourceV1.TypeEnum,
+    'RandomSplitState.TypeEnum': RandomSplitState.TypeEnum,
     'Regulation.OverallStatusEnum': Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': RegulationListEntryV1.StatusEnum,
     'RegulationListEntryV1.RegulationTypeEnum':
@@ -1252,6 +1386,8 @@ let enumsMap: { [index: string]: any } = {
         RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum':
         RemoveFilterFromDestinationV1Output.StatusEnum,
+    'RemoveJourneyFromSpaceAlphaOutput.StatusEnum':
+        RemoveJourneyFromSpaceAlphaOutput.StatusEnum,
     'RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum':
         RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum,
     'RemoveRuleV1.TypeEnum': RemoveRuleV1.TypeEnum,
@@ -1274,11 +1410,18 @@ let enumsMap: { [index: string]: any } = {
         ReverseEtlScheduleDefinition.StrategyEnum,
     'RuleInputV1.TypeEnum': RuleInputV1.TypeEnum,
     'RuleV1.TypeEnum': RuleV1.TypeEnum,
+    'SimpleDelayState.TypeEnum': SimpleDelayState.TypeEnum,
     'SourceMetadataV1.StatusEnum': SourceMetadataV1.StatusEnum,
+    'StatesInner.TypeEnum': StatesInner.TypeEnum,
+    'StatesInner.ExitTypeEnum': StatesInner.ExitTypeEnum,
+    'TimeOutBranch.TypeEnum': TimeOutBranch.TypeEnum,
     'TrackSourceSettingsV1.CommonEventOnViolationsEnum':
         TrackSourceSettingsV1.CommonEventOnViolationsEnum,
     'TrackingPlanV1.TypeEnum': TrackingPlanV1.TypeEnum,
     'TraitDefinition.TypeEnum': TraitDefinition.TypeEnum,
+    'TransitionState.TypeEnum': TransitionState.TypeEnum,
+    'TransitionsInner.TypeEnum': TransitionsInner.TypeEnum,
+    'TransitionsInner1.TypeEnum': TransitionsInner1.TypeEnum,
     'UpdateGroupSubscriptionStatusResponse.StatusEnum':
         UpdateGroupSubscriptionStatusResponse.StatusEnum,
     'UpdateRulesInTrackingPlanV1Output.StatusEnum':
@@ -1287,6 +1430,10 @@ let enumsMap: { [index: string]: any } = {
         UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum,
     'UpdateSelectiveSyncForWarehouseV1Output.StatusEnum':
         UpdateSelectiveSyncForWarehouseV1Output.StatusEnum,
+    'UpdateStatusForJourneyAlphaInput.ActionEnum':
+        UpdateStatusForJourneyAlphaInput.ActionEnum,
+    'UpdateStatusForJourneyAlphaOutput.StatusEnum':
+        UpdateStatusForJourneyAlphaOutput.StatusEnum,
     'UpdateTrackingPlanV1Output.StatusEnum':
         UpdateTrackingPlanV1Output.StatusEnum,
     'UpsertRuleV1.TypeEnum': UpsertRuleV1.TypeEnum,
@@ -1295,6 +1442,8 @@ let enumsMap: { [index: string]: any } = {
 let typeMap: { [index: string]: any } = {
     APICallSnapshotV1: APICallSnapshotV1,
     AccessPermissionV1: AccessPermissionV1,
+    ActionDefinition: ActionDefinition,
+    Activation: Activation,
     AddConnectionFromSourceToWarehouse201Response:
         AddConnectionFromSourceToWarehouse201Response,
     AddConnectionFromSourceToWarehouseV1Output:
@@ -1321,11 +1470,15 @@ let typeMap: { [index: string]: any } = {
     AdvancedWarehouseSyncScheduleV1Output:
         AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: AllowedLabelBeta,
+    Analytics: Analytics,
     AudienceComputationDefinition: AudienceComputationDefinition,
     AudienceDefinition: AudienceDefinition,
+    AudienceEntryState: AudienceEntryState,
+    AudienceExitRule: AudienceExitRule,
     AudienceOptions: AudienceOptions,
     AudienceSummary: AudienceSummary,
     AuditEventV1: AuditEventV1,
+    BaseState: BaseState,
     BatchQueryMessagingSubscriptionsForSpace200Response:
         BatchQueryMessagingSubscriptionsForSpace200Response,
     BatchQueryMessagingSubscriptionsForSpaceAlphaInput:
@@ -1340,6 +1493,9 @@ let typeMap: { [index: string]: any } = {
     CommonSourceSettingsV1: CommonSourceSettingsV1,
     ComputedTraitSummary: ComputedTraitSummary,
     ComputedTraitsDefinition: ComputedTraitsDefinition,
+    ConcurrencyConfig: ConcurrencyConfig,
+    ConditionBranch: ConditionBranch,
+    ConditionSplitState: ConditionSplitState,
     Config: Config,
     Contact: Contact,
     CreateAudience200Response: CreateAudience200Response,
@@ -1388,6 +1544,9 @@ let typeMap: { [index: string]: any } = {
     CreateInvites201Response: CreateInvites201Response,
     CreateInvitesV1Input: CreateInvitesV1Input,
     CreateInvitesV1Output: CreateInvitesV1Output,
+    CreateJourney201Response: CreateJourney201Response,
+    CreateJourneyAlphaInput: CreateJourneyAlphaInput,
+    CreateJourneyAlphaOutput: CreateJourneyAlphaOutput,
     CreateLabel201Response: CreateLabel201Response,
     CreateLabelV1Input: CreateLabelV1Input,
     CreateLabelV1Output: CreateLabelV1Output,
@@ -1434,6 +1593,7 @@ let typeMap: { [index: string]: any } = {
     CreateWriteKeyForSource200Response: CreateWriteKeyForSource200Response,
     CreateWriteKeyForSourceAlphaOutput: CreateWriteKeyForSourceAlphaOutput,
     DbtModelSyncTrigger: DbtModelSyncTrigger,
+    DefaultBranch: DefaultBranch,
     DeleteDestination200Response: DeleteDestination200Response,
     DeleteDestinationV1Output: DeleteDestinationV1Output,
     DeleteFilterById200Response: DeleteFilterById200Response,
@@ -1477,6 +1637,7 @@ let typeMap: { [index: string]: any } = {
     DeliveryOverviewSourceFilterBy: DeliveryOverviewSourceFilterBy,
     DeliveryOverviewSuccessfullyReceivedFilterBy:
         DeliveryOverviewSuccessfullyReceivedFilterBy,
+    Destination: Destination,
     DestinationFilterActionV1: DestinationFilterActionV1,
     DestinationFilterV1: DestinationFilterV1,
     DestinationMetadataActionFieldV1: DestinationMetadataActionFieldV1,
@@ -1488,6 +1649,7 @@ let typeMap: { [index: string]: any } = {
     DestinationMetadataSubscriptionPresetV1:
         DestinationMetadataSubscriptionPresetV1,
     DestinationMetadataV1: DestinationMetadataV1,
+    DestinationState: DestinationState,
     DestinationStatusV1: DestinationStatusV1,
     DestinationSubscription: DestinationSubscription,
     DestinationSubscriptionUpdateInput: DestinationSubscriptionUpdateInput,
@@ -1499,7 +1661,14 @@ let typeMap: { [index: string]: any } = {
     EchoAlphaOutput: EchoAlphaOutput,
     EchoV1Output: EchoV1Output,
     EdgeFunctionsAlpha: EdgeFunctionsAlpha,
+    EntryRules: EntryRules,
+    EventEntryState: EventEntryState,
+    EventExitRule: EventExitRule,
     EventSourceV1: EventSourceV1,
+    EventSplitWithTimeoutState: EventSplitWithTimeoutState,
+    ExitRule: ExitRule,
+    ExitRulesConfig: ExitRulesConfig,
+    ExitState: ExitState,
     FQLDefinedPropertyV1: FQLDefinedPropertyV1,
     Filter: Filter,
     FunctionDeployment: FunctionDeployment,
@@ -1556,6 +1725,10 @@ let typeMap: { [index: string]: any } = {
     GetFunctionVersionAlphaOutput: GetFunctionVersionAlphaOutput,
     GetInsertFunctionInstance200Response: GetInsertFunctionInstance200Response,
     GetInsertFunctionInstanceAlphaOutput: GetInsertFunctionInstanceAlphaOutput,
+    GetJourney200Response: GetJourney200Response,
+    GetJourneyAlphaOutput: GetJourneyAlphaOutput,
+    GetJourneyAnalytics200Response: GetJourneyAnalytics200Response,
+    GetJourneyAnalyticsAlphaOutput: GetJourneyAnalyticsAlphaOutput,
     GetLatestFromEdgeFunctions200Response:
         GetLatestFromEdgeFunctions200Response,
     GetLatestFromEdgeFunctionsAlphaOutput:
@@ -1614,6 +1787,13 @@ let typeMap: { [index: string]: any } = {
     IntegrationOptionBeta: IntegrationOptionBeta,
     InvitePermissionV1: InvitePermissionV1,
     InviteV1: InviteV1,
+    JourneyAnalytics: JourneyAnalytics,
+    JourneyDefinition: JourneyDefinition,
+    JourneyDetails: JourneyDetails,
+    JourneyInfo: JourneyInfo,
+    JourneyState: JourneyState,
+    JourneyVersionOutput: JourneyVersionOutput,
+    Key: Key,
     LabelAlpha: LabelAlpha,
     LabelV1: LabelV1,
     ListAudiences200Response: ListAudiences200Response,
@@ -1758,8 +1938,11 @@ let typeMap: { [index: string]: any } = {
     ProfilesWarehouseAlpha: ProfilesWarehouseAlpha,
     PropertyRenameBeta: PropertyRenameBeta,
     PropertyRenameV1: PropertyRenameV1,
+    PropertySelectionsConfig: PropertySelectionsConfig,
     PropertyValueTransformationBeta: PropertyValueTransformationBeta,
     PropertyValueTransformationV1: PropertyValueTransformationV1,
+    RandomSplitBranch: RandomSplitBranch,
+    RandomSplitState: RandomSplitState,
     Regulation: Regulation,
     RegulationListEntryV1: RegulationListEntryV1,
     RemoveAudienceFromSpace200Response: RemoveAudienceFromSpace200Response,
@@ -1771,6 +1954,8 @@ let typeMap: { [index: string]: any } = {
     RemoveFilterFromDestination200Response:
         RemoveFilterFromDestination200Response,
     RemoveFilterFromDestinationV1Output: RemoveFilterFromDestinationV1Output,
+    RemoveJourneyFromSpace200Response: RemoveJourneyFromSpace200Response,
+    RemoveJourneyFromSpaceAlphaOutput: RemoveJourneyFromSpaceAlphaOutput,
     RemoveProfilesWarehouseFromSpace200Response:
         RemoveProfilesWarehouseFromSpace200Response,
     RemoveProfilesWarehouseFromSpaceAlphaOutput:
@@ -1825,6 +2010,9 @@ let typeMap: { [index: string]: any } = {
         ReplaceRulesInTrackingPlan200Response,
     ReplaceRulesInTrackingPlanV1Input: ReplaceRulesInTrackingPlanV1Input,
     ReplaceRulesInTrackingPlanV1Output: ReplaceRulesInTrackingPlanV1Output,
+    ReplaceStepsForJourney200Response: ReplaceStepsForJourney200Response,
+    ReplaceStepsForJourneyAlphaInput: ReplaceStepsForJourneyAlphaInput,
+    ReplaceStepsForJourneyAlphaOutput: ReplaceStepsForJourneyAlphaOutput,
     ReplaceUsersInUserGroup200Response: ReplaceUsersInUserGroup200Response,
     ReplaceUsersInUserGroupV1Input: ReplaceUsersInUserGroupV1Input,
     ReplaceUsersInUserGroupV1Output: ReplaceUsersInUserGroupV1Output,
@@ -1846,6 +2034,7 @@ let typeMap: { [index: string]: any } = {
     RoleV1: RoleV1,
     RuleInputV1: RuleInputV1,
     RuleV1: RuleV1,
+    SimpleDelayState: SimpleDelayState,
     SourceAPICallSnapshotV1: SourceAPICallSnapshotV1,
     SourceAlpha: SourceAlpha,
     SourceEventVolumeDatapointV1: SourceEventVolumeDatapointV1,
@@ -1856,18 +2045,26 @@ let typeMap: { [index: string]: any } = {
     Space: Space,
     SpaceWarehouseSchemaOverride: SpaceWarehouseSchemaOverride,
     SpaceWarehouseSelectiveSyncItemAlpha: SpaceWarehouseSelectiveSyncItemAlpha,
+    StatesInner: StatesInner,
+    StepLevelAnalytics: StepLevelAnalytics,
     StreamStatusV1: StreamStatusV1,
     SuppressedInner: SuppressedInner,
     SyncExtractPhase: SyncExtractPhase,
     SyncLoadPhase: SyncLoadPhase,
     SyncNoticeV1: SyncNoticeV1,
     SyncV1: SyncV1,
+    TimeOutBranch: TimeOutBranch,
+    TopLevelAnalytics: TopLevelAnalytics,
     TrackSourceSettingsV1: TrackSourceSettingsV1,
     TrackingPlanV1: TrackingPlanV1,
     TraitDefinition: TraitDefinition,
     TraitOptions: TraitOptions,
     TransformationBeta: TransformationBeta,
     TransformationV1: TransformationV1,
+    TransitionState: TransitionState,
+    Transitions: Transitions,
+    TransitionsInner: TransitionsInner,
+    TransitionsInner1: TransitionsInner1,
     UpdateAudienceForSpace200Response: UpdateAudienceForSpace200Response,
     UpdateAudienceForSpaceAlphaOutput: UpdateAudienceForSpaceAlphaOutput,
     UpdateAudienceForSpaceInput: UpdateAudienceForSpaceInput,
@@ -1880,6 +2077,13 @@ let typeMap: { [index: string]: any } = {
     UpdateDestination200Response: UpdateDestination200Response,
     UpdateDestinationV1Input: UpdateDestinationV1Input,
     UpdateDestinationV1Output: UpdateDestinationV1Output,
+    UpdateDestinationsForJourney200Response:
+        UpdateDestinationsForJourney200Response,
+    UpdateDestinationsForJourneyAlphaInput:
+        UpdateDestinationsForJourneyAlphaInput,
+    UpdateDestinationsForJourneyAlphaOutput:
+        UpdateDestinationsForJourneyAlphaOutput,
+    UpdateDestinationsInput: UpdateDestinationsInput,
     UpdateFilterById200Response: UpdateFilterById200Response,
     UpdateFilterByIdInput: UpdateFilterByIdInput,
     UpdateFilterByIdOutput: UpdateFilterByIdOutput,
@@ -1932,6 +2136,9 @@ let typeMap: { [index: string]: any } = {
     UpdateSourceAlphaOutput: UpdateSourceAlphaOutput,
     UpdateSourceV1Input: UpdateSourceV1Input,
     UpdateSourceV1Output: UpdateSourceV1Output,
+    UpdateStatusForJourney200Response: UpdateStatusForJourney200Response,
+    UpdateStatusForJourneyAlphaInput: UpdateStatusForJourneyAlphaInput,
+    UpdateStatusForJourneyAlphaOutput: UpdateStatusForJourneyAlphaOutput,
     UpdateSubscriptionForDestination200Response:
         UpdateSubscriptionForDestination200Response,
     UpdateSubscriptionForDestinationAlphaInput:

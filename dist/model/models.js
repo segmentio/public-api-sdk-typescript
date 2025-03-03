@@ -17,6 +17,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.VoidAuth = exports.OAuth = exports.ApiKeyAuth = exports.HttpBearerAuth = exports.HttpBasicAuth = exports.ObjectSerializer = void 0;
 __exportStar(require("./aPICallSnapshotV1"), exports);
 __exportStar(require("./accessPermissionV1"), exports);
+__exportStar(require("./actionDefinition"), exports);
+__exportStar(require("./activation"), exports);
 __exportStar(require("./addConnectionFromSourceToWarehouse201Response"), exports);
 __exportStar(require("./addConnectionFromSourceToWarehouseV1Output"), exports);
 __exportStar(require("./addLabelsToSource200Response"), exports);
@@ -40,11 +42,15 @@ __exportStar(require("./addUsersToUserGroupV1Output"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Input"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Output"), exports);
 __exportStar(require("./allowedLabelBeta"), exports);
+__exportStar(require("./analytics"), exports);
 __exportStar(require("./audienceComputationDefinition"), exports);
 __exportStar(require("./audienceDefinition"), exports);
+__exportStar(require("./audienceEntryState"), exports);
+__exportStar(require("./audienceExitRule"), exports);
 __exportStar(require("./audienceOptions"), exports);
 __exportStar(require("./audienceSummary"), exports);
 __exportStar(require("./auditEventV1"), exports);
+__exportStar(require("./baseState"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpace200Response"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput"), exports);
@@ -55,6 +61,9 @@ __exportStar(require("./cancelReverseETLSyncForModelOutput"), exports);
 __exportStar(require("./commonSourceSettingsV1"), exports);
 __exportStar(require("./computedTraitSummary"), exports);
 __exportStar(require("./computedTraitsDefinition"), exports);
+__exportStar(require("./concurrencyConfig"), exports);
+__exportStar(require("./conditionBranch"), exports);
+__exportStar(require("./conditionSplitState"), exports);
 __exportStar(require("./config"), exports);
 __exportStar(require("./contact"), exports);
 __exportStar(require("./createAudience200Response"), exports);
@@ -95,6 +104,9 @@ __exportStar(require("./createInsertFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./createInvites201Response"), exports);
 __exportStar(require("./createInvitesV1Input"), exports);
 __exportStar(require("./createInvitesV1Output"), exports);
+__exportStar(require("./createJourney201Response"), exports);
+__exportStar(require("./createJourneyAlphaInput"), exports);
+__exportStar(require("./createJourneyAlphaOutput"), exports);
 __exportStar(require("./createLabel201Response"), exports);
 __exportStar(require("./createLabelV1Input"), exports);
 __exportStar(require("./createLabelV1Output"), exports);
@@ -139,6 +151,7 @@ __exportStar(require("./createWorkspaceRegulationV1Output"), exports);
 __exportStar(require("./createWriteKeyForSource200Response"), exports);
 __exportStar(require("./createWriteKeyForSourceAlphaOutput"), exports);
 __exportStar(require("./dbtModelSyncTrigger"), exports);
+__exportStar(require("./defaultBranch"), exports);
 __exportStar(require("./deleteDestination200Response"), exports);
 __exportStar(require("./deleteDestinationV1Output"), exports);
 __exportStar(require("./deleteFilterById200Response"), exports);
@@ -179,6 +192,7 @@ __exportStar(require("./deliveryOverviewMetricsDatapoint"), exports);
 __exportStar(require("./deliveryOverviewMetricsDataset"), exports);
 __exportStar(require("./deliveryOverviewSourceFilterBy"), exports);
 __exportStar(require("./deliveryOverviewSuccessfullyReceivedFilterBy"), exports);
+__exportStar(require("./destination"), exports);
 __exportStar(require("./destinationFilterActionV1"), exports);
 __exportStar(require("./destinationFilterV1"), exports);
 __exportStar(require("./destinationMetadataActionFieldV1"), exports);
@@ -189,6 +203,7 @@ __exportStar(require("./destinationMetadataMethodsV1"), exports);
 __exportStar(require("./destinationMetadataPlatformsV1"), exports);
 __exportStar(require("./destinationMetadataSubscriptionPresetV1"), exports);
 __exportStar(require("./destinationMetadataV1"), exports);
+__exportStar(require("./destinationState"), exports);
 __exportStar(require("./destinationStatusV1"), exports);
 __exportStar(require("./destinationSubscription"), exports);
 __exportStar(require("./destinationSubscriptionUpdateInput"), exports);
@@ -200,7 +215,14 @@ __exportStar(require("./echo200Response1"), exports);
 __exportStar(require("./echoAlphaOutput"), exports);
 __exportStar(require("./echoV1Output"), exports);
 __exportStar(require("./edgeFunctionsAlpha"), exports);
+__exportStar(require("./entryRules"), exports);
+__exportStar(require("./eventEntryState"), exports);
+__exportStar(require("./eventExitRule"), exports);
 __exportStar(require("./eventSourceV1"), exports);
+__exportStar(require("./eventSplitWithTimeoutState"), exports);
+__exportStar(require("./exitRule"), exports);
+__exportStar(require("./exitRulesConfig"), exports);
+__exportStar(require("./exitState"), exports);
 __exportStar(require("./fQLDefinedPropertyV1"), exports);
 __exportStar(require("./filter"), exports);
 __exportStar(require("./functionDeployment"), exports);
@@ -245,6 +267,10 @@ __exportStar(require("./getFunctionVersion200Response"), exports);
 __exportStar(require("./getFunctionVersionAlphaOutput"), exports);
 __exportStar(require("./getInsertFunctionInstance200Response"), exports);
 __exportStar(require("./getInsertFunctionInstanceAlphaOutput"), exports);
+__exportStar(require("./getJourney200Response"), exports);
+__exportStar(require("./getJourneyAlphaOutput"), exports);
+__exportStar(require("./getJourneyAnalytics200Response"), exports);
+__exportStar(require("./getJourneyAnalyticsAlphaOutput"), exports);
 __exportStar(require("./getLatestFromEdgeFunctions200Response"), exports);
 __exportStar(require("./getLatestFromEdgeFunctionsAlphaOutput"), exports);
 __exportStar(require("./getMessagingSubscriptionFailureResponse"), exports);
@@ -297,6 +323,13 @@ __exportStar(require("./insertFunctionInstanceAlpha"), exports);
 __exportStar(require("./integrationOptionBeta"), exports);
 __exportStar(require("./invitePermissionV1"), exports);
 __exportStar(require("./inviteV1"), exports);
+__exportStar(require("./journeyAnalytics"), exports);
+__exportStar(require("./journeyDefinition"), exports);
+__exportStar(require("./journeyDetails"), exports);
+__exportStar(require("./journeyInfo"), exports);
+__exportStar(require("./journeyState"), exports);
+__exportStar(require("./journeyVersionOutput"), exports);
+__exportStar(require("./key"), exports);
 __exportStar(require("./labelAlpha"), exports);
 __exportStar(require("./labelV1"), exports);
 __exportStar(require("./listAudiences200Response"), exports);
@@ -412,8 +445,11 @@ __exportStar(require("./previewDestinationFilterV1Output"), exports);
 __exportStar(require("./profilesWarehouseAlpha"), exports);
 __exportStar(require("./propertyRenameBeta"), exports);
 __exportStar(require("./propertyRenameV1"), exports);
+__exportStar(require("./propertySelectionsConfig"), exports);
 __exportStar(require("./propertyValueTransformationBeta"), exports);
 __exportStar(require("./propertyValueTransformationV1"), exports);
+__exportStar(require("./randomSplitBranch"), exports);
+__exportStar(require("./randomSplitState"), exports);
 __exportStar(require("./regulation"), exports);
 __exportStar(require("./regulationListEntryV1"), exports);
 __exportStar(require("./removeAudienceFromSpace200Response"), exports);
@@ -422,6 +458,8 @@ __exportStar(require("./removeComputedTraitFromSpace200Response"), exports);
 __exportStar(require("./removeComputedTraitFromSpaceAlphaOutput"), exports);
 __exportStar(require("./removeFilterFromDestination200Response"), exports);
 __exportStar(require("./removeFilterFromDestinationV1Output"), exports);
+__exportStar(require("./removeJourneyFromSpace200Response"), exports);
+__exportStar(require("./removeJourneyFromSpaceAlphaOutput"), exports);
 __exportStar(require("./removeProfilesWarehouseFromSpace200Response"), exports);
 __exportStar(require("./removeProfilesWarehouseFromSpaceAlphaOutput"), exports);
 __exportStar(require("./removeRuleV1"), exports);
@@ -458,6 +496,9 @@ __exportStar(require("./replacePermissionsForUserV1Output"), exports);
 __exportStar(require("./replaceRulesInTrackingPlan200Response"), exports);
 __exportStar(require("./replaceRulesInTrackingPlanV1Input"), exports);
 __exportStar(require("./replaceRulesInTrackingPlanV1Output"), exports);
+__exportStar(require("./replaceStepsForJourney200Response"), exports);
+__exportStar(require("./replaceStepsForJourneyAlphaInput"), exports);
+__exportStar(require("./replaceStepsForJourneyAlphaOutput"), exports);
 __exportStar(require("./replaceUsersInUserGroup200Response"), exports);
 __exportStar(require("./replaceUsersInUserGroupV1Input"), exports);
 __exportStar(require("./replaceUsersInUserGroupV1Output"), exports);
@@ -479,6 +520,7 @@ __exportStar(require("./reverseEtlSpecificTimeScheduleConfig"), exports);
 __exportStar(require("./roleV1"), exports);
 __exportStar(require("./ruleInputV1"), exports);
 __exportStar(require("./ruleV1"), exports);
+__exportStar(require("./simpleDelayState"), exports);
 __exportStar(require("./sourceAPICallSnapshotV1"), exports);
 __exportStar(require("./sourceAlpha"), exports);
 __exportStar(require("./sourceEventVolumeDatapointV1"), exports);
@@ -489,18 +531,26 @@ __exportStar(require("./sourceV1"), exports);
 __exportStar(require("./space"), exports);
 __exportStar(require("./spaceWarehouseSchemaOverride"), exports);
 __exportStar(require("./spaceWarehouseSelectiveSyncItemAlpha"), exports);
+__exportStar(require("./statesInner"), exports);
+__exportStar(require("./stepLevelAnalytics"), exports);
 __exportStar(require("./streamStatusV1"), exports);
 __exportStar(require("./suppressedInner"), exports);
 __exportStar(require("./syncExtractPhase"), exports);
 __exportStar(require("./syncLoadPhase"), exports);
 __exportStar(require("./syncNoticeV1"), exports);
 __exportStar(require("./syncV1"), exports);
+__exportStar(require("./timeOutBranch"), exports);
+__exportStar(require("./topLevelAnalytics"), exports);
 __exportStar(require("./trackSourceSettingsV1"), exports);
 __exportStar(require("./trackingPlanV1"), exports);
 __exportStar(require("./traitDefinition"), exports);
 __exportStar(require("./traitOptions"), exports);
 __exportStar(require("./transformationBeta"), exports);
 __exportStar(require("./transformationV1"), exports);
+__exportStar(require("./transitionState"), exports);
+__exportStar(require("./transitions"), exports);
+__exportStar(require("./transitionsInner"), exports);
+__exportStar(require("./transitionsInner1"), exports);
 __exportStar(require("./updateAudienceForSpace200Response"), exports);
 __exportStar(require("./updateAudienceForSpaceAlphaOutput"), exports);
 __exportStar(require("./updateAudienceForSpaceInput"), exports);
@@ -510,6 +560,10 @@ __exportStar(require("./updateComputedTraitForSpaceAlphaOutput"), exports);
 __exportStar(require("./updateDestination200Response"), exports);
 __exportStar(require("./updateDestinationV1Input"), exports);
 __exportStar(require("./updateDestinationV1Output"), exports);
+__exportStar(require("./updateDestinationsForJourney200Response"), exports);
+__exportStar(require("./updateDestinationsForJourneyAlphaInput"), exports);
+__exportStar(require("./updateDestinationsForJourneyAlphaOutput"), exports);
+__exportStar(require("./updateDestinationsInput"), exports);
 __exportStar(require("./updateFilterById200Response"), exports);
 __exportStar(require("./updateFilterByIdInput"), exports);
 __exportStar(require("./updateFilterByIdOutput"), exports);
@@ -547,6 +601,9 @@ __exportStar(require("./updateSourceAlphaInput"), exports);
 __exportStar(require("./updateSourceAlphaOutput"), exports);
 __exportStar(require("./updateSourceV1Input"), exports);
 __exportStar(require("./updateSourceV1Output"), exports);
+__exportStar(require("./updateStatusForJourney200Response"), exports);
+__exportStar(require("./updateStatusForJourneyAlphaInput"), exports);
+__exportStar(require("./updateStatusForJourneyAlphaOutput"), exports);
 __exportStar(require("./updateSubscriptionForDestination200Response"), exports);
 __exportStar(require("./updateSubscriptionForDestinationAlphaInput"), exports);
 __exportStar(require("./updateSubscriptionForDestinationAlphaOutput"), exports);
@@ -577,6 +634,8 @@ __exportStar(require("./warehouseV1"), exports);
 __exportStar(require("./workspaceV1"), exports);
 var aPICallSnapshotV1_1 = require("./aPICallSnapshotV1");
 var accessPermissionV1_1 = require("./accessPermissionV1");
+var actionDefinition_1 = require("./actionDefinition");
+var activation_1 = require("./activation");
 var addConnectionFromSourceToWarehouse201Response_1 = require("./addConnectionFromSourceToWarehouse201Response");
 var addConnectionFromSourceToWarehouseV1Output_1 = require("./addConnectionFromSourceToWarehouseV1Output");
 var addLabelsToSource200Response_1 = require("./addLabelsToSource200Response");
@@ -600,11 +659,15 @@ var addUsersToUserGroupV1Output_1 = require("./addUsersToUserGroupV1Output");
 var advancedWarehouseSyncScheduleV1Input_1 = require("./advancedWarehouseSyncScheduleV1Input");
 var advancedWarehouseSyncScheduleV1Output_1 = require("./advancedWarehouseSyncScheduleV1Output");
 var allowedLabelBeta_1 = require("./allowedLabelBeta");
+var analytics_1 = require("./analytics");
 var audienceComputationDefinition_1 = require("./audienceComputationDefinition");
 var audienceDefinition_1 = require("./audienceDefinition");
+var audienceEntryState_1 = require("./audienceEntryState");
+var audienceExitRule_1 = require("./audienceExitRule");
 var audienceOptions_1 = require("./audienceOptions");
 var audienceSummary_1 = require("./audienceSummary");
 var auditEventV1_1 = require("./auditEventV1");
+var baseState_1 = require("./baseState");
 var batchQueryMessagingSubscriptionsForSpace200Response_1 = require("./batchQueryMessagingSubscriptionsForSpace200Response");
 var batchQueryMessagingSubscriptionsForSpaceAlphaInput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput");
 var batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput");
@@ -615,6 +678,9 @@ var cancelReverseETLSyncForModelOutput_1 = require("./cancelReverseETLSyncForMod
 var commonSourceSettingsV1_1 = require("./commonSourceSettingsV1");
 var computedTraitSummary_1 = require("./computedTraitSummary");
 var computedTraitsDefinition_1 = require("./computedTraitsDefinition");
+var concurrencyConfig_1 = require("./concurrencyConfig");
+var conditionBranch_1 = require("./conditionBranch");
+var conditionSplitState_1 = require("./conditionSplitState");
 var config_1 = require("./config");
 var contact_1 = require("./contact");
 var createAudience200Response_1 = require("./createAudience200Response");
@@ -655,6 +721,9 @@ var createInsertFunctionInstanceAlphaOutput_1 = require("./createInsertFunctionI
 var createInvites201Response_1 = require("./createInvites201Response");
 var createInvitesV1Input_1 = require("./createInvitesV1Input");
 var createInvitesV1Output_1 = require("./createInvitesV1Output");
+var createJourney201Response_1 = require("./createJourney201Response");
+var createJourneyAlphaInput_1 = require("./createJourneyAlphaInput");
+var createJourneyAlphaOutput_1 = require("./createJourneyAlphaOutput");
 var createLabel201Response_1 = require("./createLabel201Response");
 var createLabelV1Input_1 = require("./createLabelV1Input");
 var createLabelV1Output_1 = require("./createLabelV1Output");
@@ -699,6 +768,7 @@ var createWorkspaceRegulationV1Output_1 = require("./createWorkspaceRegulationV1
 var createWriteKeyForSource200Response_1 = require("./createWriteKeyForSource200Response");
 var createWriteKeyForSourceAlphaOutput_1 = require("./createWriteKeyForSourceAlphaOutput");
 var dbtModelSyncTrigger_1 = require("./dbtModelSyncTrigger");
+var defaultBranch_1 = require("./defaultBranch");
 var deleteDestination200Response_1 = require("./deleteDestination200Response");
 var deleteDestinationV1Output_1 = require("./deleteDestinationV1Output");
 var deleteFilterById200Response_1 = require("./deleteFilterById200Response");
@@ -739,6 +809,7 @@ var deliveryOverviewMetricsDatapoint_1 = require("./deliveryOverviewMetricsDatap
 var deliveryOverviewMetricsDataset_1 = require("./deliveryOverviewMetricsDataset");
 var deliveryOverviewSourceFilterBy_1 = require("./deliveryOverviewSourceFilterBy");
 var deliveryOverviewSuccessfullyReceivedFilterBy_1 = require("./deliveryOverviewSuccessfullyReceivedFilterBy");
+var destination_1 = require("./destination");
 var destinationFilterActionV1_1 = require("./destinationFilterActionV1");
 var destinationFilterV1_1 = require("./destinationFilterV1");
 var destinationMetadataActionFieldV1_1 = require("./destinationMetadataActionFieldV1");
@@ -749,6 +820,7 @@ var destinationMetadataMethodsV1_1 = require("./destinationMetadataMethodsV1");
 var destinationMetadataPlatformsV1_1 = require("./destinationMetadataPlatformsV1");
 var destinationMetadataSubscriptionPresetV1_1 = require("./destinationMetadataSubscriptionPresetV1");
 var destinationMetadataV1_1 = require("./destinationMetadataV1");
+var destinationState_1 = require("./destinationState");
 var destinationStatusV1_1 = require("./destinationStatusV1");
 var destinationSubscription_1 = require("./destinationSubscription");
 var destinationSubscriptionUpdateInput_1 = require("./destinationSubscriptionUpdateInput");
@@ -760,7 +832,14 @@ var echo200Response1_1 = require("./echo200Response1");
 var echoAlphaOutput_1 = require("./echoAlphaOutput");
 var echoV1Output_1 = require("./echoV1Output");
 var edgeFunctionsAlpha_1 = require("./edgeFunctionsAlpha");
+var entryRules_1 = require("./entryRules");
+var eventEntryState_1 = require("./eventEntryState");
+var eventExitRule_1 = require("./eventExitRule");
 var eventSourceV1_1 = require("./eventSourceV1");
+var eventSplitWithTimeoutState_1 = require("./eventSplitWithTimeoutState");
+var exitRule_1 = require("./exitRule");
+var exitRulesConfig_1 = require("./exitRulesConfig");
+var exitState_1 = require("./exitState");
 var fQLDefinedPropertyV1_1 = require("./fQLDefinedPropertyV1");
 var filter_1 = require("./filter");
 var functionDeployment_1 = require("./functionDeployment");
@@ -805,6 +884,10 @@ var getFunctionVersion200Response_1 = require("./getFunctionVersion200Response")
 var getFunctionVersionAlphaOutput_1 = require("./getFunctionVersionAlphaOutput");
 var getInsertFunctionInstance200Response_1 = require("./getInsertFunctionInstance200Response");
 var getInsertFunctionInstanceAlphaOutput_1 = require("./getInsertFunctionInstanceAlphaOutput");
+var getJourney200Response_1 = require("./getJourney200Response");
+var getJourneyAlphaOutput_1 = require("./getJourneyAlphaOutput");
+var getJourneyAnalytics200Response_1 = require("./getJourneyAnalytics200Response");
+var getJourneyAnalyticsAlphaOutput_1 = require("./getJourneyAnalyticsAlphaOutput");
 var getLatestFromEdgeFunctions200Response_1 = require("./getLatestFromEdgeFunctions200Response");
 var getLatestFromEdgeFunctionsAlphaOutput_1 = require("./getLatestFromEdgeFunctionsAlphaOutput");
 var getMessagingSubscriptionFailureResponse_1 = require("./getMessagingSubscriptionFailureResponse");
@@ -857,6 +940,13 @@ var insertFunctionInstanceAlpha_1 = require("./insertFunctionInstanceAlpha");
 var integrationOptionBeta_1 = require("./integrationOptionBeta");
 var invitePermissionV1_1 = require("./invitePermissionV1");
 var inviteV1_1 = require("./inviteV1");
+var journeyAnalytics_1 = require("./journeyAnalytics");
+var journeyDefinition_1 = require("./journeyDefinition");
+var journeyDetails_1 = require("./journeyDetails");
+var journeyInfo_1 = require("./journeyInfo");
+var journeyState_1 = require("./journeyState");
+var journeyVersionOutput_1 = require("./journeyVersionOutput");
+var key_1 = require("./key");
 var labelAlpha_1 = require("./labelAlpha");
 var labelV1_1 = require("./labelV1");
 var listAudiences200Response_1 = require("./listAudiences200Response");
@@ -972,8 +1062,11 @@ var previewDestinationFilterV1Output_1 = require("./previewDestinationFilterV1Ou
 var profilesWarehouseAlpha_1 = require("./profilesWarehouseAlpha");
 var propertyRenameBeta_1 = require("./propertyRenameBeta");
 var propertyRenameV1_1 = require("./propertyRenameV1");
+var propertySelectionsConfig_1 = require("./propertySelectionsConfig");
 var propertyValueTransformationBeta_1 = require("./propertyValueTransformationBeta");
 var propertyValueTransformationV1_1 = require("./propertyValueTransformationV1");
+var randomSplitBranch_1 = require("./randomSplitBranch");
+var randomSplitState_1 = require("./randomSplitState");
 var regulation_1 = require("./regulation");
 var regulationListEntryV1_1 = require("./regulationListEntryV1");
 var removeAudienceFromSpace200Response_1 = require("./removeAudienceFromSpace200Response");
@@ -982,6 +1075,8 @@ var removeComputedTraitFromSpace200Response_1 = require("./removeComputedTraitFr
 var removeComputedTraitFromSpaceAlphaOutput_1 = require("./removeComputedTraitFromSpaceAlphaOutput");
 var removeFilterFromDestination200Response_1 = require("./removeFilterFromDestination200Response");
 var removeFilterFromDestinationV1Output_1 = require("./removeFilterFromDestinationV1Output");
+var removeJourneyFromSpace200Response_1 = require("./removeJourneyFromSpace200Response");
+var removeJourneyFromSpaceAlphaOutput_1 = require("./removeJourneyFromSpaceAlphaOutput");
 var removeProfilesWarehouseFromSpace200Response_1 = require("./removeProfilesWarehouseFromSpace200Response");
 var removeProfilesWarehouseFromSpaceAlphaOutput_1 = require("./removeProfilesWarehouseFromSpaceAlphaOutput");
 var removeRuleV1_1 = require("./removeRuleV1");
@@ -1018,6 +1113,9 @@ var replacePermissionsForUserV1Output_1 = require("./replacePermissionsForUserV1
 var replaceRulesInTrackingPlan200Response_1 = require("./replaceRulesInTrackingPlan200Response");
 var replaceRulesInTrackingPlanV1Input_1 = require("./replaceRulesInTrackingPlanV1Input");
 var replaceRulesInTrackingPlanV1Output_1 = require("./replaceRulesInTrackingPlanV1Output");
+var replaceStepsForJourney200Response_1 = require("./replaceStepsForJourney200Response");
+var replaceStepsForJourneyAlphaInput_1 = require("./replaceStepsForJourneyAlphaInput");
+var replaceStepsForJourneyAlphaOutput_1 = require("./replaceStepsForJourneyAlphaOutput");
 var replaceUsersInUserGroup200Response_1 = require("./replaceUsersInUserGroup200Response");
 var replaceUsersInUserGroupV1Input_1 = require("./replaceUsersInUserGroupV1Input");
 var replaceUsersInUserGroupV1Output_1 = require("./replaceUsersInUserGroupV1Output");
@@ -1039,6 +1137,7 @@ var reverseEtlSpecificTimeScheduleConfig_1 = require("./reverseEtlSpecificTimeSc
 var roleV1_1 = require("./roleV1");
 var ruleInputV1_1 = require("./ruleInputV1");
 var ruleV1_1 = require("./ruleV1");
+var simpleDelayState_1 = require("./simpleDelayState");
 var sourceAPICallSnapshotV1_1 = require("./sourceAPICallSnapshotV1");
 var sourceAlpha_1 = require("./sourceAlpha");
 var sourceEventVolumeDatapointV1_1 = require("./sourceEventVolumeDatapointV1");
@@ -1049,18 +1148,26 @@ var sourceV1_1 = require("./sourceV1");
 var space_1 = require("./space");
 var spaceWarehouseSchemaOverride_1 = require("./spaceWarehouseSchemaOverride");
 var spaceWarehouseSelectiveSyncItemAlpha_1 = require("./spaceWarehouseSelectiveSyncItemAlpha");
+var statesInner_1 = require("./statesInner");
+var stepLevelAnalytics_1 = require("./stepLevelAnalytics");
 var streamStatusV1_1 = require("./streamStatusV1");
 var suppressedInner_1 = require("./suppressedInner");
 var syncExtractPhase_1 = require("./syncExtractPhase");
 var syncLoadPhase_1 = require("./syncLoadPhase");
 var syncNoticeV1_1 = require("./syncNoticeV1");
 var syncV1_1 = require("./syncV1");
+var timeOutBranch_1 = require("./timeOutBranch");
+var topLevelAnalytics_1 = require("./topLevelAnalytics");
 var trackSourceSettingsV1_1 = require("./trackSourceSettingsV1");
 var trackingPlanV1_1 = require("./trackingPlanV1");
 var traitDefinition_1 = require("./traitDefinition");
 var traitOptions_1 = require("./traitOptions");
 var transformationBeta_1 = require("./transformationBeta");
 var transformationV1_1 = require("./transformationV1");
+var transitionState_1 = require("./transitionState");
+var transitions_1 = require("./transitions");
+var transitionsInner_1 = require("./transitionsInner");
+var transitionsInner1_1 = require("./transitionsInner1");
 var updateAudienceForSpace200Response_1 = require("./updateAudienceForSpace200Response");
 var updateAudienceForSpaceAlphaOutput_1 = require("./updateAudienceForSpaceAlphaOutput");
 var updateAudienceForSpaceInput_1 = require("./updateAudienceForSpaceInput");
@@ -1070,6 +1177,10 @@ var updateComputedTraitForSpaceAlphaOutput_1 = require("./updateComputedTraitFor
 var updateDestination200Response_1 = require("./updateDestination200Response");
 var updateDestinationV1Input_1 = require("./updateDestinationV1Input");
 var updateDestinationV1Output_1 = require("./updateDestinationV1Output");
+var updateDestinationsForJourney200Response_1 = require("./updateDestinationsForJourney200Response");
+var updateDestinationsForJourneyAlphaInput_1 = require("./updateDestinationsForJourneyAlphaInput");
+var updateDestinationsForJourneyAlphaOutput_1 = require("./updateDestinationsForJourneyAlphaOutput");
+var updateDestinationsInput_1 = require("./updateDestinationsInput");
 var updateFilterById200Response_1 = require("./updateFilterById200Response");
 var updateFilterByIdInput_1 = require("./updateFilterByIdInput");
 var updateFilterByIdOutput_1 = require("./updateFilterByIdOutput");
@@ -1107,6 +1218,9 @@ var updateSourceAlphaInput_1 = require("./updateSourceAlphaInput");
 var updateSourceAlphaOutput_1 = require("./updateSourceAlphaOutput");
 var updateSourceV1Input_1 = require("./updateSourceV1Input");
 var updateSourceV1Output_1 = require("./updateSourceV1Output");
+var updateStatusForJourney200Response_1 = require("./updateStatusForJourney200Response");
+var updateStatusForJourneyAlphaInput_1 = require("./updateStatusForJourneyAlphaInput");
+var updateStatusForJourneyAlphaOutput_1 = require("./updateStatusForJourneyAlphaOutput");
 var updateSubscriptionForDestination200Response_1 = require("./updateSubscriptionForDestination200Response");
 var updateSubscriptionForDestinationAlphaInput_1 = require("./updateSubscriptionForDestinationAlphaInput");
 var updateSubscriptionForDestinationAlphaOutput_1 = require("./updateSubscriptionForDestinationAlphaOutput");
@@ -1150,7 +1264,14 @@ var enumsMap = {
     'AddSourceToTrackingPlanV1Output.StatusEnum': addSourceToTrackingPlanV1Output_1.AddSourceToTrackingPlanV1Output.StatusEnum,
     'AudienceComputationDefinition.TypeEnum': audienceComputationDefinition_1.AudienceComputationDefinition.TypeEnum,
     'AudienceDefinition.TypeEnum': audienceDefinition_1.AudienceDefinition.TypeEnum,
+    'AudienceEntryState.TypeEnum': audienceEntryState_1.AudienceEntryState.TypeEnum,
+    'AudienceExitRule.ExitTypeEnum': audienceExitRule_1.AudienceExitRule.ExitTypeEnum,
+    'AudienceExitRule.TypeEnum': audienceExitRule_1.AudienceExitRule.TypeEnum,
+    'BaseState.TypeEnum': baseState_1.BaseState.TypeEnum,
+    'BaseState.ExitTypeEnum': baseState_1.BaseState.ExitTypeEnum,
     'ComputedTraitsDefinition.TypeEnum': computedTraitsDefinition_1.ComputedTraitsDefinition.TypeEnum,
+    'ConditionBranch.TypeEnum': conditionBranch_1.ConditionBranch.TypeEnum,
+    'ConditionSplitState.TypeEnum': conditionSplitState_1.ConditionSplitState.TypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
     'CreateFunctionV1Input.ResourceTypeEnum': createFunctionV1Input_1.CreateFunctionV1Input.ResourceTypeEnum,
@@ -1160,6 +1281,7 @@ var enumsMap = {
     'CreateValidationInWarehouseV1Output.StatusEnum': createValidationInWarehouseV1Output_1.CreateValidationInWarehouseV1Output.StatusEnum,
     'CreateWorkspaceRegulationV1Input.RegulationTypeEnum': createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input.RegulationTypeEnum,
     'CreateWorkspaceRegulationV1Input.SubjectTypeEnum': createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input.SubjectTypeEnum,
+    'DefaultBranch.TypeEnum': defaultBranch_1.DefaultBranch.TypeEnum,
     'DeleteDestinationV1Output.StatusEnum': deleteDestinationV1Output_1.DeleteDestinationV1Output.StatusEnum,
     'DeleteFunctionV1Output.StatusEnum': deleteFunctionV1Output_1.DeleteFunctionV1Output.StatusEnum,
     'DeleteInsertFunctionInstanceAlphaOutput.StatusEnum': deleteInsertFunctionInstanceAlphaOutput_1.DeleteInsertFunctionInstanceAlphaOutput.StatusEnum,
@@ -1184,9 +1306,18 @@ var enumsMap = {
     'DestinationMetadataFeaturesV1.CloudModeInstancesEnum': destinationMetadataFeaturesV1_1.DestinationMetadataFeaturesV1.CloudModeInstancesEnum,
     'DestinationMetadataFeaturesV1.DeviceModeInstancesEnum': destinationMetadataFeaturesV1_1.DestinationMetadataFeaturesV1.DeviceModeInstancesEnum,
     'DestinationMetadataV1.StatusEnum': destinationMetadataV1_1.DestinationMetadataV1.StatusEnum,
+    'DestinationState.TypeEnum': destinationState_1.DestinationState.TypeEnum,
     'DestinationStatusV1.StatusEnum': destinationStatusV1_1.DestinationStatusV1.StatusEnum,
     'EchoAlphaOutput.MethodEnum': echoAlphaOutput_1.EchoAlphaOutput.MethodEnum,
     'EchoV1Output.MethodEnum': echoV1Output_1.EchoV1Output.MethodEnum,
+    'EntryRules.TypeEnum': entryRules_1.EntryRules.TypeEnum,
+    'EventEntryState.TypeEnum': eventEntryState_1.EventEntryState.TypeEnum,
+    'EventExitRule.ExitTypeEnum': eventExitRule_1.EventExitRule.ExitTypeEnum,
+    'EventExitRule.TypeEnum': eventExitRule_1.EventExitRule.TypeEnum,
+    'EventSplitWithTimeoutState.TypeEnum': eventSplitWithTimeoutState_1.EventSplitWithTimeoutState.TypeEnum,
+    'ExitRule.TypeEnum': exitRule_1.ExitRule.TypeEnum,
+    'ExitRule.ExitTypeEnum': exitRule_1.ExitRule.ExitTypeEnum,
+    'ExitState.TypeEnum': exitState_1.ExitState.TypeEnum,
     'FunctionDeployment.StatusEnum': functionDeployment_1.FunctionDeployment.StatusEnum,
     'FunctionSettingV1.TypeEnum': functionSettingV1_1.FunctionSettingV1.TypeEnum,
     'FunctionV1.ResourceTypeEnum': functionV1_1.FunctionV1.ResourceTypeEnum,
@@ -1200,18 +1331,22 @@ var enumsMap = {
     'GroupSubscriptionStatusResponse.StatusEnum': groupSubscriptionStatusResponse_1.GroupSubscriptionStatusResponse.StatusEnum,
     'HashPropertiesConfiguration.EncodingEnum': hashPropertiesConfiguration_1.HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum': identifySourceSettingsV1_1.IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
+    'JourneyState.TypeEnum': journeyState_1.JourneyState.TypeEnum,
+    'JourneyVersionOutput.StatusEnum': journeyVersionOutput_1.JourneyVersionOutput.StatusEnum,
     'ListFunctionItemV1.ResourceTypeEnum': listFunctionItemV1_1.ListFunctionItemV1.ResourceTypeEnum,
     'MessageSubscriptionResponse.TypeEnum': messageSubscriptionResponse_1.MessageSubscriptionResponse.TypeEnum,
     'MessageSubscriptionResponse.StatusEnum': messageSubscriptionResponse_1.MessageSubscriptionResponse.StatusEnum,
     'MessagesSubscriptionRequest.TypeEnum': messagesSubscriptionRequest_1.MessagesSubscriptionRequest.TypeEnum,
     'MessagesSubscriptionRequest.StatusEnum': messagesSubscriptionRequest_1.MessagesSubscriptionRequest.StatusEnum,
     'PermissionResourceV1.TypeEnum': permissionResourceV1_1.PermissionResourceV1.TypeEnum,
+    'RandomSplitState.TypeEnum': randomSplitState_1.RandomSplitState.TypeEnum,
     'Regulation.OverallStatusEnum': regulation_1.Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': regulationListEntryV1_1.RegulationListEntryV1.StatusEnum,
     'RegulationListEntryV1.RegulationTypeEnum': regulationListEntryV1_1.RegulationListEntryV1.RegulationTypeEnum,
     'RemoveAudienceFromSpaceAlphaOutput.StatusEnum': removeAudienceFromSpaceAlphaOutput_1.RemoveAudienceFromSpaceAlphaOutput.StatusEnum,
     'RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum': removeComputedTraitFromSpaceAlphaOutput_1.RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum': removeFilterFromDestinationV1Output_1.RemoveFilterFromDestinationV1Output.StatusEnum,
+    'RemoveJourneyFromSpaceAlphaOutput.StatusEnum': removeJourneyFromSpaceAlphaOutput_1.RemoveJourneyFromSpaceAlphaOutput.StatusEnum,
     'RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum': removeProfilesWarehouseFromSpaceAlphaOutput_1.RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum,
     'RemoveRuleV1.TypeEnum': removeRuleV1_1.RemoveRuleV1.TypeEnum,
     'RemoveRulesFromTrackingPlanV1Output.StatusEnum': removeRulesFromTrackingPlanV1Output_1.RemoveRulesFromTrackingPlanV1Output.StatusEnum,
@@ -1225,20 +1360,31 @@ var enumsMap = {
     'ReverseEtlScheduleDefinition.StrategyEnum': reverseEtlScheduleDefinition_1.ReverseEtlScheduleDefinition.StrategyEnum,
     'RuleInputV1.TypeEnum': ruleInputV1_1.RuleInputV1.TypeEnum,
     'RuleV1.TypeEnum': ruleV1_1.RuleV1.TypeEnum,
+    'SimpleDelayState.TypeEnum': simpleDelayState_1.SimpleDelayState.TypeEnum,
     'SourceMetadataV1.StatusEnum': sourceMetadataV1_1.SourceMetadataV1.StatusEnum,
+    'StatesInner.TypeEnum': statesInner_1.StatesInner.TypeEnum,
+    'StatesInner.ExitTypeEnum': statesInner_1.StatesInner.ExitTypeEnum,
+    'TimeOutBranch.TypeEnum': timeOutBranch_1.TimeOutBranch.TypeEnum,
     'TrackSourceSettingsV1.CommonEventOnViolationsEnum': trackSourceSettingsV1_1.TrackSourceSettingsV1.CommonEventOnViolationsEnum,
     'TrackingPlanV1.TypeEnum': trackingPlanV1_1.TrackingPlanV1.TypeEnum,
     'TraitDefinition.TypeEnum': traitDefinition_1.TraitDefinition.TypeEnum,
+    'TransitionState.TypeEnum': transitionState_1.TransitionState.TypeEnum,
+    'TransitionsInner.TypeEnum': transitionsInner_1.TransitionsInner.TypeEnum,
+    'TransitionsInner1.TypeEnum': transitionsInner1_1.TransitionsInner1.TypeEnum,
     'UpdateGroupSubscriptionStatusResponse.StatusEnum': updateGroupSubscriptionStatusResponse_1.UpdateGroupSubscriptionStatusResponse.StatusEnum,
     'UpdateRulesInTrackingPlanV1Output.StatusEnum': updateRulesInTrackingPlanV1Output_1.UpdateRulesInTrackingPlanV1Output.StatusEnum,
     'UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum': updateSelectiveSyncForWarehouseAndSpaceAlphaOutput_1.UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum,
     'UpdateSelectiveSyncForWarehouseV1Output.StatusEnum': updateSelectiveSyncForWarehouseV1Output_1.UpdateSelectiveSyncForWarehouseV1Output.StatusEnum,
+    'UpdateStatusForJourneyAlphaInput.ActionEnum': updateStatusForJourneyAlphaInput_1.UpdateStatusForJourneyAlphaInput.ActionEnum,
+    'UpdateStatusForJourneyAlphaOutput.StatusEnum': updateStatusForJourneyAlphaOutput_1.UpdateStatusForJourneyAlphaOutput.StatusEnum,
     'UpdateTrackingPlanV1Output.StatusEnum': updateTrackingPlanV1Output_1.UpdateTrackingPlanV1Output.StatusEnum,
     'UpsertRuleV1.TypeEnum': upsertRuleV1_1.UpsertRuleV1.TypeEnum,
 };
 var typeMap = {
     APICallSnapshotV1: aPICallSnapshotV1_1.APICallSnapshotV1,
     AccessPermissionV1: accessPermissionV1_1.AccessPermissionV1,
+    ActionDefinition: actionDefinition_1.ActionDefinition,
+    Activation: activation_1.Activation,
     AddConnectionFromSourceToWarehouse201Response: addConnectionFromSourceToWarehouse201Response_1.AddConnectionFromSourceToWarehouse201Response,
     AddConnectionFromSourceToWarehouseV1Output: addConnectionFromSourceToWarehouseV1Output_1.AddConnectionFromSourceToWarehouseV1Output,
     AddLabelsToSource200Response: addLabelsToSource200Response_1.AddLabelsToSource200Response,
@@ -1262,11 +1408,15 @@ var typeMap = {
     AdvancedWarehouseSyncScheduleV1Input: advancedWarehouseSyncScheduleV1Input_1.AdvancedWarehouseSyncScheduleV1Input,
     AdvancedWarehouseSyncScheduleV1Output: advancedWarehouseSyncScheduleV1Output_1.AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: allowedLabelBeta_1.AllowedLabelBeta,
+    Analytics: analytics_1.Analytics,
     AudienceComputationDefinition: audienceComputationDefinition_1.AudienceComputationDefinition,
     AudienceDefinition: audienceDefinition_1.AudienceDefinition,
+    AudienceEntryState: audienceEntryState_1.AudienceEntryState,
+    AudienceExitRule: audienceExitRule_1.AudienceExitRule,
     AudienceOptions: audienceOptions_1.AudienceOptions,
     AudienceSummary: audienceSummary_1.AudienceSummary,
     AuditEventV1: auditEventV1_1.AuditEventV1,
+    BaseState: baseState_1.BaseState,
     BatchQueryMessagingSubscriptionsForSpace200Response: batchQueryMessagingSubscriptionsForSpace200Response_1.BatchQueryMessagingSubscriptionsForSpace200Response,
     BatchQueryMessagingSubscriptionsForSpaceAlphaInput: batchQueryMessagingSubscriptionsForSpaceAlphaInput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaInput,
     BatchQueryMessagingSubscriptionsForSpaceAlphaOutput: batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
@@ -1277,6 +1427,9 @@ var typeMap = {
     CommonSourceSettingsV1: commonSourceSettingsV1_1.CommonSourceSettingsV1,
     ComputedTraitSummary: computedTraitSummary_1.ComputedTraitSummary,
     ComputedTraitsDefinition: computedTraitsDefinition_1.ComputedTraitsDefinition,
+    ConcurrencyConfig: concurrencyConfig_1.ConcurrencyConfig,
+    ConditionBranch: conditionBranch_1.ConditionBranch,
+    ConditionSplitState: conditionSplitState_1.ConditionSplitState,
     Config: config_1.Config,
     Contact: contact_1.Contact,
     CreateAudience200Response: createAudience200Response_1.CreateAudience200Response,
@@ -1317,6 +1470,9 @@ var typeMap = {
     CreateInvites201Response: createInvites201Response_1.CreateInvites201Response,
     CreateInvitesV1Input: createInvitesV1Input_1.CreateInvitesV1Input,
     CreateInvitesV1Output: createInvitesV1Output_1.CreateInvitesV1Output,
+    CreateJourney201Response: createJourney201Response_1.CreateJourney201Response,
+    CreateJourneyAlphaInput: createJourneyAlphaInput_1.CreateJourneyAlphaInput,
+    CreateJourneyAlphaOutput: createJourneyAlphaOutput_1.CreateJourneyAlphaOutput,
     CreateLabel201Response: createLabel201Response_1.CreateLabel201Response,
     CreateLabelV1Input: createLabelV1Input_1.CreateLabelV1Input,
     CreateLabelV1Output: createLabelV1Output_1.CreateLabelV1Output,
@@ -1361,6 +1517,7 @@ var typeMap = {
     CreateWriteKeyForSource200Response: createWriteKeyForSource200Response_1.CreateWriteKeyForSource200Response,
     CreateWriteKeyForSourceAlphaOutput: createWriteKeyForSourceAlphaOutput_1.CreateWriteKeyForSourceAlphaOutput,
     DbtModelSyncTrigger: dbtModelSyncTrigger_1.DbtModelSyncTrigger,
+    DefaultBranch: defaultBranch_1.DefaultBranch,
     DeleteDestination200Response: deleteDestination200Response_1.DeleteDestination200Response,
     DeleteDestinationV1Output: deleteDestinationV1Output_1.DeleteDestinationV1Output,
     DeleteFilterById200Response: deleteFilterById200Response_1.DeleteFilterById200Response,
@@ -1401,6 +1558,7 @@ var typeMap = {
     DeliveryOverviewMetricsDataset: deliveryOverviewMetricsDataset_1.DeliveryOverviewMetricsDataset,
     DeliveryOverviewSourceFilterBy: deliveryOverviewSourceFilterBy_1.DeliveryOverviewSourceFilterBy,
     DeliveryOverviewSuccessfullyReceivedFilterBy: deliveryOverviewSuccessfullyReceivedFilterBy_1.DeliveryOverviewSuccessfullyReceivedFilterBy,
+    Destination: destination_1.Destination,
     DestinationFilterActionV1: destinationFilterActionV1_1.DestinationFilterActionV1,
     DestinationFilterV1: destinationFilterV1_1.DestinationFilterV1,
     DestinationMetadataActionFieldV1: destinationMetadataActionFieldV1_1.DestinationMetadataActionFieldV1,
@@ -1411,6 +1569,7 @@ var typeMap = {
     DestinationMetadataPlatformsV1: destinationMetadataPlatformsV1_1.DestinationMetadataPlatformsV1,
     DestinationMetadataSubscriptionPresetV1: destinationMetadataSubscriptionPresetV1_1.DestinationMetadataSubscriptionPresetV1,
     DestinationMetadataV1: destinationMetadataV1_1.DestinationMetadataV1,
+    DestinationState: destinationState_1.DestinationState,
     DestinationStatusV1: destinationStatusV1_1.DestinationStatusV1,
     DestinationSubscription: destinationSubscription_1.DestinationSubscription,
     DestinationSubscriptionUpdateInput: destinationSubscriptionUpdateInput_1.DestinationSubscriptionUpdateInput,
@@ -1422,7 +1581,14 @@ var typeMap = {
     EchoAlphaOutput: echoAlphaOutput_1.EchoAlphaOutput,
     EchoV1Output: echoV1Output_1.EchoV1Output,
     EdgeFunctionsAlpha: edgeFunctionsAlpha_1.EdgeFunctionsAlpha,
+    EntryRules: entryRules_1.EntryRules,
+    EventEntryState: eventEntryState_1.EventEntryState,
+    EventExitRule: eventExitRule_1.EventExitRule,
     EventSourceV1: eventSourceV1_1.EventSourceV1,
+    EventSplitWithTimeoutState: eventSplitWithTimeoutState_1.EventSplitWithTimeoutState,
+    ExitRule: exitRule_1.ExitRule,
+    ExitRulesConfig: exitRulesConfig_1.ExitRulesConfig,
+    ExitState: exitState_1.ExitState,
     FQLDefinedPropertyV1: fQLDefinedPropertyV1_1.FQLDefinedPropertyV1,
     Filter: filter_1.Filter,
     FunctionDeployment: functionDeployment_1.FunctionDeployment,
@@ -1467,6 +1633,10 @@ var typeMap = {
     GetFunctionVersionAlphaOutput: getFunctionVersionAlphaOutput_1.GetFunctionVersionAlphaOutput,
     GetInsertFunctionInstance200Response: getInsertFunctionInstance200Response_1.GetInsertFunctionInstance200Response,
     GetInsertFunctionInstanceAlphaOutput: getInsertFunctionInstanceAlphaOutput_1.GetInsertFunctionInstanceAlphaOutput,
+    GetJourney200Response: getJourney200Response_1.GetJourney200Response,
+    GetJourneyAlphaOutput: getJourneyAlphaOutput_1.GetJourneyAlphaOutput,
+    GetJourneyAnalytics200Response: getJourneyAnalytics200Response_1.GetJourneyAnalytics200Response,
+    GetJourneyAnalyticsAlphaOutput: getJourneyAnalyticsAlphaOutput_1.GetJourneyAnalyticsAlphaOutput,
     GetLatestFromEdgeFunctions200Response: getLatestFromEdgeFunctions200Response_1.GetLatestFromEdgeFunctions200Response,
     GetLatestFromEdgeFunctionsAlphaOutput: getLatestFromEdgeFunctionsAlphaOutput_1.GetLatestFromEdgeFunctionsAlphaOutput,
     GetMessagingSubscriptionFailureResponse: getMessagingSubscriptionFailureResponse_1.GetMessagingSubscriptionFailureResponse,
@@ -1519,6 +1689,13 @@ var typeMap = {
     IntegrationOptionBeta: integrationOptionBeta_1.IntegrationOptionBeta,
     InvitePermissionV1: invitePermissionV1_1.InvitePermissionV1,
     InviteV1: inviteV1_1.InviteV1,
+    JourneyAnalytics: journeyAnalytics_1.JourneyAnalytics,
+    JourneyDefinition: journeyDefinition_1.JourneyDefinition,
+    JourneyDetails: journeyDetails_1.JourneyDetails,
+    JourneyInfo: journeyInfo_1.JourneyInfo,
+    JourneyState: journeyState_1.JourneyState,
+    JourneyVersionOutput: journeyVersionOutput_1.JourneyVersionOutput,
+    Key: key_1.Key,
     LabelAlpha: labelAlpha_1.LabelAlpha,
     LabelV1: labelV1_1.LabelV1,
     ListAudiences200Response: listAudiences200Response_1.ListAudiences200Response,
@@ -1634,8 +1811,11 @@ var typeMap = {
     ProfilesWarehouseAlpha: profilesWarehouseAlpha_1.ProfilesWarehouseAlpha,
     PropertyRenameBeta: propertyRenameBeta_1.PropertyRenameBeta,
     PropertyRenameV1: propertyRenameV1_1.PropertyRenameV1,
+    PropertySelectionsConfig: propertySelectionsConfig_1.PropertySelectionsConfig,
     PropertyValueTransformationBeta: propertyValueTransformationBeta_1.PropertyValueTransformationBeta,
     PropertyValueTransformationV1: propertyValueTransformationV1_1.PropertyValueTransformationV1,
+    RandomSplitBranch: randomSplitBranch_1.RandomSplitBranch,
+    RandomSplitState: randomSplitState_1.RandomSplitState,
     Regulation: regulation_1.Regulation,
     RegulationListEntryV1: regulationListEntryV1_1.RegulationListEntryV1,
     RemoveAudienceFromSpace200Response: removeAudienceFromSpace200Response_1.RemoveAudienceFromSpace200Response,
@@ -1644,6 +1824,8 @@ var typeMap = {
     RemoveComputedTraitFromSpaceAlphaOutput: removeComputedTraitFromSpaceAlphaOutput_1.RemoveComputedTraitFromSpaceAlphaOutput,
     RemoveFilterFromDestination200Response: removeFilterFromDestination200Response_1.RemoveFilterFromDestination200Response,
     RemoveFilterFromDestinationV1Output: removeFilterFromDestinationV1Output_1.RemoveFilterFromDestinationV1Output,
+    RemoveJourneyFromSpace200Response: removeJourneyFromSpace200Response_1.RemoveJourneyFromSpace200Response,
+    RemoveJourneyFromSpaceAlphaOutput: removeJourneyFromSpaceAlphaOutput_1.RemoveJourneyFromSpaceAlphaOutput,
     RemoveProfilesWarehouseFromSpace200Response: removeProfilesWarehouseFromSpace200Response_1.RemoveProfilesWarehouseFromSpace200Response,
     RemoveProfilesWarehouseFromSpaceAlphaOutput: removeProfilesWarehouseFromSpaceAlphaOutput_1.RemoveProfilesWarehouseFromSpaceAlphaOutput,
     RemoveRuleV1: removeRuleV1_1.RemoveRuleV1,
@@ -1680,6 +1862,9 @@ var typeMap = {
     ReplaceRulesInTrackingPlan200Response: replaceRulesInTrackingPlan200Response_1.ReplaceRulesInTrackingPlan200Response,
     ReplaceRulesInTrackingPlanV1Input: replaceRulesInTrackingPlanV1Input_1.ReplaceRulesInTrackingPlanV1Input,
     ReplaceRulesInTrackingPlanV1Output: replaceRulesInTrackingPlanV1Output_1.ReplaceRulesInTrackingPlanV1Output,
+    ReplaceStepsForJourney200Response: replaceStepsForJourney200Response_1.ReplaceStepsForJourney200Response,
+    ReplaceStepsForJourneyAlphaInput: replaceStepsForJourneyAlphaInput_1.ReplaceStepsForJourneyAlphaInput,
+    ReplaceStepsForJourneyAlphaOutput: replaceStepsForJourneyAlphaOutput_1.ReplaceStepsForJourneyAlphaOutput,
     ReplaceUsersInUserGroup200Response: replaceUsersInUserGroup200Response_1.ReplaceUsersInUserGroup200Response,
     ReplaceUsersInUserGroupV1Input: replaceUsersInUserGroupV1Input_1.ReplaceUsersInUserGroupV1Input,
     ReplaceUsersInUserGroupV1Output: replaceUsersInUserGroupV1Output_1.ReplaceUsersInUserGroupV1Output,
@@ -1701,6 +1886,7 @@ var typeMap = {
     RoleV1: roleV1_1.RoleV1,
     RuleInputV1: ruleInputV1_1.RuleInputV1,
     RuleV1: ruleV1_1.RuleV1,
+    SimpleDelayState: simpleDelayState_1.SimpleDelayState,
     SourceAPICallSnapshotV1: sourceAPICallSnapshotV1_1.SourceAPICallSnapshotV1,
     SourceAlpha: sourceAlpha_1.SourceAlpha,
     SourceEventVolumeDatapointV1: sourceEventVolumeDatapointV1_1.SourceEventVolumeDatapointV1,
@@ -1711,18 +1897,26 @@ var typeMap = {
     Space: space_1.Space,
     SpaceWarehouseSchemaOverride: spaceWarehouseSchemaOverride_1.SpaceWarehouseSchemaOverride,
     SpaceWarehouseSelectiveSyncItemAlpha: spaceWarehouseSelectiveSyncItemAlpha_1.SpaceWarehouseSelectiveSyncItemAlpha,
+    StatesInner: statesInner_1.StatesInner,
+    StepLevelAnalytics: stepLevelAnalytics_1.StepLevelAnalytics,
     StreamStatusV1: streamStatusV1_1.StreamStatusV1,
     SuppressedInner: suppressedInner_1.SuppressedInner,
     SyncExtractPhase: syncExtractPhase_1.SyncExtractPhase,
     SyncLoadPhase: syncLoadPhase_1.SyncLoadPhase,
     SyncNoticeV1: syncNoticeV1_1.SyncNoticeV1,
     SyncV1: syncV1_1.SyncV1,
+    TimeOutBranch: timeOutBranch_1.TimeOutBranch,
+    TopLevelAnalytics: topLevelAnalytics_1.TopLevelAnalytics,
     TrackSourceSettingsV1: trackSourceSettingsV1_1.TrackSourceSettingsV1,
     TrackingPlanV1: trackingPlanV1_1.TrackingPlanV1,
     TraitDefinition: traitDefinition_1.TraitDefinition,
     TraitOptions: traitOptions_1.TraitOptions,
     TransformationBeta: transformationBeta_1.TransformationBeta,
     TransformationV1: transformationV1_1.TransformationV1,
+    TransitionState: transitionState_1.TransitionState,
+    Transitions: transitions_1.Transitions,
+    TransitionsInner: transitionsInner_1.TransitionsInner,
+    TransitionsInner1: transitionsInner1_1.TransitionsInner1,
     UpdateAudienceForSpace200Response: updateAudienceForSpace200Response_1.UpdateAudienceForSpace200Response,
     UpdateAudienceForSpaceAlphaOutput: updateAudienceForSpaceAlphaOutput_1.UpdateAudienceForSpaceAlphaOutput,
     UpdateAudienceForSpaceInput: updateAudienceForSpaceInput_1.UpdateAudienceForSpaceInput,
@@ -1732,6 +1926,10 @@ var typeMap = {
     UpdateDestination200Response: updateDestination200Response_1.UpdateDestination200Response,
     UpdateDestinationV1Input: updateDestinationV1Input_1.UpdateDestinationV1Input,
     UpdateDestinationV1Output: updateDestinationV1Output_1.UpdateDestinationV1Output,
+    UpdateDestinationsForJourney200Response: updateDestinationsForJourney200Response_1.UpdateDestinationsForJourney200Response,
+    UpdateDestinationsForJourneyAlphaInput: updateDestinationsForJourneyAlphaInput_1.UpdateDestinationsForJourneyAlphaInput,
+    UpdateDestinationsForJourneyAlphaOutput: updateDestinationsForJourneyAlphaOutput_1.UpdateDestinationsForJourneyAlphaOutput,
+    UpdateDestinationsInput: updateDestinationsInput_1.UpdateDestinationsInput,
     UpdateFilterById200Response: updateFilterById200Response_1.UpdateFilterById200Response,
     UpdateFilterByIdInput: updateFilterByIdInput_1.UpdateFilterByIdInput,
     UpdateFilterByIdOutput: updateFilterByIdOutput_1.UpdateFilterByIdOutput,
@@ -1769,6 +1967,9 @@ var typeMap = {
     UpdateSourceAlphaOutput: updateSourceAlphaOutput_1.UpdateSourceAlphaOutput,
     UpdateSourceV1Input: updateSourceV1Input_1.UpdateSourceV1Input,
     UpdateSourceV1Output: updateSourceV1Output_1.UpdateSourceV1Output,
+    UpdateStatusForJourney200Response: updateStatusForJourney200Response_1.UpdateStatusForJourney200Response,
+    UpdateStatusForJourneyAlphaInput: updateStatusForJourneyAlphaInput_1.UpdateStatusForJourneyAlphaInput,
+    UpdateStatusForJourneyAlphaOutput: updateStatusForJourneyAlphaOutput_1.UpdateStatusForJourneyAlphaOutput,
     UpdateSubscriptionForDestination200Response: updateSubscriptionForDestination200Response_1.UpdateSubscriptionForDestination200Response,
     UpdateSubscriptionForDestinationAlphaInput: updateSubscriptionForDestinationAlphaInput_1.UpdateSubscriptionForDestinationAlphaInput,
     UpdateSubscriptionForDestinationAlphaOutput: updateSubscriptionForDestinationAlphaOutput_1.UpdateSubscriptionForDestinationAlphaOutput,
