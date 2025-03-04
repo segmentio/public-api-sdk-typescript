@@ -22,7 +22,7 @@ var UpdateDestinationsForJourneyAlphaOutput = (function () {
         {
             name: 'destinations',
             baseName: 'destinations',
-            type: 'Array<DestinationState>',
+            type: 'Array<DestinationsInner>',
         },
     ];
     return UpdateDestinationsForJourneyAlphaOutput;

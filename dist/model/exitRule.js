@@ -30,9 +30,9 @@ var ExitRule = (function () {
             type: 'boolean',
         },
         {
-            name: 'transitions',
-            baseName: 'transitions',
-            type: 'Array<Transitions>',
+            name: 'connectedDestinations',
+            baseName: 'connectedDestinations',
+            type: 'Array<string>',
         },
         {
             name: 'key',

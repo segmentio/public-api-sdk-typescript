@@ -11,14 +11,16 @@
  */
 
 import { RequestFile } from './models';
-import { StatesInner } from './statesInner';
+import { ExitDestinationState } from './exitDestinationState';
+import { RulesInner } from './rulesInner';
 
 /**
  * The exit rules configuration.
  */
 export class ExitRulesConfig {
     'enabled': boolean;
-    'states': Array<StatesInner>;
+    'rules': Array<RulesInner>;
+    'relatedDestinations'?: Array<ExitDestinationState>;
 
     static discriminator: string | undefined = undefined;
 
@@ -33,9 +35,14 @@ export class ExitRulesConfig {
             type: 'boolean',
         },
         {
-            name: 'states',
-            baseName: 'states',
-            type: 'Array<StatesInner>',
+            name: 'rules',
+            baseName: 'rules',
+            type: 'Array<RulesInner>',
+        },
+        {
+            name: 'relatedDestinations',
+            baseName: 'relatedDestinations',
+            type: 'Array<ExitDestinationState>',
         },
     ];
 

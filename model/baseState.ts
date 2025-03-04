@@ -12,16 +12,17 @@
 
 import { RequestFile } from './models';
 import { Destination } from './destination';
+import { ExitDestinationState } from './exitDestinationState';
 import { ExitRule } from './exitRule';
 import { ExitState } from './exitState';
 import { Key } from './key';
+import { RandomSplitBranch } from './randomSplitBranch';
 import { TransitionState } from './transitionState';
-import { Transitions } from './transitions';
 
 export class BaseState {
     'type': BaseState.TypeEnum;
     'condition': string;
-    'transitions': Array<Transitions>;
+    'transitions': Array<RandomSplitBranch>;
     'key': Key;
     'audienceId': string;
     'destinations': Array<Destination>;
@@ -29,6 +30,7 @@ export class BaseState {
     'exitType': BaseState.ExitTypeEnum;
     'enabled': boolean;
     'concurrencyEnabled': boolean;
+    'connectedDestinations'?: Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -50,7 +52,7 @@ export class BaseState {
         {
             name: 'transitions',
             baseName: 'transitions',
-            type: 'Array<Transitions>',
+            type: 'Array<RandomSplitBranch>',
         },
         {
             name: 'key',
@@ -87,6 +89,11 @@ export class BaseState {
             baseName: 'concurrencyEnabled',
             type: 'boolean',
         },
+        {
+            name: 'connectedDestinations',
+            baseName: 'connectedDestinations',
+            type: 'Array<string>',
+        },
     ];
 
     static getAttributeTypeMap() {
@@ -98,6 +105,7 @@ export namespace BaseState {
     export enum TypeEnum {
         RANDOM_SPLIT = <any>'RANDOM_SPLIT',
         EXIT = <any>'EXIT',
+        DESTINATION = <any>'DESTINATION',
         EXIT_RULE = <any>'EXIT_RULE',
     }
     export enum ExitTypeEnum {

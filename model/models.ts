@@ -193,6 +193,7 @@ export * from './destinationStatusV1';
 export * from './destinationSubscription';
 export * from './destinationSubscriptionUpdateInput';
 export * from './destinationV1';
+export * from './destinationsInner';
 export * from './disableEdgeFunctions200Response';
 export * from './disableEdgeFunctionsAlphaOutput';
 export * from './echo200Response';
@@ -205,6 +206,7 @@ export * from './eventEntryState';
 export * from './eventExitRule';
 export * from './eventSourceV1';
 export * from './eventSplitWithTimeoutState';
+export * from './exitDestinationState';
 export * from './exitRule';
 export * from './exitRulesConfig';
 export * from './exitState';
@@ -505,6 +507,7 @@ export * from './reverseEtlSpecificTimeScheduleConfig';
 export * from './roleV1';
 export * from './ruleInputV1';
 export * from './ruleV1';
+export * from './rulesInner';
 export * from './simpleDelayState';
 export * from './sourceAPICallSnapshotV1';
 export * from './sourceAlpha';
@@ -516,7 +519,6 @@ export * from './sourceV1';
 export * from './space';
 export * from './spaceWarehouseSchemaOverride';
 export * from './spaceWarehouseSelectiveSyncItemAlpha';
-export * from './statesInner';
 export * from './stepLevelAnalytics';
 export * from './streamStatusV1';
 export * from './suppressedInner';
@@ -823,6 +825,7 @@ import { DestinationStatusV1 } from './destinationStatusV1';
 import { DestinationSubscription } from './destinationSubscription';
 import { DestinationSubscriptionUpdateInput } from './destinationSubscriptionUpdateInput';
 import { DestinationV1 } from './destinationV1';
+import { DestinationsInner } from './destinationsInner';
 import { DisableEdgeFunctions200Response } from './disableEdgeFunctions200Response';
 import { DisableEdgeFunctionsAlphaOutput } from './disableEdgeFunctionsAlphaOutput';
 import { Echo200Response } from './echo200Response';
@@ -835,6 +838,7 @@ import { EventEntryState } from './eventEntryState';
 import { EventExitRule } from './eventExitRule';
 import { EventSourceV1 } from './eventSourceV1';
 import { EventSplitWithTimeoutState } from './eventSplitWithTimeoutState';
+import { ExitDestinationState } from './exitDestinationState';
 import { ExitRule } from './exitRule';
 import { ExitRulesConfig } from './exitRulesConfig';
 import { ExitState } from './exitState';
@@ -1135,6 +1139,7 @@ import { ReverseEtlSpecificTimeScheduleConfig } from './reverseEtlSpecificTimeSc
 import { RoleV1 } from './roleV1';
 import { RuleInputV1 } from './ruleInputV1';
 import { RuleV1 } from './ruleV1';
+import { RulesInner } from './rulesInner';
 import { SimpleDelayState } from './simpleDelayState';
 import { SourceAPICallSnapshotV1 } from './sourceAPICallSnapshotV1';
 import { SourceAlpha } from './sourceAlpha';
@@ -1146,7 +1151,6 @@ import { SourceV1 } from './sourceV1';
 import { Space } from './space';
 import { SpaceWarehouseSchemaOverride } from './spaceWarehouseSchemaOverride';
 import { SpaceWarehouseSelectiveSyncItemAlpha } from './spaceWarehouseSelectiveSyncItemAlpha';
-import { StatesInner } from './statesInner';
 import { StepLevelAnalytics } from './stepLevelAnalytics';
 import { StreamStatusV1 } from './streamStatusV1';
 import { SuppressedInner } from './suppressedInner';
@@ -1332,6 +1336,7 @@ let enumsMap: { [index: string]: any } = {
     'DestinationMetadataV1.StatusEnum': DestinationMetadataV1.StatusEnum,
     'DestinationState.TypeEnum': DestinationState.TypeEnum,
     'DestinationStatusV1.StatusEnum': DestinationStatusV1.StatusEnum,
+    'DestinationsInner.TypeEnum': DestinationsInner.TypeEnum,
     'EchoAlphaOutput.MethodEnum': EchoAlphaOutput.MethodEnum,
     'EchoV1Output.MethodEnum': EchoV1Output.MethodEnum,
     'EntryRules.TypeEnum': EntryRules.TypeEnum,
@@ -1339,6 +1344,7 @@ let enumsMap: { [index: string]: any } = {
     'EventExitRule.ExitTypeEnum': EventExitRule.ExitTypeEnum,
     'EventExitRule.TypeEnum': EventExitRule.TypeEnum,
     'EventSplitWithTimeoutState.TypeEnum': EventSplitWithTimeoutState.TypeEnum,
+    'ExitDestinationState.TypeEnum': ExitDestinationState.TypeEnum,
     'ExitRule.TypeEnum': ExitRule.TypeEnum,
     'ExitRule.ExitTypeEnum': ExitRule.ExitTypeEnum,
     'ExitState.TypeEnum': ExitState.TypeEnum,
@@ -1410,10 +1416,10 @@ let enumsMap: { [index: string]: any } = {
         ReverseEtlScheduleDefinition.StrategyEnum,
     'RuleInputV1.TypeEnum': RuleInputV1.TypeEnum,
     'RuleV1.TypeEnum': RuleV1.TypeEnum,
+    'RulesInner.ExitTypeEnum': RulesInner.ExitTypeEnum,
+    'RulesInner.TypeEnum': RulesInner.TypeEnum,
     'SimpleDelayState.TypeEnum': SimpleDelayState.TypeEnum,
     'SourceMetadataV1.StatusEnum': SourceMetadataV1.StatusEnum,
-    'StatesInner.TypeEnum': StatesInner.TypeEnum,
-    'StatesInner.ExitTypeEnum': StatesInner.ExitTypeEnum,
     'TimeOutBranch.TypeEnum': TimeOutBranch.TypeEnum,
     'TrackSourceSettingsV1.CommonEventOnViolationsEnum':
         TrackSourceSettingsV1.CommonEventOnViolationsEnum,
@@ -1654,6 +1660,7 @@ let typeMap: { [index: string]: any } = {
     DestinationSubscription: DestinationSubscription,
     DestinationSubscriptionUpdateInput: DestinationSubscriptionUpdateInput,
     DestinationV1: DestinationV1,
+    DestinationsInner: DestinationsInner,
     DisableEdgeFunctions200Response: DisableEdgeFunctions200Response,
     DisableEdgeFunctionsAlphaOutput: DisableEdgeFunctionsAlphaOutput,
     Echo200Response: Echo200Response,
@@ -1666,6 +1673,7 @@ let typeMap: { [index: string]: any } = {
     EventExitRule: EventExitRule,
     EventSourceV1: EventSourceV1,
     EventSplitWithTimeoutState: EventSplitWithTimeoutState,
+    ExitDestinationState: ExitDestinationState,
     ExitRule: ExitRule,
     ExitRulesConfig: ExitRulesConfig,
     ExitState: ExitState,
@@ -2034,6 +2042,7 @@ let typeMap: { [index: string]: any } = {
     RoleV1: RoleV1,
     RuleInputV1: RuleInputV1,
     RuleV1: RuleV1,
+    RulesInner: RulesInner,
     SimpleDelayState: SimpleDelayState,
     SourceAPICallSnapshotV1: SourceAPICallSnapshotV1,
     SourceAlpha: SourceAlpha,
@@ -2045,7 +2054,6 @@ let typeMap: { [index: string]: any } = {
     Space: Space,
     SpaceWarehouseSchemaOverride: SpaceWarehouseSchemaOverride,
     SpaceWarehouseSelectiveSyncItemAlpha: SpaceWarehouseSelectiveSyncItemAlpha,
-    StatesInner: StatesInner,
     StepLevelAnalytics: StepLevelAnalytics,
     StreamStatusV1: StreamStatusV1,
     SuppressedInner: SuppressedInner,

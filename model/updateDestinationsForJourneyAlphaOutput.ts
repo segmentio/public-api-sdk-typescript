@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { DestinationState } from './destinationState';
+import { DestinationsInner } from './destinationsInner';
 
 /**
  * DESTINATION update response.
@@ -28,7 +28,7 @@ export class UpdateDestinationsForJourneyAlphaOutput {
     /**
      * The updated DESTINATIONS.
      */
-    'destinations': Array<DestinationState>;
+    'destinations': Array<DestinationsInner>;
 
     static discriminator: string | undefined = undefined;
 
@@ -50,7 +50,7 @@ export class UpdateDestinationsForJourneyAlphaOutput {
         {
             name: 'destinations',
             baseName: 'destinations',
-            type: 'Array<DestinationState>',
+            type: 'Array<DestinationsInner>',
         },
     ];
 

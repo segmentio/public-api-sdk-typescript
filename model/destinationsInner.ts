@@ -11,23 +11,17 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceExitRule } from './audienceExitRule';
 import { Destination } from './destination';
 import { DestinationState } from './destinationState';
-import { EventExitRule } from './eventExitRule';
+import { ExitDestinationState } from './exitDestinationState';
 import { Key } from './key';
 import { Transitions } from './transitions';
 
-export class StatesInner {
-    'type': StatesInner.TypeEnum;
+export class DestinationsInner {
+    'type': DestinationsInner.TypeEnum;
     'destinations': Array<Destination>;
     'transitions': Array<Transitions>;
     'key': Key;
-    'exitType': StatesInner.ExitTypeEnum;
-    'condition': string;
-    'enabled': boolean;
-    'concurrencyEnabled': boolean;
-    'audienceId': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -39,7 +33,7 @@ export class StatesInner {
         {
             name: 'type',
             baseName: 'type',
-            type: 'StatesInner.TypeEnum',
+            type: 'DestinationsInner.TypeEnum',
         },
         {
             name: 'destinations',
@@ -56,44 +50,15 @@ export class StatesInner {
             baseName: 'key',
             type: 'Key',
         },
-        {
-            name: 'exitType',
-            baseName: 'exitType',
-            type: 'StatesInner.ExitTypeEnum',
-        },
-        {
-            name: 'condition',
-            baseName: 'condition',
-            type: 'string',
-        },
-        {
-            name: 'enabled',
-            baseName: 'enabled',
-            type: 'boolean',
-        },
-        {
-            name: 'concurrencyEnabled',
-            baseName: 'concurrencyEnabled',
-            type: 'boolean',
-        },
-        {
-            name: 'audienceId',
-            baseName: 'audienceId',
-            type: 'string',
-        },
     ];
 
     static getAttributeTypeMap() {
-        return StatesInner.attributeTypeMap;
+        return DestinationsInner.attributeTypeMap;
     }
 }
 
-export namespace StatesInner {
+export namespace DestinationsInner {
     export enum TypeEnum {
         DESTINATION = <any>'DESTINATION',
-        EXIT_RULE = <any>'EXIT_RULE',
-    }
-    export enum ExitTypeEnum {
-        AUDIENCE_MEMBERSHIP_CHANGE = <any>'AUDIENCE_MEMBERSHIP_CHANGE',
     }
 }

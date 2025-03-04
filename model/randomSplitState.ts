@@ -52,6 +52,7 @@ export namespace RandomSplitState {
     export enum TypeEnum {
         RANDOM_SPLIT = <any>'RANDOM_SPLIT',
         EXIT = <any>'EXIT',
+        DESTINATION = <any>'DESTINATION',
         EXIT_RULE = <any>'EXIT_RULE',
     }
 }

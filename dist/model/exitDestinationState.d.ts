@@ -1,8 +1,8 @@
+import { Destination } from './destination';
 import { Key } from './key';
-import { RandomSplitBranch } from './randomSplitBranch';
-export declare class RandomSplitState {
-    'type': RandomSplitState.TypeEnum;
-    'transitions': Array<RandomSplitBranch>;
+export declare class ExitDestinationState {
+    'type': ExitDestinationState.TypeEnum;
+    'destinations': Array<Destination>;
     'key': Key;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
@@ -16,11 +16,8 @@ export declare class RandomSplitState {
         type: string;
     }[];
 }
-export declare namespace RandomSplitState {
+export declare namespace ExitDestinationState {
     enum TypeEnum {
-        RANDOM_SPLIT,
-        EXIT,
-        DESTINATION,
-        EXIT_RULE
+        DESTINATION
     }
 }

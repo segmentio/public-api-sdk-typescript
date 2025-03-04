@@ -1,15 +1,12 @@
-import { Destination } from './destination';
 import { Key } from './key';
-import { Transitions } from './transitions';
-export declare class StatesInner {
-    'type': StatesInner.TypeEnum;
-    'destinations': Array<Destination>;
-    'transitions': Array<Transitions>;
-    'key': Key;
-    'exitType': StatesInner.ExitTypeEnum;
+export declare class RulesInner {
+    'exitType': RulesInner.ExitTypeEnum;
     'condition': string;
+    'type': RulesInner.TypeEnum;
     'enabled': boolean;
     'concurrencyEnabled': boolean;
+    'connectedDestinations'?: Array<string>;
+    'key': Key;
     'audienceId': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
@@ -23,12 +20,11 @@ export declare class StatesInner {
         type: string;
     }[];
 }
-export declare namespace StatesInner {
-    enum TypeEnum {
-        DESTINATION,
-        EXIT_RULE
-    }
+export declare namespace RulesInner {
     enum ExitTypeEnum {
         AUDIENCE_MEMBERSHIP_CHANGE
+    }
+    enum TypeEnum {
+        EXIT_RULE
     }
 }

@@ -1,12 +1,11 @@
 import { Key } from './key';
-import { Transitions } from './transitions';
 export declare class EventExitRule {
     'exitType': EventExitRule.ExitTypeEnum;
     'condition': string;
     'type': EventExitRule.TypeEnum;
     'enabled': boolean;
     'concurrencyEnabled': boolean;
-    'transitions'?: Array<Transitions>;
+    'connectedDestinations'?: Array<string>;
     'key': Key;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

@@ -1,10 +1,10 @@
 import { Destination } from './destination';
 import { Key } from './key';
-import { Transitions } from './transitions';
+import { RandomSplitBranch } from './randomSplitBranch';
 export declare class BaseState {
     'type': BaseState.TypeEnum;
     'condition': string;
-    'transitions': Array<Transitions>;
+    'transitions': Array<RandomSplitBranch>;
     'key': Key;
     'audienceId': string;
     'destinations': Array<Destination>;
@@ -12,6 +12,7 @@ export declare class BaseState {
     'exitType': BaseState.ExitTypeEnum;
     'enabled': boolean;
     'concurrencyEnabled': boolean;
+    'connectedDestinations'?: Array<string>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -28,6 +29,7 @@ export declare namespace BaseState {
     enum TypeEnum {
         RANDOM_SPLIT,
         EXIT,
+        DESTINATION,
         EXIT_RULE
     }
     enum ExitTypeEnum {

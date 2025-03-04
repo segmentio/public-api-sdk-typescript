@@ -15,9 +15,14 @@ var ExitRulesConfig = (function () {
             type: 'boolean',
         },
         {
-            name: 'states',
-            baseName: 'states',
-            type: 'Array<StatesInner>',
+            name: 'rules',
+            baseName: 'rules',
+            type: 'Array<RulesInner>',
+        },
+        {
+            name: 'relatedDestinations',
+            baseName: 'relatedDestinations',
+            type: 'Array<ExitDestinationState>',
         },
     ];
     return ExitRulesConfig;

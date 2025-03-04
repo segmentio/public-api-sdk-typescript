@@ -1,8 +1,8 @@
-import { DestinationState } from './destinationState';
+import { DestinationsInner } from './destinationsInner';
 export declare class UpdateDestinationsForJourneyAlphaOutput {
     'containerId': string;
     'version'?: number;
-    'destinations': Array<DestinationState>;
+    'destinations': Array<DestinationsInner>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

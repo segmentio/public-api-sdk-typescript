@@ -22,7 +22,7 @@ var BaseState = (function () {
         {
             name: 'transitions',
             baseName: 'transitions',
-            type: 'Array<Transitions>',
+            type: 'Array<RandomSplitBranch>',
         },
         {
             name: 'key',
@@ -59,6 +59,11 @@ var BaseState = (function () {
             baseName: 'concurrencyEnabled',
             type: 'boolean',
         },
+        {
+            name: 'connectedDestinations',
+            baseName: 'connectedDestinations',
+            type: 'Array<string>',
+        },
     ];
     return BaseState;
 }());
@@ -68,6 +73,7 @@ exports.BaseState = BaseState;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["RANDOM_SPLIT"] = 'RANDOM_SPLIT'] = "RANDOM_SPLIT";
         TypeEnum[TypeEnum["EXIT"] = 'EXIT'] = "EXIT";
+        TypeEnum[TypeEnum["DESTINATION"] = 'DESTINATION'] = "DESTINATION";
         TypeEnum[TypeEnum["EXIT_RULE"] = 'EXIT_RULE'] = "EXIT_RULE";
     })(TypeEnum = BaseState.TypeEnum || (BaseState.TypeEnum = {}));
     var ExitTypeEnum;

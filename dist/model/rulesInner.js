@@ -1,18 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.EventExitRule = void 0;
-var EventExitRule = (function () {
-    function EventExitRule() {
+exports.RulesInner = void 0;
+var RulesInner = (function () {
+    function RulesInner() {
     }
-    EventExitRule.getAttributeTypeMap = function () {
-        return EventExitRule.attributeTypeMap;
+    RulesInner.getAttributeTypeMap = function () {
+        return RulesInner.attributeTypeMap;
     };
-    EventExitRule.discriminator = undefined;
-    EventExitRule.attributeTypeMap = [
+    RulesInner.discriminator = undefined;
+    RulesInner.attributeTypeMap = [
         {
             name: 'exitType',
             baseName: 'exitType',
-            type: 'EventExitRule.ExitTypeEnum',
+            type: 'RulesInner.ExitTypeEnum',
         },
         {
             name: 'condition',
@@ -22,7 +22,7 @@ var EventExitRule = (function () {
         {
             name: 'type',
             baseName: 'type',
-            type: 'EventExitRule.TypeEnum',
+            type: 'RulesInner.TypeEnum',
         },
         {
             name: 'enabled',
@@ -44,19 +44,24 @@ var EventExitRule = (function () {
             baseName: 'key',
             type: 'Key',
         },
+        {
+            name: 'audienceId',
+            baseName: 'audienceId',
+            type: 'string',
+        },
     ];
-    return EventExitRule;
+    return RulesInner;
 }());
-exports.EventExitRule = EventExitRule;
-(function (EventExitRule) {
+exports.RulesInner = RulesInner;
+(function (RulesInner) {
     var ExitTypeEnum;
     (function (ExitTypeEnum) {
-        ExitTypeEnum[ExitTypeEnum["EVENT_PERFORMED"] = 'EVENT_PERFORMED'] = "EVENT_PERFORMED";
-    })(ExitTypeEnum = EventExitRule.ExitTypeEnum || (EventExitRule.ExitTypeEnum = {}));
+        ExitTypeEnum[ExitTypeEnum["AUDIENCE_MEMBERSHIP_CHANGE"] = 'AUDIENCE_MEMBERSHIP_CHANGE'] = "AUDIENCE_MEMBERSHIP_CHANGE";
+    })(ExitTypeEnum = RulesInner.ExitTypeEnum || (RulesInner.ExitTypeEnum = {}));
     var TypeEnum;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["EXIT_RULE"] = 'EXIT_RULE'] = "EXIT_RULE";
-    })(TypeEnum = EventExitRule.TypeEnum || (EventExitRule.TypeEnum = {}));
-})(EventExitRule = exports.EventExitRule || (exports.EventExitRule = {}));
-exports.EventExitRule = EventExitRule;
-//# sourceMappingURL=eventExitRule.js.map
+    })(TypeEnum = RulesInner.TypeEnum || (RulesInner.TypeEnum = {}));
+})(RulesInner = exports.RulesInner || (exports.RulesInner = {}));
+exports.RulesInner = RulesInner;
+//# sourceMappingURL=rulesInner.js.map

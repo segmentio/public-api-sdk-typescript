@@ -208,6 +208,7 @@ __exportStar(require("./destinationStatusV1"), exports);
 __exportStar(require("./destinationSubscription"), exports);
 __exportStar(require("./destinationSubscriptionUpdateInput"), exports);
 __exportStar(require("./destinationV1"), exports);
+__exportStar(require("./destinationsInner"), exports);
 __exportStar(require("./disableEdgeFunctions200Response"), exports);
 __exportStar(require("./disableEdgeFunctionsAlphaOutput"), exports);
 __exportStar(require("./echo200Response"), exports);
@@ -220,6 +221,7 @@ __exportStar(require("./eventEntryState"), exports);
 __exportStar(require("./eventExitRule"), exports);
 __exportStar(require("./eventSourceV1"), exports);
 __exportStar(require("./eventSplitWithTimeoutState"), exports);
+__exportStar(require("./exitDestinationState"), exports);
 __exportStar(require("./exitRule"), exports);
 __exportStar(require("./exitRulesConfig"), exports);
 __exportStar(require("./exitState"), exports);
@@ -520,6 +522,7 @@ __exportStar(require("./reverseEtlSpecificTimeScheduleConfig"), exports);
 __exportStar(require("./roleV1"), exports);
 __exportStar(require("./ruleInputV1"), exports);
 __exportStar(require("./ruleV1"), exports);
+__exportStar(require("./rulesInner"), exports);
 __exportStar(require("./simpleDelayState"), exports);
 __exportStar(require("./sourceAPICallSnapshotV1"), exports);
 __exportStar(require("./sourceAlpha"), exports);
@@ -531,7 +534,6 @@ __exportStar(require("./sourceV1"), exports);
 __exportStar(require("./space"), exports);
 __exportStar(require("./spaceWarehouseSchemaOverride"), exports);
 __exportStar(require("./spaceWarehouseSelectiveSyncItemAlpha"), exports);
-__exportStar(require("./statesInner"), exports);
 __exportStar(require("./stepLevelAnalytics"), exports);
 __exportStar(require("./streamStatusV1"), exports);
 __exportStar(require("./suppressedInner"), exports);
@@ -825,6 +827,7 @@ var destinationStatusV1_1 = require("./destinationStatusV1");
 var destinationSubscription_1 = require("./destinationSubscription");
 var destinationSubscriptionUpdateInput_1 = require("./destinationSubscriptionUpdateInput");
 var destinationV1_1 = require("./destinationV1");
+var destinationsInner_1 = require("./destinationsInner");
 var disableEdgeFunctions200Response_1 = require("./disableEdgeFunctions200Response");
 var disableEdgeFunctionsAlphaOutput_1 = require("./disableEdgeFunctionsAlphaOutput");
 var echo200Response_1 = require("./echo200Response");
@@ -837,6 +840,7 @@ var eventEntryState_1 = require("./eventEntryState");
 var eventExitRule_1 = require("./eventExitRule");
 var eventSourceV1_1 = require("./eventSourceV1");
 var eventSplitWithTimeoutState_1 = require("./eventSplitWithTimeoutState");
+var exitDestinationState_1 = require("./exitDestinationState");
 var exitRule_1 = require("./exitRule");
 var exitRulesConfig_1 = require("./exitRulesConfig");
 var exitState_1 = require("./exitState");
@@ -1137,6 +1141,7 @@ var reverseEtlSpecificTimeScheduleConfig_1 = require("./reverseEtlSpecificTimeSc
 var roleV1_1 = require("./roleV1");
 var ruleInputV1_1 = require("./ruleInputV1");
 var ruleV1_1 = require("./ruleV1");
+var rulesInner_1 = require("./rulesInner");
 var simpleDelayState_1 = require("./simpleDelayState");
 var sourceAPICallSnapshotV1_1 = require("./sourceAPICallSnapshotV1");
 var sourceAlpha_1 = require("./sourceAlpha");
@@ -1148,7 +1153,6 @@ var sourceV1_1 = require("./sourceV1");
 var space_1 = require("./space");
 var spaceWarehouseSchemaOverride_1 = require("./spaceWarehouseSchemaOverride");
 var spaceWarehouseSelectiveSyncItemAlpha_1 = require("./spaceWarehouseSelectiveSyncItemAlpha");
-var statesInner_1 = require("./statesInner");
 var stepLevelAnalytics_1 = require("./stepLevelAnalytics");
 var streamStatusV1_1 = require("./streamStatusV1");
 var suppressedInner_1 = require("./suppressedInner");
@@ -1308,6 +1312,7 @@ var enumsMap = {
     'DestinationMetadataV1.StatusEnum': destinationMetadataV1_1.DestinationMetadataV1.StatusEnum,
     'DestinationState.TypeEnum': destinationState_1.DestinationState.TypeEnum,
     'DestinationStatusV1.StatusEnum': destinationStatusV1_1.DestinationStatusV1.StatusEnum,
+    'DestinationsInner.TypeEnum': destinationsInner_1.DestinationsInner.TypeEnum,
     'EchoAlphaOutput.MethodEnum': echoAlphaOutput_1.EchoAlphaOutput.MethodEnum,
     'EchoV1Output.MethodEnum': echoV1Output_1.EchoV1Output.MethodEnum,
     'EntryRules.TypeEnum': entryRules_1.EntryRules.TypeEnum,
@@ -1315,6 +1320,7 @@ var enumsMap = {
     'EventExitRule.ExitTypeEnum': eventExitRule_1.EventExitRule.ExitTypeEnum,
     'EventExitRule.TypeEnum': eventExitRule_1.EventExitRule.TypeEnum,
     'EventSplitWithTimeoutState.TypeEnum': eventSplitWithTimeoutState_1.EventSplitWithTimeoutState.TypeEnum,
+    'ExitDestinationState.TypeEnum': exitDestinationState_1.ExitDestinationState.TypeEnum,
     'ExitRule.TypeEnum': exitRule_1.ExitRule.TypeEnum,
     'ExitRule.ExitTypeEnum': exitRule_1.ExitRule.ExitTypeEnum,
     'ExitState.TypeEnum': exitState_1.ExitState.TypeEnum,
@@ -1360,10 +1366,10 @@ var enumsMap = {
     'ReverseEtlScheduleDefinition.StrategyEnum': reverseEtlScheduleDefinition_1.ReverseEtlScheduleDefinition.StrategyEnum,
     'RuleInputV1.TypeEnum': ruleInputV1_1.RuleInputV1.TypeEnum,
     'RuleV1.TypeEnum': ruleV1_1.RuleV1.TypeEnum,
+    'RulesInner.ExitTypeEnum': rulesInner_1.RulesInner.ExitTypeEnum,
+    'RulesInner.TypeEnum': rulesInner_1.RulesInner.TypeEnum,
     'SimpleDelayState.TypeEnum': simpleDelayState_1.SimpleDelayState.TypeEnum,
     'SourceMetadataV1.StatusEnum': sourceMetadataV1_1.SourceMetadataV1.StatusEnum,
-    'StatesInner.TypeEnum': statesInner_1.StatesInner.TypeEnum,
-    'StatesInner.ExitTypeEnum': statesInner_1.StatesInner.ExitTypeEnum,
     'TimeOutBranch.TypeEnum': timeOutBranch_1.TimeOutBranch.TypeEnum,
     'TrackSourceSettingsV1.CommonEventOnViolationsEnum': trackSourceSettingsV1_1.TrackSourceSettingsV1.CommonEventOnViolationsEnum,
     'TrackingPlanV1.TypeEnum': trackingPlanV1_1.TrackingPlanV1.TypeEnum,
@@ -1574,6 +1580,7 @@ var typeMap = {
     DestinationSubscription: destinationSubscription_1.DestinationSubscription,
     DestinationSubscriptionUpdateInput: destinationSubscriptionUpdateInput_1.DestinationSubscriptionUpdateInput,
     DestinationV1: destinationV1_1.DestinationV1,
+    DestinationsInner: destinationsInner_1.DestinationsInner,
     DisableEdgeFunctions200Response: disableEdgeFunctions200Response_1.DisableEdgeFunctions200Response,
     DisableEdgeFunctionsAlphaOutput: disableEdgeFunctionsAlphaOutput_1.DisableEdgeFunctionsAlphaOutput,
     Echo200Response: echo200Response_1.Echo200Response,
@@ -1586,6 +1593,7 @@ var typeMap = {
     EventExitRule: eventExitRule_1.EventExitRule,
     EventSourceV1: eventSourceV1_1.EventSourceV1,
     EventSplitWithTimeoutState: eventSplitWithTimeoutState_1.EventSplitWithTimeoutState,
+    ExitDestinationState: exitDestinationState_1.ExitDestinationState,
     ExitRule: exitRule_1.ExitRule,
     ExitRulesConfig: exitRulesConfig_1.ExitRulesConfig,
     ExitState: exitState_1.ExitState,
@@ -1886,6 +1894,7 @@ var typeMap = {
     RoleV1: roleV1_1.RoleV1,
     RuleInputV1: ruleInputV1_1.RuleInputV1,
     RuleV1: ruleV1_1.RuleV1,
+    RulesInner: rulesInner_1.RulesInner,
     SimpleDelayState: simpleDelayState_1.SimpleDelayState,
     SourceAPICallSnapshotV1: sourceAPICallSnapshotV1_1.SourceAPICallSnapshotV1,
     SourceAlpha: sourceAlpha_1.SourceAlpha,
@@ -1897,7 +1906,6 @@ var typeMap = {
     Space: space_1.Space,
     SpaceWarehouseSchemaOverride: spaceWarehouseSchemaOverride_1.SpaceWarehouseSchemaOverride,
     SpaceWarehouseSelectiveSyncItemAlpha: spaceWarehouseSelectiveSyncItemAlpha_1.SpaceWarehouseSelectiveSyncItemAlpha,
-    StatesInner: statesInner_1.StatesInner,
     StepLevelAnalytics: stepLevelAnalytics_1.StepLevelAnalytics,
     StreamStatusV1: streamStatusV1_1.StreamStatusV1,
     SuppressedInner: suppressedInner_1.SuppressedInner,

@@ -11,15 +11,12 @@
  */
 
 import { RequestFile } from './models';
+import { Destination } from './destination';
 import { Key } from './key';
 
-export class AudienceExitRule {
-    'exitType': AudienceExitRule.ExitTypeEnum;
-    'audienceId': string;
-    'type': AudienceExitRule.TypeEnum;
-    'enabled': boolean;
-    'concurrencyEnabled': boolean;
-    'connectedDestinations'?: Array<string>;
+export class ExitDestinationState {
+    'type': ExitDestinationState.TypeEnum;
+    'destinations': Array<Destination>;
     'key': Key;
 
     static discriminator: string | undefined = undefined;
@@ -30,34 +27,14 @@ export class AudienceExitRule {
         type: string;
     }> = [
         {
-            name: 'exitType',
-            baseName: 'exitType',
-            type: 'AudienceExitRule.ExitTypeEnum',
-        },
-        {
-            name: 'audienceId',
-            baseName: 'audienceId',
-            type: 'string',
-        },
-        {
             name: 'type',
             baseName: 'type',
-            type: 'AudienceExitRule.TypeEnum',
+            type: 'ExitDestinationState.TypeEnum',
         },
         {
-            name: 'enabled',
-            baseName: 'enabled',
-            type: 'boolean',
-        },
-        {
-            name: 'concurrencyEnabled',
-            baseName: 'concurrencyEnabled',
-            type: 'boolean',
-        },
-        {
-            name: 'connectedDestinations',
-            baseName: 'connectedDestinations',
-            type: 'Array<string>',
+            name: 'destinations',
+            baseName: 'destinations',
+            type: 'Array<Destination>',
         },
         {
             name: 'key',
@@ -67,15 +44,12 @@ export class AudienceExitRule {
     ];
 
     static getAttributeTypeMap() {
-        return AudienceExitRule.attributeTypeMap;
+        return ExitDestinationState.attributeTypeMap;
     }
 }
 
-export namespace AudienceExitRule {
-    export enum ExitTypeEnum {
-        AUDIENCE_MEMBERSHIP_CHANGE = <any>'AUDIENCE_MEMBERSHIP_CHANGE',
-    }
+export namespace ExitDestinationState {
     export enum TypeEnum {
-        EXIT_RULE = <any>'EXIT_RULE',
+        DESTINATION = <any>'DESTINATION',
     }
 }

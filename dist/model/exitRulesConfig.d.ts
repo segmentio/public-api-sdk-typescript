@@ -1,7 +1,9 @@
-import { StatesInner } from './statesInner';
+import { ExitDestinationState } from './exitDestinationState';
+import { RulesInner } from './rulesInner';
 export declare class ExitRulesConfig {
     'enabled': boolean;
-    'states': Array<StatesInner>;
+    'rules': Array<RulesInner>;
+    'relatedDestinations'?: Array<ExitDestinationState>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

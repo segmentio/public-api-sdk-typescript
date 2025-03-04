@@ -11,16 +11,19 @@
  */
 
 import { RequestFile } from './models';
+import { AudienceExitRule } from './audienceExitRule';
+import { EventExitRule } from './eventExitRule';
 import { Key } from './key';
 
-export class AudienceExitRule {
-    'exitType': AudienceExitRule.ExitTypeEnum;
-    'audienceId': string;
-    'type': AudienceExitRule.TypeEnum;
+export class RulesInner {
+    'exitType': RulesInner.ExitTypeEnum;
+    'condition': string;
+    'type': RulesInner.TypeEnum;
     'enabled': boolean;
     'concurrencyEnabled': boolean;
     'connectedDestinations'?: Array<string>;
     'key': Key;
+    'audienceId': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -32,17 +35,17 @@ export class AudienceExitRule {
         {
             name: 'exitType',
             baseName: 'exitType',
-            type: 'AudienceExitRule.ExitTypeEnum',
+            type: 'RulesInner.ExitTypeEnum',
         },
         {
-            name: 'audienceId',
-            baseName: 'audienceId',
+            name: 'condition',
+            baseName: 'condition',
             type: 'string',
         },
         {
             name: 'type',
             baseName: 'type',
-            type: 'AudienceExitRule.TypeEnum',
+            type: 'RulesInner.TypeEnum',
         },
         {
             name: 'enabled',
@@ -64,14 +67,19 @@ export class AudienceExitRule {
             baseName: 'key',
             type: 'Key',
         },
+        {
+            name: 'audienceId',
+            baseName: 'audienceId',
+            type: 'string',
+        },
     ];
 
     static getAttributeTypeMap() {
-        return AudienceExitRule.attributeTypeMap;
+        return RulesInner.attributeTypeMap;
     }
 }
 
-export namespace AudienceExitRule {
+export namespace RulesInner {
     export enum ExitTypeEnum {
         AUDIENCE_MEMBERSHIP_CHANGE = <any>'AUDIENCE_MEMBERSHIP_CHANGE',
     }

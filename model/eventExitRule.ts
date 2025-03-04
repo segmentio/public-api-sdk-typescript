@@ -12,7 +12,6 @@
 
 import { RequestFile } from './models';
 import { Key } from './key';
-import { Transitions } from './transitions';
 
 export class EventExitRule {
     'exitType': EventExitRule.ExitTypeEnum;
@@ -20,7 +19,7 @@ export class EventExitRule {
     'type': EventExitRule.TypeEnum;
     'enabled': boolean;
     'concurrencyEnabled': boolean;
-    'transitions'?: Array<Transitions>;
+    'connectedDestinations'?: Array<string>;
     'key': Key;
 
     static discriminator: string | undefined = undefined;
@@ -56,9 +55,9 @@ export class EventExitRule {
             type: 'boolean',
         },
         {
-            name: 'transitions',
-            baseName: 'transitions',
-            type: 'Array<Transitions>',
+            name: 'connectedDestinations',
+            baseName: 'connectedDestinations',
+            type: 'Array<string>',
         },
         {
             name: 'key',

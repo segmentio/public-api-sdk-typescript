@@ -33,6 +33,7 @@ exports.RandomSplitState = RandomSplitState;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["RANDOM_SPLIT"] = 'RANDOM_SPLIT'] = "RANDOM_SPLIT";
         TypeEnum[TypeEnum["EXIT"] = 'EXIT'] = "EXIT";
+        TypeEnum[TypeEnum["DESTINATION"] = 'DESTINATION'] = "DESTINATION";
         TypeEnum[TypeEnum["EXIT_RULE"] = 'EXIT_RULE'] = "EXIT_RULE";
     })(TypeEnum = RandomSplitState.TypeEnum || (RandomSplitState.TypeEnum = {}));
 })(RandomSplitState = exports.RandomSplitState || (exports.RandomSplitState = {}));
