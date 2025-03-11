@@ -40,14 +40,6 @@ export class CreateFilterForSpaceInput {
      * Whether the event is dropped.
      */
     'drop'?: boolean;
-    /**
-     * Describes the properties to be dropped on events that match the \"if\" statement.
-     */
-    'dropProperties'?: Array<string>;
-    /**
-     * Describes the properties allowed on events that match the \"if\" statement.
-     */
-    'allowProperties'?: Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -85,16 +77,6 @@ export class CreateFilterForSpaceInput {
             name: 'drop',
             baseName: 'drop',
             type: 'boolean',
-        },
-        {
-            name: 'dropProperties',
-            baseName: 'dropProperties',
-            type: 'Array<string>',
-        },
-        {
-            name: 'allowProperties',
-            baseName: 'allowProperties',
-            type: 'Array<string>',
         },
     ];
 

@@ -50,16 +50,6 @@ var Filter = (function () {
             type: 'boolean',
         },
         {
-            name: 'dropProperties',
-            baseName: 'dropProperties',
-            type: 'Array<string>',
-        },
-        {
-            name: 'allowProperties',
-            baseName: 'allowProperties',
-            type: 'Array<string>',
-        },
-        {
             name: 'createdAt',
             baseName: 'createdAt',
             type: 'string',

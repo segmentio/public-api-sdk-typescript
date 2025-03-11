@@ -49,14 +49,6 @@ export class Filter {
      */
     'drop'?: boolean;
     /**
-     * Describes the properties to be dropped on events that match the \"if\" statement.
-     */
-    'dropProperties'?: Array<string>;
-    /**
-     * Describes the properties allowed on events that match the \"if\" statement.
-     */
-    'allowProperties'?: Array<string>;
-    /**
      * The timestamp of this filter\'s creation.
      */
     'createdAt': string;
@@ -111,16 +103,6 @@ export class Filter {
             name: 'drop',
             baseName: 'drop',
             type: 'boolean',
-        },
-        {
-            name: 'dropProperties',
-            baseName: 'dropProperties',
-            type: 'Array<string>',
-        },
-        {
-            name: 'allowProperties',
-            baseName: 'allowProperties',
-            type: 'Array<string>',
         },
         {
             name: 'createdAt',
