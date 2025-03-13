@@ -5,8 +5,6 @@ export declare class CreateFilterForSpaceInput {
     'description'?: string;
     'if': string;
     'drop'?: boolean;
-    'dropProperties'?: Array<string>;
-    'allowProperties'?: Array<string>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

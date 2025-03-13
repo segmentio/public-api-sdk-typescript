@@ -39,16 +39,6 @@ var CreateFilterForSpaceInput = (function () {
             baseName: 'drop',
             type: 'boolean',
         },
-        {
-            name: 'dropProperties',
-            baseName: 'dropProperties',
-            type: 'Array<string>',
-        },
-        {
-            name: 'allowProperties',
-            baseName: 'allowProperties',
-            type: 'Array<string>',
-        },
     ];
     return CreateFilterForSpaceInput;
 }());

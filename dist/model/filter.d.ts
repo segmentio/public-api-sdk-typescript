@@ -7,8 +7,6 @@ export declare class Filter {
     'description'?: string;
     'if'?: string;
     'drop'?: boolean;
-    'dropProperties'?: Array<string>;
-    'allowProperties'?: Array<string>;
     'createdAt': string;
     'updatedAt': string;
     static discriminator: string | undefined;
