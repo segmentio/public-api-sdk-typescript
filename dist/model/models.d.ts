@@ -320,6 +320,8 @@ export * from './journeyVersionOutput';
 export * from './key';
 export * from './labelAlpha';
 export * from './labelV1';
+export * from './listAudienceConsumersFromSpaceAndAudience200Response';
+export * from './listAudienceConsumersFromSpaceAndAudienceOutput';
 export * from './listAudiences200Response';
 export * from './listAudiencesAlphaOutput';
 export * from './listAuditEvents200Response';
