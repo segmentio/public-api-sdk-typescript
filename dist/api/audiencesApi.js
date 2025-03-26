@@ -297,7 +297,7 @@ var AudiencesApi = (function () {
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/spaces/{spaceId}/audiences/{id}/consumers'
+                    '/spaces/{spaceId}/audiences/{id}/audience-references'
                         .replace('{' + 'spaceId' + '}', encodeURIComponent(String(spaceId)))
                         .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
                 localVarQueryParameters = {};
