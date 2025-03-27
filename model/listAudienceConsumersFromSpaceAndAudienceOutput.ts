@@ -15,11 +15,11 @@ import { AudienceSummary } from './audienceSummary';
 import { PaginationOutput } from './paginationOutput';
 
 /**
- * List the audience consumers endpoint output.
+ * List Audience consumers output.
  */
 export class ListAudienceConsumersFromSpaceAndAudienceOutput {
     /**
-     * A list of audience summary results.
+     * The list of audience consumers.
      */
     'audiences': Array<AudienceSummary>;
     'pagination': PaginationOutput;

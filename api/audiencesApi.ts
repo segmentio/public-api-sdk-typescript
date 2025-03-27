@@ -392,7 +392,7 @@ export class AudiencesApi {
     }> {
         const localVarPath =
             this.basePath +
-            '/spaces/{spaceId}/audiences/{id}/consumers'
+            '/spaces/{spaceId}/audiences/{id}/audience-references'
                 .replace(
                     '{' + 'spaceId' + '}',
                     encodeURIComponent(String(spaceId))
