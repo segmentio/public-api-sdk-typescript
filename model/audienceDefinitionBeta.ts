@@ -11,10 +11,19 @@
  */
 
 import { RequestFile } from './models';
-import { GetAudienceBetaOutput } from './getAudienceBetaOutput';
 
-export class GetAudience200Response {
-    'data'?: GetAudienceBetaOutput;
+/**
+ * Defines an audience definition.
+ */
+export class AudienceDefinitionBeta {
+    /**
+     * The query language string defining the audience segmentation criteria.
+     */
+    'query': string;
+    /**
+     * The underlying data type being segmented for this audience.  Possible values: users, accounts.
+     */
+    'type': AudienceDefinitionBeta.TypeEnum;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,13 +33,25 @@ export class GetAudience200Response {
         type: string;
     }> = [
         {
-            name: 'data',
-            baseName: 'data',
-            type: 'GetAudienceBetaOutput',
+            name: 'query',
+            baseName: 'query',
+            type: 'string',
+        },
+        {
+            name: 'type',
+            baseName: 'type',
+            type: 'AudienceDefinitionBeta.TypeEnum',
         },
     ];
 
     static getAttributeTypeMap() {
-        return GetAudience200Response.attributeTypeMap;
+        return AudienceDefinitionBeta.attributeTypeMap;
+    }
+}
+
+export namespace AudienceDefinitionBeta {
+    export enum TypeEnum {
+        ACCOUNTS = <any>'ACCOUNTS',
+        USERS = <any>'USERS',
     }
 }

@@ -11,10 +11,16 @@
  */
 
 import { RequestFile } from './models';
-import { GetAudienceBetaOutput } from './getAudienceBetaOutput';
 
-export class GetAudience200Response {
-    'data'?: GetAudienceBetaOutput;
+export class AudienceOptionsBeta {
+    /**
+     * Determines whether data prior to the audience being created is included when determining audience membership. Note that including historical data may be needed in order to properly handle the definition specified. In these cases, Segment will automatically handle including historical data and the response will return the includeHistoricalData parameter as true.
+     */
+    'includeHistoricalData'?: boolean;
+    /**
+     * Determines whether anonymous users should be included when determining audience membership.
+     */
+    'includeAnonymousUsers'?: boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,13 +30,18 @@ export class GetAudience200Response {
         type: string;
     }> = [
         {
-            name: 'data',
-            baseName: 'data',
-            type: 'GetAudienceBetaOutput',
+            name: 'includeHistoricalData',
+            baseName: 'includeHistoricalData',
+            type: 'boolean',
+        },
+        {
+            name: 'includeAnonymousUsers',
+            baseName: 'includeAnonymousUsers',
+            type: 'boolean',
         },
     ];
 
     static getAttributeTypeMap() {
-        return GetAudience200Response.attributeTypeMap;
+        return AudienceOptionsBeta.attributeTypeMap;
     }
 }

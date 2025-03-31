@@ -12,7 +12,7 @@ var GetAudience200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'GetAudienceAlphaOutput',
+            type: 'GetAudienceBetaOutput',
         },
     ];
     return GetAudience200Response;
