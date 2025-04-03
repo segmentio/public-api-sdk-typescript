@@ -27,8 +27,11 @@ export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
 export * from './audienceComputationDefinition';
 export * from './audienceDefinition';
+export * from './audienceDefinitionBeta';
 export * from './audienceOptions';
+export * from './audienceOptionsBeta';
 export * from './audienceSummary';
+export * from './audienceSummaryBeta';
 export * from './auditEventV1';
 export * from './batchQueryMessagingSubscriptionsForSpace200Response';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
@@ -196,7 +199,9 @@ export * from './generateUploadURLForEdgeFunctionsAlphaOutput';
 export * from './getAdvancedSyncScheduleFromWarehouse200Response';
 export * from './getAdvancedSyncScheduleFromWarehouseV1Output';
 export * from './getAudience200Response';
+export * from './getAudience200Response1';
 export * from './getAudienceAlphaOutput';
+export * from './getAudienceBetaOutput';
 export * from './getComputedTrait200Response';
 export * from './getComputedTraitAlphaOutput';
 export * from './getConnectionStateFromWarehouse200Response';
@@ -600,8 +605,11 @@ import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncSc
 import { AllowedLabelBeta } from './allowedLabelBeta';
 import { AudienceComputationDefinition } from './audienceComputationDefinition';
 import { AudienceDefinition } from './audienceDefinition';
+import { AudienceDefinitionBeta } from './audienceDefinitionBeta';
 import { AudienceOptions } from './audienceOptions';
+import { AudienceOptionsBeta } from './audienceOptionsBeta';
 import { AudienceSummary } from './audienceSummary';
+import { AudienceSummaryBeta } from './audienceSummaryBeta';
 import { AuditEventV1 } from './auditEventV1';
 import { BatchQueryMessagingSubscriptionsForSpace200Response } from './batchQueryMessagingSubscriptionsForSpace200Response';
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaInput } from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
@@ -769,7 +777,9 @@ import { GenerateUploadURLForEdgeFunctionsAlphaOutput } from './generateUploadUR
 import { GetAdvancedSyncScheduleFromWarehouse200Response } from './getAdvancedSyncScheduleFromWarehouse200Response';
 import { GetAdvancedSyncScheduleFromWarehouseV1Output } from './getAdvancedSyncScheduleFromWarehouseV1Output';
 import { GetAudience200Response } from './getAudience200Response';
+import { GetAudience200Response1 } from './getAudience200Response1';
 import { GetAudienceAlphaOutput } from './getAudienceAlphaOutput';
+import { GetAudienceBetaOutput } from './getAudienceBetaOutput';
 import { GetComputedTrait200Response } from './getComputedTrait200Response';
 import { GetComputedTraitAlphaOutput } from './getComputedTraitAlphaOutput';
 import { GetConnectionStateFromWarehouse200Response } from './getConnectionStateFromWarehouse200Response';
@@ -1154,6 +1164,7 @@ let enumsMap: { [index: string]: any } = {
     'AudienceComputationDefinition.TypeEnum':
         AudienceComputationDefinition.TypeEnum,
     'AudienceDefinition.TypeEnum': AudienceDefinition.TypeEnum,
+    'AudienceDefinitionBeta.TypeEnum': AudienceDefinitionBeta.TypeEnum,
     'ComputedTraitsDefinition.TypeEnum': ComputedTraitsDefinition.TypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum':
         CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
@@ -1323,8 +1334,11 @@ let typeMap: { [index: string]: any } = {
     AllowedLabelBeta: AllowedLabelBeta,
     AudienceComputationDefinition: AudienceComputationDefinition,
     AudienceDefinition: AudienceDefinition,
+    AudienceDefinitionBeta: AudienceDefinitionBeta,
     AudienceOptions: AudienceOptions,
+    AudienceOptionsBeta: AudienceOptionsBeta,
     AudienceSummary: AudienceSummary,
+    AudienceSummaryBeta: AudienceSummaryBeta,
     AuditEventV1: AuditEventV1,
     BatchQueryMessagingSubscriptionsForSpace200Response:
         BatchQueryMessagingSubscriptionsForSpace200Response,
@@ -1514,7 +1528,9 @@ let typeMap: { [index: string]: any } = {
     GetAdvancedSyncScheduleFromWarehouseV1Output:
         GetAdvancedSyncScheduleFromWarehouseV1Output,
     GetAudience200Response: GetAudience200Response,
+    GetAudience200Response1: GetAudience200Response1,
     GetAudienceAlphaOutput: GetAudienceAlphaOutput,
+    GetAudienceBetaOutput: GetAudienceBetaOutput,
     GetComputedTrait200Response: GetComputedTrait200Response,
     GetComputedTraitAlphaOutput: GetComputedTraitAlphaOutput,
     GetConnectionStateFromWarehouse200Response:

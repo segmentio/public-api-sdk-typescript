@@ -1,6 +1,6 @@
-import { GetAudienceBetaOutput } from './getAudienceBetaOutput';
-export declare class GetAudience200Response {
-    'data'?: GetAudienceBetaOutput;
+export declare class AudienceDefinitionBeta {
+    'query': string;
+    'type': AudienceDefinitionBeta.TypeEnum;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -12,4 +12,10 @@ export declare class GetAudience200Response {
         baseName: string;
         type: string;
     }[];
+}
+export declare namespace AudienceDefinitionBeta {
+    enum TypeEnum {
+        ACCOUNTS,
+        USERS
+    }
 }

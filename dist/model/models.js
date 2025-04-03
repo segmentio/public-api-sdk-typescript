@@ -42,8 +42,11 @@ __exportStar(require("./advancedWarehouseSyncScheduleV1Output"), exports);
 __exportStar(require("./allowedLabelBeta"), exports);
 __exportStar(require("./audienceComputationDefinition"), exports);
 __exportStar(require("./audienceDefinition"), exports);
+__exportStar(require("./audienceDefinitionBeta"), exports);
 __exportStar(require("./audienceOptions"), exports);
+__exportStar(require("./audienceOptionsBeta"), exports);
 __exportStar(require("./audienceSummary"), exports);
+__exportStar(require("./audienceSummaryBeta"), exports);
 __exportStar(require("./auditEventV1"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpace200Response"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput"), exports);
@@ -211,7 +214,9 @@ __exportStar(require("./generateUploadURLForEdgeFunctionsAlphaOutput"), exports)
 __exportStar(require("./getAdvancedSyncScheduleFromWarehouse200Response"), exports);
 __exportStar(require("./getAdvancedSyncScheduleFromWarehouseV1Output"), exports);
 __exportStar(require("./getAudience200Response"), exports);
+__exportStar(require("./getAudience200Response1"), exports);
 __exportStar(require("./getAudienceAlphaOutput"), exports);
+__exportStar(require("./getAudienceBetaOutput"), exports);
 __exportStar(require("./getComputedTrait200Response"), exports);
 __exportStar(require("./getComputedTraitAlphaOutput"), exports);
 __exportStar(require("./getConnectionStateFromWarehouse200Response"), exports);
@@ -602,8 +607,11 @@ var advancedWarehouseSyncScheduleV1Output_1 = require("./advancedWarehouseSyncSc
 var allowedLabelBeta_1 = require("./allowedLabelBeta");
 var audienceComputationDefinition_1 = require("./audienceComputationDefinition");
 var audienceDefinition_1 = require("./audienceDefinition");
+var audienceDefinitionBeta_1 = require("./audienceDefinitionBeta");
 var audienceOptions_1 = require("./audienceOptions");
+var audienceOptionsBeta_1 = require("./audienceOptionsBeta");
 var audienceSummary_1 = require("./audienceSummary");
+var audienceSummaryBeta_1 = require("./audienceSummaryBeta");
 var auditEventV1_1 = require("./auditEventV1");
 var batchQueryMessagingSubscriptionsForSpace200Response_1 = require("./batchQueryMessagingSubscriptionsForSpace200Response");
 var batchQueryMessagingSubscriptionsForSpaceAlphaInput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput");
@@ -771,7 +779,9 @@ var generateUploadURLForEdgeFunctionsAlphaOutput_1 = require("./generateUploadUR
 var getAdvancedSyncScheduleFromWarehouse200Response_1 = require("./getAdvancedSyncScheduleFromWarehouse200Response");
 var getAdvancedSyncScheduleFromWarehouseV1Output_1 = require("./getAdvancedSyncScheduleFromWarehouseV1Output");
 var getAudience200Response_1 = require("./getAudience200Response");
+var getAudience200Response1_1 = require("./getAudience200Response1");
 var getAudienceAlphaOutput_1 = require("./getAudienceAlphaOutput");
+var getAudienceBetaOutput_1 = require("./getAudienceBetaOutput");
 var getComputedTrait200Response_1 = require("./getComputedTrait200Response");
 var getComputedTraitAlphaOutput_1 = require("./getComputedTraitAlphaOutput");
 var getConnectionStateFromWarehouse200Response_1 = require("./getConnectionStateFromWarehouse200Response");
@@ -1150,6 +1160,7 @@ var enumsMap = {
     'AddSourceToTrackingPlanV1Output.StatusEnum': addSourceToTrackingPlanV1Output_1.AddSourceToTrackingPlanV1Output.StatusEnum,
     'AudienceComputationDefinition.TypeEnum': audienceComputationDefinition_1.AudienceComputationDefinition.TypeEnum,
     'AudienceDefinition.TypeEnum': audienceDefinition_1.AudienceDefinition.TypeEnum,
+    'AudienceDefinitionBeta.TypeEnum': audienceDefinitionBeta_1.AudienceDefinitionBeta.TypeEnum,
     'ComputedTraitsDefinition.TypeEnum': computedTraitsDefinition_1.ComputedTraitsDefinition.TypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
@@ -1264,8 +1275,11 @@ var typeMap = {
     AllowedLabelBeta: allowedLabelBeta_1.AllowedLabelBeta,
     AudienceComputationDefinition: audienceComputationDefinition_1.AudienceComputationDefinition,
     AudienceDefinition: audienceDefinition_1.AudienceDefinition,
+    AudienceDefinitionBeta: audienceDefinitionBeta_1.AudienceDefinitionBeta,
     AudienceOptions: audienceOptions_1.AudienceOptions,
+    AudienceOptionsBeta: audienceOptionsBeta_1.AudienceOptionsBeta,
     AudienceSummary: audienceSummary_1.AudienceSummary,
+    AudienceSummaryBeta: audienceSummaryBeta_1.AudienceSummaryBeta,
     AuditEventV1: auditEventV1_1.AuditEventV1,
     BatchQueryMessagingSubscriptionsForSpace200Response: batchQueryMessagingSubscriptionsForSpace200Response_1.BatchQueryMessagingSubscriptionsForSpace200Response,
     BatchQueryMessagingSubscriptionsForSpaceAlphaInput: batchQueryMessagingSubscriptionsForSpaceAlphaInput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaInput,
@@ -1433,7 +1447,9 @@ var typeMap = {
     GetAdvancedSyncScheduleFromWarehouse200Response: getAdvancedSyncScheduleFromWarehouse200Response_1.GetAdvancedSyncScheduleFromWarehouse200Response,
     GetAdvancedSyncScheduleFromWarehouseV1Output: getAdvancedSyncScheduleFromWarehouseV1Output_1.GetAdvancedSyncScheduleFromWarehouseV1Output,
     GetAudience200Response: getAudience200Response_1.GetAudience200Response,
+    GetAudience200Response1: getAudience200Response1_1.GetAudience200Response1,
     GetAudienceAlphaOutput: getAudienceAlphaOutput_1.GetAudienceAlphaOutput,
+    GetAudienceBetaOutput: getAudienceBetaOutput_1.GetAudienceBetaOutput,
     GetComputedTrait200Response: getComputedTrait200Response_1.GetComputedTrait200Response,
     GetComputedTraitAlphaOutput: getComputedTraitAlphaOutput_1.GetComputedTraitAlphaOutput,
     GetConnectionStateFromWarehouse200Response: getConnectionStateFromWarehouse200Response_1.GetConnectionStateFromWarehouse200Response,

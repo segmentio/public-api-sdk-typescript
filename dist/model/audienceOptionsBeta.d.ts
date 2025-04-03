@@ -1,6 +1,6 @@
-import { GetAudienceBetaOutput } from './getAudienceBetaOutput';
-export declare class GetAudience200Response {
-    'data'?: GetAudienceBetaOutput;
+export declare class AudienceOptionsBeta {
+    'includeHistoricalData'?: boolean;
+    'includeAnonymousUsers'?: boolean;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
