@@ -304,6 +304,8 @@ __exportStar(require("./invitePermissionV1"), exports);
 __exportStar(require("./inviteV1"), exports);
 __exportStar(require("./labelAlpha"), exports);
 __exportStar(require("./labelV1"), exports);
+__exportStar(require("./listAudienceConsumersFromSpaceAndAudience200Response"), exports);
+__exportStar(require("./listAudienceConsumersFromSpaceAndAudienceOutput"), exports);
 __exportStar(require("./listAudiences200Response"), exports);
 __exportStar(require("./listAudiencesAlphaOutput"), exports);
 __exportStar(require("./listAuditEvents200Response"), exports);
@@ -869,6 +871,8 @@ var invitePermissionV1_1 = require("./invitePermissionV1");
 var inviteV1_1 = require("./inviteV1");
 var labelAlpha_1 = require("./labelAlpha");
 var labelV1_1 = require("./labelV1");
+var listAudienceConsumersFromSpaceAndAudience200Response_1 = require("./listAudienceConsumersFromSpaceAndAudience200Response");
+var listAudienceConsumersFromSpaceAndAudienceOutput_1 = require("./listAudienceConsumersFromSpaceAndAudienceOutput");
 var listAudiences200Response_1 = require("./listAudiences200Response");
 var listAudiencesAlphaOutput_1 = require("./listAudiencesAlphaOutput");
 var listAuditEvents200Response_1 = require("./listAuditEvents200Response");
@@ -1537,6 +1541,8 @@ var typeMap = {
     InviteV1: inviteV1_1.InviteV1,
     LabelAlpha: labelAlpha_1.LabelAlpha,
     LabelV1: labelV1_1.LabelV1,
+    ListAudienceConsumersFromSpaceAndAudience200Response: listAudienceConsumersFromSpaceAndAudience200Response_1.ListAudienceConsumersFromSpaceAndAudience200Response,
+    ListAudienceConsumersFromSpaceAndAudienceOutput: listAudienceConsumersFromSpaceAndAudienceOutput_1.ListAudienceConsumersFromSpaceAndAudienceOutput,
     ListAudiences200Response: listAudiences200Response_1.ListAudiences200Response,
     ListAudiencesAlphaOutput: listAudiencesAlphaOutput_1.ListAudiencesAlphaOutput,
     ListAuditEvents200Response: listAuditEvents200Response_1.ListAuditEvents200Response,
