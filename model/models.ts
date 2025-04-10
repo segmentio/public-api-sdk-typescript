@@ -289,6 +289,8 @@ export * from './invitePermissionV1';
 export * from './inviteV1';
 export * from './labelAlpha';
 export * from './labelV1';
+export * from './listAudienceConsumersFromSpaceAndAudience200Response';
+export * from './listAudienceConsumersFromSpaceAndAudienceOutput';
 export * from './listAudiences200Response';
 export * from './listAudiencesAlphaOutput';
 export * from './listAuditEvents200Response';
@@ -867,6 +869,8 @@ import { InvitePermissionV1 } from './invitePermissionV1';
 import { InviteV1 } from './inviteV1';
 import { LabelAlpha } from './labelAlpha';
 import { LabelV1 } from './labelV1';
+import { ListAudienceConsumersFromSpaceAndAudience200Response } from './listAudienceConsumersFromSpaceAndAudience200Response';
+import { ListAudienceConsumersFromSpaceAndAudienceOutput } from './listAudienceConsumersFromSpaceAndAudienceOutput';
 import { ListAudiences200Response } from './listAudiences200Response';
 import { ListAudiencesAlphaOutput } from './listAudiencesAlphaOutput';
 import { ListAuditEvents200Response } from './listAuditEvents200Response';
@@ -1632,6 +1636,10 @@ let typeMap: { [index: string]: any } = {
     InviteV1: InviteV1,
     LabelAlpha: LabelAlpha,
     LabelV1: LabelV1,
+    ListAudienceConsumersFromSpaceAndAudience200Response:
+        ListAudienceConsumersFromSpaceAndAudience200Response,
+    ListAudienceConsumersFromSpaceAndAudienceOutput:
+        ListAudienceConsumersFromSpaceAndAudienceOutput,
     ListAudiences200Response: ListAudiences200Response,
     ListAudiencesAlphaOutput: ListAudiencesAlphaOutput,
     ListAuditEvents200Response: ListAuditEvents200Response,
