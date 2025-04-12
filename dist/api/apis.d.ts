@@ -31,8 +31,6 @@ export * from './iAMRolesApi';
 import { IAMRolesApi } from './iAMRolesApi';
 export * from './iAMUsersApi';
 import { IAMUsersApi } from './iAMUsersApi';
-export * from './journeysApi';
-import { JourneysApi } from './journeysApi';
 export * from './labelsApi';
 import { LabelsApi } from './labelsApi';
 export * from './monthlyTrackedUsersApi';
@@ -67,7 +65,7 @@ export declare class HttpError extends Error {
     constructor(response: http.IncomingMessage, body: any, statusCode?: number | undefined);
 }
 export { RequestFile } from '../model/models';
-export declare const APIS: (typeof APICallsApi | typeof AudiencesApi | typeof AuditTrailApi | typeof CatalogApi | typeof ComputedTraitsApi | typeof DbtApi | typeof DeletionAndSuppressionApi | typeof DeliveryOverviewApi | typeof DestinationFiltersApi | typeof DestinationsApi | typeof EdgeFunctionsApi | typeof EventsApi | typeof FunctionsApi | typeof IAMGroupsApi | typeof IAMRolesApi | typeof IAMUsersApi | typeof JourneysApi | typeof LabelsApi | typeof MonthlyTrackedUsersApi | typeof ProfilesSyncApi | typeof ReverseETLApi | typeof SelectiveSyncApi | typeof SourcesApi | typeof SpaceFiltersApi | typeof SpacesApi | typeof TestingApi | typeof TrackingPlansApi | typeof TransformationsApi | typeof WarehousesApi | typeof WorkspacesApi)[];
+export declare const APIS: (typeof APICallsApi | typeof AudiencesApi | typeof AuditTrailApi | typeof CatalogApi | typeof ComputedTraitsApi | typeof DbtApi | typeof DeletionAndSuppressionApi | typeof DeliveryOverviewApi | typeof DestinationFiltersApi | typeof DestinationsApi | typeof EdgeFunctionsApi | typeof EventsApi | typeof FunctionsApi | typeof IAMGroupsApi | typeof IAMRolesApi | typeof IAMUsersApi | typeof LabelsApi | typeof MonthlyTrackedUsersApi | typeof ProfilesSyncApi | typeof ReverseETLApi | typeof SelectiveSyncApi | typeof SourcesApi | typeof SpaceFiltersApi | typeof SpacesApi | typeof TestingApi | typeof TrackingPlansApi | typeof TransformationsApi | typeof WarehousesApi | typeof WorkspacesApi)[];
 export interface Apis {
     apiCalls: APICallsApi;
     auditTrail: AuditTrailApi;

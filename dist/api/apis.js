@@ -98,8 +98,6 @@ __exportStar(require("./iAMRolesApi"), exports);
 var iAMRolesApi_1 = require("./iAMRolesApi");
 __exportStar(require("./iAMUsersApi"), exports);
 var iAMUsersApi_1 = require("./iAMUsersApi");
-__exportStar(require("./journeysApi"), exports);
-var journeysApi_1 = require("./journeysApi");
 __exportStar(require("./labelsApi"), exports);
 var labelsApi_1 = require("./labelsApi");
 __exportStar(require("./monthlyTrackedUsersApi"), exports);
@@ -156,7 +154,6 @@ exports.APIS = [
     iAMGroupsApi_1.IAMGroupsApi,
     iAMRolesApi_1.IAMRolesApi,
     iAMUsersApi_1.IAMUsersApi,
-    journeysApi_1.JourneysApi,
     labelsApi_1.LabelsApi,
     monthlyTrackedUsersApi_1.MonthlyTrackedUsersApi,
     profilesSyncApi_1.ProfilesSyncApi,

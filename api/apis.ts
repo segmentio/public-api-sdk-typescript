@@ -30,8 +30,6 @@ export * from './iAMRolesApi';
 import { IAMRolesApi } from './iAMRolesApi';
 export * from './iAMUsersApi';
 import { IAMUsersApi } from './iAMUsersApi';
-export * from './journeysApi';
-import { JourneysApi } from './journeysApi';
 export * from './labelsApi';
 import { LabelsApi } from './labelsApi';
 export * from './monthlyTrackedUsersApi';
@@ -90,7 +88,6 @@ export const APIS = [
     IAMGroupsApi,
     IAMRolesApi,
     IAMUsersApi,
-    JourneysApi,
     LabelsApi,
     MonthlyTrackedUsersApi,
     ProfilesSyncApi,
