@@ -1,6 +1,6 @@
 export declare class AudienceDefinition {
-    'query': string;
     'type': AudienceDefinition.TypeEnum;
+    'query': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

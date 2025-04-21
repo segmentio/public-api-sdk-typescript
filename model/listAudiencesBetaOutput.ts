@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceSummaryBeta } from './audienceSummaryBeta';
+import { AudienceSummary } from './audienceSummary';
 import { PaginationOutput } from './paginationOutput';
 
 /**
@@ -21,7 +21,7 @@ export class ListAudiencesBetaOutput {
     /**
      * A list of audience summary results.
      */
-    'audiences': Array<AudienceSummaryBeta>;
+    'audiences': Array<AudienceSummary>;
     'pagination': PaginationOutput;
 
     static discriminator: string | undefined = undefined;
@@ -34,7 +34,7 @@ export class ListAudiencesBetaOutput {
         {
             name: 'audiences',
             baseName: 'audiences',
-            type: 'Array<AudienceSummaryBeta>',
+            type: 'Array<AudienceSummary>',
         },
         {
             name: 'pagination',

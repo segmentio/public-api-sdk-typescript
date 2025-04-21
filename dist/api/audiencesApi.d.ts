@@ -4,11 +4,13 @@ import { CreateAudience200Response } from '../model/createAudience200Response';
 import { CreateAudienceAlphaInput } from '../model/createAudienceAlphaInput';
 import { GetAudience200Response } from '../model/getAudience200Response';
 import { ListAudienceConsumersFromSpaceAndAudience200Response } from '../model/listAudienceConsumersFromSpaceAndAudience200Response';
+import { ListAudienceConsumersSearchInput } from '../model/listAudienceConsumersSearchInput';
+import { ListAudienceConsumersSortInput } from '../model/listAudienceConsumersSortInput';
 import { ListAudiences200Response } from '../model/listAudiences200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromSpace200Response';
 import { UpdateAudienceForSpace200Response } from '../model/updateAudienceForSpace200Response';
-import { UpdateAudienceForSpaceInput } from '../model/updateAudienceForSpaceInput';
+import { UpdateAudienceForSpaceAlphaInput } from '../model/updateAudienceForSpaceAlphaInput';
 import { Authentication, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
 export declare enum AudiencesApiApiKeys {
@@ -48,7 +50,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: GetAudience200Response;
     }>;
-    listAudienceConsumersFromSpaceAndAudience(spaceId: string, id: string, pagination?: PaginationInput, options?: {
+    listAudienceConsumersFromSpaceAndAudience(spaceId: string, id: string, pagination?: PaginationInput, search?: ListAudienceConsumersSearchInput, sort?: ListAudienceConsumersSortInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -72,7 +74,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: RemoveAudienceFromSpace200Response;
     }>;
-    updateAudienceForSpace(spaceId: string, id: string, UpdateAudienceForSpaceInput: UpdateAudienceForSpaceInput, options?: {
+    updateAudienceForSpace(spaceId: string, id: string, UpdateAudienceForSpaceAlphaInput: UpdateAudienceForSpaceAlphaInput, options?: {
         headers: {
             [name: string]: string;
         };

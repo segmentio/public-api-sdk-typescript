@@ -12,7 +12,7 @@ var GetAudienceBetaOutput = (function () {
         {
             name: 'audience',
             baseName: 'audience',
-            type: 'AudienceSummaryBeta',
+            type: 'AudienceSummary',
         },
     ];
     return GetAudienceBetaOutput;

@@ -1,6 +1,9 @@
-export declare class AudienceDefinitionBeta {
-    'query': string;
-    'type': AudienceDefinitionBeta.TypeEnum;
+import { AudienceDefinition } from './audienceDefinition';
+export declare class UpdateAudienceForSpaceAlphaInput {
+    'enabled'?: boolean;
+    'name'?: string;
+    'description'?: string;
+    'definition'?: AudienceDefinition;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -12,10 +15,4 @@ export declare class AudienceDefinitionBeta {
         baseName: string;
         type: string;
     }[];
-}
-export declare namespace AudienceDefinitionBeta {
-    enum TypeEnum {
-        ACCOUNTS,
-        USERS
-    }
 }

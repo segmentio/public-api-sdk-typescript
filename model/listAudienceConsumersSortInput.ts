@@ -11,25 +11,19 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceComputationDefinition } from './audienceComputationDefinition';
 
 /**
- * Input to update an audience.
+ * Sort criteria input for list audience consumers.
  */
-export class UpdateAudienceForSpaceInput {
+export class ListAudienceConsumersSortInput {
     /**
-     * Enabled/disabled status for the audience.
+     * Field to sort by.
      */
-    'enabled'?: boolean;
+    'field': ListAudienceConsumersSortInput.FieldEnum;
     /**
-     * The name of the computation.
+     * Sort direction (ascending or descending).
      */
-    'name'?: string;
-    /**
-     * The description of the computation.
-     */
-    'description'?: string;
-    'definition'?: AudienceComputationDefinition;
+    'direction': ListAudienceConsumersSortInput.DirectionEnum;
 
     static discriminator: string | undefined = undefined;
 
@@ -39,28 +33,30 @@ export class UpdateAudienceForSpaceInput {
         type: string;
     }> = [
         {
-            name: 'enabled',
-            baseName: 'enabled',
-            type: 'boolean',
+            name: 'field',
+            baseName: 'field',
+            type: 'ListAudienceConsumersSortInput.FieldEnum',
         },
         {
-            name: 'name',
-            baseName: 'name',
-            type: 'string',
-        },
-        {
-            name: 'description',
-            baseName: 'description',
-            type: 'string',
-        },
-        {
-            name: 'definition',
-            baseName: 'definition',
-            type: 'AudienceComputationDefinition',
+            name: 'direction',
+            baseName: 'direction',
+            type: 'ListAudienceConsumersSortInput.DirectionEnum',
         },
     ];
 
     static getAttributeTypeMap() {
-        return UpdateAudienceForSpaceInput.attributeTypeMap;
+        return ListAudienceConsumersSortInput.attributeTypeMap;
+    }
+}
+
+export namespace ListAudienceConsumersSortInput {
+    export enum FieldEnum {
+        CREATED_AT = <any>'CREATED_AT',
+        NAME = <any>'NAME',
+        UPDATED_AT = <any>'UPDATED_AT',
+    }
+    export enum DirectionEnum {
+        ASC = <any>'ASC',
+        DESC = <any>'DESC',
     }
 }

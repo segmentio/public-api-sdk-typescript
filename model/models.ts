@@ -25,13 +25,9 @@ export * from './addUsersToUserGroupV1Output';
 export * from './advancedWarehouseSyncScheduleV1Input';
 export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
-export * from './audienceComputationDefinition';
 export * from './audienceDefinition';
-export * from './audienceDefinitionBeta';
 export * from './audienceOptions';
-export * from './audienceOptionsBeta';
 export * from './audienceSummary';
-export * from './audienceSummaryBeta';
 export * from './auditEventV1';
 export * from './batchQueryMessagingSubscriptionsForSpace200Response';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
@@ -290,7 +286,9 @@ export * from './inviteV1';
 export * from './labelAlpha';
 export * from './labelV1';
 export * from './listAudienceConsumersFromSpaceAndAudience200Response';
-export * from './listAudienceConsumersFromSpaceAndAudienceOutput';
+export * from './listAudienceConsumersFromSpaceAndAudienceAlphaOutput';
+export * from './listAudienceConsumersSearchInput';
+export * from './listAudienceConsumersSortInput';
 export * from './listAudiences200Response';
 export * from './listAudiences200Response1';
 export * from './listAudiencesAlphaOutput';
@@ -496,8 +494,8 @@ export * from './traitOptions';
 export * from './transformationBeta';
 export * from './transformationV1';
 export * from './updateAudienceForSpace200Response';
+export * from './updateAudienceForSpaceAlphaInput';
 export * from './updateAudienceForSpaceAlphaOutput';
-export * from './updateAudienceForSpaceInput';
 export * from './updateComputedTraitForSpace200Response';
 export * from './updateComputedTraitForSpaceAlphaInput';
 export * from './updateComputedTraitForSpaceAlphaOutput';
@@ -607,13 +605,9 @@ import { AddUsersToUserGroupV1Output } from './addUsersToUserGroupV1Output';
 import { AdvancedWarehouseSyncScheduleV1Input } from './advancedWarehouseSyncScheduleV1Input';
 import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncScheduleV1Output';
 import { AllowedLabelBeta } from './allowedLabelBeta';
-import { AudienceComputationDefinition } from './audienceComputationDefinition';
 import { AudienceDefinition } from './audienceDefinition';
-import { AudienceDefinitionBeta } from './audienceDefinitionBeta';
 import { AudienceOptions } from './audienceOptions';
-import { AudienceOptionsBeta } from './audienceOptionsBeta';
 import { AudienceSummary } from './audienceSummary';
-import { AudienceSummaryBeta } from './audienceSummaryBeta';
 import { AuditEventV1 } from './auditEventV1';
 import { BatchQueryMessagingSubscriptionsForSpace200Response } from './batchQueryMessagingSubscriptionsForSpace200Response';
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaInput } from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
@@ -872,7 +866,9 @@ import { InviteV1 } from './inviteV1';
 import { LabelAlpha } from './labelAlpha';
 import { LabelV1 } from './labelV1';
 import { ListAudienceConsumersFromSpaceAndAudience200Response } from './listAudienceConsumersFromSpaceAndAudience200Response';
-import { ListAudienceConsumersFromSpaceAndAudienceOutput } from './listAudienceConsumersFromSpaceAndAudienceOutput';
+import { ListAudienceConsumersFromSpaceAndAudienceAlphaOutput } from './listAudienceConsumersFromSpaceAndAudienceAlphaOutput';
+import { ListAudienceConsumersSearchInput } from './listAudienceConsumersSearchInput';
+import { ListAudienceConsumersSortInput } from './listAudienceConsumersSortInput';
 import { ListAudiences200Response } from './listAudiences200Response';
 import { ListAudiences200Response1 } from './listAudiences200Response1';
 import { ListAudiencesAlphaOutput } from './listAudiencesAlphaOutput';
@@ -1078,8 +1074,8 @@ import { TraitOptions } from './traitOptions';
 import { TransformationBeta } from './transformationBeta';
 import { TransformationV1 } from './transformationV1';
 import { UpdateAudienceForSpace200Response } from './updateAudienceForSpace200Response';
+import { UpdateAudienceForSpaceAlphaInput } from './updateAudienceForSpaceAlphaInput';
 import { UpdateAudienceForSpaceAlphaOutput } from './updateAudienceForSpaceAlphaOutput';
-import { UpdateAudienceForSpaceInput } from './updateAudienceForSpaceInput';
 import { UpdateComputedTraitForSpace200Response } from './updateComputedTraitForSpace200Response';
 import { UpdateComputedTraitForSpaceAlphaInput } from './updateComputedTraitForSpaceAlphaInput';
 import { UpdateComputedTraitForSpaceAlphaOutput } from './updateComputedTraitForSpaceAlphaOutput';
@@ -1169,10 +1165,7 @@ let enumsMap: { [index: string]: any } = {
         AddConnectionFromSourceToWarehouseV1Output.StatusEnum,
     'AddSourceToTrackingPlanV1Output.StatusEnum':
         AddSourceToTrackingPlanV1Output.StatusEnum,
-    'AudienceComputationDefinition.TypeEnum':
-        AudienceComputationDefinition.TypeEnum,
     'AudienceDefinition.TypeEnum': AudienceDefinition.TypeEnum,
-    'AudienceDefinitionBeta.TypeEnum': AudienceDefinitionBeta.TypeEnum,
     'ComputedTraitsDefinition.TypeEnum': ComputedTraitsDefinition.TypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum':
         CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
@@ -1251,6 +1244,12 @@ let enumsMap: { [index: string]: any } = {
         HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum':
         IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
+    'ListAudienceConsumersSearchInput.TypeEnum':
+        ListAudienceConsumersSearchInput.TypeEnum,
+    'ListAudienceConsumersSortInput.FieldEnum':
+        ListAudienceConsumersSortInput.FieldEnum,
+    'ListAudienceConsumersSortInput.DirectionEnum':
+        ListAudienceConsumersSortInput.DirectionEnum,
     'ListFunctionItemV1.ResourceTypeEnum': ListFunctionItemV1.ResourceTypeEnum,
     'MessageSubscriptionResponse.TypeEnum':
         MessageSubscriptionResponse.TypeEnum,
@@ -1340,13 +1339,9 @@ let typeMap: { [index: string]: any } = {
     AdvancedWarehouseSyncScheduleV1Output:
         AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: AllowedLabelBeta,
-    AudienceComputationDefinition: AudienceComputationDefinition,
     AudienceDefinition: AudienceDefinition,
-    AudienceDefinitionBeta: AudienceDefinitionBeta,
     AudienceOptions: AudienceOptions,
-    AudienceOptionsBeta: AudienceOptionsBeta,
     AudienceSummary: AudienceSummary,
-    AudienceSummaryBeta: AudienceSummaryBeta,
     AuditEventV1: AuditEventV1,
     BatchQueryMessagingSubscriptionsForSpace200Response:
         BatchQueryMessagingSubscriptionsForSpace200Response,
@@ -1642,8 +1637,10 @@ let typeMap: { [index: string]: any } = {
     LabelV1: LabelV1,
     ListAudienceConsumersFromSpaceAndAudience200Response:
         ListAudienceConsumersFromSpaceAndAudience200Response,
-    ListAudienceConsumersFromSpaceAndAudienceOutput:
-        ListAudienceConsumersFromSpaceAndAudienceOutput,
+    ListAudienceConsumersFromSpaceAndAudienceAlphaOutput:
+        ListAudienceConsumersFromSpaceAndAudienceAlphaOutput,
+    ListAudienceConsumersSearchInput: ListAudienceConsumersSearchInput,
+    ListAudienceConsumersSortInput: ListAudienceConsumersSortInput,
     ListAudiences200Response: ListAudiences200Response,
     ListAudiences200Response1: ListAudiences200Response1,
     ListAudiencesAlphaOutput: ListAudiencesAlphaOutput,
@@ -1899,8 +1896,8 @@ let typeMap: { [index: string]: any } = {
     TransformationBeta: TransformationBeta,
     TransformationV1: TransformationV1,
     UpdateAudienceForSpace200Response: UpdateAudienceForSpace200Response,
+    UpdateAudienceForSpaceAlphaInput: UpdateAudienceForSpaceAlphaInput,
     UpdateAudienceForSpaceAlphaOutput: UpdateAudienceForSpaceAlphaOutput,
-    UpdateAudienceForSpaceInput: UpdateAudienceForSpaceInput,
     UpdateComputedTraitForSpace200Response:
         UpdateComputedTraitForSpace200Response,
     UpdateComputedTraitForSpaceAlphaInput:

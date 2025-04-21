@@ -1,6 +1,6 @@
-export declare class AudienceOptionsBeta {
-    'includeHistoricalData'?: boolean;
-    'includeAnonymousUsers'?: boolean;
+export declare class ListAudienceConsumersSearchInput {
+    'type': ListAudienceConsumersSearchInput.TypeEnum;
+    'query': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -12,4 +12,10 @@ export declare class AudienceOptionsBeta {
         baseName: string;
         type: string;
     }[];
+}
+export declare namespace ListAudienceConsumersSearchInput {
+    enum TypeEnum {
+        DEFINITION,
+        NAME
+    }
 }

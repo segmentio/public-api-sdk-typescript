@@ -1,10 +1,10 @@
-import { AudienceComputationDefinition } from './audienceComputationDefinition';
+import { AudienceDefinition } from './audienceDefinition';
 import { AudienceOptions } from './audienceOptions';
 export declare class CreateAudienceAlphaInput {
     'name': string;
     'enabled'?: boolean;
     'description'?: string;
-    'definition': AudienceComputationDefinition;
+    'definition': AudienceDefinition;
     'options'?: AudienceOptions;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

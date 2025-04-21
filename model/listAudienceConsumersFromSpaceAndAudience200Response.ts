@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { ListAudienceConsumersFromSpaceAndAudienceOutput } from './listAudienceConsumersFromSpaceAndAudienceOutput';
+import { ListAudienceConsumersFromSpaceAndAudienceAlphaOutput } from './listAudienceConsumersFromSpaceAndAudienceAlphaOutput';
 
 export class ListAudienceConsumersFromSpaceAndAudience200Response {
-    'data'?: ListAudienceConsumersFromSpaceAndAudienceOutput;
+    'data'?: ListAudienceConsumersFromSpaceAndAudienceAlphaOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -26,7 +26,7 @@ export class ListAudienceConsumersFromSpaceAndAudience200Response {
         {
             name: 'data',
             baseName: 'data',
-            type: 'ListAudienceConsumersFromSpaceAndAudienceOutput',
+            type: 'ListAudienceConsumersFromSpaceAndAudienceAlphaOutput',
         },
     ];
 

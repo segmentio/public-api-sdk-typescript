@@ -291,7 +291,7 @@ var AudiencesApi = (function () {
             });
         });
     };
-    AudiencesApi.prototype.listAudienceConsumersFromSpaceAndAudience = function (spaceId, id, pagination, options) {
+    AudiencesApi.prototype.listAudienceConsumersFromSpaceAndAudience = function (spaceId, id, pagination, search, sort, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
@@ -322,6 +322,12 @@ var AudiencesApi = (function () {
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                }
+                if (search !== undefined) {
+                    localVarQueryParameters['search'] = models_1.ObjectSerializer.serialize(search, 'ListAudienceConsumersSearchInput');
+                }
+                if (sort !== undefined) {
+                    localVarQueryParameters['sort'] = models_1.ObjectSerializer.serialize(sort, 'ListAudienceConsumersSortInput');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -560,7 +566,7 @@ var AudiencesApi = (function () {
             });
         });
     };
-    AudiencesApi.prototype.updateAudienceForSpace = function (spaceId, id, UpdateAudienceForSpaceInput, options) {
+    AudiencesApi.prototype.updateAudienceForSpace = function (spaceId, id, UpdateAudienceForSpaceAlphaInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_6, _i, _a, interceptor;
@@ -589,9 +595,9 @@ var AudiencesApi = (function () {
                 if (id === null || id === undefined) {
                     throw new Error('Required parameter id was null or undefined when calling updateAudienceForSpace.');
                 }
-                if (UpdateAudienceForSpaceInput === null ||
-                    UpdateAudienceForSpaceInput === undefined) {
-                    throw new Error('Required parameter UpdateAudienceForSpaceInput was null or undefined when calling updateAudienceForSpace.');
+                if (UpdateAudienceForSpaceAlphaInput === null ||
+                    UpdateAudienceForSpaceAlphaInput === undefined) {
+                    throw new Error('Required parameter UpdateAudienceForSpaceAlphaInput was null or undefined when calling updateAudienceForSpace.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -602,7 +608,7 @@ var AudiencesApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateAudienceForSpaceInput, 'UpdateAudienceForSpaceInput'),
+                    body: models_1.ObjectSerializer.serialize(UpdateAudienceForSpaceAlphaInput, 'UpdateAudienceForSpaceAlphaInput'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {

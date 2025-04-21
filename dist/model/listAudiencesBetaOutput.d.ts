@@ -1,7 +1,7 @@
-import { AudienceSummaryBeta } from './audienceSummaryBeta';
+import { AudienceSummary } from './audienceSummary';
 import { PaginationOutput } from './paginationOutput';
 export declare class ListAudiencesBetaOutput {
-    'audiences': Array<AudienceSummaryBeta>;
+    'audiences': Array<AudienceSummary>;
     'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

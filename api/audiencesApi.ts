@@ -19,13 +19,15 @@ import { CreateAudienceAlphaInput } from '../model/createAudienceAlphaInput';
 import { GetAudience200Response } from '../model/getAudience200Response';
 import { GetAudience200Response1 } from '../model/getAudience200Response1';
 import { ListAudienceConsumersFromSpaceAndAudience200Response } from '../model/listAudienceConsumersFromSpaceAndAudience200Response';
+import { ListAudienceConsumersSearchInput } from '../model/listAudienceConsumersSearchInput';
+import { ListAudienceConsumersSortInput } from '../model/listAudienceConsumersSortInput';
 import { ListAudiences200Response } from '../model/listAudiences200Response';
 import { ListAudiences200Response1 } from '../model/listAudiences200Response1';
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromSpace200Response';
 import { RequestErrorEnvelope } from '../model/requestErrorEnvelope';
 import { UpdateAudienceForSpace200Response } from '../model/updateAudienceForSpace200Response';
-import { UpdateAudienceForSpaceInput } from '../model/updateAudienceForSpaceInput';
+import { UpdateAudienceForSpaceAlphaInput } from '../model/updateAudienceForSpaceAlphaInput';
 
 import {
     ObjectSerializer,
@@ -383,11 +385,15 @@ export class AudiencesApi {
      * @param spaceId
      * @param id
      * @param pagination Information about the pagination of this response.  [See pagination](https://docs.segmentapis.com/tag/Pagination/#section/Pagination-parameters) for more info.  This parameter exists in alpha.
+     * @param search Optional search criteria  This parameter exists in alpha.
+     * @param sort Optional sort criteria  This parameter exists in alpha.
      */
     public async listAudienceConsumersFromSpaceAndAudience(
         spaceId: string,
         id: string,
         pagination?: PaginationInput,
+        search?: ListAudienceConsumersSearchInput,
+        sort?: ListAudienceConsumersSortInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -436,6 +442,20 @@ export class AudiencesApi {
             localVarQueryParameters['pagination'] = ObjectSerializer.serialize(
                 pagination,
                 'PaginationInput'
+            );
+        }
+
+        if (search !== undefined) {
+            localVarQueryParameters['search'] = ObjectSerializer.serialize(
+                search,
+                'ListAudienceConsumersSearchInput'
+            );
+        }
+
+        if (sort !== undefined) {
+            localVarQueryParameters['sort'] = ObjectSerializer.serialize(
+                sort,
+                'ListAudienceConsumersSortInput'
             );
         }
 
@@ -774,12 +794,12 @@ export class AudiencesApi {
      * @summary Update Audience for Space
      * @param spaceId
      * @param id
-     * @param UpdateAudienceForSpaceInput
+     * @param UpdateAudienceForSpaceAlphaInput
      */
     public async updateAudienceForSpace(
         spaceId: string,
         id: string,
-        UpdateAudienceForSpaceInput: UpdateAudienceForSpaceInput,
+        UpdateAudienceForSpaceAlphaInput: UpdateAudienceForSpaceAlphaInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -824,13 +844,13 @@ export class AudiencesApi {
             );
         }
 
-        // verify required parameter 'UpdateAudienceForSpaceInput' is not null or undefined
+        // verify required parameter 'UpdateAudienceForSpaceAlphaInput' is not null or undefined
         if (
-            UpdateAudienceForSpaceInput === null ||
-            UpdateAudienceForSpaceInput === undefined
+            UpdateAudienceForSpaceAlphaInput === null ||
+            UpdateAudienceForSpaceAlphaInput === undefined
         ) {
             throw new Error(
-                'Required parameter UpdateAudienceForSpaceInput was null or undefined when calling updateAudienceForSpace.'
+                'Required parameter UpdateAudienceForSpaceAlphaInput was null or undefined when calling updateAudienceForSpace.'
             );
         }
 
@@ -846,8 +866,8 @@ export class AudiencesApi {
             useQuerystring: this._useQuerystring,
             json: true,
             body: ObjectSerializer.serialize(
-                UpdateAudienceForSpaceInput,
-                'UpdateAudienceForSpaceInput'
+                UpdateAudienceForSpaceAlphaInput,
+                'UpdateAudienceForSpaceAlphaInput'
             ),
         };
 

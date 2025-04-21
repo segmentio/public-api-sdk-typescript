@@ -12,13 +12,16 @@
 
 import { RequestFile } from './models';
 
-export class AudienceComputationDefinition {
+/**
+ * Search criteria input for list audience consumers.
+ */
+export class ListAudienceConsumersSearchInput {
     /**
-     * The underlying data type being segmented for this audience.  Possible values: users, accounts.
+     * Field to filter by.
      */
-    'type': AudienceComputationDefinition.TypeEnum;
+    'type': ListAudienceConsumersSearchInput.TypeEnum;
     /**
-     * The query language string defining the audience segmentation criteria.  For guidance on using the query language, see the [Segment documentation site](https://segment.com/docs/api/public-api/query-language).
+     * Text to match the field value.
      */
     'query': string;
 
@@ -32,7 +35,7 @@ export class AudienceComputationDefinition {
         {
             name: 'type',
             baseName: 'type',
-            type: 'AudienceComputationDefinition.TypeEnum',
+            type: 'ListAudienceConsumersSearchInput.TypeEnum',
         },
         {
             name: 'query',
@@ -42,13 +45,13 @@ export class AudienceComputationDefinition {
     ];
 
     static getAttributeTypeMap() {
-        return AudienceComputationDefinition.attributeTypeMap;
+        return ListAudienceConsumersSearchInput.attributeTypeMap;
     }
 }
 
-export namespace AudienceComputationDefinition {
+export namespace ListAudienceConsumersSearchInput {
     export enum TypeEnum {
-        ACCOUNTS = <any>'ACCOUNTS',
-        USERS = <any>'USERS',
+        DEFINITION = <any>'DEFINITION',
+        NAME = <any>'NAME',
     }
 }

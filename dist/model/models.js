@@ -40,13 +40,9 @@ __exportStar(require("./addUsersToUserGroupV1Output"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Input"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Output"), exports);
 __exportStar(require("./allowedLabelBeta"), exports);
-__exportStar(require("./audienceComputationDefinition"), exports);
 __exportStar(require("./audienceDefinition"), exports);
-__exportStar(require("./audienceDefinitionBeta"), exports);
 __exportStar(require("./audienceOptions"), exports);
-__exportStar(require("./audienceOptionsBeta"), exports);
 __exportStar(require("./audienceSummary"), exports);
-__exportStar(require("./audienceSummaryBeta"), exports);
 __exportStar(require("./auditEventV1"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpace200Response"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput"), exports);
@@ -305,7 +301,9 @@ __exportStar(require("./inviteV1"), exports);
 __exportStar(require("./labelAlpha"), exports);
 __exportStar(require("./labelV1"), exports);
 __exportStar(require("./listAudienceConsumersFromSpaceAndAudience200Response"), exports);
-__exportStar(require("./listAudienceConsumersFromSpaceAndAudienceOutput"), exports);
+__exportStar(require("./listAudienceConsumersFromSpaceAndAudienceAlphaOutput"), exports);
+__exportStar(require("./listAudienceConsumersSearchInput"), exports);
+__exportStar(require("./listAudienceConsumersSortInput"), exports);
 __exportStar(require("./listAudiences200Response"), exports);
 __exportStar(require("./listAudiences200Response1"), exports);
 __exportStar(require("./listAudiencesAlphaOutput"), exports);
@@ -511,8 +509,8 @@ __exportStar(require("./traitOptions"), exports);
 __exportStar(require("./transformationBeta"), exports);
 __exportStar(require("./transformationV1"), exports);
 __exportStar(require("./updateAudienceForSpace200Response"), exports);
+__exportStar(require("./updateAudienceForSpaceAlphaInput"), exports);
 __exportStar(require("./updateAudienceForSpaceAlphaOutput"), exports);
-__exportStar(require("./updateAudienceForSpaceInput"), exports);
 __exportStar(require("./updateComputedTraitForSpace200Response"), exports);
 __exportStar(require("./updateComputedTraitForSpaceAlphaInput"), exports);
 __exportStar(require("./updateComputedTraitForSpaceAlphaOutput"), exports);
@@ -609,13 +607,9 @@ var addUsersToUserGroupV1Output_1 = require("./addUsersToUserGroupV1Output");
 var advancedWarehouseSyncScheduleV1Input_1 = require("./advancedWarehouseSyncScheduleV1Input");
 var advancedWarehouseSyncScheduleV1Output_1 = require("./advancedWarehouseSyncScheduleV1Output");
 var allowedLabelBeta_1 = require("./allowedLabelBeta");
-var audienceComputationDefinition_1 = require("./audienceComputationDefinition");
 var audienceDefinition_1 = require("./audienceDefinition");
-var audienceDefinitionBeta_1 = require("./audienceDefinitionBeta");
 var audienceOptions_1 = require("./audienceOptions");
-var audienceOptionsBeta_1 = require("./audienceOptionsBeta");
 var audienceSummary_1 = require("./audienceSummary");
-var audienceSummaryBeta_1 = require("./audienceSummaryBeta");
 var auditEventV1_1 = require("./auditEventV1");
 var batchQueryMessagingSubscriptionsForSpace200Response_1 = require("./batchQueryMessagingSubscriptionsForSpace200Response");
 var batchQueryMessagingSubscriptionsForSpaceAlphaInput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput");
@@ -874,7 +868,9 @@ var inviteV1_1 = require("./inviteV1");
 var labelAlpha_1 = require("./labelAlpha");
 var labelV1_1 = require("./labelV1");
 var listAudienceConsumersFromSpaceAndAudience200Response_1 = require("./listAudienceConsumersFromSpaceAndAudience200Response");
-var listAudienceConsumersFromSpaceAndAudienceOutput_1 = require("./listAudienceConsumersFromSpaceAndAudienceOutput");
+var listAudienceConsumersFromSpaceAndAudienceAlphaOutput_1 = require("./listAudienceConsumersFromSpaceAndAudienceAlphaOutput");
+var listAudienceConsumersSearchInput_1 = require("./listAudienceConsumersSearchInput");
+var listAudienceConsumersSortInput_1 = require("./listAudienceConsumersSortInput");
 var listAudiences200Response_1 = require("./listAudiences200Response");
 var listAudiences200Response1_1 = require("./listAudiences200Response1");
 var listAudiencesAlphaOutput_1 = require("./listAudiencesAlphaOutput");
@@ -1080,8 +1076,8 @@ var traitOptions_1 = require("./traitOptions");
 var transformationBeta_1 = require("./transformationBeta");
 var transformationV1_1 = require("./transformationV1");
 var updateAudienceForSpace200Response_1 = require("./updateAudienceForSpace200Response");
+var updateAudienceForSpaceAlphaInput_1 = require("./updateAudienceForSpaceAlphaInput");
 var updateAudienceForSpaceAlphaOutput_1 = require("./updateAudienceForSpaceAlphaOutput");
-var updateAudienceForSpaceInput_1 = require("./updateAudienceForSpaceInput");
 var updateComputedTraitForSpace200Response_1 = require("./updateComputedTraitForSpace200Response");
 var updateComputedTraitForSpaceAlphaInput_1 = require("./updateComputedTraitForSpaceAlphaInput");
 var updateComputedTraitForSpaceAlphaOutput_1 = require("./updateComputedTraitForSpaceAlphaOutput");
@@ -1166,9 +1162,7 @@ var primitives = [
 var enumsMap = {
     'AddConnectionFromSourceToWarehouseV1Output.StatusEnum': addConnectionFromSourceToWarehouseV1Output_1.AddConnectionFromSourceToWarehouseV1Output.StatusEnum,
     'AddSourceToTrackingPlanV1Output.StatusEnum': addSourceToTrackingPlanV1Output_1.AddSourceToTrackingPlanV1Output.StatusEnum,
-    'AudienceComputationDefinition.TypeEnum': audienceComputationDefinition_1.AudienceComputationDefinition.TypeEnum,
     'AudienceDefinition.TypeEnum': audienceDefinition_1.AudienceDefinition.TypeEnum,
-    'AudienceDefinitionBeta.TypeEnum': audienceDefinitionBeta_1.AudienceDefinitionBeta.TypeEnum,
     'ComputedTraitsDefinition.TypeEnum': computedTraitsDefinition_1.ComputedTraitsDefinition.TypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
@@ -1219,6 +1213,9 @@ var enumsMap = {
     'GroupSubscriptionStatusResponse.StatusEnum': groupSubscriptionStatusResponse_1.GroupSubscriptionStatusResponse.StatusEnum,
     'HashPropertiesConfiguration.EncodingEnum': hashPropertiesConfiguration_1.HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum': identifySourceSettingsV1_1.IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
+    'ListAudienceConsumersSearchInput.TypeEnum': listAudienceConsumersSearchInput_1.ListAudienceConsumersSearchInput.TypeEnum,
+    'ListAudienceConsumersSortInput.FieldEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.FieldEnum,
+    'ListAudienceConsumersSortInput.DirectionEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.DirectionEnum,
     'ListFunctionItemV1.ResourceTypeEnum': listFunctionItemV1_1.ListFunctionItemV1.ResourceTypeEnum,
     'MessageSubscriptionResponse.TypeEnum': messageSubscriptionResponse_1.MessageSubscriptionResponse.TypeEnum,
     'MessageSubscriptionResponse.StatusEnum': messageSubscriptionResponse_1.MessageSubscriptionResponse.StatusEnum,
@@ -1281,13 +1278,9 @@ var typeMap = {
     AdvancedWarehouseSyncScheduleV1Input: advancedWarehouseSyncScheduleV1Input_1.AdvancedWarehouseSyncScheduleV1Input,
     AdvancedWarehouseSyncScheduleV1Output: advancedWarehouseSyncScheduleV1Output_1.AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: allowedLabelBeta_1.AllowedLabelBeta,
-    AudienceComputationDefinition: audienceComputationDefinition_1.AudienceComputationDefinition,
     AudienceDefinition: audienceDefinition_1.AudienceDefinition,
-    AudienceDefinitionBeta: audienceDefinitionBeta_1.AudienceDefinitionBeta,
     AudienceOptions: audienceOptions_1.AudienceOptions,
-    AudienceOptionsBeta: audienceOptionsBeta_1.AudienceOptionsBeta,
     AudienceSummary: audienceSummary_1.AudienceSummary,
-    AudienceSummaryBeta: audienceSummaryBeta_1.AudienceSummaryBeta,
     AuditEventV1: auditEventV1_1.AuditEventV1,
     BatchQueryMessagingSubscriptionsForSpace200Response: batchQueryMessagingSubscriptionsForSpace200Response_1.BatchQueryMessagingSubscriptionsForSpace200Response,
     BatchQueryMessagingSubscriptionsForSpaceAlphaInput: batchQueryMessagingSubscriptionsForSpaceAlphaInput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaInput,
@@ -1546,7 +1539,9 @@ var typeMap = {
     LabelAlpha: labelAlpha_1.LabelAlpha,
     LabelV1: labelV1_1.LabelV1,
     ListAudienceConsumersFromSpaceAndAudience200Response: listAudienceConsumersFromSpaceAndAudience200Response_1.ListAudienceConsumersFromSpaceAndAudience200Response,
-    ListAudienceConsumersFromSpaceAndAudienceOutput: listAudienceConsumersFromSpaceAndAudienceOutput_1.ListAudienceConsumersFromSpaceAndAudienceOutput,
+    ListAudienceConsumersFromSpaceAndAudienceAlphaOutput: listAudienceConsumersFromSpaceAndAudienceAlphaOutput_1.ListAudienceConsumersFromSpaceAndAudienceAlphaOutput,
+    ListAudienceConsumersSearchInput: listAudienceConsumersSearchInput_1.ListAudienceConsumersSearchInput,
+    ListAudienceConsumersSortInput: listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput,
     ListAudiences200Response: listAudiences200Response_1.ListAudiences200Response,
     ListAudiences200Response1: listAudiences200Response1_1.ListAudiences200Response1,
     ListAudiencesAlphaOutput: listAudiencesAlphaOutput_1.ListAudiencesAlphaOutput,
@@ -1752,8 +1747,8 @@ var typeMap = {
     TransformationBeta: transformationBeta_1.TransformationBeta,
     TransformationV1: transformationV1_1.TransformationV1,
     UpdateAudienceForSpace200Response: updateAudienceForSpace200Response_1.UpdateAudienceForSpace200Response,
+    UpdateAudienceForSpaceAlphaInput: updateAudienceForSpaceAlphaInput_1.UpdateAudienceForSpaceAlphaInput,
     UpdateAudienceForSpaceAlphaOutput: updateAudienceForSpaceAlphaOutput_1.UpdateAudienceForSpaceAlphaOutput,
-    UpdateAudienceForSpaceInput: updateAudienceForSpaceInput_1.UpdateAudienceForSpaceInput,
     UpdateComputedTraitForSpace200Response: updateComputedTraitForSpace200Response_1.UpdateComputedTraitForSpace200Response,
     UpdateComputedTraitForSpaceAlphaInput: updateComputedTraitForSpaceAlphaInput_1.UpdateComputedTraitForSpaceAlphaInput,
     UpdateComputedTraitForSpaceAlphaOutput: updateComputedTraitForSpaceAlphaOutput_1.UpdateComputedTraitForSpaceAlphaOutput,

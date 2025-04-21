@@ -17,7 +17,7 @@ import { PaginationOutput } from './paginationOutput';
 /**
  * List Audience consumers output.
  */
-export class ListAudienceConsumersFromSpaceAndAudienceOutput {
+export class ListAudienceConsumersFromSpaceAndAudienceAlphaOutput {
     /**
      * The list of audience consumers.
      */
@@ -44,6 +44,6 @@ export class ListAudienceConsumersFromSpaceAndAudienceOutput {
     ];
 
     static getAttributeTypeMap() {
-        return ListAudienceConsumersFromSpaceAndAudienceOutput.attributeTypeMap;
+        return ListAudienceConsumersFromSpaceAndAudienceAlphaOutput.attributeTypeMap;
     }
 }

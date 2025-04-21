@@ -11,19 +11,25 @@
  */
 
 import { RequestFile } from './models';
+import { AudienceDefinition } from './audienceDefinition';
 
 /**
- * Defines an audience definition.
+ * Input to update an audience.
  */
-export class AudienceDefinitionBeta {
+export class UpdateAudienceForSpaceAlphaInput {
     /**
-     * The query language string defining the audience segmentation criteria.
+     * Enabled/disabled status for the audience.
      */
-    'query': string;
+    'enabled'?: boolean;
     /**
-     * The underlying data type being segmented for this audience.  Possible values: users, accounts.
+     * The name of the computation.
      */
-    'type': AudienceDefinitionBeta.TypeEnum;
+    'name'?: string;
+    /**
+     * The description of the computation.
+     */
+    'description'?: string;
+    'definition'?: AudienceDefinition;
 
     static discriminator: string | undefined = undefined;
 
@@ -33,25 +39,28 @@ export class AudienceDefinitionBeta {
         type: string;
     }> = [
         {
-            name: 'query',
-            baseName: 'query',
+            name: 'enabled',
+            baseName: 'enabled',
+            type: 'boolean',
+        },
+        {
+            name: 'name',
+            baseName: 'name',
             type: 'string',
         },
         {
-            name: 'type',
-            baseName: 'type',
-            type: 'AudienceDefinitionBeta.TypeEnum',
+            name: 'description',
+            baseName: 'description',
+            type: 'string',
+        },
+        {
+            name: 'definition',
+            baseName: 'definition',
+            type: 'AudienceDefinition',
         },
     ];
 
     static getAttributeTypeMap() {
-        return AudienceDefinitionBeta.attributeTypeMap;
-    }
-}
-
-export namespace AudienceDefinitionBeta {
-    export enum TypeEnum {
-        ACCOUNTS = <any>'ACCOUNTS',
-        USERS = <any>'USERS',
+        return UpdateAudienceForSpaceAlphaInput.attributeTypeMap;
     }
 }

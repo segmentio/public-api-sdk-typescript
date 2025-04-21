@@ -1,6 +1,8 @@
-export declare class AudienceComputationDefinition {
-    'type': AudienceComputationDefinition.TypeEnum;
-    'query': string;
+import { AudienceSummary } from './audienceSummary';
+import { PaginationOutput } from './paginationOutput';
+export declare class ListAudienceConsumersFromSpaceAndAudienceAlphaOutput {
+    'audiences': Array<AudienceSummary>;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -12,10 +14,4 @@ export declare class AudienceComputationDefinition {
         baseName: string;
         type: string;
     }[];
-}
-export declare namespace AudienceComputationDefinition {
-    enum TypeEnum {
-        ACCOUNTS,
-        USERS
-    }
 }
