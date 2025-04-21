@@ -294,7 +294,9 @@ export * from './listAudienceConsumersFromSpaceAndAudienceOutput';
 export * from './listAudienceConsumersSearchInput';
 export * from './listAudienceConsumersSortInput';
 export * from './listAudiences200Response';
+export * from './listAudiences200Response1';
 export * from './listAudiencesAlphaOutput';
+export * from './listAudiencesBetaOutput';
 export * from './listAuditEvents200Response';
 export * from './listAuditEventsV1Output';
 export * from './listComputedTraits200Response';
@@ -876,7 +878,9 @@ import { ListAudienceConsumersFromSpaceAndAudienceOutput } from './listAudienceC
 import { ListAudienceConsumersSearchInput } from './listAudienceConsumersSearchInput';
 import { ListAudienceConsumersSortInput } from './listAudienceConsumersSortInput';
 import { ListAudiences200Response } from './listAudiences200Response';
+import { ListAudiences200Response1 } from './listAudiences200Response1';
 import { ListAudiencesAlphaOutput } from './listAudiencesAlphaOutput';
+import { ListAudiencesBetaOutput } from './listAudiencesBetaOutput';
 import { ListAuditEvents200Response } from './listAuditEvents200Response';
 import { ListAuditEventsV1Output } from './listAuditEventsV1Output';
 import { ListComputedTraits200Response } from './listComputedTraits200Response';
@@ -1653,7 +1657,9 @@ let typeMap: { [index: string]: any } = {
     ListAudienceConsumersSearchInput: ListAudienceConsumersSearchInput,
     ListAudienceConsumersSortInput: ListAudienceConsumersSortInput,
     ListAudiences200Response: ListAudiences200Response,
+    ListAudiences200Response1: ListAudiences200Response1,
     ListAudiencesAlphaOutput: ListAudiencesAlphaOutput,
+    ListAudiencesBetaOutput: ListAudiencesBetaOutput,
     ListAuditEvents200Response: ListAuditEvents200Response,
     ListAuditEventsV1Output: ListAuditEventsV1Output,
     ListComputedTraits200Response: ListComputedTraits200Response,

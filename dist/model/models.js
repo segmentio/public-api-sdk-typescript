@@ -309,7 +309,9 @@ __exportStar(require("./listAudienceConsumersFromSpaceAndAudienceOutput"), expor
 __exportStar(require("./listAudienceConsumersSearchInput"), exports);
 __exportStar(require("./listAudienceConsumersSortInput"), exports);
 __exportStar(require("./listAudiences200Response"), exports);
+__exportStar(require("./listAudiences200Response1"), exports);
 __exportStar(require("./listAudiencesAlphaOutput"), exports);
+__exportStar(require("./listAudiencesBetaOutput"), exports);
 __exportStar(require("./listAuditEvents200Response"), exports);
 __exportStar(require("./listAuditEventsV1Output"), exports);
 __exportStar(require("./listComputedTraits200Response"), exports);
@@ -878,7 +880,9 @@ var listAudienceConsumersFromSpaceAndAudienceOutput_1 = require("./listAudienceC
 var listAudienceConsumersSearchInput_1 = require("./listAudienceConsumersSearchInput");
 var listAudienceConsumersSortInput_1 = require("./listAudienceConsumersSortInput");
 var listAudiences200Response_1 = require("./listAudiences200Response");
+var listAudiences200Response1_1 = require("./listAudiences200Response1");
 var listAudiencesAlphaOutput_1 = require("./listAudiencesAlphaOutput");
+var listAudiencesBetaOutput_1 = require("./listAudiencesBetaOutput");
 var listAuditEvents200Response_1 = require("./listAuditEvents200Response");
 var listAuditEventsV1Output_1 = require("./listAuditEventsV1Output");
 var listComputedTraits200Response_1 = require("./listComputedTraits200Response");
@@ -1553,7 +1557,9 @@ var typeMap = {
     ListAudienceConsumersSearchInput: listAudienceConsumersSearchInput_1.ListAudienceConsumersSearchInput,
     ListAudienceConsumersSortInput: listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput,
     ListAudiences200Response: listAudiences200Response_1.ListAudiences200Response,
+    ListAudiences200Response1: listAudiences200Response1_1.ListAudiences200Response1,
     ListAudiencesAlphaOutput: listAudiencesAlphaOutput_1.ListAudiencesAlphaOutput,
+    ListAudiencesBetaOutput: listAudiencesBetaOutput_1.ListAudiencesBetaOutput,
     ListAuditEvents200Response: listAuditEvents200Response_1.ListAuditEvents200Response,
     ListAuditEventsV1Output: listAuditEventsV1Output_1.ListAuditEventsV1Output,
     ListComputedTraits200Response: listComputedTraits200Response_1.ListComputedTraits200Response,
