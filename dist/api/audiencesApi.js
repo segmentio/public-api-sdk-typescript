@@ -291,7 +291,7 @@ var AudiencesApi = (function () {
             });
         });
     };
-    AudiencesApi.prototype.listAudienceConsumersFromSpaceAndAudience = function (spaceId, id, pagination, options) {
+    AudiencesApi.prototype.listAudienceConsumersFromSpaceAndAudience = function (spaceId, id, pagination, search, sort, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
@@ -322,6 +322,12 @@ var AudiencesApi = (function () {
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                }
+                if (search !== undefined) {
+                    localVarQueryParameters['search'] = models_1.ObjectSerializer.serialize(search, 'ListAudienceConsumersSearchInput');
+                }
+                if (sort !== undefined) {
+                    localVarQueryParameters['sort'] = models_1.ObjectSerializer.serialize(sort, 'ListAudienceConsumersSortInput');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
