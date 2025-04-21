@@ -11,13 +11,13 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceSummaryBeta } from './audienceSummaryBeta';
+import { AudienceSummary } from './audienceSummary';
 
 /**
  * Audience output for get.
  */
 export class GetAudienceBetaOutput {
-    'audience': AudienceSummaryBeta;
+    'audience': AudienceSummary;
 
     static discriminator: string | undefined = undefined;
 
@@ -29,7 +29,7 @@ export class GetAudienceBetaOutput {
         {
             name: 'audience',
             baseName: 'audience',
-            type: 'AudienceSummaryBeta',
+            type: 'AudienceSummary',
         },
     ];
 

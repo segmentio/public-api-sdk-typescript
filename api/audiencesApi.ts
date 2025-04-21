@@ -27,7 +27,7 @@ import { PaginationInput } from '../model/paginationInput';
 import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromSpace200Response';
 import { RequestErrorEnvelope } from '../model/requestErrorEnvelope';
 import { UpdateAudienceForSpace200Response } from '../model/updateAudienceForSpace200Response';
-import { UpdateAudienceForSpaceInput } from '../model/updateAudienceForSpaceInput';
+import { UpdateAudienceForSpaceAlphaInput } from '../model/updateAudienceForSpaceAlphaInput';
 
 import {
     ObjectSerializer,
@@ -794,12 +794,12 @@ export class AudiencesApi {
      * @summary Update Audience for Space
      * @param spaceId
      * @param id
-     * @param UpdateAudienceForSpaceInput
+     * @param UpdateAudienceForSpaceAlphaInput
      */
     public async updateAudienceForSpace(
         spaceId: string,
         id: string,
-        UpdateAudienceForSpaceInput: UpdateAudienceForSpaceInput,
+        UpdateAudienceForSpaceAlphaInput: UpdateAudienceForSpaceAlphaInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -844,13 +844,13 @@ export class AudiencesApi {
             );
         }
 
-        // verify required parameter 'UpdateAudienceForSpaceInput' is not null or undefined
+        // verify required parameter 'UpdateAudienceForSpaceAlphaInput' is not null or undefined
         if (
-            UpdateAudienceForSpaceInput === null ||
-            UpdateAudienceForSpaceInput === undefined
+            UpdateAudienceForSpaceAlphaInput === null ||
+            UpdateAudienceForSpaceAlphaInput === undefined
         ) {
             throw new Error(
-                'Required parameter UpdateAudienceForSpaceInput was null or undefined when calling updateAudienceForSpace.'
+                'Required parameter UpdateAudienceForSpaceAlphaInput was null or undefined when calling updateAudienceForSpace.'
             );
         }
 
@@ -866,8 +866,8 @@ export class AudiencesApi {
             useQuerystring: this._useQuerystring,
             json: true,
             body: ObjectSerializer.serialize(
-                UpdateAudienceForSpaceInput,
-                'UpdateAudienceForSpaceInput'
+                UpdateAudienceForSpaceAlphaInput,
+                'UpdateAudienceForSpaceAlphaInput'
             ),
         };
 

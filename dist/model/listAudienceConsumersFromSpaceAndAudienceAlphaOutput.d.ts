@@ -1,6 +1,8 @@
-export declare class AudienceOptionsBeta {
-    'includeHistoricalData'?: boolean;
-    'includeAnonymousUsers'?: boolean;
+import { AudienceSummary } from './audienceSummary';
+import { PaginationOutput } from './paginationOutput';
+export declare class ListAudienceConsumersFromSpaceAndAudienceAlphaOutput {
+    'audiences': Array<AudienceSummary>;
+    'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

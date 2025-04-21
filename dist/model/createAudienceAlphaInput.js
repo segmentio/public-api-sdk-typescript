@@ -27,7 +27,7 @@ var CreateAudienceAlphaInput = (function () {
         {
             name: 'definition',
             baseName: 'definition',
-            type: 'AudienceComputationDefinition',
+            type: 'AudienceDefinition',
         },
         {
             name: 'options',

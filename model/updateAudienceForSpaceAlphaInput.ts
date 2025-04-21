@@ -11,16 +11,25 @@
  */
 
 import { RequestFile } from './models';
+import { AudienceDefinition } from './audienceDefinition';
 
-export class AudienceComputationDefinition {
+/**
+ * Input to update an audience.
+ */
+export class UpdateAudienceForSpaceAlphaInput {
     /**
-     * The underlying data type being segmented for this audience.  Possible values: users, accounts.
+     * Enabled/disabled status for the audience.
      */
-    'type': AudienceComputationDefinition.TypeEnum;
+    'enabled'?: boolean;
     /**
-     * The query language string defining the audience segmentation criteria.  For guidance on using the query language, see the [Segment documentation site](https://segment.com/docs/api/public-api/query-language).
+     * The name of the computation.
      */
-    'query': string;
+    'name'?: string;
+    /**
+     * The description of the computation.
+     */
+    'description'?: string;
+    'definition'?: AudienceDefinition;
 
     static discriminator: string | undefined = undefined;
 
@@ -30,25 +39,28 @@ export class AudienceComputationDefinition {
         type: string;
     }> = [
         {
-            name: 'type',
-            baseName: 'type',
-            type: 'AudienceComputationDefinition.TypeEnum',
+            name: 'enabled',
+            baseName: 'enabled',
+            type: 'boolean',
         },
         {
-            name: 'query',
-            baseName: 'query',
+            name: 'name',
+            baseName: 'name',
             type: 'string',
+        },
+        {
+            name: 'description',
+            baseName: 'description',
+            type: 'string',
+        },
+        {
+            name: 'definition',
+            baseName: 'definition',
+            type: 'AudienceDefinition',
         },
     ];
 
     static getAttributeTypeMap() {
-        return AudienceComputationDefinition.attributeTypeMap;
-    }
-}
-
-export namespace AudienceComputationDefinition {
-    export enum TypeEnum {
-        ACCOUNTS = <any>'ACCOUNTS',
-        USERS = <any>'USERS',
+        return UpdateAudienceForSpaceAlphaInput.attributeTypeMap;
     }
 }

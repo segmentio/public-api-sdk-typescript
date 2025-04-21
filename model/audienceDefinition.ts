@@ -12,18 +12,15 @@
 
 import { RequestFile } from './models';
 
-/**
- * Defines an audience definition.
- */
 export class AudienceDefinition {
-    /**
-     * The query language string defining the audience segmentation criteria.
-     */
-    'query': string;
     /**
      * The underlying data type being segmented for this audience.  Possible values: users, accounts.
      */
     'type': AudienceDefinition.TypeEnum;
+    /**
+     * The query language string defining the audience segmentation criteria.  For guidance on using the query language, see the [Segment documentation site](https://segment.com/docs/api/public-api/query-language).
+     */
+    'query': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -33,14 +30,14 @@ export class AudienceDefinition {
         type: string;
     }> = [
         {
-            name: 'query',
-            baseName: 'query',
-            type: 'string',
-        },
-        {
             name: 'type',
             baseName: 'type',
             type: 'AudienceDefinition.TypeEnum',
+        },
+        {
+            name: 'query',
+            baseName: 'query',
+            type: 'string',
         },
     ];
 
