@@ -306,6 +306,8 @@ __exportStar(require("./labelAlpha"), exports);
 __exportStar(require("./labelV1"), exports);
 __exportStar(require("./listAudienceConsumersFromSpaceAndAudience200Response"), exports);
 __exportStar(require("./listAudienceConsumersFromSpaceAndAudienceOutput"), exports);
+__exportStar(require("./listAudienceConsumersSearchInput"), exports);
+__exportStar(require("./listAudienceConsumersSortInput"), exports);
 __exportStar(require("./listAudiences200Response"), exports);
 __exportStar(require("./listAudiencesAlphaOutput"), exports);
 __exportStar(require("./listAuditEvents200Response"), exports);
@@ -873,6 +875,8 @@ var labelAlpha_1 = require("./labelAlpha");
 var labelV1_1 = require("./labelV1");
 var listAudienceConsumersFromSpaceAndAudience200Response_1 = require("./listAudienceConsumersFromSpaceAndAudience200Response");
 var listAudienceConsumersFromSpaceAndAudienceOutput_1 = require("./listAudienceConsumersFromSpaceAndAudienceOutput");
+var listAudienceConsumersSearchInput_1 = require("./listAudienceConsumersSearchInput");
+var listAudienceConsumersSortInput_1 = require("./listAudienceConsumersSortInput");
 var listAudiences200Response_1 = require("./listAudiences200Response");
 var listAudiencesAlphaOutput_1 = require("./listAudiencesAlphaOutput");
 var listAuditEvents200Response_1 = require("./listAuditEvents200Response");
@@ -1215,6 +1219,9 @@ var enumsMap = {
     'GroupSubscriptionStatusResponse.StatusEnum': groupSubscriptionStatusResponse_1.GroupSubscriptionStatusResponse.StatusEnum,
     'HashPropertiesConfiguration.EncodingEnum': hashPropertiesConfiguration_1.HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum': identifySourceSettingsV1_1.IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
+    'ListAudienceConsumersSearchInput.TypeEnum': listAudienceConsumersSearchInput_1.ListAudienceConsumersSearchInput.TypeEnum,
+    'ListAudienceConsumersSortInput.FieldEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.FieldEnum,
+    'ListAudienceConsumersSortInput.DirectionEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.DirectionEnum,
     'ListFunctionItemV1.ResourceTypeEnum': listFunctionItemV1_1.ListFunctionItemV1.ResourceTypeEnum,
     'MessageSubscriptionResponse.TypeEnum': messageSubscriptionResponse_1.MessageSubscriptionResponse.TypeEnum,
     'MessageSubscriptionResponse.StatusEnum': messageSubscriptionResponse_1.MessageSubscriptionResponse.StatusEnum,
@@ -1543,6 +1550,8 @@ var typeMap = {
     LabelV1: labelV1_1.LabelV1,
     ListAudienceConsumersFromSpaceAndAudience200Response: listAudienceConsumersFromSpaceAndAudience200Response_1.ListAudienceConsumersFromSpaceAndAudience200Response,
     ListAudienceConsumersFromSpaceAndAudienceOutput: listAudienceConsumersFromSpaceAndAudienceOutput_1.ListAudienceConsumersFromSpaceAndAudienceOutput,
+    ListAudienceConsumersSearchInput: listAudienceConsumersSearchInput_1.ListAudienceConsumersSearchInput,
+    ListAudienceConsumersSortInput: listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput,
     ListAudiences200Response: listAudiences200Response_1.ListAudiences200Response,
     ListAudiencesAlphaOutput: listAudiencesAlphaOutput_1.ListAudiencesAlphaOutput,
     ListAuditEvents200Response: listAuditEvents200Response_1.ListAuditEvents200Response,

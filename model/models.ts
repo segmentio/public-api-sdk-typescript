@@ -291,6 +291,8 @@ export * from './labelAlpha';
 export * from './labelV1';
 export * from './listAudienceConsumersFromSpaceAndAudience200Response';
 export * from './listAudienceConsumersFromSpaceAndAudienceOutput';
+export * from './listAudienceConsumersSearchInput';
+export * from './listAudienceConsumersSortInput';
 export * from './listAudiences200Response';
 export * from './listAudiencesAlphaOutput';
 export * from './listAuditEvents200Response';
@@ -871,6 +873,8 @@ import { LabelAlpha } from './labelAlpha';
 import { LabelV1 } from './labelV1';
 import { ListAudienceConsumersFromSpaceAndAudience200Response } from './listAudienceConsumersFromSpaceAndAudience200Response';
 import { ListAudienceConsumersFromSpaceAndAudienceOutput } from './listAudienceConsumersFromSpaceAndAudienceOutput';
+import { ListAudienceConsumersSearchInput } from './listAudienceConsumersSearchInput';
+import { ListAudienceConsumersSortInput } from './listAudienceConsumersSortInput';
 import { ListAudiences200Response } from './listAudiences200Response';
 import { ListAudiencesAlphaOutput } from './listAudiencesAlphaOutput';
 import { ListAuditEvents200Response } from './listAuditEvents200Response';
@@ -1247,6 +1251,12 @@ let enumsMap: { [index: string]: any } = {
         HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum':
         IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
+    'ListAudienceConsumersSearchInput.TypeEnum':
+        ListAudienceConsumersSearchInput.TypeEnum,
+    'ListAudienceConsumersSortInput.FieldEnum':
+        ListAudienceConsumersSortInput.FieldEnum,
+    'ListAudienceConsumersSortInput.DirectionEnum':
+        ListAudienceConsumersSortInput.DirectionEnum,
     'ListFunctionItemV1.ResourceTypeEnum': ListFunctionItemV1.ResourceTypeEnum,
     'MessageSubscriptionResponse.TypeEnum':
         MessageSubscriptionResponse.TypeEnum,
@@ -1640,6 +1650,8 @@ let typeMap: { [index: string]: any } = {
         ListAudienceConsumersFromSpaceAndAudience200Response,
     ListAudienceConsumersFromSpaceAndAudienceOutput:
         ListAudienceConsumersFromSpaceAndAudienceOutput,
+    ListAudienceConsumersSearchInput: ListAudienceConsumersSearchInput,
+    ListAudienceConsumersSortInput: ListAudienceConsumersSortInput,
     ListAudiences200Response: ListAudiences200Response,
     ListAudiencesAlphaOutput: ListAudiencesAlphaOutput,
     ListAuditEvents200Response: ListAuditEvents200Response,

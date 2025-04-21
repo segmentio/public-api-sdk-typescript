@@ -292,6 +292,8 @@ export * from './labelAlpha';
 export * from './labelV1';
 export * from './listAudienceConsumersFromSpaceAndAudience200Response';
 export * from './listAudienceConsumersFromSpaceAndAudienceOutput';
+export * from './listAudienceConsumersSearchInput';
+export * from './listAudienceConsumersSortInput';
 export * from './listAudiences200Response';
 export * from './listAudiencesAlphaOutput';
 export * from './listAuditEvents200Response';
