@@ -415,7 +415,7 @@ var AudiencesApi = (function () {
                     throw new Error('Required parameter spaceId was null or undefined when calling listAudiences.');
                 }
                 if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'ListAudiencesPaginationInput');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;

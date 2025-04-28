@@ -12,7 +12,7 @@ var GetAudienceAlphaOutput = (function () {
         {
             name: 'audience',
             baseName: 'audience',
-            type: 'AudienceSummary',
+            type: 'AudienceSummaryWithAudienceTypeAndLookback',
         },
     ];
     return GetAudienceAlphaOutput;
