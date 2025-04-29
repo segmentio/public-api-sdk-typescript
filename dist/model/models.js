@@ -40,12 +40,9 @@ __exportStar(require("./addUsersToUserGroupV1Output"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Input"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Output"), exports);
 __exportStar(require("./allowedLabelBeta"), exports);
-__exportStar(require("./audienceComputeCadence"), exports);
 __exportStar(require("./audienceDefinition"), exports);
 __exportStar(require("./audienceOptions"), exports);
-__exportStar(require("./audienceOptionsWithLookback"), exports);
 __exportStar(require("./audienceSummary"), exports);
-__exportStar(require("./audienceSummaryWithAudienceTypeAndLookback"), exports);
 __exportStar(require("./auditEventV1"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpace200Response"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput"), exports);
@@ -311,7 +308,6 @@ __exportStar(require("./listAudiences200Response"), exports);
 __exportStar(require("./listAudiences200Response1"), exports);
 __exportStar(require("./listAudiencesAlphaOutput"), exports);
 __exportStar(require("./listAudiencesBetaOutput"), exports);
-__exportStar(require("./listAudiencesPaginationInput"), exports);
 __exportStar(require("./listAuditEvents200Response"), exports);
 __exportStar(require("./listAuditEventsV1Output"), exports);
 __exportStar(require("./listComputedTraits200Response"), exports);
@@ -611,12 +607,9 @@ var addUsersToUserGroupV1Output_1 = require("./addUsersToUserGroupV1Output");
 var advancedWarehouseSyncScheduleV1Input_1 = require("./advancedWarehouseSyncScheduleV1Input");
 var advancedWarehouseSyncScheduleV1Output_1 = require("./advancedWarehouseSyncScheduleV1Output");
 var allowedLabelBeta_1 = require("./allowedLabelBeta");
-var audienceComputeCadence_1 = require("./audienceComputeCadence");
 var audienceDefinition_1 = require("./audienceDefinition");
 var audienceOptions_1 = require("./audienceOptions");
-var audienceOptionsWithLookback_1 = require("./audienceOptionsWithLookback");
 var audienceSummary_1 = require("./audienceSummary");
-var audienceSummaryWithAudienceTypeAndLookback_1 = require("./audienceSummaryWithAudienceTypeAndLookback");
 var auditEventV1_1 = require("./auditEventV1");
 var batchQueryMessagingSubscriptionsForSpace200Response_1 = require("./batchQueryMessagingSubscriptionsForSpace200Response");
 var batchQueryMessagingSubscriptionsForSpaceAlphaInput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput");
@@ -882,7 +875,6 @@ var listAudiences200Response_1 = require("./listAudiences200Response");
 var listAudiences200Response1_1 = require("./listAudiences200Response1");
 var listAudiencesAlphaOutput_1 = require("./listAudiencesAlphaOutput");
 var listAudiencesBetaOutput_1 = require("./listAudiencesBetaOutput");
-var listAudiencesPaginationInput_1 = require("./listAudiencesPaginationInput");
 var listAuditEvents200Response_1 = require("./listAuditEvents200Response");
 var listAuditEventsV1Output_1 = require("./listAuditEventsV1Output");
 var listComputedTraits200Response_1 = require("./listComputedTraits200Response");
@@ -1170,9 +1162,7 @@ var primitives = [
 var enumsMap = {
     'AddConnectionFromSourceToWarehouseV1Output.StatusEnum': addConnectionFromSourceToWarehouseV1Output_1.AddConnectionFromSourceToWarehouseV1Output.StatusEnum,
     'AddSourceToTrackingPlanV1Output.StatusEnum': addSourceToTrackingPlanV1Output_1.AddSourceToTrackingPlanV1Output.StatusEnum,
-    'AudienceComputeCadence.TypeEnum': audienceComputeCadence_1.AudienceComputeCadence.TypeEnum,
     'AudienceDefinition.TypeEnum': audienceDefinition_1.AudienceDefinition.TypeEnum,
-    'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum': audienceSummaryWithAudienceTypeAndLookback_1.AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
     'ComputedTraitsDefinition.TypeEnum': computedTraitsDefinition_1.ComputedTraitsDefinition.TypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
@@ -1288,12 +1278,9 @@ var typeMap = {
     AdvancedWarehouseSyncScheduleV1Input: advancedWarehouseSyncScheduleV1Input_1.AdvancedWarehouseSyncScheduleV1Input,
     AdvancedWarehouseSyncScheduleV1Output: advancedWarehouseSyncScheduleV1Output_1.AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: allowedLabelBeta_1.AllowedLabelBeta,
-    AudienceComputeCadence: audienceComputeCadence_1.AudienceComputeCadence,
     AudienceDefinition: audienceDefinition_1.AudienceDefinition,
     AudienceOptions: audienceOptions_1.AudienceOptions,
-    AudienceOptionsWithLookback: audienceOptionsWithLookback_1.AudienceOptionsWithLookback,
     AudienceSummary: audienceSummary_1.AudienceSummary,
-    AudienceSummaryWithAudienceTypeAndLookback: audienceSummaryWithAudienceTypeAndLookback_1.AudienceSummaryWithAudienceTypeAndLookback,
     AuditEventV1: auditEventV1_1.AuditEventV1,
     BatchQueryMessagingSubscriptionsForSpace200Response: batchQueryMessagingSubscriptionsForSpace200Response_1.BatchQueryMessagingSubscriptionsForSpace200Response,
     BatchQueryMessagingSubscriptionsForSpaceAlphaInput: batchQueryMessagingSubscriptionsForSpaceAlphaInput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaInput,
@@ -1559,7 +1546,6 @@ var typeMap = {
     ListAudiences200Response1: listAudiences200Response1_1.ListAudiences200Response1,
     ListAudiencesAlphaOutput: listAudiencesAlphaOutput_1.ListAudiencesAlphaOutput,
     ListAudiencesBetaOutput: listAudiencesBetaOutput_1.ListAudiencesBetaOutput,
-    ListAudiencesPaginationInput: listAudiencesPaginationInput_1.ListAudiencesPaginationInput,
     ListAuditEvents200Response: listAuditEvents200Response_1.ListAuditEvents200Response,
     ListAuditEventsV1Output: listAuditEventsV1Output_1.ListAuditEventsV1Output,
     ListComputedTraits200Response: listComputedTraits200Response_1.ListComputedTraits200Response,
