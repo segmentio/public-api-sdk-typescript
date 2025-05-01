@@ -1,7 +1,7 @@
-import { AudienceSummaryWithAudienceTypeAndLookback } from './audienceSummaryWithAudienceTypeAndLookback';
+import { AudienceSummary } from './audienceSummary';
 import { PaginationOutput } from './paginationOutput';
 export declare class ListAudiencesAlphaOutput {
-    'audiences': Array<AudienceSummaryWithAudienceTypeAndLookback>;
+    'audiences': Array<AudienceSummary>;
     'pagination': PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

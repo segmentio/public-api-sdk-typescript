@@ -12,7 +12,7 @@ var ListAudiencesBetaOutput = (function () {
         {
             name: 'audiences',
             baseName: 'audiences',
-            type: 'Array<AudienceSummaryWithAudienceTypeAndLookback>',
+            type: 'Array<AudienceSummary>',
         },
         {
             name: 'pagination',
