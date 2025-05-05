@@ -1,6 +1,6 @@
-import { AudienceSummary } from './audienceSummary';
+import { AudienceSummaryWithAudienceTypeAndLookback } from './audienceSummaryWithAudienceTypeAndLookback';
 export declare class GetAudienceBetaOutput {
-    'audience': AudienceSummary;
+    'audience': AudienceSummaryWithAudienceTypeAndLookback;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
