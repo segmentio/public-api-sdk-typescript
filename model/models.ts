@@ -25,9 +25,12 @@ export * from './addUsersToUserGroupV1Output';
 export * from './advancedWarehouseSyncScheduleV1Input';
 export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
+export * from './audienceComputeCadence';
 export * from './audienceDefinition';
 export * from './audienceOptions';
+export * from './audienceOptionsWithLookback';
 export * from './audienceSummary';
+export * from './audienceSummaryWithAudienceTypeAndLookback';
 export * from './auditEventV1';
 export * from './batchQueryMessagingSubscriptionsForSpace200Response';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
@@ -293,6 +296,7 @@ export * from './listAudiences200Response';
 export * from './listAudiences200Response1';
 export * from './listAudiencesAlphaOutput';
 export * from './listAudiencesBetaOutput';
+export * from './listAudiencesPaginationInput';
 export * from './listAuditEvents200Response';
 export * from './listAuditEventsV1Output';
 export * from './listComputedTraits200Response';
@@ -605,9 +609,12 @@ import { AddUsersToUserGroupV1Output } from './addUsersToUserGroupV1Output';
 import { AdvancedWarehouseSyncScheduleV1Input } from './advancedWarehouseSyncScheduleV1Input';
 import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncScheduleV1Output';
 import { AllowedLabelBeta } from './allowedLabelBeta';
+import { AudienceComputeCadence } from './audienceComputeCadence';
 import { AudienceDefinition } from './audienceDefinition';
 import { AudienceOptions } from './audienceOptions';
+import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
 import { AudienceSummary } from './audienceSummary';
+import { AudienceSummaryWithAudienceTypeAndLookback } from './audienceSummaryWithAudienceTypeAndLookback';
 import { AuditEventV1 } from './auditEventV1';
 import { BatchQueryMessagingSubscriptionsForSpace200Response } from './batchQueryMessagingSubscriptionsForSpace200Response';
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaInput } from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
@@ -873,6 +880,7 @@ import { ListAudiences200Response } from './listAudiences200Response';
 import { ListAudiences200Response1 } from './listAudiences200Response1';
 import { ListAudiencesAlphaOutput } from './listAudiencesAlphaOutput';
 import { ListAudiencesBetaOutput } from './listAudiencesBetaOutput';
+import { ListAudiencesPaginationInput } from './listAudiencesPaginationInput';
 import { ListAuditEvents200Response } from './listAuditEvents200Response';
 import { ListAuditEventsV1Output } from './listAuditEventsV1Output';
 import { ListComputedTraits200Response } from './listComputedTraits200Response';
@@ -1165,7 +1173,10 @@ let enumsMap: { [index: string]: any } = {
         AddConnectionFromSourceToWarehouseV1Output.StatusEnum,
     'AddSourceToTrackingPlanV1Output.StatusEnum':
         AddSourceToTrackingPlanV1Output.StatusEnum,
+    'AudienceComputeCadence.TypeEnum': AudienceComputeCadence.TypeEnum,
     'AudienceDefinition.TypeEnum': AudienceDefinition.TypeEnum,
+    'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum':
+        AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
     'ComputedTraitsDefinition.TypeEnum': ComputedTraitsDefinition.TypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum':
         CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
@@ -1339,9 +1350,13 @@ let typeMap: { [index: string]: any } = {
     AdvancedWarehouseSyncScheduleV1Output:
         AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: AllowedLabelBeta,
+    AudienceComputeCadence: AudienceComputeCadence,
     AudienceDefinition: AudienceDefinition,
     AudienceOptions: AudienceOptions,
+    AudienceOptionsWithLookback: AudienceOptionsWithLookback,
     AudienceSummary: AudienceSummary,
+    AudienceSummaryWithAudienceTypeAndLookback:
+        AudienceSummaryWithAudienceTypeAndLookback,
     AuditEventV1: AuditEventV1,
     BatchQueryMessagingSubscriptionsForSpace200Response:
         BatchQueryMessagingSubscriptionsForSpace200Response,
@@ -1645,6 +1660,7 @@ let typeMap: { [index: string]: any } = {
     ListAudiences200Response1: ListAudiences200Response1,
     ListAudiencesAlphaOutput: ListAudiencesAlphaOutput,
     ListAudiencesBetaOutput: ListAudiencesBetaOutput,
+    ListAudiencesPaginationInput: ListAudiencesPaginationInput,
     ListAuditEvents200Response: ListAuditEvents200Response,
     ListAuditEventsV1Output: ListAuditEventsV1Output,
     ListComputedTraits200Response: ListComputedTraits200Response,

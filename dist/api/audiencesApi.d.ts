@@ -7,6 +7,7 @@ import { ListAudienceConsumersFromSpaceAndAudience200Response } from '../model/l
 import { ListAudienceConsumersSearchInput } from '../model/listAudienceConsumersSearchInput';
 import { ListAudienceConsumersSortInput } from '../model/listAudienceConsumersSortInput';
 import { ListAudiences200Response } from '../model/listAudiences200Response';
+import { ListAudiencesPaginationInput } from '../model/listAudiencesPaginationInput';
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromSpace200Response';
 import { UpdateAudienceForSpace200Response } from '../model/updateAudienceForSpace200Response';
@@ -58,7 +59,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: ListAudienceConsumersFromSpaceAndAudience200Response;
     }>;
-    listAudiences(spaceId: string, pagination?: PaginationInput, options?: {
+    listAudiences(spaceId: string, pagination?: ListAudiencesPaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
