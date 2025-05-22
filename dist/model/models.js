@@ -42,6 +42,7 @@ __exportStar(require("./advancedWarehouseSyncScheduleV1Output"), exports);
 __exportStar(require("./allowedLabelBeta"), exports);
 __exportStar(require("./audienceComputeCadence"), exports);
 __exportStar(require("./audienceDefinition"), exports);
+__exportStar(require("./audienceDefinitionWithoutType"), exports);
 __exportStar(require("./audienceOptions"), exports);
 __exportStar(require("./audienceOptionsWithLookback"), exports);
 __exportStar(require("./audienceSummary"), exports);
@@ -416,6 +417,10 @@ __exportStar(require("./paginationOutput"), exports);
 __exportStar(require("./permissionInputV1"), exports);
 __exportStar(require("./permissionResourceV1"), exports);
 __exportStar(require("./permissionV1"), exports);
+__exportStar(require("./preview"), exports);
+__exportStar(require("./previewAudience200Response"), exports);
+__exportStar(require("./previewAudienceInput"), exports);
+__exportStar(require("./previewAudienceOutput"), exports);
 __exportStar(require("./previewDestinationFilter200Response"), exports);
 __exportStar(require("./previewDestinationFilterV1"), exports);
 __exportStar(require("./previewDestinationFilterV1Input"), exports);
@@ -613,6 +618,7 @@ var advancedWarehouseSyncScheduleV1Output_1 = require("./advancedWarehouseSyncSc
 var allowedLabelBeta_1 = require("./allowedLabelBeta");
 var audienceComputeCadence_1 = require("./audienceComputeCadence");
 var audienceDefinition_1 = require("./audienceDefinition");
+var audienceDefinitionWithoutType_1 = require("./audienceDefinitionWithoutType");
 var audienceOptions_1 = require("./audienceOptions");
 var audienceOptionsWithLookback_1 = require("./audienceOptionsWithLookback");
 var audienceSummary_1 = require("./audienceSummary");
@@ -987,6 +993,10 @@ var paginationOutput_1 = require("./paginationOutput");
 var permissionInputV1_1 = require("./permissionInputV1");
 var permissionResourceV1_1 = require("./permissionResourceV1");
 var permissionV1_1 = require("./permissionV1");
+var preview_1 = require("./preview");
+var previewAudience200Response_1 = require("./previewAudience200Response");
+var previewAudienceInput_1 = require("./previewAudienceInput");
+var previewAudienceOutput_1 = require("./previewAudienceOutput");
 var previewDestinationFilter200Response_1 = require("./previewDestinationFilter200Response");
 var previewDestinationFilterV1_1 = require("./previewDestinationFilterV1");
 var previewDestinationFilterV1Input_1 = require("./previewDestinationFilterV1Input");
@@ -1232,6 +1242,7 @@ var enumsMap = {
     'MessagesSubscriptionRequest.TypeEnum': messagesSubscriptionRequest_1.MessagesSubscriptionRequest.TypeEnum,
     'MessagesSubscriptionRequest.StatusEnum': messagesSubscriptionRequest_1.MessagesSubscriptionRequest.StatusEnum,
     'PermissionResourceV1.TypeEnum': permissionResourceV1_1.PermissionResourceV1.TypeEnum,
+    'PreviewAudienceInput.AudienceTypeEnum': previewAudienceInput_1.PreviewAudienceInput.AudienceTypeEnum,
     'Regulation.OverallStatusEnum': regulation_1.Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': regulationListEntryV1_1.RegulationListEntryV1.StatusEnum,
     'RegulationListEntryV1.RegulationTypeEnum': regulationListEntryV1_1.RegulationListEntryV1.RegulationTypeEnum,
@@ -1290,6 +1301,7 @@ var typeMap = {
     AllowedLabelBeta: allowedLabelBeta_1.AllowedLabelBeta,
     AudienceComputeCadence: audienceComputeCadence_1.AudienceComputeCadence,
     AudienceDefinition: audienceDefinition_1.AudienceDefinition,
+    AudienceDefinitionWithoutType: audienceDefinitionWithoutType_1.AudienceDefinitionWithoutType,
     AudienceOptions: audienceOptions_1.AudienceOptions,
     AudienceOptionsWithLookback: audienceOptionsWithLookback_1.AudienceOptionsWithLookback,
     AudienceSummary: audienceSummary_1.AudienceSummary,
@@ -1664,6 +1676,10 @@ var typeMap = {
     PermissionInputV1: permissionInputV1_1.PermissionInputV1,
     PermissionResourceV1: permissionResourceV1_1.PermissionResourceV1,
     PermissionV1: permissionV1_1.PermissionV1,
+    Preview: preview_1.Preview,
+    PreviewAudience200Response: previewAudience200Response_1.PreviewAudience200Response,
+    PreviewAudienceInput: previewAudienceInput_1.PreviewAudienceInput,
+    PreviewAudienceOutput: previewAudienceOutput_1.PreviewAudienceOutput,
     PreviewDestinationFilter200Response: previewDestinationFilter200Response_1.PreviewDestinationFilter200Response,
     PreviewDestinationFilterV1: previewDestinationFilterV1_1.PreviewDestinationFilterV1,
     PreviewDestinationFilterV1Input: previewDestinationFilterV1Input_1.PreviewDestinationFilterV1Input,
