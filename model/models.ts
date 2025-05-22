@@ -27,6 +27,7 @@ export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
 export * from './audienceComputeCadence';
 export * from './audienceDefinition';
+export * from './audienceDefinitionWithoutType';
 export * from './audienceOptions';
 export * from './audienceOptionsWithLookback';
 export * from './audienceSummary';
@@ -401,6 +402,10 @@ export * from './paginationOutput';
 export * from './permissionInputV1';
 export * from './permissionResourceV1';
 export * from './permissionV1';
+export * from './preview';
+export * from './previewAudience200Response';
+export * from './previewAudienceInput';
+export * from './previewAudienceOutput';
 export * from './previewDestinationFilter200Response';
 export * from './previewDestinationFilterV1';
 export * from './previewDestinationFilterV1Input';
@@ -611,6 +616,7 @@ import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncSc
 import { AllowedLabelBeta } from './allowedLabelBeta';
 import { AudienceComputeCadence } from './audienceComputeCadence';
 import { AudienceDefinition } from './audienceDefinition';
+import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
 import { AudienceOptions } from './audienceOptions';
 import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
 import { AudienceSummary } from './audienceSummary';
@@ -985,6 +991,10 @@ import { PaginationOutput } from './paginationOutput';
 import { PermissionInputV1 } from './permissionInputV1';
 import { PermissionResourceV1 } from './permissionResourceV1';
 import { PermissionV1 } from './permissionV1';
+import { Preview } from './preview';
+import { PreviewAudience200Response } from './previewAudience200Response';
+import { PreviewAudienceInput } from './previewAudienceInput';
+import { PreviewAudienceOutput } from './previewAudienceOutput';
 import { PreviewDestinationFilter200Response } from './previewDestinationFilter200Response';
 import { PreviewDestinationFilterV1 } from './previewDestinationFilterV1';
 import { PreviewDestinationFilterV1Input } from './previewDestinationFilterV1Input';
@@ -1271,6 +1281,8 @@ let enumsMap: { [index: string]: any } = {
     'MessagesSubscriptionRequest.StatusEnum':
         MessagesSubscriptionRequest.StatusEnum,
     'PermissionResourceV1.TypeEnum': PermissionResourceV1.TypeEnum,
+    'PreviewAudienceInput.AudienceTypeEnum':
+        PreviewAudienceInput.AudienceTypeEnum,
     'Regulation.OverallStatusEnum': Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': RegulationListEntryV1.StatusEnum,
     'RegulationListEntryV1.RegulationTypeEnum':
@@ -1352,6 +1364,7 @@ let typeMap: { [index: string]: any } = {
     AllowedLabelBeta: AllowedLabelBeta,
     AudienceComputeCadence: AudienceComputeCadence,
     AudienceDefinition: AudienceDefinition,
+    AudienceDefinitionWithoutType: AudienceDefinitionWithoutType,
     AudienceOptions: AudienceOptions,
     AudienceOptionsWithLookback: AudienceOptionsWithLookback,
     AudienceSummary: AudienceSummary,
@@ -1794,6 +1807,10 @@ let typeMap: { [index: string]: any } = {
     PermissionInputV1: PermissionInputV1,
     PermissionResourceV1: PermissionResourceV1,
     PermissionV1: PermissionV1,
+    Preview: Preview,
+    PreviewAudience200Response: PreviewAudience200Response,
+    PreviewAudienceInput: PreviewAudienceInput,
+    PreviewAudienceOutput: PreviewAudienceOutput,
     PreviewDestinationFilter200Response: PreviewDestinationFilter200Response,
     PreviewDestinationFilterV1: PreviewDestinationFilterV1,
     PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,

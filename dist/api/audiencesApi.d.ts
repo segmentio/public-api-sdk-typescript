@@ -9,6 +9,8 @@ import { ListAudienceConsumersSortInput } from '../model/listAudienceConsumersSo
 import { ListAudiences200Response } from '../model/listAudiences200Response';
 import { ListAudiencesPaginationInput } from '../model/listAudiencesPaginationInput';
 import { PaginationInput } from '../model/paginationInput';
+import { PreviewAudience200Response } from '../model/previewAudience200Response';
+import { PreviewAudienceInput } from '../model/previewAudienceInput';
 import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromSpace200Response';
 import { UpdateAudienceForSpace200Response } from '../model/updateAudienceForSpace200Response';
 import { UpdateAudienceForSpaceAlphaInput } from '../model/updateAudienceForSpaceAlphaInput';
@@ -66,6 +68,14 @@ export declare class AudiencesApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: ListAudiences200Response;
+    }>;
+    previewAudience(spaceId: string, PreviewAudienceInput: PreviewAudienceInput, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: PreviewAudience200Response;
     }>;
     removeAudienceFromSpace(spaceId: string, id: string, options?: {
         headers: {
