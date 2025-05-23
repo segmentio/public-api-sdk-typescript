@@ -63,6 +63,9 @@ export * from './createDestinationSubscriptionAlphaInput';
 export * from './createDestinationSubscriptionAlphaOutput';
 export * from './createDestinationV1Input';
 export * from './createDestinationV1Output';
+export * from './createDownload200Response';
+export * from './createDownloadAlphaInput';
+export * from './createDownloadAlphaOutput';
 export * from './createEdgeFunctions200Response';
 export * from './createEdgeFunctionsAlphaInput';
 export * from './createEdgeFunctionsAlphaOutput';
@@ -183,6 +186,7 @@ export * from './destinationSubscriptionUpdateInput';
 export * from './destinationV1';
 export * from './disableEdgeFunctions200Response';
 export * from './disableEdgeFunctionsAlphaOutput';
+export * from './download';
 export * from './echo200Response';
 export * from './echo200Response1';
 export * from './echoAlphaOutput';
@@ -652,6 +656,9 @@ import { CreateDestinationSubscriptionAlphaInput } from './createDestinationSubs
 import { CreateDestinationSubscriptionAlphaOutput } from './createDestinationSubscriptionAlphaOutput';
 import { CreateDestinationV1Input } from './createDestinationV1Input';
 import { CreateDestinationV1Output } from './createDestinationV1Output';
+import { CreateDownload200Response } from './createDownload200Response';
+import { CreateDownloadAlphaInput } from './createDownloadAlphaInput';
+import { CreateDownloadAlphaOutput } from './createDownloadAlphaOutput';
 import { CreateEdgeFunctions200Response } from './createEdgeFunctions200Response';
 import { CreateEdgeFunctionsAlphaInput } from './createEdgeFunctionsAlphaInput';
 import { CreateEdgeFunctionsAlphaOutput } from './createEdgeFunctionsAlphaOutput';
@@ -772,6 +779,7 @@ import { DestinationSubscriptionUpdateInput } from './destinationSubscriptionUpd
 import { DestinationV1 } from './destinationV1';
 import { DisableEdgeFunctions200Response } from './disableEdgeFunctions200Response';
 import { DisableEdgeFunctionsAlphaOutput } from './disableEdgeFunctionsAlphaOutput';
+import { Download } from './download';
 import { Echo200Response } from './echo200Response';
 import { Echo200Response1 } from './echo200Response1';
 import { EchoAlphaOutput } from './echoAlphaOutput';
@@ -1409,6 +1417,9 @@ let typeMap: { [index: string]: any } = {
         CreateDestinationSubscriptionAlphaOutput,
     CreateDestinationV1Input: CreateDestinationV1Input,
     CreateDestinationV1Output: CreateDestinationV1Output,
+    CreateDownload200Response: CreateDownload200Response,
+    CreateDownloadAlphaInput: CreateDownloadAlphaInput,
+    CreateDownloadAlphaOutput: CreateDownloadAlphaOutput,
     CreateEdgeFunctions200Response: CreateEdgeFunctions200Response,
     CreateEdgeFunctionsAlphaInput: CreateEdgeFunctionsAlphaInput,
     CreateEdgeFunctionsAlphaOutput: CreateEdgeFunctionsAlphaOutput,
@@ -1539,6 +1550,7 @@ let typeMap: { [index: string]: any } = {
     DestinationV1: DestinationV1,
     DisableEdgeFunctions200Response: DisableEdgeFunctions200Response,
     DisableEdgeFunctionsAlphaOutput: DisableEdgeFunctionsAlphaOutput,
+    Download: Download,
     Echo200Response: Echo200Response,
     Echo200Response1: Echo200Response1,
     EchoAlphaOutput: EchoAlphaOutput,

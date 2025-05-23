@@ -1,0 +1,1 @@
+{"version":3,"file":"download.js","sourceRoot":"","sources":["../../model/download.ts"],"names":[],"mappings":";;;AAcA;IAAA;IAuBA,CAAC;IAHU,4BAAmB,GAA1B;QACI,OAAO,QAAQ,CAAC,gBAAgB,CAAC;IACrC,CAAC;IAhBM,sBAAa,GAAuB,SAAS,CAAC;IAE9C,yBAAgB,GAIlB;QACD;YACI,IAAI,EAAE,MAAM;YACZ,QAAQ,EAAE,MAAM;YAChB,IAAI,EAAE,eAAe;SACxB;KACJ,CAAC;IAKN,eAAC;CAAA,AAvBD,IAuBC;AAvBY,4BAAQ"}
