@@ -78,6 +78,9 @@ __exportStar(require("./createDestinationSubscriptionAlphaInput"), exports);
 __exportStar(require("./createDestinationSubscriptionAlphaOutput"), exports);
 __exportStar(require("./createDestinationV1Input"), exports);
 __exportStar(require("./createDestinationV1Output"), exports);
+__exportStar(require("./createDownload200Response"), exports);
+__exportStar(require("./createDownloadAlphaInput"), exports);
+__exportStar(require("./createDownloadAlphaOutput"), exports);
 __exportStar(require("./createEdgeFunctions200Response"), exports);
 __exportStar(require("./createEdgeFunctionsAlphaInput"), exports);
 __exportStar(require("./createEdgeFunctionsAlphaOutput"), exports);
@@ -198,6 +201,7 @@ __exportStar(require("./destinationSubscriptionUpdateInput"), exports);
 __exportStar(require("./destinationV1"), exports);
 __exportStar(require("./disableEdgeFunctions200Response"), exports);
 __exportStar(require("./disableEdgeFunctionsAlphaOutput"), exports);
+__exportStar(require("./download"), exports);
 __exportStar(require("./echo200Response"), exports);
 __exportStar(require("./echo200Response1"), exports);
 __exportStar(require("./echoAlphaOutput"), exports);
@@ -654,6 +658,9 @@ var createDestinationSubscriptionAlphaInput_1 = require("./createDestinationSubs
 var createDestinationSubscriptionAlphaOutput_1 = require("./createDestinationSubscriptionAlphaOutput");
 var createDestinationV1Input_1 = require("./createDestinationV1Input");
 var createDestinationV1Output_1 = require("./createDestinationV1Output");
+var createDownload200Response_1 = require("./createDownload200Response");
+var createDownloadAlphaInput_1 = require("./createDownloadAlphaInput");
+var createDownloadAlphaOutput_1 = require("./createDownloadAlphaOutput");
 var createEdgeFunctions200Response_1 = require("./createEdgeFunctions200Response");
 var createEdgeFunctionsAlphaInput_1 = require("./createEdgeFunctionsAlphaInput");
 var createEdgeFunctionsAlphaOutput_1 = require("./createEdgeFunctionsAlphaOutput");
@@ -774,6 +781,7 @@ var destinationSubscriptionUpdateInput_1 = require("./destinationSubscriptionUpd
 var destinationV1_1 = require("./destinationV1");
 var disableEdgeFunctions200Response_1 = require("./disableEdgeFunctions200Response");
 var disableEdgeFunctionsAlphaOutput_1 = require("./disableEdgeFunctionsAlphaOutput");
+var download_1 = require("./download");
 var echo200Response_1 = require("./echo200Response");
 var echo200Response1_1 = require("./echo200Response1");
 var echoAlphaOutput_1 = require("./echoAlphaOutput");
@@ -1337,6 +1345,9 @@ var typeMap = {
     CreateDestinationSubscriptionAlphaOutput: createDestinationSubscriptionAlphaOutput_1.CreateDestinationSubscriptionAlphaOutput,
     CreateDestinationV1Input: createDestinationV1Input_1.CreateDestinationV1Input,
     CreateDestinationV1Output: createDestinationV1Output_1.CreateDestinationV1Output,
+    CreateDownload200Response: createDownload200Response_1.CreateDownload200Response,
+    CreateDownloadAlphaInput: createDownloadAlphaInput_1.CreateDownloadAlphaInput,
+    CreateDownloadAlphaOutput: createDownloadAlphaOutput_1.CreateDownloadAlphaOutput,
     CreateEdgeFunctions200Response: createEdgeFunctions200Response_1.CreateEdgeFunctions200Response,
     CreateEdgeFunctionsAlphaInput: createEdgeFunctionsAlphaInput_1.CreateEdgeFunctionsAlphaInput,
     CreateEdgeFunctionsAlphaOutput: createEdgeFunctionsAlphaOutput_1.CreateEdgeFunctionsAlphaOutput,
@@ -1457,6 +1468,7 @@ var typeMap = {
     DestinationV1: destinationV1_1.DestinationV1,
     DisableEdgeFunctions200Response: disableEdgeFunctions200Response_1.DisableEdgeFunctions200Response,
     DisableEdgeFunctionsAlphaOutput: disableEdgeFunctionsAlphaOutput_1.DisableEdgeFunctionsAlphaOutput,
+    Download: download_1.Download,
     Echo200Response: echo200Response_1.Echo200Response,
     Echo200Response1: echo200Response1_1.Echo200Response1,
     EchoAlphaOutput: echoAlphaOutput_1.EchoAlphaOutput,

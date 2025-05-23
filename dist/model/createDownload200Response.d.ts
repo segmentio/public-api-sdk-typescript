@@ -1,0 +1,15 @@
+import { CreateDownloadAlphaOutput } from './createDownloadAlphaOutput';
+export declare class CreateDownload200Response {
+    'data'?: CreateDownloadAlphaOutput;
+    static discriminator: string | undefined;
+    static attributeTypeMap: Array<{
+        name: string;
+        baseName: string;
+        type: string;
+    }>;
+    static getAttributeTypeMap(): {
+        name: string;
+        baseName: string;
+        type: string;
+    }[];
+}
