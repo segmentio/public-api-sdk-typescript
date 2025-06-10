@@ -45,6 +45,10 @@ __exportStar(require("./audienceDefinition"), exports);
 __exportStar(require("./audienceDefinitionWithoutType"), exports);
 __exportStar(require("./audienceOptions"), exports);
 __exportStar(require("./audienceOptionsWithLookback"), exports);
+__exportStar(require("./audiencePreview"), exports);
+__exportStar(require("./audiencePreviewIdentifier"), exports);
+__exportStar(require("./audiencePreviewResult"), exports);
+__exportStar(require("./audienceSize"), exports);
 __exportStar(require("./audienceSummary"), exports);
 __exportStar(require("./audienceSummaryWithAudienceTypeAndLookback"), exports);
 __exportStar(require("./auditEventV1"), exports);
@@ -55,7 +59,9 @@ __exportStar(require("./breakdownBeta"), exports);
 __exportStar(require("./cancelReverseETLSyncForModel200Response"), exports);
 __exportStar(require("./cancelReverseETLSyncForModelInput"), exports);
 __exportStar(require("./cancelReverseETLSyncForModelOutput"), exports);
+__exportStar(require("./commonAudiencePreview"), exports);
 __exportStar(require("./commonSourceSettingsV1"), exports);
+__exportStar(require("./completedAudiencePreview"), exports);
 __exportStar(require("./computedTraitSummary"), exports);
 __exportStar(require("./computedTraitsDefinition"), exports);
 __exportStar(require("./config"), exports);
@@ -63,6 +69,9 @@ __exportStar(require("./contact"), exports);
 __exportStar(require("./createAudience200Response"), exports);
 __exportStar(require("./createAudienceAlphaInput"), exports);
 __exportStar(require("./createAudienceAlphaOutput"), exports);
+__exportStar(require("./createAudiencePreview200Response"), exports);
+__exportStar(require("./createAudiencePreviewAlphaInput"), exports);
+__exportStar(require("./createAudiencePreviewAlphaOutput"), exports);
 __exportStar(require("./createCloudSourceRegulation200Response"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Input"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Output"), exports);
@@ -209,6 +218,7 @@ __exportStar(require("./echoV1Output"), exports);
 __exportStar(require("./edgeFunctionsAlpha"), exports);
 __exportStar(require("./eventSourceV1"), exports);
 __exportStar(require("./fQLDefinedPropertyV1"), exports);
+__exportStar(require("./failedAudiencePreview"), exports);
 __exportStar(require("./filter"), exports);
 __exportStar(require("./functionDeployment"), exports);
 __exportStar(require("./functionSettingV1"), exports);
@@ -221,6 +231,8 @@ __exportStar(require("./getAudience200Response"), exports);
 __exportStar(require("./getAudience200Response1"), exports);
 __exportStar(require("./getAudienceAlphaOutput"), exports);
 __exportStar(require("./getAudienceBetaOutput"), exports);
+__exportStar(require("./getAudiencePreview200Response"), exports);
+__exportStar(require("./getAudiencePreviewAlphaOutput"), exports);
 __exportStar(require("./getComputedTrait200Response"), exports);
 __exportStar(require("./getComputedTraitAlphaOutput"), exports);
 __exportStar(require("./getConnectionStateFromWarehouse200Response"), exports);
@@ -421,10 +433,6 @@ __exportStar(require("./paginationOutput"), exports);
 __exportStar(require("./permissionInputV1"), exports);
 __exportStar(require("./permissionResourceV1"), exports);
 __exportStar(require("./permissionV1"), exports);
-__exportStar(require("./preview"), exports);
-__exportStar(require("./previewAudience200Response"), exports);
-__exportStar(require("./previewAudienceInput"), exports);
-__exportStar(require("./previewAudienceOutput"), exports);
 __exportStar(require("./previewDestinationFilter200Response"), exports);
 __exportStar(require("./previewDestinationFilterV1"), exports);
 __exportStar(require("./previewDestinationFilterV1Input"), exports);
@@ -499,6 +507,7 @@ __exportStar(require("./reverseEtlSpecificTimeScheduleConfig"), exports);
 __exportStar(require("./roleV1"), exports);
 __exportStar(require("./ruleInputV1"), exports);
 __exportStar(require("./ruleV1"), exports);
+__exportStar(require("./runningAudiencePreview"), exports);
 __exportStar(require("./sourceAPICallSnapshotV1"), exports);
 __exportStar(require("./sourceAlpha"), exports);
 __exportStar(require("./sourceEventVolumeDatapointV1"), exports);
@@ -625,6 +634,10 @@ var audienceDefinition_1 = require("./audienceDefinition");
 var audienceDefinitionWithoutType_1 = require("./audienceDefinitionWithoutType");
 var audienceOptions_1 = require("./audienceOptions");
 var audienceOptionsWithLookback_1 = require("./audienceOptionsWithLookback");
+var audiencePreview_1 = require("./audiencePreview");
+var audiencePreviewIdentifier_1 = require("./audiencePreviewIdentifier");
+var audiencePreviewResult_1 = require("./audiencePreviewResult");
+var audienceSize_1 = require("./audienceSize");
 var audienceSummary_1 = require("./audienceSummary");
 var audienceSummaryWithAudienceTypeAndLookback_1 = require("./audienceSummaryWithAudienceTypeAndLookback");
 var auditEventV1_1 = require("./auditEventV1");
@@ -635,7 +648,9 @@ var breakdownBeta_1 = require("./breakdownBeta");
 var cancelReverseETLSyncForModel200Response_1 = require("./cancelReverseETLSyncForModel200Response");
 var cancelReverseETLSyncForModelInput_1 = require("./cancelReverseETLSyncForModelInput");
 var cancelReverseETLSyncForModelOutput_1 = require("./cancelReverseETLSyncForModelOutput");
+var commonAudiencePreview_1 = require("./commonAudiencePreview");
 var commonSourceSettingsV1_1 = require("./commonSourceSettingsV1");
+var completedAudiencePreview_1 = require("./completedAudiencePreview");
 var computedTraitSummary_1 = require("./computedTraitSummary");
 var computedTraitsDefinition_1 = require("./computedTraitsDefinition");
 var config_1 = require("./config");
@@ -643,6 +658,9 @@ var contact_1 = require("./contact");
 var createAudience200Response_1 = require("./createAudience200Response");
 var createAudienceAlphaInput_1 = require("./createAudienceAlphaInput");
 var createAudienceAlphaOutput_1 = require("./createAudienceAlphaOutput");
+var createAudiencePreview200Response_1 = require("./createAudiencePreview200Response");
+var createAudiencePreviewAlphaInput_1 = require("./createAudiencePreviewAlphaInput");
+var createAudiencePreviewAlphaOutput_1 = require("./createAudiencePreviewAlphaOutput");
 var createCloudSourceRegulation200Response_1 = require("./createCloudSourceRegulation200Response");
 var createCloudSourceRegulationV1Input_1 = require("./createCloudSourceRegulationV1Input");
 var createCloudSourceRegulationV1Output_1 = require("./createCloudSourceRegulationV1Output");
@@ -789,6 +807,7 @@ var echoV1Output_1 = require("./echoV1Output");
 var edgeFunctionsAlpha_1 = require("./edgeFunctionsAlpha");
 var eventSourceV1_1 = require("./eventSourceV1");
 var fQLDefinedPropertyV1_1 = require("./fQLDefinedPropertyV1");
+var failedAudiencePreview_1 = require("./failedAudiencePreview");
 var filter_1 = require("./filter");
 var functionDeployment_1 = require("./functionDeployment");
 var functionSettingV1_1 = require("./functionSettingV1");
@@ -801,6 +820,8 @@ var getAudience200Response_1 = require("./getAudience200Response");
 var getAudience200Response1_1 = require("./getAudience200Response1");
 var getAudienceAlphaOutput_1 = require("./getAudienceAlphaOutput");
 var getAudienceBetaOutput_1 = require("./getAudienceBetaOutput");
+var getAudiencePreview200Response_1 = require("./getAudiencePreview200Response");
+var getAudiencePreviewAlphaOutput_1 = require("./getAudiencePreviewAlphaOutput");
 var getComputedTrait200Response_1 = require("./getComputedTrait200Response");
 var getComputedTraitAlphaOutput_1 = require("./getComputedTraitAlphaOutput");
 var getConnectionStateFromWarehouse200Response_1 = require("./getConnectionStateFromWarehouse200Response");
@@ -1001,10 +1022,6 @@ var paginationOutput_1 = require("./paginationOutput");
 var permissionInputV1_1 = require("./permissionInputV1");
 var permissionResourceV1_1 = require("./permissionResourceV1");
 var permissionV1_1 = require("./permissionV1");
-var preview_1 = require("./preview");
-var previewAudience200Response_1 = require("./previewAudience200Response");
-var previewAudienceInput_1 = require("./previewAudienceInput");
-var previewAudienceOutput_1 = require("./previewAudienceOutput");
 var previewDestinationFilter200Response_1 = require("./previewDestinationFilter200Response");
 var previewDestinationFilterV1_1 = require("./previewDestinationFilterV1");
 var previewDestinationFilterV1Input_1 = require("./previewDestinationFilterV1Input");
@@ -1079,6 +1096,7 @@ var reverseEtlSpecificTimeScheduleConfig_1 = require("./reverseEtlSpecificTimeSc
 var roleV1_1 = require("./roleV1");
 var ruleInputV1_1 = require("./ruleInputV1");
 var ruleV1_1 = require("./ruleV1");
+var runningAudiencePreview_1 = require("./runningAudiencePreview");
 var sourceAPICallSnapshotV1_1 = require("./sourceAPICallSnapshotV1");
 var sourceAlpha_1 = require("./sourceAlpha");
 var sourceEventVolumeDatapointV1_1 = require("./sourceEventVolumeDatapointV1");
@@ -1190,8 +1208,15 @@ var enumsMap = {
     'AddSourceToTrackingPlanV1Output.StatusEnum': addSourceToTrackingPlanV1Output_1.AddSourceToTrackingPlanV1Output.StatusEnum,
     'AudienceComputeCadence.TypeEnum': audienceComputeCadence_1.AudienceComputeCadence.TypeEnum,
     'AudienceDefinition.TypeEnum': audienceDefinition_1.AudienceDefinition.TypeEnum,
+    'AudiencePreview.StatusEnum': audiencePreview_1.AudiencePreview.StatusEnum,
+    'AudiencePreview.AudienceTypeEnum': audiencePreview_1.AudiencePreview.AudienceTypeEnum,
+    'AudienceSize.TypeEnum': audienceSize_1.AudienceSize.TypeEnum,
     'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum': audienceSummaryWithAudienceTypeAndLookback_1.AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
+    'CommonAudiencePreview.AudienceTypeEnum': commonAudiencePreview_1.CommonAudiencePreview.AudienceTypeEnum,
+    'CompletedAudiencePreview.StatusEnum': completedAudiencePreview_1.CompletedAudiencePreview.StatusEnum,
+    'CompletedAudiencePreview.AudienceTypeEnum': completedAudiencePreview_1.CompletedAudiencePreview.AudienceTypeEnum,
     'ComputedTraitsDefinition.TypeEnum': computedTraitsDefinition_1.ComputedTraitsDefinition.TypeEnum,
+    'CreateAudiencePreviewAlphaInput.AudienceTypeEnum': createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
     'CreateFunctionV1Input.ResourceTypeEnum': createFunctionV1Input_1.CreateFunctionV1Input.ResourceTypeEnum,
@@ -1228,6 +1253,8 @@ var enumsMap = {
     'DestinationStatusV1.StatusEnum': destinationStatusV1_1.DestinationStatusV1.StatusEnum,
     'EchoAlphaOutput.MethodEnum': echoAlphaOutput_1.EchoAlphaOutput.MethodEnum,
     'EchoV1Output.MethodEnum': echoV1Output_1.EchoV1Output.MethodEnum,
+    'FailedAudiencePreview.StatusEnum': failedAudiencePreview_1.FailedAudiencePreview.StatusEnum,
+    'FailedAudiencePreview.AudienceTypeEnum': failedAudiencePreview_1.FailedAudiencePreview.AudienceTypeEnum,
     'FunctionDeployment.StatusEnum': functionDeployment_1.FunctionDeployment.StatusEnum,
     'FunctionSettingV1.TypeEnum': functionSettingV1_1.FunctionSettingV1.TypeEnum,
     'FunctionV1.ResourceTypeEnum': functionV1_1.FunctionV1.ResourceTypeEnum,
@@ -1250,7 +1277,6 @@ var enumsMap = {
     'MessagesSubscriptionRequest.TypeEnum': messagesSubscriptionRequest_1.MessagesSubscriptionRequest.TypeEnum,
     'MessagesSubscriptionRequest.StatusEnum': messagesSubscriptionRequest_1.MessagesSubscriptionRequest.StatusEnum,
     'PermissionResourceV1.TypeEnum': permissionResourceV1_1.PermissionResourceV1.TypeEnum,
-    'PreviewAudienceInput.AudienceTypeEnum': previewAudienceInput_1.PreviewAudienceInput.AudienceTypeEnum,
     'Regulation.OverallStatusEnum': regulation_1.Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': regulationListEntryV1_1.RegulationListEntryV1.StatusEnum,
     'RegulationListEntryV1.RegulationTypeEnum': regulationListEntryV1_1.RegulationListEntryV1.RegulationTypeEnum,
@@ -1270,6 +1296,8 @@ var enumsMap = {
     'ReverseEtlScheduleDefinition.StrategyEnum': reverseEtlScheduleDefinition_1.ReverseEtlScheduleDefinition.StrategyEnum,
     'RuleInputV1.TypeEnum': ruleInputV1_1.RuleInputV1.TypeEnum,
     'RuleV1.TypeEnum': ruleV1_1.RuleV1.TypeEnum,
+    'RunningAudiencePreview.StatusEnum': runningAudiencePreview_1.RunningAudiencePreview.StatusEnum,
+    'RunningAudiencePreview.AudienceTypeEnum': runningAudiencePreview_1.RunningAudiencePreview.AudienceTypeEnum,
     'SourceMetadataV1.StatusEnum': sourceMetadataV1_1.SourceMetadataV1.StatusEnum,
     'TrackSourceSettingsV1.CommonEventOnViolationsEnum': trackSourceSettingsV1_1.TrackSourceSettingsV1.CommonEventOnViolationsEnum,
     'TrackingPlanV1.TypeEnum': trackingPlanV1_1.TrackingPlanV1.TypeEnum,
@@ -1312,6 +1340,10 @@ var typeMap = {
     AudienceDefinitionWithoutType: audienceDefinitionWithoutType_1.AudienceDefinitionWithoutType,
     AudienceOptions: audienceOptions_1.AudienceOptions,
     AudienceOptionsWithLookback: audienceOptionsWithLookback_1.AudienceOptionsWithLookback,
+    AudiencePreview: audiencePreview_1.AudiencePreview,
+    AudiencePreviewIdentifier: audiencePreviewIdentifier_1.AudiencePreviewIdentifier,
+    AudiencePreviewResult: audiencePreviewResult_1.AudiencePreviewResult,
+    AudienceSize: audienceSize_1.AudienceSize,
     AudienceSummary: audienceSummary_1.AudienceSummary,
     AudienceSummaryWithAudienceTypeAndLookback: audienceSummaryWithAudienceTypeAndLookback_1.AudienceSummaryWithAudienceTypeAndLookback,
     AuditEventV1: auditEventV1_1.AuditEventV1,
@@ -1322,7 +1354,9 @@ var typeMap = {
     CancelReverseETLSyncForModel200Response: cancelReverseETLSyncForModel200Response_1.CancelReverseETLSyncForModel200Response,
     CancelReverseETLSyncForModelInput: cancelReverseETLSyncForModelInput_1.CancelReverseETLSyncForModelInput,
     CancelReverseETLSyncForModelOutput: cancelReverseETLSyncForModelOutput_1.CancelReverseETLSyncForModelOutput,
+    CommonAudiencePreview: commonAudiencePreview_1.CommonAudiencePreview,
     CommonSourceSettingsV1: commonSourceSettingsV1_1.CommonSourceSettingsV1,
+    CompletedAudiencePreview: completedAudiencePreview_1.CompletedAudiencePreview,
     ComputedTraitSummary: computedTraitSummary_1.ComputedTraitSummary,
     ComputedTraitsDefinition: computedTraitsDefinition_1.ComputedTraitsDefinition,
     Config: config_1.Config,
@@ -1330,6 +1364,9 @@ var typeMap = {
     CreateAudience200Response: createAudience200Response_1.CreateAudience200Response,
     CreateAudienceAlphaInput: createAudienceAlphaInput_1.CreateAudienceAlphaInput,
     CreateAudienceAlphaOutput: createAudienceAlphaOutput_1.CreateAudienceAlphaOutput,
+    CreateAudiencePreview200Response: createAudiencePreview200Response_1.CreateAudiencePreview200Response,
+    CreateAudiencePreviewAlphaInput: createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput,
+    CreateAudiencePreviewAlphaOutput: createAudiencePreviewAlphaOutput_1.CreateAudiencePreviewAlphaOutput,
     CreateCloudSourceRegulation200Response: createCloudSourceRegulation200Response_1.CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input,
     CreateCloudSourceRegulationV1Output: createCloudSourceRegulationV1Output_1.CreateCloudSourceRegulationV1Output,
@@ -1476,6 +1513,7 @@ var typeMap = {
     EdgeFunctionsAlpha: edgeFunctionsAlpha_1.EdgeFunctionsAlpha,
     EventSourceV1: eventSourceV1_1.EventSourceV1,
     FQLDefinedPropertyV1: fQLDefinedPropertyV1_1.FQLDefinedPropertyV1,
+    FailedAudiencePreview: failedAudiencePreview_1.FailedAudiencePreview,
     Filter: filter_1.Filter,
     FunctionDeployment: functionDeployment_1.FunctionDeployment,
     FunctionSettingV1: functionSettingV1_1.FunctionSettingV1,
@@ -1488,6 +1526,8 @@ var typeMap = {
     GetAudience200Response1: getAudience200Response1_1.GetAudience200Response1,
     GetAudienceAlphaOutput: getAudienceAlphaOutput_1.GetAudienceAlphaOutput,
     GetAudienceBetaOutput: getAudienceBetaOutput_1.GetAudienceBetaOutput,
+    GetAudiencePreview200Response: getAudiencePreview200Response_1.GetAudiencePreview200Response,
+    GetAudiencePreviewAlphaOutput: getAudiencePreviewAlphaOutput_1.GetAudiencePreviewAlphaOutput,
     GetComputedTrait200Response: getComputedTrait200Response_1.GetComputedTrait200Response,
     GetComputedTraitAlphaOutput: getComputedTraitAlphaOutput_1.GetComputedTraitAlphaOutput,
     GetConnectionStateFromWarehouse200Response: getConnectionStateFromWarehouse200Response_1.GetConnectionStateFromWarehouse200Response,
@@ -1688,10 +1728,6 @@ var typeMap = {
     PermissionInputV1: permissionInputV1_1.PermissionInputV1,
     PermissionResourceV1: permissionResourceV1_1.PermissionResourceV1,
     PermissionV1: permissionV1_1.PermissionV1,
-    Preview: preview_1.Preview,
-    PreviewAudience200Response: previewAudience200Response_1.PreviewAudience200Response,
-    PreviewAudienceInput: previewAudienceInput_1.PreviewAudienceInput,
-    PreviewAudienceOutput: previewAudienceOutput_1.PreviewAudienceOutput,
     PreviewDestinationFilter200Response: previewDestinationFilter200Response_1.PreviewDestinationFilter200Response,
     PreviewDestinationFilterV1: previewDestinationFilterV1_1.PreviewDestinationFilterV1,
     PreviewDestinationFilterV1Input: previewDestinationFilterV1Input_1.PreviewDestinationFilterV1Input,
@@ -1766,6 +1802,7 @@ var typeMap = {
     RoleV1: roleV1_1.RoleV1,
     RuleInputV1: ruleInputV1_1.RuleInputV1,
     RuleV1: ruleV1_1.RuleV1,
+    RunningAudiencePreview: runningAudiencePreview_1.RunningAudiencePreview,
     SourceAPICallSnapshotV1: sourceAPICallSnapshotV1_1.SourceAPICallSnapshotV1,
     SourceAlpha: sourceAlpha_1.SourceAlpha,
     SourceEventVolumeDatapointV1: sourceEventVolumeDatapointV1_1.SourceEventVolumeDatapointV1,

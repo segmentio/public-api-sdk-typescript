@@ -30,6 +30,10 @@ export * from './audienceDefinition';
 export * from './audienceDefinitionWithoutType';
 export * from './audienceOptions';
 export * from './audienceOptionsWithLookback';
+export * from './audiencePreview';
+export * from './audiencePreviewIdentifier';
+export * from './audiencePreviewResult';
+export * from './audienceSize';
 export * from './audienceSummary';
 export * from './audienceSummaryWithAudienceTypeAndLookback';
 export * from './auditEventV1';
@@ -40,7 +44,9 @@ export * from './breakdownBeta';
 export * from './cancelReverseETLSyncForModel200Response';
 export * from './cancelReverseETLSyncForModelInput';
 export * from './cancelReverseETLSyncForModelOutput';
+export * from './commonAudiencePreview';
 export * from './commonSourceSettingsV1';
+export * from './completedAudiencePreview';
 export * from './computedTraitSummary';
 export * from './computedTraitsDefinition';
 export * from './config';
@@ -48,6 +54,9 @@ export * from './contact';
 export * from './createAudience200Response';
 export * from './createAudienceAlphaInput';
 export * from './createAudienceAlphaOutput';
+export * from './createAudiencePreview200Response';
+export * from './createAudiencePreviewAlphaInput';
+export * from './createAudiencePreviewAlphaOutput';
 export * from './createCloudSourceRegulation200Response';
 export * from './createCloudSourceRegulationV1Input';
 export * from './createCloudSourceRegulationV1Output';
@@ -194,6 +203,7 @@ export * from './echoV1Output';
 export * from './edgeFunctionsAlpha';
 export * from './eventSourceV1';
 export * from './fQLDefinedPropertyV1';
+export * from './failedAudiencePreview';
 export * from './filter';
 export * from './functionDeployment';
 export * from './functionSettingV1';
@@ -206,6 +216,8 @@ export * from './getAudience200Response';
 export * from './getAudience200Response1';
 export * from './getAudienceAlphaOutput';
 export * from './getAudienceBetaOutput';
+export * from './getAudiencePreview200Response';
+export * from './getAudiencePreviewAlphaOutput';
 export * from './getComputedTrait200Response';
 export * from './getComputedTraitAlphaOutput';
 export * from './getConnectionStateFromWarehouse200Response';
@@ -406,10 +418,6 @@ export * from './paginationOutput';
 export * from './permissionInputV1';
 export * from './permissionResourceV1';
 export * from './permissionV1';
-export * from './preview';
-export * from './previewAudience200Response';
-export * from './previewAudienceInput';
-export * from './previewAudienceOutput';
 export * from './previewDestinationFilter200Response';
 export * from './previewDestinationFilterV1';
 export * from './previewDestinationFilterV1Input';
@@ -484,6 +492,7 @@ export * from './reverseEtlSpecificTimeScheduleConfig';
 export * from './roleV1';
 export * from './ruleInputV1';
 export * from './ruleV1';
+export * from './runningAudiencePreview';
 export * from './sourceAPICallSnapshotV1';
 export * from './sourceAlpha';
 export * from './sourceEventVolumeDatapointV1';
@@ -623,6 +632,10 @@ import { AudienceDefinition } from './audienceDefinition';
 import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
 import { AudienceOptions } from './audienceOptions';
 import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
+import { AudiencePreview } from './audiencePreview';
+import { AudiencePreviewIdentifier } from './audiencePreviewIdentifier';
+import { AudiencePreviewResult } from './audiencePreviewResult';
+import { AudienceSize } from './audienceSize';
 import { AudienceSummary } from './audienceSummary';
 import { AudienceSummaryWithAudienceTypeAndLookback } from './audienceSummaryWithAudienceTypeAndLookback';
 import { AuditEventV1 } from './auditEventV1';
@@ -633,7 +646,9 @@ import { BreakdownBeta } from './breakdownBeta';
 import { CancelReverseETLSyncForModel200Response } from './cancelReverseETLSyncForModel200Response';
 import { CancelReverseETLSyncForModelInput } from './cancelReverseETLSyncForModelInput';
 import { CancelReverseETLSyncForModelOutput } from './cancelReverseETLSyncForModelOutput';
+import { CommonAudiencePreview } from './commonAudiencePreview';
 import { CommonSourceSettingsV1 } from './commonSourceSettingsV1';
+import { CompletedAudiencePreview } from './completedAudiencePreview';
 import { ComputedTraitSummary } from './computedTraitSummary';
 import { ComputedTraitsDefinition } from './computedTraitsDefinition';
 import { Config } from './config';
@@ -641,6 +656,9 @@ import { Contact } from './contact';
 import { CreateAudience200Response } from './createAudience200Response';
 import { CreateAudienceAlphaInput } from './createAudienceAlphaInput';
 import { CreateAudienceAlphaOutput } from './createAudienceAlphaOutput';
+import { CreateAudiencePreview200Response } from './createAudiencePreview200Response';
+import { CreateAudiencePreviewAlphaInput } from './createAudiencePreviewAlphaInput';
+import { CreateAudiencePreviewAlphaOutput } from './createAudiencePreviewAlphaOutput';
 import { CreateCloudSourceRegulation200Response } from './createCloudSourceRegulation200Response';
 import { CreateCloudSourceRegulationV1Input } from './createCloudSourceRegulationV1Input';
 import { CreateCloudSourceRegulationV1Output } from './createCloudSourceRegulationV1Output';
@@ -787,6 +805,7 @@ import { EchoV1Output } from './echoV1Output';
 import { EdgeFunctionsAlpha } from './edgeFunctionsAlpha';
 import { EventSourceV1 } from './eventSourceV1';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
+import { FailedAudiencePreview } from './failedAudiencePreview';
 import { Filter } from './filter';
 import { FunctionDeployment } from './functionDeployment';
 import { FunctionSettingV1 } from './functionSettingV1';
@@ -799,6 +818,8 @@ import { GetAudience200Response } from './getAudience200Response';
 import { GetAudience200Response1 } from './getAudience200Response1';
 import { GetAudienceAlphaOutput } from './getAudienceAlphaOutput';
 import { GetAudienceBetaOutput } from './getAudienceBetaOutput';
+import { GetAudiencePreview200Response } from './getAudiencePreview200Response';
+import { GetAudiencePreviewAlphaOutput } from './getAudiencePreviewAlphaOutput';
 import { GetComputedTrait200Response } from './getComputedTrait200Response';
 import { GetComputedTraitAlphaOutput } from './getComputedTraitAlphaOutput';
 import { GetConnectionStateFromWarehouse200Response } from './getConnectionStateFromWarehouse200Response';
@@ -999,10 +1020,6 @@ import { PaginationOutput } from './paginationOutput';
 import { PermissionInputV1 } from './permissionInputV1';
 import { PermissionResourceV1 } from './permissionResourceV1';
 import { PermissionV1 } from './permissionV1';
-import { Preview } from './preview';
-import { PreviewAudience200Response } from './previewAudience200Response';
-import { PreviewAudienceInput } from './previewAudienceInput';
-import { PreviewAudienceOutput } from './previewAudienceOutput';
 import { PreviewDestinationFilter200Response } from './previewDestinationFilter200Response';
 import { PreviewDestinationFilterV1 } from './previewDestinationFilterV1';
 import { PreviewDestinationFilterV1Input } from './previewDestinationFilterV1Input';
@@ -1077,6 +1094,7 @@ import { ReverseEtlSpecificTimeScheduleConfig } from './reverseEtlSpecificTimeSc
 import { RoleV1 } from './roleV1';
 import { RuleInputV1 } from './ruleInputV1';
 import { RuleV1 } from './ruleV1';
+import { RunningAudiencePreview } from './runningAudiencePreview';
 import { SourceAPICallSnapshotV1 } from './sourceAPICallSnapshotV1';
 import { SourceAlpha } from './sourceAlpha';
 import { SourceEventVolumeDatapointV1 } from './sourceEventVolumeDatapointV1';
@@ -1193,9 +1211,19 @@ let enumsMap: { [index: string]: any } = {
         AddSourceToTrackingPlanV1Output.StatusEnum,
     'AudienceComputeCadence.TypeEnum': AudienceComputeCadence.TypeEnum,
     'AudienceDefinition.TypeEnum': AudienceDefinition.TypeEnum,
+    'AudiencePreview.StatusEnum': AudiencePreview.StatusEnum,
+    'AudiencePreview.AudienceTypeEnum': AudiencePreview.AudienceTypeEnum,
+    'AudienceSize.TypeEnum': AudienceSize.TypeEnum,
     'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum':
         AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
+    'CommonAudiencePreview.AudienceTypeEnum':
+        CommonAudiencePreview.AudienceTypeEnum,
+    'CompletedAudiencePreview.StatusEnum': CompletedAudiencePreview.StatusEnum,
+    'CompletedAudiencePreview.AudienceTypeEnum':
+        CompletedAudiencePreview.AudienceTypeEnum,
     'ComputedTraitsDefinition.TypeEnum': ComputedTraitsDefinition.TypeEnum,
+    'CreateAudiencePreviewAlphaInput.AudienceTypeEnum':
+        CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum':
         CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum':
@@ -1252,6 +1280,9 @@ let enumsMap: { [index: string]: any } = {
     'DestinationStatusV1.StatusEnum': DestinationStatusV1.StatusEnum,
     'EchoAlphaOutput.MethodEnum': EchoAlphaOutput.MethodEnum,
     'EchoV1Output.MethodEnum': EchoV1Output.MethodEnum,
+    'FailedAudiencePreview.StatusEnum': FailedAudiencePreview.StatusEnum,
+    'FailedAudiencePreview.AudienceTypeEnum':
+        FailedAudiencePreview.AudienceTypeEnum,
     'FunctionDeployment.StatusEnum': FunctionDeployment.StatusEnum,
     'FunctionSettingV1.TypeEnum': FunctionSettingV1.TypeEnum,
     'FunctionV1.ResourceTypeEnum': FunctionV1.ResourceTypeEnum,
@@ -1289,8 +1320,6 @@ let enumsMap: { [index: string]: any } = {
     'MessagesSubscriptionRequest.StatusEnum':
         MessagesSubscriptionRequest.StatusEnum,
     'PermissionResourceV1.TypeEnum': PermissionResourceV1.TypeEnum,
-    'PreviewAudienceInput.AudienceTypeEnum':
-        PreviewAudienceInput.AudienceTypeEnum,
     'Regulation.OverallStatusEnum': Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': RegulationListEntryV1.StatusEnum,
     'RegulationListEntryV1.RegulationTypeEnum':
@@ -1323,6 +1352,9 @@ let enumsMap: { [index: string]: any } = {
         ReverseEtlScheduleDefinition.StrategyEnum,
     'RuleInputV1.TypeEnum': RuleInputV1.TypeEnum,
     'RuleV1.TypeEnum': RuleV1.TypeEnum,
+    'RunningAudiencePreview.StatusEnum': RunningAudiencePreview.StatusEnum,
+    'RunningAudiencePreview.AudienceTypeEnum':
+        RunningAudiencePreview.AudienceTypeEnum,
     'SourceMetadataV1.StatusEnum': SourceMetadataV1.StatusEnum,
     'TrackSourceSettingsV1.CommonEventOnViolationsEnum':
         TrackSourceSettingsV1.CommonEventOnViolationsEnum,
@@ -1375,6 +1407,10 @@ let typeMap: { [index: string]: any } = {
     AudienceDefinitionWithoutType: AudienceDefinitionWithoutType,
     AudienceOptions: AudienceOptions,
     AudienceOptionsWithLookback: AudienceOptionsWithLookback,
+    AudiencePreview: AudiencePreview,
+    AudiencePreviewIdentifier: AudiencePreviewIdentifier,
+    AudiencePreviewResult: AudiencePreviewResult,
+    AudienceSize: AudienceSize,
     AudienceSummary: AudienceSummary,
     AudienceSummaryWithAudienceTypeAndLookback:
         AudienceSummaryWithAudienceTypeAndLookback,
@@ -1390,7 +1426,9 @@ let typeMap: { [index: string]: any } = {
         CancelReverseETLSyncForModel200Response,
     CancelReverseETLSyncForModelInput: CancelReverseETLSyncForModelInput,
     CancelReverseETLSyncForModelOutput: CancelReverseETLSyncForModelOutput,
+    CommonAudiencePreview: CommonAudiencePreview,
     CommonSourceSettingsV1: CommonSourceSettingsV1,
+    CompletedAudiencePreview: CompletedAudiencePreview,
     ComputedTraitSummary: ComputedTraitSummary,
     ComputedTraitsDefinition: ComputedTraitsDefinition,
     Config: Config,
@@ -1398,6 +1436,9 @@ let typeMap: { [index: string]: any } = {
     CreateAudience200Response: CreateAudience200Response,
     CreateAudienceAlphaInput: CreateAudienceAlphaInput,
     CreateAudienceAlphaOutput: CreateAudienceAlphaOutput,
+    CreateAudiencePreview200Response: CreateAudiencePreview200Response,
+    CreateAudiencePreviewAlphaInput: CreateAudiencePreviewAlphaInput,
+    CreateAudiencePreviewAlphaOutput: CreateAudiencePreviewAlphaOutput,
     CreateCloudSourceRegulation200Response:
         CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: CreateCloudSourceRegulationV1Input,
@@ -1558,6 +1599,7 @@ let typeMap: { [index: string]: any } = {
     EdgeFunctionsAlpha: EdgeFunctionsAlpha,
     EventSourceV1: EventSourceV1,
     FQLDefinedPropertyV1: FQLDefinedPropertyV1,
+    FailedAudiencePreview: FailedAudiencePreview,
     Filter: Filter,
     FunctionDeployment: FunctionDeployment,
     FunctionSettingV1: FunctionSettingV1,
@@ -1574,6 +1616,8 @@ let typeMap: { [index: string]: any } = {
     GetAudience200Response1: GetAudience200Response1,
     GetAudienceAlphaOutput: GetAudienceAlphaOutput,
     GetAudienceBetaOutput: GetAudienceBetaOutput,
+    GetAudiencePreview200Response: GetAudiencePreview200Response,
+    GetAudiencePreviewAlphaOutput: GetAudiencePreviewAlphaOutput,
     GetComputedTrait200Response: GetComputedTrait200Response,
     GetComputedTraitAlphaOutput: GetComputedTraitAlphaOutput,
     GetConnectionStateFromWarehouse200Response:
@@ -1819,10 +1863,6 @@ let typeMap: { [index: string]: any } = {
     PermissionInputV1: PermissionInputV1,
     PermissionResourceV1: PermissionResourceV1,
     PermissionV1: PermissionV1,
-    Preview: Preview,
-    PreviewAudience200Response: PreviewAudience200Response,
-    PreviewAudienceInput: PreviewAudienceInput,
-    PreviewAudienceOutput: PreviewAudienceOutput,
     PreviewDestinationFilter200Response: PreviewDestinationFilter200Response,
     PreviewDestinationFilterV1: PreviewDestinationFilterV1,
     PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,
@@ -1918,6 +1958,7 @@ let typeMap: { [index: string]: any } = {
     RoleV1: RoleV1,
     RuleInputV1: RuleInputV1,
     RuleV1: RuleV1,
+    RunningAudiencePreview: RunningAudiencePreview,
     SourceAPICallSnapshotV1: SourceAPICallSnapshotV1,
     SourceAlpha: SourceAlpha,
     SourceEventVolumeDatapointV1: SourceEventVolumeDatapointV1,

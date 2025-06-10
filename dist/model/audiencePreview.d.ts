@@ -1,9 +1,16 @@
 import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
 import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
-export declare class PreviewAudienceInput {
+import { AudiencePreviewResult } from './audiencePreviewResult';
+import { AudienceSize } from './audienceSize';
+export declare class AudiencePreview {
+    'status': AudiencePreview.StatusEnum;
+    'results': Array<AudiencePreviewResult>;
+    'size': AudienceSize;
+    'id': string;
+    'audienceType': AudiencePreview.AudienceTypeEnum;
     'definition': AudienceDefinitionWithoutType;
-    'audienceType': PreviewAudienceInput.AudienceTypeEnum;
-    'options'?: AudienceOptionsWithLookback;
+    'options': AudienceOptionsWithLookback;
+    'failureReason'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -16,7 +23,10 @@ export declare class PreviewAudienceInput {
         type: string;
     }[];
 }
-export declare namespace PreviewAudienceInput {
+export declare namespace AudiencePreview {
+    enum StatusEnum {
+        FAILED
+    }
     enum AudienceTypeEnum {
         ACCOUNTS,
         USERS
