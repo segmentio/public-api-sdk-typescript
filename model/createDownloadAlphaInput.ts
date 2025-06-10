@@ -25,9 +25,9 @@ export class CreateDownloadAlphaInput {
      */
     'workspaceId': string;
     /**
-     * The ISO8601 formatted timestamp corresponding to the beginning of the time range. Currently, there is a month of data retained.
+     * The ISO8601 formatted timestamp corresponding to a specific hour and day to retrieve data for. E.g.: 2025-05-07T23:00:00Z Objects are bucketed by hour and a month of data is retained.
      */
-    'startTime': string;
+    'hour': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -47,8 +47,8 @@ export class CreateDownloadAlphaInput {
             type: 'string',
         },
         {
-            name: 'startTime',
-            baseName: 'startTime',
+            name: 'hour',
+            baseName: 'hour',
             type: 'string',
         },
     ];

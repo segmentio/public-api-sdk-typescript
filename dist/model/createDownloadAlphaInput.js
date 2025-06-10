@@ -20,8 +20,8 @@ var CreateDownloadAlphaInput = (function () {
             type: 'string',
         },
         {
-            name: 'startTime',
-            baseName: 'startTime',
+            name: 'hour',
+            baseName: 'hour',
             type: 'string',
         },
     ];
