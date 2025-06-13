@@ -15,23 +15,11 @@ import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
 import { AudiencePreviewOptions } from './audiencePreviewOptions';
 import { AudiencePreviewResult } from './audiencePreviewResult';
 import { AudienceSize } from './audienceSize';
-import { CompletedAudiencePreview } from './completedAudiencePreview';
-import { FailedAudiencePreview } from './failedAudiencePreview';
-import { RunningAudiencePreview } from './runningAudiencePreview';
 
 /**
- * Audience preview that can be in one of the three states: completed, running, or failed.
+ * An audience preview.
  */
 export class AudiencePreview {
-    /**
-     * Status for the audience preview.
-     */
-    'status': AudiencePreview.StatusEnum;
-    /**
-     * Sampled result membership for the audience preview.
-     */
-    'results': Array<AudiencePreviewResult>;
-    'size': AudienceSize;
     /**
      * Unique identifier for tracking and retrieving results of an audience preview.
      */
@@ -43,7 +31,16 @@ export class AudiencePreview {
     'definition': AudienceDefinitionWithoutType;
     'options': AudiencePreviewOptions;
     /**
-     * Explanation of why the audience preview failed, if available.
+     * Status for the audience preview.
+     */
+    'status': AudiencePreview.StatusEnum;
+    /**
+     * Sampled result membership for the audience preview. Only has a value if the status is \'COMPLETED\'.
+     */
+    'results'?: Array<AudiencePreviewResult>;
+    'size'?: AudienceSize;
+    /**
+     * Explanation of why the audience preview failed. Only has a value if status is \'FAILED\'.
      */
     'failureReason'?: string;
 
@@ -54,21 +51,6 @@ export class AudiencePreview {
         baseName: string;
         type: string;
     }> = [
-        {
-            name: 'status',
-            baseName: 'status',
-            type: 'AudiencePreview.StatusEnum',
-        },
-        {
-            name: 'results',
-            baseName: 'results',
-            type: 'Array<AudiencePreviewResult>',
-        },
-        {
-            name: 'size',
-            baseName: 'size',
-            type: 'AudienceSize',
-        },
         {
             name: 'id',
             baseName: 'id',
@@ -90,6 +72,21 @@ export class AudiencePreview {
             type: 'AudiencePreviewOptions',
         },
         {
+            name: 'status',
+            baseName: 'status',
+            type: 'AudiencePreview.StatusEnum',
+        },
+        {
+            name: 'results',
+            baseName: 'results',
+            type: 'Array<AudiencePreviewResult>',
+        },
+        {
+            name: 'size',
+            baseName: 'size',
+            type: 'AudienceSize',
+        },
+        {
             name: 'failureReason',
             baseName: 'failureReason',
             type: 'string',
@@ -102,11 +99,13 @@ export class AudiencePreview {
 }
 
 export namespace AudiencePreview {
-    export enum StatusEnum {
-        FAILED = <any>'FAILED',
-    }
     export enum AudienceTypeEnum {
         ACCOUNTS = <any>'ACCOUNTS',
         USERS = <any>'USERS',
+    }
+    export enum StatusEnum {
+        COMPLETED = <any>'COMPLETED',
+        FAILED = <any>'FAILED',
+        RUNNING = <any>'RUNNING',
     }
 }

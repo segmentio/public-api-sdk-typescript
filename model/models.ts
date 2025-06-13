@@ -45,9 +45,7 @@ export * from './breakdownBeta';
 export * from './cancelReverseETLSyncForModel200Response';
 export * from './cancelReverseETLSyncForModelInput';
 export * from './cancelReverseETLSyncForModelOutput';
-export * from './commonAudiencePreview';
 export * from './commonSourceSettingsV1';
-export * from './completedAudiencePreview';
 export * from './computedTraitSummary';
 export * from './computedTraitsDefinition';
 export * from './config';
@@ -204,7 +202,6 @@ export * from './echoV1Output';
 export * from './edgeFunctionsAlpha';
 export * from './eventSourceV1';
 export * from './fQLDefinedPropertyV1';
-export * from './failedAudiencePreview';
 export * from './filter';
 export * from './functionDeployment';
 export * from './functionSettingV1';
@@ -493,7 +490,6 @@ export * from './reverseEtlSpecificTimeScheduleConfig';
 export * from './roleV1';
 export * from './ruleInputV1';
 export * from './ruleV1';
-export * from './runningAudiencePreview';
 export * from './sourceAPICallSnapshotV1';
 export * from './sourceAlpha';
 export * from './sourceEventVolumeDatapointV1';
@@ -648,9 +644,7 @@ import { BreakdownBeta } from './breakdownBeta';
 import { CancelReverseETLSyncForModel200Response } from './cancelReverseETLSyncForModel200Response';
 import { CancelReverseETLSyncForModelInput } from './cancelReverseETLSyncForModelInput';
 import { CancelReverseETLSyncForModelOutput } from './cancelReverseETLSyncForModelOutput';
-import { CommonAudiencePreview } from './commonAudiencePreview';
 import { CommonSourceSettingsV1 } from './commonSourceSettingsV1';
-import { CompletedAudiencePreview } from './completedAudiencePreview';
 import { ComputedTraitSummary } from './computedTraitSummary';
 import { ComputedTraitsDefinition } from './computedTraitsDefinition';
 import { Config } from './config';
@@ -807,7 +801,6 @@ import { EchoV1Output } from './echoV1Output';
 import { EdgeFunctionsAlpha } from './edgeFunctionsAlpha';
 import { EventSourceV1 } from './eventSourceV1';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
-import { FailedAudiencePreview } from './failedAudiencePreview';
 import { Filter } from './filter';
 import { FunctionDeployment } from './functionDeployment';
 import { FunctionSettingV1 } from './functionSettingV1';
@@ -1096,7 +1089,6 @@ import { ReverseEtlSpecificTimeScheduleConfig } from './reverseEtlSpecificTimeSc
 import { RoleV1 } from './roleV1';
 import { RuleInputV1 } from './ruleInputV1';
 import { RuleV1 } from './ruleV1';
-import { RunningAudiencePreview } from './runningAudiencePreview';
 import { SourceAPICallSnapshotV1 } from './sourceAPICallSnapshotV1';
 import { SourceAlpha } from './sourceAlpha';
 import { SourceEventVolumeDatapointV1 } from './sourceEventVolumeDatapointV1';
@@ -1213,16 +1205,11 @@ let enumsMap: { [index: string]: any } = {
         AddSourceToTrackingPlanV1Output.StatusEnum,
     'AudienceComputeCadence.TypeEnum': AudienceComputeCadence.TypeEnum,
     'AudienceDefinition.TypeEnum': AudienceDefinition.TypeEnum,
-    'AudiencePreview.StatusEnum': AudiencePreview.StatusEnum,
     'AudiencePreview.AudienceTypeEnum': AudiencePreview.AudienceTypeEnum,
+    'AudiencePreview.StatusEnum': AudiencePreview.StatusEnum,
     'AudienceSize.TypeEnum': AudienceSize.TypeEnum,
     'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum':
         AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
-    'CommonAudiencePreview.AudienceTypeEnum':
-        CommonAudiencePreview.AudienceTypeEnum,
-    'CompletedAudiencePreview.StatusEnum': CompletedAudiencePreview.StatusEnum,
-    'CompletedAudiencePreview.AudienceTypeEnum':
-        CompletedAudiencePreview.AudienceTypeEnum,
     'ComputedTraitsDefinition.TypeEnum': ComputedTraitsDefinition.TypeEnum,
     'CreateAudiencePreviewAlphaInput.AudienceTypeEnum':
         CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
@@ -1282,9 +1269,6 @@ let enumsMap: { [index: string]: any } = {
     'DestinationStatusV1.StatusEnum': DestinationStatusV1.StatusEnum,
     'EchoAlphaOutput.MethodEnum': EchoAlphaOutput.MethodEnum,
     'EchoV1Output.MethodEnum': EchoV1Output.MethodEnum,
-    'FailedAudiencePreview.StatusEnum': FailedAudiencePreview.StatusEnum,
-    'FailedAudiencePreview.AudienceTypeEnum':
-        FailedAudiencePreview.AudienceTypeEnum,
     'FunctionDeployment.StatusEnum': FunctionDeployment.StatusEnum,
     'FunctionSettingV1.TypeEnum': FunctionSettingV1.TypeEnum,
     'FunctionV1.ResourceTypeEnum': FunctionV1.ResourceTypeEnum,
@@ -1354,9 +1338,6 @@ let enumsMap: { [index: string]: any } = {
         ReverseEtlScheduleDefinition.StrategyEnum,
     'RuleInputV1.TypeEnum': RuleInputV1.TypeEnum,
     'RuleV1.TypeEnum': RuleV1.TypeEnum,
-    'RunningAudiencePreview.StatusEnum': RunningAudiencePreview.StatusEnum,
-    'RunningAudiencePreview.AudienceTypeEnum':
-        RunningAudiencePreview.AudienceTypeEnum,
     'SourceMetadataV1.StatusEnum': SourceMetadataV1.StatusEnum,
     'TrackSourceSettingsV1.CommonEventOnViolationsEnum':
         TrackSourceSettingsV1.CommonEventOnViolationsEnum,
@@ -1429,9 +1410,7 @@ let typeMap: { [index: string]: any } = {
         CancelReverseETLSyncForModel200Response,
     CancelReverseETLSyncForModelInput: CancelReverseETLSyncForModelInput,
     CancelReverseETLSyncForModelOutput: CancelReverseETLSyncForModelOutput,
-    CommonAudiencePreview: CommonAudiencePreview,
     CommonSourceSettingsV1: CommonSourceSettingsV1,
-    CompletedAudiencePreview: CompletedAudiencePreview,
     ComputedTraitSummary: ComputedTraitSummary,
     ComputedTraitsDefinition: ComputedTraitsDefinition,
     Config: Config,
@@ -1602,7 +1581,6 @@ let typeMap: { [index: string]: any } = {
     EdgeFunctionsAlpha: EdgeFunctionsAlpha,
     EventSourceV1: EventSourceV1,
     FQLDefinedPropertyV1: FQLDefinedPropertyV1,
-    FailedAudiencePreview: FailedAudiencePreview,
     Filter: Filter,
     FunctionDeployment: FunctionDeployment,
     FunctionSettingV1: FunctionSettingV1,
@@ -1961,7 +1939,6 @@ let typeMap: { [index: string]: any } = {
     RoleV1: RoleV1,
     RuleInputV1: RuleInputV1,
     RuleV1: RuleV1,
-    RunningAudiencePreview: RunningAudiencePreview,
     SourceAPICallSnapshotV1: SourceAPICallSnapshotV1,
     SourceAlpha: SourceAlpha,
     SourceEventVolumeDatapointV1: SourceEventVolumeDatapointV1,

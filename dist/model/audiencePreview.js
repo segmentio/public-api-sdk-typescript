@@ -10,21 +10,6 @@ var AudiencePreview = (function () {
     AudiencePreview.discriminator = undefined;
     AudiencePreview.attributeTypeMap = [
         {
-            name: 'status',
-            baseName: 'status',
-            type: 'AudiencePreview.StatusEnum',
-        },
-        {
-            name: 'results',
-            baseName: 'results',
-            type: 'Array<AudiencePreviewResult>',
-        },
-        {
-            name: 'size',
-            baseName: 'size',
-            type: 'AudienceSize',
-        },
-        {
             name: 'id',
             baseName: 'id',
             type: 'string',
@@ -45,6 +30,21 @@ var AudiencePreview = (function () {
             type: 'AudiencePreviewOptions',
         },
         {
+            name: 'status',
+            baseName: 'status',
+            type: 'AudiencePreview.StatusEnum',
+        },
+        {
+            name: 'results',
+            baseName: 'results',
+            type: 'Array<AudiencePreviewResult>',
+        },
+        {
+            name: 'size',
+            baseName: 'size',
+            type: 'AudienceSize',
+        },
+        {
             name: 'failureReason',
             baseName: 'failureReason',
             type: 'string',
@@ -54,15 +54,17 @@ var AudiencePreview = (function () {
 }());
 exports.AudiencePreview = AudiencePreview;
 (function (AudiencePreview) {
-    var StatusEnum;
-    (function (StatusEnum) {
-        StatusEnum[StatusEnum["FAILED"] = 'FAILED'] = "FAILED";
-    })(StatusEnum = AudiencePreview.StatusEnum || (AudiencePreview.StatusEnum = {}));
     var AudienceTypeEnum;
     (function (AudienceTypeEnum) {
         AudienceTypeEnum[AudienceTypeEnum["ACCOUNTS"] = 'ACCOUNTS'] = "ACCOUNTS";
         AudienceTypeEnum[AudienceTypeEnum["USERS"] = 'USERS'] = "USERS";
     })(AudienceTypeEnum = AudiencePreview.AudienceTypeEnum || (AudiencePreview.AudienceTypeEnum = {}));
+    var StatusEnum;
+    (function (StatusEnum) {
+        StatusEnum[StatusEnum["COMPLETED"] = 'COMPLETED'] = "COMPLETED";
+        StatusEnum[StatusEnum["FAILED"] = 'FAILED'] = "FAILED";
+        StatusEnum[StatusEnum["RUNNING"] = 'RUNNING'] = "RUNNING";
+    })(StatusEnum = AudiencePreview.StatusEnum || (AudiencePreview.StatusEnum = {}));
 })(AudiencePreview = exports.AudiencePreview || (exports.AudiencePreview = {}));
 exports.AudiencePreview = AudiencePreview;
 //# sourceMappingURL=audiencePreview.js.map

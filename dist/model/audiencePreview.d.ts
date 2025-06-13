@@ -3,13 +3,13 @@ import { AudiencePreviewOptions } from './audiencePreviewOptions';
 import { AudiencePreviewResult } from './audiencePreviewResult';
 import { AudienceSize } from './audienceSize';
 export declare class AudiencePreview {
-    'status': AudiencePreview.StatusEnum;
-    'results': Array<AudiencePreviewResult>;
-    'size': AudienceSize;
     'id': string;
     'audienceType': AudiencePreview.AudienceTypeEnum;
     'definition': AudienceDefinitionWithoutType;
     'options': AudiencePreviewOptions;
+    'status': AudiencePreview.StatusEnum;
+    'results'?: Array<AudiencePreviewResult>;
+    'size'?: AudienceSize;
     'failureReason'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
@@ -24,11 +24,13 @@ export declare class AudiencePreview {
     }[];
 }
 export declare namespace AudiencePreview {
-    enum StatusEnum {
-        FAILED
-    }
     enum AudienceTypeEnum {
         ACCOUNTS,
         USERS
+    }
+    enum StatusEnum {
+        COMPLETED,
+        FAILED,
+        RUNNING
     }
 }
