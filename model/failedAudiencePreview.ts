@@ -12,8 +12,11 @@
 
 import { RequestFile } from './models';
 import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
-import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
+import { AudiencePreviewOptions } from './audiencePreviewOptions';
 
+/**
+ * Audience preview that has failed to calculate.
+ */
 export class FailedAudiencePreview {
     /**
      * Status for the audience preview.
@@ -32,7 +35,7 @@ export class FailedAudiencePreview {
      */
     'audienceType': FailedAudiencePreview.AudienceTypeEnum;
     'definition': AudienceDefinitionWithoutType;
-    'options': AudienceOptionsWithLookback;
+    'options': AudiencePreviewOptions;
 
     static discriminator: string | undefined = undefined;
 
@@ -69,7 +72,7 @@ export class FailedAudiencePreview {
         {
             name: 'options',
             baseName: 'options',
-            type: 'AudienceOptionsWithLookback',
+            type: 'AudiencePreviewOptions',
         },
     ];
 

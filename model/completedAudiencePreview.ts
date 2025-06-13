@@ -12,7 +12,7 @@
 
 import { RequestFile } from './models';
 import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
-import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
+import { AudiencePreviewOptions } from './audiencePreviewOptions';
 import { AudiencePreviewResult } from './audiencePreviewResult';
 import { AudienceSize } from './audienceSize';
 
@@ -38,7 +38,7 @@ export class CompletedAudiencePreview {
      */
     'audienceType': CompletedAudiencePreview.AudienceTypeEnum;
     'definition': AudienceDefinitionWithoutType;
-    'options': AudienceOptionsWithLookback;
+    'options': AudiencePreviewOptions;
 
     static discriminator: string | undefined = undefined;
 
@@ -80,7 +80,7 @@ export class CompletedAudiencePreview {
         {
             name: 'options',
             baseName: 'options',
-            type: 'AudienceOptionsWithLookback',
+            type: 'AudiencePreviewOptions',
         },
     ];
 

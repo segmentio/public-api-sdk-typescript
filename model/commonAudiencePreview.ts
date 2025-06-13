@@ -12,7 +12,7 @@
 
 import { RequestFile } from './models';
 import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
-import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
+import { AudiencePreviewOptions } from './audiencePreviewOptions';
 
 /**
  * Fields common to an audience preview regardless of the status.
@@ -27,7 +27,7 @@ export class CommonAudiencePreview {
      */
     'audienceType': CommonAudiencePreview.AudienceTypeEnum;
     'definition': AudienceDefinitionWithoutType;
-    'options': AudienceOptionsWithLookback;
+    'options': AudiencePreviewOptions;
 
     static discriminator: string | undefined = undefined;
 
@@ -54,7 +54,7 @@ export class CommonAudiencePreview {
         {
             name: 'options',
             baseName: 'options',
-            type: 'AudienceOptionsWithLookback',
+            type: 'AudiencePreviewOptions',
         },
     ];
 

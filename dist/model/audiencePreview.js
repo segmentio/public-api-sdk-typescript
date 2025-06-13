@@ -42,7 +42,7 @@ var AudiencePreview = (function () {
         {
             name: 'options',
             baseName: 'options',
-            type: 'AudienceOptionsWithLookback',
+            type: 'AudiencePreviewOptions',
         },
         {
             name: 'failureReason',

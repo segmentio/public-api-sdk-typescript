@@ -47,6 +47,7 @@ __exportStar(require("./audienceOptions"), exports);
 __exportStar(require("./audienceOptionsWithLookback"), exports);
 __exportStar(require("./audiencePreview"), exports);
 __exportStar(require("./audiencePreviewIdentifier"), exports);
+__exportStar(require("./audiencePreviewOptions"), exports);
 __exportStar(require("./audiencePreviewResult"), exports);
 __exportStar(require("./audienceSize"), exports);
 __exportStar(require("./audienceSummary"), exports);
@@ -636,6 +637,7 @@ var audienceOptions_1 = require("./audienceOptions");
 var audienceOptionsWithLookback_1 = require("./audienceOptionsWithLookback");
 var audiencePreview_1 = require("./audiencePreview");
 var audiencePreviewIdentifier_1 = require("./audiencePreviewIdentifier");
+var audiencePreviewOptions_1 = require("./audiencePreviewOptions");
 var audiencePreviewResult_1 = require("./audiencePreviewResult");
 var audienceSize_1 = require("./audienceSize");
 var audienceSummary_1 = require("./audienceSummary");
@@ -1342,6 +1344,7 @@ var typeMap = {
     AudienceOptionsWithLookback: audienceOptionsWithLookback_1.AudienceOptionsWithLookback,
     AudiencePreview: audiencePreview_1.AudiencePreview,
     AudiencePreviewIdentifier: audiencePreviewIdentifier_1.AudiencePreviewIdentifier,
+    AudiencePreviewOptions: audiencePreviewOptions_1.AudiencePreviewOptions,
     AudiencePreviewResult: audiencePreviewResult_1.AudiencePreviewResult,
     AudienceSize: audienceSize_1.AudienceSize,
     AudienceSummary: audienceSummary_1.AudienceSummary,

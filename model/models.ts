@@ -32,6 +32,7 @@ export * from './audienceOptions';
 export * from './audienceOptionsWithLookback';
 export * from './audiencePreview';
 export * from './audiencePreviewIdentifier';
+export * from './audiencePreviewOptions';
 export * from './audiencePreviewResult';
 export * from './audienceSize';
 export * from './audienceSummary';
@@ -634,6 +635,7 @@ import { AudienceOptions } from './audienceOptions';
 import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
 import { AudiencePreview } from './audiencePreview';
 import { AudiencePreviewIdentifier } from './audiencePreviewIdentifier';
+import { AudiencePreviewOptions } from './audiencePreviewOptions';
 import { AudiencePreviewResult } from './audiencePreviewResult';
 import { AudienceSize } from './audienceSize';
 import { AudienceSummary } from './audienceSummary';
@@ -1409,6 +1411,7 @@ let typeMap: { [index: string]: any } = {
     AudienceOptionsWithLookback: AudienceOptionsWithLookback,
     AudiencePreview: AudiencePreview,
     AudiencePreviewIdentifier: AudiencePreviewIdentifier,
+    AudiencePreviewOptions: AudiencePreviewOptions,
     AudiencePreviewResult: AudiencePreviewResult,
     AudienceSize: AudienceSize,
     AudienceSummary: AudienceSummary,

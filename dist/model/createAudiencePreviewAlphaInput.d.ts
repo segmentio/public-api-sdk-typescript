@@ -1,9 +1,9 @@
 import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
-import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
+import { AudiencePreviewOptions } from './audiencePreviewOptions';
 export declare class CreateAudiencePreviewAlphaInput {
     'definition': AudienceDefinitionWithoutType;
     'audienceType': CreateAudiencePreviewAlphaInput.AudienceTypeEnum;
-    'options'?: AudienceOptionsWithLookback;
+    'options'?: AudiencePreviewOptions;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

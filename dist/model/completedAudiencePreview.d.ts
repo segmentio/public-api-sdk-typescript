@@ -1,5 +1,5 @@
 import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
-import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
+import { AudiencePreviewOptions } from './audiencePreviewOptions';
 import { AudiencePreviewResult } from './audiencePreviewResult';
 import { AudienceSize } from './audienceSize';
 export declare class CompletedAudiencePreview {
@@ -9,7 +9,7 @@ export declare class CompletedAudiencePreview {
     'id': string;
     'audienceType': CompletedAudiencePreview.AudienceTypeEnum;
     'definition': AudienceDefinitionWithoutType;
-    'options': AudienceOptionsWithLookback;
+    'options': AudiencePreviewOptions;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

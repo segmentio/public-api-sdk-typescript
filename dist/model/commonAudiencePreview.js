@@ -27,7 +27,7 @@ var CommonAudiencePreview = (function () {
         {
             name: 'options',
             baseName: 'options',
-            type: 'AudienceOptionsWithLookback',
+            type: 'AudiencePreviewOptions',
         },
     ];
     return CommonAudiencePreview;

@@ -12,7 +12,7 @@
 
 import { RequestFile } from './models';
 import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
-import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
+import { AudiencePreviewOptions } from './audiencePreviewOptions';
 
 /**
  * Input to create an audience preview.
@@ -23,7 +23,7 @@ export class CreateAudiencePreviewAlphaInput {
      * Discriminator denoting the audience\'s product type.  Possible values: USERS, ACCOUNTS.
      */
     'audienceType': CreateAudiencePreviewAlphaInput.AudienceTypeEnum;
-    'options'?: AudienceOptionsWithLookback;
+    'options'?: AudiencePreviewOptions;
 
     static discriminator: string | undefined = undefined;
 
@@ -45,7 +45,7 @@ export class CreateAudiencePreviewAlphaInput {
         {
             name: 'options',
             baseName: 'options',
-            type: 'AudienceOptionsWithLookback',
+            type: 'AudiencePreviewOptions',
         },
     ];
 

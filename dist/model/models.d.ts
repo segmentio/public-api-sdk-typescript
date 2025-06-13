@@ -33,6 +33,7 @@ export * from './audienceOptions';
 export * from './audienceOptionsWithLookback';
 export * from './audiencePreview';
 export * from './audiencePreviewIdentifier';
+export * from './audiencePreviewOptions';
 export * from './audiencePreviewResult';
 export * from './audienceSize';
 export * from './audienceSummary';

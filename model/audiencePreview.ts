@@ -12,13 +12,16 @@
 
 import { RequestFile } from './models';
 import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
-import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
+import { AudiencePreviewOptions } from './audiencePreviewOptions';
 import { AudiencePreviewResult } from './audiencePreviewResult';
 import { AudienceSize } from './audienceSize';
 import { CompletedAudiencePreview } from './completedAudiencePreview';
 import { FailedAudiencePreview } from './failedAudiencePreview';
 import { RunningAudiencePreview } from './runningAudiencePreview';
 
+/**
+ * Audience preview that can be in one of the three states: completed, running, or failed.
+ */
 export class AudiencePreview {
     /**
      * Status for the audience preview.
@@ -38,7 +41,7 @@ export class AudiencePreview {
      */
     'audienceType': AudiencePreview.AudienceTypeEnum;
     'definition': AudienceDefinitionWithoutType;
-    'options': AudienceOptionsWithLookback;
+    'options': AudiencePreviewOptions;
     /**
      * Explanation of why the audience preview failed, if available.
      */
@@ -84,7 +87,7 @@ export class AudiencePreview {
         {
             name: 'options',
             baseName: 'options',
-            type: 'AudienceOptionsWithLookback',
+            type: 'AudiencePreviewOptions',
         },
         {
             name: 'failureReason',

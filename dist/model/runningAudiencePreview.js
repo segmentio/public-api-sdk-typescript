@@ -32,7 +32,7 @@ var RunningAudiencePreview = (function () {
         {
             name: 'options',
             baseName: 'options',
-            type: 'AudienceOptionsWithLookback',
+            type: 'AudiencePreviewOptions',
         },
     ];
     return RunningAudiencePreview;

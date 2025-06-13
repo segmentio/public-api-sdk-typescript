@@ -42,7 +42,7 @@ var CompletedAudiencePreview = (function () {
         {
             name: 'options',
             baseName: 'options',
-            type: 'AudienceOptionsWithLookback',
+            type: 'AudiencePreviewOptions',
         },
     ];
     return CompletedAudiencePreview;
