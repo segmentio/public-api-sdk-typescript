@@ -12,21 +12,15 @@
 
 import { RequestFile } from './models';
 import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
-import { AudiencePreviewAnyOf } from './audiencePreviewAnyOf';
-import { AudiencePreviewAnyOf1 } from './audiencePreviewAnyOf1';
-import { AudiencePreviewAnyOf2 } from './audiencePreviewAnyOf2';
 import { AudiencePreviewOptions } from './audiencePreviewOptions';
 import { AudiencePreviewResult } from './audiencePreviewResult';
 import { AudienceSize } from './audienceSize';
 
-/**
- * Audience preview that can be in one of the three states: completed, running, or failed.
- */
-export class AudiencePreview {
+export class AudiencePreviewAnyOf {
     /**
      * Status for the audience preview.
      */
-    'status': AudiencePreview.StatusEnum;
+    'status': AudiencePreviewAnyOf.StatusEnum;
     /**
      * Sampled result membership for the audience preview.
      */
@@ -39,13 +33,9 @@ export class AudiencePreview {
     /**
      * The audience type of the preview.
      */
-    'audienceType': AudiencePreview.AudienceTypeEnum;
+    'audienceType': AudiencePreviewAnyOf.AudienceTypeEnum;
     'definition': AudienceDefinitionWithoutType;
     'options': AudiencePreviewOptions;
-    /**
-     * Explanation of why the audience preview failed, if available.
-     */
-    'failureReason'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -57,7 +47,7 @@ export class AudiencePreview {
         {
             name: 'status',
             baseName: 'status',
-            type: 'AudiencePreview.StatusEnum',
+            type: 'AudiencePreviewAnyOf.StatusEnum',
         },
         {
             name: 'results',
@@ -77,7 +67,7 @@ export class AudiencePreview {
         {
             name: 'audienceType',
             baseName: 'audienceType',
-            type: 'AudiencePreview.AudienceTypeEnum',
+            type: 'AudiencePreviewAnyOf.AudienceTypeEnum',
         },
         {
             name: 'definition',
@@ -89,21 +79,16 @@ export class AudiencePreview {
             baseName: 'options',
             type: 'AudiencePreviewOptions',
         },
-        {
-            name: 'failureReason',
-            baseName: 'failureReason',
-            type: 'string',
-        },
     ];
 
     static getAttributeTypeMap() {
-        return AudiencePreview.attributeTypeMap;
+        return AudiencePreviewAnyOf.attributeTypeMap;
     }
 }
 
-export namespace AudiencePreview {
+export namespace AudiencePreviewAnyOf {
     export enum StatusEnum {
-        FAILED = <any>'FAILED',
+        COMPLETED = <any>'COMPLETED',
     }
     export enum AudienceTypeEnum {
         ACCOUNTS = <any>'ACCOUNTS',

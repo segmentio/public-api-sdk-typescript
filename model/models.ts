@@ -31,6 +31,9 @@ export * from './audienceDefinitionWithoutType';
 export * from './audienceOptions';
 export * from './audienceOptionsWithLookback';
 export * from './audiencePreview';
+export * from './audiencePreviewAnyOf';
+export * from './audiencePreviewAnyOf1';
+export * from './audiencePreviewAnyOf2';
 export * from './audiencePreviewIdentifier';
 export * from './audiencePreviewOptions';
 export * from './audiencePreviewResult';
@@ -634,6 +637,9 @@ import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
 import { AudienceOptions } from './audienceOptions';
 import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
 import { AudiencePreview } from './audiencePreview';
+import { AudiencePreviewAnyOf } from './audiencePreviewAnyOf';
+import { AudiencePreviewAnyOf1 } from './audiencePreviewAnyOf1';
+import { AudiencePreviewAnyOf2 } from './audiencePreviewAnyOf2';
 import { AudiencePreviewIdentifier } from './audiencePreviewIdentifier';
 import { AudiencePreviewOptions } from './audiencePreviewOptions';
 import { AudiencePreviewResult } from './audiencePreviewResult';
@@ -1215,6 +1221,15 @@ let enumsMap: { [index: string]: any } = {
     'AudienceDefinition.TypeEnum': AudienceDefinition.TypeEnum,
     'AudiencePreview.StatusEnum': AudiencePreview.StatusEnum,
     'AudiencePreview.AudienceTypeEnum': AudiencePreview.AudienceTypeEnum,
+    'AudiencePreviewAnyOf.StatusEnum': AudiencePreviewAnyOf.StatusEnum,
+    'AudiencePreviewAnyOf.AudienceTypeEnum':
+        AudiencePreviewAnyOf.AudienceTypeEnum,
+    'AudiencePreviewAnyOf1.StatusEnum': AudiencePreviewAnyOf1.StatusEnum,
+    'AudiencePreviewAnyOf1.AudienceTypeEnum':
+        AudiencePreviewAnyOf1.AudienceTypeEnum,
+    'AudiencePreviewAnyOf2.StatusEnum': AudiencePreviewAnyOf2.StatusEnum,
+    'AudiencePreviewAnyOf2.AudienceTypeEnum':
+        AudiencePreviewAnyOf2.AudienceTypeEnum,
     'AudienceSize.TypeEnum': AudienceSize.TypeEnum,
     'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum':
         AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
@@ -1410,6 +1425,9 @@ let typeMap: { [index: string]: any } = {
     AudienceOptions: AudienceOptions,
     AudienceOptionsWithLookback: AudienceOptionsWithLookback,
     AudiencePreview: AudiencePreview,
+    AudiencePreviewAnyOf: AudiencePreviewAnyOf,
+    AudiencePreviewAnyOf1: AudiencePreviewAnyOf1,
+    AudiencePreviewAnyOf2: AudiencePreviewAnyOf2,
     AudiencePreviewIdentifier: AudiencePreviewIdentifier,
     AudiencePreviewOptions: AudiencePreviewOptions,
     AudiencePreviewResult: AudiencePreviewResult,
