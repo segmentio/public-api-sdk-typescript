@@ -12,12 +12,12 @@
 
 import { RequestFile } from './models';
 import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
-import { AudiencePreviewAnyOf } from './audiencePreviewAnyOf';
-import { AudiencePreviewAnyOf1 } from './audiencePreviewAnyOf1';
-import { AudiencePreviewAnyOf2 } from './audiencePreviewAnyOf2';
 import { AudiencePreviewOptions } from './audiencePreviewOptions';
 import { AudiencePreviewResult } from './audiencePreviewResult';
 import { AudienceSize } from './audienceSize';
+import { CompletedAudiencePreview } from './completedAudiencePreview';
+import { FailedAudiencePreview } from './failedAudiencePreview';
+import { RunningAudiencePreview } from './runningAudiencePreview';
 
 /**
  * Audience preview that can be in one of the three states: completed, running, or failed.

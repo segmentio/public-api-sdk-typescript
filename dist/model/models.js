@@ -46,9 +46,6 @@ __exportStar(require("./audienceDefinitionWithoutType"), exports);
 __exportStar(require("./audienceOptions"), exports);
 __exportStar(require("./audienceOptionsWithLookback"), exports);
 __exportStar(require("./audiencePreview"), exports);
-__exportStar(require("./audiencePreviewAnyOf"), exports);
-__exportStar(require("./audiencePreviewAnyOf1"), exports);
-__exportStar(require("./audiencePreviewAnyOf2"), exports);
 __exportStar(require("./audiencePreviewIdentifier"), exports);
 __exportStar(require("./audiencePreviewOptions"), exports);
 __exportStar(require("./audiencePreviewResult"), exports);
@@ -639,9 +636,6 @@ var audienceDefinitionWithoutType_1 = require("./audienceDefinitionWithoutType")
 var audienceOptions_1 = require("./audienceOptions");
 var audienceOptionsWithLookback_1 = require("./audienceOptionsWithLookback");
 var audiencePreview_1 = require("./audiencePreview");
-var audiencePreviewAnyOf_1 = require("./audiencePreviewAnyOf");
-var audiencePreviewAnyOf1_1 = require("./audiencePreviewAnyOf1");
-var audiencePreviewAnyOf2_1 = require("./audiencePreviewAnyOf2");
 var audiencePreviewIdentifier_1 = require("./audiencePreviewIdentifier");
 var audiencePreviewOptions_1 = require("./audiencePreviewOptions");
 var audiencePreviewResult_1 = require("./audiencePreviewResult");
@@ -1218,12 +1212,6 @@ var enumsMap = {
     'AudienceDefinition.TypeEnum': audienceDefinition_1.AudienceDefinition.TypeEnum,
     'AudiencePreview.StatusEnum': audiencePreview_1.AudiencePreview.StatusEnum,
     'AudiencePreview.AudienceTypeEnum': audiencePreview_1.AudiencePreview.AudienceTypeEnum,
-    'AudiencePreviewAnyOf.StatusEnum': audiencePreviewAnyOf_1.AudiencePreviewAnyOf.StatusEnum,
-    'AudiencePreviewAnyOf.AudienceTypeEnum': audiencePreviewAnyOf_1.AudiencePreviewAnyOf.AudienceTypeEnum,
-    'AudiencePreviewAnyOf1.StatusEnum': audiencePreviewAnyOf1_1.AudiencePreviewAnyOf1.StatusEnum,
-    'AudiencePreviewAnyOf1.AudienceTypeEnum': audiencePreviewAnyOf1_1.AudiencePreviewAnyOf1.AudienceTypeEnum,
-    'AudiencePreviewAnyOf2.StatusEnum': audiencePreviewAnyOf2_1.AudiencePreviewAnyOf2.StatusEnum,
-    'AudiencePreviewAnyOf2.AudienceTypeEnum': audiencePreviewAnyOf2_1.AudiencePreviewAnyOf2.AudienceTypeEnum,
     'AudienceSize.TypeEnum': audienceSize_1.AudienceSize.TypeEnum,
     'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum': audienceSummaryWithAudienceTypeAndLookback_1.AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
     'CommonAudiencePreview.AudienceTypeEnum': commonAudiencePreview_1.CommonAudiencePreview.AudienceTypeEnum,
@@ -1355,9 +1343,6 @@ var typeMap = {
     AudienceOptions: audienceOptions_1.AudienceOptions,
     AudienceOptionsWithLookback: audienceOptionsWithLookback_1.AudienceOptionsWithLookback,
     AudiencePreview: audiencePreview_1.AudiencePreview,
-    AudiencePreviewAnyOf: audiencePreviewAnyOf_1.AudiencePreviewAnyOf,
-    AudiencePreviewAnyOf1: audiencePreviewAnyOf1_1.AudiencePreviewAnyOf1,
-    AudiencePreviewAnyOf2: audiencePreviewAnyOf2_1.AudiencePreviewAnyOf2,
     AudiencePreviewIdentifier: audiencePreviewIdentifier_1.AudiencePreviewIdentifier,
     AudiencePreviewOptions: audiencePreviewOptions_1.AudiencePreviewOptions,
     AudiencePreviewResult: audiencePreviewResult_1.AudiencePreviewResult,
