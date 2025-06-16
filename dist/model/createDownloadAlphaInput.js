@@ -15,11 +15,6 @@ var CreateDownloadAlphaInput = (function () {
             type: 'string',
         },
         {
-            name: 'workspaceId',
-            baseName: 'workspaceId',
-            type: 'string',
-        },
-        {
             name: 'hour',
             baseName: 'hour',
             type: 'string',
