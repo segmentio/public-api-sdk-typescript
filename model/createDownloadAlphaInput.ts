@@ -21,10 +21,6 @@ export class CreateDownloadAlphaInput {
      */
     'collectionId': string;
     /**
-     * The Workspace id for the collection.
-     */
-    'workspaceId': string;
-    /**
      * The ISO8601 formatted timestamp corresponding to a specific hour and day to retrieve data for. E.g.: 2025-05-07T23:00:00Z Objects are bucketed by hour and a month of data is retained.
      */
     'hour': string;
@@ -39,11 +35,6 @@ export class CreateDownloadAlphaInput {
         {
             name: 'collectionId',
             baseName: 'collectionId',
-            type: 'string',
-        },
-        {
-            name: 'workspaceId',
-            baseName: 'workspaceId',
             type: 'string',
         },
         {
