@@ -47,7 +47,6 @@ __exportStar(require("./audienceOptions"), exports);
 __exportStar(require("./audienceOptionsWithLookback"), exports);
 __exportStar(require("./audiencePreview"), exports);
 __exportStar(require("./audiencePreviewIdentifier"), exports);
-__exportStar(require("./audiencePreviewOptions"), exports);
 __exportStar(require("./audiencePreviewResult"), exports);
 __exportStar(require("./audienceSize"), exports);
 __exportStar(require("./audienceSummary"), exports);
@@ -71,6 +70,7 @@ __exportStar(require("./createAudienceAlphaOutput"), exports);
 __exportStar(require("./createAudiencePreview200Response"), exports);
 __exportStar(require("./createAudiencePreviewAlphaInput"), exports);
 __exportStar(require("./createAudiencePreviewAlphaOutput"), exports);
+__exportStar(require("./createAudiencePreviewOptions"), exports);
 __exportStar(require("./createCloudSourceRegulation200Response"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Input"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Output"), exports);
@@ -440,6 +440,7 @@ __exportStar(require("./propertyRenameBeta"), exports);
 __exportStar(require("./propertyRenameV1"), exports);
 __exportStar(require("./propertyValueTransformationBeta"), exports);
 __exportStar(require("./propertyValueTransformationV1"), exports);
+__exportStar(require("./readAudiencePreviewOptions"), exports);
 __exportStar(require("./regulation"), exports);
 __exportStar(require("./regulationListEntryV1"), exports);
 __exportStar(require("./removeAudienceFromSpace200Response"), exports);
@@ -633,7 +634,6 @@ var audienceOptions_1 = require("./audienceOptions");
 var audienceOptionsWithLookback_1 = require("./audienceOptionsWithLookback");
 var audiencePreview_1 = require("./audiencePreview");
 var audiencePreviewIdentifier_1 = require("./audiencePreviewIdentifier");
-var audiencePreviewOptions_1 = require("./audiencePreviewOptions");
 var audiencePreviewResult_1 = require("./audiencePreviewResult");
 var audienceSize_1 = require("./audienceSize");
 var audienceSummary_1 = require("./audienceSummary");
@@ -657,6 +657,7 @@ var createAudienceAlphaOutput_1 = require("./createAudienceAlphaOutput");
 var createAudiencePreview200Response_1 = require("./createAudiencePreview200Response");
 var createAudiencePreviewAlphaInput_1 = require("./createAudiencePreviewAlphaInput");
 var createAudiencePreviewAlphaOutput_1 = require("./createAudiencePreviewAlphaOutput");
+var createAudiencePreviewOptions_1 = require("./createAudiencePreviewOptions");
 var createCloudSourceRegulation200Response_1 = require("./createCloudSourceRegulation200Response");
 var createCloudSourceRegulationV1Input_1 = require("./createCloudSourceRegulationV1Input");
 var createCloudSourceRegulationV1Output_1 = require("./createCloudSourceRegulationV1Output");
@@ -1026,6 +1027,7 @@ var propertyRenameBeta_1 = require("./propertyRenameBeta");
 var propertyRenameV1_1 = require("./propertyRenameV1");
 var propertyValueTransformationBeta_1 = require("./propertyValueTransformationBeta");
 var propertyValueTransformationV1_1 = require("./propertyValueTransformationV1");
+var readAudiencePreviewOptions_1 = require("./readAudiencePreviewOptions");
 var regulation_1 = require("./regulation");
 var regulationListEntryV1_1 = require("./regulationListEntryV1");
 var removeAudienceFromSpace200Response_1 = require("./removeAudienceFromSpace200Response");
@@ -1329,7 +1331,6 @@ var typeMap = {
     AudienceOptionsWithLookback: audienceOptionsWithLookback_1.AudienceOptionsWithLookback,
     AudiencePreview: audiencePreview_1.AudiencePreview,
     AudiencePreviewIdentifier: audiencePreviewIdentifier_1.AudiencePreviewIdentifier,
-    AudiencePreviewOptions: audiencePreviewOptions_1.AudiencePreviewOptions,
     AudiencePreviewResult: audiencePreviewResult_1.AudiencePreviewResult,
     AudienceSize: audienceSize_1.AudienceSize,
     AudienceSummary: audienceSummary_1.AudienceSummary,
@@ -1353,6 +1354,7 @@ var typeMap = {
     CreateAudiencePreview200Response: createAudiencePreview200Response_1.CreateAudiencePreview200Response,
     CreateAudiencePreviewAlphaInput: createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput,
     CreateAudiencePreviewAlphaOutput: createAudiencePreviewAlphaOutput_1.CreateAudiencePreviewAlphaOutput,
+    CreateAudiencePreviewOptions: createAudiencePreviewOptions_1.CreateAudiencePreviewOptions,
     CreateCloudSourceRegulation200Response: createCloudSourceRegulation200Response_1.CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input,
     CreateCloudSourceRegulationV1Output: createCloudSourceRegulationV1Output_1.CreateCloudSourceRegulationV1Output,
@@ -1722,6 +1724,7 @@ var typeMap = {
     PropertyRenameV1: propertyRenameV1_1.PropertyRenameV1,
     PropertyValueTransformationBeta: propertyValueTransformationBeta_1.PropertyValueTransformationBeta,
     PropertyValueTransformationV1: propertyValueTransformationV1_1.PropertyValueTransformationV1,
+    ReadAudiencePreviewOptions: readAudiencePreviewOptions_1.ReadAudiencePreviewOptions,
     Regulation: regulation_1.Regulation,
     RegulationListEntryV1: regulationListEntryV1_1.RegulationListEntryV1,
     RemoveAudienceFromSpace200Response: removeAudienceFromSpace200Response_1.RemoveAudienceFromSpace200Response,

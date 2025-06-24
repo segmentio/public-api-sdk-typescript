@@ -12,9 +12,9 @@
 
 import { RequestFile } from './models';
 import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
-import { AudiencePreviewOptions } from './audiencePreviewOptions';
 import { AudiencePreviewResult } from './audiencePreviewResult';
 import { AudienceSize } from './audienceSize';
+import { ReadAudiencePreviewOptions } from './readAudiencePreviewOptions';
 
 /**
  * An audience preview.
@@ -29,7 +29,7 @@ export class AudiencePreview {
      */
     'audienceType': AudiencePreview.AudienceTypeEnum;
     'definition': AudienceDefinitionWithoutType;
-    'options': AudiencePreviewOptions;
+    'options': ReadAudiencePreviewOptions;
     /**
      * Status for the audience preview.
      */
@@ -69,7 +69,7 @@ export class AudiencePreview {
         {
             name: 'options',
             baseName: 'options',
-            type: 'AudiencePreviewOptions',
+            type: 'ReadAudiencePreviewOptions',
         },
         {
             name: 'status',

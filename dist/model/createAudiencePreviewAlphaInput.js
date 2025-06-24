@@ -22,7 +22,7 @@ var CreateAudiencePreviewAlphaInput = (function () {
         {
             name: 'options',
             baseName: 'options',
-            type: 'AudiencePreviewOptions',
+            type: 'CreateAudiencePreviewOptions',
         },
     ];
     return CreateAudiencePreviewAlphaInput;

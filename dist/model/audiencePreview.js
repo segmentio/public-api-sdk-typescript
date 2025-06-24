@@ -27,7 +27,7 @@ var AudiencePreview = (function () {
         {
             name: 'options',
             baseName: 'options',
-            type: 'AudiencePreviewOptions',
+            type: 'ReadAudiencePreviewOptions',
         },
         {
             name: 'status',
