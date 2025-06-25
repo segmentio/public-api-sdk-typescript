@@ -14,6 +14,7 @@ import { RequestFile } from './models';
 import { AudienceComputeCadence } from './audienceComputeCadence';
 import { AudienceDefinition } from './audienceDefinition';
 import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
+import { AudienceSize } from './audienceSize';
 
 export class AudienceSummaryWithAudienceTypeAndLookback {
     /**
@@ -21,6 +22,7 @@ export class AudienceSummaryWithAudienceTypeAndLookback {
      */
     'audienceType': AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum;
     'computeCadence': AudienceComputeCadence;
+    'size'?: AudienceSize;
     'options'?: AudienceOptionsWithLookback;
     /**
      * Audience id.
@@ -84,6 +86,11 @@ export class AudienceSummaryWithAudienceTypeAndLookback {
             name: 'computeCadence',
             baseName: 'computeCadence',
             type: 'AudienceComputeCadence',
+        },
+        {
+            name: 'size',
+            baseName: 'size',
+            type: 'AudienceSize',
         },
         {
             name: 'options',
