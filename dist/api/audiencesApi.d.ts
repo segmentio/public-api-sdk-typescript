@@ -3,9 +3,11 @@ import http from 'http';
 import { CreateAudience200Response } from '../model/createAudience200Response';
 import { CreateAudienceAlphaInput } from '../model/createAudienceAlphaInput';
 import { GetAudience200Response } from '../model/getAudience200Response';
+import { GetAudienceScheduleFromSpaceAndAudience200Response } from '../model/getAudienceScheduleFromSpaceAndAudience200Response';
 import { ListAudienceConsumersFromSpaceAndAudience200Response } from '../model/listAudienceConsumersFromSpaceAndAudience200Response';
 import { ListAudienceConsumersSearchInput } from '../model/listAudienceConsumersSearchInput';
 import { ListAudienceConsumersSortInput } from '../model/listAudienceConsumersSortInput';
+import { ListAudienceSchedulesFromSpaceAndAudience200Response } from '../model/listAudienceSchedulesFromSpaceAndAudience200Response';
 import { ListAudiences200Response } from '../model/listAudiences200Response';
 import { ListAudiencesPaginationInput } from '../model/listAudiencesPaginationInput';
 import { PaginationInput } from '../model/paginationInput';
@@ -45,13 +47,21 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: CreateAudience200Response;
     }>;
-    getAudience(spaceId: string, id: string, options?: {
+    getAudience(spaceId: string, id: string, include?: string, options?: {
         headers: {
             [name: string]: string;
         };
     }): Promise<{
         response: http.IncomingMessage;
         body: GetAudience200Response;
+    }>;
+    getAudienceScheduleFromSpaceAndAudience(spaceId: string, id: string, scheduleId: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: GetAudienceScheduleFromSpaceAndAudience200Response;
     }>;
     listAudienceConsumersFromSpaceAndAudience(spaceId: string, id: string, pagination?: PaginationInput, search?: ListAudienceConsumersSearchInput, sort?: ListAudienceConsumersSortInput, options?: {
         headers: {
@@ -61,7 +71,15 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: ListAudienceConsumersFromSpaceAndAudience200Response;
     }>;
-    listAudiences(spaceId: string, pagination?: ListAudiencesPaginationInput, options?: {
+    listAudienceSchedulesFromSpaceAndAudience(spaceId: string, id: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: ListAudienceSchedulesFromSpaceAndAudience200Response;
+    }>;
+    listAudiences(spaceId: string, pagination?: ListAudiencesPaginationInput, include?: string, options?: {
         headers: {
             [name: string]: string;
         };

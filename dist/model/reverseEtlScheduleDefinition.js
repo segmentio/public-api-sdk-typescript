@@ -17,7 +17,7 @@ var ReverseEtlScheduleDefinition = (function () {
         {
             name: 'config',
             baseName: 'config',
-            type: 'Config',
+            type: 'Config1',
         },
     ];
     return ReverseEtlScheduleDefinition;

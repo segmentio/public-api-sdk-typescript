@@ -45,6 +45,7 @@ __exportStar(require("./audienceDefinition"), exports);
 __exportStar(require("./audienceDefinitionWithoutType"), exports);
 __exportStar(require("./audienceOptions"), exports);
 __exportStar(require("./audienceOptionsWithLookback"), exports);
+__exportStar(require("./audienceSchedule"), exports);
 __exportStar(require("./audienceSummary"), exports);
 __exportStar(require("./audienceSummaryWithAudienceTypeAndLookback"), exports);
 __exportStar(require("./auditEventV1"), exports);
@@ -59,6 +60,7 @@ __exportStar(require("./commonSourceSettingsV1"), exports);
 __exportStar(require("./computedTraitSummary"), exports);
 __exportStar(require("./computedTraitsDefinition"), exports);
 __exportStar(require("./config"), exports);
+__exportStar(require("./config1"), exports);
 __exportStar(require("./contact"), exports);
 __exportStar(require("./createAudience200Response"), exports);
 __exportStar(require("./createAudienceAlphaInput"), exports);
@@ -221,6 +223,8 @@ __exportStar(require("./getAudience200Response"), exports);
 __exportStar(require("./getAudience200Response1"), exports);
 __exportStar(require("./getAudienceAlphaOutput"), exports);
 __exportStar(require("./getAudienceBetaOutput"), exports);
+__exportStar(require("./getAudienceScheduleFromSpaceAndAudience200Response"), exports);
+__exportStar(require("./getAudienceScheduleFromSpaceAndAudienceAlphaOutput"), exports);
 __exportStar(require("./getComputedTrait200Response"), exports);
 __exportStar(require("./getComputedTraitAlphaOutput"), exports);
 __exportStar(require("./getConnectionStateFromWarehouse200Response"), exports);
@@ -312,6 +316,8 @@ __exportStar(require("./listAudienceConsumersFromSpaceAndAudience200Response"), 
 __exportStar(require("./listAudienceConsumersFromSpaceAndAudienceAlphaOutput"), exports);
 __exportStar(require("./listAudienceConsumersSearchInput"), exports);
 __exportStar(require("./listAudienceConsumersSortInput"), exports);
+__exportStar(require("./listAudienceSchedulesFromSpaceAndAudience200Response"), exports);
+__exportStar(require("./listAudienceSchedulesFromSpaceAndAudienceAlphaOutput"), exports);
 __exportStar(require("./listAudiences200Response"), exports);
 __exportStar(require("./listAudiences200Response1"), exports);
 __exportStar(require("./listAudiencesAlphaOutput"), exports);
@@ -418,6 +424,7 @@ __exportStar(require("./minimalUserV1"), exports);
 __exportStar(require("./mtuSnapshotV1"), exports);
 __exportStar(require("./paginationInput"), exports);
 __exportStar(require("./paginationOutput"), exports);
+__exportStar(require("./periodicConfig"), exports);
 __exportStar(require("./permissionInputV1"), exports);
 __exportStar(require("./permissionResourceV1"), exports);
 __exportStar(require("./permissionV1"), exports);
@@ -509,6 +516,7 @@ __exportStar(require("./sourceV1"), exports);
 __exportStar(require("./space"), exports);
 __exportStar(require("./spaceWarehouseSchemaOverride"), exports);
 __exportStar(require("./spaceWarehouseSelectiveSyncItemAlpha"), exports);
+__exportStar(require("./specificDaysConfig"), exports);
 __exportStar(require("./streamStatusV1"), exports);
 __exportStar(require("./suppressedInner"), exports);
 __exportStar(require("./syncExtractPhase"), exports);
@@ -625,6 +633,7 @@ var audienceDefinition_1 = require("./audienceDefinition");
 var audienceDefinitionWithoutType_1 = require("./audienceDefinitionWithoutType");
 var audienceOptions_1 = require("./audienceOptions");
 var audienceOptionsWithLookback_1 = require("./audienceOptionsWithLookback");
+var audienceSchedule_1 = require("./audienceSchedule");
 var audienceSummary_1 = require("./audienceSummary");
 var audienceSummaryWithAudienceTypeAndLookback_1 = require("./audienceSummaryWithAudienceTypeAndLookback");
 var auditEventV1_1 = require("./auditEventV1");
@@ -639,6 +648,7 @@ var commonSourceSettingsV1_1 = require("./commonSourceSettingsV1");
 var computedTraitSummary_1 = require("./computedTraitSummary");
 var computedTraitsDefinition_1 = require("./computedTraitsDefinition");
 var config_1 = require("./config");
+var config1_1 = require("./config1");
 var contact_1 = require("./contact");
 var createAudience200Response_1 = require("./createAudience200Response");
 var createAudienceAlphaInput_1 = require("./createAudienceAlphaInput");
@@ -801,6 +811,8 @@ var getAudience200Response_1 = require("./getAudience200Response");
 var getAudience200Response1_1 = require("./getAudience200Response1");
 var getAudienceAlphaOutput_1 = require("./getAudienceAlphaOutput");
 var getAudienceBetaOutput_1 = require("./getAudienceBetaOutput");
+var getAudienceScheduleFromSpaceAndAudience200Response_1 = require("./getAudienceScheduleFromSpaceAndAudience200Response");
+var getAudienceScheduleFromSpaceAndAudienceAlphaOutput_1 = require("./getAudienceScheduleFromSpaceAndAudienceAlphaOutput");
 var getComputedTrait200Response_1 = require("./getComputedTrait200Response");
 var getComputedTraitAlphaOutput_1 = require("./getComputedTraitAlphaOutput");
 var getConnectionStateFromWarehouse200Response_1 = require("./getConnectionStateFromWarehouse200Response");
@@ -892,6 +904,8 @@ var listAudienceConsumersFromSpaceAndAudience200Response_1 = require("./listAudi
 var listAudienceConsumersFromSpaceAndAudienceAlphaOutput_1 = require("./listAudienceConsumersFromSpaceAndAudienceAlphaOutput");
 var listAudienceConsumersSearchInput_1 = require("./listAudienceConsumersSearchInput");
 var listAudienceConsumersSortInput_1 = require("./listAudienceConsumersSortInput");
+var listAudienceSchedulesFromSpaceAndAudience200Response_1 = require("./listAudienceSchedulesFromSpaceAndAudience200Response");
+var listAudienceSchedulesFromSpaceAndAudienceAlphaOutput_1 = require("./listAudienceSchedulesFromSpaceAndAudienceAlphaOutput");
 var listAudiences200Response_1 = require("./listAudiences200Response");
 var listAudiences200Response1_1 = require("./listAudiences200Response1");
 var listAudiencesAlphaOutput_1 = require("./listAudiencesAlphaOutput");
@@ -998,6 +1012,7 @@ var minimalUserV1_1 = require("./minimalUserV1");
 var mtuSnapshotV1_1 = require("./mtuSnapshotV1");
 var paginationInput_1 = require("./paginationInput");
 var paginationOutput_1 = require("./paginationOutput");
+var periodicConfig_1 = require("./periodicConfig");
 var permissionInputV1_1 = require("./permissionInputV1");
 var permissionResourceV1_1 = require("./permissionResourceV1");
 var permissionV1_1 = require("./permissionV1");
@@ -1089,6 +1104,7 @@ var sourceV1_1 = require("./sourceV1");
 var space_1 = require("./space");
 var spaceWarehouseSchemaOverride_1 = require("./spaceWarehouseSchemaOverride");
 var spaceWarehouseSelectiveSyncItemAlpha_1 = require("./spaceWarehouseSelectiveSyncItemAlpha");
+var specificDaysConfig_1 = require("./specificDaysConfig");
 var streamStatusV1_1 = require("./streamStatusV1");
 var suppressedInner_1 = require("./suppressedInner");
 var syncExtractPhase_1 = require("./syncExtractPhase");
@@ -1190,6 +1206,7 @@ var enumsMap = {
     'AddSourceToTrackingPlanV1Output.StatusEnum': addSourceToTrackingPlanV1Output_1.AddSourceToTrackingPlanV1Output.StatusEnum,
     'AudienceComputeCadence.TypeEnum': audienceComputeCadence_1.AudienceComputeCadence.TypeEnum,
     'AudienceDefinition.TypeEnum': audienceDefinition_1.AudienceDefinition.TypeEnum,
+    'AudienceSchedule.StrategyEnum': audienceSchedule_1.AudienceSchedule.StrategyEnum,
     'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum': audienceSummaryWithAudienceTypeAndLookback_1.AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
     'ComputedTraitsDefinition.TypeEnum': computedTraitsDefinition_1.ComputedTraitsDefinition.TypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
@@ -1312,6 +1329,7 @@ var typeMap = {
     AudienceDefinitionWithoutType: audienceDefinitionWithoutType_1.AudienceDefinitionWithoutType,
     AudienceOptions: audienceOptions_1.AudienceOptions,
     AudienceOptionsWithLookback: audienceOptionsWithLookback_1.AudienceOptionsWithLookback,
+    AudienceSchedule: audienceSchedule_1.AudienceSchedule,
     AudienceSummary: audienceSummary_1.AudienceSummary,
     AudienceSummaryWithAudienceTypeAndLookback: audienceSummaryWithAudienceTypeAndLookback_1.AudienceSummaryWithAudienceTypeAndLookback,
     AuditEventV1: auditEventV1_1.AuditEventV1,
@@ -1326,6 +1344,7 @@ var typeMap = {
     ComputedTraitSummary: computedTraitSummary_1.ComputedTraitSummary,
     ComputedTraitsDefinition: computedTraitsDefinition_1.ComputedTraitsDefinition,
     Config: config_1.Config,
+    Config1: config1_1.Config1,
     Contact: contact_1.Contact,
     CreateAudience200Response: createAudience200Response_1.CreateAudience200Response,
     CreateAudienceAlphaInput: createAudienceAlphaInput_1.CreateAudienceAlphaInput,
@@ -1488,6 +1507,8 @@ var typeMap = {
     GetAudience200Response1: getAudience200Response1_1.GetAudience200Response1,
     GetAudienceAlphaOutput: getAudienceAlphaOutput_1.GetAudienceAlphaOutput,
     GetAudienceBetaOutput: getAudienceBetaOutput_1.GetAudienceBetaOutput,
+    GetAudienceScheduleFromSpaceAndAudience200Response: getAudienceScheduleFromSpaceAndAudience200Response_1.GetAudienceScheduleFromSpaceAndAudience200Response,
+    GetAudienceScheduleFromSpaceAndAudienceAlphaOutput: getAudienceScheduleFromSpaceAndAudienceAlphaOutput_1.GetAudienceScheduleFromSpaceAndAudienceAlphaOutput,
     GetComputedTrait200Response: getComputedTrait200Response_1.GetComputedTrait200Response,
     GetComputedTraitAlphaOutput: getComputedTraitAlphaOutput_1.GetComputedTraitAlphaOutput,
     GetConnectionStateFromWarehouse200Response: getConnectionStateFromWarehouse200Response_1.GetConnectionStateFromWarehouse200Response,
@@ -1579,6 +1600,8 @@ var typeMap = {
     ListAudienceConsumersFromSpaceAndAudienceAlphaOutput: listAudienceConsumersFromSpaceAndAudienceAlphaOutput_1.ListAudienceConsumersFromSpaceAndAudienceAlphaOutput,
     ListAudienceConsumersSearchInput: listAudienceConsumersSearchInput_1.ListAudienceConsumersSearchInput,
     ListAudienceConsumersSortInput: listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput,
+    ListAudienceSchedulesFromSpaceAndAudience200Response: listAudienceSchedulesFromSpaceAndAudience200Response_1.ListAudienceSchedulesFromSpaceAndAudience200Response,
+    ListAudienceSchedulesFromSpaceAndAudienceAlphaOutput: listAudienceSchedulesFromSpaceAndAudienceAlphaOutput_1.ListAudienceSchedulesFromSpaceAndAudienceAlphaOutput,
     ListAudiences200Response: listAudiences200Response_1.ListAudiences200Response,
     ListAudiences200Response1: listAudiences200Response1_1.ListAudiences200Response1,
     ListAudiencesAlphaOutput: listAudiencesAlphaOutput_1.ListAudiencesAlphaOutput,
@@ -1685,6 +1708,7 @@ var typeMap = {
     MtuSnapshotV1: mtuSnapshotV1_1.MtuSnapshotV1,
     PaginationInput: paginationInput_1.PaginationInput,
     PaginationOutput: paginationOutput_1.PaginationOutput,
+    PeriodicConfig: periodicConfig_1.PeriodicConfig,
     PermissionInputV1: permissionInputV1_1.PermissionInputV1,
     PermissionResourceV1: permissionResourceV1_1.PermissionResourceV1,
     PermissionV1: permissionV1_1.PermissionV1,
@@ -1776,6 +1800,7 @@ var typeMap = {
     Space: space_1.Space,
     SpaceWarehouseSchemaOverride: spaceWarehouseSchemaOverride_1.SpaceWarehouseSchemaOverride,
     SpaceWarehouseSelectiveSyncItemAlpha: spaceWarehouseSelectiveSyncItemAlpha_1.SpaceWarehouseSelectiveSyncItemAlpha,
+    SpecificDaysConfig: specificDaysConfig_1.SpecificDaysConfig,
     StreamStatusV1: streamStatusV1_1.StreamStatusV1,
     SuppressedInner: suppressedInner_1.SuppressedInner,
     SyncExtractPhase: syncExtractPhase_1.SyncExtractPhase,

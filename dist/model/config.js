@@ -29,21 +29,6 @@ var Config = (function () {
             baseName: 'timezone',
             type: 'string',
         },
-        {
-            name: 'spec',
-            baseName: 'spec',
-            type: 'string',
-        },
-        {
-            name: 'jobId',
-            baseName: 'jobId',
-            type: 'string',
-        },
-        {
-            name: 'accountId',
-            baseName: 'accountId',
-            type: 'string',
-        },
     ];
     return Config;
 }());
