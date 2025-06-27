@@ -30,10 +30,6 @@ export * from './audienceDefinition';
 export * from './audienceDefinitionWithoutType';
 export * from './audienceOptions';
 export * from './audienceOptionsWithLookback';
-export * from './audiencePreview';
-export * from './audiencePreviewIdentifier';
-export * from './audiencePreviewResult';
-export * from './audienceSize';
 export * from './audienceSummary';
 export * from './audienceSummaryWithAudienceTypeAndLookback';
 export * from './auditEventV1';
@@ -52,10 +48,6 @@ export * from './contact';
 export * from './createAudience200Response';
 export * from './createAudienceAlphaInput';
 export * from './createAudienceAlphaOutput';
-export * from './createAudiencePreview200Response';
-export * from './createAudiencePreviewAlphaInput';
-export * from './createAudiencePreviewAlphaOutput';
-export * from './createAudiencePreviewOptions';
 export * from './createCloudSourceRegulation200Response';
 export * from './createCloudSourceRegulationV1Input';
 export * from './createCloudSourceRegulationV1Output';
@@ -214,8 +206,6 @@ export * from './getAudience200Response';
 export * from './getAudience200Response1';
 export * from './getAudienceAlphaOutput';
 export * from './getAudienceBetaOutput';
-export * from './getAudiencePreview200Response';
-export * from './getAudiencePreviewAlphaOutput';
 export * from './getComputedTrait200Response';
 export * from './getComputedTraitAlphaOutput';
 export * from './getConnectionStateFromWarehouse200Response';
@@ -416,6 +406,10 @@ export * from './paginationOutput';
 export * from './permissionInputV1';
 export * from './permissionResourceV1';
 export * from './permissionV1';
+export * from './preview';
+export * from './previewAudience200Response';
+export * from './previewAudienceInput';
+export * from './previewAudienceOutput';
 export * from './previewDestinationFilter200Response';
 export * from './previewDestinationFilterV1';
 export * from './previewDestinationFilterV1Input';
@@ -425,7 +419,6 @@ export * from './propertyRenameBeta';
 export * from './propertyRenameV1';
 export * from './propertyValueTransformationBeta';
 export * from './propertyValueTransformationV1';
-export * from './readAudiencePreviewOptions';
 export * from './regulation';
 export * from './regulationListEntryV1';
 export * from './removeAudienceFromSpace200Response';
@@ -630,10 +623,6 @@ import { AudienceDefinition } from './audienceDefinition';
 import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
 import { AudienceOptions } from './audienceOptions';
 import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
-import { AudiencePreview } from './audiencePreview';
-import { AudiencePreviewIdentifier } from './audiencePreviewIdentifier';
-import { AudiencePreviewResult } from './audiencePreviewResult';
-import { AudienceSize } from './audienceSize';
 import { AudienceSummary } from './audienceSummary';
 import { AudienceSummaryWithAudienceTypeAndLookback } from './audienceSummaryWithAudienceTypeAndLookback';
 import { AuditEventV1 } from './auditEventV1';
@@ -652,10 +641,6 @@ import { Contact } from './contact';
 import { CreateAudience200Response } from './createAudience200Response';
 import { CreateAudienceAlphaInput } from './createAudienceAlphaInput';
 import { CreateAudienceAlphaOutput } from './createAudienceAlphaOutput';
-import { CreateAudiencePreview200Response } from './createAudiencePreview200Response';
-import { CreateAudiencePreviewAlphaInput } from './createAudiencePreviewAlphaInput';
-import { CreateAudiencePreviewAlphaOutput } from './createAudiencePreviewAlphaOutput';
-import { CreateAudiencePreviewOptions } from './createAudiencePreviewOptions';
 import { CreateCloudSourceRegulation200Response } from './createCloudSourceRegulation200Response';
 import { CreateCloudSourceRegulationV1Input } from './createCloudSourceRegulationV1Input';
 import { CreateCloudSourceRegulationV1Output } from './createCloudSourceRegulationV1Output';
@@ -814,8 +799,6 @@ import { GetAudience200Response } from './getAudience200Response';
 import { GetAudience200Response1 } from './getAudience200Response1';
 import { GetAudienceAlphaOutput } from './getAudienceAlphaOutput';
 import { GetAudienceBetaOutput } from './getAudienceBetaOutput';
-import { GetAudiencePreview200Response } from './getAudiencePreview200Response';
-import { GetAudiencePreviewAlphaOutput } from './getAudiencePreviewAlphaOutput';
 import { GetComputedTrait200Response } from './getComputedTrait200Response';
 import { GetComputedTraitAlphaOutput } from './getComputedTraitAlphaOutput';
 import { GetConnectionStateFromWarehouse200Response } from './getConnectionStateFromWarehouse200Response';
@@ -1016,6 +999,10 @@ import { PaginationOutput } from './paginationOutput';
 import { PermissionInputV1 } from './permissionInputV1';
 import { PermissionResourceV1 } from './permissionResourceV1';
 import { PermissionV1 } from './permissionV1';
+import { Preview } from './preview';
+import { PreviewAudience200Response } from './previewAudience200Response';
+import { PreviewAudienceInput } from './previewAudienceInput';
+import { PreviewAudienceOutput } from './previewAudienceOutput';
 import { PreviewDestinationFilter200Response } from './previewDestinationFilter200Response';
 import { PreviewDestinationFilterV1 } from './previewDestinationFilterV1';
 import { PreviewDestinationFilterV1Input } from './previewDestinationFilterV1Input';
@@ -1025,7 +1012,6 @@ import { PropertyRenameBeta } from './propertyRenameBeta';
 import { PropertyRenameV1 } from './propertyRenameV1';
 import { PropertyValueTransformationBeta } from './propertyValueTransformationBeta';
 import { PropertyValueTransformationV1 } from './propertyValueTransformationV1';
-import { ReadAudiencePreviewOptions } from './readAudiencePreviewOptions';
 import { Regulation } from './regulation';
 import { RegulationListEntryV1 } from './regulationListEntryV1';
 import { RemoveAudienceFromSpace200Response } from './removeAudienceFromSpace200Response';
@@ -1207,14 +1193,9 @@ let enumsMap: { [index: string]: any } = {
         AddSourceToTrackingPlanV1Output.StatusEnum,
     'AudienceComputeCadence.TypeEnum': AudienceComputeCadence.TypeEnum,
     'AudienceDefinition.TypeEnum': AudienceDefinition.TypeEnum,
-    'AudiencePreview.AudienceTypeEnum': AudiencePreview.AudienceTypeEnum,
-    'AudiencePreview.StatusEnum': AudiencePreview.StatusEnum,
-    'AudienceSize.TypeEnum': AudienceSize.TypeEnum,
     'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum':
         AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
     'ComputedTraitsDefinition.TypeEnum': ComputedTraitsDefinition.TypeEnum,
-    'CreateAudiencePreviewAlphaInput.AudienceTypeEnum':
-        CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum':
         CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum':
@@ -1308,6 +1289,8 @@ let enumsMap: { [index: string]: any } = {
     'MessagesSubscriptionRequest.StatusEnum':
         MessagesSubscriptionRequest.StatusEnum,
     'PermissionResourceV1.TypeEnum': PermissionResourceV1.TypeEnum,
+    'PreviewAudienceInput.AudienceTypeEnum':
+        PreviewAudienceInput.AudienceTypeEnum,
     'Regulation.OverallStatusEnum': Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': RegulationListEntryV1.StatusEnum,
     'RegulationListEntryV1.RegulationTypeEnum':
@@ -1392,10 +1375,6 @@ let typeMap: { [index: string]: any } = {
     AudienceDefinitionWithoutType: AudienceDefinitionWithoutType,
     AudienceOptions: AudienceOptions,
     AudienceOptionsWithLookback: AudienceOptionsWithLookback,
-    AudiencePreview: AudiencePreview,
-    AudiencePreviewIdentifier: AudiencePreviewIdentifier,
-    AudiencePreviewResult: AudiencePreviewResult,
-    AudienceSize: AudienceSize,
     AudienceSummary: AudienceSummary,
     AudienceSummaryWithAudienceTypeAndLookback:
         AudienceSummaryWithAudienceTypeAndLookback,
@@ -1419,10 +1398,6 @@ let typeMap: { [index: string]: any } = {
     CreateAudience200Response: CreateAudience200Response,
     CreateAudienceAlphaInput: CreateAudienceAlphaInput,
     CreateAudienceAlphaOutput: CreateAudienceAlphaOutput,
-    CreateAudiencePreview200Response: CreateAudiencePreview200Response,
-    CreateAudiencePreviewAlphaInput: CreateAudiencePreviewAlphaInput,
-    CreateAudiencePreviewAlphaOutput: CreateAudiencePreviewAlphaOutput,
-    CreateAudiencePreviewOptions: CreateAudiencePreviewOptions,
     CreateCloudSourceRegulation200Response:
         CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: CreateCloudSourceRegulationV1Input,
@@ -1599,8 +1574,6 @@ let typeMap: { [index: string]: any } = {
     GetAudience200Response1: GetAudience200Response1,
     GetAudienceAlphaOutput: GetAudienceAlphaOutput,
     GetAudienceBetaOutput: GetAudienceBetaOutput,
-    GetAudiencePreview200Response: GetAudiencePreview200Response,
-    GetAudiencePreviewAlphaOutput: GetAudiencePreviewAlphaOutput,
     GetComputedTrait200Response: GetComputedTrait200Response,
     GetComputedTraitAlphaOutput: GetComputedTraitAlphaOutput,
     GetConnectionStateFromWarehouse200Response:
@@ -1846,6 +1819,10 @@ let typeMap: { [index: string]: any } = {
     PermissionInputV1: PermissionInputV1,
     PermissionResourceV1: PermissionResourceV1,
     PermissionV1: PermissionV1,
+    Preview: Preview,
+    PreviewAudience200Response: PreviewAudience200Response,
+    PreviewAudienceInput: PreviewAudienceInput,
+    PreviewAudienceOutput: PreviewAudienceOutput,
     PreviewDestinationFilter200Response: PreviewDestinationFilter200Response,
     PreviewDestinationFilterV1: PreviewDestinationFilterV1,
     PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,
@@ -1855,7 +1832,6 @@ let typeMap: { [index: string]: any } = {
     PropertyRenameV1: PropertyRenameV1,
     PropertyValueTransformationBeta: PropertyValueTransformationBeta,
     PropertyValueTransformationV1: PropertyValueTransformationV1,
-    ReadAudiencePreviewOptions: ReadAudiencePreviewOptions,
     Regulation: Regulation,
     RegulationListEntryV1: RegulationListEntryV1,
     RemoveAudienceFromSpace200Response: RemoveAudienceFromSpace200Response,

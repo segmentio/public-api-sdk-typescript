@@ -1,11 +1,9 @@
 import { AudienceComputeCadence } from './audienceComputeCadence';
 import { AudienceDefinition } from './audienceDefinition';
 import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
-import { AudienceSize } from './audienceSize';
 export declare class AudienceSummaryWithAudienceTypeAndLookback {
     'audienceType': AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum;
     'computeCadence': AudienceComputeCadence;
-    'size'?: AudienceSize;
     'options'?: AudienceOptionsWithLookback;
     'id': string;
     'spaceId': string;

@@ -1,6 +1,5 @@
-import { GetAudiencePreviewAlphaOutput } from './getAudiencePreviewAlphaOutput';
-export declare class GetAudiencePreview200Response {
-    'data'?: GetAudiencePreviewAlphaOutput;
+export declare class Preview {
+    'id': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
