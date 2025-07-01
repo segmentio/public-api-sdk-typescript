@@ -30,6 +30,11 @@ var AudienceSummaryWithAudienceTypeAndLookback = (function () {
             type: 'AudienceOptionsWithLookback',
         },
         {
+            name: 'schedules',
+            baseName: 'schedules',
+            type: 'Array<AudienceSchedule>',
+        },
+        {
             name: 'id',
             baseName: 'id',
             type: 'string',
