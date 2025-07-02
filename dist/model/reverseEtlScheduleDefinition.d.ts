@@ -1,7 +1,7 @@
-import { Config } from './config';
+import { Config1 } from './config1';
 export declare class ReverseEtlScheduleDefinition {
     'strategy': ReverseEtlScheduleDefinition.StrategyEnum;
-    'config'?: Config | null;
+    'config'?: Config1 | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
