@@ -33,7 +33,7 @@ export class EntityDetails {
      */
     'properties'?: { [key: string]: any };
     /**
-     * The related entities one level deeper into an entity branch.
+     * Related entities that are one level deeper will only be returned if those entities are referenced in the audience definition.
      */
     'entities'?: { [key: string]: any };
 
