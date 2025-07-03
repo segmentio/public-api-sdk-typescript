@@ -1,8 +1,12 @@
-import { EntityDetails } from './entityDetails';
-export declare class AudiencePreviewResult {
+export declare class EntityDetails {
     'id': string;
+    'idProperty': string;
+    'relationshipSlug': string;
+    'properties'?: {
+        [key: string]: any;
+    };
     'entities'?: {
-        [key: string]: Array<EntityDetails>;
+        [key: string]: any;
     };
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

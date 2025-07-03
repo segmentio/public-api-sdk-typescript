@@ -17,7 +17,7 @@ import { RequestFile } from './models';
  */
 export class PeriodicConfig {
     /**
-     * Go duration format string, only supporting units \"h\" (hours) and \"m\" (minutes).
+     * Go duration format string, only supporting units \"day\" (days), \"h\" (hours) and \"m\" (minutes).
      */
     'interval': string;
 

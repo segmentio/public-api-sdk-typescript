@@ -19,11 +19,11 @@ import { SpecificDaysConfig } from './specificDaysConfig';
  */
 export class Config {
     /**
-     * Go duration format string, only supporting units \"h\" (hours) and \"m\" (minutes).
+     * Go duration format string, only supporting units \"day\" (days), \"h\" (hours) and \"m\" (minutes).
      */
     'interval': string;
     /**
-     * Days of week for schedule (0=Saturday, 6=Sunday).
+     * Days of week for schedule (0=Sunday, 6=Saturday).
      */
     'days': Array<number>;
     /**

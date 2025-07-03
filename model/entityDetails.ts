@@ -11,19 +11,31 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
-import { CreateAudiencePreviewOptions } from './createAudiencePreviewOptions';
 
 /**
- * Input to create an audience preview.
+ * Entity details.
  */
-export class CreateAudiencePreviewAlphaInput {
-    'definition': AudienceDefinitionWithoutType;
+export class EntityDetails {
     /**
-     * Discriminator denoting the audience\'s product type.  Possible values: USERS, ACCOUNTS, LINKED.
+     * The entity primary key value.
      */
-    'audienceType': CreateAudiencePreviewAlphaInput.AudienceTypeEnum;
-    'options'?: CreateAudiencePreviewOptions;
+    'id': string;
+    /**
+     * The entity primary key column name.
+     */
+    'idProperty': string;
+    /**
+     * The entity relationship slug.
+     */
+    'relationshipSlug': string;
+    /**
+     * Entity properties.
+     */
+    'properties'?: { [key: string]: any };
+    /**
+     * The related entities one level deeper into an entity branch.
+     */
+    'entities'?: { [key: string]: any };
 
     static discriminator: string | undefined = undefined;
 
@@ -33,31 +45,33 @@ export class CreateAudiencePreviewAlphaInput {
         type: string;
     }> = [
         {
-            name: 'definition',
-            baseName: 'definition',
-            type: 'AudienceDefinitionWithoutType',
+            name: 'id',
+            baseName: 'id',
+            type: 'string',
         },
         {
-            name: 'audienceType',
-            baseName: 'audienceType',
-            type: 'CreateAudiencePreviewAlphaInput.AudienceTypeEnum',
+            name: 'idProperty',
+            baseName: 'idProperty',
+            type: 'string',
         },
         {
-            name: 'options',
-            baseName: 'options',
-            type: 'CreateAudiencePreviewOptions',
+            name: 'relationshipSlug',
+            baseName: 'relationshipSlug',
+            type: 'string',
+        },
+        {
+            name: 'properties',
+            baseName: 'properties',
+            type: '{ [key: string]: any; }',
+        },
+        {
+            name: 'entities',
+            baseName: 'entities',
+            type: '{ [key: string]: any; }',
         },
     ];
 
     static getAttributeTypeMap() {
-        return CreateAudiencePreviewAlphaInput.attributeTypeMap;
-    }
-}
-
-export namespace CreateAudiencePreviewAlphaInput {
-    export enum AudienceTypeEnum {
-        ACCOUNTS = <any>'ACCOUNTS',
-        LINKED = <any>'LINKED',
-        USERS = <any>'USERS',
+        return EntityDetails.attributeTypeMap;
     }
 }

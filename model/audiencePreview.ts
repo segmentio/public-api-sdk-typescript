@@ -101,6 +101,7 @@ export class AudiencePreview {
 export namespace AudiencePreview {
     export enum AudienceTypeEnum {
         ACCOUNTS = <any>'ACCOUNTS',
+        LINKED = <any>'LINKED',
         USERS = <any>'USERS',
     }
     export enum StatusEnum {

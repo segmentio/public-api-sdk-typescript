@@ -1,5 +1,5 @@
 import { EntityDetails } from './entityDetails';
-export declare class AudiencePreviewResult {
+export declare class AudiencePreviewProfileResult {
     'id': string;
     'entities'?: {
         [key: string]: Array<EntityDetails>;

@@ -399,7 +399,7 @@ export class AudiencesApi {
     public async getAudience(
         spaceId: string,
         id: string,
-        include?: string,
+        include?: 'schedules',
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -448,7 +448,7 @@ export class AudiencesApi {
         if (include !== undefined) {
             localVarQueryParameters['include'] = ObjectSerializer.serialize(
                 include,
-                'string'
+                "'schedules'"
             );
         }
 
@@ -1089,7 +1089,7 @@ export class AudiencesApi {
     public async listAudiences(
         spaceId: string,
         pagination?: ListAudiencesPaginationInput,
-        include?: string,
+        include?: 'schedules',
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -1136,7 +1136,7 @@ export class AudiencesApi {
         if (include !== undefined) {
             localVarQueryParameters['include'] = ObjectSerializer.serialize(
                 include,
-                'string'
+                "'schedules'"
             );
         }
 

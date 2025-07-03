@@ -17,7 +17,7 @@ import { RequestFile } from './models';
  */
 export class SpecificDaysConfig {
     /**
-     * Days of week for schedule (0=Saturday, 6=Sunday).
+     * Days of week for schedule (0=Sunday, 6=Saturday).
      */
     'days': Array<number>;
     /**

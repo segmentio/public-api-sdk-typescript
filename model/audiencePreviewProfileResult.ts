@@ -11,19 +11,20 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
-import { CreateAudiencePreviewOptions } from './createAudiencePreviewOptions';
+import { EntityDetails } from './entityDetails';
 
 /**
- * Input to create an audience preview.
+ * Result membership object for an audience preview with `audienceType: USERS` or `audienceType: LINKED`.
  */
-export class CreateAudiencePreviewAlphaInput {
-    'definition': AudienceDefinitionWithoutType;
+export class AudiencePreviewProfileResult {
     /**
-     * Discriminator denoting the audience\'s product type.  Possible values: USERS, ACCOUNTS, LINKED.
+     * Segment id.
      */
-    'audienceType': CreateAudiencePreviewAlphaInput.AudienceTypeEnum;
-    'options'?: CreateAudiencePreviewOptions;
+    'id': string;
+    /**
+     * Associated entities.
+     */
+    'entities'?: { [key: string]: Array<EntityDetails> };
 
     static discriminator: string | undefined = undefined;
 
@@ -33,31 +34,18 @@ export class CreateAudiencePreviewAlphaInput {
         type: string;
     }> = [
         {
-            name: 'definition',
-            baseName: 'definition',
-            type: 'AudienceDefinitionWithoutType',
+            name: 'id',
+            baseName: 'id',
+            type: 'string',
         },
         {
-            name: 'audienceType',
-            baseName: 'audienceType',
-            type: 'CreateAudiencePreviewAlphaInput.AudienceTypeEnum',
-        },
-        {
-            name: 'options',
-            baseName: 'options',
-            type: 'CreateAudiencePreviewOptions',
+            name: 'entities',
+            baseName: 'entities',
+            type: '{ [key: string]: Array<EntityDetails>; }',
         },
     ];
 
     static getAttributeTypeMap() {
-        return CreateAudiencePreviewAlphaInput.attributeTypeMap;
-    }
-}
-
-export namespace CreateAudiencePreviewAlphaInput {
-    export enum AudienceTypeEnum {
-        ACCOUNTS = <any>'ACCOUNTS',
-        LINKED = <any>'LINKED',
-        USERS = <any>'USERS',
+        return AudiencePreviewProfileResult.attributeTypeMap;
     }
 }

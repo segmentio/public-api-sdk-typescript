@@ -11,19 +11,15 @@
  */
 
 import { RequestFile } from './models';
-import { AudiencePreviewAccountResult } from './audiencePreviewAccountResult';
-import { AudiencePreviewProfileResult } from './audiencePreviewProfileResult';
-import { EntityDetails } from './entityDetails';
 
-export class AudiencePreviewResult {
+/**
+ * Result membership object for an audience preview with `audienceType: ACCOUNTS`.
+ */
+export class AudiencePreviewAccountResult {
     /**
-     * Segment id.
+     * Account id.
      */
     'id': string;
-    /**
-     * Associated entities.
-     */
-    'entities'?: { [key: string]: Array<EntityDetails> };
 
     static discriminator: string | undefined = undefined;
 
@@ -37,14 +33,9 @@ export class AudiencePreviewResult {
             baseName: 'id',
             type: 'string',
         },
-        {
-            name: 'entities',
-            baseName: 'entities',
-            type: '{ [key: string]: Array<EntityDetails>; }',
-        },
     ];
 
     static getAttributeTypeMap() {
-        return AudiencePreviewResult.attributeTypeMap;
+        return AudiencePreviewAccountResult.attributeTypeMap;
     }
 }
