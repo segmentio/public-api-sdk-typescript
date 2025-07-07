@@ -20,6 +20,11 @@ var AudienceSummaryWithAudienceTypeAndLookback = (function () {
             type: 'AudienceComputeCadence',
         },
         {
+            name: 'size',
+            baseName: 'size',
+            type: 'AudienceSize',
+        },
+        {
             name: 'options',
             baseName: 'options',
             type: 'AudienceOptionsWithLookback',

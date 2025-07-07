@@ -19,7 +19,6 @@ export declare class CreateAudiencePreviewAlphaInput {
 export declare namespace CreateAudiencePreviewAlphaInput {
     enum AudienceTypeEnum {
         ACCOUNTS,
-        LINKED,
         USERS
     }
 }

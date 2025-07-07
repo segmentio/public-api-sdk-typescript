@@ -25,6 +25,11 @@ var AudienceSchedule = (function () {
             type: 'Config',
         },
         {
+            name: 'enabled',
+            baseName: 'enabled',
+            type: 'boolean',
+        },
+        {
             name: 'nextExecution',
             baseName: 'nextExecution',
             type: 'string',

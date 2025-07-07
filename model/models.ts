@@ -31,9 +31,7 @@ export * from './audienceDefinitionWithoutType';
 export * from './audienceOptions';
 export * from './audienceOptionsWithLookback';
 export * from './audiencePreview';
-export * from './audiencePreviewAccountResult';
 export * from './audiencePreviewIdentifier';
-export * from './audiencePreviewProfileResult';
 export * from './audiencePreviewResult';
 export * from './audienceSchedule';
 export * from './audienceSize';
@@ -204,7 +202,6 @@ export * from './echo200Response1';
 export * from './echoAlphaOutput';
 export * from './echoV1Output';
 export * from './edgeFunctionsAlpha';
-export * from './entityDetails';
 export * from './eventSourceV1';
 export * from './fQLDefinedPropertyV1';
 export * from './filter';
@@ -642,9 +639,7 @@ import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
 import { AudienceOptions } from './audienceOptions';
 import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
 import { AudiencePreview } from './audiencePreview';
-import { AudiencePreviewAccountResult } from './audiencePreviewAccountResult';
 import { AudiencePreviewIdentifier } from './audiencePreviewIdentifier';
-import { AudiencePreviewProfileResult } from './audiencePreviewProfileResult';
 import { AudiencePreviewResult } from './audiencePreviewResult';
 import { AudienceSchedule } from './audienceSchedule';
 import { AudienceSize } from './audienceSize';
@@ -815,7 +810,6 @@ import { Echo200Response1 } from './echo200Response1';
 import { EchoAlphaOutput } from './echoAlphaOutput';
 import { EchoV1Output } from './echoV1Output';
 import { EdgeFunctionsAlpha } from './edgeFunctionsAlpha';
-import { EntityDetails } from './entityDetails';
 import { EventSourceV1 } from './eventSourceV1';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
 import { Filter } from './filter';
@@ -1416,9 +1410,7 @@ let typeMap: { [index: string]: any } = {
     AudienceOptions: AudienceOptions,
     AudienceOptionsWithLookback: AudienceOptionsWithLookback,
     AudiencePreview: AudiencePreview,
-    AudiencePreviewAccountResult: AudiencePreviewAccountResult,
     AudiencePreviewIdentifier: AudiencePreviewIdentifier,
-    AudiencePreviewProfileResult: AudiencePreviewProfileResult,
     AudiencePreviewResult: AudiencePreviewResult,
     AudienceSchedule: AudienceSchedule,
     AudienceSize: AudienceSize,
@@ -1608,7 +1600,6 @@ let typeMap: { [index: string]: any } = {
     EchoAlphaOutput: EchoAlphaOutput,
     EchoV1Output: EchoV1Output,
     EdgeFunctionsAlpha: EdgeFunctionsAlpha,
-    EntityDetails: EntityDetails,
     EventSourceV1: EventSourceV1,
     FQLDefinedPropertyV1: FQLDefinedPropertyV1,
     Filter: Filter,

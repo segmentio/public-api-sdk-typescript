@@ -14,11 +14,6 @@ var AudiencePreviewResult = (function () {
             baseName: 'id',
             type: 'string',
         },
-        {
-            name: 'entities',
-            baseName: 'entities',
-            type: '{ [key: string]: Array<EntityDetails>; }',
-        },
     ];
     return AudiencePreviewResult;
 }());
