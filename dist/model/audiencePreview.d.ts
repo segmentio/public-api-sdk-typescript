@@ -26,6 +26,7 @@ export declare class AudiencePreview {
 export declare namespace AudiencePreview {
     enum AudienceTypeEnum {
         ACCOUNTS,
+        LINKED,
         USERS
     }
     enum StatusEnum {
