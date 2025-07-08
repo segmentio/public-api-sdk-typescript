@@ -32,6 +32,7 @@ exports.CreateAudiencePreviewAlphaInput = CreateAudiencePreviewAlphaInput;
     var AudienceTypeEnum;
     (function (AudienceTypeEnum) {
         AudienceTypeEnum[AudienceTypeEnum["ACCOUNTS"] = 'ACCOUNTS'] = "ACCOUNTS";
+        AudienceTypeEnum[AudienceTypeEnum["LINKED"] = 'LINKED'] = "LINKED";
         AudienceTypeEnum[AudienceTypeEnum["USERS"] = 'USERS'] = "USERS";
     })(AudienceTypeEnum = CreateAudiencePreviewAlphaInput.AudienceTypeEnum || (CreateAudiencePreviewAlphaInput.AudienceTypeEnum = {}));
 })(CreateAudiencePreviewAlphaInput = exports.CreateAudiencePreviewAlphaInput || (exports.CreateAudiencePreviewAlphaInput = {}));

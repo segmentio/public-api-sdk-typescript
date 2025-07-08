@@ -46,7 +46,9 @@ __exportStar(require("./audienceDefinitionWithoutType"), exports);
 __exportStar(require("./audienceOptions"), exports);
 __exportStar(require("./audienceOptionsWithLookback"), exports);
 __exportStar(require("./audiencePreview"), exports);
+__exportStar(require("./audiencePreviewAccountResult"), exports);
 __exportStar(require("./audiencePreviewIdentifier"), exports);
+__exportStar(require("./audiencePreviewProfileResult"), exports);
 __exportStar(require("./audiencePreviewResult"), exports);
 __exportStar(require("./audienceSchedule"), exports);
 __exportStar(require("./audienceSize"), exports);
@@ -217,6 +219,7 @@ __exportStar(require("./echo200Response1"), exports);
 __exportStar(require("./echoAlphaOutput"), exports);
 __exportStar(require("./echoV1Output"), exports);
 __exportStar(require("./edgeFunctionsAlpha"), exports);
+__exportStar(require("./entityDetails"), exports);
 __exportStar(require("./eventSourceV1"), exports);
 __exportStar(require("./fQLDefinedPropertyV1"), exports);
 __exportStar(require("./filter"), exports);
@@ -641,7 +644,9 @@ var audienceDefinitionWithoutType_1 = require("./audienceDefinitionWithoutType")
 var audienceOptions_1 = require("./audienceOptions");
 var audienceOptionsWithLookback_1 = require("./audienceOptionsWithLookback");
 var audiencePreview_1 = require("./audiencePreview");
+var audiencePreviewAccountResult_1 = require("./audiencePreviewAccountResult");
 var audiencePreviewIdentifier_1 = require("./audiencePreviewIdentifier");
+var audiencePreviewProfileResult_1 = require("./audiencePreviewProfileResult");
 var audiencePreviewResult_1 = require("./audiencePreviewResult");
 var audienceSchedule_1 = require("./audienceSchedule");
 var audienceSize_1 = require("./audienceSize");
@@ -812,6 +817,7 @@ var echo200Response1_1 = require("./echo200Response1");
 var echoAlphaOutput_1 = require("./echoAlphaOutput");
 var echoV1Output_1 = require("./echoV1Output");
 var edgeFunctionsAlpha_1 = require("./edgeFunctionsAlpha");
+var entityDetails_1 = require("./entityDetails");
 var eventSourceV1_1 = require("./eventSourceV1");
 var fQLDefinedPropertyV1_1 = require("./fQLDefinedPropertyV1");
 var filter_1 = require("./filter");
@@ -1347,7 +1353,9 @@ var typeMap = {
     AudienceOptions: audienceOptions_1.AudienceOptions,
     AudienceOptionsWithLookback: audienceOptionsWithLookback_1.AudienceOptionsWithLookback,
     AudiencePreview: audiencePreview_1.AudiencePreview,
+    AudiencePreviewAccountResult: audiencePreviewAccountResult_1.AudiencePreviewAccountResult,
     AudiencePreviewIdentifier: audiencePreviewIdentifier_1.AudiencePreviewIdentifier,
+    AudiencePreviewProfileResult: audiencePreviewProfileResult_1.AudiencePreviewProfileResult,
     AudiencePreviewResult: audiencePreviewResult_1.AudiencePreviewResult,
     AudienceSchedule: audienceSchedule_1.AudienceSchedule,
     AudienceSize: audienceSize_1.AudienceSize,
@@ -1518,6 +1526,7 @@ var typeMap = {
     EchoAlphaOutput: echoAlphaOutput_1.EchoAlphaOutput,
     EchoV1Output: echoV1Output_1.EchoV1Output,
     EdgeFunctionsAlpha: edgeFunctionsAlpha_1.EdgeFunctionsAlpha,
+    EntityDetails: entityDetails_1.EntityDetails,
     EventSourceV1: eventSourceV1_1.EventSourceV1,
     FQLDefinedPropertyV1: fQLDefinedPropertyV1_1.FQLDefinedPropertyV1,
     Filter: filter_1.Filter,
