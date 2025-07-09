@@ -56,7 +56,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: CreateAudiencePreview200Response;
     }>;
-    getAudience(spaceId: string, id: string, include?: string, options?: {
+    getAudience(spaceId: string, id: string, include?: 'schedules', options?: {
         headers: {
             [name: string]: string;
         };
@@ -96,7 +96,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: ListAudienceSchedulesFromSpaceAndAudience200Response;
     }>;
-    listAudiences(spaceId: string, pagination?: ListAudiencesPaginationInput, include?: string, options?: {
+    listAudiences(spaceId: string, pagination?: ListAudiencesPaginationInput, include?: 'schedules', options?: {
         headers: {
             [name: string]: string;
         };

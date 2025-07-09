@@ -3,8 +3,7 @@ export declare class AudienceSchedule {
     'id': string;
     'strategy': AudienceSchedule.StrategyEnum;
     'config'?: Config | null;
-    'enabled': boolean;
-    'nextExecution': string;
+    'nextExecution'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

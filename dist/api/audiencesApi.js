@@ -321,7 +321,7 @@ var AudiencesApi = (function () {
                     throw new Error('Required parameter id was null or undefined when calling getAudience.');
                 }
                 if (include !== undefined) {
-                    localVarQueryParameters['include'] = models_1.ObjectSerializer.serialize(include, 'string');
+                    localVarQueryParameters['include'] = models_1.ObjectSerializer.serialize(include, "'schedules'");
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -781,7 +781,7 @@ var AudiencesApi = (function () {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'ListAudiencesPaginationInput');
                 }
                 if (include !== undefined) {
-                    localVarQueryParameters['include'] = models_1.ObjectSerializer.serialize(include, 'string');
+                    localVarQueryParameters['include'] = models_1.ObjectSerializer.serialize(include, "'schedules'");
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;

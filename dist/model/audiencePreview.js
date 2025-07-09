@@ -57,6 +57,7 @@ exports.AudiencePreview = AudiencePreview;
     var AudienceTypeEnum;
     (function (AudienceTypeEnum) {
         AudienceTypeEnum[AudienceTypeEnum["ACCOUNTS"] = 'ACCOUNTS'] = "ACCOUNTS";
+        AudienceTypeEnum[AudienceTypeEnum["LINKED"] = 'LINKED'] = "LINKED";
         AudienceTypeEnum[AudienceTypeEnum["USERS"] = 'USERS'] = "USERS";
     })(AudienceTypeEnum = AudiencePreview.AudienceTypeEnum || (AudiencePreview.AudienceTypeEnum = {}));
     var StatusEnum;
