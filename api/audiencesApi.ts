@@ -23,9 +23,9 @@ import { GetAudience200Response1 } from '../model/getAudience200Response1';
 import { GetAudiencePreview200Response } from '../model/getAudiencePreview200Response';
 import { GetAudienceScheduleFromSpaceAndAudience200Response } from '../model/getAudienceScheduleFromSpaceAndAudience200Response';
 import { ListAudienceConsumersFromSpaceAndAudience200Response } from '../model/listAudienceConsumersFromSpaceAndAudience200Response';
-import { ListAudienceConsumersSearchInput } from '../model/listAudienceConsumersSearchInput';
 import { ListAudienceConsumersSortInput } from '../model/listAudienceConsumersSortInput';
 import { ListAudienceSchedulesFromSpaceAndAudience200Response } from '../model/listAudienceSchedulesFromSpaceAndAudience200Response';
+import { ListAudienceSearchInput } from '../model/listAudienceSearchInput';
 import { ListAudiences200Response } from '../model/listAudiences200Response';
 import { ListAudiences200Response1 } from '../model/listAudiences200Response1';
 import { ListAudiencesPaginationInput } from '../model/listAudiencesPaginationInput';
@@ -809,7 +809,7 @@ export class AudiencesApi {
         spaceId: string,
         id: string,
         pagination?: PaginationInput,
-        search?: ListAudienceConsumersSearchInput,
+        search?: ListAudienceSearchInput,
         sort?: ListAudienceConsumersSortInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
@@ -865,7 +865,7 @@ export class AudiencesApi {
         if (search !== undefined) {
             localVarQueryParameters['search'] = ObjectSerializer.serialize(
                 search,
-                'ListAudienceConsumersSearchInput'
+                'ListAudienceSearchInput'
             );
         }
 
@@ -1083,11 +1083,13 @@ export class AudiencesApi {
      * Returns Audiences by spaceId. Supports including audience schedules via `?include=schedules`.  • This endpoint is in **Beta** testing.  Please submit any feedback by sending an email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Audience feature enabled. Please reach out to your customer success manager for more information.   The rate limit for this endpoint is 25 requests per minute, which is lower than the default due to access pattern restrictions. Once reached, this endpoint will respond with the 429 HTTP status code with headers indicating the limit parameters. See [Rate Limiting](/#tag/Rate-Limits) for more information.
      * @summary List Audiences
      * @param spaceId
+     * @param search Optional search criteria  This parameter exists in alpha.
      * @param pagination Information about the pagination of this response.  [See pagination](https://docs.segmentapis.com/tag/Pagination/#section/Pagination-parameters) for more info.  This parameter exists in alpha.
      * @param include Additional resource to include, support schedules only.  This parameter exists in alpha.
      */
     public async listAudiences(
         spaceId: string,
+        search?: ListAudienceSearchInput,
         pagination?: ListAudiencesPaginationInput,
         include?: 'schedules',
         options: { headers: { [name: string]: string } } = { headers: {} }
@@ -1123,6 +1125,13 @@ export class AudiencesApi {
         if (spaceId === null || spaceId === undefined) {
             throw new Error(
                 'Required parameter spaceId was null or undefined when calling listAudiences.'
+            );
+        }
+
+        if (search !== undefined) {
+            localVarQueryParameters['search'] = ObjectSerializer.serialize(
+                search,
+                'ListAudienceSearchInput'
             );
         }
 

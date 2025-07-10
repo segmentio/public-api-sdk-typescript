@@ -8,9 +8,9 @@ import { GetAudience200Response } from '../model/getAudience200Response';
 import { GetAudiencePreview200Response } from '../model/getAudiencePreview200Response';
 import { GetAudienceScheduleFromSpaceAndAudience200Response } from '../model/getAudienceScheduleFromSpaceAndAudience200Response';
 import { ListAudienceConsumersFromSpaceAndAudience200Response } from '../model/listAudienceConsumersFromSpaceAndAudience200Response';
-import { ListAudienceConsumersSearchInput } from '../model/listAudienceConsumersSearchInput';
 import { ListAudienceConsumersSortInput } from '../model/listAudienceConsumersSortInput';
 import { ListAudienceSchedulesFromSpaceAndAudience200Response } from '../model/listAudienceSchedulesFromSpaceAndAudience200Response';
+import { ListAudienceSearchInput } from '../model/listAudienceSearchInput';
 import { ListAudiences200Response } from '../model/listAudiences200Response';
 import { ListAudiencesPaginationInput } from '../model/listAudiencesPaginationInput';
 import { PaginationInput } from '../model/paginationInput';
@@ -80,7 +80,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: GetAudienceScheduleFromSpaceAndAudience200Response;
     }>;
-    listAudienceConsumersFromSpaceAndAudience(spaceId: string, id: string, pagination?: PaginationInput, search?: ListAudienceConsumersSearchInput, sort?: ListAudienceConsumersSortInput, options?: {
+    listAudienceConsumersFromSpaceAndAudience(spaceId: string, id: string, pagination?: PaginationInput, search?: ListAudienceSearchInput, sort?: ListAudienceConsumersSortInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -96,7 +96,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: ListAudienceSchedulesFromSpaceAndAudience200Response;
     }>;
-    listAudiences(spaceId: string, pagination?: ListAudiencesPaginationInput, include?: 'schedules', options?: {
+    listAudiences(spaceId: string, search?: ListAudienceSearchInput, pagination?: ListAudiencesPaginationInput, include?: 'schedules', options?: {
         headers: {
             [name: string]: string;
         };

@@ -15,11 +15,11 @@ import { RequestFile } from './models';
 /**
  * Search criteria input for list audience consumers.
  */
-export class ListAudienceConsumersSearchInput {
+export class ListAudienceSearchInput {
     /**
      * Field to filter by.
      */
-    'type': ListAudienceConsumersSearchInput.TypeEnum;
+    'type': ListAudienceSearchInput.TypeEnum;
     /**
      * Text to match the field value.
      */
@@ -35,7 +35,7 @@ export class ListAudienceConsumersSearchInput {
         {
             name: 'type',
             baseName: 'type',
-            type: 'ListAudienceConsumersSearchInput.TypeEnum',
+            type: 'ListAudienceSearchInput.TypeEnum',
         },
         {
             name: 'query',
@@ -45,13 +45,14 @@ export class ListAudienceConsumersSearchInput {
     ];
 
     static getAttributeTypeMap() {
-        return ListAudienceConsumersSearchInput.attributeTypeMap;
+        return ListAudienceSearchInput.attributeTypeMap;
     }
 }
 
-export namespace ListAudienceConsumersSearchInput {
+export namespace ListAudienceSearchInput {
     export enum TypeEnum {
         DEFINITION = <any>'DEFINITION',
+        KEY = <any>'KEY',
         NAME = <any>'NAME',
     }
 }

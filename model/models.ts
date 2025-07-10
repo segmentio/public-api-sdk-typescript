@@ -312,10 +312,10 @@ export * from './labelAlpha';
 export * from './labelV1';
 export * from './listAudienceConsumersFromSpaceAndAudience200Response';
 export * from './listAudienceConsumersFromSpaceAndAudienceAlphaOutput';
-export * from './listAudienceConsumersSearchInput';
 export * from './listAudienceConsumersSortInput';
 export * from './listAudienceSchedulesFromSpaceAndAudience200Response';
 export * from './listAudienceSchedulesFromSpaceAndAudienceAlphaOutput';
+export * from './listAudienceSearchInput';
 export * from './listAudiences200Response';
 export * from './listAudiences200Response1';
 export * from './listAudiencesAlphaOutput';
@@ -923,10 +923,10 @@ import { LabelAlpha } from './labelAlpha';
 import { LabelV1 } from './labelV1';
 import { ListAudienceConsumersFromSpaceAndAudience200Response } from './listAudienceConsumersFromSpaceAndAudience200Response';
 import { ListAudienceConsumersFromSpaceAndAudienceAlphaOutput } from './listAudienceConsumersFromSpaceAndAudienceAlphaOutput';
-import { ListAudienceConsumersSearchInput } from './listAudienceConsumersSearchInput';
 import { ListAudienceConsumersSortInput } from './listAudienceConsumersSortInput';
 import { ListAudienceSchedulesFromSpaceAndAudience200Response } from './listAudienceSchedulesFromSpaceAndAudience200Response';
 import { ListAudienceSchedulesFromSpaceAndAudienceAlphaOutput } from './listAudienceSchedulesFromSpaceAndAudienceAlphaOutput';
+import { ListAudienceSearchInput } from './listAudienceSearchInput';
 import { ListAudiences200Response } from './listAudiences200Response';
 import { ListAudiences200Response1 } from './listAudiences200Response1';
 import { ListAudiencesAlphaOutput } from './listAudiencesAlphaOutput';
@@ -1315,12 +1315,11 @@ let enumsMap: { [index: string]: any } = {
         HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum':
         IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
-    'ListAudienceConsumersSearchInput.TypeEnum':
-        ListAudienceConsumersSearchInput.TypeEnum,
     'ListAudienceConsumersSortInput.FieldEnum':
         ListAudienceConsumersSortInput.FieldEnum,
     'ListAudienceConsumersSortInput.DirectionEnum':
         ListAudienceConsumersSortInput.DirectionEnum,
+    'ListAudienceSearchInput.TypeEnum': ListAudienceSearchInput.TypeEnum,
     'ListFunctionItemV1.ResourceTypeEnum': ListFunctionItemV1.ResourceTypeEnum,
     'MessageSubscriptionResponse.TypeEnum':
         MessageSubscriptionResponse.TypeEnum,
@@ -1738,12 +1737,12 @@ let typeMap: { [index: string]: any } = {
         ListAudienceConsumersFromSpaceAndAudience200Response,
     ListAudienceConsumersFromSpaceAndAudienceAlphaOutput:
         ListAudienceConsumersFromSpaceAndAudienceAlphaOutput,
-    ListAudienceConsumersSearchInput: ListAudienceConsumersSearchInput,
     ListAudienceConsumersSortInput: ListAudienceConsumersSortInput,
     ListAudienceSchedulesFromSpaceAndAudience200Response:
         ListAudienceSchedulesFromSpaceAndAudience200Response,
     ListAudienceSchedulesFromSpaceAndAudienceAlphaOutput:
         ListAudienceSchedulesFromSpaceAndAudienceAlphaOutput,
+    ListAudienceSearchInput: ListAudienceSearchInput,
     ListAudiences200Response: ListAudiences200Response,
     ListAudiences200Response1: ListAudiences200Response1,
     ListAudiencesAlphaOutput: ListAudiencesAlphaOutput,
