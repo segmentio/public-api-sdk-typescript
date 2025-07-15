@@ -1,5 +1,5 @@
-export declare class ListAudienceConsumersSearchInput {
-    'type': ListAudienceConsumersSearchInput.TypeEnum;
+export declare class ListAudienceSearchInput {
+    'type': ListAudienceSearchInput.TypeEnum;
     'query': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
@@ -13,9 +13,10 @@ export declare class ListAudienceConsumersSearchInput {
         type: string;
     }[];
 }
-export declare namespace ListAudienceConsumersSearchInput {
+export declare namespace ListAudienceSearchInput {
     enum TypeEnum {
         DEFINITION,
+        KEY,
         NAME
     }
 }

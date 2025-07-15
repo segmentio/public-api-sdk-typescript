@@ -327,10 +327,10 @@ __exportStar(require("./labelAlpha"), exports);
 __exportStar(require("./labelV1"), exports);
 __exportStar(require("./listAudienceConsumersFromSpaceAndAudience200Response"), exports);
 __exportStar(require("./listAudienceConsumersFromSpaceAndAudienceAlphaOutput"), exports);
-__exportStar(require("./listAudienceConsumersSearchInput"), exports);
 __exportStar(require("./listAudienceConsumersSortInput"), exports);
 __exportStar(require("./listAudienceSchedulesFromSpaceAndAudience200Response"), exports);
 __exportStar(require("./listAudienceSchedulesFromSpaceAndAudienceAlphaOutput"), exports);
+__exportStar(require("./listAudienceSearchInput"), exports);
 __exportStar(require("./listAudiences200Response"), exports);
 __exportStar(require("./listAudiences200Response1"), exports);
 __exportStar(require("./listAudiencesAlphaOutput"), exports);
@@ -925,10 +925,10 @@ var labelAlpha_1 = require("./labelAlpha");
 var labelV1_1 = require("./labelV1");
 var listAudienceConsumersFromSpaceAndAudience200Response_1 = require("./listAudienceConsumersFromSpaceAndAudience200Response");
 var listAudienceConsumersFromSpaceAndAudienceAlphaOutput_1 = require("./listAudienceConsumersFromSpaceAndAudienceAlphaOutput");
-var listAudienceConsumersSearchInput_1 = require("./listAudienceConsumersSearchInput");
 var listAudienceConsumersSortInput_1 = require("./listAudienceConsumersSortInput");
 var listAudienceSchedulesFromSpaceAndAudience200Response_1 = require("./listAudienceSchedulesFromSpaceAndAudience200Response");
 var listAudienceSchedulesFromSpaceAndAudienceAlphaOutput_1 = require("./listAudienceSchedulesFromSpaceAndAudienceAlphaOutput");
+var listAudienceSearchInput_1 = require("./listAudienceSearchInput");
 var listAudiences200Response_1 = require("./listAudiences200Response");
 var listAudiences200Response1_1 = require("./listAudiences200Response1");
 var listAudiencesAlphaOutput_1 = require("./listAudiencesAlphaOutput");
@@ -1282,9 +1282,9 @@ var enumsMap = {
     'GroupSubscriptionStatusResponse.StatusEnum': groupSubscriptionStatusResponse_1.GroupSubscriptionStatusResponse.StatusEnum,
     'HashPropertiesConfiguration.EncodingEnum': hashPropertiesConfiguration_1.HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum': identifySourceSettingsV1_1.IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
-    'ListAudienceConsumersSearchInput.TypeEnum': listAudienceConsumersSearchInput_1.ListAudienceConsumersSearchInput.TypeEnum,
     'ListAudienceConsumersSortInput.FieldEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.FieldEnum,
     'ListAudienceConsumersSortInput.DirectionEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.DirectionEnum,
+    'ListAudienceSearchInput.TypeEnum': listAudienceSearchInput_1.ListAudienceSearchInput.TypeEnum,
     'ListFunctionItemV1.ResourceTypeEnum': listFunctionItemV1_1.ListFunctionItemV1.ResourceTypeEnum,
     'MessageSubscriptionResponse.TypeEnum': messageSubscriptionResponse_1.MessageSubscriptionResponse.TypeEnum,
     'MessageSubscriptionResponse.StatusEnum': messageSubscriptionResponse_1.MessageSubscriptionResponse.StatusEnum,
@@ -1634,10 +1634,10 @@ var typeMap = {
     LabelV1: labelV1_1.LabelV1,
     ListAudienceConsumersFromSpaceAndAudience200Response: listAudienceConsumersFromSpaceAndAudience200Response_1.ListAudienceConsumersFromSpaceAndAudience200Response,
     ListAudienceConsumersFromSpaceAndAudienceAlphaOutput: listAudienceConsumersFromSpaceAndAudienceAlphaOutput_1.ListAudienceConsumersFromSpaceAndAudienceAlphaOutput,
-    ListAudienceConsumersSearchInput: listAudienceConsumersSearchInput_1.ListAudienceConsumersSearchInput,
     ListAudienceConsumersSortInput: listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput,
     ListAudienceSchedulesFromSpaceAndAudience200Response: listAudienceSchedulesFromSpaceAndAudience200Response_1.ListAudienceSchedulesFromSpaceAndAudience200Response,
     ListAudienceSchedulesFromSpaceAndAudienceAlphaOutput: listAudienceSchedulesFromSpaceAndAudienceAlphaOutput_1.ListAudienceSchedulesFromSpaceAndAudienceAlphaOutput,
+    ListAudienceSearchInput: listAudienceSearchInput_1.ListAudienceSearchInput,
     ListAudiences200Response: listAudiences200Response_1.ListAudiences200Response,
     ListAudiences200Response1: listAudiences200Response1_1.ListAudiences200Response1,
     ListAudiencesAlphaOutput: listAudiencesAlphaOutput_1.ListAudiencesAlphaOutput,

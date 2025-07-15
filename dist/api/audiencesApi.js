@@ -598,7 +598,7 @@ var AudiencesApi = (function () {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
                 if (search !== undefined) {
-                    localVarQueryParameters['search'] = models_1.ObjectSerializer.serialize(search, 'ListAudienceConsumersSearchInput');
+                    localVarQueryParameters['search'] = models_1.ObjectSerializer.serialize(search, 'ListAudienceSearchInput');
                 }
                 if (sort !== undefined) {
                     localVarQueryParameters['sort'] = models_1.ObjectSerializer.serialize(sort, 'ListAudienceConsumersSortInput');
@@ -752,7 +752,7 @@ var AudiencesApi = (function () {
             });
         });
     };
-    AudiencesApi.prototype.listAudiences = function (spaceId, pagination, include, options) {
+    AudiencesApi.prototype.listAudiences = function (spaceId, search, pagination, include, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_8, _i, _a, interceptor;
@@ -776,6 +776,9 @@ var AudiencesApi = (function () {
                 localVarFormParams = {};
                 if (spaceId === null || spaceId === undefined) {
                     throw new Error('Required parameter spaceId was null or undefined when calling listAudiences.');
+                }
+                if (search !== undefined) {
+                    localVarQueryParameters['search'] = models_1.ObjectSerializer.serialize(search, 'ListAudienceSearchInput');
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'ListAudiencesPaginationInput');
