@@ -17,8 +17,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.VoidAuth = exports.OAuth = exports.ApiKeyAuth = exports.HttpBearerAuth = exports.HttpBasicAuth = exports.ObjectSerializer = void 0;
 __exportStar(require("./aPICallSnapshotV1"), exports);
 __exportStar(require("./accessPermissionV1"), exports);
+__exportStar(require("./activationSummaryOutput"), exports);
+__exportStar(require("./addActivationToAudience200Response"), exports);
+__exportStar(require("./addActivationToAudienceAlphaInput"), exports);
+__exportStar(require("./addActivationToAudienceAlphaOutput"), exports);
 __exportStar(require("./addConnectionFromSourceToWarehouse201Response"), exports);
 __exportStar(require("./addConnectionFromSourceToWarehouseV1Output"), exports);
+__exportStar(require("./addDestinationToAudience200Response"), exports);
+__exportStar(require("./addDestinationToAudienceAlphaInput"), exports);
+__exportStar(require("./addDestinationToAudienceAlphaOutput"), exports);
 __exportStar(require("./addLabelsToSource200Response"), exports);
 __exportStar(require("./addLabelsToSource200Response1"), exports);
 __exportStar(require("./addLabelsToSourceAlphaInput"), exports);
@@ -67,6 +74,7 @@ __exportStar(require("./computedTraitSummary"), exports);
 __exportStar(require("./computedTraitsDefinition"), exports);
 __exportStar(require("./config"), exports);
 __exportStar(require("./config1"), exports);
+__exportStar(require("./connection"), exports);
 __exportStar(require("./contact"), exports);
 __exportStar(require("./createAudience200Response"), exports);
 __exportStar(require("./createAudienceAlphaInput"), exports);
@@ -157,6 +165,7 @@ __exportStar(require("./createWorkspaceRegulationV1Output"), exports);
 __exportStar(require("./createWriteKeyForSource200Response"), exports);
 __exportStar(require("./createWriteKeyForSourceAlphaOutput"), exports);
 __exportStar(require("./dbtModelSyncTrigger"), exports);
+__exportStar(require("./deleteActivationAlphaOutput"), exports);
 __exportStar(require("./deleteDestination200Response"), exports);
 __exportStar(require("./deleteDestinationV1Output"), exports);
 __exportStar(require("./deleteFilterById200Response"), exports);
@@ -199,6 +208,7 @@ __exportStar(require("./deliveryOverviewSourceFilterBy"), exports);
 __exportStar(require("./deliveryOverviewSuccessfullyReceivedFilterBy"), exports);
 __exportStar(require("./destinationFilterActionV1"), exports);
 __exportStar(require("./destinationFilterV1"), exports);
+__exportStar(require("./destinationInput"), exports);
 __exportStar(require("./destinationMetadataActionFieldV1"), exports);
 __exportStar(require("./destinationMetadataActionV1"), exports);
 __exportStar(require("./destinationMetadataComponentV1"), exports);
@@ -228,6 +238,8 @@ __exportStar(require("./functionSettingV1"), exports);
 __exportStar(require("./functionV1"), exports);
 __exportStar(require("./generateUploadURLForEdgeFunctions200Response"), exports);
 __exportStar(require("./generateUploadURLForEdgeFunctionsAlphaOutput"), exports);
+__exportStar(require("./getActivationFromAudience200Response"), exports);
+__exportStar(require("./getActivationFromAudienceOutput"), exports);
 __exportStar(require("./getAdvancedSyncScheduleFromWarehouse200Response"), exports);
 __exportStar(require("./getAdvancedSyncScheduleFromWarehouseV1Output"), exports);
 __exportStar(require("./getAudience200Response"), exports);
@@ -325,6 +337,9 @@ __exportStar(require("./invitePermissionV1"), exports);
 __exportStar(require("./inviteV1"), exports);
 __exportStar(require("./labelAlpha"), exports);
 __exportStar(require("./labelV1"), exports);
+__exportStar(require("./listActivationsAlphaOutput"), exports);
+__exportStar(require("./listActivationsFromAudience200Response"), exports);
+__exportStar(require("./listActivationsFromAudienceOutput"), exports);
 __exportStar(require("./listAudienceConsumersFromSpaceAndAudience200Response"), exports);
 __exportStar(require("./listAudienceConsumersFromSpaceAndAudienceAlphaOutput"), exports);
 __exportStar(require("./listAudienceConsumersSortInput"), exports);
@@ -453,6 +468,8 @@ __exportStar(require("./propertyValueTransformationV1"), exports);
 __exportStar(require("./readAudiencePreviewOptions"), exports);
 __exportStar(require("./regulation"), exports);
 __exportStar(require("./regulationListEntryV1"), exports);
+__exportStar(require("./removeActivationFromAudience200Response"), exports);
+__exportStar(require("./removeActivationFromAudienceOutput"), exports);
 __exportStar(require("./removeAudienceFromSpace200Response"), exports);
 __exportStar(require("./removeAudienceFromSpaceAlphaOutput"), exports);
 __exportStar(require("./removeComputedTraitFromSpace200Response"), exports);
@@ -539,6 +556,9 @@ __exportStar(require("./traitDefinition"), exports);
 __exportStar(require("./traitOptions"), exports);
 __exportStar(require("./transformationBeta"), exports);
 __exportStar(require("./transformationV1"), exports);
+__exportStar(require("./updateActivationForAudience200Response"), exports);
+__exportStar(require("./updateActivationForAudienceAlphaInput"), exports);
+__exportStar(require("./updateActivationForAudienceOutput"), exports);
 __exportStar(require("./updateAudienceForSpace200Response"), exports);
 __exportStar(require("./updateAudienceForSpaceAlphaInput"), exports);
 __exportStar(require("./updateAudienceForSpaceAlphaOutput"), exports);
@@ -615,8 +635,15 @@ __exportStar(require("./warehouseV1"), exports);
 __exportStar(require("./workspaceV1"), exports);
 var aPICallSnapshotV1_1 = require("./aPICallSnapshotV1");
 var accessPermissionV1_1 = require("./accessPermissionV1");
+var activationSummaryOutput_1 = require("./activationSummaryOutput");
+var addActivationToAudience200Response_1 = require("./addActivationToAudience200Response");
+var addActivationToAudienceAlphaInput_1 = require("./addActivationToAudienceAlphaInput");
+var addActivationToAudienceAlphaOutput_1 = require("./addActivationToAudienceAlphaOutput");
 var addConnectionFromSourceToWarehouse201Response_1 = require("./addConnectionFromSourceToWarehouse201Response");
 var addConnectionFromSourceToWarehouseV1Output_1 = require("./addConnectionFromSourceToWarehouseV1Output");
+var addDestinationToAudience200Response_1 = require("./addDestinationToAudience200Response");
+var addDestinationToAudienceAlphaInput_1 = require("./addDestinationToAudienceAlphaInput");
+var addDestinationToAudienceAlphaOutput_1 = require("./addDestinationToAudienceAlphaOutput");
 var addLabelsToSource200Response_1 = require("./addLabelsToSource200Response");
 var addLabelsToSource200Response1_1 = require("./addLabelsToSource200Response1");
 var addLabelsToSourceAlphaInput_1 = require("./addLabelsToSourceAlphaInput");
@@ -665,6 +692,7 @@ var computedTraitSummary_1 = require("./computedTraitSummary");
 var computedTraitsDefinition_1 = require("./computedTraitsDefinition");
 var config_1 = require("./config");
 var config1_1 = require("./config1");
+var connection_1 = require("./connection");
 var contact_1 = require("./contact");
 var createAudience200Response_1 = require("./createAudience200Response");
 var createAudienceAlphaInput_1 = require("./createAudienceAlphaInput");
@@ -755,6 +783,7 @@ var createWorkspaceRegulationV1Output_1 = require("./createWorkspaceRegulationV1
 var createWriteKeyForSource200Response_1 = require("./createWriteKeyForSource200Response");
 var createWriteKeyForSourceAlphaOutput_1 = require("./createWriteKeyForSourceAlphaOutput");
 var dbtModelSyncTrigger_1 = require("./dbtModelSyncTrigger");
+var deleteActivationAlphaOutput_1 = require("./deleteActivationAlphaOutput");
 var deleteDestination200Response_1 = require("./deleteDestination200Response");
 var deleteDestinationV1Output_1 = require("./deleteDestinationV1Output");
 var deleteFilterById200Response_1 = require("./deleteFilterById200Response");
@@ -797,6 +826,7 @@ var deliveryOverviewSourceFilterBy_1 = require("./deliveryOverviewSourceFilterBy
 var deliveryOverviewSuccessfullyReceivedFilterBy_1 = require("./deliveryOverviewSuccessfullyReceivedFilterBy");
 var destinationFilterActionV1_1 = require("./destinationFilterActionV1");
 var destinationFilterV1_1 = require("./destinationFilterV1");
+var destinationInput_1 = require("./destinationInput");
 var destinationMetadataActionFieldV1_1 = require("./destinationMetadataActionFieldV1");
 var destinationMetadataActionV1_1 = require("./destinationMetadataActionV1");
 var destinationMetadataComponentV1_1 = require("./destinationMetadataComponentV1");
@@ -826,6 +856,8 @@ var functionSettingV1_1 = require("./functionSettingV1");
 var functionV1_1 = require("./functionV1");
 var generateUploadURLForEdgeFunctions200Response_1 = require("./generateUploadURLForEdgeFunctions200Response");
 var generateUploadURLForEdgeFunctionsAlphaOutput_1 = require("./generateUploadURLForEdgeFunctionsAlphaOutput");
+var getActivationFromAudience200Response_1 = require("./getActivationFromAudience200Response");
+var getActivationFromAudienceOutput_1 = require("./getActivationFromAudienceOutput");
 var getAdvancedSyncScheduleFromWarehouse200Response_1 = require("./getAdvancedSyncScheduleFromWarehouse200Response");
 var getAdvancedSyncScheduleFromWarehouseV1Output_1 = require("./getAdvancedSyncScheduleFromWarehouseV1Output");
 var getAudience200Response_1 = require("./getAudience200Response");
@@ -923,6 +955,9 @@ var invitePermissionV1_1 = require("./invitePermissionV1");
 var inviteV1_1 = require("./inviteV1");
 var labelAlpha_1 = require("./labelAlpha");
 var labelV1_1 = require("./labelV1");
+var listActivationsAlphaOutput_1 = require("./listActivationsAlphaOutput");
+var listActivationsFromAudience200Response_1 = require("./listActivationsFromAudience200Response");
+var listActivationsFromAudienceOutput_1 = require("./listActivationsFromAudienceOutput");
 var listAudienceConsumersFromSpaceAndAudience200Response_1 = require("./listAudienceConsumersFromSpaceAndAudience200Response");
 var listAudienceConsumersFromSpaceAndAudienceAlphaOutput_1 = require("./listAudienceConsumersFromSpaceAndAudienceAlphaOutput");
 var listAudienceConsumersSortInput_1 = require("./listAudienceConsumersSortInput");
@@ -1051,6 +1086,8 @@ var propertyValueTransformationV1_1 = require("./propertyValueTransformationV1")
 var readAudiencePreviewOptions_1 = require("./readAudiencePreviewOptions");
 var regulation_1 = require("./regulation");
 var regulationListEntryV1_1 = require("./regulationListEntryV1");
+var removeActivationFromAudience200Response_1 = require("./removeActivationFromAudience200Response");
+var removeActivationFromAudienceOutput_1 = require("./removeActivationFromAudienceOutput");
 var removeAudienceFromSpace200Response_1 = require("./removeAudienceFromSpace200Response");
 var removeAudienceFromSpaceAlphaOutput_1 = require("./removeAudienceFromSpaceAlphaOutput");
 var removeComputedTraitFromSpace200Response_1 = require("./removeComputedTraitFromSpace200Response");
@@ -1137,6 +1174,9 @@ var traitDefinition_1 = require("./traitDefinition");
 var traitOptions_1 = require("./traitOptions");
 var transformationBeta_1 = require("./transformationBeta");
 var transformationV1_1 = require("./transformationV1");
+var updateActivationForAudience200Response_1 = require("./updateActivationForAudience200Response");
+var updateActivationForAudienceAlphaInput_1 = require("./updateActivationForAudienceAlphaInput");
+var updateActivationForAudienceOutput_1 = require("./updateActivationForAudienceOutput");
 var updateAudienceForSpace200Response_1 = require("./updateAudienceForSpace200Response");
 var updateAudienceForSpaceAlphaInput_1 = require("./updateAudienceForSpaceAlphaInput");
 var updateAudienceForSpaceAlphaOutput_1 = require("./updateAudienceForSpaceAlphaOutput");
@@ -1324,8 +1364,15 @@ var enumsMap = {
 var typeMap = {
     APICallSnapshotV1: aPICallSnapshotV1_1.APICallSnapshotV1,
     AccessPermissionV1: accessPermissionV1_1.AccessPermissionV1,
+    ActivationSummaryOutput: activationSummaryOutput_1.ActivationSummaryOutput,
+    AddActivationToAudience200Response: addActivationToAudience200Response_1.AddActivationToAudience200Response,
+    AddActivationToAudienceAlphaInput: addActivationToAudienceAlphaInput_1.AddActivationToAudienceAlphaInput,
+    AddActivationToAudienceAlphaOutput: addActivationToAudienceAlphaOutput_1.AddActivationToAudienceAlphaOutput,
     AddConnectionFromSourceToWarehouse201Response: addConnectionFromSourceToWarehouse201Response_1.AddConnectionFromSourceToWarehouse201Response,
     AddConnectionFromSourceToWarehouseV1Output: addConnectionFromSourceToWarehouseV1Output_1.AddConnectionFromSourceToWarehouseV1Output,
+    AddDestinationToAudience200Response: addDestinationToAudience200Response_1.AddDestinationToAudience200Response,
+    AddDestinationToAudienceAlphaInput: addDestinationToAudienceAlphaInput_1.AddDestinationToAudienceAlphaInput,
+    AddDestinationToAudienceAlphaOutput: addDestinationToAudienceAlphaOutput_1.AddDestinationToAudienceAlphaOutput,
     AddLabelsToSource200Response: addLabelsToSource200Response_1.AddLabelsToSource200Response,
     AddLabelsToSource200Response1: addLabelsToSource200Response1_1.AddLabelsToSource200Response1,
     AddLabelsToSourceAlphaInput: addLabelsToSourceAlphaInput_1.AddLabelsToSourceAlphaInput,
@@ -1374,6 +1421,7 @@ var typeMap = {
     ComputedTraitsDefinition: computedTraitsDefinition_1.ComputedTraitsDefinition,
     Config: config_1.Config,
     Config1: config1_1.Config1,
+    Connection: connection_1.Connection,
     Contact: contact_1.Contact,
     CreateAudience200Response: createAudience200Response_1.CreateAudience200Response,
     CreateAudienceAlphaInput: createAudienceAlphaInput_1.CreateAudienceAlphaInput,
@@ -1464,6 +1512,7 @@ var typeMap = {
     CreateWriteKeyForSource200Response: createWriteKeyForSource200Response_1.CreateWriteKeyForSource200Response,
     CreateWriteKeyForSourceAlphaOutput: createWriteKeyForSourceAlphaOutput_1.CreateWriteKeyForSourceAlphaOutput,
     DbtModelSyncTrigger: dbtModelSyncTrigger_1.DbtModelSyncTrigger,
+    DeleteActivationAlphaOutput: deleteActivationAlphaOutput_1.DeleteActivationAlphaOutput,
     DeleteDestination200Response: deleteDestination200Response_1.DeleteDestination200Response,
     DeleteDestinationV1Output: deleteDestinationV1Output_1.DeleteDestinationV1Output,
     DeleteFilterById200Response: deleteFilterById200Response_1.DeleteFilterById200Response,
@@ -1506,6 +1555,7 @@ var typeMap = {
     DeliveryOverviewSuccessfullyReceivedFilterBy: deliveryOverviewSuccessfullyReceivedFilterBy_1.DeliveryOverviewSuccessfullyReceivedFilterBy,
     DestinationFilterActionV1: destinationFilterActionV1_1.DestinationFilterActionV1,
     DestinationFilterV1: destinationFilterV1_1.DestinationFilterV1,
+    DestinationInput: destinationInput_1.DestinationInput,
     DestinationMetadataActionFieldV1: destinationMetadataActionFieldV1_1.DestinationMetadataActionFieldV1,
     DestinationMetadataActionV1: destinationMetadataActionV1_1.DestinationMetadataActionV1,
     DestinationMetadataComponentV1: destinationMetadataComponentV1_1.DestinationMetadataComponentV1,
@@ -1535,6 +1585,8 @@ var typeMap = {
     FunctionV1: functionV1_1.FunctionV1,
     GenerateUploadURLForEdgeFunctions200Response: generateUploadURLForEdgeFunctions200Response_1.GenerateUploadURLForEdgeFunctions200Response,
     GenerateUploadURLForEdgeFunctionsAlphaOutput: generateUploadURLForEdgeFunctionsAlphaOutput_1.GenerateUploadURLForEdgeFunctionsAlphaOutput,
+    GetActivationFromAudience200Response: getActivationFromAudience200Response_1.GetActivationFromAudience200Response,
+    GetActivationFromAudienceOutput: getActivationFromAudienceOutput_1.GetActivationFromAudienceOutput,
     GetAdvancedSyncScheduleFromWarehouse200Response: getAdvancedSyncScheduleFromWarehouse200Response_1.GetAdvancedSyncScheduleFromWarehouse200Response,
     GetAdvancedSyncScheduleFromWarehouseV1Output: getAdvancedSyncScheduleFromWarehouseV1Output_1.GetAdvancedSyncScheduleFromWarehouseV1Output,
     GetAudience200Response: getAudience200Response_1.GetAudience200Response,
@@ -1632,6 +1684,9 @@ var typeMap = {
     InviteV1: inviteV1_1.InviteV1,
     LabelAlpha: labelAlpha_1.LabelAlpha,
     LabelV1: labelV1_1.LabelV1,
+    ListActivationsAlphaOutput: listActivationsAlphaOutput_1.ListActivationsAlphaOutput,
+    ListActivationsFromAudience200Response: listActivationsFromAudience200Response_1.ListActivationsFromAudience200Response,
+    ListActivationsFromAudienceOutput: listActivationsFromAudienceOutput_1.ListActivationsFromAudienceOutput,
     ListAudienceConsumersFromSpaceAndAudience200Response: listAudienceConsumersFromSpaceAndAudience200Response_1.ListAudienceConsumersFromSpaceAndAudience200Response,
     ListAudienceConsumersFromSpaceAndAudienceAlphaOutput: listAudienceConsumersFromSpaceAndAudienceAlphaOutput_1.ListAudienceConsumersFromSpaceAndAudienceAlphaOutput,
     ListAudienceConsumersSortInput: listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput,
@@ -1760,6 +1815,8 @@ var typeMap = {
     ReadAudiencePreviewOptions: readAudiencePreviewOptions_1.ReadAudiencePreviewOptions,
     Regulation: regulation_1.Regulation,
     RegulationListEntryV1: regulationListEntryV1_1.RegulationListEntryV1,
+    RemoveActivationFromAudience200Response: removeActivationFromAudience200Response_1.RemoveActivationFromAudience200Response,
+    RemoveActivationFromAudienceOutput: removeActivationFromAudienceOutput_1.RemoveActivationFromAudienceOutput,
     RemoveAudienceFromSpace200Response: removeAudienceFromSpace200Response_1.RemoveAudienceFromSpace200Response,
     RemoveAudienceFromSpaceAlphaOutput: removeAudienceFromSpaceAlphaOutput_1.RemoveAudienceFromSpaceAlphaOutput,
     RemoveComputedTraitFromSpace200Response: removeComputedTraitFromSpace200Response_1.RemoveComputedTraitFromSpace200Response,
@@ -1846,6 +1903,9 @@ var typeMap = {
     TraitOptions: traitOptions_1.TraitOptions,
     TransformationBeta: transformationBeta_1.TransformationBeta,
     TransformationV1: transformationV1_1.TransformationV1,
+    UpdateActivationForAudience200Response: updateActivationForAudience200Response_1.UpdateActivationForAudience200Response,
+    UpdateActivationForAudienceAlphaInput: updateActivationForAudienceAlphaInput_1.UpdateActivationForAudienceAlphaInput,
+    UpdateActivationForAudienceOutput: updateActivationForAudienceOutput_1.UpdateActivationForAudienceOutput,
     UpdateAudienceForSpace200Response: updateAudienceForSpace200Response_1.UpdateAudienceForSpace200Response,
     UpdateAudienceForSpaceAlphaInput: updateAudienceForSpaceAlphaInput_1.UpdateAudienceForSpaceAlphaInput,
     UpdateAudienceForSpaceAlphaOutput: updateAudienceForSpaceAlphaOutput_1.UpdateAudienceForSpaceAlphaOutput,

@@ -68,6 +68,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.unwrap = exports.configureEuApis = exports.configureApis = exports.APIS = exports.HttpError = void 0;
 __exportStar(require("./aPICallsApi"), exports);
 var aPICallsApi_1 = require("./aPICallsApi");
+__exportStar(require("./activationsApi"), exports);
+var activationsApi_1 = require("./activationsApi");
 __exportStar(require("./audiencesApi"), exports);
 var audiencesApi_1 = require("./audiencesApi");
 __exportStar(require("./auditTrailApi"), exports);
@@ -141,6 +143,7 @@ var HttpError = (function (_super) {
 exports.HttpError = HttpError;
 exports.APIS = [
     aPICallsApi_1.APICallsApi,
+    activationsApi_1.ActivationsApi,
     audiencesApi_1.AudiencesApi,
     auditTrailApi_1.AuditTrailApi,
     catalogApi_1.CatalogApi,
@@ -200,7 +203,7 @@ function configureApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 58.12.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 58.13.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -237,7 +240,7 @@ function configureEuApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 58.12.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 58.13.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
