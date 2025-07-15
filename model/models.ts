@@ -2,8 +2,15 @@ import localVarRequest from 'request';
 
 export * from './aPICallSnapshotV1';
 export * from './accessPermissionV1';
+export * from './activationSummaryOutput';
+export * from './addActivationToAudience200Response';
+export * from './addActivationToAudienceAlphaInput';
+export * from './addActivationToAudienceAlphaOutput';
 export * from './addConnectionFromSourceToWarehouse201Response';
 export * from './addConnectionFromSourceToWarehouseV1Output';
+export * from './addDestinationToAudience200Response';
+export * from './addDestinationToAudienceAlphaInput';
+export * from './addDestinationToAudienceAlphaOutput';
 export * from './addLabelsToSource200Response';
 export * from './addLabelsToSource200Response1';
 export * from './addLabelsToSourceAlphaInput';
@@ -52,6 +59,7 @@ export * from './computedTraitSummary';
 export * from './computedTraitsDefinition';
 export * from './config';
 export * from './config1';
+export * from './connection';
 export * from './contact';
 export * from './createAudience200Response';
 export * from './createAudienceAlphaInput';
@@ -142,6 +150,7 @@ export * from './createWorkspaceRegulationV1Output';
 export * from './createWriteKeyForSource200Response';
 export * from './createWriteKeyForSourceAlphaOutput';
 export * from './dbtModelSyncTrigger';
+export * from './deleteActivationAlphaOutput';
 export * from './deleteDestination200Response';
 export * from './deleteDestinationV1Output';
 export * from './deleteFilterById200Response';
@@ -184,6 +193,7 @@ export * from './deliveryOverviewSourceFilterBy';
 export * from './deliveryOverviewSuccessfullyReceivedFilterBy';
 export * from './destinationFilterActionV1';
 export * from './destinationFilterV1';
+export * from './destinationInput';
 export * from './destinationMetadataActionFieldV1';
 export * from './destinationMetadataActionV1';
 export * from './destinationMetadataComponentV1';
@@ -213,6 +223,8 @@ export * from './functionSettingV1';
 export * from './functionV1';
 export * from './generateUploadURLForEdgeFunctions200Response';
 export * from './generateUploadURLForEdgeFunctionsAlphaOutput';
+export * from './getActivationFromAudience200Response';
+export * from './getActivationFromAudienceOutput';
 export * from './getAdvancedSyncScheduleFromWarehouse200Response';
 export * from './getAdvancedSyncScheduleFromWarehouseV1Output';
 export * from './getAudience200Response';
@@ -310,6 +322,9 @@ export * from './invitePermissionV1';
 export * from './inviteV1';
 export * from './labelAlpha';
 export * from './labelV1';
+export * from './listActivationsAlphaOutput';
+export * from './listActivationsFromAudience200Response';
+export * from './listActivationsFromAudienceOutput';
 export * from './listAudienceConsumersFromSpaceAndAudience200Response';
 export * from './listAudienceConsumersFromSpaceAndAudienceAlphaOutput';
 export * from './listAudienceConsumersSortInput';
@@ -438,6 +453,8 @@ export * from './propertyValueTransformationV1';
 export * from './readAudiencePreviewOptions';
 export * from './regulation';
 export * from './regulationListEntryV1';
+export * from './removeActivationFromAudience200Response';
+export * from './removeActivationFromAudienceOutput';
 export * from './removeAudienceFromSpace200Response';
 export * from './removeAudienceFromSpaceAlphaOutput';
 export * from './removeComputedTraitFromSpace200Response';
@@ -524,6 +541,9 @@ export * from './traitDefinition';
 export * from './traitOptions';
 export * from './transformationBeta';
 export * from './transformationV1';
+export * from './updateActivationForAudience200Response';
+export * from './updateActivationForAudienceAlphaInput';
+export * from './updateActivationForAudienceOutput';
 export * from './updateAudienceForSpace200Response';
 export * from './updateAudienceForSpaceAlphaInput';
 export * from './updateAudienceForSpaceAlphaOutput';
@@ -613,8 +633,15 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 import { APICallSnapshotV1 } from './aPICallSnapshotV1';
 import { AccessPermissionV1 } from './accessPermissionV1';
+import { ActivationSummaryOutput } from './activationSummaryOutput';
+import { AddActivationToAudience200Response } from './addActivationToAudience200Response';
+import { AddActivationToAudienceAlphaInput } from './addActivationToAudienceAlphaInput';
+import { AddActivationToAudienceAlphaOutput } from './addActivationToAudienceAlphaOutput';
 import { AddConnectionFromSourceToWarehouse201Response } from './addConnectionFromSourceToWarehouse201Response';
 import { AddConnectionFromSourceToWarehouseV1Output } from './addConnectionFromSourceToWarehouseV1Output';
+import { AddDestinationToAudience200Response } from './addDestinationToAudience200Response';
+import { AddDestinationToAudienceAlphaInput } from './addDestinationToAudienceAlphaInput';
+import { AddDestinationToAudienceAlphaOutput } from './addDestinationToAudienceAlphaOutput';
 import { AddLabelsToSource200Response } from './addLabelsToSource200Response';
 import { AddLabelsToSource200Response1 } from './addLabelsToSource200Response1';
 import { AddLabelsToSourceAlphaInput } from './addLabelsToSourceAlphaInput';
@@ -663,6 +690,7 @@ import { ComputedTraitSummary } from './computedTraitSummary';
 import { ComputedTraitsDefinition } from './computedTraitsDefinition';
 import { Config } from './config';
 import { Config1 } from './config1';
+import { Connection } from './connection';
 import { Contact } from './contact';
 import { CreateAudience200Response } from './createAudience200Response';
 import { CreateAudienceAlphaInput } from './createAudienceAlphaInput';
@@ -753,6 +781,7 @@ import { CreateWorkspaceRegulationV1Output } from './createWorkspaceRegulationV1
 import { CreateWriteKeyForSource200Response } from './createWriteKeyForSource200Response';
 import { CreateWriteKeyForSourceAlphaOutput } from './createWriteKeyForSourceAlphaOutput';
 import { DbtModelSyncTrigger } from './dbtModelSyncTrigger';
+import { DeleteActivationAlphaOutput } from './deleteActivationAlphaOutput';
 import { DeleteDestination200Response } from './deleteDestination200Response';
 import { DeleteDestinationV1Output } from './deleteDestinationV1Output';
 import { DeleteFilterById200Response } from './deleteFilterById200Response';
@@ -795,6 +824,7 @@ import { DeliveryOverviewSourceFilterBy } from './deliveryOverviewSourceFilterBy
 import { DeliveryOverviewSuccessfullyReceivedFilterBy } from './deliveryOverviewSuccessfullyReceivedFilterBy';
 import { DestinationFilterActionV1 } from './destinationFilterActionV1';
 import { DestinationFilterV1 } from './destinationFilterV1';
+import { DestinationInput } from './destinationInput';
 import { DestinationMetadataActionFieldV1 } from './destinationMetadataActionFieldV1';
 import { DestinationMetadataActionV1 } from './destinationMetadataActionV1';
 import { DestinationMetadataComponentV1 } from './destinationMetadataComponentV1';
@@ -824,6 +854,8 @@ import { FunctionSettingV1 } from './functionSettingV1';
 import { FunctionV1 } from './functionV1';
 import { GenerateUploadURLForEdgeFunctions200Response } from './generateUploadURLForEdgeFunctions200Response';
 import { GenerateUploadURLForEdgeFunctionsAlphaOutput } from './generateUploadURLForEdgeFunctionsAlphaOutput';
+import { GetActivationFromAudience200Response } from './getActivationFromAudience200Response';
+import { GetActivationFromAudienceOutput } from './getActivationFromAudienceOutput';
 import { GetAdvancedSyncScheduleFromWarehouse200Response } from './getAdvancedSyncScheduleFromWarehouse200Response';
 import { GetAdvancedSyncScheduleFromWarehouseV1Output } from './getAdvancedSyncScheduleFromWarehouseV1Output';
 import { GetAudience200Response } from './getAudience200Response';
@@ -921,6 +953,9 @@ import { InvitePermissionV1 } from './invitePermissionV1';
 import { InviteV1 } from './inviteV1';
 import { LabelAlpha } from './labelAlpha';
 import { LabelV1 } from './labelV1';
+import { ListActivationsAlphaOutput } from './listActivationsAlphaOutput';
+import { ListActivationsFromAudience200Response } from './listActivationsFromAudience200Response';
+import { ListActivationsFromAudienceOutput } from './listActivationsFromAudienceOutput';
 import { ListAudienceConsumersFromSpaceAndAudience200Response } from './listAudienceConsumersFromSpaceAndAudience200Response';
 import { ListAudienceConsumersFromSpaceAndAudienceAlphaOutput } from './listAudienceConsumersFromSpaceAndAudienceAlphaOutput';
 import { ListAudienceConsumersSortInput } from './listAudienceConsumersSortInput';
@@ -1049,6 +1084,8 @@ import { PropertyValueTransformationV1 } from './propertyValueTransformationV1';
 import { ReadAudiencePreviewOptions } from './readAudiencePreviewOptions';
 import { Regulation } from './regulation';
 import { RegulationListEntryV1 } from './regulationListEntryV1';
+import { RemoveActivationFromAudience200Response } from './removeActivationFromAudience200Response';
+import { RemoveActivationFromAudienceOutput } from './removeActivationFromAudienceOutput';
 import { RemoveAudienceFromSpace200Response } from './removeAudienceFromSpace200Response';
 import { RemoveAudienceFromSpaceAlphaOutput } from './removeAudienceFromSpaceAlphaOutput';
 import { RemoveComputedTraitFromSpace200Response } from './removeComputedTraitFromSpace200Response';
@@ -1135,6 +1172,9 @@ import { TraitDefinition } from './traitDefinition';
 import { TraitOptions } from './traitOptions';
 import { TransformationBeta } from './transformationBeta';
 import { TransformationV1 } from './transformationV1';
+import { UpdateActivationForAudience200Response } from './updateActivationForAudience200Response';
+import { UpdateActivationForAudienceAlphaInput } from './updateActivationForAudienceAlphaInput';
+import { UpdateActivationForAudienceOutput } from './updateActivationForAudienceOutput';
 import { UpdateAudienceForSpace200Response } from './updateAudienceForSpace200Response';
 import { UpdateAudienceForSpaceAlphaInput } from './updateAudienceForSpaceAlphaInput';
 import { UpdateAudienceForSpaceAlphaOutput } from './updateAudienceForSpaceAlphaOutput';
@@ -1383,10 +1423,17 @@ let enumsMap: { [index: string]: any } = {
 let typeMap: { [index: string]: any } = {
     APICallSnapshotV1: APICallSnapshotV1,
     AccessPermissionV1: AccessPermissionV1,
+    ActivationSummaryOutput: ActivationSummaryOutput,
+    AddActivationToAudience200Response: AddActivationToAudience200Response,
+    AddActivationToAudienceAlphaInput: AddActivationToAudienceAlphaInput,
+    AddActivationToAudienceAlphaOutput: AddActivationToAudienceAlphaOutput,
     AddConnectionFromSourceToWarehouse201Response:
         AddConnectionFromSourceToWarehouse201Response,
     AddConnectionFromSourceToWarehouseV1Output:
         AddConnectionFromSourceToWarehouseV1Output,
+    AddDestinationToAudience200Response: AddDestinationToAudience200Response,
+    AddDestinationToAudienceAlphaInput: AddDestinationToAudienceAlphaInput,
+    AddDestinationToAudienceAlphaOutput: AddDestinationToAudienceAlphaOutput,
     AddLabelsToSource200Response: AddLabelsToSource200Response,
     AddLabelsToSource200Response1: AddLabelsToSource200Response1,
     AddLabelsToSourceAlphaInput: AddLabelsToSourceAlphaInput,
@@ -1441,6 +1488,7 @@ let typeMap: { [index: string]: any } = {
     ComputedTraitsDefinition: ComputedTraitsDefinition,
     Config: Config,
     Config1: Config1,
+    Connection: Connection,
     Contact: Contact,
     CreateAudience200Response: CreateAudience200Response,
     CreateAudienceAlphaInput: CreateAudienceAlphaInput,
@@ -1541,6 +1589,7 @@ let typeMap: { [index: string]: any } = {
     CreateWriteKeyForSource200Response: CreateWriteKeyForSource200Response,
     CreateWriteKeyForSourceAlphaOutput: CreateWriteKeyForSourceAlphaOutput,
     DbtModelSyncTrigger: DbtModelSyncTrigger,
+    DeleteActivationAlphaOutput: DeleteActivationAlphaOutput,
     DeleteDestination200Response: DeleteDestination200Response,
     DeleteDestinationV1Output: DeleteDestinationV1Output,
     DeleteFilterById200Response: DeleteFilterById200Response,
@@ -1586,6 +1635,7 @@ let typeMap: { [index: string]: any } = {
         DeliveryOverviewSuccessfullyReceivedFilterBy,
     DestinationFilterActionV1: DestinationFilterActionV1,
     DestinationFilterV1: DestinationFilterV1,
+    DestinationInput: DestinationInput,
     DestinationMetadataActionFieldV1: DestinationMetadataActionFieldV1,
     DestinationMetadataActionV1: DestinationMetadataActionV1,
     DestinationMetadataComponentV1: DestinationMetadataComponentV1,
@@ -1618,6 +1668,8 @@ let typeMap: { [index: string]: any } = {
         GenerateUploadURLForEdgeFunctions200Response,
     GenerateUploadURLForEdgeFunctionsAlphaOutput:
         GenerateUploadURLForEdgeFunctionsAlphaOutput,
+    GetActivationFromAudience200Response: GetActivationFromAudience200Response,
+    GetActivationFromAudienceOutput: GetActivationFromAudienceOutput,
     GetAdvancedSyncScheduleFromWarehouse200Response:
         GetAdvancedSyncScheduleFromWarehouse200Response,
     GetAdvancedSyncScheduleFromWarehouseV1Output:
@@ -1733,6 +1785,10 @@ let typeMap: { [index: string]: any } = {
     InviteV1: InviteV1,
     LabelAlpha: LabelAlpha,
     LabelV1: LabelV1,
+    ListActivationsAlphaOutput: ListActivationsAlphaOutput,
+    ListActivationsFromAudience200Response:
+        ListActivationsFromAudience200Response,
+    ListActivationsFromAudienceOutput: ListActivationsFromAudienceOutput,
     ListAudienceConsumersFromSpaceAndAudience200Response:
         ListAudienceConsumersFromSpaceAndAudience200Response,
     ListAudienceConsumersFromSpaceAndAudienceAlphaOutput:
@@ -1894,6 +1950,9 @@ let typeMap: { [index: string]: any } = {
     ReadAudiencePreviewOptions: ReadAudiencePreviewOptions,
     Regulation: Regulation,
     RegulationListEntryV1: RegulationListEntryV1,
+    RemoveActivationFromAudience200Response:
+        RemoveActivationFromAudience200Response,
+    RemoveActivationFromAudienceOutput: RemoveActivationFromAudienceOutput,
     RemoveAudienceFromSpace200Response: RemoveAudienceFromSpace200Response,
     RemoveAudienceFromSpaceAlphaOutput: RemoveAudienceFromSpaceAlphaOutput,
     RemoveComputedTraitFromSpace200Response:
@@ -2001,6 +2060,11 @@ let typeMap: { [index: string]: any } = {
     TraitOptions: TraitOptions,
     TransformationBeta: TransformationBeta,
     TransformationV1: TransformationV1,
+    UpdateActivationForAudience200Response:
+        UpdateActivationForAudience200Response,
+    UpdateActivationForAudienceAlphaInput:
+        UpdateActivationForAudienceAlphaInput,
+    UpdateActivationForAudienceOutput: UpdateActivationForAudienceOutput,
     UpdateAudienceForSpace200Response: UpdateAudienceForSpace200Response,
     UpdateAudienceForSpaceAlphaInput: UpdateAudienceForSpaceAlphaInput,
     UpdateAudienceForSpaceAlphaOutput: UpdateAudienceForSpaceAlphaOutput,

@@ -1,5 +1,7 @@
 export * from './aPICallsApi';
 import { APICallsApi } from './aPICallsApi';
+export * from './activationsApi';
+import { ActivationsApi } from './activationsApi';
 export * from './audiencesApi';
 import { AudiencesApi } from './audiencesApi';
 export * from './auditTrailApi';
@@ -75,6 +77,7 @@ export { RequestFile } from '../model/models';
 
 export const APIS = [
     APICallsApi,
+    ActivationsApi,
     AudiencesApi,
     AuditTrailApi,
     CatalogApi,
@@ -168,7 +171,7 @@ export function configureApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 58.12.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 58.13.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -215,7 +218,7 @@ export function configureEuApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 58.12.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 58.13.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
