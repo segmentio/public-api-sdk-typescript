@@ -529,7 +529,7 @@ export class AudiencesApi {
         });
     }
     /**
-     * Get Audience Echo test endpoint for rate limiting per spaceId. Returns an echo response from the control plane service.  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.  This endpoint has a rate limit of 3 requests per day per spaceId for testing rate limiting functionality.
+     * Get Audience Echo test endpoint for rate limiting per spaceId. Returns an echo response from the control plane service.  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.  This endpoint has a rate limit of 1 requests per day per spaceId for testing rate limiting functionality.
      * @summary Get Audience Echo
      * @param spaceId
      * @param message Optional message to echo back.  This parameter exists in alpha.
