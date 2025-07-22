@@ -35,6 +35,7 @@ export * from './allowedLabelBeta';
 export * from './audienceComputeCadence';
 export * from './audienceDefinition';
 export * from './audienceDefinitionWithoutType';
+export * from './audienceEcho';
 export * from './audienceOptions';
 export * from './audienceOptionsWithLookback';
 export * from './audiencePreview';
@@ -231,6 +232,8 @@ export * from './getAudience200Response';
 export * from './getAudience200Response1';
 export * from './getAudienceAlphaOutput';
 export * from './getAudienceBetaOutput';
+export * from './getAudienceEcho200Response';
+export * from './getAudienceEchoAlphaOutput';
 export * from './getAudiencePreview200Response';
 export * from './getAudiencePreviewAlphaOutput';
 export * from './getAudienceScheduleFromSpaceAndAudience200Response';
@@ -666,6 +669,7 @@ import { AllowedLabelBeta } from './allowedLabelBeta';
 import { AudienceComputeCadence } from './audienceComputeCadence';
 import { AudienceDefinition } from './audienceDefinition';
 import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
+import { AudienceEcho } from './audienceEcho';
 import { AudienceOptions } from './audienceOptions';
 import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
 import { AudiencePreview } from './audiencePreview';
@@ -862,6 +866,8 @@ import { GetAudience200Response } from './getAudience200Response';
 import { GetAudience200Response1 } from './getAudience200Response1';
 import { GetAudienceAlphaOutput } from './getAudienceAlphaOutput';
 import { GetAudienceBetaOutput } from './getAudienceBetaOutput';
+import { GetAudienceEcho200Response } from './getAudienceEcho200Response';
+import { GetAudienceEchoAlphaOutput } from './getAudienceEchoAlphaOutput';
 import { GetAudiencePreview200Response } from './getAudiencePreview200Response';
 import { GetAudiencePreviewAlphaOutput } from './getAudiencePreviewAlphaOutput';
 import { GetAudienceScheduleFromSpaceAndAudience200Response } from './getAudienceScheduleFromSpaceAndAudience200Response';
@@ -1459,6 +1465,7 @@ let typeMap: { [index: string]: any } = {
     AudienceComputeCadence: AudienceComputeCadence,
     AudienceDefinition: AudienceDefinition,
     AudienceDefinitionWithoutType: AudienceDefinitionWithoutType,
+    AudienceEcho: AudienceEcho,
     AudienceOptions: AudienceOptions,
     AudienceOptionsWithLookback: AudienceOptionsWithLookback,
     AudiencePreview: AudiencePreview,
@@ -1678,6 +1685,8 @@ let typeMap: { [index: string]: any } = {
     GetAudience200Response1: GetAudience200Response1,
     GetAudienceAlphaOutput: GetAudienceAlphaOutput,
     GetAudienceBetaOutput: GetAudienceBetaOutput,
+    GetAudienceEcho200Response: GetAudienceEcho200Response,
+    GetAudienceEchoAlphaOutput: GetAudienceEchoAlphaOutput,
     GetAudiencePreview200Response: GetAudiencePreview200Response,
     GetAudiencePreviewAlphaOutput: GetAudiencePreviewAlphaOutput,
     GetAudienceScheduleFromSpaceAndAudience200Response:
