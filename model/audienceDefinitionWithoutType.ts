@@ -17,6 +17,10 @@ export class AudienceDefinitionWithoutType {
      * The query language string defining the audience segmentation criteria.  For guidance on using the query language, see the [Segment documentation site](https://segment.com/docs/api/public-api/query-language).
      */
     'query': string;
+    /**
+     * The target entity slug.
+     */
+    'targetEntity'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -28,6 +32,11 @@ export class AudienceDefinitionWithoutType {
         {
             name: 'query',
             baseName: 'query',
+            type: 'string',
+        },
+        {
+            name: 'targetEntity',
+            baseName: 'targetEntity',
             type: 'string',
         },
     ];
