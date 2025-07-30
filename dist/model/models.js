@@ -50,7 +50,6 @@ __exportStar(require("./allowedLabelBeta"), exports);
 __exportStar(require("./audienceComputeCadence"), exports);
 __exportStar(require("./audienceDefinition"), exports);
 __exportStar(require("./audienceDefinitionWithoutType"), exports);
-__exportStar(require("./audienceEcho"), exports);
 __exportStar(require("./audienceOptions"), exports);
 __exportStar(require("./audienceOptionsWithLookback"), exports);
 __exportStar(require("./audiencePreview"), exports);
@@ -247,8 +246,6 @@ __exportStar(require("./getAudience200Response"), exports);
 __exportStar(require("./getAudience200Response1"), exports);
 __exportStar(require("./getAudienceAlphaOutput"), exports);
 __exportStar(require("./getAudienceBetaOutput"), exports);
-__exportStar(require("./getAudienceEcho200Response"), exports);
-__exportStar(require("./getAudienceEchoAlphaOutput"), exports);
 __exportStar(require("./getAudiencePreview200Response"), exports);
 __exportStar(require("./getAudiencePreviewAlphaOutput"), exports);
 __exportStar(require("./getAudienceScheduleFromSpaceAndAudience200Response"), exports);
@@ -671,7 +668,6 @@ var allowedLabelBeta_1 = require("./allowedLabelBeta");
 var audienceComputeCadence_1 = require("./audienceComputeCadence");
 var audienceDefinition_1 = require("./audienceDefinition");
 var audienceDefinitionWithoutType_1 = require("./audienceDefinitionWithoutType");
-var audienceEcho_1 = require("./audienceEcho");
 var audienceOptions_1 = require("./audienceOptions");
 var audienceOptionsWithLookback_1 = require("./audienceOptionsWithLookback");
 var audiencePreview_1 = require("./audiencePreview");
@@ -868,8 +864,6 @@ var getAudience200Response_1 = require("./getAudience200Response");
 var getAudience200Response1_1 = require("./getAudience200Response1");
 var getAudienceAlphaOutput_1 = require("./getAudienceAlphaOutput");
 var getAudienceBetaOutput_1 = require("./getAudienceBetaOutput");
-var getAudienceEcho200Response_1 = require("./getAudienceEcho200Response");
-var getAudienceEchoAlphaOutput_1 = require("./getAudienceEchoAlphaOutput");
 var getAudiencePreview200Response_1 = require("./getAudiencePreview200Response");
 var getAudiencePreviewAlphaOutput_1 = require("./getAudiencePreviewAlphaOutput");
 var getAudienceScheduleFromSpaceAndAudience200Response_1 = require("./getAudienceScheduleFromSpaceAndAudience200Response");
@@ -1403,7 +1397,6 @@ var typeMap = {
     AudienceComputeCadence: audienceComputeCadence_1.AudienceComputeCadence,
     AudienceDefinition: audienceDefinition_1.AudienceDefinition,
     AudienceDefinitionWithoutType: audienceDefinitionWithoutType_1.AudienceDefinitionWithoutType,
-    AudienceEcho: audienceEcho_1.AudienceEcho,
     AudienceOptions: audienceOptions_1.AudienceOptions,
     AudienceOptionsWithLookback: audienceOptionsWithLookback_1.AudienceOptionsWithLookback,
     AudiencePreview: audiencePreview_1.AudiencePreview,
@@ -1600,8 +1593,6 @@ var typeMap = {
     GetAudience200Response1: getAudience200Response1_1.GetAudience200Response1,
     GetAudienceAlphaOutput: getAudienceAlphaOutput_1.GetAudienceAlphaOutput,
     GetAudienceBetaOutput: getAudienceBetaOutput_1.GetAudienceBetaOutput,
-    GetAudienceEcho200Response: getAudienceEcho200Response_1.GetAudienceEcho200Response,
-    GetAudienceEchoAlphaOutput: getAudienceEchoAlphaOutput_1.GetAudienceEchoAlphaOutput,
     GetAudiencePreview200Response: getAudiencePreview200Response_1.GetAudiencePreview200Response,
     GetAudiencePreviewAlphaOutput: getAudiencePreviewAlphaOutput_1.GetAudiencePreviewAlphaOutput,
     GetAudienceScheduleFromSpaceAndAudience200Response: getAudienceScheduleFromSpaceAndAudience200Response_1.GetAudienceScheduleFromSpaceAndAudience200Response,
