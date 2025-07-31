@@ -1270,6 +1270,7 @@ var enumsMap = {
     'AudiencePreview.StatusEnum': audiencePreview_1.AudiencePreview.StatusEnum,
     'AudienceSchedule.StrategyEnum': audienceSchedule_1.AudienceSchedule.StrategyEnum,
     'AudienceSize.TypeEnum': audienceSize_1.AudienceSize.TypeEnum,
+    'AudienceSummary.AudienceTypeEnum': audienceSummary_1.AudienceSummary.AudienceTypeEnum,
     'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum': audienceSummaryWithAudienceTypeAndLookback_1.AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
     'ComputedTraitsDefinition.TypeEnum': computedTraitsDefinition_1.ComputedTraitsDefinition.TypeEnum,
     'CreateAudiencePreviewAlphaInput.AudienceTypeEnum': createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput.AudienceTypeEnum,

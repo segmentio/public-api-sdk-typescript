@@ -18,10 +18,6 @@ export class AudienceOptionsWithLookback {
      */
     'filterByExternalIds': Array<string>;
     /**
-     * If specified, the value of this field indicates the number of days, specified from the date the audience was created, that event data will be included from when determining audience membership. If unspecified, defer to the value of `includeHistoricalData` to determine whether historical data is either entirely included or entirely excluded when determining audience membership.
-     */
-    'backfillEventDataDays'?: number;
-    /**
      * Determines whether data prior to the audience being created is included when determining audience membership. Note that including historical data may be needed in order to properly handle the definition specified. In these cases, Segment will automatically handle including historical data and the response will return the includeHistoricalData parameter as true.
      */
     'includeHistoricalData'?: boolean;
@@ -29,6 +25,10 @@ export class AudienceOptionsWithLookback {
      * Determines whether anonymous users should be included when determining audience membership.
      */
     'includeAnonymousUsers'?: boolean;
+    /**
+     * If specified, the value of this field indicates the number of days, specified from the date the audience was created, that event data will be included from when determining audience membership. If unspecified, defer to the value of `includeHistoricalData` to determine whether historical data is either entirely included or entirely excluded when determining audience membership.
+     */
+    'backfillEventDataDays'?: number;
 
     static discriminator: string | undefined = undefined;
 
@@ -43,11 +43,6 @@ export class AudienceOptionsWithLookback {
             type: 'Array<string>',
         },
         {
-            name: 'backfillEventDataDays',
-            baseName: 'backfillEventDataDays',
-            type: 'number',
-        },
-        {
             name: 'includeHistoricalData',
             baseName: 'includeHistoricalData',
             type: 'boolean',
@@ -56,6 +51,11 @@ export class AudienceOptionsWithLookback {
             name: 'includeAnonymousUsers',
             baseName: 'includeAnonymousUsers',
             type: 'boolean',
+        },
+        {
+            name: 'backfillEventDataDays',
+            baseName: 'backfillEventDataDays',
+            type: 'number',
         },
     ];
 

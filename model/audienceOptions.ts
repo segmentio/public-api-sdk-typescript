@@ -21,6 +21,14 @@ export class AudienceOptions {
      * Determines whether anonymous users should be included when determining audience membership.
      */
     'includeAnonymousUsers'?: boolean;
+    /**
+     * The set of profile external identifiers being used to determine audience membership. Profiles will only be considered for audience membership if the profile has at least one external id whose key matches a value in this set.
+     */
+    'filterByExternalIds'?: Array<string>;
+    /**
+     * If specified, the value of this field indicates the number of days, specified from the date the audience was created, that event data will be included from when determining audience membership. If unspecified, defer to the value of `includeHistoricalData` to determine whether historical data is either entirely included or entirely excluded when determining audience membership.
+     */
+    'backfillEventDataDays'?: number;
 
     static discriminator: string | undefined = undefined;
 
@@ -38,6 +46,16 @@ export class AudienceOptions {
             name: 'includeAnonymousUsers',
             baseName: 'includeAnonymousUsers',
             type: 'boolean',
+        },
+        {
+            name: 'filterByExternalIds',
+            baseName: 'filterByExternalIds',
+            type: 'Array<string>',
+        },
+        {
+            name: 'backfillEventDataDays',
+            baseName: 'backfillEventDataDays',
+            type: 'number',
         },
     ];
 

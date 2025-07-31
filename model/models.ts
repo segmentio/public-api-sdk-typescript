@@ -1273,6 +1273,7 @@ let enumsMap: { [index: string]: any } = {
     'AudiencePreview.StatusEnum': AudiencePreview.StatusEnum,
     'AudienceSchedule.StrategyEnum': AudienceSchedule.StrategyEnum,
     'AudienceSize.TypeEnum': AudienceSize.TypeEnum,
+    'AudienceSummary.AudienceTypeEnum': AudienceSummary.AudienceTypeEnum,
     'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum':
         AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
     'ComputedTraitsDefinition.TypeEnum': ComputedTraitsDefinition.TypeEnum,

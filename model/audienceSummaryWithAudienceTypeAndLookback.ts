@@ -18,10 +18,6 @@ import { AudienceSchedule } from './audienceSchedule';
 import { AudienceSize } from './audienceSize';
 
 export class AudienceSummaryWithAudienceTypeAndLookback {
-    /**
-     * Discriminator denoting the audience\'s product type.
-     */
-    'audienceType': AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum;
     'computeCadence': AudienceComputeCadence;
     'size'?: AudienceSize;
     'options'?: AudienceOptionsWithLookback;
@@ -74,6 +70,10 @@ export class AudienceSummaryWithAudienceTypeAndLookback {
      * Date the audience was last updated.
      */
     'updatedAt': string;
+    /**
+     * Discriminator denoting the audience\'s product type.
+     */
+    'audienceType': AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
@@ -82,11 +82,6 @@ export class AudienceSummaryWithAudienceTypeAndLookback {
         baseName: string;
         type: string;
     }> = [
-        {
-            name: 'audienceType',
-            baseName: 'audienceType',
-            type: 'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum',
-        },
         {
             name: 'computeCadence',
             baseName: 'computeCadence',
@@ -166,6 +161,11 @@ export class AudienceSummaryWithAudienceTypeAndLookback {
             name: 'updatedAt',
             baseName: 'updatedAt',
             type: 'string',
+        },
+        {
+            name: 'audienceType',
+            baseName: 'audienceType',
+            type: 'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum',
         },
     ];
 

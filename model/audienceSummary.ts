@@ -63,6 +63,10 @@ export class AudienceSummary {
      * Date the audience was last updated.
      */
     'updatedAt': string;
+    /**
+     * Discriminator denoting the audience\'s product type.
+     */
+    'audienceType': AudienceSummary.AudienceTypeEnum;
     'options'?: AudienceOptions;
 
     static discriminator: string | undefined = undefined;
@@ -133,6 +137,11 @@ export class AudienceSummary {
             type: 'string',
         },
         {
+            name: 'audienceType',
+            baseName: 'audienceType',
+            type: 'AudienceSummary.AudienceTypeEnum',
+        },
+        {
             name: 'options',
             baseName: 'options',
             type: 'AudienceOptions',
@@ -141,5 +150,13 @@ export class AudienceSummary {
 
     static getAttributeTypeMap() {
         return AudienceSummary.attributeTypeMap;
+    }
+}
+
+export namespace AudienceSummary {
+    export enum AudienceTypeEnum {
+        ACCOUNTS = <any>'ACCOUNTS',
+        LINKED = <any>'LINKED',
+        USERS = <any>'USERS',
     }
 }

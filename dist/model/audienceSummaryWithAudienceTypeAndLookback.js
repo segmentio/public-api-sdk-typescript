@@ -10,11 +10,6 @@ var AudienceSummaryWithAudienceTypeAndLookback = (function () {
     AudienceSummaryWithAudienceTypeAndLookback.discriminator = undefined;
     AudienceSummaryWithAudienceTypeAndLookback.attributeTypeMap = [
         {
-            name: 'audienceType',
-            baseName: 'audienceType',
-            type: 'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum',
-        },
-        {
             name: 'computeCadence',
             baseName: 'computeCadence',
             type: 'AudienceComputeCadence',
@@ -93,6 +88,11 @@ var AudienceSummaryWithAudienceTypeAndLookback = (function () {
             name: 'updatedAt',
             baseName: 'updatedAt',
             type: 'string',
+        },
+        {
+            name: 'audienceType',
+            baseName: 'audienceType',
+            type: 'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum',
         },
     ];
     return AudienceSummaryWithAudienceTypeAndLookback;
