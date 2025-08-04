@@ -14,11 +14,6 @@ var AudienceDefinitionWithoutType = (function () {
             baseName: 'query',
             type: 'string',
         },
-        {
-            name: 'targetEntity',
-            baseName: 'targetEntity',
-            type: 'string',
-        },
     ];
     return AudienceDefinitionWithoutType;
 }());

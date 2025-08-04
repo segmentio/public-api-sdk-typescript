@@ -13,6 +13,7 @@ export declare class AudienceSummary {
     'updatedBy': string;
     'createdAt': string;
     'updatedAt': string;
+    'audienceType': AudienceSummary.AudienceTypeEnum;
     'options'?: AudienceOptions;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
@@ -25,4 +26,11 @@ export declare class AudienceSummary {
         baseName: string;
         type: string;
     }[];
+}
+export declare namespace AudienceSummary {
+    enum AudienceTypeEnum {
+        ACCOUNTS,
+        LINKED,
+        USERS
+    }
 }

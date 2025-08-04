@@ -70,6 +70,11 @@ var AudienceSummary = (function () {
             type: 'string',
         },
         {
+            name: 'audienceType',
+            baseName: 'audienceType',
+            type: 'AudienceSummary.AudienceTypeEnum',
+        },
+        {
             name: 'options',
             baseName: 'options',
             type: 'AudienceOptions',
@@ -77,5 +82,14 @@ var AudienceSummary = (function () {
     ];
     return AudienceSummary;
 }());
+exports.AudienceSummary = AudienceSummary;
+(function (AudienceSummary) {
+    var AudienceTypeEnum;
+    (function (AudienceTypeEnum) {
+        AudienceTypeEnum[AudienceTypeEnum["ACCOUNTS"] = 'ACCOUNTS'] = "ACCOUNTS";
+        AudienceTypeEnum[AudienceTypeEnum["LINKED"] = 'LINKED'] = "LINKED";
+        AudienceTypeEnum[AudienceTypeEnum["USERS"] = 'USERS'] = "USERS";
+    })(AudienceTypeEnum = AudienceSummary.AudienceTypeEnum || (AudienceSummary.AudienceTypeEnum = {}));
+})(AudienceSummary = exports.AudienceSummary || (exports.AudienceSummary = {}));
 exports.AudienceSummary = AudienceSummary;
 //# sourceMappingURL=audienceSummary.js.map

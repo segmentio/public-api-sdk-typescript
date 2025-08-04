@@ -19,6 +19,16 @@ var AudienceOptions = (function () {
             baseName: 'includeAnonymousUsers',
             type: 'boolean',
         },
+        {
+            name: 'filterByExternalIds',
+            baseName: 'filterByExternalIds',
+            type: 'Array<string>',
+        },
+        {
+            name: 'backfillEventDataDays',
+            baseName: 'backfillEventDataDays',
+            type: 'number',
+        },
     ];
     return AudienceOptions;
 }());

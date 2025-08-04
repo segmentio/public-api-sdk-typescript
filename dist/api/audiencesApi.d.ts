@@ -5,7 +5,6 @@ import { CreateAudienceAlphaInput } from '../model/createAudienceAlphaInput';
 import { CreateAudiencePreview200Response } from '../model/createAudiencePreview200Response';
 import { CreateAudiencePreviewAlphaInput } from '../model/createAudiencePreviewAlphaInput';
 import { GetAudience200Response } from '../model/getAudience200Response';
-import { GetAudienceEcho200Response } from '../model/getAudienceEcho200Response';
 import { GetAudiencePreview200Response } from '../model/getAudiencePreview200Response';
 import { GetAudienceScheduleFromSpaceAndAudience200Response } from '../model/getAudienceScheduleFromSpaceAndAudience200Response';
 import { ListAudienceConsumersFromSpaceAndAudience200Response } from '../model/listAudienceConsumersFromSpaceAndAudience200Response';
@@ -64,14 +63,6 @@ export declare class AudiencesApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: GetAudience200Response;
-    }>;
-    getAudienceEcho(spaceId: string, message?: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetAudienceEcho200Response;
     }>;
     getAudiencePreview(spaceId: string, id: string, options?: {
         headers: {

@@ -4,7 +4,6 @@ import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
 import { AudienceSchedule } from './audienceSchedule';
 import { AudienceSize } from './audienceSize';
 export declare class AudienceSummaryWithAudienceTypeAndLookback {
-    'audienceType': AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum;
     'computeCadence': AudienceComputeCadence;
     'size'?: AudienceSize;
     'options'?: AudienceOptionsWithLookback;
@@ -21,6 +20,7 @@ export declare class AudienceSummaryWithAudienceTypeAndLookback {
     'updatedBy': string;
     'createdAt': string;
     'updatedAt': string;
+    'audienceType': AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

@@ -15,11 +15,6 @@ var AudienceOptionsWithLookback = (function () {
             type: 'Array<string>',
         },
         {
-            name: 'backfillEventDataDays',
-            baseName: 'backfillEventDataDays',
-            type: 'number',
-        },
-        {
             name: 'includeHistoricalData',
             baseName: 'includeHistoricalData',
             type: 'boolean',
@@ -28,6 +23,11 @@ var AudienceOptionsWithLookback = (function () {
             name: 'includeAnonymousUsers',
             baseName: 'includeAnonymousUsers',
             type: 'boolean',
+        },
+        {
+            name: 'backfillEventDataDays',
+            baseName: 'backfillEventDataDays',
+            type: 'number',
         },
     ];
     return AudienceOptionsWithLookback;
