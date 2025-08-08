@@ -11,16 +11,13 @@
  */
 
 import { RequestFile } from './models';
+import { EntityProfileDetails } from './entityProfileDetails';
 
-export class AudienceDefinitionWithoutType {
-    /**
-     * The query language string defining the audience segmentation criteria.  For guidance on using the query language, see the [Segment documentation site](https://segment.com/docs/api/public-api/query-language).
-     */
-    'query': string;
-    /**
-     * The target entity slug.
-     */
-    'targetEntity'?: string;
+/**
+ * Result membership object for an audience preview with `audienceType: USERS` or `audienceType: LINKED`.
+ */
+export class AudiencePreviewEntitiesResult {
+    'entities'?: { [key: string]: Array<EntityProfileDetails> };
 
     static discriminator: string | undefined = undefined;
 
@@ -30,18 +27,13 @@ export class AudienceDefinitionWithoutType {
         type: string;
     }> = [
         {
-            name: 'query',
-            baseName: 'query',
-            type: 'string',
-        },
-        {
-            name: 'targetEntity',
-            baseName: 'targetEntity',
-            type: 'string',
+            name: 'entities',
+            baseName: 'entities',
+            type: '{ [key: string]: Array<EntityProfileDetails>; }',
         },
     ];
 
     static getAttributeTypeMap() {
-        return AudienceDefinitionWithoutType.attributeTypeMap;
+        return AudiencePreviewEntitiesResult.attributeTypeMap;
     }
 }

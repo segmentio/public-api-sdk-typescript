@@ -12,15 +12,11 @@
 
 import { RequestFile } from './models';
 
-export class AudienceDefinitionWithoutType {
+export class Profile {
     /**
-     * The query language string defining the audience segmentation criteria.  For guidance on using the query language, see the [Segment documentation site](https://segment.com/docs/api/public-api/query-language).
+     * The id of the profile.
      */
-    'query': string;
-    /**
-     * The target entity slug.
-     */
-    'targetEntity'?: string;
+    'id': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -30,18 +26,13 @@ export class AudienceDefinitionWithoutType {
         type: string;
     }> = [
         {
-            name: 'query',
-            baseName: 'query',
-            type: 'string',
-        },
-        {
-            name: 'targetEntity',
-            baseName: 'targetEntity',
+            name: 'id',
+            baseName: 'id',
             type: 'string',
         },
     ];
 
     static getAttributeTypeMap() {
-        return AudienceDefinitionWithoutType.attributeTypeMap;
+        return Profile.attributeTypeMap;
     }
 }

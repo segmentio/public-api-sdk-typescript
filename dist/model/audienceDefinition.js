@@ -19,6 +19,11 @@ var AudienceDefinition = (function () {
             baseName: 'query',
             type: 'string',
         },
+        {
+            name: 'targetEntity',
+            baseName: 'targetEntity',
+            type: 'string',
+        },
     ];
     return AudienceDefinition;
 }());

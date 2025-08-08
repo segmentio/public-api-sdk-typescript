@@ -12,18 +12,16 @@
 
 import { RequestFile } from './models';
 import { AudiencePreviewAccountResult } from './audiencePreviewAccountResult';
+import { AudiencePreviewEntitiesResult } from './audiencePreviewEntitiesResult';
 import { AudiencePreviewProfileResult } from './audiencePreviewProfileResult';
-import { EntityDetails } from './entityDetails';
+import { EntityProfileDetails } from './entityProfileDetails';
 
 export class AudiencePreviewResult {
     /**
      * Segment id.
      */
     'id': string;
-    /**
-     * Associated entities.
-     */
-    'entities'?: { [key: string]: Array<EntityDetails> };
+    'entities'?: { [key: string]: Array<EntityProfileDetails> };
 
     static discriminator: string | undefined = undefined;
 
@@ -40,7 +38,7 @@ export class AudiencePreviewResult {
         {
             name: 'entities',
             baseName: 'entities',
-            type: '{ [key: string]: Array<EntityDetails>; }',
+            type: '{ [key: string]: Array<EntityProfileDetails>; }',
         },
     ];
 

@@ -17,7 +17,7 @@ var AudiencePreviewResult = (function () {
         {
             name: 'entities',
             baseName: 'entities',
-            type: '{ [key: string]: Array<EntityDetails>; }',
+            type: '{ [key: string]: Array<EntityProfileDetails>; }',
         },
     ];
     return AudiencePreviewResult;

@@ -1,7 +1,8 @@
-export declare class AudienceSize {
-    'count'?: number;
-    'type': AudienceSize.TypeEnum;
-    'uniqueCount'?: number;
+import { EntityProfileDetails } from './entityProfileDetails';
+export declare class AudiencePreviewEntitiesResult {
+    'entities'?: {
+        [key: string]: Array<EntityProfileDetails>;
+    };
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -13,11 +14,4 @@ export declare class AudienceSize {
         baseName: string;
         type: string;
     }[];
-}
-export declare namespace AudienceSize {
-    enum TypeEnum {
-        ACCOUNTS,
-        ENTITIES,
-        USERS
-    }
 }

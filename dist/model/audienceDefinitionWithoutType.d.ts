@@ -1,5 +1,6 @@
 export declare class AudienceDefinitionWithoutType {
     'query': string;
+    'targetEntity'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

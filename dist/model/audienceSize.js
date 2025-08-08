@@ -19,6 +19,11 @@ var AudienceSize = (function () {
             baseName: 'type',
             type: 'AudienceSize.TypeEnum',
         },
+        {
+            name: 'uniqueCount',
+            baseName: 'uniqueCount',
+            type: 'number',
+        },
     ];
     return AudienceSize;
 }());
@@ -27,6 +32,7 @@ exports.AudienceSize = AudienceSize;
     var TypeEnum;
     (function (TypeEnum) {
         TypeEnum[TypeEnum["ACCOUNTS"] = 'ACCOUNTS'] = "ACCOUNTS";
+        TypeEnum[TypeEnum["ENTITIES"] = 'ENTITIES'] = "ENTITIES";
         TypeEnum[TypeEnum["USERS"] = 'USERS'] = "USERS";
     })(TypeEnum = AudienceSize.TypeEnum || (AudienceSize.TypeEnum = {}));
 })(AudienceSize = exports.AudienceSize || (exports.AudienceSize = {}));
