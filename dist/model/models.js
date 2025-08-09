@@ -231,7 +231,6 @@ __exportStar(require("./echoAlphaOutput"), exports);
 __exportStar(require("./echoV1Output"), exports);
 __exportStar(require("./edgeFunctionsAlpha"), exports);
 __exportStar(require("./entityDetails"), exports);
-__exportStar(require("./entityProfileDetails"), exports);
 __exportStar(require("./eventSourceV1"), exports);
 __exportStar(require("./fQLDefinedPropertyV1"), exports);
 __exportStar(require("./filter"), exports);
@@ -852,7 +851,6 @@ var echoAlphaOutput_1 = require("./echoAlphaOutput");
 var echoV1Output_1 = require("./echoV1Output");
 var edgeFunctionsAlpha_1 = require("./edgeFunctionsAlpha");
 var entityDetails_1 = require("./entityDetails");
-var entityProfileDetails_1 = require("./entityProfileDetails");
 var eventSourceV1_1 = require("./eventSourceV1");
 var fQLDefinedPropertyV1_1 = require("./fQLDefinedPropertyV1");
 var filter_1 = require("./filter");
@@ -1585,7 +1583,6 @@ var typeMap = {
     EchoV1Output: echoV1Output_1.EchoV1Output,
     EdgeFunctionsAlpha: edgeFunctionsAlpha_1.EdgeFunctionsAlpha,
     EntityDetails: entityDetails_1.EntityDetails,
-    EntityProfileDetails: entityProfileDetails_1.EntityProfileDetails,
     EventSourceV1: eventSourceV1_1.EventSourceV1,
     FQLDefinedPropertyV1: fQLDefinedPropertyV1_1.FQLDefinedPropertyV1,
     Filter: filter_1.Filter,

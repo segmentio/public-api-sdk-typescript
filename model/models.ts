@@ -216,7 +216,6 @@ export * from './echoAlphaOutput';
 export * from './echoV1Output';
 export * from './edgeFunctionsAlpha';
 export * from './entityDetails';
-export * from './entityProfileDetails';
 export * from './eventSourceV1';
 export * from './fQLDefinedPropertyV1';
 export * from './filter';
@@ -850,7 +849,6 @@ import { EchoAlphaOutput } from './echoAlphaOutput';
 import { EchoV1Output } from './echoV1Output';
 import { EdgeFunctionsAlpha } from './edgeFunctionsAlpha';
 import { EntityDetails } from './entityDetails';
-import { EntityProfileDetails } from './entityProfileDetails';
 import { EventSourceV1 } from './eventSourceV1';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
 import { Filter } from './filter';
@@ -1666,7 +1664,6 @@ let typeMap: { [index: string]: any } = {
     EchoV1Output: EchoV1Output,
     EdgeFunctionsAlpha: EdgeFunctionsAlpha,
     EntityDetails: EntityDetails,
-    EntityProfileDetails: EntityProfileDetails,
     EventSourceV1: EventSourceV1,
     FQLDefinedPropertyV1: FQLDefinedPropertyV1,
     Filter: Filter,

@@ -217,7 +217,6 @@ export * from './echoAlphaOutput';
 export * from './echoV1Output';
 export * from './edgeFunctionsAlpha';
 export * from './entityDetails';
-export * from './entityProfileDetails';
 export * from './eventSourceV1';
 export * from './fQLDefinedPropertyV1';
 export * from './filter';

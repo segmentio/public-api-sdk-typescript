@@ -11,13 +11,40 @@
  */
 
 import { RequestFile } from './models';
-import { EntityProfileDetails } from './entityProfileDetails';
+import { Profile } from './profile';
 
 /**
  * Result membership object for an audience preview with `audienceType: USERS` or `audienceType: LINKED`.
  */
 export class AudiencePreviewEntitiesResult {
-    'entities'?: { [key: string]: Array<EntityProfileDetails> };
+    /**
+     * The entities associated with the profile. Will only have a value if the audience preview has `audienceType: LINKED` and entities are referenced in the audience preview\'s definition.
+     */
+    'id': string;
+    /**
+     * The entity primary key column name.
+     */
+    'idProperty': string;
+    /**
+     * The entity relationship slug.
+     */
+    'relationshipSlug': string;
+    /**
+     * Entity properties.
+     */
+    'properties'?: { [key: string]: any };
+    /**
+     * Related entities that are one level deeper will only be returned if those entities are referenced in the audience definition.
+     */
+    'entities'?: { [key: string]: any };
+    /**
+     * List of profiles.
+     */
+    'profiles'?: Array<Profile>;
+    /**
+     * Indicates if only a subset of the profiles associated with the entity were returned.
+     */
+    'profilesTruncated': boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -27,9 +54,39 @@ export class AudiencePreviewEntitiesResult {
         type: string;
     }> = [
         {
+            name: 'id',
+            baseName: 'id',
+            type: 'string',
+        },
+        {
+            name: 'idProperty',
+            baseName: 'idProperty',
+            type: 'string',
+        },
+        {
+            name: 'relationshipSlug',
+            baseName: 'relationshipSlug',
+            type: 'string',
+        },
+        {
+            name: 'properties',
+            baseName: 'properties',
+            type: '{ [key: string]: any; }',
+        },
+        {
             name: 'entities',
             baseName: 'entities',
-            type: '{ [key: string]: Array<EntityProfileDetails>; }',
+            type: '{ [key: string]: any; }',
+        },
+        {
+            name: 'profiles',
+            baseName: 'profiles',
+            type: 'Array<Profile>',
+        },
+        {
+            name: 'profilesTruncated',
+            baseName: 'profilesTruncated',
+            type: 'boolean',
         },
     ];
 

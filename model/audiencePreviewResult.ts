@@ -14,14 +14,37 @@ import { RequestFile } from './models';
 import { AudiencePreviewAccountResult } from './audiencePreviewAccountResult';
 import { AudiencePreviewEntitiesResult } from './audiencePreviewEntitiesResult';
 import { AudiencePreviewProfileResult } from './audiencePreviewProfileResult';
-import { EntityProfileDetails } from './entityProfileDetails';
+import { Profile } from './profile';
 
 export class AudiencePreviewResult {
     /**
-     * Segment id.
+     * The entities associated with the profile. Will only have a value if the audience preview has `audienceType: LINKED` and entities are referenced in the audience preview\'s definition.
      */
     'id': string;
-    'entities'?: { [key: string]: Array<EntityProfileDetails> };
+    /**
+     * Related entities that are one level deeper will only be returned if those entities are referenced in the audience definition.
+     */
+    'entities'?: { [key: string]: any };
+    /**
+     * The entity primary key column name.
+     */
+    'idProperty': string;
+    /**
+     * The entity relationship slug.
+     */
+    'relationshipSlug': string;
+    /**
+     * Entity properties.
+     */
+    'properties'?: { [key: string]: any };
+    /**
+     * List of profiles.
+     */
+    'profiles'?: Array<Profile>;
+    /**
+     * Indicates if only a subset of the profiles associated with the entity were returned.
+     */
+    'profilesTruncated': boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -38,7 +61,32 @@ export class AudiencePreviewResult {
         {
             name: 'entities',
             baseName: 'entities',
-            type: '{ [key: string]: Array<EntityProfileDetails>; }',
+            type: '{ [key: string]: any; }',
+        },
+        {
+            name: 'idProperty',
+            baseName: 'idProperty',
+            type: 'string',
+        },
+        {
+            name: 'relationshipSlug',
+            baseName: 'relationshipSlug',
+            type: 'string',
+        },
+        {
+            name: 'properties',
+            baseName: 'properties',
+            type: '{ [key: string]: any; }',
+        },
+        {
+            name: 'profiles',
+            baseName: 'profiles',
+            type: 'Array<Profile>',
+        },
+        {
+            name: 'profilesTruncated',
+            baseName: 'profilesTruncated',
+            type: 'boolean',
         },
     ];
 

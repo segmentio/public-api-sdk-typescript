@@ -1,8 +1,16 @@
-import { EntityProfileDetails } from './entityProfileDetails';
+import { Profile } from './profile';
 export declare class AudiencePreviewEntitiesResult {
-    'entities'?: {
-        [key: string]: Array<EntityProfileDetails>;
+    'id': string;
+    'idProperty': string;
+    'relationshipSlug': string;
+    'properties'?: {
+        [key: string]: any;
     };
+    'entities'?: {
+        [key: string]: any;
+    };
+    'profiles'?: Array<Profile>;
+    'profilesTruncated': boolean;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
