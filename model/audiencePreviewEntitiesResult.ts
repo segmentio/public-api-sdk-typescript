@@ -38,7 +38,7 @@ export class AudiencePreviewEntitiesResult {
      */
     'entities'?: { [key: string]: any };
     /**
-     * List of profiles.
+     * Related list of profiles.
      */
     'profiles'?: Array<Profile>;
     /**

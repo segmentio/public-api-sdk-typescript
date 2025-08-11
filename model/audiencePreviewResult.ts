@@ -38,7 +38,7 @@ export class AudiencePreviewResult {
      */
     'properties'?: { [key: string]: any };
     /**
-     * List of profiles.
+     * Related list of profiles.
      */
     'profiles'?: Array<Profile>;
     /**
