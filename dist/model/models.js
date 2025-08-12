@@ -54,6 +54,7 @@ __exportStar(require("./audienceOptions"), exports);
 __exportStar(require("./audienceOptionsWithLookback"), exports);
 __exportStar(require("./audiencePreview"), exports);
 __exportStar(require("./audiencePreviewAccountResult"), exports);
+__exportStar(require("./audiencePreviewEntitiesResult"), exports);
 __exportStar(require("./audiencePreviewIdentifier"), exports);
 __exportStar(require("./audiencePreviewProfileResult"), exports);
 __exportStar(require("./audiencePreviewResult"), exports);
@@ -460,6 +461,7 @@ __exportStar(require("./previewDestinationFilter200Response"), exports);
 __exportStar(require("./previewDestinationFilterV1"), exports);
 __exportStar(require("./previewDestinationFilterV1Input"), exports);
 __exportStar(require("./previewDestinationFilterV1Output"), exports);
+__exportStar(require("./profile"), exports);
 __exportStar(require("./profilesWarehouseAlpha"), exports);
 __exportStar(require("./propertyRenameBeta"), exports);
 __exportStar(require("./propertyRenameV1"), exports);
@@ -672,6 +674,7 @@ var audienceOptions_1 = require("./audienceOptions");
 var audienceOptionsWithLookback_1 = require("./audienceOptionsWithLookback");
 var audiencePreview_1 = require("./audiencePreview");
 var audiencePreviewAccountResult_1 = require("./audiencePreviewAccountResult");
+var audiencePreviewEntitiesResult_1 = require("./audiencePreviewEntitiesResult");
 var audiencePreviewIdentifier_1 = require("./audiencePreviewIdentifier");
 var audiencePreviewProfileResult_1 = require("./audiencePreviewProfileResult");
 var audiencePreviewResult_1 = require("./audiencePreviewResult");
@@ -1078,6 +1081,7 @@ var previewDestinationFilter200Response_1 = require("./previewDestinationFilter2
 var previewDestinationFilterV1_1 = require("./previewDestinationFilterV1");
 var previewDestinationFilterV1Input_1 = require("./previewDestinationFilterV1Input");
 var previewDestinationFilterV1Output_1 = require("./previewDestinationFilterV1Output");
+var profile_1 = require("./profile");
 var profilesWarehouseAlpha_1 = require("./profilesWarehouseAlpha");
 var propertyRenameBeta_1 = require("./propertyRenameBeta");
 var propertyRenameV1_1 = require("./propertyRenameV1");
@@ -1402,6 +1406,7 @@ var typeMap = {
     AudienceOptionsWithLookback: audienceOptionsWithLookback_1.AudienceOptionsWithLookback,
     AudiencePreview: audiencePreview_1.AudiencePreview,
     AudiencePreviewAccountResult: audiencePreviewAccountResult_1.AudiencePreviewAccountResult,
+    AudiencePreviewEntitiesResult: audiencePreviewEntitiesResult_1.AudiencePreviewEntitiesResult,
     AudiencePreviewIdentifier: audiencePreviewIdentifier_1.AudiencePreviewIdentifier,
     AudiencePreviewProfileResult: audiencePreviewProfileResult_1.AudiencePreviewProfileResult,
     AudiencePreviewResult: audiencePreviewResult_1.AudiencePreviewResult,
@@ -1808,6 +1813,7 @@ var typeMap = {
     PreviewDestinationFilterV1: previewDestinationFilterV1_1.PreviewDestinationFilterV1,
     PreviewDestinationFilterV1Input: previewDestinationFilterV1Input_1.PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: previewDestinationFilterV1Output_1.PreviewDestinationFilterV1Output,
+    Profile: profile_1.Profile,
     ProfilesWarehouseAlpha: profilesWarehouseAlpha_1.ProfilesWarehouseAlpha,
     PropertyRenameBeta: propertyRenameBeta_1.PropertyRenameBeta,
     PropertyRenameV1: propertyRenameV1_1.PropertyRenameV1,

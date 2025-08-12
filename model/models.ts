@@ -39,6 +39,7 @@ export * from './audienceOptions';
 export * from './audienceOptionsWithLookback';
 export * from './audiencePreview';
 export * from './audiencePreviewAccountResult';
+export * from './audiencePreviewEntitiesResult';
 export * from './audiencePreviewIdentifier';
 export * from './audiencePreviewProfileResult';
 export * from './audiencePreviewResult';
@@ -445,6 +446,7 @@ export * from './previewDestinationFilter200Response';
 export * from './previewDestinationFilterV1';
 export * from './previewDestinationFilterV1Input';
 export * from './previewDestinationFilterV1Output';
+export * from './profile';
 export * from './profilesWarehouseAlpha';
 export * from './propertyRenameBeta';
 export * from './propertyRenameV1';
@@ -670,6 +672,7 @@ import { AudienceOptions } from './audienceOptions';
 import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
 import { AudiencePreview } from './audiencePreview';
 import { AudiencePreviewAccountResult } from './audiencePreviewAccountResult';
+import { AudiencePreviewEntitiesResult } from './audiencePreviewEntitiesResult';
 import { AudiencePreviewIdentifier } from './audiencePreviewIdentifier';
 import { AudiencePreviewProfileResult } from './audiencePreviewProfileResult';
 import { AudiencePreviewResult } from './audiencePreviewResult';
@@ -1076,6 +1079,7 @@ import { PreviewDestinationFilter200Response } from './previewDestinationFilter2
 import { PreviewDestinationFilterV1 } from './previewDestinationFilterV1';
 import { PreviewDestinationFilterV1Input } from './previewDestinationFilterV1Input';
 import { PreviewDestinationFilterV1Output } from './previewDestinationFilterV1Output';
+import { Profile } from './profile';
 import { ProfilesWarehouseAlpha } from './profilesWarehouseAlpha';
 import { PropertyRenameBeta } from './propertyRenameBeta';
 import { PropertyRenameV1 } from './propertyRenameV1';
@@ -1464,6 +1468,7 @@ let typeMap: { [index: string]: any } = {
     AudienceOptionsWithLookback: AudienceOptionsWithLookback,
     AudiencePreview: AudiencePreview,
     AudiencePreviewAccountResult: AudiencePreviewAccountResult,
+    AudiencePreviewEntitiesResult: AudiencePreviewEntitiesResult,
     AudiencePreviewIdentifier: AudiencePreviewIdentifier,
     AudiencePreviewProfileResult: AudiencePreviewProfileResult,
     AudiencePreviewResult: AudiencePreviewResult,
@@ -1943,6 +1948,7 @@ let typeMap: { [index: string]: any } = {
     PreviewDestinationFilterV1: PreviewDestinationFilterV1,
     PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: PreviewDestinationFilterV1Output,
+    Profile: Profile,
     ProfilesWarehouseAlpha: ProfilesWarehouseAlpha,
     PropertyRenameBeta: PropertyRenameBeta,
     PropertyRenameV1: PropertyRenameV1,

@@ -16,11 +16,15 @@ export class AudienceSize {
     /**
      * The total audience membership count. Refer to the type field to determine the unit for this field (profiles, accounts, etc).
      */
-    'count': number;
+    'count'?: number;
     /**
      * The unit type for the count(s) being returned.
      */
     'type': AudienceSize.TypeEnum;
+    /**
+     * The unique audience membership count.
+     */
+    'uniqueCount'?: number;
 
     static discriminator: string | undefined = undefined;
 
@@ -39,6 +43,11 @@ export class AudienceSize {
             baseName: 'type',
             type: 'AudienceSize.TypeEnum',
         },
+        {
+            name: 'uniqueCount',
+            baseName: 'uniqueCount',
+            type: 'number',
+        },
     ];
 
     static getAttributeTypeMap() {
@@ -49,6 +58,7 @@ export class AudienceSize {
 export namespace AudienceSize {
     export enum TypeEnum {
         ACCOUNTS = <any>'ACCOUNTS',
+        ENTITIES = <any>'ENTITIES',
         USERS = <any>'USERS',
     }
 }

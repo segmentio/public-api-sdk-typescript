@@ -1,12 +1,12 @@
 import { Profile } from './profile';
-export declare class AudiencePreviewResult {
+export declare class AudiencePreviewEntitiesResult {
     'id': string;
-    'entities'?: {
-        [key: string]: any;
-    };
     'idProperty': string;
     'relationshipSlug': string;
     'properties'?: {
+        [key: string]: any;
+    };
+    'entities'?: {
         [key: string]: any;
     };
     'profiles'?: Array<Profile>;

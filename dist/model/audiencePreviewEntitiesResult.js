@@ -1,23 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AudiencePreviewResult = void 0;
-var AudiencePreviewResult = (function () {
-    function AudiencePreviewResult() {
+exports.AudiencePreviewEntitiesResult = void 0;
+var AudiencePreviewEntitiesResult = (function () {
+    function AudiencePreviewEntitiesResult() {
     }
-    AudiencePreviewResult.getAttributeTypeMap = function () {
-        return AudiencePreviewResult.attributeTypeMap;
+    AudiencePreviewEntitiesResult.getAttributeTypeMap = function () {
+        return AudiencePreviewEntitiesResult.attributeTypeMap;
     };
-    AudiencePreviewResult.discriminator = undefined;
-    AudiencePreviewResult.attributeTypeMap = [
+    AudiencePreviewEntitiesResult.discriminator = undefined;
+    AudiencePreviewEntitiesResult.attributeTypeMap = [
         {
             name: 'id',
             baseName: 'id',
             type: 'string',
-        },
-        {
-            name: 'entities',
-            baseName: 'entities',
-            type: '{ [key: string]: any; }',
         },
         {
             name: 'idProperty',
@@ -35,6 +30,11 @@ var AudiencePreviewResult = (function () {
             type: '{ [key: string]: any; }',
         },
         {
+            name: 'entities',
+            baseName: 'entities',
+            type: '{ [key: string]: any; }',
+        },
+        {
             name: 'profiles',
             baseName: 'profiles',
             type: 'Array<Profile>',
@@ -45,7 +45,7 @@ var AudiencePreviewResult = (function () {
             type: 'boolean',
         },
     ];
-    return AudiencePreviewResult;
+    return AudiencePreviewEntitiesResult;
 }());
-exports.AudiencePreviewResult = AudiencePreviewResult;
-//# sourceMappingURL=audiencePreviewResult.js.map
+exports.AudiencePreviewEntitiesResult = AudiencePreviewEntitiesResult;
+//# sourceMappingURL=audiencePreviewEntitiesResult.js.map

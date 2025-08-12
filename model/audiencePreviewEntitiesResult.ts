@@ -11,20 +11,16 @@
  */
 
 import { RequestFile } from './models';
-import { AudiencePreviewAccountResult } from './audiencePreviewAccountResult';
-import { AudiencePreviewEntitiesResult } from './audiencePreviewEntitiesResult';
-import { AudiencePreviewProfileResult } from './audiencePreviewProfileResult';
 import { Profile } from './profile';
 
-export class AudiencePreviewResult {
+/**
+ * Result membership object for an audience preview with `audienceType: USERS` or `audienceType: LINKED`.
+ */
+export class AudiencePreviewEntitiesResult {
     /**
      * The entities associated with the profile. Will only have a value if the audience preview has `audienceType: LINKED` and entities are referenced in the audience preview\'s definition.
      */
     'id': string;
-    /**
-     * Related entities that are one level deeper will only be returned if those entities are referenced in the audience definition.
-     */
-    'entities'?: { [key: string]: any };
     /**
      * The entity primary key column name.
      */
@@ -37,6 +33,10 @@ export class AudiencePreviewResult {
      * Entity properties.
      */
     'properties'?: { [key: string]: any };
+    /**
+     * Related entities that are one level deeper will only be returned if those entities are referenced in the audience definition.
+     */
+    'entities'?: { [key: string]: any };
     /**
      * Related list of profiles.
      */
@@ -59,11 +59,6 @@ export class AudiencePreviewResult {
             type: 'string',
         },
         {
-            name: 'entities',
-            baseName: 'entities',
-            type: '{ [key: string]: any; }',
-        },
-        {
             name: 'idProperty',
             baseName: 'idProperty',
             type: 'string',
@@ -79,6 +74,11 @@ export class AudiencePreviewResult {
             type: '{ [key: string]: any; }',
         },
         {
+            name: 'entities',
+            baseName: 'entities',
+            type: '{ [key: string]: any; }',
+        },
+        {
             name: 'profiles',
             baseName: 'profiles',
             type: 'Array<Profile>',
@@ -91,6 +91,6 @@ export class AudiencePreviewResult {
     ];
 
     static getAttributeTypeMap() {
-        return AudiencePreviewResult.attributeTypeMap;
+        return AudiencePreviewEntitiesResult.attributeTypeMap;
     }
 }
