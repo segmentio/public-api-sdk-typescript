@@ -205,6 +205,7 @@ export * from './destinationMetadataSubscriptionPresetV1';
 export * from './destinationMetadataV1';
 export * from './destinationStatusV1';
 export * from './destinationSubscription';
+export * from './destinationSubscriptionConfiguration';
 export * from './destinationSubscriptionUpdateInput';
 export * from './destinationV1';
 export * from './disableEdgeFunctions200Response';
@@ -442,6 +443,8 @@ export * from './periodicConfig';
 export * from './permissionInputV1';
 export * from './permissionResourceV1';
 export * from './permissionV1';
+export * from './personalizationInput';
+export * from './personalizationInputEntity';
 export * from './previewDestinationFilter200Response';
 export * from './previewDestinationFilterV1';
 export * from './previewDestinationFilterV1Input';
@@ -838,6 +841,7 @@ import { DestinationMetadataSubscriptionPresetV1 } from './destinationMetadataSu
 import { DestinationMetadataV1 } from './destinationMetadataV1';
 import { DestinationStatusV1 } from './destinationStatusV1';
 import { DestinationSubscription } from './destinationSubscription';
+import { DestinationSubscriptionConfiguration } from './destinationSubscriptionConfiguration';
 import { DestinationSubscriptionUpdateInput } from './destinationSubscriptionUpdateInput';
 import { DestinationV1 } from './destinationV1';
 import { DisableEdgeFunctions200Response } from './disableEdgeFunctions200Response';
@@ -1075,6 +1079,8 @@ import { PeriodicConfig } from './periodicConfig';
 import { PermissionInputV1 } from './permissionInputV1';
 import { PermissionResourceV1 } from './permissionResourceV1';
 import { PermissionV1 } from './permissionV1';
+import { PersonalizationInput } from './personalizationInput';
+import { PersonalizationInputEntity } from './personalizationInputEntity';
 import { PreviewDestinationFilter200Response } from './previewDestinationFilter200Response';
 import { PreviewDestinationFilterV1 } from './previewDestinationFilterV1';
 import { PreviewDestinationFilterV1Input } from './previewDestinationFilterV1Input';
@@ -1653,6 +1659,7 @@ let typeMap: { [index: string]: any } = {
     DestinationMetadataV1: DestinationMetadataV1,
     DestinationStatusV1: DestinationStatusV1,
     DestinationSubscription: DestinationSubscription,
+    DestinationSubscriptionConfiguration: DestinationSubscriptionConfiguration,
     DestinationSubscriptionUpdateInput: DestinationSubscriptionUpdateInput,
     DestinationV1: DestinationV1,
     DisableEdgeFunctions200Response: DisableEdgeFunctions200Response,
@@ -1944,6 +1951,8 @@ let typeMap: { [index: string]: any } = {
     PermissionInputV1: PermissionInputV1,
     PermissionResourceV1: PermissionResourceV1,
     PermissionV1: PermissionV1,
+    PersonalizationInput: PersonalizationInput,
+    PersonalizationInputEntity: PersonalizationInputEntity,
     PreviewDestinationFilter200Response: PreviewDestinationFilter200Response,
     PreviewDestinationFilterV1: PreviewDestinationFilterV1,
     PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,

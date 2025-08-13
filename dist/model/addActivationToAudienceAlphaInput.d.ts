@@ -1,12 +1,14 @@
+import { DestinationSubscriptionConfiguration } from './destinationSubscriptionConfiguration';
+import { PersonalizationInput } from './personalizationInput';
 export declare class AddActivationToAudienceAlphaInput {
-    'versionSchema': string;
-    'workspaceId': string;
     'destinationId': string;
     'enabled'?: boolean;
-    'hasEnabledResync'?: boolean;
-    'emitEntityContext'?: string;
-    'eventEmitter': any | null;
-    'subscription': any | null;
+    'performFirstSync': boolean;
+    'activationType': string;
+    'activationName': string;
+    'segmentEvent': string;
+    'personalization'?: PersonalizationInput;
+    'destinationMapping': DestinationSubscriptionConfiguration;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

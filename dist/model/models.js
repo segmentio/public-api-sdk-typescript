@@ -220,6 +220,7 @@ __exportStar(require("./destinationMetadataSubscriptionPresetV1"), exports);
 __exportStar(require("./destinationMetadataV1"), exports);
 __exportStar(require("./destinationStatusV1"), exports);
 __exportStar(require("./destinationSubscription"), exports);
+__exportStar(require("./destinationSubscriptionConfiguration"), exports);
 __exportStar(require("./destinationSubscriptionUpdateInput"), exports);
 __exportStar(require("./destinationV1"), exports);
 __exportStar(require("./disableEdgeFunctions200Response"), exports);
@@ -457,6 +458,8 @@ __exportStar(require("./periodicConfig"), exports);
 __exportStar(require("./permissionInputV1"), exports);
 __exportStar(require("./permissionResourceV1"), exports);
 __exportStar(require("./permissionV1"), exports);
+__exportStar(require("./personalizationInput"), exports);
+__exportStar(require("./personalizationInputEntity"), exports);
 __exportStar(require("./previewDestinationFilter200Response"), exports);
 __exportStar(require("./previewDestinationFilterV1"), exports);
 __exportStar(require("./previewDestinationFilterV1Input"), exports);
@@ -840,6 +843,7 @@ var destinationMetadataSubscriptionPresetV1_1 = require("./destinationMetadataSu
 var destinationMetadataV1_1 = require("./destinationMetadataV1");
 var destinationStatusV1_1 = require("./destinationStatusV1");
 var destinationSubscription_1 = require("./destinationSubscription");
+var destinationSubscriptionConfiguration_1 = require("./destinationSubscriptionConfiguration");
 var destinationSubscriptionUpdateInput_1 = require("./destinationSubscriptionUpdateInput");
 var destinationV1_1 = require("./destinationV1");
 var disableEdgeFunctions200Response_1 = require("./disableEdgeFunctions200Response");
@@ -1077,6 +1081,8 @@ var periodicConfig_1 = require("./periodicConfig");
 var permissionInputV1_1 = require("./permissionInputV1");
 var permissionResourceV1_1 = require("./permissionResourceV1");
 var permissionV1_1 = require("./permissionV1");
+var personalizationInput_1 = require("./personalizationInput");
+var personalizationInputEntity_1 = require("./personalizationInputEntity");
 var previewDestinationFilter200Response_1 = require("./previewDestinationFilter200Response");
 var previewDestinationFilterV1_1 = require("./previewDestinationFilterV1");
 var previewDestinationFilterV1Input_1 = require("./previewDestinationFilterV1Input");
@@ -1572,6 +1578,7 @@ var typeMap = {
     DestinationMetadataV1: destinationMetadataV1_1.DestinationMetadataV1,
     DestinationStatusV1: destinationStatusV1_1.DestinationStatusV1,
     DestinationSubscription: destinationSubscription_1.DestinationSubscription,
+    DestinationSubscriptionConfiguration: destinationSubscriptionConfiguration_1.DestinationSubscriptionConfiguration,
     DestinationSubscriptionUpdateInput: destinationSubscriptionUpdateInput_1.DestinationSubscriptionUpdateInput,
     DestinationV1: destinationV1_1.DestinationV1,
     DisableEdgeFunctions200Response: disableEdgeFunctions200Response_1.DisableEdgeFunctions200Response,
@@ -1809,6 +1816,8 @@ var typeMap = {
     PermissionInputV1: permissionInputV1_1.PermissionInputV1,
     PermissionResourceV1: permissionResourceV1_1.PermissionResourceV1,
     PermissionV1: permissionV1_1.PermissionV1,
+    PersonalizationInput: personalizationInput_1.PersonalizationInput,
+    PersonalizationInputEntity: personalizationInputEntity_1.PersonalizationInputEntity,
     PreviewDestinationFilter200Response: previewDestinationFilter200Response_1.PreviewDestinationFilter200Response,
     PreviewDestinationFilterV1: previewDestinationFilterV1_1.PreviewDestinationFilterV1,
     PreviewDestinationFilterV1Input: previewDestinationFilterV1Input_1.PreviewDestinationFilterV1Input,
