@@ -30,6 +30,11 @@ var CreateAudienceAlphaInput = (function () {
             type: 'AudienceDefinition',
         },
         {
+            name: 'audienceType',
+            baseName: 'audienceType',
+            type: 'CreateAudienceAlphaInput.AudienceTypeEnum',
+        },
+        {
             name: 'options',
             baseName: 'options',
             type: 'AudienceOptions',
@@ -37,5 +42,13 @@ var CreateAudienceAlphaInput = (function () {
     ];
     return CreateAudienceAlphaInput;
 }());
+exports.CreateAudienceAlphaInput = CreateAudienceAlphaInput;
+(function (CreateAudienceAlphaInput) {
+    var AudienceTypeEnum;
+    (function (AudienceTypeEnum) {
+        AudienceTypeEnum[AudienceTypeEnum["ACCOUNTS"] = 'ACCOUNTS'] = "ACCOUNTS";
+        AudienceTypeEnum[AudienceTypeEnum["USERS"] = 'USERS'] = "USERS";
+    })(AudienceTypeEnum = CreateAudienceAlphaInput.AudienceTypeEnum || (CreateAudienceAlphaInput.AudienceTypeEnum = {}));
+})(CreateAudienceAlphaInput = exports.CreateAudienceAlphaInput || (exports.CreateAudienceAlphaInput = {}));
 exports.CreateAudienceAlphaInput = CreateAudienceAlphaInput;
 //# sourceMappingURL=createAudienceAlphaInput.js.map

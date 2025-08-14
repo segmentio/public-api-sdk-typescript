@@ -1281,6 +1281,8 @@ let enumsMap: { [index: string]: any } = {
     'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum':
         AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
     'ComputedTraitsDefinition.TypeEnum': ComputedTraitsDefinition.TypeEnum,
+    'CreateAudienceAlphaInput.AudienceTypeEnum':
+        CreateAudienceAlphaInput.AudienceTypeEnum,
     'CreateAudiencePreviewAlphaInput.AudienceTypeEnum':
         CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum':
