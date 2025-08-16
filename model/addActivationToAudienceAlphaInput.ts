@@ -38,11 +38,7 @@ export class AddActivationToAudienceAlphaInput {
      * Name of the activation.
      */
     'activationName': string;
-    /**
-     * Segment event type to emit.
-     */
-    'segmentEvent': string;
-    'personalization'?: PersonalizationInput;
+    'personalization': PersonalizationInput;
     'destinationMapping': DestinationSubscriptionConfiguration;
 
     static discriminator: string | undefined = undefined;
@@ -75,11 +71,6 @@ export class AddActivationToAudienceAlphaInput {
         {
             name: 'activationName',
             baseName: 'activationName',
-            type: 'string',
-        },
-        {
-            name: 'segmentEvent',
-            baseName: 'segmentEvent',
             type: 'string',
         },
         {

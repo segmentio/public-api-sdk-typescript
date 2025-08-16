@@ -35,11 +35,6 @@ var AddActivationToAudienceAlphaInput = (function () {
             type: 'string',
         },
         {
-            name: 'segmentEvent',
-            baseName: 'segmentEvent',
-            type: 'string',
-        },
-        {
             name: 'personalization',
             baseName: 'personalization',
             type: 'PersonalizationInput',

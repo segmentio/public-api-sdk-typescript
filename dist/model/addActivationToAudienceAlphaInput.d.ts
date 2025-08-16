@@ -6,8 +6,7 @@ export declare class AddActivationToAudienceAlphaInput {
     'performFirstSync': boolean;
     'activationType': string;
     'activationName': string;
-    'segmentEvent': string;
-    'personalization'?: PersonalizationInput;
+    'personalization': PersonalizationInput;
     'destinationMapping': DestinationSubscriptionConfiguration;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
