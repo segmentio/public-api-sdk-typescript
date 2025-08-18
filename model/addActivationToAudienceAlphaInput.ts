@@ -27,7 +27,7 @@ export class AddActivationToAudienceAlphaInput {
      */
     'enabled'?: boolean;
     /**
-     * Whether to skip the first sync so the activation events are not generated on the first audience sync.
+     * Whether to perform the first sync so the activation events are generated on the first audience sync.
      */
     'performFirstSync': boolean;
     /**
