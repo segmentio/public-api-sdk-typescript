@@ -1,5 +1,5 @@
 export declare class Profile {
-    'id': string;
+    'properties': Array<string>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

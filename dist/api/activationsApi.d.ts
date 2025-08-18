@@ -49,7 +49,7 @@ export declare class ActivationsApi {
         response: http.IncomingMessage;
         body: AddDestinationToAudience200Response;
     }>;
-    getActivationFromAudience(spaceId: string, audienceId: string, id: string, workspaceId: string, options?: {
+    getActivationFromAudience(spaceId: string, audienceId: string, id: string, options?: {
         headers: {
             [name: string]: string;
         };
@@ -57,7 +57,7 @@ export declare class ActivationsApi {
         response: http.IncomingMessage;
         body: GetActivationFromAudience200Response;
     }>;
-    listActivationsFromAudience(spaceId: string, audienceId: string, workspaceId: string, pagination?: PaginationInput, options?: {
+    listActivationsFromAudience(spaceId: string, audienceId: string, pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -65,7 +65,7 @@ export declare class ActivationsApi {
         response: http.IncomingMessage;
         body: ListActivationsFromAudience200Response;
     }>;
-    removeActivationFromAudience(spaceId: string, audienceId: string, id: string, workspaceId: string, options?: {
+    removeActivationFromAudience(spaceId: string, audienceId: string, id: string, options?: {
         headers: {
             [name: string]: string;
         };

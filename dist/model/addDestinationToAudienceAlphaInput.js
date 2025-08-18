@@ -10,19 +10,19 @@ var AddDestinationToAudienceAlphaInput = (function () {
     AddDestinationToAudienceAlphaInput.discriminator = undefined;
     AddDestinationToAudienceAlphaInput.attributeTypeMap = [
         {
-            name: 'versionSchema',
-            baseName: 'versionSchema',
-            type: 'string',
-        },
-        {
-            name: 'workspaceId',
-            baseName: 'workspaceId',
-            type: 'string',
-        },
-        {
             name: 'destination',
             baseName: 'destination',
             type: 'DestinationInput',
+        },
+        {
+            name: 'idSyncConfiguration',
+            baseName: 'idSyncConfiguration',
+            type: 'object',
+        },
+        {
+            name: 'connectionSettings',
+            baseName: 'connectionSettings',
+            type: 'any',
         },
     ];
     return AddDestinationToAudienceAlphaInput;

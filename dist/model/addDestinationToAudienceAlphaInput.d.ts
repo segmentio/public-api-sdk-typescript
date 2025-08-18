@@ -1,8 +1,8 @@
 import { DestinationInput } from './destinationInput';
 export declare class AddDestinationToAudienceAlphaInput {
-    'versionSchema': string;
-    'workspaceId': string;
     'destination': DestinationInput;
+    'idSyncConfiguration'?: object;
+    'connectionSettings'?: any | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
