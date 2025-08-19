@@ -5,6 +5,7 @@ export declare class CreateAudienceAlphaInput {
     'enabled'?: boolean;
     'description'?: string;
     'definition': AudienceDefinition;
+    'audienceType'?: CreateAudienceAlphaInput.AudienceTypeEnum;
     'options'?: AudienceOptions;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
@@ -17,4 +18,10 @@ export declare class CreateAudienceAlphaInput {
         baseName: string;
         type: string;
     }[];
+}
+export declare namespace CreateAudienceAlphaInput {
+    enum AudienceTypeEnum {
+        ACCOUNTS,
+        USERS
+    }
 }

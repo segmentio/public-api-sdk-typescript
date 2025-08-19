@@ -64,7 +64,7 @@ export class AudienceSummary {
      */
     'updatedAt': string;
     /**
-     * Discriminator denoting the audience\'s product type.
+     * Denotes the type of audience product.
      */
     'audienceType': AudienceSummary.AudienceTypeEnum;
     'options'?: AudienceOptions;

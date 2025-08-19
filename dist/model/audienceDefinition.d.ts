@@ -1,5 +1,5 @@
 export declare class AudienceDefinition {
-    'type': AudienceDefinition.TypeEnum;
+    'type'?: AudienceDefinition.TypeEnum;
     'query': string;
     'targetEntity'?: string;
     static discriminator: string | undefined;
