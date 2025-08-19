@@ -10,16 +10,6 @@ var AddActivationToAudienceAlphaInput = (function () {
     AddActivationToAudienceAlphaInput.discriminator = undefined;
     AddActivationToAudienceAlphaInput.attributeTypeMap = [
         {
-            name: 'versionSchema',
-            baseName: 'versionSchema',
-            type: 'string',
-        },
-        {
-            name: 'workspaceId',
-            baseName: 'workspaceId',
-            type: 'string',
-        },
-        {
             name: 'destinationId',
             baseName: 'destinationId',
             type: 'string',
@@ -30,24 +20,29 @@ var AddActivationToAudienceAlphaInput = (function () {
             type: 'boolean',
         },
         {
-            name: 'hasEnabledResync',
-            baseName: 'hasEnabledResync',
+            name: 'performFirstSync',
+            baseName: 'performFirstSync',
             type: 'boolean',
         },
         {
-            name: 'emitEntityContext',
-            baseName: 'emitEntityContext',
+            name: 'activationType',
+            baseName: 'activationType',
             type: 'string',
         },
         {
-            name: 'eventEmitter',
-            baseName: 'eventEmitter',
-            type: 'any',
+            name: 'activationName',
+            baseName: 'activationName',
+            type: 'string',
         },
         {
-            name: 'subscription',
-            baseName: 'subscription',
-            type: 'any',
+            name: 'personalization',
+            baseName: 'personalization',
+            type: 'PersonalizationInput',
+        },
+        {
+            name: 'destinationMapping',
+            baseName: 'destinationMapping',
+            type: 'DestinationSubscriptionConfiguration',
         },
     ];
     return AddActivationToAudienceAlphaInput;

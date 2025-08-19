@@ -1,5 +1,8 @@
 export declare class Profile {
-    'id': string;
+    'properties': Array<string>;
+    'mapping'?: {
+        [key: string]: string;
+    };
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

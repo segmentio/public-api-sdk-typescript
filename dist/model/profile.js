@@ -10,9 +10,14 @@ var Profile = (function () {
     Profile.discriminator = undefined;
     Profile.attributeTypeMap = [
         {
-            name: 'id',
-            baseName: 'id',
-            type: 'string',
+            name: 'properties',
+            baseName: 'properties',
+            type: 'Array<string>',
+        },
+        {
+            name: 'mapping',
+            baseName: 'mapping',
+            type: '{ [key: string]: string; }',
         },
     ];
     return Profile;

@@ -120,7 +120,7 @@ var ActivationsApi = (function () {
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/spaces/{spaceId}/audiences/{audienceId}/{connectionId}/activations'
+                    '/spaces/{spaceId}/audiences/{audienceId}/destination-connections/{connectionId}/activations'
                         .replace('{' + 'spaceId' + '}', encodeURIComponent(String(spaceId)))
                         .replace('{' + 'audienceId' + '}', encodeURIComponent(String(audienceId)))
                         .replace('{' + 'connectionId' + '}', encodeURIComponent(String(connectionId)));
@@ -218,7 +218,7 @@ var ActivationsApi = (function () {
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/spaces/{spaceId}/audiences/{audienceId}/destinations'
+                    '/spaces/{spaceId}/audiences/{audienceId}/destination-connections'
                         .replace('{' + 'spaceId' + '}', encodeURIComponent(String(spaceId)))
                         .replace('{' + 'audienceId' + '}', encodeURIComponent(String(audienceId)));
                 localVarQueryParameters = {};
@@ -305,7 +305,7 @@ var ActivationsApi = (function () {
             });
         });
     };
-    ActivationsApi.prototype.getActivationFromAudience = function (spaceId, audienceId, id, workspaceId, options) {
+    ActivationsApi.prototype.getActivationFromAudience = function (spaceId, audienceId, id, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
@@ -337,12 +337,6 @@ var ActivationsApi = (function () {
                 }
                 if (id === null || id === undefined) {
                     throw new Error('Required parameter id was null or undefined when calling getActivationFromAudience.');
-                }
-                if (workspaceId === null || workspaceId === undefined) {
-                    throw new Error('Required parameter workspaceId was null or undefined when calling getActivationFromAudience.');
-                }
-                if (workspaceId !== undefined) {
-                    localVarQueryParameters['workspaceId'] = models_1.ObjectSerializer.serialize(workspaceId, 'string');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -404,7 +398,7 @@ var ActivationsApi = (function () {
             });
         });
     };
-    ActivationsApi.prototype.listActivationsFromAudience = function (spaceId, audienceId, workspaceId, pagination, options) {
+    ActivationsApi.prototype.listActivationsFromAudience = function (spaceId, audienceId, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
@@ -432,12 +426,6 @@ var ActivationsApi = (function () {
                 }
                 if (audienceId === null || audienceId === undefined) {
                     throw new Error('Required parameter audienceId was null or undefined when calling listActivationsFromAudience.');
-                }
-                if (workspaceId === null || workspaceId === undefined) {
-                    throw new Error('Required parameter workspaceId was null or undefined when calling listActivationsFromAudience.');
-                }
-                if (workspaceId !== undefined) {
-                    localVarQueryParameters['workspaceId'] = models_1.ObjectSerializer.serialize(workspaceId, 'string');
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
@@ -502,7 +490,7 @@ var ActivationsApi = (function () {
             });
         });
     };
-    ActivationsApi.prototype.removeActivationFromAudience = function (spaceId, audienceId, id, workspaceId, options) {
+    ActivationsApi.prototype.removeActivationFromAudience = function (spaceId, audienceId, id, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_5, _i, _a, interceptor;
@@ -534,12 +522,6 @@ var ActivationsApi = (function () {
                 }
                 if (id === null || id === undefined) {
                     throw new Error('Required parameter id was null or undefined when calling removeActivationFromAudience.');
-                }
-                if (workspaceId === null || workspaceId === undefined) {
-                    throw new Error('Required parameter workspaceId was null or undefined when calling removeActivationFromAudience.');
-                }
-                if (workspaceId !== undefined) {
-                    localVarQueryParameters['workspaceId'] = models_1.ObjectSerializer.serialize(workspaceId, 'string');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;

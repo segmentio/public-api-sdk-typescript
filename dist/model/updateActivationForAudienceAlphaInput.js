@@ -10,24 +10,29 @@ var UpdateActivationForAudienceAlphaInput = (function () {
     UpdateActivationForAudienceAlphaInput.discriminator = undefined;
     UpdateActivationForAudienceAlphaInput.attributeTypeMap = [
         {
-            name: 'workspaceId',
-            baseName: 'workspaceId',
-            type: 'string',
-        },
-        {
             name: 'enabled',
             baseName: 'enabled',
             type: 'boolean',
         },
         {
-            name: 'eventEmitter',
-            baseName: 'eventEmitter',
-            type: 'any',
+            name: 'activationName',
+            baseName: 'activationName',
+            type: 'string',
         },
         {
-            name: 'subscription',
-            baseName: 'subscription',
-            type: 'any',
+            name: 'personalization',
+            baseName: 'personalization',
+            type: 'PersonalizationInput',
+        },
+        {
+            name: 'destinationMapping',
+            baseName: 'destinationMapping',
+            type: 'DestinationSubscriptionConfiguration',
+        },
+        {
+            name: 'performFirstSync',
+            baseName: 'performFirstSync',
+            type: 'boolean',
         },
     ];
     return UpdateActivationForAudienceAlphaInput;
