@@ -3,7 +3,7 @@ import http from 'http';
 import { CreateAudience200Response } from '../model/createAudience200Response';
 import { CreateAudienceAlphaInput } from '../model/createAudienceAlphaInput';
 import { CreateAudiencePreview200Response } from '../model/createAudiencePreview200Response';
-import { CreateAudiencePreviewAlphaInput } from '../model/createAudiencePreviewAlphaInput';
+import { CreateAudiencePreviewBetaInput } from '../model/createAudiencePreviewBetaInput';
 import { GetAudience200Response } from '../model/getAudience200Response';
 import { GetAudiencePreview200Response } from '../model/getAudiencePreview200Response';
 import { GetAudienceScheduleFromSpaceAndAudience200Response } from '../model/getAudienceScheduleFromSpaceAndAudience200Response';
@@ -48,7 +48,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: CreateAudience200Response;
     }>;
-    createAudiencePreview(spaceId: string, CreateAudiencePreviewAlphaInput: CreateAudiencePreviewAlphaInput, options?: {
+    createAudiencePreview(spaceId: string, CreateAudiencePreviewBetaInput: CreateAudiencePreviewBetaInput, options?: {
         headers: {
             [name: string]: string;
         };

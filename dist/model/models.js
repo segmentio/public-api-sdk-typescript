@@ -81,8 +81,11 @@ __exportStar(require("./createAudience200Response"), exports);
 __exportStar(require("./createAudienceAlphaInput"), exports);
 __exportStar(require("./createAudienceAlphaOutput"), exports);
 __exportStar(require("./createAudiencePreview200Response"), exports);
+__exportStar(require("./createAudiencePreview200Response1"), exports);
 __exportStar(require("./createAudiencePreviewAlphaInput"), exports);
 __exportStar(require("./createAudiencePreviewAlphaOutput"), exports);
+__exportStar(require("./createAudiencePreviewBetaInput"), exports);
+__exportStar(require("./createAudiencePreviewBetaOutput"), exports);
 __exportStar(require("./createAudiencePreviewOptions"), exports);
 __exportStar(require("./createCloudSourceRegulation200Response"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Input"), exports);
@@ -249,7 +252,9 @@ __exportStar(require("./getAudience200Response1"), exports);
 __exportStar(require("./getAudienceAlphaOutput"), exports);
 __exportStar(require("./getAudienceBetaOutput"), exports);
 __exportStar(require("./getAudiencePreview200Response"), exports);
+__exportStar(require("./getAudiencePreview200Response1"), exports);
 __exportStar(require("./getAudiencePreviewAlphaOutput"), exports);
+__exportStar(require("./getAudiencePreviewBetaOutput"), exports);
 __exportStar(require("./getAudienceScheduleFromSpaceAndAudience200Response"), exports);
 __exportStar(require("./getAudienceScheduleFromSpaceAndAudienceAlphaOutput"), exports);
 __exportStar(require("./getComputedTrait200Response"), exports);
@@ -704,8 +709,11 @@ var createAudience200Response_1 = require("./createAudience200Response");
 var createAudienceAlphaInput_1 = require("./createAudienceAlphaInput");
 var createAudienceAlphaOutput_1 = require("./createAudienceAlphaOutput");
 var createAudiencePreview200Response_1 = require("./createAudiencePreview200Response");
+var createAudiencePreview200Response1_1 = require("./createAudiencePreview200Response1");
 var createAudiencePreviewAlphaInput_1 = require("./createAudiencePreviewAlphaInput");
 var createAudiencePreviewAlphaOutput_1 = require("./createAudiencePreviewAlphaOutput");
+var createAudiencePreviewBetaInput_1 = require("./createAudiencePreviewBetaInput");
+var createAudiencePreviewBetaOutput_1 = require("./createAudiencePreviewBetaOutput");
 var createAudiencePreviewOptions_1 = require("./createAudiencePreviewOptions");
 var createCloudSourceRegulation200Response_1 = require("./createCloudSourceRegulation200Response");
 var createCloudSourceRegulationV1Input_1 = require("./createCloudSourceRegulationV1Input");
@@ -872,7 +880,9 @@ var getAudience200Response1_1 = require("./getAudience200Response1");
 var getAudienceAlphaOutput_1 = require("./getAudienceAlphaOutput");
 var getAudienceBetaOutput_1 = require("./getAudienceBetaOutput");
 var getAudiencePreview200Response_1 = require("./getAudiencePreview200Response");
+var getAudiencePreview200Response1_1 = require("./getAudiencePreview200Response1");
 var getAudiencePreviewAlphaOutput_1 = require("./getAudiencePreviewAlphaOutput");
+var getAudiencePreviewBetaOutput_1 = require("./getAudiencePreviewBetaOutput");
 var getAudienceScheduleFromSpaceAndAudience200Response_1 = require("./getAudienceScheduleFromSpaceAndAudience200Response");
 var getAudienceScheduleFromSpaceAndAudienceAlphaOutput_1 = require("./getAudienceScheduleFromSpaceAndAudienceAlphaOutput");
 var getComputedTrait200Response_1 = require("./getComputedTrait200Response");
@@ -1285,6 +1295,7 @@ var enumsMap = {
     'ComputedTraitsDefinition.TypeEnum': computedTraitsDefinition_1.ComputedTraitsDefinition.TypeEnum,
     'CreateAudienceAlphaInput.AudienceTypeEnum': createAudienceAlphaInput_1.CreateAudienceAlphaInput.AudienceTypeEnum,
     'CreateAudiencePreviewAlphaInput.AudienceTypeEnum': createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
+    'CreateAudiencePreviewBetaInput.AudienceTypeEnum': createAudiencePreviewBetaInput_1.CreateAudiencePreviewBetaInput.AudienceTypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
     'CreateFunctionV1Input.ResourceTypeEnum': createFunctionV1Input_1.CreateFunctionV1Input.ResourceTypeEnum,
@@ -1440,8 +1451,11 @@ var typeMap = {
     CreateAudienceAlphaInput: createAudienceAlphaInput_1.CreateAudienceAlphaInput,
     CreateAudienceAlphaOutput: createAudienceAlphaOutput_1.CreateAudienceAlphaOutput,
     CreateAudiencePreview200Response: createAudiencePreview200Response_1.CreateAudiencePreview200Response,
+    CreateAudiencePreview200Response1: createAudiencePreview200Response1_1.CreateAudiencePreview200Response1,
     CreateAudiencePreviewAlphaInput: createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput,
     CreateAudiencePreviewAlphaOutput: createAudiencePreviewAlphaOutput_1.CreateAudiencePreviewAlphaOutput,
+    CreateAudiencePreviewBetaInput: createAudiencePreviewBetaInput_1.CreateAudiencePreviewBetaInput,
+    CreateAudiencePreviewBetaOutput: createAudiencePreviewBetaOutput_1.CreateAudiencePreviewBetaOutput,
     CreateAudiencePreviewOptions: createAudiencePreviewOptions_1.CreateAudiencePreviewOptions,
     CreateCloudSourceRegulation200Response: createCloudSourceRegulation200Response_1.CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input,
@@ -1608,7 +1622,9 @@ var typeMap = {
     GetAudienceAlphaOutput: getAudienceAlphaOutput_1.GetAudienceAlphaOutput,
     GetAudienceBetaOutput: getAudienceBetaOutput_1.GetAudienceBetaOutput,
     GetAudiencePreview200Response: getAudiencePreview200Response_1.GetAudiencePreview200Response,
+    GetAudiencePreview200Response1: getAudiencePreview200Response1_1.GetAudiencePreview200Response1,
     GetAudiencePreviewAlphaOutput: getAudiencePreviewAlphaOutput_1.GetAudiencePreviewAlphaOutput,
+    GetAudiencePreviewBetaOutput: getAudiencePreviewBetaOutput_1.GetAudiencePreviewBetaOutput,
     GetAudienceScheduleFromSpaceAndAudience200Response: getAudienceScheduleFromSpaceAndAudience200Response_1.GetAudienceScheduleFromSpaceAndAudience200Response,
     GetAudienceScheduleFromSpaceAndAudienceAlphaOutput: getAudienceScheduleFromSpaceAndAudienceAlphaOutput_1.GetAudienceScheduleFromSpaceAndAudienceAlphaOutput,
     GetComputedTrait200Response: getComputedTrait200Response_1.GetComputedTrait200Response,

@@ -11,10 +11,13 @@
  */
 
 import { RequestFile } from './models';
-import { GetAudiencePreviewBetaOutput } from './getAudiencePreviewBetaOutput';
+import { AudiencePreview } from './audiencePreview';
 
-export class GetAudiencePreview200Response {
-    'data'?: GetAudiencePreviewBetaOutput;
+/**
+ * Output when reading an audience preview.
+ */
+export class GetAudiencePreviewBetaOutput {
+    'audiencePreview': AudiencePreview;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,13 +27,13 @@ export class GetAudiencePreview200Response {
         type: string;
     }> = [
         {
-            name: 'data',
-            baseName: 'data',
-            type: 'GetAudiencePreviewBetaOutput',
+            name: 'audiencePreview',
+            baseName: 'audiencePreview',
+            type: 'AudiencePreview',
         },
     ];
 
     static getAttributeTypeMap() {
-        return GetAudiencePreview200Response.attributeTypeMap;
+        return GetAudiencePreviewBetaOutput.attributeTypeMap;
     }
 }

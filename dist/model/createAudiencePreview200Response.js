@@ -12,7 +12,7 @@ var CreateAudiencePreview200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'CreateAudiencePreviewAlphaOutput',
+            type: 'CreateAudiencePreviewBetaOutput',
         },
     ];
     return CreateAudiencePreview200Response;

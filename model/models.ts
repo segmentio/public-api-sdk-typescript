@@ -66,8 +66,11 @@ export * from './createAudience200Response';
 export * from './createAudienceAlphaInput';
 export * from './createAudienceAlphaOutput';
 export * from './createAudiencePreview200Response';
+export * from './createAudiencePreview200Response1';
 export * from './createAudiencePreviewAlphaInput';
 export * from './createAudiencePreviewAlphaOutput';
+export * from './createAudiencePreviewBetaInput';
+export * from './createAudiencePreviewBetaOutput';
 export * from './createAudiencePreviewOptions';
 export * from './createCloudSourceRegulation200Response';
 export * from './createCloudSourceRegulationV1Input';
@@ -234,7 +237,9 @@ export * from './getAudience200Response1';
 export * from './getAudienceAlphaOutput';
 export * from './getAudienceBetaOutput';
 export * from './getAudiencePreview200Response';
+export * from './getAudiencePreview200Response1';
 export * from './getAudiencePreviewAlphaOutput';
+export * from './getAudiencePreviewBetaOutput';
 export * from './getAudienceScheduleFromSpaceAndAudience200Response';
 export * from './getAudienceScheduleFromSpaceAndAudienceAlphaOutput';
 export * from './getComputedTrait200Response';
@@ -702,8 +707,11 @@ import { CreateAudience200Response } from './createAudience200Response';
 import { CreateAudienceAlphaInput } from './createAudienceAlphaInput';
 import { CreateAudienceAlphaOutput } from './createAudienceAlphaOutput';
 import { CreateAudiencePreview200Response } from './createAudiencePreview200Response';
+import { CreateAudiencePreview200Response1 } from './createAudiencePreview200Response1';
 import { CreateAudiencePreviewAlphaInput } from './createAudiencePreviewAlphaInput';
 import { CreateAudiencePreviewAlphaOutput } from './createAudiencePreviewAlphaOutput';
+import { CreateAudiencePreviewBetaInput } from './createAudiencePreviewBetaInput';
+import { CreateAudiencePreviewBetaOutput } from './createAudiencePreviewBetaOutput';
 import { CreateAudiencePreviewOptions } from './createAudiencePreviewOptions';
 import { CreateCloudSourceRegulation200Response } from './createCloudSourceRegulation200Response';
 import { CreateCloudSourceRegulationV1Input } from './createCloudSourceRegulationV1Input';
@@ -870,7 +878,9 @@ import { GetAudience200Response1 } from './getAudience200Response1';
 import { GetAudienceAlphaOutput } from './getAudienceAlphaOutput';
 import { GetAudienceBetaOutput } from './getAudienceBetaOutput';
 import { GetAudiencePreview200Response } from './getAudiencePreview200Response';
+import { GetAudiencePreview200Response1 } from './getAudiencePreview200Response1';
 import { GetAudiencePreviewAlphaOutput } from './getAudiencePreviewAlphaOutput';
+import { GetAudiencePreviewBetaOutput } from './getAudiencePreviewBetaOutput';
 import { GetAudienceScheduleFromSpaceAndAudience200Response } from './getAudienceScheduleFromSpaceAndAudience200Response';
 import { GetAudienceScheduleFromSpaceAndAudienceAlphaOutput } from './getAudienceScheduleFromSpaceAndAudienceAlphaOutput';
 import { GetComputedTrait200Response } from './getComputedTrait200Response';
@@ -1291,6 +1301,8 @@ let enumsMap: { [index: string]: any } = {
         CreateAudienceAlphaInput.AudienceTypeEnum,
     'CreateAudiencePreviewAlphaInput.AudienceTypeEnum':
         CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
+    'CreateAudiencePreviewBetaInput.AudienceTypeEnum':
+        CreateAudiencePreviewBetaInput.AudienceTypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum':
         CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum':
@@ -1508,8 +1520,11 @@ let typeMap: { [index: string]: any } = {
     CreateAudienceAlphaInput: CreateAudienceAlphaInput,
     CreateAudienceAlphaOutput: CreateAudienceAlphaOutput,
     CreateAudiencePreview200Response: CreateAudiencePreview200Response,
+    CreateAudiencePreview200Response1: CreateAudiencePreview200Response1,
     CreateAudiencePreviewAlphaInput: CreateAudiencePreviewAlphaInput,
     CreateAudiencePreviewAlphaOutput: CreateAudiencePreviewAlphaOutput,
+    CreateAudiencePreviewBetaInput: CreateAudiencePreviewBetaInput,
+    CreateAudiencePreviewBetaOutput: CreateAudiencePreviewBetaOutput,
     CreateAudiencePreviewOptions: CreateAudiencePreviewOptions,
     CreateCloudSourceRegulation200Response:
         CreateCloudSourceRegulation200Response,
@@ -1694,7 +1709,9 @@ let typeMap: { [index: string]: any } = {
     GetAudienceAlphaOutput: GetAudienceAlphaOutput,
     GetAudienceBetaOutput: GetAudienceBetaOutput,
     GetAudiencePreview200Response: GetAudiencePreview200Response,
+    GetAudiencePreview200Response1: GetAudiencePreview200Response1,
     GetAudiencePreviewAlphaOutput: GetAudiencePreviewAlphaOutput,
+    GetAudiencePreviewBetaOutput: GetAudiencePreviewBetaOutput,
     GetAudienceScheduleFromSpaceAndAudience200Response:
         GetAudienceScheduleFromSpaceAndAudience200Response,
     GetAudienceScheduleFromSpaceAndAudienceAlphaOutput:

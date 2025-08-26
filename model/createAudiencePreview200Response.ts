@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { CreateAudiencePreviewAlphaOutput } from './createAudiencePreviewAlphaOutput';
+import { CreateAudiencePreviewBetaOutput } from './createAudiencePreviewBetaOutput';
 
 export class CreateAudiencePreview200Response {
-    'data'?: CreateAudiencePreviewAlphaOutput;
+    'data'?: CreateAudiencePreviewBetaOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -26,7 +26,7 @@ export class CreateAudiencePreview200Response {
         {
             name: 'data',
             baseName: 'data',
-            type: 'CreateAudiencePreviewAlphaOutput',
+            type: 'CreateAudiencePreviewBetaOutput',
         },
     ];
 

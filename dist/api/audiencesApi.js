@@ -201,7 +201,7 @@ var AudiencesApi = (function () {
             });
         });
     };
-    AudiencesApi.prototype.createAudiencePreview = function (spaceId, CreateAudiencePreviewAlphaInput, options) {
+    AudiencesApi.prototype.createAudiencePreview = function (spaceId, CreateAudiencePreviewBetaInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
@@ -212,6 +212,7 @@ var AudiencesApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
                     'application/json',
                 ];
@@ -225,9 +226,9 @@ var AudiencesApi = (function () {
                 if (spaceId === null || spaceId === undefined) {
                     throw new Error('Required parameter spaceId was null or undefined when calling createAudiencePreview.');
                 }
-                if (CreateAudiencePreviewAlphaInput === null ||
-                    CreateAudiencePreviewAlphaInput === undefined) {
-                    throw new Error('Required parameter CreateAudiencePreviewAlphaInput was null or undefined when calling createAudiencePreview.');
+                if (CreateAudiencePreviewBetaInput === null ||
+                    CreateAudiencePreviewBetaInput === undefined) {
+                    throw new Error('Required parameter CreateAudiencePreviewBetaInput was null or undefined when calling createAudiencePreview.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -238,7 +239,7 @@ var AudiencesApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateAudiencePreviewAlphaInput, 'CreateAudiencePreviewAlphaInput'),
+                    body: models_1.ObjectSerializer.serialize(CreateAudiencePreviewBetaInput, 'CreateAudiencePreviewBetaInput'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -396,6 +397,7 @@ var AudiencesApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
                     'application/json',
                 ];
