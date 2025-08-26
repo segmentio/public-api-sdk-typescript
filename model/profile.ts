@@ -17,6 +17,7 @@ import { RequestFile } from './models';
  */
 export class Profile {
     'properties': Array<string>;
+    'mapping'?: { [key: string]: string };
 
     static discriminator: string | undefined = undefined;
 
@@ -29,6 +30,11 @@ export class Profile {
             name: 'properties',
             baseName: 'properties',
             type: 'Array<string>',
+        },
+        {
+            name: 'mapping',
+            baseName: 'mapping',
+            type: '{ [key: string]: string; }',
         },
     ];
 

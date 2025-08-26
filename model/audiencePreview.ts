@@ -25,7 +25,7 @@ export class AudiencePreview {
      */
     'id': string;
     /**
-     * The audience type of the preview.
+     * The audience type of the preview.  Possible values: USERS, ACCOUNTS, LINKED.
      */
     'audienceType': AudiencePreview.AudienceTypeEnum;
     'definition': AudienceDefinitionWithoutType;

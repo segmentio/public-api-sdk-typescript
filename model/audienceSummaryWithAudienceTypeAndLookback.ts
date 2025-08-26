@@ -71,7 +71,7 @@ export class AudienceSummaryWithAudienceTypeAndLookback {
      */
     'updatedAt': string;
     /**
-     * Discriminator denoting the audience\'s product type.
+     * Denotes the type of audience product.
      */
     'audienceType': AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum;
 

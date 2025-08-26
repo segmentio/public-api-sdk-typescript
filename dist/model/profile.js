@@ -14,6 +14,11 @@ var Profile = (function () {
             baseName: 'properties',
             type: 'Array<string>',
         },
+        {
+            name: 'mapping',
+            baseName: 'mapping',
+            type: '{ [key: string]: string; }',
+        },
     ];
     return Profile;
 }());

@@ -20,7 +20,7 @@ import { CreateAudiencePreviewOptions } from './createAudiencePreviewOptions';
 export class CreateAudiencePreviewAlphaInput {
     'definition': AudienceDefinitionWithoutType;
     /**
-     * Discriminator denoting the audience\'s product type.  Possible values: USERS, ACCOUNTS, LINKED.
+     * Denotes the type of audience product.  Possible values: USERS, ACCOUNTS, LINKED.
      */
     'audienceType': CreateAudiencePreviewAlphaInput.AudienceTypeEnum;
     'options'?: CreateAudiencePreviewOptions;

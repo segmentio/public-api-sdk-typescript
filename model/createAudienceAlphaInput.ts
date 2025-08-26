@@ -31,6 +31,10 @@ export class CreateAudienceAlphaInput {
      */
     'description'?: string;
     'definition': AudienceDefinition;
+    /**
+     * Denotes the type of audience product.  Possible values: USERS, ACCOUNTS.
+     */
+    'audienceType'?: CreateAudienceAlphaInput.AudienceTypeEnum;
     'options'?: AudienceOptions;
 
     static discriminator: string | undefined = undefined;
@@ -61,6 +65,11 @@ export class CreateAudienceAlphaInput {
             type: 'AudienceDefinition',
         },
         {
+            name: 'audienceType',
+            baseName: 'audienceType',
+            type: 'CreateAudienceAlphaInput.AudienceTypeEnum',
+        },
+        {
             name: 'options',
             baseName: 'options',
             type: 'AudienceOptions',
@@ -69,5 +78,12 @@ export class CreateAudienceAlphaInput {
 
     static getAttributeTypeMap() {
         return CreateAudienceAlphaInput.attributeTypeMap;
+    }
+}
+
+export namespace CreateAudienceAlphaInput {
+    export enum AudienceTypeEnum {
+        ACCOUNTS = <any>'ACCOUNTS',
+        USERS = <any>'USERS',
     }
 }
