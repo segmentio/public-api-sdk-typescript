@@ -1,6 +1,6 @@
-import { CreateAudiencePreviewAlphaOutput } from './createAudiencePreviewAlphaOutput';
+import { CreateAudiencePreviewBetaOutput } from './createAudiencePreviewBetaOutput';
 export declare class CreateAudiencePreview200Response {
-    'data'?: CreateAudiencePreviewAlphaOutput;
+    'data'?: CreateAudiencePreviewBetaOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
