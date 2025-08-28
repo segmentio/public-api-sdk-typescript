@@ -19,10 +19,6 @@ import { PersonalizationInput } from './personalizationInput';
  */
 export class AddActivationToAudienceAlphaInput {
     /**
-     * The Destination id.
-     */
-    'destinationId': string;
-    /**
      * Whether the event emitter should be created in an enabled state. Will trigger an audience run if enabled.
      */
     'enabled'?: boolean;
@@ -48,11 +44,6 @@ export class AddActivationToAudienceAlphaInput {
         baseName: string;
         type: string;
     }> = [
-        {
-            name: 'destinationId',
-            baseName: 'destinationId',
-            type: 'string',
-        },
         {
             name: 'enabled',
             baseName: 'enabled',
