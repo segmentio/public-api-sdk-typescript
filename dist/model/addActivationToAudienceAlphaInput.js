@@ -10,11 +10,6 @@ var AddActivationToAudienceAlphaInput = (function () {
     AddActivationToAudienceAlphaInput.discriminator = undefined;
     AddActivationToAudienceAlphaInput.attributeTypeMap = [
         {
-            name: 'destinationId',
-            baseName: 'destinationId',
-            type: 'string',
-        },
-        {
             name: 'enabled',
             baseName: 'enabled',
             type: 'boolean',

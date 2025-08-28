@@ -1,7 +1,6 @@
 import { DestinationSubscriptionConfiguration } from './destinationSubscriptionConfiguration';
 import { PersonalizationInput } from './personalizationInput';
 export declare class AddActivationToAudienceAlphaInput {
-    'destinationId': string;
     'enabled'?: boolean;
     'performFirstSync': boolean;
     'activationType': string;
