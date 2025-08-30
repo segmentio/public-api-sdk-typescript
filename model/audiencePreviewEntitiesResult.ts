@@ -18,7 +18,7 @@ import { Profile } from './profile';
  */
 export class AudiencePreviewEntitiesResult {
     /**
-     * The entities associated with the profile. Will only have a value if the audience preview has `audienceType: LINKED` and entities are referenced in the audience preview\'s definition.
+     * Entity id.
      */
     'id': string;
     /**

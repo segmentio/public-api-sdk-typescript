@@ -1,7 +1,6 @@
-export declare class ReadAudiencePreviewOptions {
-    'filterByExternalIds'?: Array<string>;
-    'includeHistoricalData'?: boolean;
-    'backfillEventDataDays'?: number;
+export declare class ComputeConditionsWrapper {
+    'format': string;
+    'conditions': object | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

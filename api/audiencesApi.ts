@@ -15,7 +15,9 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { CreateAudience200Response } from '../model/createAudience200Response';
+import { CreateAudience200Response1 } from '../model/createAudience200Response1';
 import { CreateAudienceAlphaInput } from '../model/createAudienceAlphaInput';
+import { CreateAudienceBetaInput } from '../model/createAudienceBetaInput';
 import { CreateAudiencePreview200Response } from '../model/createAudiencePreview200Response';
 import { CreateAudiencePreview200Response1 } from '../model/createAudiencePreview200Response1';
 import { CreateAudiencePreviewAlphaInput } from '../model/createAudiencePreviewAlphaInput';
@@ -127,14 +129,14 @@ export class AudiencesApi {
     }
 
     /**
-     * Creates Audience.  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Audience feature enabled. Please reach out to your customer success manager for more information.  • When called, this endpoint may generate the `Audience Created` event in the [audit trail](/tag/Audit-Trail).  Note: The definition for an Audience created using the API is not editable through the Segment App.   The rate limit for this endpoint is 10 requests per minute, which is lower than the default due to access pattern restrictions. Once reached, this endpoint will respond with the 429 HTTP status code with headers indicating the limit parameters. See [Rate Limiting](/#tag/Rate-Limits) for more information.
+     * Creates Audience.  • This endpoint is in **Beta** testing.  Please submit any feedback by sending an email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Audience feature enabled. Please reach out to your customer success manager for more information.  • When called, this endpoint may generate the `Audience Created` event in the [audit trail](/tag/Audit-Trail).  Note: The definition for an Audience created using the API is not editable through the Segment App.   The rate limit for this endpoint is 10 requests per minute, which is lower than the default due to access pattern restrictions. Once reached, this endpoint will respond with the 429 HTTP status code with headers indicating the limit parameters. See [Rate Limiting](/#tag/Rate-Limits) for more information.
      * @summary Create Audience
      * @param spaceId
-     * @param CreateAudienceAlphaInput
+     * @param CreateAudienceBetaInput
      */
     public async createAudience(
         spaceId: string,
-        CreateAudienceAlphaInput: CreateAudienceAlphaInput,
+        CreateAudienceBetaInput: CreateAudienceBetaInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -152,6 +154,7 @@ export class AudiencesApi {
             this._defaultHeaders
         );
         const produces = [
+            'application/vnd.segment.v1beta+json',
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
@@ -170,13 +173,13 @@ export class AudiencesApi {
             );
         }
 
-        // verify required parameter 'CreateAudienceAlphaInput' is not null or undefined
+        // verify required parameter 'CreateAudienceBetaInput' is not null or undefined
         if (
-            CreateAudienceAlphaInput === null ||
-            CreateAudienceAlphaInput === undefined
+            CreateAudienceBetaInput === null ||
+            CreateAudienceBetaInput === undefined
         ) {
             throw new Error(
-                'Required parameter CreateAudienceAlphaInput was null or undefined when calling createAudience.'
+                'Required parameter CreateAudienceBetaInput was null or undefined when calling createAudience.'
             );
         }
 
@@ -192,8 +195,8 @@ export class AudiencesApi {
             useQuerystring: this._useQuerystring,
             json: true,
             body: ObjectSerializer.serialize(
-                CreateAudienceAlphaInput,
-                'CreateAudienceAlphaInput'
+                CreateAudienceBetaInput,
+                'CreateAudienceBetaInput'
             ),
         };
 

@@ -11,10 +11,19 @@
  */
 
 import { RequestFile } from './models';
-import { CreateAudienceBetaOutput } from './createAudienceBetaOutput';
 
-export class CreateAudience200Response {
-    'data'?: CreateAudienceBetaOutput;
+/**
+ * Compute conditions wrapper for beta API.
+ */
+export class ComputeConditionsWrapper {
+    /**
+     * The query format.
+     */
+    'format': string;
+    /**
+     * The query language string or AST object defining the audience segmentation criteria.
+     */
+    'conditions': object | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,13 +33,18 @@ export class CreateAudience200Response {
         type: string;
     }> = [
         {
-            name: 'data',
-            baseName: 'data',
-            type: 'CreateAudienceBetaOutput',
+            name: 'format',
+            baseName: 'format',
+            type: 'string',
+        },
+        {
+            name: 'conditions',
+            baseName: 'conditions',
+            type: 'object',
         },
     ];
 
     static getAttributeTypeMap() {
-        return CreateAudience200Response.attributeTypeMap;
+        return ComputeConditionsWrapper.attributeTypeMap;
     }
 }

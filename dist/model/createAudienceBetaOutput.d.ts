@@ -1,7 +1,6 @@
-export declare class ReadAudiencePreviewOptions {
-    'filterByExternalIds'?: Array<string>;
-    'includeHistoricalData'?: boolean;
-    'backfillEventDataDays'?: number;
+import { AudienceSummary } from './audienceSummary';
+export declare class CreateAudienceBetaOutput {
+    'audience': AudienceSummary;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

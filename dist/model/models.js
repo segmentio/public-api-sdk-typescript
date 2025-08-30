@@ -71,6 +71,7 @@ __exportStar(require("./cancelReverseETLSyncForModel200Response"), exports);
 __exportStar(require("./cancelReverseETLSyncForModelInput"), exports);
 __exportStar(require("./cancelReverseETLSyncForModelOutput"), exports);
 __exportStar(require("./commonSourceSettingsV1"), exports);
+__exportStar(require("./computeConditionsWrapper"), exports);
 __exportStar(require("./computedTraitSummary"), exports);
 __exportStar(require("./computedTraitsDefinition"), exports);
 __exportStar(require("./config"), exports);
@@ -78,8 +79,11 @@ __exportStar(require("./config1"), exports);
 __exportStar(require("./connection"), exports);
 __exportStar(require("./contact"), exports);
 __exportStar(require("./createAudience200Response"), exports);
+__exportStar(require("./createAudience200Response1"), exports);
 __exportStar(require("./createAudienceAlphaInput"), exports);
 __exportStar(require("./createAudienceAlphaOutput"), exports);
+__exportStar(require("./createAudienceBetaInput"), exports);
+__exportStar(require("./createAudienceBetaOutput"), exports);
 __exportStar(require("./createAudiencePreview200Response"), exports);
 __exportStar(require("./createAudiencePreview200Response1"), exports);
 __exportStar(require("./createAudiencePreviewAlphaInput"), exports);
@@ -699,6 +703,7 @@ var cancelReverseETLSyncForModel200Response_1 = require("./cancelReverseETLSyncF
 var cancelReverseETLSyncForModelInput_1 = require("./cancelReverseETLSyncForModelInput");
 var cancelReverseETLSyncForModelOutput_1 = require("./cancelReverseETLSyncForModelOutput");
 var commonSourceSettingsV1_1 = require("./commonSourceSettingsV1");
+var computeConditionsWrapper_1 = require("./computeConditionsWrapper");
 var computedTraitSummary_1 = require("./computedTraitSummary");
 var computedTraitsDefinition_1 = require("./computedTraitsDefinition");
 var config_1 = require("./config");
@@ -706,8 +711,11 @@ var config1_1 = require("./config1");
 var connection_1 = require("./connection");
 var contact_1 = require("./contact");
 var createAudience200Response_1 = require("./createAudience200Response");
+var createAudience200Response1_1 = require("./createAudience200Response1");
 var createAudienceAlphaInput_1 = require("./createAudienceAlphaInput");
 var createAudienceAlphaOutput_1 = require("./createAudienceAlphaOutput");
+var createAudienceBetaInput_1 = require("./createAudienceBetaInput");
+var createAudienceBetaOutput_1 = require("./createAudienceBetaOutput");
 var createAudiencePreview200Response_1 = require("./createAudiencePreview200Response");
 var createAudiencePreview200Response1_1 = require("./createAudiencePreview200Response1");
 var createAudiencePreviewAlphaInput_1 = require("./createAudiencePreviewAlphaInput");
@@ -1294,6 +1302,7 @@ var enumsMap = {
     'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum': audienceSummaryWithAudienceTypeAndLookback_1.AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
     'ComputedTraitsDefinition.TypeEnum': computedTraitsDefinition_1.ComputedTraitsDefinition.TypeEnum,
     'CreateAudienceAlphaInput.AudienceTypeEnum': createAudienceAlphaInput_1.CreateAudienceAlphaInput.AudienceTypeEnum,
+    'CreateAudienceBetaInput.ProductVariantEnum': createAudienceBetaInput_1.CreateAudienceBetaInput.ProductVariantEnum,
     'CreateAudiencePreviewAlphaInput.AudienceTypeEnum': createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
     'CreateAudiencePreviewBetaInput.AudienceTypeEnum': createAudiencePreviewBetaInput_1.CreateAudiencePreviewBetaInput.AudienceTypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
@@ -1441,6 +1450,7 @@ var typeMap = {
     CancelReverseETLSyncForModelInput: cancelReverseETLSyncForModelInput_1.CancelReverseETLSyncForModelInput,
     CancelReverseETLSyncForModelOutput: cancelReverseETLSyncForModelOutput_1.CancelReverseETLSyncForModelOutput,
     CommonSourceSettingsV1: commonSourceSettingsV1_1.CommonSourceSettingsV1,
+    ComputeConditionsWrapper: computeConditionsWrapper_1.ComputeConditionsWrapper,
     ComputedTraitSummary: computedTraitSummary_1.ComputedTraitSummary,
     ComputedTraitsDefinition: computedTraitsDefinition_1.ComputedTraitsDefinition,
     Config: config_1.Config,
@@ -1448,8 +1458,11 @@ var typeMap = {
     Connection: connection_1.Connection,
     Contact: contact_1.Contact,
     CreateAudience200Response: createAudience200Response_1.CreateAudience200Response,
+    CreateAudience200Response1: createAudience200Response1_1.CreateAudience200Response1,
     CreateAudienceAlphaInput: createAudienceAlphaInput_1.CreateAudienceAlphaInput,
     CreateAudienceAlphaOutput: createAudienceAlphaOutput_1.CreateAudienceAlphaOutput,
+    CreateAudienceBetaInput: createAudienceBetaInput_1.CreateAudienceBetaInput,
+    CreateAudienceBetaOutput: createAudienceBetaOutput_1.CreateAudienceBetaOutput,
     CreateAudiencePreview200Response: createAudiencePreview200Response_1.CreateAudiencePreview200Response,
     CreateAudiencePreview200Response1: createAudiencePreview200Response1_1.CreateAudiencePreview200Response1,
     CreateAudiencePreviewAlphaInput: createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput,
