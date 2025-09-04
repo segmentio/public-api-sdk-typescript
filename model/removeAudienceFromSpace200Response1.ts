@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { RemoveAudienceFromSpaceBetaOutput } from './removeAudienceFromSpaceBetaOutput';
+import { RemoveAudienceFromSpaceAlphaOutput } from './removeAudienceFromSpaceAlphaOutput';
 
-export class RemoveAudienceFromSpace200Response {
-    'data'?: RemoveAudienceFromSpaceBetaOutput;
+export class RemoveAudienceFromSpace200Response1 {
+    'data'?: RemoveAudienceFromSpaceAlphaOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -26,11 +26,11 @@ export class RemoveAudienceFromSpace200Response {
         {
             name: 'data',
             baseName: 'data',
-            type: 'RemoveAudienceFromSpaceBetaOutput',
+            type: 'RemoveAudienceFromSpaceAlphaOutput',
         },
     ];
 
     static getAttributeTypeMap() {
-        return RemoveAudienceFromSpace200Response.attributeTypeMap;
+        return RemoveAudienceFromSpace200Response1.attributeTypeMap;
     }
 }

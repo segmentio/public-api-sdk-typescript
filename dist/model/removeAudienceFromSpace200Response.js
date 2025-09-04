@@ -12,7 +12,7 @@ var RemoveAudienceFromSpace200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'RemoveAudienceFromSpaceAlphaOutput',
+            type: 'RemoveAudienceFromSpaceBetaOutput',
         },
     ];
     return RemoveAudienceFromSpace200Response;

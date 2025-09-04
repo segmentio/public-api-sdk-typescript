@@ -36,6 +36,7 @@ import { ListAudiences200Response1 } from '../model/listAudiences200Response1';
 import { ListAudiencesPaginationInput } from '../model/listAudiencesPaginationInput';
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromSpace200Response';
+import { RemoveAudienceFromSpace200Response1 } from '../model/removeAudienceFromSpace200Response1';
 import { RequestErrorEnvelope } from '../model/requestErrorEnvelope';
 import { UpdateAudienceForSpace200Response } from '../model/updateAudienceForSpace200Response';
 import { UpdateAudienceForSpaceAlphaInput } from '../model/updateAudienceForSpaceAlphaInput';
@@ -1233,7 +1234,7 @@ export class AudiencesApi {
         });
     }
     /**
-     * Deletes an Audience by id and spaceId.  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Audience feature enabled. Please reach out to your customer success manager for more information.  • When called, this endpoint may generate the `Audience Deleted` event in the [audit trail](/tag/Audit-Trail).   The rate limit for this endpoint is 20 requests per minute, which is lower than the default due to access pattern restrictions. Once reached, this endpoint will respond with the 429 HTTP status code with headers indicating the limit parameters. See [Rate Limiting](/#tag/Rate-Limits) for more information.
+     * Deletes an Audience by id and spaceId.  • This endpoint is in **Beta** testing.  Please submit any feedback by sending an email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Audience feature enabled. Please reach out to your customer success manager for more information.  • When called, this endpoint may generate the `Audience Deleted` event in the [audit trail](/tag/Audit-Trail).   The rate limit for this endpoint is 20 requests per minute, which is lower than the default due to access pattern restrictions. Once reached, this endpoint will respond with the 429 HTTP status code with headers indicating the limit parameters. See [Rate Limiting](/#tag/Rate-Limits) for more information.
      * @summary Remove Audience from Space
      * @param spaceId
      * @param id
@@ -1260,6 +1261,7 @@ export class AudiencesApi {
             this._defaultHeaders
         );
         const produces = [
+            'application/vnd.segment.v1beta+json',
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];

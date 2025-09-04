@@ -11,10 +11,15 @@
  */
 
 import { RequestFile } from './models';
-import { RemoveAudienceFromSpaceBetaOutput } from './removeAudienceFromSpaceBetaOutput';
 
-export class RemoveAudienceFromSpace200Response {
-    'data'?: RemoveAudienceFromSpaceBetaOutput;
+/**
+ * Delete audience endpoint output.
+ */
+export class RemoveAudienceFromSpaceBetaOutput {
+    /**
+     * The status of the operation.
+     */
+    'status': RemoveAudienceFromSpaceBetaOutput.StatusEnum;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,13 +29,19 @@ export class RemoveAudienceFromSpace200Response {
         type: string;
     }> = [
         {
-            name: 'data',
-            baseName: 'data',
-            type: 'RemoveAudienceFromSpaceBetaOutput',
+            name: 'status',
+            baseName: 'status',
+            type: 'RemoveAudienceFromSpaceBetaOutput.StatusEnum',
         },
     ];
 
     static getAttributeTypeMap() {
-        return RemoveAudienceFromSpace200Response.attributeTypeMap;
+        return RemoveAudienceFromSpaceBetaOutput.attributeTypeMap;
+    }
+}
+
+export namespace RemoveAudienceFromSpaceBetaOutput {
+    export enum StatusEnum {
+        SUCCESS = <any>'SUCCESS',
     }
 }

@@ -862,6 +862,7 @@ var AudiencesApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
                     'application/json',
                 ];
