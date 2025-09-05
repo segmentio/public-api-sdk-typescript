@@ -1,6 +1,5 @@
-import { RemoveAudienceFromSpaceBetaOutput } from './removeAudienceFromSpaceBetaOutput';
-export declare class RemoveAudienceFromSpace200Response {
-    'data'?: RemoveAudienceFromSpaceBetaOutput;
+export declare class RemoveAudienceFromSpaceBetaOutput {
+    'status': RemoveAudienceFromSpaceBetaOutput.StatusEnum;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -12,4 +11,9 @@ export declare class RemoveAudienceFromSpace200Response {
         baseName: string;
         type: string;
     }[];
+}
+export declare namespace RemoveAudienceFromSpaceBetaOutput {
+    enum StatusEnum {
+        SUCCESS
+    }
 }

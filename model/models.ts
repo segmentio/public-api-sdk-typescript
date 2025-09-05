@@ -466,7 +466,9 @@ export * from './regulationListEntryV1';
 export * from './removeActivationFromAudience200Response';
 export * from './removeActivationFromAudienceOutput';
 export * from './removeAudienceFromSpace200Response';
+export * from './removeAudienceFromSpace200Response1';
 export * from './removeAudienceFromSpaceAlphaOutput';
+export * from './removeAudienceFromSpaceBetaOutput';
 export * from './removeComputedTraitFromSpace200Response';
 export * from './removeComputedTraitFromSpaceAlphaOutput';
 export * from './removeFilterFromDestination200Response';
@@ -1107,7 +1109,9 @@ import { RegulationListEntryV1 } from './regulationListEntryV1';
 import { RemoveActivationFromAudience200Response } from './removeActivationFromAudience200Response';
 import { RemoveActivationFromAudienceOutput } from './removeActivationFromAudienceOutput';
 import { RemoveAudienceFromSpace200Response } from './removeAudienceFromSpace200Response';
+import { RemoveAudienceFromSpace200Response1 } from './removeAudienceFromSpace200Response1';
 import { RemoveAudienceFromSpaceAlphaOutput } from './removeAudienceFromSpaceAlphaOutput';
+import { RemoveAudienceFromSpaceBetaOutput } from './removeAudienceFromSpaceBetaOutput';
 import { RemoveComputedTraitFromSpace200Response } from './removeComputedTraitFromSpace200Response';
 import { RemoveComputedTraitFromSpaceAlphaOutput } from './removeComputedTraitFromSpaceAlphaOutput';
 import { RemoveFilterFromDestination200Response } from './removeFilterFromDestination200Response';
@@ -1401,6 +1405,8 @@ let enumsMap: { [index: string]: any } = {
         RegulationListEntryV1.RegulationTypeEnum,
     'RemoveAudienceFromSpaceAlphaOutput.StatusEnum':
         RemoveAudienceFromSpaceAlphaOutput.StatusEnum,
+    'RemoveAudienceFromSpaceBetaOutput.StatusEnum':
+        RemoveAudienceFromSpaceBetaOutput.StatusEnum,
     'RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum':
         RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum':
@@ -1989,7 +1995,9 @@ let typeMap: { [index: string]: any } = {
         RemoveActivationFromAudience200Response,
     RemoveActivationFromAudienceOutput: RemoveActivationFromAudienceOutput,
     RemoveAudienceFromSpace200Response: RemoveAudienceFromSpace200Response,
+    RemoveAudienceFromSpace200Response1: RemoveAudienceFromSpace200Response1,
     RemoveAudienceFromSpaceAlphaOutput: RemoveAudienceFromSpaceAlphaOutput,
+    RemoveAudienceFromSpaceBetaOutput: RemoveAudienceFromSpaceBetaOutput,
     RemoveComputedTraitFromSpace200Response:
         RemoveComputedTraitFromSpace200Response,
     RemoveComputedTraitFromSpaceAlphaOutput:
