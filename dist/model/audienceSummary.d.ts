@@ -1,3 +1,4 @@
+import { AudienceConditionsWrapper } from './audienceConditionsWrapper';
 import { AudienceDefinition } from './audienceDefinition';
 import { AudienceOptions } from './audienceOptions';
 export declare class AudienceSummary {
@@ -8,6 +9,7 @@ export declare class AudienceSummary {
     'key': string;
     'enabled': boolean;
     'definition': AudienceDefinition | null;
+    'conditions'?: Array<AudienceConditionsWrapper>;
     'status'?: string;
     'createdBy': string;
     'updatedBy': string;

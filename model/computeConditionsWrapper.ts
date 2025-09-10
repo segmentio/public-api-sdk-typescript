@@ -11,10 +11,19 @@
  */
 
 import { RequestFile } from './models';
-import { CreateAudienceBetaOutput } from './createAudienceBetaOutput';
 
-export class CreateAudience200Response {
-    'data'?: CreateAudienceBetaOutput;
+/**
+ * Compute conditions wrapper for beta API.
+ */
+export class ComputeConditionsWrapper {
+    /**
+     * The query format.
+     */
+    'format': ComputeConditionsWrapper.FormatEnum;
+    /**
+     * The query language string or AST object defining the audience segmentation criteria. When format is \'AST\', this should be an object. When format is \'CQL\', this should be a string. Validation is handled at the business logic level due to conditional nature.
+     */
+    'conditions': object | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,13 +33,25 @@ export class CreateAudience200Response {
         type: string;
     }> = [
         {
-            name: 'data',
-            baseName: 'data',
-            type: 'CreateAudienceBetaOutput',
+            name: 'format',
+            baseName: 'format',
+            type: 'ComputeConditionsWrapper.FormatEnum',
+        },
+        {
+            name: 'conditions',
+            baseName: 'conditions',
+            type: 'object',
         },
     ];
 
     static getAttributeTypeMap() {
-        return CreateAudience200Response.attributeTypeMap;
+        return ComputeConditionsWrapper.attributeTypeMap;
+    }
+}
+
+export namespace ComputeConditionsWrapper {
+    export enum FormatEnum {
+        AST = <any>'AST',
+        CQL = <any>'CQL',
     }
 }

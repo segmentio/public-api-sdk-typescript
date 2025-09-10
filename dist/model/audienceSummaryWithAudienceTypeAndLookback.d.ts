@@ -1,4 +1,5 @@
 import { AudienceComputeCadence } from './audienceComputeCadence';
+import { AudienceConditionsWrapper } from './audienceConditionsWrapper';
 import { AudienceDefinition } from './audienceDefinition';
 import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
 import { AudienceSchedule } from './audienceSchedule';
@@ -15,6 +16,7 @@ export declare class AudienceSummaryWithAudienceTypeAndLookback {
     'key': string;
     'enabled': boolean;
     'definition': AudienceDefinition | null;
+    'conditions'?: Array<AudienceConditionsWrapper>;
     'status'?: string;
     'createdBy': string;
     'updatedBy': string;

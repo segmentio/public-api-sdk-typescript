@@ -11,10 +11,19 @@
  */
 
 import { RequestFile } from './models';
-import { CreateAudienceBetaOutput } from './createAudienceBetaOutput';
 
-export class CreateAudience200Response {
-    'data'?: CreateAudienceBetaOutput;
+/**
+ * A wrapper object containing compute conditions in a specific format.
+ */
+export class AudienceConditionsWrapper {
+    /**
+     * Discriminator field denoting what format the compute conditions are specified in.
+     */
+    'format': AudienceConditionsWrapper.FormatEnum;
+    /**
+     * Compute conditions specified in the form denoted by the \'format\' discriminator field.
+     */
+    'conditions': object | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,13 +33,25 @@ export class CreateAudience200Response {
         type: string;
     }> = [
         {
-            name: 'data',
-            baseName: 'data',
-            type: 'CreateAudienceBetaOutput',
+            name: 'format',
+            baseName: 'format',
+            type: 'AudienceConditionsWrapper.FormatEnum',
+        },
+        {
+            name: 'conditions',
+            baseName: 'conditions',
+            type: 'object',
         },
     ];
 
     static getAttributeTypeMap() {
-        return CreateAudience200Response.attributeTypeMap;
+        return AudienceConditionsWrapper.attributeTypeMap;
+    }
+}
+
+export namespace AudienceConditionsWrapper {
+    export enum FormatEnum {
+        AST = <any>'AST',
+        CQL = <any>'CQL',
     }
 }

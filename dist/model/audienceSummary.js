@@ -45,6 +45,11 @@ var AudienceSummary = (function () {
             type: 'AudienceDefinition',
         },
         {
+            name: 'conditions',
+            baseName: 'conditions',
+            type: 'Array<AudienceConditionsWrapper>',
+        },
+        {
             name: 'status',
             baseName: 'status',
             type: 'string',

@@ -48,7 +48,9 @@ __exportStar(require("./advancedWarehouseSyncScheduleV1Input"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Output"), exports);
 __exportStar(require("./allowedLabelBeta"), exports);
 __exportStar(require("./audienceComputeCadence"), exports);
+__exportStar(require("./audienceConditionsWrapper"), exports);
 __exportStar(require("./audienceDefinition"), exports);
+__exportStar(require("./audienceDefinitionEnhanced"), exports);
 __exportStar(require("./audienceDefinitionWithoutType"), exports);
 __exportStar(require("./audienceOptions"), exports);
 __exportStar(require("./audienceOptionsWithLookback"), exports);
@@ -71,6 +73,7 @@ __exportStar(require("./cancelReverseETLSyncForModel200Response"), exports);
 __exportStar(require("./cancelReverseETLSyncForModelInput"), exports);
 __exportStar(require("./cancelReverseETLSyncForModelOutput"), exports);
 __exportStar(require("./commonSourceSettingsV1"), exports);
+__exportStar(require("./computeConditionsWrapper"), exports);
 __exportStar(require("./computedTraitSummary"), exports);
 __exportStar(require("./computedTraitsDefinition"), exports);
 __exportStar(require("./config"), exports);
@@ -78,8 +81,11 @@ __exportStar(require("./config1"), exports);
 __exportStar(require("./connection"), exports);
 __exportStar(require("./contact"), exports);
 __exportStar(require("./createAudience200Response"), exports);
+__exportStar(require("./createAudience200Response1"), exports);
 __exportStar(require("./createAudienceAlphaInput"), exports);
 __exportStar(require("./createAudienceAlphaOutput"), exports);
+__exportStar(require("./createAudienceBetaInput"), exports);
+__exportStar(require("./createAudienceBetaOutput"), exports);
 __exportStar(require("./createAudiencePreview200Response"), exports);
 __exportStar(require("./createAudiencePreview200Response1"), exports);
 __exportStar(require("./createAudiencePreviewAlphaInput"), exports);
@@ -678,7 +684,9 @@ var advancedWarehouseSyncScheduleV1Input_1 = require("./advancedWarehouseSyncSch
 var advancedWarehouseSyncScheduleV1Output_1 = require("./advancedWarehouseSyncScheduleV1Output");
 var allowedLabelBeta_1 = require("./allowedLabelBeta");
 var audienceComputeCadence_1 = require("./audienceComputeCadence");
+var audienceConditionsWrapper_1 = require("./audienceConditionsWrapper");
 var audienceDefinition_1 = require("./audienceDefinition");
+var audienceDefinitionEnhanced_1 = require("./audienceDefinitionEnhanced");
 var audienceDefinitionWithoutType_1 = require("./audienceDefinitionWithoutType");
 var audienceOptions_1 = require("./audienceOptions");
 var audienceOptionsWithLookback_1 = require("./audienceOptionsWithLookback");
@@ -701,6 +709,7 @@ var cancelReverseETLSyncForModel200Response_1 = require("./cancelReverseETLSyncF
 var cancelReverseETLSyncForModelInput_1 = require("./cancelReverseETLSyncForModelInput");
 var cancelReverseETLSyncForModelOutput_1 = require("./cancelReverseETLSyncForModelOutput");
 var commonSourceSettingsV1_1 = require("./commonSourceSettingsV1");
+var computeConditionsWrapper_1 = require("./computeConditionsWrapper");
 var computedTraitSummary_1 = require("./computedTraitSummary");
 var computedTraitsDefinition_1 = require("./computedTraitsDefinition");
 var config_1 = require("./config");
@@ -708,8 +717,11 @@ var config1_1 = require("./config1");
 var connection_1 = require("./connection");
 var contact_1 = require("./contact");
 var createAudience200Response_1 = require("./createAudience200Response");
+var createAudience200Response1_1 = require("./createAudience200Response1");
 var createAudienceAlphaInput_1 = require("./createAudienceAlphaInput");
 var createAudienceAlphaOutput_1 = require("./createAudienceAlphaOutput");
+var createAudienceBetaInput_1 = require("./createAudienceBetaInput");
+var createAudienceBetaOutput_1 = require("./createAudienceBetaOutput");
 var createAudiencePreview200Response_1 = require("./createAudiencePreview200Response");
 var createAudiencePreview200Response1_1 = require("./createAudiencePreview200Response1");
 var createAudiencePreviewAlphaInput_1 = require("./createAudiencePreviewAlphaInput");
@@ -1289,15 +1301,19 @@ var enumsMap = {
     'AddConnectionFromSourceToWarehouseV1Output.StatusEnum': addConnectionFromSourceToWarehouseV1Output_1.AddConnectionFromSourceToWarehouseV1Output.StatusEnum,
     'AddSourceToTrackingPlanV1Output.StatusEnum': addSourceToTrackingPlanV1Output_1.AddSourceToTrackingPlanV1Output.StatusEnum,
     'AudienceComputeCadence.TypeEnum': audienceComputeCadence_1.AudienceComputeCadence.TypeEnum,
+    'AudienceConditionsWrapper.FormatEnum': audienceConditionsWrapper_1.AudienceConditionsWrapper.FormatEnum,
     'AudienceDefinition.TypeEnum': audienceDefinition_1.AudienceDefinition.TypeEnum,
+    'AudienceDefinitionEnhanced.TypeEnum': audienceDefinitionEnhanced_1.AudienceDefinitionEnhanced.TypeEnum,
     'AudiencePreview.AudienceTypeEnum': audiencePreview_1.AudiencePreview.AudienceTypeEnum,
     'AudiencePreview.StatusEnum': audiencePreview_1.AudiencePreview.StatusEnum,
     'AudienceSchedule.StrategyEnum': audienceSchedule_1.AudienceSchedule.StrategyEnum,
     'AudienceSize.TypeEnum': audienceSize_1.AudienceSize.TypeEnum,
     'AudienceSummary.AudienceTypeEnum': audienceSummary_1.AudienceSummary.AudienceTypeEnum,
     'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum': audienceSummaryWithAudienceTypeAndLookback_1.AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
+    'ComputeConditionsWrapper.FormatEnum': computeConditionsWrapper_1.ComputeConditionsWrapper.FormatEnum,
     'ComputedTraitsDefinition.TypeEnum': computedTraitsDefinition_1.ComputedTraitsDefinition.TypeEnum,
     'CreateAudienceAlphaInput.AudienceTypeEnum': createAudienceAlphaInput_1.CreateAudienceAlphaInput.AudienceTypeEnum,
+    'CreateAudienceBetaInput.ProductVariantEnum': createAudienceBetaInput_1.CreateAudienceBetaInput.ProductVariantEnum,
     'CreateAudiencePreviewAlphaInput.AudienceTypeEnum': createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
     'CreateAudiencePreviewBetaInput.AudienceTypeEnum': createAudiencePreviewBetaInput_1.CreateAudiencePreviewBetaInput.AudienceTypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
@@ -1423,7 +1439,9 @@ var typeMap = {
     AdvancedWarehouseSyncScheduleV1Output: advancedWarehouseSyncScheduleV1Output_1.AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: allowedLabelBeta_1.AllowedLabelBeta,
     AudienceComputeCadence: audienceComputeCadence_1.AudienceComputeCadence,
+    AudienceConditionsWrapper: audienceConditionsWrapper_1.AudienceConditionsWrapper,
     AudienceDefinition: audienceDefinition_1.AudienceDefinition,
+    AudienceDefinitionEnhanced: audienceDefinitionEnhanced_1.AudienceDefinitionEnhanced,
     AudienceDefinitionWithoutType: audienceDefinitionWithoutType_1.AudienceDefinitionWithoutType,
     AudienceOptions: audienceOptions_1.AudienceOptions,
     AudienceOptionsWithLookback: audienceOptionsWithLookback_1.AudienceOptionsWithLookback,
@@ -1446,6 +1464,7 @@ var typeMap = {
     CancelReverseETLSyncForModelInput: cancelReverseETLSyncForModelInput_1.CancelReverseETLSyncForModelInput,
     CancelReverseETLSyncForModelOutput: cancelReverseETLSyncForModelOutput_1.CancelReverseETLSyncForModelOutput,
     CommonSourceSettingsV1: commonSourceSettingsV1_1.CommonSourceSettingsV1,
+    ComputeConditionsWrapper: computeConditionsWrapper_1.ComputeConditionsWrapper,
     ComputedTraitSummary: computedTraitSummary_1.ComputedTraitSummary,
     ComputedTraitsDefinition: computedTraitsDefinition_1.ComputedTraitsDefinition,
     Config: config_1.Config,
@@ -1453,8 +1472,11 @@ var typeMap = {
     Connection: connection_1.Connection,
     Contact: contact_1.Contact,
     CreateAudience200Response: createAudience200Response_1.CreateAudience200Response,
+    CreateAudience200Response1: createAudience200Response1_1.CreateAudience200Response1,
     CreateAudienceAlphaInput: createAudienceAlphaInput_1.CreateAudienceAlphaInput,
     CreateAudienceAlphaOutput: createAudienceAlphaOutput_1.CreateAudienceAlphaOutput,
+    CreateAudienceBetaInput: createAudienceBetaInput_1.CreateAudienceBetaInput,
+    CreateAudienceBetaOutput: createAudienceBetaOutput_1.CreateAudienceBetaOutput,
     CreateAudiencePreview200Response: createAudiencePreview200Response_1.CreateAudiencePreview200Response,
     CreateAudiencePreview200Response1: createAudiencePreview200Response1_1.CreateAudiencePreview200Response1,
     CreateAudiencePreviewAlphaInput: createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput,

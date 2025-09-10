@@ -1,6 +1,6 @@
-import { CreateAudienceBetaOutput } from './createAudienceBetaOutput';
-export declare class CreateAudience200Response {
-    'data'?: CreateAudienceBetaOutput;
+export declare class ComputeConditionsWrapper {
+    'format': ComputeConditionsWrapper.FormatEnum;
+    'conditions': object | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -12,4 +12,10 @@ export declare class CreateAudience200Response {
         baseName: string;
         type: string;
     }[];
+}
+export declare namespace ComputeConditionsWrapper {
+    enum FormatEnum {
+        AST,
+        CQL
+    }
 }

@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { AudienceConditionsWrapper } from './audienceConditionsWrapper';
 import { AudienceDefinition } from './audienceDefinition';
 import { AudienceOptions } from './audienceOptions';
 
@@ -43,6 +44,10 @@ export class AudienceSummary {
      */
     'enabled': boolean;
     'definition': AudienceDefinition | null;
+    /**
+     * Array of conditions in different formats (AST, CQL) - Enhanced format.
+     */
+    'conditions'?: Array<AudienceConditionsWrapper>;
     /**
      * Status for the audience.  Possible values: Backfilling, Computing, Failed, Live, Awaiting Destinations, Disabled.
      */
@@ -110,6 +115,11 @@ export class AudienceSummary {
             name: 'definition',
             baseName: 'definition',
             type: 'AudienceDefinition',
+        },
+        {
+            name: 'conditions',
+            baseName: 'conditions',
+            type: 'Array<AudienceConditionsWrapper>',
         },
         {
             name: 'status',

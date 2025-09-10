@@ -33,7 +33,9 @@ export * from './advancedWarehouseSyncScheduleV1Input';
 export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
 export * from './audienceComputeCadence';
+export * from './audienceConditionsWrapper';
 export * from './audienceDefinition';
+export * from './audienceDefinitionEnhanced';
 export * from './audienceDefinitionWithoutType';
 export * from './audienceOptions';
 export * from './audienceOptionsWithLookback';
@@ -56,6 +58,7 @@ export * from './cancelReverseETLSyncForModel200Response';
 export * from './cancelReverseETLSyncForModelInput';
 export * from './cancelReverseETLSyncForModelOutput';
 export * from './commonSourceSettingsV1';
+export * from './computeConditionsWrapper';
 export * from './computedTraitSummary';
 export * from './computedTraitsDefinition';
 export * from './config';
@@ -63,8 +66,11 @@ export * from './config1';
 export * from './connection';
 export * from './contact';
 export * from './createAudience200Response';
+export * from './createAudience200Response1';
 export * from './createAudienceAlphaInput';
 export * from './createAudienceAlphaOutput';
+export * from './createAudienceBetaInput';
+export * from './createAudienceBetaOutput';
 export * from './createAudiencePreview200Response';
 export * from './createAudiencePreview200Response1';
 export * from './createAudiencePreviewAlphaInput';
@@ -676,7 +682,9 @@ import { AdvancedWarehouseSyncScheduleV1Input } from './advancedWarehouseSyncSch
 import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncScheduleV1Output';
 import { AllowedLabelBeta } from './allowedLabelBeta';
 import { AudienceComputeCadence } from './audienceComputeCadence';
+import { AudienceConditionsWrapper } from './audienceConditionsWrapper';
 import { AudienceDefinition } from './audienceDefinition';
+import { AudienceDefinitionEnhanced } from './audienceDefinitionEnhanced';
 import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
 import { AudienceOptions } from './audienceOptions';
 import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
@@ -699,6 +707,7 @@ import { CancelReverseETLSyncForModel200Response } from './cancelReverseETLSyncF
 import { CancelReverseETLSyncForModelInput } from './cancelReverseETLSyncForModelInput';
 import { CancelReverseETLSyncForModelOutput } from './cancelReverseETLSyncForModelOutput';
 import { CommonSourceSettingsV1 } from './commonSourceSettingsV1';
+import { ComputeConditionsWrapper } from './computeConditionsWrapper';
 import { ComputedTraitSummary } from './computedTraitSummary';
 import { ComputedTraitsDefinition } from './computedTraitsDefinition';
 import { Config } from './config';
@@ -706,8 +715,11 @@ import { Config1 } from './config1';
 import { Connection } from './connection';
 import { Contact } from './contact';
 import { CreateAudience200Response } from './createAudience200Response';
+import { CreateAudience200Response1 } from './createAudience200Response1';
 import { CreateAudienceAlphaInput } from './createAudienceAlphaInput';
 import { CreateAudienceAlphaOutput } from './createAudienceAlphaOutput';
+import { CreateAudienceBetaInput } from './createAudienceBetaInput';
+import { CreateAudienceBetaOutput } from './createAudienceBetaOutput';
 import { CreateAudiencePreview200Response } from './createAudiencePreview200Response';
 import { CreateAudiencePreview200Response1 } from './createAudiencePreview200Response1';
 import { CreateAudiencePreviewAlphaInput } from './createAudiencePreviewAlphaInput';
@@ -1292,7 +1304,10 @@ let enumsMap: { [index: string]: any } = {
     'AddSourceToTrackingPlanV1Output.StatusEnum':
         AddSourceToTrackingPlanV1Output.StatusEnum,
     'AudienceComputeCadence.TypeEnum': AudienceComputeCadence.TypeEnum,
+    'AudienceConditionsWrapper.FormatEnum':
+        AudienceConditionsWrapper.FormatEnum,
     'AudienceDefinition.TypeEnum': AudienceDefinition.TypeEnum,
+    'AudienceDefinitionEnhanced.TypeEnum': AudienceDefinitionEnhanced.TypeEnum,
     'AudiencePreview.AudienceTypeEnum': AudiencePreview.AudienceTypeEnum,
     'AudiencePreview.StatusEnum': AudiencePreview.StatusEnum,
     'AudienceSchedule.StrategyEnum': AudienceSchedule.StrategyEnum,
@@ -1300,9 +1315,12 @@ let enumsMap: { [index: string]: any } = {
     'AudienceSummary.AudienceTypeEnum': AudienceSummary.AudienceTypeEnum,
     'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum':
         AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
+    'ComputeConditionsWrapper.FormatEnum': ComputeConditionsWrapper.FormatEnum,
     'ComputedTraitsDefinition.TypeEnum': ComputedTraitsDefinition.TypeEnum,
     'CreateAudienceAlphaInput.AudienceTypeEnum':
         CreateAudienceAlphaInput.AudienceTypeEnum,
+    'CreateAudienceBetaInput.ProductVariantEnum':
+        CreateAudienceBetaInput.ProductVariantEnum,
     'CreateAudiencePreviewAlphaInput.AudienceTypeEnum':
         CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
     'CreateAudiencePreviewBetaInput.AudienceTypeEnum':
@@ -1488,7 +1506,9 @@ let typeMap: { [index: string]: any } = {
         AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: AllowedLabelBeta,
     AudienceComputeCadence: AudienceComputeCadence,
+    AudienceConditionsWrapper: AudienceConditionsWrapper,
     AudienceDefinition: AudienceDefinition,
+    AudienceDefinitionEnhanced: AudienceDefinitionEnhanced,
     AudienceDefinitionWithoutType: AudienceDefinitionWithoutType,
     AudienceOptions: AudienceOptions,
     AudienceOptionsWithLookback: AudienceOptionsWithLookback,
@@ -1516,6 +1536,7 @@ let typeMap: { [index: string]: any } = {
     CancelReverseETLSyncForModelInput: CancelReverseETLSyncForModelInput,
     CancelReverseETLSyncForModelOutput: CancelReverseETLSyncForModelOutput,
     CommonSourceSettingsV1: CommonSourceSettingsV1,
+    ComputeConditionsWrapper: ComputeConditionsWrapper,
     ComputedTraitSummary: ComputedTraitSummary,
     ComputedTraitsDefinition: ComputedTraitsDefinition,
     Config: Config,
@@ -1523,8 +1544,11 @@ let typeMap: { [index: string]: any } = {
     Connection: Connection,
     Contact: Contact,
     CreateAudience200Response: CreateAudience200Response,
+    CreateAudience200Response1: CreateAudience200Response1,
     CreateAudienceAlphaInput: CreateAudienceAlphaInput,
     CreateAudienceAlphaOutput: CreateAudienceAlphaOutput,
+    CreateAudienceBetaInput: CreateAudienceBetaInput,
+    CreateAudienceBetaOutput: CreateAudienceBetaOutput,
     CreateAudiencePreview200Response: CreateAudiencePreview200Response,
     CreateAudiencePreview200Response1: CreateAudiencePreview200Response1,
     CreateAudiencePreviewAlphaInput: CreateAudiencePreviewAlphaInput,
