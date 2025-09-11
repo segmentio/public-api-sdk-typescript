@@ -19,6 +19,11 @@ var TraitOptions = (function () {
             baseName: 'includeAnonymousUsers',
             type: 'boolean',
         },
+        {
+            name: 'backfillDurationDays',
+            baseName: 'backfillDurationDays',
+            type: 'number',
+        },
     ];
     return TraitOptions;
 }());
