@@ -12,9 +12,6 @@
 
 import { RequestFile } from './models';
 
-/**
- * A class that encapsulates the output shared across endpoints for a given activation.
- */
 export class ActivationSummaryOutput {
     /**
      * The activation id.

@@ -17,6 +17,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.VoidAuth = exports.OAuth = exports.ApiKeyAuth = exports.HttpBearerAuth = exports.HttpBasicAuth = exports.ObjectSerializer = void 0;
 __exportStar(require("./aPICallSnapshotV1"), exports);
 __exportStar(require("./accessPermissionV1"), exports);
+__exportStar(require("./activationOutput"), exports);
 __exportStar(require("./activationSummaryOutput"), exports);
 __exportStar(require("./addActivationToAudience200Response"), exports);
 __exportStar(require("./addActivationToAudienceAlphaInput"), exports);
@@ -647,6 +648,7 @@ __exportStar(require("./warehouseV1"), exports);
 __exportStar(require("./workspaceV1"), exports);
 var aPICallSnapshotV1_1 = require("./aPICallSnapshotV1");
 var accessPermissionV1_1 = require("./accessPermissionV1");
+var activationOutput_1 = require("./activationOutput");
 var activationSummaryOutput_1 = require("./activationSummaryOutput");
 var addActivationToAudience200Response_1 = require("./addActivationToAudience200Response");
 var addActivationToAudienceAlphaInput_1 = require("./addActivationToAudienceAlphaInput");
@@ -1392,6 +1394,7 @@ var enumsMap = {
 var typeMap = {
     APICallSnapshotV1: aPICallSnapshotV1_1.APICallSnapshotV1,
     AccessPermissionV1: accessPermissionV1_1.AccessPermissionV1,
+    ActivationOutput: activationOutput_1.ActivationOutput,
     ActivationSummaryOutput: activationSummaryOutput_1.ActivationSummaryOutput,
     AddActivationToAudience200Response: addActivationToAudience200Response_1.AddActivationToAudience200Response,
     AddActivationToAudienceAlphaInput: addActivationToAudienceAlphaInput_1.AddActivationToAudienceAlphaInput,

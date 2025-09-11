@@ -3,6 +3,7 @@
 import localVarRequest from 'request';
 export * from './aPICallSnapshotV1';
 export * from './accessPermissionV1';
+export * from './activationOutput';
 export * from './activationSummaryOutput';
 export * from './addActivationToAudience200Response';
 export * from './addActivationToAudienceAlphaInput';
