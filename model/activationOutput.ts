@@ -15,19 +15,43 @@ import { DestinationSubscriptionConfiguration } from './destinationSubscriptionC
 import { PersonalizationInput } from './personalizationInput';
 
 /**
- * Input to update an activation.
+ * A class that encapsulates the complete activation output with full details.
  */
-export class UpdateActivationForAudienceAlphaInput {
+export class ActivationOutput {
     /**
-     * Determines whether an activation is enabled.
+     * The activation id.
      */
-    'enabled'?: boolean;
+    'id': string;
     /**
-     * Activation name.
+     * Activation Enabled Status.
      */
-    'activationName'?: string;
-    'personalization'?: PersonalizationInput;
-    'destinationMapping'?: DestinationSubscriptionConfiguration;
+    'enabled': boolean;
+    /**
+     * The WORKSPACE id.
+     */
+    'workspaceId': string;
+    /**
+     * The space id.
+     */
+    'spaceId': string;
+    /**
+     * The audience id.
+     */
+    'audienceId': string;
+    /**
+     * The DESTINATION connection id (formerly integrationInstanceId).
+     */
+    'destinationConnectionId': string;
+    /**
+     * Type of activation trigger.
+     */
+    'activationType': string;
+    /**
+     * Name of the activation.
+     */
+    'activationName': string;
+    'personalization': PersonalizationInput;
+    'destinationMapping': DestinationSubscriptionConfiguration;
     /**
      * Whether to perform a resync after creation of the activation.
      */
@@ -41,9 +65,39 @@ export class UpdateActivationForAudienceAlphaInput {
         type: string;
     }> = [
         {
+            name: 'id',
+            baseName: 'id',
+            type: 'string',
+        },
+        {
             name: 'enabled',
             baseName: 'enabled',
             type: 'boolean',
+        },
+        {
+            name: 'workspaceId',
+            baseName: 'workspaceId',
+            type: 'string',
+        },
+        {
+            name: 'spaceId',
+            baseName: 'spaceId',
+            type: 'string',
+        },
+        {
+            name: 'audienceId',
+            baseName: 'audienceId',
+            type: 'string',
+        },
+        {
+            name: 'destinationConnectionId',
+            baseName: 'destinationConnectionId',
+            type: 'string',
+        },
+        {
+            name: 'activationType',
+            baseName: 'activationType',
+            type: 'string',
         },
         {
             name: 'activationName',
@@ -68,6 +122,6 @@ export class UpdateActivationForAudienceAlphaInput {
     ];
 
     static getAttributeTypeMap() {
-        return UpdateActivationForAudienceAlphaInput.attributeTypeMap;
+        return ActivationOutput.attributeTypeMap;
     }
 }

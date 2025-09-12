@@ -1,6 +1,6 @@
-import { ActivationSummaryOutput } from './activationSummaryOutput';
+import { ActivationOutput } from './activationOutput';
 export declare class GetActivationFromAudienceOutput {
-    'activation': ActivationSummaryOutput;
+    'activation': ActivationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

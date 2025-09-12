@@ -15,8 +15,8 @@ var AddActivationToAudienceAlphaInput = (function () {
             type: 'boolean',
         },
         {
-            name: 'performFirstSync',
-            baseName: 'performFirstSync',
+            name: 'performResync',
+            baseName: 'performResync',
             type: 'boolean',
         },
         {

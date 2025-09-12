@@ -12,7 +12,7 @@ var UpdateActivationForAudienceOutput = (function () {
         {
             name: 'activation',
             baseName: 'activation',
-            type: 'ActivationSummaryOutput',
+            type: 'ActivationOutput',
         },
     ];
     return UpdateActivationForAudienceOutput;

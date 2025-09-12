@@ -11,13 +11,13 @@
  */
 
 import { RequestFile } from './models';
-import { ActivationSummaryOutput } from './activationSummaryOutput';
+import { ActivationOutput } from './activationOutput';
 
 /**
  * Output for updating an activation for audience.
  */
 export class UpdateActivationForAudienceOutput {
-    'activation': ActivationSummaryOutput;
+    'activation': ActivationOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -29,7 +29,7 @@ export class UpdateActivationForAudienceOutput {
         {
             name: 'activation',
             baseName: 'activation',
-            type: 'ActivationSummaryOutput',
+            type: 'ActivationOutput',
         },
     ];
 

@@ -2,7 +2,7 @@ import localVarRequest from 'request';
 
 export * from './aPICallSnapshotV1';
 export * from './accessPermissionV1';
-export * from './activationSummaryOutput';
+export * from './activationOutput';
 export * from './addActivationToAudience200Response';
 export * from './addActivationToAudienceAlphaInput';
 export * from './addActivationToAudienceAlphaOutput';
@@ -645,7 +645,7 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 import { APICallSnapshotV1 } from './aPICallSnapshotV1';
 import { AccessPermissionV1 } from './accessPermissionV1';
-import { ActivationSummaryOutput } from './activationSummaryOutput';
+import { ActivationOutput } from './activationOutput';
 import { AddActivationToAudience200Response } from './addActivationToAudience200Response';
 import { AddActivationToAudienceAlphaInput } from './addActivationToAudienceAlphaInput';
 import { AddActivationToAudienceAlphaOutput } from './addActivationToAudienceAlphaOutput';
@@ -1454,7 +1454,7 @@ let enumsMap: { [index: string]: any } = {
 let typeMap: { [index: string]: any } = {
     APICallSnapshotV1: APICallSnapshotV1,
     AccessPermissionV1: AccessPermissionV1,
-    ActivationSummaryOutput: ActivationSummaryOutput,
+    ActivationOutput: ActivationOutput,
     AddActivationToAudience200Response: AddActivationToAudience200Response,
     AddActivationToAudienceAlphaInput: AddActivationToAudienceAlphaInput,
     AddActivationToAudienceAlphaOutput: AddActivationToAudienceAlphaOutput,

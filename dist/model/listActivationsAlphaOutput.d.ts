@@ -1,7 +1,7 @@
-import { ActivationSummaryOutput } from './activationSummaryOutput';
+import { ActivationOutput } from './activationOutput';
 import { PaginationOutput } from './paginationOutput';
 export declare class ListActivationsAlphaOutput {
-    'activations': Array<ActivationSummaryOutput>;
+    'activations': Array<ActivationOutput>;
     'pagination'?: PaginationOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
