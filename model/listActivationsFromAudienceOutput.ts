@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { ActivationSummaryOutput } from './activationSummaryOutput';
+import { ActivationOutput } from './activationOutput';
 import { PaginationOutput } from './paginationOutput';
 
 /**
@@ -21,7 +21,7 @@ export class ListActivationsFromAudienceOutput {
     /**
      * A list of activation results.
      */
-    'activations': Array<ActivationSummaryOutput>;
+    'activations': Array<ActivationOutput>;
     'pagination'?: PaginationOutput;
 
     static discriminator: string | undefined = undefined;
@@ -34,7 +34,7 @@ export class ListActivationsFromAudienceOutput {
         {
             name: 'activations',
             baseName: 'activations',
-            type: 'Array<ActivationSummaryOutput>',
+            type: 'Array<ActivationOutput>',
         },
         {
             name: 'pagination',

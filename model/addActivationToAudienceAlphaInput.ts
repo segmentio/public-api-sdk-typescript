@@ -23,9 +23,9 @@ export class AddActivationToAudienceAlphaInput {
      */
     'enabled'?: boolean;
     /**
-     * Whether to perform the first sync so the activation events are generated on the first audience sync.
+     * Whether to perform a resync after creation of the activation.
      */
-    'performFirstSync': boolean;
+    'performResync': boolean;
     /**
      * Type of activation trigger.
      */
@@ -50,8 +50,8 @@ export class AddActivationToAudienceAlphaInput {
             type: 'boolean',
         },
         {
-            name: 'performFirstSync',
-            baseName: 'performFirstSync',
+            name: 'performResync',
+            baseName: 'performResync',
             type: 'boolean',
         },
         {

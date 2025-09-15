@@ -36,6 +36,10 @@ export class CreateInsertFunctionInstanceAlphaInput {
      * An object that contains settings for this insert Function instance based on the settings present in the insert Function class.
      */
     'settings': { [key: string]: any };
+    /**
+     * The Integration type for the insert Function instance.
+     */
+    'integrationType': CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
@@ -69,9 +73,22 @@ export class CreateInsertFunctionInstanceAlphaInput {
             baseName: 'settings',
             type: '{ [key: string]: any; }',
         },
+        {
+            name: 'integrationType',
+            baseName: 'integrationType',
+            type: 'CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum',
+        },
     ];
 
     static getAttributeTypeMap() {
         return CreateInsertFunctionInstanceAlphaInput.attributeTypeMap;
+    }
+}
+
+export namespace CreateInsertFunctionInstanceAlphaInput {
+    export enum IntegrationTypeEnum {
+        DESTINATION = <any>'DESTINATION',
+        JOURNEY = <any>'JOURNEY',
+        SOURCE = <any>'SOURCE',
     }
 }

@@ -12,7 +12,7 @@ var ListActivationsAlphaOutput = (function () {
         {
             name: 'activations',
             baseName: 'activations',
-            type: 'Array<ActivationSummaryOutput>',
+            type: 'Array<ActivationOutput>',
         },
         {
             name: 'pagination',

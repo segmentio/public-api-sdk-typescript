@@ -34,8 +34,22 @@ var CreateInsertFunctionInstanceAlphaInput = (function () {
             baseName: 'settings',
             type: '{ [key: string]: any; }',
         },
+        {
+            name: 'integrationType',
+            baseName: 'integrationType',
+            type: 'CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum',
+        },
     ];
     return CreateInsertFunctionInstanceAlphaInput;
 }());
+exports.CreateInsertFunctionInstanceAlphaInput = CreateInsertFunctionInstanceAlphaInput;
+(function (CreateInsertFunctionInstanceAlphaInput) {
+    var IntegrationTypeEnum;
+    (function (IntegrationTypeEnum) {
+        IntegrationTypeEnum[IntegrationTypeEnum["DESTINATION"] = 'DESTINATION'] = "DESTINATION";
+        IntegrationTypeEnum[IntegrationTypeEnum["JOURNEY"] = 'JOURNEY'] = "JOURNEY";
+        IntegrationTypeEnum[IntegrationTypeEnum["SOURCE"] = 'SOURCE'] = "SOURCE";
+    })(IntegrationTypeEnum = CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum || (CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum = {}));
+})(CreateInsertFunctionInstanceAlphaInput = exports.CreateInsertFunctionInstanceAlphaInput || (exports.CreateInsertFunctionInstanceAlphaInput = {}));
 exports.CreateInsertFunctionInstanceAlphaInput = CreateInsertFunctionInstanceAlphaInput;
 //# sourceMappingURL=createInsertFunctionInstanceAlphaInput.js.map

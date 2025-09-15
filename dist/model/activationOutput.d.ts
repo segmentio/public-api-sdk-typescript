@@ -1,12 +1,17 @@
 import { DestinationSubscriptionConfiguration } from './destinationSubscriptionConfiguration';
 import { PersonalizationInput } from './personalizationInput';
-export declare class AddActivationToAudienceAlphaInput {
-    'enabled'?: boolean;
-    'performResync': boolean;
+export declare class ActivationOutput {
+    'id': string;
+    'enabled': boolean;
+    'workspaceId': string;
+    'spaceId': string;
+    'audienceId': string;
+    'destinationConnectionId': string;
     'activationType': string;
     'activationName': string;
     'personalization': PersonalizationInput;
     'destinationMapping': DestinationSubscriptionConfiguration;
+    'performResync'?: boolean;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

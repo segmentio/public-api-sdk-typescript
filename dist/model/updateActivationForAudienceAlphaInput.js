@@ -30,8 +30,8 @@ var UpdateActivationForAudienceAlphaInput = (function () {
             type: 'DestinationSubscriptionConfiguration',
         },
         {
-            name: 'performFirstSync',
-            baseName: 'performFirstSync',
+            name: 'performResync',
+            baseName: 'performResync',
             type: 'boolean',
         },
     ];

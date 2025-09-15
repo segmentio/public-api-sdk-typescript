@@ -5,7 +5,7 @@ export declare class UpdateActivationForAudienceAlphaInput {
     'activationName'?: string;
     'personalization'?: PersonalizationInput;
     'destinationMapping'?: DestinationSubscriptionConfiguration;
-    'performFirstSync'?: boolean;
+    'performResync'?: boolean;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
