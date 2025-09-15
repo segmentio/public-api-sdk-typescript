@@ -1,7 +1,7 @@
 /// <reference types="node" />
 import http from 'http';
 import { CreateAudience200Response } from '../model/createAudience200Response';
-import { CreateAudienceAlphaInput } from '../model/createAudienceAlphaInput';
+import { CreateAudienceBetaInput } from '../model/createAudienceBetaInput';
 import { CreateAudiencePreview200Response } from '../model/createAudiencePreview200Response';
 import { CreateAudiencePreviewBetaInput } from '../model/createAudiencePreviewBetaInput';
 import { GetAudience200Response } from '../model/getAudience200Response';
@@ -40,7 +40,7 @@ export declare class AudiencesApi {
     setApiKey(key: AudiencesApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    createAudience(spaceId: string, CreateAudienceAlphaInput: CreateAudienceAlphaInput, options?: {
+    createAudience(spaceId: string, CreateAudienceBetaInput: CreateAudienceBetaInput, options?: {
         headers: {
             [name: string]: string;
         };
