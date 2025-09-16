@@ -12,7 +12,6 @@ export declare class InsertFunctionInstanceAlpha {
     'encryptedSettings': {
         [key: string]: any;
     };
-    'integrationType'?: object | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

@@ -78,11 +78,8 @@ __exportStar(require("./config1"), exports);
 __exportStar(require("./connection"), exports);
 __exportStar(require("./contact"), exports);
 __exportStar(require("./createAudience200Response"), exports);
-__exportStar(require("./createAudience200Response1"), exports);
 __exportStar(require("./createAudienceAlphaInput"), exports);
 __exportStar(require("./createAudienceAlphaOutput"), exports);
-__exportStar(require("./createAudienceBetaInput"), exports);
-__exportStar(require("./createAudienceBetaOutput"), exports);
 __exportStar(require("./createAudiencePreview200Response"), exports);
 __exportStar(require("./createAudiencePreview200Response1"), exports);
 __exportStar(require("./createAudiencePreviewAlphaInput"), exports);
@@ -711,11 +708,8 @@ var config1_1 = require("./config1");
 var connection_1 = require("./connection");
 var contact_1 = require("./contact");
 var createAudience200Response_1 = require("./createAudience200Response");
-var createAudience200Response1_1 = require("./createAudience200Response1");
 var createAudienceAlphaInput_1 = require("./createAudienceAlphaInput");
 var createAudienceAlphaOutput_1 = require("./createAudienceAlphaOutput");
-var createAudienceBetaInput_1 = require("./createAudienceBetaInput");
-var createAudienceBetaOutput_1 = require("./createAudienceBetaOutput");
 var createAudiencePreview200Response_1 = require("./createAudiencePreview200Response");
 var createAudiencePreview200Response1_1 = require("./createAudiencePreview200Response1");
 var createAudiencePreviewAlphaInput_1 = require("./createAudiencePreviewAlphaInput");
@@ -1304,13 +1298,11 @@ var enumsMap = {
     'AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum': audienceSummaryWithAudienceTypeAndLookback_1.AudienceSummaryWithAudienceTypeAndLookback.AudienceTypeEnum,
     'ComputedTraitsDefinition.TypeEnum': computedTraitsDefinition_1.ComputedTraitsDefinition.TypeEnum,
     'CreateAudienceAlphaInput.AudienceTypeEnum': createAudienceAlphaInput_1.CreateAudienceAlphaInput.AudienceTypeEnum,
-    'CreateAudienceBetaInput.AudienceTypeEnum': createAudienceBetaInput_1.CreateAudienceBetaInput.AudienceTypeEnum,
     'CreateAudiencePreviewAlphaInput.AudienceTypeEnum': createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
     'CreateAudiencePreviewBetaInput.AudienceTypeEnum': createAudiencePreviewBetaInput_1.CreateAudiencePreviewBetaInput.AudienceTypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
     'CreateFunctionV1Input.ResourceTypeEnum': createFunctionV1Input_1.CreateFunctionV1Input.ResourceTypeEnum,
-    'CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum': createInsertFunctionInstanceAlphaInput_1.CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum,
     'CreateSourceRegulationV1Input.RegulationTypeEnum': createSourceRegulationV1Input_1.CreateSourceRegulationV1Input.RegulationTypeEnum,
     'CreateSourceRegulationV1Input.SubjectTypeEnum': createSourceRegulationV1Input_1.CreateSourceRegulationV1Input.SubjectTypeEnum,
     'CreateTrackingPlanV1Input.TypeEnum': createTrackingPlanV1Input_1.CreateTrackingPlanV1Input.TypeEnum,
@@ -1461,11 +1453,8 @@ var typeMap = {
     Connection: connection_1.Connection,
     Contact: contact_1.Contact,
     CreateAudience200Response: createAudience200Response_1.CreateAudience200Response,
-    CreateAudience200Response1: createAudience200Response1_1.CreateAudience200Response1,
     CreateAudienceAlphaInput: createAudienceAlphaInput_1.CreateAudienceAlphaInput,
     CreateAudienceAlphaOutput: createAudienceAlphaOutput_1.CreateAudienceAlphaOutput,
-    CreateAudienceBetaInput: createAudienceBetaInput_1.CreateAudienceBetaInput,
-    CreateAudienceBetaOutput: createAudienceBetaOutput_1.CreateAudienceBetaOutput,
     CreateAudiencePreview200Response: createAudiencePreview200Response_1.CreateAudiencePreview200Response,
     CreateAudiencePreview200Response1: createAudiencePreview200Response1_1.CreateAudiencePreview200Response1,
     CreateAudiencePreviewAlphaInput: createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput,

@@ -63,11 +63,8 @@ export * from './config1';
 export * from './connection';
 export * from './contact';
 export * from './createAudience200Response';
-export * from './createAudience200Response1';
 export * from './createAudienceAlphaInput';
 export * from './createAudienceAlphaOutput';
-export * from './createAudienceBetaInput';
-export * from './createAudienceBetaOutput';
 export * from './createAudiencePreview200Response';
 export * from './createAudiencePreview200Response1';
 export * from './createAudiencePreviewAlphaInput';
@@ -709,11 +706,8 @@ import { Config1 } from './config1';
 import { Connection } from './connection';
 import { Contact } from './contact';
 import { CreateAudience200Response } from './createAudience200Response';
-import { CreateAudience200Response1 } from './createAudience200Response1';
 import { CreateAudienceAlphaInput } from './createAudienceAlphaInput';
 import { CreateAudienceAlphaOutput } from './createAudienceAlphaOutput';
-import { CreateAudienceBetaInput } from './createAudienceBetaInput';
-import { CreateAudienceBetaOutput } from './createAudienceBetaOutput';
 import { CreateAudiencePreview200Response } from './createAudiencePreview200Response';
 import { CreateAudiencePreview200Response1 } from './createAudiencePreview200Response1';
 import { CreateAudiencePreviewAlphaInput } from './createAudiencePreviewAlphaInput';
@@ -1309,8 +1303,6 @@ let enumsMap: { [index: string]: any } = {
     'ComputedTraitsDefinition.TypeEnum': ComputedTraitsDefinition.TypeEnum,
     'CreateAudienceAlphaInput.AudienceTypeEnum':
         CreateAudienceAlphaInput.AudienceTypeEnum,
-    'CreateAudienceBetaInput.AudienceTypeEnum':
-        CreateAudienceBetaInput.AudienceTypeEnum,
     'CreateAudiencePreviewAlphaInput.AudienceTypeEnum':
         CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
     'CreateAudiencePreviewBetaInput.AudienceTypeEnum':
@@ -1321,8 +1313,6 @@ let enumsMap: { [index: string]: any } = {
         CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
     'CreateFunctionV1Input.ResourceTypeEnum':
         CreateFunctionV1Input.ResourceTypeEnum,
-    'CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum':
-        CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum,
     'CreateSourceRegulationV1Input.RegulationTypeEnum':
         CreateSourceRegulationV1Input.RegulationTypeEnum,
     'CreateSourceRegulationV1Input.SubjectTypeEnum':
@@ -1533,11 +1523,8 @@ let typeMap: { [index: string]: any } = {
     Connection: Connection,
     Contact: Contact,
     CreateAudience200Response: CreateAudience200Response,
-    CreateAudience200Response1: CreateAudience200Response1,
     CreateAudienceAlphaInput: CreateAudienceAlphaInput,
     CreateAudienceAlphaOutput: CreateAudienceAlphaOutput,
-    CreateAudienceBetaInput: CreateAudienceBetaInput,
-    CreateAudienceBetaOutput: CreateAudienceBetaOutput,
     CreateAudiencePreview200Response: CreateAudiencePreview200Response,
     CreateAudiencePreview200Response1: CreateAudiencePreview200Response1,
     CreateAudiencePreviewAlphaInput: CreateAudiencePreviewAlphaInput,
