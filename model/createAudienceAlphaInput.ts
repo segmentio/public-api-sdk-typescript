@@ -34,7 +34,7 @@ export class CreateAudienceAlphaInput {
     /**
      * Denotes the type of audience product.  Possible values: USERS, ACCOUNTS.
      */
-    'audienceType'?: CreateAudienceAlphaInput.AudienceTypeEnum;
+    'audienceType': CreateAudienceAlphaInput.AudienceTypeEnum;
     'options'?: AudienceOptions;
 
     static discriminator: string | undefined = undefined;

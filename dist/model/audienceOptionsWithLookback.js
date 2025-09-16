@@ -20,11 +20,6 @@ var AudienceOptionsWithLookback = (function () {
             type: 'boolean',
         },
         {
-            name: 'includeAnonymousUsers',
-            baseName: 'includeAnonymousUsers',
-            type: 'boolean',
-        },
-        {
             name: 'backfillEventDataDays',
             baseName: 'backfillEventDataDays',
             type: 'number',

@@ -15,11 +15,6 @@ var AudienceOptions = (function () {
             type: 'boolean',
         },
         {
-            name: 'includeAnonymousUsers',
-            baseName: 'includeAnonymousUsers',
-            type: 'boolean',
-        },
-        {
             name: 'filterByExternalIds',
             baseName: 'filterByExternalIds',
             type: 'Array<string>',

@@ -22,10 +22,6 @@ export class AudienceOptionsWithLookback {
      */
     'includeHistoricalData'?: boolean;
     /**
-     * Determines whether anonymous users should be included when determining audience membership.
-     */
-    'includeAnonymousUsers'?: boolean;
-    /**
      * If specified, the value of this field indicates the number of days, specified from the date the audience was created, that event data will be included from when determining audience membership. If unspecified, defer to the value of `includeHistoricalData` to determine whether historical data is either entirely included or entirely excluded when determining audience membership.
      */
     'backfillEventDataDays'?: number;
@@ -45,11 +41,6 @@ export class AudienceOptionsWithLookback {
         {
             name: 'includeHistoricalData',
             baseName: 'includeHistoricalData',
-            type: 'boolean',
-        },
-        {
-            name: 'includeAnonymousUsers',
-            baseName: 'includeAnonymousUsers',
             type: 'boolean',
         },
         {

@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
+import { AudienceDefinition } from './audienceDefinition';
 import { AudiencePreviewResult } from './audiencePreviewResult';
 import { AudienceSize } from './audienceSize';
 import { ReadAudiencePreviewOptions } from './readAudiencePreviewOptions';
@@ -28,7 +28,7 @@ export class AudiencePreview {
      * The audience type of the preview.  Possible values: USERS, ACCOUNTS, LINKED.
      */
     'audienceType': AudiencePreview.AudienceTypeEnum;
-    'definition': AudienceDefinitionWithoutType;
+    'definition': AudienceDefinition;
     'options': ReadAudiencePreviewOptions;
     /**
      * Status for the audience preview.
@@ -64,7 +64,7 @@ export class AudiencePreview {
         {
             name: 'definition',
             baseName: 'definition',
-            type: 'AudienceDefinitionWithoutType',
+            type: 'AudienceDefinition',
         },
         {
             name: 'options',

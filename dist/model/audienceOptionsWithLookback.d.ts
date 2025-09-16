@@ -1,7 +1,6 @@
 export declare class AudienceOptionsWithLookback {
     'filterByExternalIds': Array<string>;
     'includeHistoricalData'?: boolean;
-    'includeAnonymousUsers'?: boolean;
     'backfillEventDataDays'?: number;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

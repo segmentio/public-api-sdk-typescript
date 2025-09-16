@@ -49,7 +49,6 @@ __exportStar(require("./advancedWarehouseSyncScheduleV1Output"), exports);
 __exportStar(require("./allowedLabelBeta"), exports);
 __exportStar(require("./audienceComputeCadence"), exports);
 __exportStar(require("./audienceDefinition"), exports);
-__exportStar(require("./audienceDefinitionWithoutType"), exports);
 __exportStar(require("./audienceOptions"), exports);
 __exportStar(require("./audienceOptionsWithLookback"), exports);
 __exportStar(require("./audiencePreview"), exports);
@@ -679,7 +678,6 @@ var advancedWarehouseSyncScheduleV1Output_1 = require("./advancedWarehouseSyncSc
 var allowedLabelBeta_1 = require("./allowedLabelBeta");
 var audienceComputeCadence_1 = require("./audienceComputeCadence");
 var audienceDefinition_1 = require("./audienceDefinition");
-var audienceDefinitionWithoutType_1 = require("./audienceDefinitionWithoutType");
 var audienceOptions_1 = require("./audienceOptions");
 var audienceOptionsWithLookback_1 = require("./audienceOptionsWithLookback");
 var audiencePreview_1 = require("./audiencePreview");
@@ -1289,7 +1287,6 @@ var enumsMap = {
     'AddConnectionFromSourceToWarehouseV1Output.StatusEnum': addConnectionFromSourceToWarehouseV1Output_1.AddConnectionFromSourceToWarehouseV1Output.StatusEnum,
     'AddSourceToTrackingPlanV1Output.StatusEnum': addSourceToTrackingPlanV1Output_1.AddSourceToTrackingPlanV1Output.StatusEnum,
     'AudienceComputeCadence.TypeEnum': audienceComputeCadence_1.AudienceComputeCadence.TypeEnum,
-    'AudienceDefinition.TypeEnum': audienceDefinition_1.AudienceDefinition.TypeEnum,
     'AudiencePreview.AudienceTypeEnum': audiencePreview_1.AudiencePreview.AudienceTypeEnum,
     'AudiencePreview.StatusEnum': audiencePreview_1.AudiencePreview.StatusEnum,
     'AudienceSchedule.StrategyEnum': audienceSchedule_1.AudienceSchedule.StrategyEnum,
@@ -1424,7 +1421,6 @@ var typeMap = {
     AllowedLabelBeta: allowedLabelBeta_1.AllowedLabelBeta,
     AudienceComputeCadence: audienceComputeCadence_1.AudienceComputeCadence,
     AudienceDefinition: audienceDefinition_1.AudienceDefinition,
-    AudienceDefinitionWithoutType: audienceDefinitionWithoutType_1.AudienceDefinitionWithoutType,
     AudienceOptions: audienceOptions_1.AudienceOptions,
     AudienceOptionsWithLookback: audienceOptionsWithLookback_1.AudienceOptionsWithLookback,
     AudiencePreview: audiencePreview_1.AudiencePreview,

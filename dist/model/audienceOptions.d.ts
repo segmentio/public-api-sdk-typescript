@@ -1,6 +1,5 @@
 export declare class AudienceOptions {
     'includeHistoricalData'?: boolean;
-    'includeAnonymousUsers'?: boolean;
     'filterByExternalIds'?: Array<string>;
     'backfillEventDataDays'?: number;
     static discriminator: string | undefined;

@@ -35,7 +35,6 @@ export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
 export * from './audienceComputeCadence';
 export * from './audienceDefinition';
-export * from './audienceDefinitionWithoutType';
 export * from './audienceOptions';
 export * from './audienceOptionsWithLookback';
 export * from './audiencePreview';

@@ -10,11 +10,6 @@ var AudienceDefinition = (function () {
     AudienceDefinition.discriminator = undefined;
     AudienceDefinition.attributeTypeMap = [
         {
-            name: 'type',
-            baseName: 'type',
-            type: 'AudienceDefinition.TypeEnum',
-        },
-        {
             name: 'query',
             baseName: 'query',
             type: 'string',
@@ -27,13 +22,5 @@ var AudienceDefinition = (function () {
     ];
     return AudienceDefinition;
 }());
-exports.AudienceDefinition = AudienceDefinition;
-(function (AudienceDefinition) {
-    var TypeEnum;
-    (function (TypeEnum) {
-        TypeEnum[TypeEnum["ACCOUNTS"] = 'ACCOUNTS'] = "ACCOUNTS";
-        TypeEnum[TypeEnum["USERS"] = 'USERS'] = "USERS";
-    })(TypeEnum = AudienceDefinition.TypeEnum || (AudienceDefinition.TypeEnum = {}));
-})(AudienceDefinition = exports.AudienceDefinition || (exports.AudienceDefinition = {}));
 exports.AudienceDefinition = AudienceDefinition;
 //# sourceMappingURL=audienceDefinition.js.map

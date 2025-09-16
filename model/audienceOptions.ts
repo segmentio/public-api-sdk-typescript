@@ -18,10 +18,6 @@ export class AudienceOptions {
      */
     'includeHistoricalData'?: boolean;
     /**
-     * Determines whether anonymous users should be included when determining audience membership.
-     */
-    'includeAnonymousUsers'?: boolean;
-    /**
      * The set of profile external identifiers being used to determine audience membership. Profiles will only be considered for audience membership if the profile has at least one external id whose key matches a value in this set.
      */
     'filterByExternalIds'?: Array<string>;
@@ -40,11 +36,6 @@ export class AudienceOptions {
         {
             name: 'includeHistoricalData',
             baseName: 'includeHistoricalData',
-            type: 'boolean',
-        },
-        {
-            name: 'includeAnonymousUsers',
-            baseName: 'includeAnonymousUsers',
             type: 'boolean',
         },
         {

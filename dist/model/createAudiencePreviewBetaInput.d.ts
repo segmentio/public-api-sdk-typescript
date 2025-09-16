@@ -1,7 +1,7 @@
-import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
+import { AudienceDefinition } from './audienceDefinition';
 import { CreateAudiencePreviewOptions } from './createAudiencePreviewOptions';
 export declare class CreateAudiencePreviewBetaInput {
-    'definition': AudienceDefinitionWithoutType;
+    'definition': AudienceDefinition;
     'audienceType': CreateAudiencePreviewBetaInput.AudienceTypeEnum;
     'options'?: CreateAudiencePreviewOptions;
     static discriminator: string | undefined;

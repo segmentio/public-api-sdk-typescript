@@ -34,7 +34,6 @@ export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
 export * from './audienceComputeCadence';
 export * from './audienceDefinition';
-export * from './audienceDefinitionWithoutType';
 export * from './audienceOptions';
 export * from './audienceOptionsWithLookback';
 export * from './audiencePreview';
@@ -677,7 +676,6 @@ import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncSc
 import { AllowedLabelBeta } from './allowedLabelBeta';
 import { AudienceComputeCadence } from './audienceComputeCadence';
 import { AudienceDefinition } from './audienceDefinition';
-import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
 import { AudienceOptions } from './audienceOptions';
 import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
 import { AudiencePreview } from './audiencePreview';
@@ -1292,7 +1290,6 @@ let enumsMap: { [index: string]: any } = {
     'AddSourceToTrackingPlanV1Output.StatusEnum':
         AddSourceToTrackingPlanV1Output.StatusEnum,
     'AudienceComputeCadence.TypeEnum': AudienceComputeCadence.TypeEnum,
-    'AudienceDefinition.TypeEnum': AudienceDefinition.TypeEnum,
     'AudiencePreview.AudienceTypeEnum': AudiencePreview.AudienceTypeEnum,
     'AudiencePreview.StatusEnum': AudiencePreview.StatusEnum,
     'AudienceSchedule.StrategyEnum': AudienceSchedule.StrategyEnum,
@@ -1489,7 +1486,6 @@ let typeMap: { [index: string]: any } = {
     AllowedLabelBeta: AllowedLabelBeta,
     AudienceComputeCadence: AudienceComputeCadence,
     AudienceDefinition: AudienceDefinition,
-    AudienceDefinitionWithoutType: AudienceDefinitionWithoutType,
     AudienceOptions: AudienceOptions,
     AudienceOptionsWithLookback: AudienceOptionsWithLookback,
     AudiencePreview: AudiencePreview,
