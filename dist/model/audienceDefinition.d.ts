@@ -1,5 +1,4 @@
 export declare class AudienceDefinition {
-    'type'?: AudienceDefinition.TypeEnum;
     'query': string;
     'targetEntity'?: string;
     static discriminator: string | undefined;
@@ -13,10 +12,4 @@ export declare class AudienceDefinition {
         baseName: string;
         type: string;
     }[];
-}
-export declare namespace AudienceDefinition {
-    enum TypeEnum {
-        ACCOUNTS,
-        USERS
-    }
 }

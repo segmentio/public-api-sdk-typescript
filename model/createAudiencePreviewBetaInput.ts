@@ -11,14 +11,14 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
+import { AudienceDefinition } from './audienceDefinition';
 import { CreateAudiencePreviewOptions } from './createAudiencePreviewOptions';
 
 /**
  * Input to create an audience preview.
  */
 export class CreateAudiencePreviewBetaInput {
-    'definition': AudienceDefinitionWithoutType;
+    'definition': AudienceDefinition;
     /**
      * Denotes the type of audience product.  Possible values: USERS, ACCOUNTS, LINKED.
      */
@@ -35,7 +35,7 @@ export class CreateAudiencePreviewBetaInput {
         {
             name: 'definition',
             baseName: 'definition',
-            type: 'AudienceDefinitionWithoutType',
+            type: 'AudienceDefinition',
         },
         {
             name: 'audienceType',

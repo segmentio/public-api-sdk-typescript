@@ -22,7 +22,7 @@ var AudiencePreview = (function () {
         {
             name: 'definition',
             baseName: 'definition',
-            type: 'AudienceDefinitionWithoutType',
+            type: 'AudienceDefinition',
         },
         {
             name: 'options',

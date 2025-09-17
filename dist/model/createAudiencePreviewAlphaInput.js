@@ -12,7 +12,7 @@ var CreateAudiencePreviewAlphaInput = (function () {
         {
             name: 'definition',
             baseName: 'definition',
-            type: 'AudienceDefinitionWithoutType',
+            type: 'AudienceDefinition',
         },
         {
             name: 'audienceType',

@@ -14,10 +14,6 @@ import { RequestFile } from './models';
 
 export class AudienceDefinition {
     /**
-     * The underlying data type being segmented for this audience.  Possible values: users, accounts.
-     */
-    'type'?: AudienceDefinition.TypeEnum;
-    /**
      * The query language string defining the audience segmentation criteria.  For guidance on using the query language, see the [Segment documentation site](https://segment.com/docs/api/public-api/query-language).
      */
     'query': string;
@@ -34,11 +30,6 @@ export class AudienceDefinition {
         type: string;
     }> = [
         {
-            name: 'type',
-            baseName: 'type',
-            type: 'AudienceDefinition.TypeEnum',
-        },
-        {
             name: 'query',
             baseName: 'query',
             type: 'string',
@@ -52,12 +43,5 @@ export class AudienceDefinition {
 
     static getAttributeTypeMap() {
         return AudienceDefinition.attributeTypeMap;
-    }
-}
-
-export namespace AudienceDefinition {
-    export enum TypeEnum {
-        ACCOUNTS = <any>'ACCOUNTS',
-        USERS = <any>'USERS',
     }
 }

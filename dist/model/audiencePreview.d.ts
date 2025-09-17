@@ -1,11 +1,11 @@
-import { AudienceDefinitionWithoutType } from './audienceDefinitionWithoutType';
+import { AudienceDefinition } from './audienceDefinition';
 import { AudiencePreviewResult } from './audiencePreviewResult';
 import { AudienceSize } from './audienceSize';
 import { ReadAudiencePreviewOptions } from './readAudiencePreviewOptions';
 export declare class AudiencePreview {
     'id': string;
     'audienceType': AudiencePreview.AudienceTypeEnum;
-    'definition': AudienceDefinitionWithoutType;
+    'definition': AudienceDefinition;
     'options': ReadAudiencePreviewOptions;
     'status': AudiencePreview.StatusEnum;
     'results'?: Array<AudiencePreviewResult>;
