@@ -11,10 +11,13 @@
  */
 
 import { RequestFile } from './models';
-import { CreateAudienceBetaOutput } from './createAudienceBetaOutput';
+import { AudienceSummary } from './audienceSummary';
 
-export class CreateAudience200Response {
-    'data'?: CreateAudienceBetaOutput;
+/**
+ * Audience output for create.
+ */
+export class CreateAudienceBetaOutput {
+    'audience': AudienceSummary;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,13 +27,13 @@ export class CreateAudience200Response {
         type: string;
     }> = [
         {
-            name: 'data',
-            baseName: 'data',
-            type: 'CreateAudienceBetaOutput',
+            name: 'audience',
+            baseName: 'audience',
+            type: 'AudienceSummary',
         },
     ];
 
     static getAttributeTypeMap() {
-        return CreateAudience200Response.attributeTypeMap;
+        return CreateAudienceBetaOutput.attributeTypeMap;
     }
 }
