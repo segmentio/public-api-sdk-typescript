@@ -112,7 +112,7 @@ var AudiencesApi = (function () {
     AudiencesApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    AudiencesApi.prototype.createAudience = function (spaceId, CreateAudienceAlphaInput, options) {
+    AudiencesApi.prototype.createAudience = function (spaceId, CreateAudienceBetaInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -123,6 +123,7 @@ var AudiencesApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
                     'application/json',
                 ];
@@ -136,9 +137,9 @@ var AudiencesApi = (function () {
                 if (spaceId === null || spaceId === undefined) {
                     throw new Error('Required parameter spaceId was null or undefined when calling createAudience.');
                 }
-                if (CreateAudienceAlphaInput === null ||
-                    CreateAudienceAlphaInput === undefined) {
-                    throw new Error('Required parameter CreateAudienceAlphaInput was null or undefined when calling createAudience.');
+                if (CreateAudienceBetaInput === null ||
+                    CreateAudienceBetaInput === undefined) {
+                    throw new Error('Required parameter CreateAudienceBetaInput was null or undefined when calling createAudience.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -149,7 +150,7 @@ var AudiencesApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateAudienceAlphaInput, 'CreateAudienceAlphaInput'),
+                    body: models_1.ObjectSerializer.serialize(CreateAudienceBetaInput, 'CreateAudienceBetaInput'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
