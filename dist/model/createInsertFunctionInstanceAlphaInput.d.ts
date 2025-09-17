@@ -6,7 +6,6 @@ export declare class CreateInsertFunctionInstanceAlphaInput {
     'settings': {
         [key: string]: any;
     };
-    'integrationType': CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
@@ -18,11 +17,4 @@ export declare class CreateInsertFunctionInstanceAlphaInput {
         baseName: string;
         type: string;
     }[];
-}
-export declare namespace CreateInsertFunctionInstanceAlphaInput {
-    enum IntegrationTypeEnum {
-        DESTINATION,
-        JOURNEY,
-        SOURCE
-    }
 }

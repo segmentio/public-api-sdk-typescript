@@ -1221,7 +1221,6 @@ export class FunctionsApi {
     public async listFunctions(
         resourceType:
             | 'DESTINATION'
-            | 'INSERT'
             | 'INSERT_DESTINATION'
             | 'INSERT_SOURCE'
             | 'SOURCE',
@@ -1269,7 +1268,7 @@ export class FunctionsApi {
             localVarQueryParameters['resourceType'] =
                 ObjectSerializer.serialize(
                     resourceType,
-                    "'DESTINATION' | 'INSERT' | 'INSERT_DESTINATION' | 'INSERT_SOURCE' | 'SOURCE'"
+                    "'DESTINATION' | 'INSERT_DESTINATION' | 'INSERT_SOURCE' | 'SOURCE'"
                 );
         }
 

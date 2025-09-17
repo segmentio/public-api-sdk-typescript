@@ -22,7 +22,6 @@ export class InsertFunctionInstanceAlpha {
     'updatedAt': string;
     'settings': { [key: string]: any };
     'encryptedSettings': { [key: string]: any };
-    'integrationType'?: object | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -75,11 +74,6 @@ export class InsertFunctionInstanceAlpha {
             name: 'encryptedSettings',
             baseName: 'encryptedSettings',
             type: '{ [key: string]: any; }',
-        },
-        {
-            name: 'integrationType',
-            baseName: 'integrationType',
-            type: 'object',
         },
     ];
 

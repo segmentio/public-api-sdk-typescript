@@ -1318,8 +1318,6 @@ let enumsMap: { [index: string]: any } = {
         CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
     'CreateFunctionV1Input.ResourceTypeEnum':
         CreateFunctionV1Input.ResourceTypeEnum,
-    'CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum':
-        CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum,
     'CreateSourceRegulationV1Input.RegulationTypeEnum':
         CreateSourceRegulationV1Input.RegulationTypeEnum,
     'CreateSourceRegulationV1Input.SubjectTypeEnum':
