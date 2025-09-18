@@ -1307,6 +1307,7 @@ var enumsMap = {
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
     'CreateFunctionV1Input.ResourceTypeEnum': createFunctionV1Input_1.CreateFunctionV1Input.ResourceTypeEnum,
+    'CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum': createInsertFunctionInstanceAlphaInput_1.CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum,
     'CreateSourceRegulationV1Input.RegulationTypeEnum': createSourceRegulationV1Input_1.CreateSourceRegulationV1Input.RegulationTypeEnum,
     'CreateSourceRegulationV1Input.SubjectTypeEnum': createSourceRegulationV1Input_1.CreateSourceRegulationV1Input.SubjectTypeEnum,
     'CreateTrackingPlanV1Input.TypeEnum': createTrackingPlanV1Input_1.CreateTrackingPlanV1Input.TypeEnum,
