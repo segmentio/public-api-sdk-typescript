@@ -18,7 +18,7 @@ export class AudienceOptions {
      */
     'includeHistoricalData'?: boolean;
     /**
-     * The set of profile external identifiers being used to determine audience membership. Profiles will only be considered for audience membership if the profile has at least one external id whose key matches a value in this set.
+     * The set of profile external identifiers being used to determine audience membership. Profiles will only be considered for audience membership if the profile has at least one external id whose key matches a value in this set. If unspecified, a default set of external identifiers will be used: [\'user_id\', \'email\', \'android.idfa\', \'ios.idfa\'].
      */
     'filterByExternalIds'?: Array<string>;
     /**
