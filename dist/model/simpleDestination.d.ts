@@ -10,6 +10,7 @@ export declare class SimpleDestination {
     'settings': {
         [key: string]: any;
     };
+    'destinationId': string;
     'metadata'?: Metadata;
     'idSync'?: IDSyncOptions;
     static discriminator: string | undefined;

@@ -16,7 +16,7 @@ import { Metadata } from './metadata';
 
 export class SimpleDestination {
     /**
-     * The id of the Destination.
+     * The id of the Integration.
      */
     'id': string;
     /**
@@ -28,7 +28,7 @@ export class SimpleDestination {
      */
     'sourceId': string;
     /**
-     * Enabled or not.
+     * Whether the Integration is enabled or not.
      */
     'enabled': boolean;
     /**
@@ -43,6 +43,10 @@ export class SimpleDestination {
      * The Destination settings.
      */
     'settings': { [key: string]: any };
+    /**
+     * The Destination id.
+     */
+    'destinationId': string;
     'metadata'?: Metadata;
     'idSync'?: IDSyncOptions;
 
@@ -87,6 +91,11 @@ export class SimpleDestination {
             name: 'settings',
             baseName: 'settings',
             type: '{ [key: string]: any; }',
+        },
+        {
+            name: 'destinationId',
+            baseName: 'destinationId',
+            type: 'string',
         },
         {
             name: 'metadata',

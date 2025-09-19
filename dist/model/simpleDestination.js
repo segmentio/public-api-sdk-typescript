@@ -45,6 +45,11 @@ var SimpleDestination = (function () {
             type: '{ [key: string]: any; }',
         },
         {
+            name: 'destinationId',
+            baseName: 'destinationId',
+            type: 'string',
+        },
+        {
             name: 'metadata',
             baseName: 'metadata',
             type: 'Metadata',
