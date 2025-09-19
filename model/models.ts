@@ -324,6 +324,8 @@ export * from './groupSubscriptionStatusResponse';
 export * from './handleWebhookInput';
 export * from './handleWebhookOutput';
 export * from './hashPropertiesConfiguration';
+export * from './iDSyncConfig';
+export * from './iDSyncOptions';
 export * from './identifySourceSettingsV1';
 export * from './insertFunctionInstanceAlpha';
 export * from './integrationOptionBeta';
@@ -362,6 +364,8 @@ export * from './listConnectedWarehousesFromSourceV1Output';
 export * from './listDeliveryMetricsSummaryFromDestination200Response';
 export * from './listDeliveryMetricsSummaryFromDestinationBetaOutput';
 export * from './listDestinations200Response';
+export * from './listDestinationsFromAudience200Response';
+export * from './listDestinationsFromAudienceAlphaOutput';
 export * from './listDestinationsV1Output';
 export * from './listFiltersForSpace200Response';
 export * from './listFiltersForSpaceOutput';
@@ -440,6 +444,7 @@ export * from './logosBeta';
 export * from './messageSubscriptionResponse';
 export * from './messageSubscriptionResponseError';
 export * from './messagesSubscriptionRequest';
+export * from './metadata';
 export * from './metricBeta';
 export * from './minimalUserGroupV1';
 export * from './minimalUserV1';
@@ -532,6 +537,7 @@ export * from './reverseEtlSpecificTimeScheduleConfig';
 export * from './roleV1';
 export * from './ruleInputV1';
 export * from './ruleV1';
+export * from './simpleDestination';
 export * from './sourceAPICallSnapshotV1';
 export * from './sourceAlpha';
 export * from './sourceEventVolumeDatapointV1';
@@ -969,6 +975,8 @@ import { GroupSubscriptionStatusResponse } from './groupSubscriptionStatusRespon
 import { HandleWebhookInput } from './handleWebhookInput';
 import { HandleWebhookOutput } from './handleWebhookOutput';
 import { HashPropertiesConfiguration } from './hashPropertiesConfiguration';
+import { IDSyncConfig } from './iDSyncConfig';
+import { IDSyncOptions } from './iDSyncOptions';
 import { IdentifySourceSettingsV1 } from './identifySourceSettingsV1';
 import { InsertFunctionInstanceAlpha } from './insertFunctionInstanceAlpha';
 import { IntegrationOptionBeta } from './integrationOptionBeta';
@@ -1007,6 +1015,8 @@ import { ListConnectedWarehousesFromSourceV1Output } from './listConnectedWareho
 import { ListDeliveryMetricsSummaryFromDestination200Response } from './listDeliveryMetricsSummaryFromDestination200Response';
 import { ListDeliveryMetricsSummaryFromDestinationBetaOutput } from './listDeliveryMetricsSummaryFromDestinationBetaOutput';
 import { ListDestinations200Response } from './listDestinations200Response';
+import { ListDestinationsFromAudience200Response } from './listDestinationsFromAudience200Response';
+import { ListDestinationsFromAudienceAlphaOutput } from './listDestinationsFromAudienceAlphaOutput';
 import { ListDestinationsV1Output } from './listDestinationsV1Output';
 import { ListFiltersForSpace200Response } from './listFiltersForSpace200Response';
 import { ListFiltersForSpaceOutput } from './listFiltersForSpaceOutput';
@@ -1085,6 +1095,7 @@ import { LogosBeta } from './logosBeta';
 import { MessageSubscriptionResponse } from './messageSubscriptionResponse';
 import { MessageSubscriptionResponseError } from './messageSubscriptionResponseError';
 import { MessagesSubscriptionRequest } from './messagesSubscriptionRequest';
+import { Metadata } from './metadata';
 import { MetricBeta } from './metricBeta';
 import { MinimalUserGroupV1 } from './minimalUserGroupV1';
 import { MinimalUserV1 } from './minimalUserV1';
@@ -1177,6 +1188,7 @@ import { ReverseEtlSpecificTimeScheduleConfig } from './reverseEtlSpecificTimeSc
 import { RoleV1 } from './roleV1';
 import { RuleInputV1 } from './ruleInputV1';
 import { RuleV1 } from './ruleV1';
+import { SimpleDestination } from './simpleDestination';
 import { SourceAPICallSnapshotV1 } from './sourceAPICallSnapshotV1';
 import { SourceAlpha } from './sourceAlpha';
 import { SourceEventVolumeDatapointV1 } from './sourceEventVolumeDatapointV1';
@@ -1387,6 +1399,7 @@ let enumsMap: { [index: string]: any } = {
         GroupSubscriptionStatusResponse.StatusEnum,
     'HashPropertiesConfiguration.EncodingEnum':
         HashPropertiesConfiguration.EncodingEnum,
+    'IDSyncOptions.TriggerOnEnum': IDSyncOptions.TriggerOnEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum':
         IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
     'ListAudienceConsumersSortInput.FieldEnum':
@@ -1823,6 +1836,8 @@ let typeMap: { [index: string]: any } = {
     HandleWebhookInput: HandleWebhookInput,
     HandleWebhookOutput: HandleWebhookOutput,
     HashPropertiesConfiguration: HashPropertiesConfiguration,
+    IDSyncConfig: IDSyncConfig,
+    IDSyncOptions: IDSyncOptions,
     IdentifySourceSettingsV1: IdentifySourceSettingsV1,
     InsertFunctionInstanceAlpha: InsertFunctionInstanceAlpha,
     IntegrationOptionBeta: IntegrationOptionBeta,
@@ -1878,6 +1893,10 @@ let typeMap: { [index: string]: any } = {
     ListDeliveryMetricsSummaryFromDestinationBetaOutput:
         ListDeliveryMetricsSummaryFromDestinationBetaOutput,
     ListDestinations200Response: ListDestinations200Response,
+    ListDestinationsFromAudience200Response:
+        ListDestinationsFromAudience200Response,
+    ListDestinationsFromAudienceAlphaOutput:
+        ListDestinationsFromAudienceAlphaOutput,
     ListDestinationsV1Output: ListDestinationsV1Output,
     ListFiltersForSpace200Response: ListFiltersForSpace200Response,
     ListFiltersForSpaceOutput: ListFiltersForSpaceOutput,
@@ -1973,6 +1992,7 @@ let typeMap: { [index: string]: any } = {
     MessageSubscriptionResponse: MessageSubscriptionResponse,
     MessageSubscriptionResponseError: MessageSubscriptionResponseError,
     MessagesSubscriptionRequest: MessagesSubscriptionRequest,
+    Metadata: Metadata,
     MetricBeta: MetricBeta,
     MinimalUserGroupV1: MinimalUserGroupV1,
     MinimalUserV1: MinimalUserV1,
@@ -2087,6 +2107,7 @@ let typeMap: { [index: string]: any } = {
     RoleV1: RoleV1,
     RuleInputV1: RuleInputV1,
     RuleV1: RuleV1,
+    SimpleDestination: SimpleDestination,
     SourceAPICallSnapshotV1: SourceAPICallSnapshotV1,
     SourceAlpha: SourceAlpha,
     SourceEventVolumeDatapointV1: SourceEventVolumeDatapointV1,
