@@ -1221,9 +1221,9 @@ export class FunctionsApi {
     public async listFunctions(
         resourceType:
             | 'DESTINATION'
-            | 'INSERT'
             | 'INSERT_DESTINATION'
             | 'INSERT_SOURCE'
+            | 'INSERT_TRANSFORMATION'
             | 'SOURCE',
         pagination?: PaginationInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
@@ -1269,7 +1269,7 @@ export class FunctionsApi {
             localVarQueryParameters['resourceType'] =
                 ObjectSerializer.serialize(
                     resourceType,
-                    "'DESTINATION' | 'INSERT' | 'INSERT_DESTINATION' | 'INSERT_SOURCE' | 'SOURCE'"
+                    "'DESTINATION' | 'INSERT_DESTINATION' | 'INSERT_SOURCE' | 'INSERT_TRANSFORMATION' | 'SOURCE'"
                 );
         }
 

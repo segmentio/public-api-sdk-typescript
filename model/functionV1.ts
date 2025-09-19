@@ -161,9 +161,9 @@ export class FunctionV1 {
 export namespace FunctionV1 {
     export enum ResourceTypeEnum {
         DESTINATION = <any>'DESTINATION',
-        INSERT = <any>'INSERT',
         INSERT_DESTINATION = <any>'INSERT_DESTINATION',
         INSERT_SOURCE = <any>'INSERT_SOURCE',
+        INSERT_TRANSFORMATION = <any>'INSERT_TRANSFORMATION',
         SOURCE = <any>'SOURCE',
     }
 }

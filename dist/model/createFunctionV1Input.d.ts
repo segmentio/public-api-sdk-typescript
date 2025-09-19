@@ -21,9 +21,9 @@ export declare class CreateFunctionV1Input {
 export declare namespace CreateFunctionV1Input {
     enum ResourceTypeEnum {
         DESTINATION,
-        INSERT,
         INSERT_DESTINATION,
         INSERT_SOURCE,
+        INSERT_TRANSFORMATION,
         SOURCE
     }
 }

@@ -89,9 +89,9 @@ export class CreateFunctionV1Input {
 export namespace CreateFunctionV1Input {
     export enum ResourceTypeEnum {
         DESTINATION = <any>'DESTINATION',
-        INSERT = <any>'INSERT',
         INSERT_DESTINATION = <any>'INSERT_DESTINATION',
         INSERT_SOURCE = <any>'INSERT_SOURCE',
+        INSERT_TRANSFORMATION = <any>'INSERT_TRANSFORMATION',
         SOURCE = <any>'SOURCE',
     }
 }
