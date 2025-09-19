@@ -1,17 +1,18 @@
-export declare class InsertFunctionInstanceAlpha {
+import { IDSyncOptions } from './iDSyncOptions';
+import { Metadata } from './metadata';
+export declare class SimpleDestination {
     'id': string;
     'name'?: string;
-    'integrationId': string;
-    'classId': string;
+    'sourceId': string;
     'enabled': boolean;
     'createdAt': string;
     'updatedAt': string;
     'settings': {
         [key: string]: any;
     };
-    'encryptedSettings': {
-        [key: string]: any;
-    };
+    'destinationId': string;
+    'metadata'?: Metadata;
+    'idSync'?: IDSyncOptions;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

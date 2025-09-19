@@ -11,10 +11,18 @@
  */
 
 import { RequestFile } from './models';
-import { AddAudienceScheduleToAudienceAlphaOutput } from './addAudienceScheduleToAudienceAlphaOutput';
+import { PaginationOutput } from './paginationOutput';
+import { SimpleDestination } from './simpleDestination';
 
-export class AddAudienceScheduleToAudience200Response {
-    'data'?: AddAudienceScheduleToAudienceAlphaOutput;
+/**
+ * Output to List all Destinations from an Audience.
+ */
+export class ListDestinationsFromAudienceAlphaOutput {
+    /**
+     * A list of connection results.
+     */
+    'connections': Array<SimpleDestination>;
+    'pagination'?: PaginationOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,13 +32,18 @@ export class AddAudienceScheduleToAudience200Response {
         type: string;
     }> = [
         {
-            name: 'data',
-            baseName: 'data',
-            type: 'AddAudienceScheduleToAudienceAlphaOutput',
+            name: 'connections',
+            baseName: 'connections',
+            type: 'Array<SimpleDestination>',
+        },
+        {
+            name: 'pagination',
+            baseName: 'pagination',
+            type: 'PaginationOutput',
         },
     ];
 
     static getAttributeTypeMap() {
-        return AddAudienceScheduleToAudience200Response.attributeTypeMap;
+        return ListDestinationsFromAudienceAlphaOutput.attributeTypeMap;
     }
 }

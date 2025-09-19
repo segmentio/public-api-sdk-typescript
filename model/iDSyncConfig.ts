@@ -11,21 +11,16 @@
  */
 
 import { RequestFile } from './models';
-import { Config } from './config';
 
-/**
- * Defines an Create Audience Schedule Input.
- */
-export class AddAudienceScheduleToAudienceAlphaInput {
+export class IDSyncConfig {
     /**
-     * The enabled status of the schedule to be created.
+     * The strategy of the identifier.
      */
-    'enabled': boolean;
+    'strategy': string;
     /**
-     * Strategy of the audience schedule (manual, periodic, or specific days).
+     * The property to map the identifier to.
      */
-    'strategy': AddAudienceScheduleToAudienceAlphaInput.StrategyEnum;
-    'config'?: Config | null;
+    'mapTo'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -35,31 +30,18 @@ export class AddAudienceScheduleToAudienceAlphaInput {
         type: string;
     }> = [
         {
-            name: 'enabled',
-            baseName: 'enabled',
-            type: 'boolean',
-        },
-        {
             name: 'strategy',
             baseName: 'strategy',
-            type: 'AddAudienceScheduleToAudienceAlphaInput.StrategyEnum',
+            type: 'string',
         },
         {
-            name: 'config',
-            baseName: 'config',
-            type: 'Config',
+            name: 'mapTo',
+            baseName: 'mapTo',
+            type: 'string',
         },
     ];
 
     static getAttributeTypeMap() {
-        return AddAudienceScheduleToAudienceAlphaInput.attributeTypeMap;
-    }
-}
-
-export namespace AddAudienceScheduleToAudienceAlphaInput {
-    export enum StrategyEnum {
-        MANUAL = <any>'MANUAL',
-        PERIODIC = <any>'PERIODIC',
-        SPECIFIC_DAYS = <any>'SPECIFIC_DAYS',
+        return IDSyncConfig.attributeTypeMap;
     }
 }

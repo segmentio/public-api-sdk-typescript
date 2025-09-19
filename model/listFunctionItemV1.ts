@@ -108,7 +108,6 @@ export namespace ListFunctionItemV1 {
         DESTINATION = <any>'DESTINATION',
         INSERT_DESTINATION = <any>'INSERT_DESTINATION',
         INSERT_SOURCE = <any>'INSERT_SOURCE',
-        INSERT_TRANSFORMATION = <any>'INSERT_TRANSFORMATION',
         SOURCE = <any>'SOURCE',
     }
 }

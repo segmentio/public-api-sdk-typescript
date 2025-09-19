@@ -12,16 +12,13 @@
 
 import { RequestFile } from './models';
 
-export class InsertFunctionInstanceAlpha {
+/**
+ * The Destination metadata.
+ */
+export class Metadata {
     'id': string;
-    'name'?: string;
-    'integrationId': string;
-    'classId': string;
-    'enabled': boolean;
-    'createdAt': string;
-    'updatedAt': string;
-    'settings': { [key: string]: any };
-    'encryptedSettings': { [key: string]: any };
+    'name': string;
+    'slug': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -41,43 +38,13 @@ export class InsertFunctionInstanceAlpha {
             type: 'string',
         },
         {
-            name: 'integrationId',
-            baseName: 'integrationId',
+            name: 'slug',
+            baseName: 'slug',
             type: 'string',
-        },
-        {
-            name: 'classId',
-            baseName: 'classId',
-            type: 'string',
-        },
-        {
-            name: 'enabled',
-            baseName: 'enabled',
-            type: 'boolean',
-        },
-        {
-            name: 'createdAt',
-            baseName: 'createdAt',
-            type: 'string',
-        },
-        {
-            name: 'updatedAt',
-            baseName: 'updatedAt',
-            type: 'string',
-        },
-        {
-            name: 'settings',
-            baseName: 'settings',
-            type: '{ [key: string]: any; }',
-        },
-        {
-            name: 'encryptedSettings',
-            baseName: 'encryptedSettings',
-            type: '{ [key: string]: any; }',
         },
     ];
 
     static getAttributeTypeMap() {
-        return InsertFunctionInstanceAlpha.attributeTypeMap;
+        return Metadata.attributeTypeMap;
     }
 }

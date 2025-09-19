@@ -54,11 +54,6 @@ var InsertFunctionInstanceAlpha = (function () {
             baseName: 'encryptedSettings',
             type: '{ [key: string]: any; }',
         },
-        {
-            name: 'integrationType',
-            baseName: 'integrationType',
-            type: 'object',
-        },
     ];
     return InsertFunctionInstanceAlpha;
 }());

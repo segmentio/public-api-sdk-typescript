@@ -21,9 +21,6 @@ __exportStar(require("./activationOutput"), exports);
 __exportStar(require("./addActivationToAudience200Response"), exports);
 __exportStar(require("./addActivationToAudienceAlphaInput"), exports);
 __exportStar(require("./addActivationToAudienceAlphaOutput"), exports);
-__exportStar(require("./addAudienceScheduleToAudience200Response"), exports);
-__exportStar(require("./addAudienceScheduleToAudienceAlphaInput"), exports);
-__exportStar(require("./addAudienceScheduleToAudienceAlphaOutput"), exports);
 __exportStar(require("./addConnectionFromSourceToWarehouse201Response"), exports);
 __exportStar(require("./addConnectionFromSourceToWarehouseV1Output"), exports);
 __exportStar(require("./addDestinationToAudience200Response"), exports);
@@ -342,6 +339,8 @@ __exportStar(require("./groupSubscriptionStatusResponse"), exports);
 __exportStar(require("./handleWebhookInput"), exports);
 __exportStar(require("./handleWebhookOutput"), exports);
 __exportStar(require("./hashPropertiesConfiguration"), exports);
+__exportStar(require("./iDSyncConfig"), exports);
+__exportStar(require("./iDSyncOptions"), exports);
 __exportStar(require("./identifySourceSettingsV1"), exports);
 __exportStar(require("./insertFunctionInstanceAlpha"), exports);
 __exportStar(require("./integrationOptionBeta"), exports);
@@ -380,6 +379,8 @@ __exportStar(require("./listConnectedWarehousesFromSourceV1Output"), exports);
 __exportStar(require("./listDeliveryMetricsSummaryFromDestination200Response"), exports);
 __exportStar(require("./listDeliveryMetricsSummaryFromDestinationBetaOutput"), exports);
 __exportStar(require("./listDestinations200Response"), exports);
+__exportStar(require("./listDestinationsFromAudience200Response"), exports);
+__exportStar(require("./listDestinationsFromAudienceAlphaOutput"), exports);
 __exportStar(require("./listDestinationsV1Output"), exports);
 __exportStar(require("./listFiltersForSpace200Response"), exports);
 __exportStar(require("./listFiltersForSpaceOutput"), exports);
@@ -458,6 +459,7 @@ __exportStar(require("./logosBeta"), exports);
 __exportStar(require("./messageSubscriptionResponse"), exports);
 __exportStar(require("./messageSubscriptionResponseError"), exports);
 __exportStar(require("./messagesSubscriptionRequest"), exports);
+__exportStar(require("./metadata"), exports);
 __exportStar(require("./metricBeta"), exports);
 __exportStar(require("./minimalUserGroupV1"), exports);
 __exportStar(require("./minimalUserV1"), exports);
@@ -550,6 +552,7 @@ __exportStar(require("./reverseEtlSpecificTimeScheduleConfig"), exports);
 __exportStar(require("./roleV1"), exports);
 __exportStar(require("./ruleInputV1"), exports);
 __exportStar(require("./ruleV1"), exports);
+__exportStar(require("./simpleDestination"), exports);
 __exportStar(require("./sourceAPICallSnapshotV1"), exports);
 __exportStar(require("./sourceAlpha"), exports);
 __exportStar(require("./sourceEventVolumeDatapointV1"), exports);
@@ -656,9 +659,6 @@ var activationOutput_1 = require("./activationOutput");
 var addActivationToAudience200Response_1 = require("./addActivationToAudience200Response");
 var addActivationToAudienceAlphaInput_1 = require("./addActivationToAudienceAlphaInput");
 var addActivationToAudienceAlphaOutput_1 = require("./addActivationToAudienceAlphaOutput");
-var addAudienceScheduleToAudience200Response_1 = require("./addAudienceScheduleToAudience200Response");
-var addAudienceScheduleToAudienceAlphaInput_1 = require("./addAudienceScheduleToAudienceAlphaInput");
-var addAudienceScheduleToAudienceAlphaOutput_1 = require("./addAudienceScheduleToAudienceAlphaOutput");
 var addConnectionFromSourceToWarehouse201Response_1 = require("./addConnectionFromSourceToWarehouse201Response");
 var addConnectionFromSourceToWarehouseV1Output_1 = require("./addConnectionFromSourceToWarehouseV1Output");
 var addDestinationToAudience200Response_1 = require("./addDestinationToAudience200Response");
@@ -977,6 +977,8 @@ var groupSubscriptionStatusResponse_1 = require("./groupSubscriptionStatusRespon
 var handleWebhookInput_1 = require("./handleWebhookInput");
 var handleWebhookOutput_1 = require("./handleWebhookOutput");
 var hashPropertiesConfiguration_1 = require("./hashPropertiesConfiguration");
+var iDSyncConfig_1 = require("./iDSyncConfig");
+var iDSyncOptions_1 = require("./iDSyncOptions");
 var identifySourceSettingsV1_1 = require("./identifySourceSettingsV1");
 var insertFunctionInstanceAlpha_1 = require("./insertFunctionInstanceAlpha");
 var integrationOptionBeta_1 = require("./integrationOptionBeta");
@@ -1015,6 +1017,8 @@ var listConnectedWarehousesFromSourceV1Output_1 = require("./listConnectedWareho
 var listDeliveryMetricsSummaryFromDestination200Response_1 = require("./listDeliveryMetricsSummaryFromDestination200Response");
 var listDeliveryMetricsSummaryFromDestinationBetaOutput_1 = require("./listDeliveryMetricsSummaryFromDestinationBetaOutput");
 var listDestinations200Response_1 = require("./listDestinations200Response");
+var listDestinationsFromAudience200Response_1 = require("./listDestinationsFromAudience200Response");
+var listDestinationsFromAudienceAlphaOutput_1 = require("./listDestinationsFromAudienceAlphaOutput");
 var listDestinationsV1Output_1 = require("./listDestinationsV1Output");
 var listFiltersForSpace200Response_1 = require("./listFiltersForSpace200Response");
 var listFiltersForSpaceOutput_1 = require("./listFiltersForSpaceOutput");
@@ -1093,6 +1097,7 @@ var logosBeta_1 = require("./logosBeta");
 var messageSubscriptionResponse_1 = require("./messageSubscriptionResponse");
 var messageSubscriptionResponseError_1 = require("./messageSubscriptionResponseError");
 var messagesSubscriptionRequest_1 = require("./messagesSubscriptionRequest");
+var metadata_1 = require("./metadata");
 var metricBeta_1 = require("./metricBeta");
 var minimalUserGroupV1_1 = require("./minimalUserGroupV1");
 var minimalUserV1_1 = require("./minimalUserV1");
@@ -1185,6 +1190,7 @@ var reverseEtlSpecificTimeScheduleConfig_1 = require("./reverseEtlSpecificTimeSc
 var roleV1_1 = require("./roleV1");
 var ruleInputV1_1 = require("./ruleInputV1");
 var ruleV1_1 = require("./ruleV1");
+var simpleDestination_1 = require("./simpleDestination");
 var sourceAPICallSnapshotV1_1 = require("./sourceAPICallSnapshotV1");
 var sourceAlpha_1 = require("./sourceAlpha");
 var sourceEventVolumeDatapointV1_1 = require("./sourceEventVolumeDatapointV1");
@@ -1296,7 +1302,6 @@ var primitives = [
     'any',
 ];
 var enumsMap = {
-    'AddAudienceScheduleToAudienceAlphaInput.StrategyEnum': addAudienceScheduleToAudienceAlphaInput_1.AddAudienceScheduleToAudienceAlphaInput.StrategyEnum,
     'AddConnectionFromSourceToWarehouseV1Output.StatusEnum': addConnectionFromSourceToWarehouseV1Output_1.AddConnectionFromSourceToWarehouseV1Output.StatusEnum,
     'AddSourceToTrackingPlanV1Output.StatusEnum': addSourceToTrackingPlanV1Output_1.AddSourceToTrackingPlanV1Output.StatusEnum,
     'AudienceComputeCadence.TypeEnum': audienceComputeCadence_1.AudienceComputeCadence.TypeEnum,
@@ -1314,7 +1319,6 @@ var enumsMap = {
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
     'CreateFunctionV1Input.ResourceTypeEnum': createFunctionV1Input_1.CreateFunctionV1Input.ResourceTypeEnum,
-    'CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum': createInsertFunctionInstanceAlphaInput_1.CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum,
     'CreateSourceRegulationV1Input.RegulationTypeEnum': createSourceRegulationV1Input_1.CreateSourceRegulationV1Input.RegulationTypeEnum,
     'CreateSourceRegulationV1Input.SubjectTypeEnum': createSourceRegulationV1Input_1.CreateSourceRegulationV1Input.SubjectTypeEnum,
     'CreateTrackingPlanV1Input.TypeEnum': createTrackingPlanV1Input_1.CreateTrackingPlanV1Input.TypeEnum,
@@ -1360,6 +1364,7 @@ var enumsMap = {
     'GroupSubscriptionStatus.StatusEnum': groupSubscriptionStatus_1.GroupSubscriptionStatus.StatusEnum,
     'GroupSubscriptionStatusResponse.StatusEnum': groupSubscriptionStatusResponse_1.GroupSubscriptionStatusResponse.StatusEnum,
     'HashPropertiesConfiguration.EncodingEnum': hashPropertiesConfiguration_1.HashPropertiesConfiguration.EncodingEnum,
+    'IDSyncOptions.TriggerOnEnum': iDSyncOptions_1.IDSyncOptions.TriggerOnEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum': identifySourceSettingsV1_1.IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
     'ListAudienceConsumersSortInput.FieldEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.FieldEnum,
     'ListAudienceConsumersSortInput.DirectionEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.DirectionEnum,
@@ -1408,9 +1413,6 @@ var typeMap = {
     AddActivationToAudience200Response: addActivationToAudience200Response_1.AddActivationToAudience200Response,
     AddActivationToAudienceAlphaInput: addActivationToAudienceAlphaInput_1.AddActivationToAudienceAlphaInput,
     AddActivationToAudienceAlphaOutput: addActivationToAudienceAlphaOutput_1.AddActivationToAudienceAlphaOutput,
-    AddAudienceScheduleToAudience200Response: addAudienceScheduleToAudience200Response_1.AddAudienceScheduleToAudience200Response,
-    AddAudienceScheduleToAudienceAlphaInput: addAudienceScheduleToAudienceAlphaInput_1.AddAudienceScheduleToAudienceAlphaInput,
-    AddAudienceScheduleToAudienceAlphaOutput: addAudienceScheduleToAudienceAlphaOutput_1.AddAudienceScheduleToAudienceAlphaOutput,
     AddConnectionFromSourceToWarehouse201Response: addConnectionFromSourceToWarehouse201Response_1.AddConnectionFromSourceToWarehouse201Response,
     AddConnectionFromSourceToWarehouseV1Output: addConnectionFromSourceToWarehouseV1Output_1.AddConnectionFromSourceToWarehouseV1Output,
     AddDestinationToAudience200Response: addDestinationToAudience200Response_1.AddDestinationToAudience200Response,
@@ -1729,6 +1731,8 @@ var typeMap = {
     HandleWebhookInput: handleWebhookInput_1.HandleWebhookInput,
     HandleWebhookOutput: handleWebhookOutput_1.HandleWebhookOutput,
     HashPropertiesConfiguration: hashPropertiesConfiguration_1.HashPropertiesConfiguration,
+    IDSyncConfig: iDSyncConfig_1.IDSyncConfig,
+    IDSyncOptions: iDSyncOptions_1.IDSyncOptions,
     IdentifySourceSettingsV1: identifySourceSettingsV1_1.IdentifySourceSettingsV1,
     InsertFunctionInstanceAlpha: insertFunctionInstanceAlpha_1.InsertFunctionInstanceAlpha,
     IntegrationOptionBeta: integrationOptionBeta_1.IntegrationOptionBeta,
@@ -1767,6 +1771,8 @@ var typeMap = {
     ListDeliveryMetricsSummaryFromDestination200Response: listDeliveryMetricsSummaryFromDestination200Response_1.ListDeliveryMetricsSummaryFromDestination200Response,
     ListDeliveryMetricsSummaryFromDestinationBetaOutput: listDeliveryMetricsSummaryFromDestinationBetaOutput_1.ListDeliveryMetricsSummaryFromDestinationBetaOutput,
     ListDestinations200Response: listDestinations200Response_1.ListDestinations200Response,
+    ListDestinationsFromAudience200Response: listDestinationsFromAudience200Response_1.ListDestinationsFromAudience200Response,
+    ListDestinationsFromAudienceAlphaOutput: listDestinationsFromAudienceAlphaOutput_1.ListDestinationsFromAudienceAlphaOutput,
     ListDestinationsV1Output: listDestinationsV1Output_1.ListDestinationsV1Output,
     ListFiltersForSpace200Response: listFiltersForSpace200Response_1.ListFiltersForSpace200Response,
     ListFiltersForSpaceOutput: listFiltersForSpaceOutput_1.ListFiltersForSpaceOutput,
@@ -1845,6 +1851,7 @@ var typeMap = {
     MessageSubscriptionResponse: messageSubscriptionResponse_1.MessageSubscriptionResponse,
     MessageSubscriptionResponseError: messageSubscriptionResponseError_1.MessageSubscriptionResponseError,
     MessagesSubscriptionRequest: messagesSubscriptionRequest_1.MessagesSubscriptionRequest,
+    Metadata: metadata_1.Metadata,
     MetricBeta: metricBeta_1.MetricBeta,
     MinimalUserGroupV1: minimalUserGroupV1_1.MinimalUserGroupV1,
     MinimalUserV1: minimalUserV1_1.MinimalUserV1,
@@ -1937,6 +1944,7 @@ var typeMap = {
     RoleV1: roleV1_1.RoleV1,
     RuleInputV1: ruleInputV1_1.RuleInputV1,
     RuleV1: ruleV1_1.RuleV1,
+    SimpleDestination: simpleDestination_1.SimpleDestination,
     SourceAPICallSnapshotV1: sourceAPICallSnapshotV1_1.SourceAPICallSnapshotV1,
     SourceAlpha: sourceAlpha_1.SourceAlpha,
     SourceEventVolumeDatapointV1: sourceEventVolumeDatapointV1_1.SourceEventVolumeDatapointV1,

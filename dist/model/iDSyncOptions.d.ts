@@ -1,9 +1,6 @@
-export declare class CreateInsertFunctionInstanceAlphaInput {
-    'functionId': string;
-    'integrationId': string;
-    'enabled'?: boolean;
-    'name': string;
-    'settings': {
+export declare class IDSyncOptions {
+    'triggerOn': Array<IDSyncOptions.TriggerOnEnum>;
+    'ids': {
         [key: string]: any;
     };
     static discriminator: string | undefined;
@@ -17,4 +14,12 @@ export declare class CreateInsertFunctionInstanceAlphaInput {
         baseName: string;
         type: string;
     }[];
+}
+export declare namespace IDSyncOptions {
+    enum TriggerOnEnum {
+        any,
+        audience_exited,
+        audience_joined,
+        new_external_id_added
+    }
 }

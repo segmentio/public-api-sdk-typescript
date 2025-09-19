@@ -11,13 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { AudienceSchedule } from './audienceSchedule';
+import { ListDestinationsFromAudienceAlphaOutput } from './listDestinationsFromAudienceAlphaOutput';
 
-/**
- * Defines an Create Audience Schedule Output.
- */
-export class AddAudienceScheduleToAudienceAlphaOutput {
-    'audienceSchedule': AudienceSchedule;
+export class ListDestinationsFromAudience200Response {
+    'data'?: ListDestinationsFromAudienceAlphaOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -27,13 +24,13 @@ export class AddAudienceScheduleToAudienceAlphaOutput {
         type: string;
     }> = [
         {
-            name: 'audienceSchedule',
-            baseName: 'audienceSchedule',
-            type: 'AudienceSchedule',
+            name: 'data',
+            baseName: 'data',
+            type: 'ListDestinationsFromAudienceAlphaOutput',
         },
     ];
 
     static getAttributeTypeMap() {
-        return AddAudienceScheduleToAudienceAlphaOutput.attributeTypeMap;
+        return ListDestinationsFromAudience200Response.attributeTypeMap;
     }
 }

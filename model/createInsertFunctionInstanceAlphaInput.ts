@@ -17,7 +17,7 @@ import { RequestFile } from './models';
  */
 export class CreateInsertFunctionInstanceAlphaInput {
     /**
-     * Insert Function id to which this instance is associated.  Note: Remove the ifnd_/ifns_/ifn_ prefix from the id.
+     * Insert Function id to which this instance is associated.  Note: Remove the ifnd_/ifns_ prefix from the id.
      */
     'functionId': string;
     /**
@@ -36,10 +36,6 @@ export class CreateInsertFunctionInstanceAlphaInput {
      * An object that contains settings for this insert Function instance based on the settings present in the insert Function class.
      */
     'settings': { [key: string]: any };
-    /**
-     * The Integration type for the insert Function instance.
-     */
-    'integrationType': CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
@@ -73,22 +69,9 @@ export class CreateInsertFunctionInstanceAlphaInput {
             baseName: 'settings',
             type: '{ [key: string]: any; }',
         },
-        {
-            name: 'integrationType',
-            baseName: 'integrationType',
-            type: 'CreateInsertFunctionInstanceAlphaInput.IntegrationTypeEnum',
-        },
     ];
 
     static getAttributeTypeMap() {
         return CreateInsertFunctionInstanceAlphaInput.attributeTypeMap;
-    }
-}
-
-export namespace CreateInsertFunctionInstanceAlphaInput {
-    export enum IntegrationTypeEnum {
-        DESTINATION = <any>'DESTINATION',
-        JOURNEY = <any>'JOURNEY',
-        SOURCE = <any>'SOURCE',
     }
 }

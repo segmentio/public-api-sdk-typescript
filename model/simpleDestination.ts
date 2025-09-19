@@ -11,17 +11,44 @@
  */
 
 import { RequestFile } from './models';
+import { IDSyncOptions } from './iDSyncOptions';
+import { Metadata } from './metadata';
 
-export class InsertFunctionInstanceAlpha {
+export class SimpleDestination {
+    /**
+     * The id of the Integration.
+     */
     'id': string;
+    /**
+     * The name of the Destination.
+     */
     'name'?: string;
-    'integrationId': string;
-    'classId': string;
+    /**
+     * The Source of the Destination.
+     */
+    'sourceId': string;
+    /**
+     * Whether the Integration is enabled or not.
+     */
     'enabled': boolean;
+    /**
+     * When the Integration connection was created.
+     */
     'createdAt': string;
+    /**
+     * When the Integration connection was last updated.
+     */
     'updatedAt': string;
+    /**
+     * The Destination settings.
+     */
     'settings': { [key: string]: any };
-    'encryptedSettings': { [key: string]: any };
+    /**
+     * The Destination id.
+     */
+    'destinationId': string;
+    'metadata'?: Metadata;
+    'idSync'?: IDSyncOptions;
 
     static discriminator: string | undefined = undefined;
 
@@ -41,13 +68,8 @@ export class InsertFunctionInstanceAlpha {
             type: 'string',
         },
         {
-            name: 'integrationId',
-            baseName: 'integrationId',
-            type: 'string',
-        },
-        {
-            name: 'classId',
-            baseName: 'classId',
+            name: 'sourceId',
+            baseName: 'sourceId',
             type: 'string',
         },
         {
@@ -71,13 +93,23 @@ export class InsertFunctionInstanceAlpha {
             type: '{ [key: string]: any; }',
         },
         {
-            name: 'encryptedSettings',
-            baseName: 'encryptedSettings',
-            type: '{ [key: string]: any; }',
+            name: 'destinationId',
+            baseName: 'destinationId',
+            type: 'string',
+        },
+        {
+            name: 'metadata',
+            baseName: 'metadata',
+            type: 'Metadata',
+        },
+        {
+            name: 'idSync',
+            baseName: 'idSync',
+            type: 'IDSyncOptions',
         },
     ];
 
     static getAttributeTypeMap() {
-        return InsertFunctionInstanceAlpha.attributeTypeMap;
+        return SimpleDestination.attributeTypeMap;
     }
 }
