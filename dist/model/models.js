@@ -21,6 +21,9 @@ __exportStar(require("./activationOutput"), exports);
 __exportStar(require("./addActivationToAudience200Response"), exports);
 __exportStar(require("./addActivationToAudienceAlphaInput"), exports);
 __exportStar(require("./addActivationToAudienceAlphaOutput"), exports);
+__exportStar(require("./addAudienceScheduleToAudience200Response"), exports);
+__exportStar(require("./addAudienceScheduleToAudienceAlphaInput"), exports);
+__exportStar(require("./addAudienceScheduleToAudienceAlphaOutput"), exports);
 __exportStar(require("./addConnectionFromSourceToWarehouse201Response"), exports);
 __exportStar(require("./addConnectionFromSourceToWarehouseV1Output"), exports);
 __exportStar(require("./addDestinationToAudience200Response"), exports);
@@ -659,6 +662,9 @@ var activationOutput_1 = require("./activationOutput");
 var addActivationToAudience200Response_1 = require("./addActivationToAudience200Response");
 var addActivationToAudienceAlphaInput_1 = require("./addActivationToAudienceAlphaInput");
 var addActivationToAudienceAlphaOutput_1 = require("./addActivationToAudienceAlphaOutput");
+var addAudienceScheduleToAudience200Response_1 = require("./addAudienceScheduleToAudience200Response");
+var addAudienceScheduleToAudienceAlphaInput_1 = require("./addAudienceScheduleToAudienceAlphaInput");
+var addAudienceScheduleToAudienceAlphaOutput_1 = require("./addAudienceScheduleToAudienceAlphaOutput");
 var addConnectionFromSourceToWarehouse201Response_1 = require("./addConnectionFromSourceToWarehouse201Response");
 var addConnectionFromSourceToWarehouseV1Output_1 = require("./addConnectionFromSourceToWarehouseV1Output");
 var addDestinationToAudience200Response_1 = require("./addDestinationToAudience200Response");
@@ -1302,6 +1308,7 @@ var primitives = [
     'any',
 ];
 var enumsMap = {
+    'AddAudienceScheduleToAudienceAlphaInput.StrategyEnum': addAudienceScheduleToAudienceAlphaInput_1.AddAudienceScheduleToAudienceAlphaInput.StrategyEnum,
     'AddConnectionFromSourceToWarehouseV1Output.StatusEnum': addConnectionFromSourceToWarehouseV1Output_1.AddConnectionFromSourceToWarehouseV1Output.StatusEnum,
     'AddSourceToTrackingPlanV1Output.StatusEnum': addSourceToTrackingPlanV1Output_1.AddSourceToTrackingPlanV1Output.StatusEnum,
     'AudienceComputeCadence.TypeEnum': audienceComputeCadence_1.AudienceComputeCadence.TypeEnum,
@@ -1413,6 +1420,9 @@ var typeMap = {
     AddActivationToAudience200Response: addActivationToAudience200Response_1.AddActivationToAudience200Response,
     AddActivationToAudienceAlphaInput: addActivationToAudienceAlphaInput_1.AddActivationToAudienceAlphaInput,
     AddActivationToAudienceAlphaOutput: addActivationToAudienceAlphaOutput_1.AddActivationToAudienceAlphaOutput,
+    AddAudienceScheduleToAudience200Response: addAudienceScheduleToAudience200Response_1.AddAudienceScheduleToAudience200Response,
+    AddAudienceScheduleToAudienceAlphaInput: addAudienceScheduleToAudienceAlphaInput_1.AddAudienceScheduleToAudienceAlphaInput,
+    AddAudienceScheduleToAudienceAlphaOutput: addAudienceScheduleToAudienceAlphaOutput_1.AddAudienceScheduleToAudienceAlphaOutput,
     AddConnectionFromSourceToWarehouse201Response: addConnectionFromSourceToWarehouse201Response_1.AddConnectionFromSourceToWarehouse201Response,
     AddConnectionFromSourceToWarehouseV1Output: addConnectionFromSourceToWarehouseV1Output_1.AddConnectionFromSourceToWarehouseV1Output,
     AddDestinationToAudience200Response: addDestinationToAudience200Response_1.AddDestinationToAudience200Response,
