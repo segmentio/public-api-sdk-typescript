@@ -1,5 +1,7 @@
 /// <reference types="node" />
 import http from 'http';
+import { AddAudienceScheduleToAudience200Response } from '../model/addAudienceScheduleToAudience200Response';
+import { AddAudienceScheduleToAudienceAlphaInput } from '../model/addAudienceScheduleToAudienceAlphaInput';
 import { CreateAudience200Response } from '../model/createAudience200Response';
 import { CreateAudienceBetaInput } from '../model/createAudienceBetaInput';
 import { CreateAudiencePreview200Response } from '../model/createAudiencePreview200Response';
@@ -17,6 +19,8 @@ import { PaginationInput } from '../model/paginationInput';
 import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromSpace200Response';
 import { UpdateAudienceForSpace200Response } from '../model/updateAudienceForSpace200Response';
 import { UpdateAudienceForSpaceAlphaInput } from '../model/updateAudienceForSpaceAlphaInput';
+import { UpdateAudienceScheduleForAudience200Response } from '../model/updateAudienceScheduleForAudience200Response';
+import { UpdateAudienceScheduleForAudienceAlphaInput } from '../model/updateAudienceScheduleForAudienceAlphaInput';
 import { Authentication, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
 export declare enum AudiencesApiApiKeys {
@@ -40,6 +44,14 @@ export declare class AudiencesApi {
     setApiKey(key: AudiencesApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
+    addAudienceScheduleToAudience(spaceId: string, id: string, AddAudienceScheduleToAudienceAlphaInput: AddAudienceScheduleToAudienceAlphaInput, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: AddAudienceScheduleToAudience200Response;
+    }>;
     createAudience(spaceId: string, CreateAudienceBetaInput: CreateAudienceBetaInput, options?: {
         headers: {
             [name: string]: string;
@@ -119,5 +131,13 @@ export declare class AudiencesApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: UpdateAudienceForSpace200Response;
+    }>;
+    updateAudienceScheduleForAudience(spaceId: string, id: string, scheduleId: string, UpdateAudienceScheduleForAudienceAlphaInput: UpdateAudienceScheduleForAudienceAlphaInput, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: UpdateAudienceScheduleForAudience200Response;
     }>;
 }

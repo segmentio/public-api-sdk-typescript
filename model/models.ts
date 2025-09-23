@@ -6,6 +6,9 @@ export * from './activationOutput';
 export * from './addActivationToAudience200Response';
 export * from './addActivationToAudienceAlphaInput';
 export * from './addActivationToAudienceAlphaOutput';
+export * from './addAudienceScheduleToAudience200Response';
+export * from './addAudienceScheduleToAudienceAlphaInput';
+export * from './addAudienceScheduleToAudienceAlphaOutput';
 export * from './addConnectionFromSourceToWarehouse201Response';
 export * from './addConnectionFromSourceToWarehouseV1Output';
 export * from './addDestinationToAudience200Response';
@@ -567,6 +570,9 @@ export * from './updateActivationForAudienceOutput';
 export * from './updateAudienceForSpace200Response';
 export * from './updateAudienceForSpaceAlphaInput';
 export * from './updateAudienceForSpaceAlphaOutput';
+export * from './updateAudienceScheduleForAudience200Response';
+export * from './updateAudienceScheduleForAudienceAlphaInput';
+export * from './updateAudienceScheduleForAudienceAlphaOutput';
 export * from './updateComputedTraitForSpace200Response';
 export * from './updateComputedTraitForSpaceAlphaInput';
 export * from './updateComputedTraitForSpaceAlphaOutput';
@@ -657,6 +663,9 @@ import { ActivationOutput } from './activationOutput';
 import { AddActivationToAudience200Response } from './addActivationToAudience200Response';
 import { AddActivationToAudienceAlphaInput } from './addActivationToAudienceAlphaInput';
 import { AddActivationToAudienceAlphaOutput } from './addActivationToAudienceAlphaOutput';
+import { AddAudienceScheduleToAudience200Response } from './addAudienceScheduleToAudience200Response';
+import { AddAudienceScheduleToAudienceAlphaInput } from './addAudienceScheduleToAudienceAlphaInput';
+import { AddAudienceScheduleToAudienceAlphaOutput } from './addAudienceScheduleToAudienceAlphaOutput';
 import { AddConnectionFromSourceToWarehouse201Response } from './addConnectionFromSourceToWarehouse201Response';
 import { AddConnectionFromSourceToWarehouseV1Output } from './addConnectionFromSourceToWarehouseV1Output';
 import { AddDestinationToAudience200Response } from './addDestinationToAudience200Response';
@@ -1218,6 +1227,9 @@ import { UpdateActivationForAudienceOutput } from './updateActivationForAudience
 import { UpdateAudienceForSpace200Response } from './updateAudienceForSpace200Response';
 import { UpdateAudienceForSpaceAlphaInput } from './updateAudienceForSpaceAlphaInput';
 import { UpdateAudienceForSpaceAlphaOutput } from './updateAudienceForSpaceAlphaOutput';
+import { UpdateAudienceScheduleForAudience200Response } from './updateAudienceScheduleForAudience200Response';
+import { UpdateAudienceScheduleForAudienceAlphaInput } from './updateAudienceScheduleForAudienceAlphaInput';
+import { UpdateAudienceScheduleForAudienceAlphaOutput } from './updateAudienceScheduleForAudienceAlphaOutput';
 import { UpdateComputedTraitForSpace200Response } from './updateComputedTraitForSpace200Response';
 import { UpdateComputedTraitForSpaceAlphaInput } from './updateComputedTraitForSpaceAlphaInput';
 import { UpdateComputedTraitForSpaceAlphaOutput } from './updateComputedTraitForSpaceAlphaOutput';
@@ -1303,6 +1315,8 @@ let primitives = [
 ];
 
 let enumsMap: { [index: string]: any } = {
+    'AddAudienceScheduleToAudienceAlphaInput.StrategyEnum':
+        AddAudienceScheduleToAudienceAlphaInput.StrategyEnum,
     'AddConnectionFromSourceToWarehouseV1Output.StatusEnum':
         AddConnectionFromSourceToWarehouseV1Output.StatusEnum,
     'AddSourceToTrackingPlanV1Output.StatusEnum':
@@ -1456,6 +1470,8 @@ let enumsMap: { [index: string]: any } = {
         TrackSourceSettingsV1.CommonEventOnViolationsEnum,
     'TrackingPlanV1.TypeEnum': TrackingPlanV1.TypeEnum,
     'TraitDefinition.TypeEnum': TraitDefinition.TypeEnum,
+    'UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum':
+        UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum,
     'UpdateGroupSubscriptionStatusResponse.StatusEnum':
         UpdateGroupSubscriptionStatusResponse.StatusEnum,
     'UpdateRulesInTrackingPlanV1Output.StatusEnum':
@@ -1476,6 +1492,12 @@ let typeMap: { [index: string]: any } = {
     AddActivationToAudience200Response: AddActivationToAudience200Response,
     AddActivationToAudienceAlphaInput: AddActivationToAudienceAlphaInput,
     AddActivationToAudienceAlphaOutput: AddActivationToAudienceAlphaOutput,
+    AddAudienceScheduleToAudience200Response:
+        AddAudienceScheduleToAudience200Response,
+    AddAudienceScheduleToAudienceAlphaInput:
+        AddAudienceScheduleToAudienceAlphaInput,
+    AddAudienceScheduleToAudienceAlphaOutput:
+        AddAudienceScheduleToAudienceAlphaOutput,
     AddConnectionFromSourceToWarehouse201Response:
         AddConnectionFromSourceToWarehouse201Response,
     AddConnectionFromSourceToWarehouseV1Output:
@@ -2139,6 +2161,12 @@ let typeMap: { [index: string]: any } = {
     UpdateAudienceForSpace200Response: UpdateAudienceForSpace200Response,
     UpdateAudienceForSpaceAlphaInput: UpdateAudienceForSpaceAlphaInput,
     UpdateAudienceForSpaceAlphaOutput: UpdateAudienceForSpaceAlphaOutput,
+    UpdateAudienceScheduleForAudience200Response:
+        UpdateAudienceScheduleForAudience200Response,
+    UpdateAudienceScheduleForAudienceAlphaInput:
+        UpdateAudienceScheduleForAudienceAlphaInput,
+    UpdateAudienceScheduleForAudienceAlphaOutput:
+        UpdateAudienceScheduleForAudienceAlphaOutput,
     UpdateComputedTraitForSpace200Response:
         UpdateComputedTraitForSpace200Response,
     UpdateComputedTraitForSpaceAlphaInput:

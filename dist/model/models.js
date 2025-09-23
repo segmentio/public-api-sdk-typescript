@@ -21,6 +21,9 @@ __exportStar(require("./activationOutput"), exports);
 __exportStar(require("./addActivationToAudience200Response"), exports);
 __exportStar(require("./addActivationToAudienceAlphaInput"), exports);
 __exportStar(require("./addActivationToAudienceAlphaOutput"), exports);
+__exportStar(require("./addAudienceScheduleToAudience200Response"), exports);
+__exportStar(require("./addAudienceScheduleToAudienceAlphaInput"), exports);
+__exportStar(require("./addAudienceScheduleToAudienceAlphaOutput"), exports);
 __exportStar(require("./addConnectionFromSourceToWarehouse201Response"), exports);
 __exportStar(require("./addConnectionFromSourceToWarehouseV1Output"), exports);
 __exportStar(require("./addDestinationToAudience200Response"), exports);
@@ -582,6 +585,9 @@ __exportStar(require("./updateActivationForAudienceOutput"), exports);
 __exportStar(require("./updateAudienceForSpace200Response"), exports);
 __exportStar(require("./updateAudienceForSpaceAlphaInput"), exports);
 __exportStar(require("./updateAudienceForSpaceAlphaOutput"), exports);
+__exportStar(require("./updateAudienceScheduleForAudience200Response"), exports);
+__exportStar(require("./updateAudienceScheduleForAudienceAlphaInput"), exports);
+__exportStar(require("./updateAudienceScheduleForAudienceAlphaOutput"), exports);
 __exportStar(require("./updateComputedTraitForSpace200Response"), exports);
 __exportStar(require("./updateComputedTraitForSpaceAlphaInput"), exports);
 __exportStar(require("./updateComputedTraitForSpaceAlphaOutput"), exports);
@@ -659,6 +665,9 @@ var activationOutput_1 = require("./activationOutput");
 var addActivationToAudience200Response_1 = require("./addActivationToAudience200Response");
 var addActivationToAudienceAlphaInput_1 = require("./addActivationToAudienceAlphaInput");
 var addActivationToAudienceAlphaOutput_1 = require("./addActivationToAudienceAlphaOutput");
+var addAudienceScheduleToAudience200Response_1 = require("./addAudienceScheduleToAudience200Response");
+var addAudienceScheduleToAudienceAlphaInput_1 = require("./addAudienceScheduleToAudienceAlphaInput");
+var addAudienceScheduleToAudienceAlphaOutput_1 = require("./addAudienceScheduleToAudienceAlphaOutput");
 var addConnectionFromSourceToWarehouse201Response_1 = require("./addConnectionFromSourceToWarehouse201Response");
 var addConnectionFromSourceToWarehouseV1Output_1 = require("./addConnectionFromSourceToWarehouseV1Output");
 var addDestinationToAudience200Response_1 = require("./addDestinationToAudience200Response");
@@ -1220,6 +1229,9 @@ var updateActivationForAudienceOutput_1 = require("./updateActivationForAudience
 var updateAudienceForSpace200Response_1 = require("./updateAudienceForSpace200Response");
 var updateAudienceForSpaceAlphaInput_1 = require("./updateAudienceForSpaceAlphaInput");
 var updateAudienceForSpaceAlphaOutput_1 = require("./updateAudienceForSpaceAlphaOutput");
+var updateAudienceScheduleForAudience200Response_1 = require("./updateAudienceScheduleForAudience200Response");
+var updateAudienceScheduleForAudienceAlphaInput_1 = require("./updateAudienceScheduleForAudienceAlphaInput");
+var updateAudienceScheduleForAudienceAlphaOutput_1 = require("./updateAudienceScheduleForAudienceAlphaOutput");
 var updateComputedTraitForSpace200Response_1 = require("./updateComputedTraitForSpace200Response");
 var updateComputedTraitForSpaceAlphaInput_1 = require("./updateComputedTraitForSpaceAlphaInput");
 var updateComputedTraitForSpaceAlphaOutput_1 = require("./updateComputedTraitForSpaceAlphaOutput");
@@ -1302,6 +1314,7 @@ var primitives = [
     'any',
 ];
 var enumsMap = {
+    'AddAudienceScheduleToAudienceAlphaInput.StrategyEnum': addAudienceScheduleToAudienceAlphaInput_1.AddAudienceScheduleToAudienceAlphaInput.StrategyEnum,
     'AddConnectionFromSourceToWarehouseV1Output.StatusEnum': addConnectionFromSourceToWarehouseV1Output_1.AddConnectionFromSourceToWarehouseV1Output.StatusEnum,
     'AddSourceToTrackingPlanV1Output.StatusEnum': addSourceToTrackingPlanV1Output_1.AddSourceToTrackingPlanV1Output.StatusEnum,
     'AudienceComputeCadence.TypeEnum': audienceComputeCadence_1.AudienceComputeCadence.TypeEnum,
@@ -1399,6 +1412,7 @@ var enumsMap = {
     'TrackSourceSettingsV1.CommonEventOnViolationsEnum': trackSourceSettingsV1_1.TrackSourceSettingsV1.CommonEventOnViolationsEnum,
     'TrackingPlanV1.TypeEnum': trackingPlanV1_1.TrackingPlanV1.TypeEnum,
     'TraitDefinition.TypeEnum': traitDefinition_1.TraitDefinition.TypeEnum,
+    'UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum': updateAudienceScheduleForAudienceAlphaInput_1.UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum,
     'UpdateGroupSubscriptionStatusResponse.StatusEnum': updateGroupSubscriptionStatusResponse_1.UpdateGroupSubscriptionStatusResponse.StatusEnum,
     'UpdateRulesInTrackingPlanV1Output.StatusEnum': updateRulesInTrackingPlanV1Output_1.UpdateRulesInTrackingPlanV1Output.StatusEnum,
     'UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum': updateSelectiveSyncForWarehouseAndSpaceAlphaOutput_1.UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum,
@@ -1413,6 +1427,9 @@ var typeMap = {
     AddActivationToAudience200Response: addActivationToAudience200Response_1.AddActivationToAudience200Response,
     AddActivationToAudienceAlphaInput: addActivationToAudienceAlphaInput_1.AddActivationToAudienceAlphaInput,
     AddActivationToAudienceAlphaOutput: addActivationToAudienceAlphaOutput_1.AddActivationToAudienceAlphaOutput,
+    AddAudienceScheduleToAudience200Response: addAudienceScheduleToAudience200Response_1.AddAudienceScheduleToAudience200Response,
+    AddAudienceScheduleToAudienceAlphaInput: addAudienceScheduleToAudienceAlphaInput_1.AddAudienceScheduleToAudienceAlphaInput,
+    AddAudienceScheduleToAudienceAlphaOutput: addAudienceScheduleToAudienceAlphaOutput_1.AddAudienceScheduleToAudienceAlphaOutput,
     AddConnectionFromSourceToWarehouse201Response: addConnectionFromSourceToWarehouse201Response_1.AddConnectionFromSourceToWarehouse201Response,
     AddConnectionFromSourceToWarehouseV1Output: addConnectionFromSourceToWarehouseV1Output_1.AddConnectionFromSourceToWarehouseV1Output,
     AddDestinationToAudience200Response: addDestinationToAudience200Response_1.AddDestinationToAudience200Response,
@@ -1974,6 +1991,9 @@ var typeMap = {
     UpdateAudienceForSpace200Response: updateAudienceForSpace200Response_1.UpdateAudienceForSpace200Response,
     UpdateAudienceForSpaceAlphaInput: updateAudienceForSpaceAlphaInput_1.UpdateAudienceForSpaceAlphaInput,
     UpdateAudienceForSpaceAlphaOutput: updateAudienceForSpaceAlphaOutput_1.UpdateAudienceForSpaceAlphaOutput,
+    UpdateAudienceScheduleForAudience200Response: updateAudienceScheduleForAudience200Response_1.UpdateAudienceScheduleForAudience200Response,
+    UpdateAudienceScheduleForAudienceAlphaInput: updateAudienceScheduleForAudienceAlphaInput_1.UpdateAudienceScheduleForAudienceAlphaInput,
+    UpdateAudienceScheduleForAudienceAlphaOutput: updateAudienceScheduleForAudienceAlphaOutput_1.UpdateAudienceScheduleForAudienceAlphaOutput,
     UpdateComputedTraitForSpace200Response: updateComputedTraitForSpace200Response_1.UpdateComputedTraitForSpace200Response,
     UpdateComputedTraitForSpaceAlphaInput: updateComputedTraitForSpaceAlphaInput_1.UpdateComputedTraitForSpaceAlphaInput,
     UpdateComputedTraitForSpaceAlphaOutput: updateComputedTraitForSpaceAlphaOutput_1.UpdateComputedTraitForSpaceAlphaOutput,
