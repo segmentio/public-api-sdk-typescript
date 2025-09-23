@@ -1,5 +1,7 @@
 /// <reference types="node" />
 import http from 'http';
+import { AddAudienceScheduleToAudience200Response } from '../model/addAudienceScheduleToAudience200Response';
+import { AddAudienceScheduleToAudienceAlphaInput } from '../model/addAudienceScheduleToAudienceAlphaInput';
 import { CreateAudience200Response } from '../model/createAudience200Response';
 import { CreateAudienceBetaInput } from '../model/createAudienceBetaInput';
 import { CreateAudiencePreview200Response } from '../model/createAudiencePreview200Response';
@@ -40,6 +42,14 @@ export declare class AudiencesApi {
     setApiKey(key: AudiencesApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
+    addAudienceScheduleToAudience(spaceId: string, id: string, AddAudienceScheduleToAudienceAlphaInput: AddAudienceScheduleToAudienceAlphaInput, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: AddAudienceScheduleToAudience200Response;
+    }>;
     createAudience(spaceId: string, CreateAudienceBetaInput: CreateAudienceBetaInput, options?: {
         headers: {
             [name: string]: string;
