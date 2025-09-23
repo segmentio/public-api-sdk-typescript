@@ -10,11 +10,6 @@ var AddAudienceScheduleToAudienceAlphaInput = (function () {
     AddAudienceScheduleToAudienceAlphaInput.discriminator = undefined;
     AddAudienceScheduleToAudienceAlphaInput.attributeTypeMap = [
         {
-            name: 'enabled',
-            baseName: 'enabled',
-            type: 'boolean',
-        },
-        {
             name: 'strategy',
             baseName: 'strategy',
             type: 'AddAudienceScheduleToAudienceAlphaInput.StrategyEnum',
