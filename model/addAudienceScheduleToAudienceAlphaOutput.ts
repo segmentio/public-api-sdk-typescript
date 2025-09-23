@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { AudienceSchedule } from './audienceSchedule';
 
 /**
- * Defines a Create Audience Schedule Output.
+ * Defines the output of creating an audience schedule.
  */
 export class AddAudienceScheduleToAudienceAlphaOutput {
     'audienceSchedule': AudienceSchedule;

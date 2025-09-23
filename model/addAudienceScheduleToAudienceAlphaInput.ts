@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { Config } from './config';
 
 /**
- * Defines a Create Audience Schedule Input.
+ * Defines an input for creating an audience schedule.
  */
 export class AddAudienceScheduleToAudienceAlphaInput {
     /**
