@@ -18,10 +18,6 @@ import { Config } from './config';
  */
 export class AddAudienceScheduleToAudienceAlphaInput {
     /**
-     * The enabled status of the schedule to be created.
-     */
-    'enabled': boolean;
-    /**
      * Strategy of the audience schedule (manual, periodic, or specific days).
      */
     'strategy': AddAudienceScheduleToAudienceAlphaInput.StrategyEnum;
@@ -34,11 +30,6 @@ export class AddAudienceScheduleToAudienceAlphaInput {
         baseName: string;
         type: string;
     }> = [
-        {
-            name: 'enabled',
-            baseName: 'enabled',
-            type: 'boolean',
-        },
         {
             name: 'strategy',
             baseName: 'strategy',

@@ -132,7 +132,7 @@ export class AudiencesApi {
     }
 
     /**
-     * Creates a schedule for the given audience.  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Audience feature enabled. Please reach out to your customer success manager for more information.
+     * The ability to configure the run schedule for an Audience is limited to Linked Audiences (for example audienceType = LINKED).  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Audience feature enabled. Please reach out to your customer success manager for more information.
      * @summary Add Audience Schedule to Audience
      * @param spaceId
      * @param id
