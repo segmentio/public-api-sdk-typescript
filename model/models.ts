@@ -6,6 +6,9 @@ export * from './activationOutput';
 export * from './addActivationToAudience200Response';
 export * from './addActivationToAudienceAlphaInput';
 export * from './addActivationToAudienceAlphaOutput';
+export * from './addAudienceScheduleToAudience200Response';
+export * from './addAudienceScheduleToAudienceAlphaInput';
+export * from './addAudienceScheduleToAudienceAlphaOutput';
 export * from './addConnectionFromSourceToWarehouse201Response';
 export * from './addConnectionFromSourceToWarehouseV1Output';
 export * from './addDestinationToAudience200Response';
@@ -657,6 +660,9 @@ import { ActivationOutput } from './activationOutput';
 import { AddActivationToAudience200Response } from './addActivationToAudience200Response';
 import { AddActivationToAudienceAlphaInput } from './addActivationToAudienceAlphaInput';
 import { AddActivationToAudienceAlphaOutput } from './addActivationToAudienceAlphaOutput';
+import { AddAudienceScheduleToAudience200Response } from './addAudienceScheduleToAudience200Response';
+import { AddAudienceScheduleToAudienceAlphaInput } from './addAudienceScheduleToAudienceAlphaInput';
+import { AddAudienceScheduleToAudienceAlphaOutput } from './addAudienceScheduleToAudienceAlphaOutput';
 import { AddConnectionFromSourceToWarehouse201Response } from './addConnectionFromSourceToWarehouse201Response';
 import { AddConnectionFromSourceToWarehouseV1Output } from './addConnectionFromSourceToWarehouseV1Output';
 import { AddDestinationToAudience200Response } from './addDestinationToAudience200Response';
@@ -1303,6 +1309,8 @@ let primitives = [
 ];
 
 let enumsMap: { [index: string]: any } = {
+    'AddAudienceScheduleToAudienceAlphaInput.StrategyEnum':
+        AddAudienceScheduleToAudienceAlphaInput.StrategyEnum,
     'AddConnectionFromSourceToWarehouseV1Output.StatusEnum':
         AddConnectionFromSourceToWarehouseV1Output.StatusEnum,
     'AddSourceToTrackingPlanV1Output.StatusEnum':
@@ -1476,6 +1484,12 @@ let typeMap: { [index: string]: any } = {
     AddActivationToAudience200Response: AddActivationToAudience200Response,
     AddActivationToAudienceAlphaInput: AddActivationToAudienceAlphaInput,
     AddActivationToAudienceAlphaOutput: AddActivationToAudienceAlphaOutput,
+    AddAudienceScheduleToAudience200Response:
+        AddAudienceScheduleToAudience200Response,
+    AddAudienceScheduleToAudienceAlphaInput:
+        AddAudienceScheduleToAudienceAlphaInput,
+    AddAudienceScheduleToAudienceAlphaOutput:
+        AddAudienceScheduleToAudienceAlphaOutput,
     AddConnectionFromSourceToWarehouse201Response:
         AddConnectionFromSourceToWarehouse201Response,
     AddConnectionFromSourceToWarehouseV1Output:
