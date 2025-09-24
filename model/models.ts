@@ -570,6 +570,9 @@ export * from './updateActivationForAudienceOutput';
 export * from './updateAudienceForSpace200Response';
 export * from './updateAudienceForSpaceAlphaInput';
 export * from './updateAudienceForSpaceAlphaOutput';
+export * from './updateAudienceScheduleForAudience200Response';
+export * from './updateAudienceScheduleForAudienceAlphaInput';
+export * from './updateAudienceScheduleForAudienceAlphaOutput';
 export * from './updateComputedTraitForSpace200Response';
 export * from './updateComputedTraitForSpaceAlphaInput';
 export * from './updateComputedTraitForSpaceAlphaOutput';
@@ -1224,6 +1227,9 @@ import { UpdateActivationForAudienceOutput } from './updateActivationForAudience
 import { UpdateAudienceForSpace200Response } from './updateAudienceForSpace200Response';
 import { UpdateAudienceForSpaceAlphaInput } from './updateAudienceForSpaceAlphaInput';
 import { UpdateAudienceForSpaceAlphaOutput } from './updateAudienceForSpaceAlphaOutput';
+import { UpdateAudienceScheduleForAudience200Response } from './updateAudienceScheduleForAudience200Response';
+import { UpdateAudienceScheduleForAudienceAlphaInput } from './updateAudienceScheduleForAudienceAlphaInput';
+import { UpdateAudienceScheduleForAudienceAlphaOutput } from './updateAudienceScheduleForAudienceAlphaOutput';
 import { UpdateComputedTraitForSpace200Response } from './updateComputedTraitForSpace200Response';
 import { UpdateComputedTraitForSpaceAlphaInput } from './updateComputedTraitForSpaceAlphaInput';
 import { UpdateComputedTraitForSpaceAlphaOutput } from './updateComputedTraitForSpaceAlphaOutput';
@@ -1464,6 +1470,8 @@ let enumsMap: { [index: string]: any } = {
         TrackSourceSettingsV1.CommonEventOnViolationsEnum,
     'TrackingPlanV1.TypeEnum': TrackingPlanV1.TypeEnum,
     'TraitDefinition.TypeEnum': TraitDefinition.TypeEnum,
+    'UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum':
+        UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum,
     'UpdateGroupSubscriptionStatusResponse.StatusEnum':
         UpdateGroupSubscriptionStatusResponse.StatusEnum,
     'UpdateRulesInTrackingPlanV1Output.StatusEnum':
@@ -2153,6 +2161,12 @@ let typeMap: { [index: string]: any } = {
     UpdateAudienceForSpace200Response: UpdateAudienceForSpace200Response,
     UpdateAudienceForSpaceAlphaInput: UpdateAudienceForSpaceAlphaInput,
     UpdateAudienceForSpaceAlphaOutput: UpdateAudienceForSpaceAlphaOutput,
+    UpdateAudienceScheduleForAudience200Response:
+        UpdateAudienceScheduleForAudience200Response,
+    UpdateAudienceScheduleForAudienceAlphaInput:
+        UpdateAudienceScheduleForAudienceAlphaInput,
+    UpdateAudienceScheduleForAudienceAlphaOutput:
+        UpdateAudienceScheduleForAudienceAlphaOutput,
     UpdateComputedTraitForSpace200Response:
         UpdateComputedTraitForSpace200Response,
     UpdateComputedTraitForSpaceAlphaInput:

@@ -19,6 +19,8 @@ import { PaginationInput } from '../model/paginationInput';
 import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromSpace200Response';
 import { UpdateAudienceForSpace200Response } from '../model/updateAudienceForSpace200Response';
 import { UpdateAudienceForSpaceAlphaInput } from '../model/updateAudienceForSpaceAlphaInput';
+import { UpdateAudienceScheduleForAudience200Response } from '../model/updateAudienceScheduleForAudience200Response';
+import { UpdateAudienceScheduleForAudienceAlphaInput } from '../model/updateAudienceScheduleForAudienceAlphaInput';
 import { Authentication, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
 export declare enum AudiencesApiApiKeys {
@@ -129,5 +131,13 @@ export declare class AudiencesApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: UpdateAudienceForSpace200Response;
+    }>;
+    updateAudienceScheduleForAudience(spaceId: string, id: string, scheduleId: string, UpdateAudienceScheduleForAudienceAlphaInput: UpdateAudienceScheduleForAudienceAlphaInput, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: UpdateAudienceScheduleForAudience200Response;
     }>;
 }
