@@ -1033,7 +1033,7 @@ var AudiencesApi = (function () {
             });
         });
     };
-    AudiencesApi.prototype.updateAudienceForSpace = function (spaceId, id, UpdateAudienceForSpaceAlphaInput, options) {
+    AudiencesApi.prototype.updateAudienceForSpace = function (spaceId, id, UpdateAudienceForSpaceBetaInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_11, _i, _a, interceptor;
@@ -1046,6 +1046,7 @@ var AudiencesApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
                     'application/json',
                 ];
@@ -1062,9 +1063,9 @@ var AudiencesApi = (function () {
                 if (id === null || id === undefined) {
                     throw new Error('Required parameter id was null or undefined when calling updateAudienceForSpace.');
                 }
-                if (UpdateAudienceForSpaceAlphaInput === null ||
-                    UpdateAudienceForSpaceAlphaInput === undefined) {
-                    throw new Error('Required parameter UpdateAudienceForSpaceAlphaInput was null or undefined when calling updateAudienceForSpace.');
+                if (UpdateAudienceForSpaceBetaInput === null ||
+                    UpdateAudienceForSpaceBetaInput === undefined) {
+                    throw new Error('Required parameter UpdateAudienceForSpaceBetaInput was null or undefined when calling updateAudienceForSpace.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -1075,7 +1076,7 @@ var AudiencesApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateAudienceForSpaceAlphaInput, 'UpdateAudienceForSpaceAlphaInput'),
+                    body: models_1.ObjectSerializer.serialize(UpdateAudienceForSpaceBetaInput, 'UpdateAudienceForSpaceBetaInput'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {

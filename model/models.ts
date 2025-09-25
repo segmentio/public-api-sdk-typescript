@@ -37,6 +37,7 @@ export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
 export * from './audienceComputeCadence';
 export * from './audienceDefinition';
+export * from './audienceDefinitionWithoutTargetEntity';
 export * from './audienceOptions';
 export * from './audienceOptionsWithLookback';
 export * from './audiencePreview';
@@ -568,8 +569,11 @@ export * from './updateActivationForAudience200Response';
 export * from './updateActivationForAudienceAlphaInput';
 export * from './updateActivationForAudienceOutput';
 export * from './updateAudienceForSpace200Response';
+export * from './updateAudienceForSpace200Response1';
 export * from './updateAudienceForSpaceAlphaInput';
 export * from './updateAudienceForSpaceAlphaOutput';
+export * from './updateAudienceForSpaceBetaInput';
+export * from './updateAudienceForSpaceBetaOutput';
 export * from './updateAudienceScheduleForAudience200Response';
 export * from './updateAudienceScheduleForAudienceAlphaInput';
 export * from './updateAudienceScheduleForAudienceAlphaOutput';
@@ -694,6 +698,7 @@ import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncSc
 import { AllowedLabelBeta } from './allowedLabelBeta';
 import { AudienceComputeCadence } from './audienceComputeCadence';
 import { AudienceDefinition } from './audienceDefinition';
+import { AudienceDefinitionWithoutTargetEntity } from './audienceDefinitionWithoutTargetEntity';
 import { AudienceOptions } from './audienceOptions';
 import { AudienceOptionsWithLookback } from './audienceOptionsWithLookback';
 import { AudiencePreview } from './audiencePreview';
@@ -1225,8 +1230,11 @@ import { UpdateActivationForAudience200Response } from './updateActivationForAud
 import { UpdateActivationForAudienceAlphaInput } from './updateActivationForAudienceAlphaInput';
 import { UpdateActivationForAudienceOutput } from './updateActivationForAudienceOutput';
 import { UpdateAudienceForSpace200Response } from './updateAudienceForSpace200Response';
+import { UpdateAudienceForSpace200Response1 } from './updateAudienceForSpace200Response1';
 import { UpdateAudienceForSpaceAlphaInput } from './updateAudienceForSpaceAlphaInput';
 import { UpdateAudienceForSpaceAlphaOutput } from './updateAudienceForSpaceAlphaOutput';
+import { UpdateAudienceForSpaceBetaInput } from './updateAudienceForSpaceBetaInput';
+import { UpdateAudienceForSpaceBetaOutput } from './updateAudienceForSpaceBetaOutput';
 import { UpdateAudienceScheduleForAudience200Response } from './updateAudienceScheduleForAudience200Response';
 import { UpdateAudienceScheduleForAudienceAlphaInput } from './updateAudienceScheduleForAudienceAlphaInput';
 import { UpdateAudienceScheduleForAudienceAlphaOutput } from './updateAudienceScheduleForAudienceAlphaOutput';
@@ -1529,6 +1537,8 @@ let typeMap: { [index: string]: any } = {
     AllowedLabelBeta: AllowedLabelBeta,
     AudienceComputeCadence: AudienceComputeCadence,
     AudienceDefinition: AudienceDefinition,
+    AudienceDefinitionWithoutTargetEntity:
+        AudienceDefinitionWithoutTargetEntity,
     AudienceOptions: AudienceOptions,
     AudienceOptionsWithLookback: AudienceOptionsWithLookback,
     AudiencePreview: AudiencePreview,
@@ -2159,8 +2169,11 @@ let typeMap: { [index: string]: any } = {
         UpdateActivationForAudienceAlphaInput,
     UpdateActivationForAudienceOutput: UpdateActivationForAudienceOutput,
     UpdateAudienceForSpace200Response: UpdateAudienceForSpace200Response,
+    UpdateAudienceForSpace200Response1: UpdateAudienceForSpace200Response1,
     UpdateAudienceForSpaceAlphaInput: UpdateAudienceForSpaceAlphaInput,
     UpdateAudienceForSpaceAlphaOutput: UpdateAudienceForSpaceAlphaOutput,
+    UpdateAudienceForSpaceBetaInput: UpdateAudienceForSpaceBetaInput,
+    UpdateAudienceForSpaceBetaOutput: UpdateAudienceForSpaceBetaOutput,
     UpdateAudienceScheduleForAudience200Response:
         UpdateAudienceScheduleForAudience200Response,
     UpdateAudienceScheduleForAudienceAlphaInput:

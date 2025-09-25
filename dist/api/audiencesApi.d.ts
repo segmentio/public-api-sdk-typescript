@@ -18,7 +18,7 @@ import { ListAudiencesPaginationInput } from '../model/listAudiencesPaginationIn
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromSpace200Response';
 import { UpdateAudienceForSpace200Response } from '../model/updateAudienceForSpace200Response';
-import { UpdateAudienceForSpaceAlphaInput } from '../model/updateAudienceForSpaceAlphaInput';
+import { UpdateAudienceForSpaceBetaInput } from '../model/updateAudienceForSpaceBetaInput';
 import { UpdateAudienceScheduleForAudience200Response } from '../model/updateAudienceScheduleForAudience200Response';
 import { UpdateAudienceScheduleForAudienceAlphaInput } from '../model/updateAudienceScheduleForAudienceAlphaInput';
 import { Authentication, Interceptor } from '../model/models';
@@ -124,7 +124,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: RemoveAudienceFromSpace200Response;
     }>;
-    updateAudienceForSpace(spaceId: string, id: string, UpdateAudienceForSpaceAlphaInput: UpdateAudienceForSpaceAlphaInput, options?: {
+    updateAudienceForSpace(spaceId: string, id: string, UpdateAudienceForSpaceBetaInput: UpdateAudienceForSpaceBetaInput, options?: {
         headers: {
             [name: string]: string;
         };
