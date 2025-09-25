@@ -585,6 +585,9 @@ __exportStar(require("./updateActivationForAudienceOutput"), exports);
 __exportStar(require("./updateAudienceForSpace200Response"), exports);
 __exportStar(require("./updateAudienceForSpaceAlphaInput"), exports);
 __exportStar(require("./updateAudienceForSpaceAlphaOutput"), exports);
+__exportStar(require("./updateAudienceScheduleForAudience200Response"), exports);
+__exportStar(require("./updateAudienceScheduleForAudienceAlphaInput"), exports);
+__exportStar(require("./updateAudienceScheduleForAudienceAlphaOutput"), exports);
 __exportStar(require("./updateComputedTraitForSpace200Response"), exports);
 __exportStar(require("./updateComputedTraitForSpaceAlphaInput"), exports);
 __exportStar(require("./updateComputedTraitForSpaceAlphaOutput"), exports);
@@ -1226,6 +1229,9 @@ var updateActivationForAudienceOutput_1 = require("./updateActivationForAudience
 var updateAudienceForSpace200Response_1 = require("./updateAudienceForSpace200Response");
 var updateAudienceForSpaceAlphaInput_1 = require("./updateAudienceForSpaceAlphaInput");
 var updateAudienceForSpaceAlphaOutput_1 = require("./updateAudienceForSpaceAlphaOutput");
+var updateAudienceScheduleForAudience200Response_1 = require("./updateAudienceScheduleForAudience200Response");
+var updateAudienceScheduleForAudienceAlphaInput_1 = require("./updateAudienceScheduleForAudienceAlphaInput");
+var updateAudienceScheduleForAudienceAlphaOutput_1 = require("./updateAudienceScheduleForAudienceAlphaOutput");
 var updateComputedTraitForSpace200Response_1 = require("./updateComputedTraitForSpace200Response");
 var updateComputedTraitForSpaceAlphaInput_1 = require("./updateComputedTraitForSpaceAlphaInput");
 var updateComputedTraitForSpaceAlphaOutput_1 = require("./updateComputedTraitForSpaceAlphaOutput");
@@ -1406,6 +1412,7 @@ var enumsMap = {
     'TrackSourceSettingsV1.CommonEventOnViolationsEnum': trackSourceSettingsV1_1.TrackSourceSettingsV1.CommonEventOnViolationsEnum,
     'TrackingPlanV1.TypeEnum': trackingPlanV1_1.TrackingPlanV1.TypeEnum,
     'TraitDefinition.TypeEnum': traitDefinition_1.TraitDefinition.TypeEnum,
+    'UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum': updateAudienceScheduleForAudienceAlphaInput_1.UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum,
     'UpdateGroupSubscriptionStatusResponse.StatusEnum': updateGroupSubscriptionStatusResponse_1.UpdateGroupSubscriptionStatusResponse.StatusEnum,
     'UpdateRulesInTrackingPlanV1Output.StatusEnum': updateRulesInTrackingPlanV1Output_1.UpdateRulesInTrackingPlanV1Output.StatusEnum,
     'UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum': updateSelectiveSyncForWarehouseAndSpaceAlphaOutput_1.UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum,
@@ -1984,6 +1991,9 @@ var typeMap = {
     UpdateAudienceForSpace200Response: updateAudienceForSpace200Response_1.UpdateAudienceForSpace200Response,
     UpdateAudienceForSpaceAlphaInput: updateAudienceForSpaceAlphaInput_1.UpdateAudienceForSpaceAlphaInput,
     UpdateAudienceForSpaceAlphaOutput: updateAudienceForSpaceAlphaOutput_1.UpdateAudienceForSpaceAlphaOutput,
+    UpdateAudienceScheduleForAudience200Response: updateAudienceScheduleForAudience200Response_1.UpdateAudienceScheduleForAudience200Response,
+    UpdateAudienceScheduleForAudienceAlphaInput: updateAudienceScheduleForAudienceAlphaInput_1.UpdateAudienceScheduleForAudienceAlphaInput,
+    UpdateAudienceScheduleForAudienceAlphaOutput: updateAudienceScheduleForAudienceAlphaOutput_1.UpdateAudienceScheduleForAudienceAlphaOutput,
     UpdateComputedTraitForSpace200Response: updateComputedTraitForSpace200Response_1.UpdateComputedTraitForSpace200Response,
     UpdateComputedTraitForSpaceAlphaInput: updateComputedTraitForSpaceAlphaInput_1.UpdateComputedTraitForSpaceAlphaInput,
     UpdateComputedTraitForSpaceAlphaOutput: updateComputedTraitForSpaceAlphaOutput_1.UpdateComputedTraitForSpaceAlphaOutput,
