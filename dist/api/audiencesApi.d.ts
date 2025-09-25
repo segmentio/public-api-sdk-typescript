@@ -6,6 +6,7 @@ import { CreateAudience200Response } from '../model/createAudience200Response';
 import { CreateAudienceBetaInput } from '../model/createAudienceBetaInput';
 import { CreateAudiencePreview200Response } from '../model/createAudiencePreview200Response';
 import { CreateAudiencePreviewBetaInput } from '../model/createAudiencePreviewBetaInput';
+import { ForceExecuteAudienceRun200Response } from '../model/forceExecuteAudienceRun200Response';
 import { GetAudience200Response } from '../model/getAudience200Response';
 import { GetAudiencePreview200Response } from '../model/getAudiencePreview200Response';
 import { GetAudienceScheduleFromSpaceAndAudience200Response } from '../model/getAudienceScheduleFromSpaceAndAudience200Response';
@@ -67,6 +68,14 @@ export declare class AudiencesApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: CreateAudiencePreview200Response;
+    }>;
+    forceExecuteAudienceRun(spaceId: string, audienceId: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: ForceExecuteAudienceRun200Response;
     }>;
     getAudience(spaceId: string, id: string, include?: 'schedules', options?: {
         headers: {

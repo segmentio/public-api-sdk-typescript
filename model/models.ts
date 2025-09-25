@@ -45,6 +45,7 @@ export * from './audiencePreviewEntitiesResult';
 export * from './audiencePreviewIdentifier';
 export * from './audiencePreviewProfileResult';
 export * from './audiencePreviewResult';
+export * from './audienceRunInfo';
 export * from './audienceSchedule';
 export * from './audienceSize';
 export * from './audienceSummary';
@@ -228,6 +229,9 @@ export * from './entityDetails';
 export * from './eventSourceV1';
 export * from './fQLDefinedPropertyV1';
 export * from './filter';
+export * from './forceExecuteAudienceRun200Response';
+export * from './forceExecuteAudienceRunAlphaOutput';
+export * from './forceExecuteAudienceRunData';
 export * from './functionDeployment';
 export * from './functionSettingV1';
 export * from './functionV1';
@@ -702,6 +706,7 @@ import { AudiencePreviewEntitiesResult } from './audiencePreviewEntitiesResult';
 import { AudiencePreviewIdentifier } from './audiencePreviewIdentifier';
 import { AudiencePreviewProfileResult } from './audiencePreviewProfileResult';
 import { AudiencePreviewResult } from './audiencePreviewResult';
+import { AudienceRunInfo } from './audienceRunInfo';
 import { AudienceSchedule } from './audienceSchedule';
 import { AudienceSize } from './audienceSize';
 import { AudienceSummary } from './audienceSummary';
@@ -885,6 +890,9 @@ import { EntityDetails } from './entityDetails';
 import { EventSourceV1 } from './eventSourceV1';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
 import { Filter } from './filter';
+import { ForceExecuteAudienceRun200Response } from './forceExecuteAudienceRun200Response';
+import { ForceExecuteAudienceRunAlphaOutput } from './forceExecuteAudienceRunAlphaOutput';
+import { ForceExecuteAudienceRunData } from './forceExecuteAudienceRunData';
 import { FunctionDeployment } from './functionDeployment';
 import { FunctionSettingV1 } from './functionSettingV1';
 import { FunctionV1 } from './functionV1';
@@ -1537,6 +1545,7 @@ let typeMap: { [index: string]: any } = {
     AudiencePreviewIdentifier: AudiencePreviewIdentifier,
     AudiencePreviewProfileResult: AudiencePreviewProfileResult,
     AudiencePreviewResult: AudiencePreviewResult,
+    AudienceRunInfo: AudienceRunInfo,
     AudienceSchedule: AudienceSchedule,
     AudienceSize: AudienceSize,
     AudienceSummary: AudienceSummary,
@@ -1739,6 +1748,9 @@ let typeMap: { [index: string]: any } = {
     EventSourceV1: EventSourceV1,
     FQLDefinedPropertyV1: FQLDefinedPropertyV1,
     Filter: Filter,
+    ForceExecuteAudienceRun200Response: ForceExecuteAudienceRun200Response,
+    ForceExecuteAudienceRunAlphaOutput: ForceExecuteAudienceRunAlphaOutput,
+    ForceExecuteAudienceRunData: ForceExecuteAudienceRunData,
     FunctionDeployment: FunctionDeployment,
     FunctionSettingV1: FunctionSettingV1,
     FunctionV1: FunctionV1,

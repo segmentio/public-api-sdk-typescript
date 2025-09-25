@@ -60,6 +60,7 @@ __exportStar(require("./audiencePreviewEntitiesResult"), exports);
 __exportStar(require("./audiencePreviewIdentifier"), exports);
 __exportStar(require("./audiencePreviewProfileResult"), exports);
 __exportStar(require("./audiencePreviewResult"), exports);
+__exportStar(require("./audienceRunInfo"), exports);
 __exportStar(require("./audienceSchedule"), exports);
 __exportStar(require("./audienceSize"), exports);
 __exportStar(require("./audienceSummary"), exports);
@@ -243,6 +244,9 @@ __exportStar(require("./entityDetails"), exports);
 __exportStar(require("./eventSourceV1"), exports);
 __exportStar(require("./fQLDefinedPropertyV1"), exports);
 __exportStar(require("./filter"), exports);
+__exportStar(require("./forceExecuteAudienceRun200Response"), exports);
+__exportStar(require("./forceExecuteAudienceRunAlphaOutput"), exports);
+__exportStar(require("./forceExecuteAudienceRunData"), exports);
 __exportStar(require("./functionDeployment"), exports);
 __exportStar(require("./functionSettingV1"), exports);
 __exportStar(require("./functionV1"), exports);
@@ -704,6 +708,7 @@ var audiencePreviewEntitiesResult_1 = require("./audiencePreviewEntitiesResult")
 var audiencePreviewIdentifier_1 = require("./audiencePreviewIdentifier");
 var audiencePreviewProfileResult_1 = require("./audiencePreviewProfileResult");
 var audiencePreviewResult_1 = require("./audiencePreviewResult");
+var audienceRunInfo_1 = require("./audienceRunInfo");
 var audienceSchedule_1 = require("./audienceSchedule");
 var audienceSize_1 = require("./audienceSize");
 var audienceSummary_1 = require("./audienceSummary");
@@ -887,6 +892,9 @@ var entityDetails_1 = require("./entityDetails");
 var eventSourceV1_1 = require("./eventSourceV1");
 var fQLDefinedPropertyV1_1 = require("./fQLDefinedPropertyV1");
 var filter_1 = require("./filter");
+var forceExecuteAudienceRun200Response_1 = require("./forceExecuteAudienceRun200Response");
+var forceExecuteAudienceRunAlphaOutput_1 = require("./forceExecuteAudienceRunAlphaOutput");
+var forceExecuteAudienceRunData_1 = require("./forceExecuteAudienceRunData");
 var functionDeployment_1 = require("./functionDeployment");
 var functionSettingV1_1 = require("./functionSettingV1");
 var functionV1_1 = require("./functionV1");
@@ -1466,6 +1474,7 @@ var typeMap = {
     AudiencePreviewIdentifier: audiencePreviewIdentifier_1.AudiencePreviewIdentifier,
     AudiencePreviewProfileResult: audiencePreviewProfileResult_1.AudiencePreviewProfileResult,
     AudiencePreviewResult: audiencePreviewResult_1.AudiencePreviewResult,
+    AudienceRunInfo: audienceRunInfo_1.AudienceRunInfo,
     AudienceSchedule: audienceSchedule_1.AudienceSchedule,
     AudienceSize: audienceSize_1.AudienceSize,
     AudienceSummary: audienceSummary_1.AudienceSummary,
@@ -1649,6 +1658,9 @@ var typeMap = {
     EventSourceV1: eventSourceV1_1.EventSourceV1,
     FQLDefinedPropertyV1: fQLDefinedPropertyV1_1.FQLDefinedPropertyV1,
     Filter: filter_1.Filter,
+    ForceExecuteAudienceRun200Response: forceExecuteAudienceRun200Response_1.ForceExecuteAudienceRun200Response,
+    ForceExecuteAudienceRunAlphaOutput: forceExecuteAudienceRunAlphaOutput_1.ForceExecuteAudienceRunAlphaOutput,
+    ForceExecuteAudienceRunData: forceExecuteAudienceRunData_1.ForceExecuteAudienceRunData,
     FunctionDeployment: functionDeployment_1.FunctionDeployment,
     FunctionSettingV1: functionSettingV1_1.FunctionSettingV1,
     FunctionV1: functionV1_1.FunctionV1,
