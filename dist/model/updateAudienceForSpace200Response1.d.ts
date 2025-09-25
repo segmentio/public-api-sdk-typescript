@@ -1,6 +1,6 @@
-import { UpdateAudienceForSpaceBetaOutput } from './updateAudienceForSpaceBetaOutput';
-export declare class UpdateAudienceForSpace200Response {
-    'data'?: UpdateAudienceForSpaceBetaOutput;
+import { UpdateAudienceForSpaceAlphaOutput } from './updateAudienceForSpaceAlphaOutput';
+export declare class UpdateAudienceForSpace200Response1 {
+    'data'?: UpdateAudienceForSpaceAlphaOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

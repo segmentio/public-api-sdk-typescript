@@ -1,6 +1,5 @@
-import { UpdateAudienceForSpaceBetaOutput } from './updateAudienceForSpaceBetaOutput';
-export declare class UpdateAudienceForSpace200Response {
-    'data'?: UpdateAudienceForSpaceBetaOutput;
+export declare class AudienceDefinitionWithoutTargetEntity {
+    'query': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

@@ -10,13 +10,13 @@ var AudienceDefinition = (function () {
     AudienceDefinition.discriminator = undefined;
     AudienceDefinition.attributeTypeMap = [
         {
-            name: 'query',
-            baseName: 'query',
+            name: 'targetEntity',
+            baseName: 'targetEntity',
             type: 'string',
         },
         {
-            name: 'targetEntity',
-            baseName: 'targetEntity',
+            name: 'query',
+            baseName: 'query',
             type: 'string',
         },
     ];

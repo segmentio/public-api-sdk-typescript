@@ -41,7 +41,9 @@ import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromS
 import { RemoveAudienceFromSpace200Response1 } from '../model/removeAudienceFromSpace200Response1';
 import { RequestErrorEnvelope } from '../model/requestErrorEnvelope';
 import { UpdateAudienceForSpace200Response } from '../model/updateAudienceForSpace200Response';
+import { UpdateAudienceForSpace200Response1 } from '../model/updateAudienceForSpace200Response1';
 import { UpdateAudienceForSpaceAlphaInput } from '../model/updateAudienceForSpaceAlphaInput';
+import { UpdateAudienceForSpaceBetaInput } from '../model/updateAudienceForSpaceBetaInput';
 import { UpdateAudienceScheduleForAudience200Response } from '../model/updateAudienceScheduleForAudience200Response';
 import { UpdateAudienceScheduleForAudienceAlphaInput } from '../model/updateAudienceScheduleForAudienceAlphaInput';
 
@@ -1515,12 +1517,12 @@ export class AudiencesApi {
      * @summary Update Audience for Space
      * @param spaceId
      * @param id
-     * @param UpdateAudienceForSpaceAlphaInput
+     * @param UpdateAudienceForSpaceBetaInput
      */
     public async updateAudienceForSpace(
         spaceId: string,
         id: string,
-        UpdateAudienceForSpaceAlphaInput: UpdateAudienceForSpaceAlphaInput,
+        UpdateAudienceForSpaceBetaInput: UpdateAudienceForSpaceBetaInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -1540,6 +1542,7 @@ export class AudiencesApi {
             this._defaultHeaders
         );
         const produces = [
+            'application/vnd.segment.v1beta+json',
             'application/vnd.segment.v1alpha+json',
             'application/json',
         ];
@@ -1565,13 +1568,13 @@ export class AudiencesApi {
             );
         }
 
-        // verify required parameter 'UpdateAudienceForSpaceAlphaInput' is not null or undefined
+        // verify required parameter 'UpdateAudienceForSpaceBetaInput' is not null or undefined
         if (
-            UpdateAudienceForSpaceAlphaInput === null ||
-            UpdateAudienceForSpaceAlphaInput === undefined
+            UpdateAudienceForSpaceBetaInput === null ||
+            UpdateAudienceForSpaceBetaInput === undefined
         ) {
             throw new Error(
-                'Required parameter UpdateAudienceForSpaceAlphaInput was null or undefined when calling updateAudienceForSpace.'
+                'Required parameter UpdateAudienceForSpaceBetaInput was null or undefined when calling updateAudienceForSpace.'
             );
         }
 
@@ -1587,8 +1590,8 @@ export class AudiencesApi {
             useQuerystring: this._useQuerystring,
             json: true,
             body: ObjectSerializer.serialize(
-                UpdateAudienceForSpaceAlphaInput,
-                'UpdateAudienceForSpaceAlphaInput'
+                UpdateAudienceForSpaceBetaInput,
+                'UpdateAudienceForSpaceBetaInput'
             ),
         };
 

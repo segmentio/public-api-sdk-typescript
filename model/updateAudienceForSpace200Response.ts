@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { UpdateAudienceForSpaceAlphaOutput } from './updateAudienceForSpaceAlphaOutput';
+import { UpdateAudienceForSpaceBetaOutput } from './updateAudienceForSpaceBetaOutput';
 
 export class UpdateAudienceForSpace200Response {
-    'data'?: UpdateAudienceForSpaceAlphaOutput;
+    'data'?: UpdateAudienceForSpaceBetaOutput;
 
     static discriminator: string | undefined = undefined;
 
@@ -26,7 +26,7 @@ export class UpdateAudienceForSpace200Response {
         {
             name: 'data',
             baseName: 'data',
-            type: 'UpdateAudienceForSpaceAlphaOutput',
+            type: 'UpdateAudienceForSpaceBetaOutput',
         },
     ];
 

@@ -11,16 +11,13 @@
  */
 
 import { RequestFile } from './models';
+import { AudienceSummary } from './audienceSummary';
 
-export class AudienceDefinition {
-    /**
-     * The target entity slug, required in creating a linked audience.
-     */
-    'targetEntity'?: string;
-    /**
-     * The query language string defining the audience segmentation criteria.  For guidance on using the query language, see the [Segment documentation site](https://segment.com/docs/api/public-api/query-language).
-     */
-    'query': string;
+/**
+ * Audience output for update.
+ */
+export class UpdateAudienceForSpaceBetaOutput {
+    'audience': AudienceSummary;
 
     static discriminator: string | undefined = undefined;
 
@@ -30,18 +27,13 @@ export class AudienceDefinition {
         type: string;
     }> = [
         {
-            name: 'targetEntity',
-            baseName: 'targetEntity',
-            type: 'string',
-        },
-        {
-            name: 'query',
-            baseName: 'query',
-            type: 'string',
+            name: 'audience',
+            baseName: 'audience',
+            type: 'AudienceSummary',
         },
     ];
 
     static getAttributeTypeMap() {
-        return AudienceDefinition.attributeTypeMap;
+        return UpdateAudienceForSpaceBetaOutput.attributeTypeMap;
     }
 }

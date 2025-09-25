@@ -52,6 +52,7 @@ __exportStar(require("./advancedWarehouseSyncScheduleV1Output"), exports);
 __exportStar(require("./allowedLabelBeta"), exports);
 __exportStar(require("./audienceComputeCadence"), exports);
 __exportStar(require("./audienceDefinition"), exports);
+__exportStar(require("./audienceDefinitionWithoutTargetEntity"), exports);
 __exportStar(require("./audienceOptions"), exports);
 __exportStar(require("./audienceOptionsWithLookback"), exports);
 __exportStar(require("./audiencePreview"), exports);
@@ -583,8 +584,11 @@ __exportStar(require("./updateActivationForAudience200Response"), exports);
 __exportStar(require("./updateActivationForAudienceAlphaInput"), exports);
 __exportStar(require("./updateActivationForAudienceOutput"), exports);
 __exportStar(require("./updateAudienceForSpace200Response"), exports);
+__exportStar(require("./updateAudienceForSpace200Response1"), exports);
 __exportStar(require("./updateAudienceForSpaceAlphaInput"), exports);
 __exportStar(require("./updateAudienceForSpaceAlphaOutput"), exports);
+__exportStar(require("./updateAudienceForSpaceBetaInput"), exports);
+__exportStar(require("./updateAudienceForSpaceBetaOutput"), exports);
 __exportStar(require("./updateAudienceScheduleForAudience200Response"), exports);
 __exportStar(require("./updateAudienceScheduleForAudienceAlphaInput"), exports);
 __exportStar(require("./updateAudienceScheduleForAudienceAlphaOutput"), exports);
@@ -696,6 +700,7 @@ var advancedWarehouseSyncScheduleV1Output_1 = require("./advancedWarehouseSyncSc
 var allowedLabelBeta_1 = require("./allowedLabelBeta");
 var audienceComputeCadence_1 = require("./audienceComputeCadence");
 var audienceDefinition_1 = require("./audienceDefinition");
+var audienceDefinitionWithoutTargetEntity_1 = require("./audienceDefinitionWithoutTargetEntity");
 var audienceOptions_1 = require("./audienceOptions");
 var audienceOptionsWithLookback_1 = require("./audienceOptionsWithLookback");
 var audiencePreview_1 = require("./audiencePreview");
@@ -1227,8 +1232,11 @@ var updateActivationForAudience200Response_1 = require("./updateActivationForAud
 var updateActivationForAudienceAlphaInput_1 = require("./updateActivationForAudienceAlphaInput");
 var updateActivationForAudienceOutput_1 = require("./updateActivationForAudienceOutput");
 var updateAudienceForSpace200Response_1 = require("./updateAudienceForSpace200Response");
+var updateAudienceForSpace200Response1_1 = require("./updateAudienceForSpace200Response1");
 var updateAudienceForSpaceAlphaInput_1 = require("./updateAudienceForSpaceAlphaInput");
 var updateAudienceForSpaceAlphaOutput_1 = require("./updateAudienceForSpaceAlphaOutput");
+var updateAudienceForSpaceBetaInput_1 = require("./updateAudienceForSpaceBetaInput");
+var updateAudienceForSpaceBetaOutput_1 = require("./updateAudienceForSpaceBetaOutput");
 var updateAudienceScheduleForAudience200Response_1 = require("./updateAudienceScheduleForAudience200Response");
 var updateAudienceScheduleForAudienceAlphaInput_1 = require("./updateAudienceScheduleForAudienceAlphaInput");
 var updateAudienceScheduleForAudienceAlphaOutput_1 = require("./updateAudienceScheduleForAudienceAlphaOutput");
@@ -1458,6 +1466,7 @@ var typeMap = {
     AllowedLabelBeta: allowedLabelBeta_1.AllowedLabelBeta,
     AudienceComputeCadence: audienceComputeCadence_1.AudienceComputeCadence,
     AudienceDefinition: audienceDefinition_1.AudienceDefinition,
+    AudienceDefinitionWithoutTargetEntity: audienceDefinitionWithoutTargetEntity_1.AudienceDefinitionWithoutTargetEntity,
     AudienceOptions: audienceOptions_1.AudienceOptions,
     AudienceOptionsWithLookback: audienceOptionsWithLookback_1.AudienceOptionsWithLookback,
     AudiencePreview: audiencePreview_1.AudiencePreview,
@@ -1989,8 +1998,11 @@ var typeMap = {
     UpdateActivationForAudienceAlphaInput: updateActivationForAudienceAlphaInput_1.UpdateActivationForAudienceAlphaInput,
     UpdateActivationForAudienceOutput: updateActivationForAudienceOutput_1.UpdateActivationForAudienceOutput,
     UpdateAudienceForSpace200Response: updateAudienceForSpace200Response_1.UpdateAudienceForSpace200Response,
+    UpdateAudienceForSpace200Response1: updateAudienceForSpace200Response1_1.UpdateAudienceForSpace200Response1,
     UpdateAudienceForSpaceAlphaInput: updateAudienceForSpaceAlphaInput_1.UpdateAudienceForSpaceAlphaInput,
     UpdateAudienceForSpaceAlphaOutput: updateAudienceForSpaceAlphaOutput_1.UpdateAudienceForSpaceAlphaOutput,
+    UpdateAudienceForSpaceBetaInput: updateAudienceForSpaceBetaInput_1.UpdateAudienceForSpaceBetaInput,
+    UpdateAudienceForSpaceBetaOutput: updateAudienceForSpaceBetaOutput_1.UpdateAudienceForSpaceBetaOutput,
     UpdateAudienceScheduleForAudience200Response: updateAudienceScheduleForAudience200Response_1.UpdateAudienceScheduleForAudience200Response,
     UpdateAudienceScheduleForAudienceAlphaInput: updateAudienceScheduleForAudienceAlphaInput_1.UpdateAudienceScheduleForAudienceAlphaInput,
     UpdateAudienceScheduleForAudienceAlphaOutput: updateAudienceScheduleForAudienceAlphaOutput_1.UpdateAudienceScheduleForAudienceAlphaOutput,
