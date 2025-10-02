@@ -3,6 +3,7 @@ import { Profile } from './profile';
 export declare class PersonalizationInput {
     'profile': Profile;
     'entities'?: Array<PersonalizationInputEntity>;
+    'syncEntityPropertyChanges'?: boolean;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

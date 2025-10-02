@@ -23,6 +23,10 @@ export class PersonalizationInput {
      * Entities V2 Object.
      */
     'entities'?: Array<PersonalizationInputEntity>;
+    /**
+     * Sync entity property changes back to Segment. Only applicable if activationType is \"Audience Membership Changed\" and segmentEvent is \"identify\".
+     */
+    'syncEntityPropertyChanges'?: boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -40,6 +44,11 @@ export class PersonalizationInput {
             name: 'entities',
             baseName: 'entities',
             type: 'Array<PersonalizationInputEntity>',
+        },
+        {
+            name: 'syncEntityPropertyChanges',
+            baseName: 'syncEntityPropertyChanges',
+            type: 'boolean',
         },
     ];
 
