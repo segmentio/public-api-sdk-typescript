@@ -1650,12 +1650,12 @@ export class AudiencesApi {
      * @summary Remove Audience Schedule from Audience
      * @param spaceId
      * @param id
-     * @param scheduleId
+     * @param scheduleId The ID of the schedule to delete  This parameter exists in alpha.
      */
     public async removeAudienceScheduleFromAudience(
         spaceId: string,
         id: string,
-        scheduleId: string,
+        scheduleId?: string,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -1663,16 +1663,12 @@ export class AudiencesApi {
     }> {
         const localVarPath =
             this.basePath +
-            '/spaces/{spaceId}/audiences/{id}/schedules/{scheduleId}'
+            '/spaces/{spaceId}/audiences/{id}/schedules'
                 .replace(
                     '{' + 'spaceId' + '}',
                     encodeURIComponent(String(spaceId))
                 )
-                .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
-                .replace(
-                    '{' + 'scheduleId' + '}',
-                    encodeURIComponent(String(scheduleId))
-                );
+                .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign(
             {},
@@ -1704,10 +1700,10 @@ export class AudiencesApi {
             );
         }
 
-        // verify required parameter 'scheduleId' is not null or undefined
-        if (scheduleId === null || scheduleId === undefined) {
-            throw new Error(
-                'Required parameter scheduleId was null or undefined when calling removeAudienceScheduleFromAudience.'
+        if (scheduleId !== undefined) {
+            localVarQueryParameters['scheduleId'] = ObjectSerializer.serialize(
+                scheduleId,
+                'string'
             );
         }
 

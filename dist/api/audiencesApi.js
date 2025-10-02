@@ -1129,10 +1129,9 @@ var AudiencesApi = (function () {
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/spaces/{spaceId}/audiences/{id}/schedules/{scheduleId}'
+                    '/spaces/{spaceId}/audiences/{id}/schedules'
                         .replace('{' + 'spaceId' + '}', encodeURIComponent(String(spaceId)))
-                        .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
-                        .replace('{' + 'scheduleId' + '}', encodeURIComponent(String(scheduleId)));
+                        .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
@@ -1152,8 +1151,8 @@ var AudiencesApi = (function () {
                 if (id === null || id === undefined) {
                     throw new Error('Required parameter id was null or undefined when calling removeAudienceScheduleFromAudience.');
                 }
-                if (scheduleId === null || scheduleId === undefined) {
-                    throw new Error('Required parameter scheduleId was null or undefined when calling removeAudienceScheduleFromAudience.');
+                if (scheduleId !== undefined) {
+                    localVarQueryParameters['scheduleId'] = models_1.ObjectSerializer.serialize(scheduleId, 'string');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;

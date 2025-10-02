@@ -134,7 +134,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: RemoveAudienceFromSpace200Response;
     }>;
-    removeAudienceScheduleFromAudience(spaceId: string, id: string, scheduleId: string, options?: {
+    removeAudienceScheduleFromAudience(spaceId: string, id: string, scheduleId?: string, options?: {
         headers: {
             [name: string]: string;
         };
