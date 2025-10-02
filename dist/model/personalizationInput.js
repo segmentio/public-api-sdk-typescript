@@ -19,6 +19,11 @@ var PersonalizationInput = (function () {
             baseName: 'entities',
             type: 'Array<PersonalizationInputEntity>',
         },
+        {
+            name: 'syncEntityPropertyChanges',
+            baseName: 'syncEntityPropertyChanges',
+            type: 'boolean',
+        },
     ];
     return PersonalizationInput;
 }());
