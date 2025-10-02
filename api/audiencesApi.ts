@@ -40,6 +40,7 @@ import { ListAudiencesPaginationInput } from '../model/listAudiencesPaginationIn
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromSpace200Response';
 import { RemoveAudienceFromSpace200Response1 } from '../model/removeAudienceFromSpace200Response1';
+import { RemoveAudienceScheduleFromAudience200Response } from '../model/removeAudienceScheduleFromAudience200Response';
 import { RequestErrorEnvelope } from '../model/requestErrorEnvelope';
 import { UpdateAudienceForSpace200Response } from '../model/updateAudienceForSpace200Response';
 import { UpdateAudienceForSpace200Response1 } from '../model/updateAudienceForSpace200Response1';
@@ -1627,6 +1628,147 @@ export class AudiencesApi {
                                 body = ObjectSerializer.deserialize(
                                     body,
                                     'RemoveAudienceFromSpace200Response'
+                                );
+                                resolve({ response: response, body: body });
+                            } else {
+                                reject(
+                                    new HttpError(
+                                        response,
+                                        body,
+                                        response.statusCode
+                                    )
+                                );
+                            }
+                        }
+                    }
+                );
+            });
+        });
+    }
+    /**
+     * Deletes an audience schedule for a Linked Audience (audienceType = LINKED).  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Audience feature enabled. Please reach out to your customer success manager for more information.
+     * @summary Remove Audience Schedule from Audience
+     * @param spaceId
+     * @param id
+     * @param scheduleId
+     */
+    public async removeAudienceScheduleFromAudience(
+        spaceId: string,
+        id: string,
+        scheduleId: string,
+        options: { headers: { [name: string]: string } } = { headers: {} }
+    ): Promise<{
+        response: http.IncomingMessage;
+        body: RemoveAudienceScheduleFromAudience200Response;
+    }> {
+        const localVarPath =
+            this.basePath +
+            '/spaces/{spaceId}/audiences/{id}/schedules/{scheduleId}'
+                .replace(
+                    '{' + 'spaceId' + '}',
+                    encodeURIComponent(String(spaceId))
+                )
+                .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
+                .replace(
+                    '{' + 'scheduleId' + '}',
+                    encodeURIComponent(String(scheduleId))
+                );
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign(
+            {},
+            this._defaultHeaders
+        );
+        const produces = [
+            'application/vnd.segment.v1alpha+json',
+            'application/json',
+        ];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'spaceId' is not null or undefined
+        if (spaceId === null || spaceId === undefined) {
+            throw new Error(
+                'Required parameter spaceId was null or undefined when calling removeAudienceScheduleFromAudience.'
+            );
+        }
+
+        // verify required parameter 'id' is not null or undefined
+        if (id === null || id === undefined) {
+            throw new Error(
+                'Required parameter id was null or undefined when calling removeAudienceScheduleFromAudience.'
+            );
+        }
+
+        // verify required parameter 'scheduleId' is not null or undefined
+        if (scheduleId === null || scheduleId === undefined) {
+            throw new Error(
+                'Required parameter scheduleId was null or undefined when calling removeAudienceScheduleFromAudience.'
+            );
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'DELETE',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications.token.accessToken) {
+            authenticationPromise = authenticationPromise.then(() =>
+                this.authentications.token.applyToRequest(
+                    localVarRequestOptions
+                )
+            );
+        }
+        authenticationPromise = authenticationPromise.then(() =>
+            this.authentications.default.applyToRequest(localVarRequestOptions)
+        );
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() =>
+                interceptor(localVarRequestOptions)
+            );
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{
+                response: http.IncomingMessage;
+                body: RemoveAudienceScheduleFromAudience200Response;
+            }>((resolve, reject) => {
+                localVarRequest(
+                    localVarRequestOptions,
+                    (error, response, body) => {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            if (
+                                response.statusCode &&
+                                response.statusCode >= 200 &&
+                                response.statusCode <= 299
+                            ) {
+                                body = ObjectSerializer.deserialize(
+                                    body,
+                                    'RemoveAudienceScheduleFromAudience200Response'
                                 );
                                 resolve({ response: response, body: body });
                             } else {

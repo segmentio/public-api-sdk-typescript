@@ -484,6 +484,8 @@ export * from './removeAudienceFromSpace200Response';
 export * from './removeAudienceFromSpace200Response1';
 export * from './removeAudienceFromSpaceAlphaOutput';
 export * from './removeAudienceFromSpaceBetaOutput';
+export * from './removeAudienceScheduleFromAudience200Response';
+export * from './removeAudienceScheduleFromAudienceAlphaOutput';
 export * from './removeComputedTraitFromSpace200Response';
 export * from './removeComputedTraitFromSpaceAlphaOutput';
 export * from './removeFilterFromDestination200Response';

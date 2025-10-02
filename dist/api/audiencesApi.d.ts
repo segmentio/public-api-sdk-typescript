@@ -18,6 +18,7 @@ import { ListAudiences200Response } from '../model/listAudiences200Response';
 import { ListAudiencesPaginationInput } from '../model/listAudiencesPaginationInput';
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromSpace200Response';
+import { RemoveAudienceScheduleFromAudience200Response } from '../model/removeAudienceScheduleFromAudience200Response';
 import { UpdateAudienceForSpace200Response } from '../model/updateAudienceForSpace200Response';
 import { UpdateAudienceForSpaceBetaInput } from '../model/updateAudienceForSpaceBetaInput';
 import { UpdateAudienceScheduleForAudience200Response } from '../model/updateAudienceScheduleForAudience200Response';
@@ -132,6 +133,14 @@ export declare class AudiencesApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: RemoveAudienceFromSpace200Response;
+    }>;
+    removeAudienceScheduleFromAudience(spaceId: string, id: string, scheduleId: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: RemoveAudienceScheduleFromAudience200Response;
     }>;
     updateAudienceForSpace(spaceId: string, id: string, UpdateAudienceForSpaceBetaInput: UpdateAudienceForSpaceBetaInput, options?: {
         headers: {
