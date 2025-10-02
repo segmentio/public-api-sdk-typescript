@@ -480,6 +480,8 @@ export * from './removeAudienceFromSpace200Response';
 export * from './removeAudienceFromSpace200Response1';
 export * from './removeAudienceFromSpaceAlphaOutput';
 export * from './removeAudienceFromSpaceBetaOutput';
+export * from './removeAudienceScheduleFromAudience200Response';
+export * from './removeAudienceScheduleFromAudienceAlphaOutput';
 export * from './removeComputedTraitFromSpace200Response';
 export * from './removeComputedTraitFromSpaceAlphaOutput';
 export * from './removeFilterFromDestination200Response';
@@ -1141,6 +1143,8 @@ import { RemoveAudienceFromSpace200Response } from './removeAudienceFromSpace200
 import { RemoveAudienceFromSpace200Response1 } from './removeAudienceFromSpace200Response1';
 import { RemoveAudienceFromSpaceAlphaOutput } from './removeAudienceFromSpaceAlphaOutput';
 import { RemoveAudienceFromSpaceBetaOutput } from './removeAudienceFromSpaceBetaOutput';
+import { RemoveAudienceScheduleFromAudience200Response } from './removeAudienceScheduleFromAudience200Response';
+import { RemoveAudienceScheduleFromAudienceAlphaOutput } from './removeAudienceScheduleFromAudienceAlphaOutput';
 import { RemoveComputedTraitFromSpace200Response } from './removeComputedTraitFromSpace200Response';
 import { RemoveComputedTraitFromSpaceAlphaOutput } from './removeComputedTraitFromSpaceAlphaOutput';
 import { RemoveFilterFromDestination200Response } from './removeFilterFromDestination200Response';
@@ -1447,6 +1451,8 @@ let enumsMap: { [index: string]: any } = {
         RemoveAudienceFromSpaceAlphaOutput.StatusEnum,
     'RemoveAudienceFromSpaceBetaOutput.StatusEnum':
         RemoveAudienceFromSpaceBetaOutput.StatusEnum,
+    'RemoveAudienceScheduleFromAudienceAlphaOutput.StatusEnum':
+        RemoveAudienceScheduleFromAudienceAlphaOutput.StatusEnum,
     'RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum':
         RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum':
@@ -2057,6 +2063,10 @@ let typeMap: { [index: string]: any } = {
     RemoveAudienceFromSpace200Response1: RemoveAudienceFromSpace200Response1,
     RemoveAudienceFromSpaceAlphaOutput: RemoveAudienceFromSpaceAlphaOutput,
     RemoveAudienceFromSpaceBetaOutput: RemoveAudienceFromSpaceBetaOutput,
+    RemoveAudienceScheduleFromAudience200Response:
+        RemoveAudienceScheduleFromAudience200Response,
+    RemoveAudienceScheduleFromAudienceAlphaOutput:
+        RemoveAudienceScheduleFromAudienceAlphaOutput,
     RemoveComputedTraitFromSpace200Response:
         RemoveComputedTraitFromSpace200Response,
     RemoveComputedTraitFromSpaceAlphaOutput:
