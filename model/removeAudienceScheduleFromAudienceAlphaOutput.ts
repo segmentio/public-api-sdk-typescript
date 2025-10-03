@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 /**
- * Output to remove a RETL audience schedule.
+ * Delete audience schedule endpoint output.
  */
 export class RemoveAudienceScheduleFromAudienceAlphaOutput {
     /**
