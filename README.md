@@ -10,7 +10,7 @@ All endpoints in the API follow REST conventions and use standard HTTP methods. 
 
 See the next sections for more information on how to use the Segment Public API TypeScript SDK.
 
-Latest API and SDK version: 59.8.0
+Latest API and SDK version: 60.1.0
 
 ## Installation
 
