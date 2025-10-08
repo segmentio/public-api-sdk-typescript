@@ -1,7 +1,8 @@
 /// <reference types="node" />
 import http from 'http';
-import { CreateEdgeFunctions200Response } from '../model/createEdgeFunctions200Response';
-import { CreateEdgeFunctionsAlphaInput } from '../model/createEdgeFunctionsAlphaInput';
+import { CreateEdgeFunction200Response } from '../model/createEdgeFunction200Response';
+import { CreateEdgeFunctionAlphaInput } from '../model/createEdgeFunctionAlphaInput';
+import { DeleteEdgeFunctionCode200Response } from '../model/deleteEdgeFunctionCode200Response';
 import { DisableEdgeFunctions200Response } from '../model/disableEdgeFunctions200Response';
 import { GenerateUploadURLForEdgeFunctions200Response } from '../model/generateUploadURLForEdgeFunctions200Response';
 import { GetLatestFromEdgeFunctions200Response } from '../model/getLatestFromEdgeFunctions200Response';
@@ -28,13 +29,21 @@ export declare class EdgeFunctionsApi {
     setApiKey(key: EdgeFunctionsApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    createEdgeFunctions(sourceId: string, CreateEdgeFunctionsAlphaInput: CreateEdgeFunctionsAlphaInput, options?: {
+    createEdgeFunction(sourceId: string, CreateEdgeFunctionAlphaInput: CreateEdgeFunctionAlphaInput, options?: {
         headers: {
             [name: string]: string;
         };
     }): Promise<{
         response: http.IncomingMessage;
-        body: CreateEdgeFunctions200Response;
+        body: CreateEdgeFunction200Response;
+    }>;
+    deleteEdgeFunctionCode(sourceId: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: DeleteEdgeFunctionCode200Response;
     }>;
     disableEdgeFunctions(sourceId: string, options?: {
         headers: {

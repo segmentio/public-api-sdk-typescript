@@ -5,6 +5,7 @@ export declare class EdgeFunctionsAlpha {
     'createdBy': string;
     'downloadURL': string;
     'version': number;
+    'code'?: string | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

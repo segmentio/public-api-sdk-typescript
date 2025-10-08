@@ -1,5 +1,5 @@
-export declare class CreateEdgeFunctionsAlphaInput {
-    'uploadURL': string;
+export declare class CreateEdgeFunctionAlphaInput {
+    'code': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

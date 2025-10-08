@@ -113,14 +113,14 @@ var EdgeFunctionsApi = (function () {
     EdgeFunctionsApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    EdgeFunctionsApi.prototype.createEdgeFunctions = function (sourceId, CreateEdgeFunctionsAlphaInput, options) {
+    EdgeFunctionsApi.prototype.createEdgeFunction = function (sourceId, CreateEdgeFunctionAlphaInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/sources/{sourceId}/edge-functions'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
+                    '/sources/{sourceId}/edge-functions/create'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
@@ -135,11 +135,11 @@ var EdgeFunctionsApi = (function () {
                 }
                 localVarFormParams = {};
                 if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling createEdgeFunctions.');
+                    throw new Error('Required parameter sourceId was null or undefined when calling createEdgeFunction.');
                 }
-                if (CreateEdgeFunctionsAlphaInput === null ||
-                    CreateEdgeFunctionsAlphaInput === undefined) {
-                    throw new Error('Required parameter CreateEdgeFunctionsAlphaInput was null or undefined when calling createEdgeFunctions.');
+                if (CreateEdgeFunctionAlphaInput === null ||
+                    CreateEdgeFunctionAlphaInput === undefined) {
+                    throw new Error('Required parameter CreateEdgeFunctionAlphaInput was null or undefined when calling createEdgeFunction.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -150,7 +150,7 @@ var EdgeFunctionsApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateEdgeFunctionsAlphaInput, 'CreateEdgeFunctionsAlphaInput'),
+                    body: models_1.ObjectSerializer.serialize(CreateEdgeFunctionAlphaInput, 'CreateEdgeFunctionAlphaInput'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -189,7 +189,7 @@ var EdgeFunctionsApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateEdgeFunctions200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateEdgeFunction200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -202,14 +202,14 @@ var EdgeFunctionsApi = (function () {
             });
         });
     };
-    EdgeFunctionsApi.prototype.disableEdgeFunctions = function (sourceId, options) {
+    EdgeFunctionsApi.prototype.deleteEdgeFunctionCode = function (sourceId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/sources/{sourceId}/edge-functions/disable'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
+                    '/sources/{sourceId}/edge-functions/delete-code'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
@@ -224,12 +224,12 @@ var EdgeFunctionsApi = (function () {
                 }
                 localVarFormParams = {};
                 if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling disableEdgeFunctions.');
+                    throw new Error('Required parameter sourceId was null or undefined when calling deleteEdgeFunctionCode.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'PATCH',
+                    method: 'DELETE',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
@@ -273,7 +273,7 @@ var EdgeFunctionsApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DisableEdgeFunctions200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteEdgeFunctionCode200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -286,14 +286,14 @@ var EdgeFunctionsApi = (function () {
             });
         });
     };
-    EdgeFunctionsApi.prototype.generateUploadURLForEdgeFunctions = function (sourceId, options) {
+    EdgeFunctionsApi.prototype.disableEdgeFunctions = function (sourceId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/sources/{sourceId}/edge-functions/upload-url'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
+                    '/sources/{sourceId}/edge-functions/disable'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
@@ -308,12 +308,12 @@ var EdgeFunctionsApi = (function () {
                 }
                 localVarFormParams = {};
                 if (sourceId === null || sourceId === undefined) {
-                    throw new Error('Required parameter sourceId was null or undefined when calling generateUploadURLForEdgeFunctions.');
+                    throw new Error('Required parameter sourceId was null or undefined when calling disableEdgeFunctions.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'PATCH',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
@@ -357,6 +357,90 @@ var EdgeFunctionsApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
+                                        body = models_1.ObjectSerializer.deserialize(body, 'DisableEdgeFunctions200Response');
+                                        resolve({ response: response, body: body });
+                                    }
+                                    else {
+                                        reject(new apis_1.HttpError(response, body, response.statusCode));
+                                    }
+                                }
+                            });
+                        });
+                    })];
+            });
+        });
+    };
+    EdgeFunctionsApi.prototype.generateUploadURLForEdgeFunctions = function (sourceId, options) {
+        if (options === void 0) { options = { headers: {} }; }
+        return __awaiter(this, void 0, void 0, function () {
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
+            var _this = this;
+            return __generator(this, function (_b) {
+                localVarPath = this.basePath +
+                    '/sources/{sourceId}/edge-functions/upload-url'.replace('{' + 'sourceId' + '}', encodeURIComponent(String(sourceId)));
+                localVarQueryParameters = {};
+                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
+                produces = [
+                    'application/vnd.segment.v1alpha+json',
+                    'application/json',
+                ];
+                if (produces.indexOf('application/json') >= 0) {
+                    localVarHeaderParams.Accept = 'application/json';
+                }
+                else {
+                    localVarHeaderParams.Accept = produces.join(',');
+                }
+                localVarFormParams = {};
+                if (sourceId === null || sourceId === undefined) {
+                    throw new Error('Required parameter sourceId was null or undefined when calling generateUploadURLForEdgeFunctions.');
+                }
+                Object.assign(localVarHeaderParams, options.headers);
+                localVarUseFormData = false;
+                localVarRequestOptions = {
+                    method: 'POST',
+                    qs: localVarQueryParameters,
+                    headers: localVarHeaderParams,
+                    uri: localVarPath,
+                    useQuerystring: this._useQuerystring,
+                    json: true,
+                };
+                authenticationPromise = Promise.resolve();
+                if (this.authentications.token.accessToken) {
+                    authenticationPromise = authenticationPromise.then(function () {
+                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
+                    });
+                }
+                authenticationPromise = authenticationPromise.then(function () {
+                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
+                });
+                interceptorPromise = authenticationPromise;
+                _loop_4 = function (interceptor) {
+                    interceptorPromise = interceptorPromise.then(function () {
+                        return interceptor(localVarRequestOptions);
+                    });
+                };
+                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
+                    interceptor = _a[_i];
+                    _loop_4(interceptor);
+                }
+                return [2, interceptorPromise.then(function () {
+                        if (Object.keys(localVarFormParams).length) {
+                            if (localVarUseFormData) {
+                                localVarRequestOptions.formData = localVarFormParams;
+                            }
+                            else {
+                                localVarRequestOptions.form = localVarFormParams;
+                            }
+                        }
+                        return new Promise(function (resolve, reject) {
+                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
+                                if (error) {
+                                    reject(error);
+                                }
+                                else {
+                                    if (response.statusCode &&
+                                        response.statusCode >= 200 &&
+                                        response.statusCode <= 299) {
                                         body = models_1.ObjectSerializer.deserialize(body, 'GenerateUploadURLForEdgeFunctions200Response');
                                         resolve({ response: response, body: body });
                                     }
@@ -373,7 +457,7 @@ var EdgeFunctionsApi = (function () {
     EdgeFunctionsApi.prototype.getLatestFromEdgeFunctions = function (sourceId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_5, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
@@ -414,14 +498,14 @@ var EdgeFunctionsApi = (function () {
                     return _this.authentications.default.applyToRequest(localVarRequestOptions);
                 });
                 interceptorPromise = authenticationPromise;
-                _loop_4 = function (interceptor) {
+                _loop_5 = function (interceptor) {
                     interceptorPromise = interceptorPromise.then(function () {
                         return interceptor(localVarRequestOptions);
                     });
                 };
                 for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
                     interceptor = _a[_i];
-                    _loop_4(interceptor);
+                    _loop_5(interceptor);
                 }
                 return [2, interceptorPromise.then(function () {
                         if (Object.keys(localVarFormParams).length) {

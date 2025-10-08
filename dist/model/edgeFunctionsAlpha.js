@@ -39,6 +39,11 @@ var EdgeFunctionsAlpha = (function () {
             baseName: 'version',
             type: 'number',
         },
+        {
+            name: 'code',
+            baseName: 'code',
+            type: 'string',
+        },
     ];
     return EdgeFunctionsAlpha;
 }());

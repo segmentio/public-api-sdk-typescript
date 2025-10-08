@@ -112,9 +112,9 @@ __exportStar(require("./createDestinationV1Output"), exports);
 __exportStar(require("./createDownload200Response"), exports);
 __exportStar(require("./createDownloadAlphaInput"), exports);
 __exportStar(require("./createDownloadAlphaOutput"), exports);
-__exportStar(require("./createEdgeFunctions200Response"), exports);
-__exportStar(require("./createEdgeFunctionsAlphaInput"), exports);
-__exportStar(require("./createEdgeFunctionsAlphaOutput"), exports);
+__exportStar(require("./createEdgeFunction200Response"), exports);
+__exportStar(require("./createEdgeFunctionAlphaInput"), exports);
+__exportStar(require("./createEdgeFunctionAlphaOutput"), exports);
 __exportStar(require("./createFilterForDestination200Response"), exports);
 __exportStar(require("./createFilterForDestinationV1Input"), exports);
 __exportStar(require("./createFilterForDestinationV1Output"), exports);
@@ -179,6 +179,8 @@ __exportStar(require("./dbtModelSyncTrigger"), exports);
 __exportStar(require("./deleteActivationAlphaOutput"), exports);
 __exportStar(require("./deleteDestination200Response"), exports);
 __exportStar(require("./deleteDestinationV1Output"), exports);
+__exportStar(require("./deleteEdgeFunctionCode200Response"), exports);
+__exportStar(require("./deleteEdgeFunctionCodeAlphaOutput"), exports);
 __exportStar(require("./deleteFilterById200Response"), exports);
 __exportStar(require("./deleteFilterByIdOutput"), exports);
 __exportStar(require("./deleteFunction200Response"), exports);
@@ -765,9 +767,9 @@ var createDestinationV1Output_1 = require("./createDestinationV1Output");
 var createDownload200Response_1 = require("./createDownload200Response");
 var createDownloadAlphaInput_1 = require("./createDownloadAlphaInput");
 var createDownloadAlphaOutput_1 = require("./createDownloadAlphaOutput");
-var createEdgeFunctions200Response_1 = require("./createEdgeFunctions200Response");
-var createEdgeFunctionsAlphaInput_1 = require("./createEdgeFunctionsAlphaInput");
-var createEdgeFunctionsAlphaOutput_1 = require("./createEdgeFunctionsAlphaOutput");
+var createEdgeFunction200Response_1 = require("./createEdgeFunction200Response");
+var createEdgeFunctionAlphaInput_1 = require("./createEdgeFunctionAlphaInput");
+var createEdgeFunctionAlphaOutput_1 = require("./createEdgeFunctionAlphaOutput");
 var createFilterForDestination200Response_1 = require("./createFilterForDestination200Response");
 var createFilterForDestinationV1Input_1 = require("./createFilterForDestinationV1Input");
 var createFilterForDestinationV1Output_1 = require("./createFilterForDestinationV1Output");
@@ -832,6 +834,8 @@ var dbtModelSyncTrigger_1 = require("./dbtModelSyncTrigger");
 var deleteActivationAlphaOutput_1 = require("./deleteActivationAlphaOutput");
 var deleteDestination200Response_1 = require("./deleteDestination200Response");
 var deleteDestinationV1Output_1 = require("./deleteDestinationV1Output");
+var deleteEdgeFunctionCode200Response_1 = require("./deleteEdgeFunctionCode200Response");
+var deleteEdgeFunctionCodeAlphaOutput_1 = require("./deleteEdgeFunctionCodeAlphaOutput");
 var deleteFilterById200Response_1 = require("./deleteFilterById200Response");
 var deleteFilterByIdOutput_1 = require("./deleteFilterByIdOutput");
 var deleteFunction200Response_1 = require("./deleteFunction200Response");
@@ -1357,6 +1361,7 @@ var enumsMap = {
     'CreateWorkspaceRegulationV1Input.RegulationTypeEnum': createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input.RegulationTypeEnum,
     'CreateWorkspaceRegulationV1Input.SubjectTypeEnum': createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input.SubjectTypeEnum,
     'DeleteDestinationV1Output.StatusEnum': deleteDestinationV1Output_1.DeleteDestinationV1Output.StatusEnum,
+    'DeleteEdgeFunctionCodeAlphaOutput.StatusEnum': deleteEdgeFunctionCodeAlphaOutput_1.DeleteEdgeFunctionCodeAlphaOutput.StatusEnum,
     'DeleteFunctionV1Output.StatusEnum': deleteFunctionV1Output_1.DeleteFunctionV1Output.StatusEnum,
     'DeleteInsertFunctionInstanceAlphaOutput.StatusEnum': deleteInsertFunctionInstanceAlphaOutput_1.DeleteInsertFunctionInstanceAlphaOutput.StatusEnum,
     'DeleteInvitesV1Output.StatusEnum': deleteInvitesV1Output_1.DeleteInvitesV1Output.StatusEnum,
@@ -1537,9 +1542,9 @@ var typeMap = {
     CreateDownload200Response: createDownload200Response_1.CreateDownload200Response,
     CreateDownloadAlphaInput: createDownloadAlphaInput_1.CreateDownloadAlphaInput,
     CreateDownloadAlphaOutput: createDownloadAlphaOutput_1.CreateDownloadAlphaOutput,
-    CreateEdgeFunctions200Response: createEdgeFunctions200Response_1.CreateEdgeFunctions200Response,
-    CreateEdgeFunctionsAlphaInput: createEdgeFunctionsAlphaInput_1.CreateEdgeFunctionsAlphaInput,
-    CreateEdgeFunctionsAlphaOutput: createEdgeFunctionsAlphaOutput_1.CreateEdgeFunctionsAlphaOutput,
+    CreateEdgeFunction200Response: createEdgeFunction200Response_1.CreateEdgeFunction200Response,
+    CreateEdgeFunctionAlphaInput: createEdgeFunctionAlphaInput_1.CreateEdgeFunctionAlphaInput,
+    CreateEdgeFunctionAlphaOutput: createEdgeFunctionAlphaOutput_1.CreateEdgeFunctionAlphaOutput,
     CreateFilterForDestination200Response: createFilterForDestination200Response_1.CreateFilterForDestination200Response,
     CreateFilterForDestinationV1Input: createFilterForDestinationV1Input_1.CreateFilterForDestinationV1Input,
     CreateFilterForDestinationV1Output: createFilterForDestinationV1Output_1.CreateFilterForDestinationV1Output,
@@ -1604,6 +1609,8 @@ var typeMap = {
     DeleteActivationAlphaOutput: deleteActivationAlphaOutput_1.DeleteActivationAlphaOutput,
     DeleteDestination200Response: deleteDestination200Response_1.DeleteDestination200Response,
     DeleteDestinationV1Output: deleteDestinationV1Output_1.DeleteDestinationV1Output,
+    DeleteEdgeFunctionCode200Response: deleteEdgeFunctionCode200Response_1.DeleteEdgeFunctionCode200Response,
+    DeleteEdgeFunctionCodeAlphaOutput: deleteEdgeFunctionCodeAlphaOutput_1.DeleteEdgeFunctionCodeAlphaOutput,
     DeleteFilterById200Response: deleteFilterById200Response_1.DeleteFilterById200Response,
     DeleteFilterByIdOutput: deleteFilterByIdOutput_1.DeleteFilterByIdOutput,
     DeleteFunction200Response: deleteFunction200Response_1.DeleteFunction200Response,

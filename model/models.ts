@@ -97,9 +97,9 @@ export * from './createDestinationV1Output';
 export * from './createDownload200Response';
 export * from './createDownloadAlphaInput';
 export * from './createDownloadAlphaOutput';
-export * from './createEdgeFunctions200Response';
-export * from './createEdgeFunctionsAlphaInput';
-export * from './createEdgeFunctionsAlphaOutput';
+export * from './createEdgeFunction200Response';
+export * from './createEdgeFunctionAlphaInput';
+export * from './createEdgeFunctionAlphaOutput';
 export * from './createFilterForDestination200Response';
 export * from './createFilterForDestinationV1Input';
 export * from './createFilterForDestinationV1Output';
@@ -164,6 +164,8 @@ export * from './dbtModelSyncTrigger';
 export * from './deleteActivationAlphaOutput';
 export * from './deleteDestination200Response';
 export * from './deleteDestinationV1Output';
+export * from './deleteEdgeFunctionCode200Response';
+export * from './deleteEdgeFunctionCodeAlphaOutput';
 export * from './deleteFilterById200Response';
 export * from './deleteFilterByIdOutput';
 export * from './deleteFunction200Response';
@@ -763,9 +765,9 @@ import { CreateDestinationV1Output } from './createDestinationV1Output';
 import { CreateDownload200Response } from './createDownload200Response';
 import { CreateDownloadAlphaInput } from './createDownloadAlphaInput';
 import { CreateDownloadAlphaOutput } from './createDownloadAlphaOutput';
-import { CreateEdgeFunctions200Response } from './createEdgeFunctions200Response';
-import { CreateEdgeFunctionsAlphaInput } from './createEdgeFunctionsAlphaInput';
-import { CreateEdgeFunctionsAlphaOutput } from './createEdgeFunctionsAlphaOutput';
+import { CreateEdgeFunction200Response } from './createEdgeFunction200Response';
+import { CreateEdgeFunctionAlphaInput } from './createEdgeFunctionAlphaInput';
+import { CreateEdgeFunctionAlphaOutput } from './createEdgeFunctionAlphaOutput';
 import { CreateFilterForDestination200Response } from './createFilterForDestination200Response';
 import { CreateFilterForDestinationV1Input } from './createFilterForDestinationV1Input';
 import { CreateFilterForDestinationV1Output } from './createFilterForDestinationV1Output';
@@ -830,6 +832,8 @@ import { DbtModelSyncTrigger } from './dbtModelSyncTrigger';
 import { DeleteActivationAlphaOutput } from './deleteActivationAlphaOutput';
 import { DeleteDestination200Response } from './deleteDestination200Response';
 import { DeleteDestinationV1Output } from './deleteDestinationV1Output';
+import { DeleteEdgeFunctionCode200Response } from './deleteEdgeFunctionCode200Response';
+import { DeleteEdgeFunctionCodeAlphaOutput } from './deleteEdgeFunctionCodeAlphaOutput';
 import { DeleteFilterById200Response } from './deleteFilterById200Response';
 import { DeleteFilterByIdOutput } from './deleteFilterByIdOutput';
 import { DeleteFunction200Response } from './deleteFunction200Response';
@@ -1375,6 +1379,8 @@ let enumsMap: { [index: string]: any } = {
         CreateWorkspaceRegulationV1Input.SubjectTypeEnum,
     'DeleteDestinationV1Output.StatusEnum':
         DeleteDestinationV1Output.StatusEnum,
+    'DeleteEdgeFunctionCodeAlphaOutput.StatusEnum':
+        DeleteEdgeFunctionCodeAlphaOutput.StatusEnum,
     'DeleteFunctionV1Output.StatusEnum': DeleteFunctionV1Output.StatusEnum,
     'DeleteInsertFunctionInstanceAlphaOutput.StatusEnum':
         DeleteInsertFunctionInstanceAlphaOutput.StatusEnum,
@@ -1619,9 +1625,9 @@ let typeMap: { [index: string]: any } = {
     CreateDownload200Response: CreateDownload200Response,
     CreateDownloadAlphaInput: CreateDownloadAlphaInput,
     CreateDownloadAlphaOutput: CreateDownloadAlphaOutput,
-    CreateEdgeFunctions200Response: CreateEdgeFunctions200Response,
-    CreateEdgeFunctionsAlphaInput: CreateEdgeFunctionsAlphaInput,
-    CreateEdgeFunctionsAlphaOutput: CreateEdgeFunctionsAlphaOutput,
+    CreateEdgeFunction200Response: CreateEdgeFunction200Response,
+    CreateEdgeFunctionAlphaInput: CreateEdgeFunctionAlphaInput,
+    CreateEdgeFunctionAlphaOutput: CreateEdgeFunctionAlphaOutput,
     CreateFilterForDestination200Response:
         CreateFilterForDestination200Response,
     CreateFilterForDestinationV1Input: CreateFilterForDestinationV1Input,
@@ -1692,6 +1698,8 @@ let typeMap: { [index: string]: any } = {
     DeleteActivationAlphaOutput: DeleteActivationAlphaOutput,
     DeleteDestination200Response: DeleteDestination200Response,
     DeleteDestinationV1Output: DeleteDestinationV1Output,
+    DeleteEdgeFunctionCode200Response: DeleteEdgeFunctionCode200Response,
+    DeleteEdgeFunctionCodeAlphaOutput: DeleteEdgeFunctionCodeAlphaOutput,
     DeleteFilterById200Response: DeleteFilterById200Response,
     DeleteFilterByIdOutput: DeleteFilterByIdOutput,
     DeleteFunction200Response: DeleteFunction200Response,
