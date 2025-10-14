@@ -16,6 +16,7 @@ export declare class AddAudienceScheduleToAudienceAlphaInput {
 }
 export declare namespace AddAudienceScheduleToAudienceAlphaInput {
     enum StrategyEnum {
+        MANUAL,
         PERIODIC,
         SPECIFIC_DAYS
     }

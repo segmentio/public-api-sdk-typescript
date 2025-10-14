@@ -22,6 +22,8 @@ export * from './destinationFiltersApi';
 import { DestinationFiltersApi } from './destinationFiltersApi';
 export * from './destinationsApi';
 import { DestinationsApi } from './destinationsApi';
+export * from './edgeFunctionsApi';
+import { EdgeFunctionsApi } from './edgeFunctionsApi';
 export * from './eventsApi';
 import { EventsApi } from './eventsApi';
 export * from './functionsApi';
@@ -34,8 +36,6 @@ export * from './iAMUsersApi';
 import { IAMUsersApi } from './iAMUsersApi';
 export * from './labelsApi';
 import { LabelsApi } from './labelsApi';
-export * from './livePluginsApi';
-import { LivePluginsApi } from './livePluginsApi';
 export * from './monthlyTrackedUsersApi';
 import { MonthlyTrackedUsersApi } from './monthlyTrackedUsersApi';
 export * from './profilesSyncApi';
@@ -88,13 +88,13 @@ export const APIS = [
     DeliveryOverviewApi,
     DestinationFiltersApi,
     DestinationsApi,
+    EdgeFunctionsApi,
     EventsApi,
     FunctionsApi,
     IAMGroupsApi,
     IAMRolesApi,
     IAMUsersApi,
     LabelsApi,
-    LivePluginsApi,
     MonthlyTrackedUsersApi,
     ProfilesSyncApi,
     ReverseETLApi,
@@ -116,7 +116,7 @@ export interface Apis {
     deletionAndSuppresion: DeletionAndSuppressionApi;
     destinationFilters: DestinationFiltersApi;
     destinations: DestinationsApi;
-    livePlugins: LivePluginsApi;
+    edgeFunctions: EdgeFunctionsApi;
     events: EventsApi;
     functions: FunctionsApi;
     iamGroups: IAMGroupsApi;
@@ -151,7 +151,7 @@ export function configureApis(
         deletionAndSuppresion: new DeletionAndSuppressionApi(),
         destinationFilters: new DestinationFiltersApi(),
         destinations: new DestinationsApi(),
-        livePlugins: new LivePluginsApi(),
+        edgeFunctions: new EdgeFunctionsApi(),
         events: new EventsApi(),
         functions: new FunctionsApi(),
         iamGroups: new IAMGroupsApi(),
@@ -171,7 +171,7 @@ export function configureApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 60.1.2 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 60.1.1 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -198,7 +198,7 @@ export function configureEuApis(
         deletionAndSuppresion: new DeletionAndSuppressionApi(basePath),
         destinationFilters: new DestinationFiltersApi(basePath),
         destinations: new DestinationsApi(basePath),
-        livePlugins: new LivePluginsApi(basePath),
+        edgeFunctions: new EdgeFunctionsApi(basePath),
         events: new EventsApi(basePath),
         functions: new FunctionsApi(basePath),
         iamGroups: new IAMGroupsApi(basePath),
@@ -218,7 +218,7 @@ export function configureEuApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 60.1.2 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 60.1.1 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
