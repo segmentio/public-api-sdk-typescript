@@ -97,9 +97,6 @@ export * from './createDestinationV1Output';
 export * from './createDownload200Response';
 export * from './createDownloadAlphaInput';
 export * from './createDownloadAlphaOutput';
-export * from './createEdgeFunctions200Response';
-export * from './createEdgeFunctionsAlphaInput';
-export * from './createEdgeFunctionsAlphaOutput';
 export * from './createFilterForDestination200Response';
 export * from './createFilterForDestinationV1Input';
 export * from './createFilterForDestinationV1Output';
@@ -120,6 +117,9 @@ export * from './createInvitesV1Output';
 export * from './createLabel201Response';
 export * from './createLabelV1Input';
 export * from './createLabelV1Output';
+export * from './createLivePlugin200Response';
+export * from './createLivePluginAlphaInput';
+export * from './createLivePluginAlphaOutput';
 export * from './createProfilesWarehouse201Response';
 export * from './createProfilesWarehouseAlphaInput';
 export * from './createProfilesWarehouseAlphaOutput';
@@ -176,6 +176,8 @@ export * from './deleteLabel200Response';
 export * from './deleteLabel200Response1';
 export * from './deleteLabelAlphaOutput';
 export * from './deleteLabelV1Output';
+export * from './deleteLivePluginCode200Response';
+export * from './deleteLivePluginCodeAlphaOutput';
 export * from './deleteRegulation200Response';
 export * from './deleteRegulationV1Output';
 export * from './deleteReverseEtlModel200Response';
@@ -218,14 +220,11 @@ export * from './destinationSubscription';
 export * from './destinationSubscriptionConfiguration';
 export * from './destinationSubscriptionUpdateInput';
 export * from './destinationV1';
-export * from './disableEdgeFunctions200Response';
-export * from './disableEdgeFunctionsAlphaOutput';
 export * from './download';
 export * from './echo200Response';
 export * from './echo200Response1';
 export * from './echoAlphaOutput';
 export * from './echoV1Output';
-export * from './edgeFunctionsAlpha';
 export * from './entityDetails';
 export * from './eventSourceV1';
 export * from './fQLDefinedPropertyV1';
@@ -235,8 +234,6 @@ export * from './forceExecuteAudienceRunAlphaOutput';
 export * from './functionDeployment';
 export * from './functionSettingV1';
 export * from './functionV1';
-export * from './generateUploadURLForEdgeFunctions200Response';
-export * from './generateUploadURLForEdgeFunctionsAlphaOutput';
 export * from './getActivationFromAudience200Response';
 export * from './getActivationFromAudienceOutput';
 export * from './getAdvancedSyncScheduleFromWarehouse200Response';
@@ -284,8 +281,8 @@ export * from './getFunctionVersion200Response';
 export * from './getFunctionVersionAlphaOutput';
 export * from './getInsertFunctionInstance200Response';
 export * from './getInsertFunctionInstanceAlphaOutput';
-export * from './getLatestFromEdgeFunctions200Response';
-export * from './getLatestFromEdgeFunctionsAlphaOutput';
+export * from './getLatestFromLivePlugins200Response';
+export * from './getLatestFromLivePluginsAlphaOutput';
 export * from './getMessagingSubscriptionFailureResponse';
 export * from './getMessagingSubscriptionSuccessResponse';
 export * from './getRegulation200Response';
@@ -447,6 +444,7 @@ export * from './listWarehouses200Response';
 export * from './listWarehousesV1Output';
 export * from './listWorkspaceRegulations200Response';
 export * from './listWorkspaceRegulationsV1Output';
+export * from './livePluginsAlpha';
 export * from './logosBeta';
 export * from './messageSubscriptionResponse';
 export * from './messageSubscriptionResponseError';
@@ -763,9 +761,6 @@ import { CreateDestinationV1Output } from './createDestinationV1Output';
 import { CreateDownload200Response } from './createDownload200Response';
 import { CreateDownloadAlphaInput } from './createDownloadAlphaInput';
 import { CreateDownloadAlphaOutput } from './createDownloadAlphaOutput';
-import { CreateEdgeFunctions200Response } from './createEdgeFunctions200Response';
-import { CreateEdgeFunctionsAlphaInput } from './createEdgeFunctionsAlphaInput';
-import { CreateEdgeFunctionsAlphaOutput } from './createEdgeFunctionsAlphaOutput';
 import { CreateFilterForDestination200Response } from './createFilterForDestination200Response';
 import { CreateFilterForDestinationV1Input } from './createFilterForDestinationV1Input';
 import { CreateFilterForDestinationV1Output } from './createFilterForDestinationV1Output';
@@ -786,6 +781,9 @@ import { CreateInvitesV1Output } from './createInvitesV1Output';
 import { CreateLabel201Response } from './createLabel201Response';
 import { CreateLabelV1Input } from './createLabelV1Input';
 import { CreateLabelV1Output } from './createLabelV1Output';
+import { CreateLivePlugin200Response } from './createLivePlugin200Response';
+import { CreateLivePluginAlphaInput } from './createLivePluginAlphaInput';
+import { CreateLivePluginAlphaOutput } from './createLivePluginAlphaOutput';
 import { CreateProfilesWarehouse201Response } from './createProfilesWarehouse201Response';
 import { CreateProfilesWarehouseAlphaInput } from './createProfilesWarehouseAlphaInput';
 import { CreateProfilesWarehouseAlphaOutput } from './createProfilesWarehouseAlphaOutput';
@@ -842,6 +840,8 @@ import { DeleteLabel200Response } from './deleteLabel200Response';
 import { DeleteLabel200Response1 } from './deleteLabel200Response1';
 import { DeleteLabelAlphaOutput } from './deleteLabelAlphaOutput';
 import { DeleteLabelV1Output } from './deleteLabelV1Output';
+import { DeleteLivePluginCode200Response } from './deleteLivePluginCode200Response';
+import { DeleteLivePluginCodeAlphaOutput } from './deleteLivePluginCodeAlphaOutput';
 import { DeleteRegulation200Response } from './deleteRegulation200Response';
 import { DeleteRegulationV1Output } from './deleteRegulationV1Output';
 import { DeleteReverseEtlModel200Response } from './deleteReverseEtlModel200Response';
@@ -884,14 +884,11 @@ import { DestinationSubscription } from './destinationSubscription';
 import { DestinationSubscriptionConfiguration } from './destinationSubscriptionConfiguration';
 import { DestinationSubscriptionUpdateInput } from './destinationSubscriptionUpdateInput';
 import { DestinationV1 } from './destinationV1';
-import { DisableEdgeFunctions200Response } from './disableEdgeFunctions200Response';
-import { DisableEdgeFunctionsAlphaOutput } from './disableEdgeFunctionsAlphaOutput';
 import { Download } from './download';
 import { Echo200Response } from './echo200Response';
 import { Echo200Response1 } from './echo200Response1';
 import { EchoAlphaOutput } from './echoAlphaOutput';
 import { EchoV1Output } from './echoV1Output';
-import { EdgeFunctionsAlpha } from './edgeFunctionsAlpha';
 import { EntityDetails } from './entityDetails';
 import { EventSourceV1 } from './eventSourceV1';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
@@ -901,8 +898,6 @@ import { ForceExecuteAudienceRunAlphaOutput } from './forceExecuteAudienceRunAlp
 import { FunctionDeployment } from './functionDeployment';
 import { FunctionSettingV1 } from './functionSettingV1';
 import { FunctionV1 } from './functionV1';
-import { GenerateUploadURLForEdgeFunctions200Response } from './generateUploadURLForEdgeFunctions200Response';
-import { GenerateUploadURLForEdgeFunctionsAlphaOutput } from './generateUploadURLForEdgeFunctionsAlphaOutput';
 import { GetActivationFromAudience200Response } from './getActivationFromAudience200Response';
 import { GetActivationFromAudienceOutput } from './getActivationFromAudienceOutput';
 import { GetAdvancedSyncScheduleFromWarehouse200Response } from './getAdvancedSyncScheduleFromWarehouse200Response';
@@ -950,8 +945,8 @@ import { GetFunctionVersion200Response } from './getFunctionVersion200Response';
 import { GetFunctionVersionAlphaOutput } from './getFunctionVersionAlphaOutput';
 import { GetInsertFunctionInstance200Response } from './getInsertFunctionInstance200Response';
 import { GetInsertFunctionInstanceAlphaOutput } from './getInsertFunctionInstanceAlphaOutput';
-import { GetLatestFromEdgeFunctions200Response } from './getLatestFromEdgeFunctions200Response';
-import { GetLatestFromEdgeFunctionsAlphaOutput } from './getLatestFromEdgeFunctionsAlphaOutput';
+import { GetLatestFromLivePlugins200Response } from './getLatestFromLivePlugins200Response';
+import { GetLatestFromLivePluginsAlphaOutput } from './getLatestFromLivePluginsAlphaOutput';
 import { GetMessagingSubscriptionFailureResponse } from './getMessagingSubscriptionFailureResponse';
 import { GetMessagingSubscriptionSuccessResponse } from './getMessagingSubscriptionSuccessResponse';
 import { GetRegulation200Response } from './getRegulation200Response';
@@ -1113,6 +1108,7 @@ import { ListWarehouses200Response } from './listWarehouses200Response';
 import { ListWarehousesV1Output } from './listWarehousesV1Output';
 import { ListWorkspaceRegulations200Response } from './listWorkspaceRegulations200Response';
 import { ListWorkspaceRegulationsV1Output } from './listWorkspaceRegulationsV1Output';
+import { LivePluginsAlpha } from './livePluginsAlpha';
 import { LogosBeta } from './logosBeta';
 import { MessageSubscriptionResponse } from './messageSubscriptionResponse';
 import { MessageSubscriptionResponseError } from './messageSubscriptionResponseError';
@@ -1381,6 +1377,8 @@ let enumsMap: { [index: string]: any } = {
     'DeleteInvitesV1Output.StatusEnum': DeleteInvitesV1Output.StatusEnum,
     'DeleteLabelAlphaOutput.StatusEnum': DeleteLabelAlphaOutput.StatusEnum,
     'DeleteLabelV1Output.StatusEnum': DeleteLabelV1Output.StatusEnum,
+    'DeleteLivePluginCodeAlphaOutput.StatusEnum':
+        DeleteLivePluginCodeAlphaOutput.StatusEnum,
     'DeleteRegulationV1Output.StatusEnum': DeleteRegulationV1Output.StatusEnum,
     'DeleteReverseEtlModelOutput.StatusEnum':
         DeleteReverseEtlModelOutput.StatusEnum,
@@ -1619,9 +1617,6 @@ let typeMap: { [index: string]: any } = {
     CreateDownload200Response: CreateDownload200Response,
     CreateDownloadAlphaInput: CreateDownloadAlphaInput,
     CreateDownloadAlphaOutput: CreateDownloadAlphaOutput,
-    CreateEdgeFunctions200Response: CreateEdgeFunctions200Response,
-    CreateEdgeFunctionsAlphaInput: CreateEdgeFunctionsAlphaInput,
-    CreateEdgeFunctionsAlphaOutput: CreateEdgeFunctionsAlphaOutput,
     CreateFilterForDestination200Response:
         CreateFilterForDestination200Response,
     CreateFilterForDestinationV1Input: CreateFilterForDestinationV1Input,
@@ -1646,6 +1641,9 @@ let typeMap: { [index: string]: any } = {
     CreateLabel201Response: CreateLabel201Response,
     CreateLabelV1Input: CreateLabelV1Input,
     CreateLabelV1Output: CreateLabelV1Output,
+    CreateLivePlugin200Response: CreateLivePlugin200Response,
+    CreateLivePluginAlphaInput: CreateLivePluginAlphaInput,
+    CreateLivePluginAlphaOutput: CreateLivePluginAlphaOutput,
     CreateProfilesWarehouse201Response: CreateProfilesWarehouse201Response,
     CreateProfilesWarehouseAlphaInput: CreateProfilesWarehouseAlphaInput,
     CreateProfilesWarehouseAlphaOutput: CreateProfilesWarehouseAlphaOutput,
@@ -1706,6 +1704,8 @@ let typeMap: { [index: string]: any } = {
     DeleteLabel200Response1: DeleteLabel200Response1,
     DeleteLabelAlphaOutput: DeleteLabelAlphaOutput,
     DeleteLabelV1Output: DeleteLabelV1Output,
+    DeleteLivePluginCode200Response: DeleteLivePluginCode200Response,
+    DeleteLivePluginCodeAlphaOutput: DeleteLivePluginCodeAlphaOutput,
     DeleteRegulation200Response: DeleteRegulation200Response,
     DeleteRegulationV1Output: DeleteRegulationV1Output,
     DeleteReverseEtlModel200Response: DeleteReverseEtlModel200Response,
@@ -1750,14 +1750,11 @@ let typeMap: { [index: string]: any } = {
     DestinationSubscriptionConfiguration: DestinationSubscriptionConfiguration,
     DestinationSubscriptionUpdateInput: DestinationSubscriptionUpdateInput,
     DestinationV1: DestinationV1,
-    DisableEdgeFunctions200Response: DisableEdgeFunctions200Response,
-    DisableEdgeFunctionsAlphaOutput: DisableEdgeFunctionsAlphaOutput,
     Download: Download,
     Echo200Response: Echo200Response,
     Echo200Response1: Echo200Response1,
     EchoAlphaOutput: EchoAlphaOutput,
     EchoV1Output: EchoV1Output,
-    EdgeFunctionsAlpha: EdgeFunctionsAlpha,
     EntityDetails: EntityDetails,
     EventSourceV1: EventSourceV1,
     FQLDefinedPropertyV1: FQLDefinedPropertyV1,
@@ -1767,10 +1764,6 @@ let typeMap: { [index: string]: any } = {
     FunctionDeployment: FunctionDeployment,
     FunctionSettingV1: FunctionSettingV1,
     FunctionV1: FunctionV1,
-    GenerateUploadURLForEdgeFunctions200Response:
-        GenerateUploadURLForEdgeFunctions200Response,
-    GenerateUploadURLForEdgeFunctionsAlphaOutput:
-        GenerateUploadURLForEdgeFunctionsAlphaOutput,
     GetActivationFromAudience200Response: GetActivationFromAudience200Response,
     GetActivationFromAudienceOutput: GetActivationFromAudienceOutput,
     GetAdvancedSyncScheduleFromWarehouse200Response:
@@ -1830,10 +1823,8 @@ let typeMap: { [index: string]: any } = {
     GetFunctionVersionAlphaOutput: GetFunctionVersionAlphaOutput,
     GetInsertFunctionInstance200Response: GetInsertFunctionInstance200Response,
     GetInsertFunctionInstanceAlphaOutput: GetInsertFunctionInstanceAlphaOutput,
-    GetLatestFromEdgeFunctions200Response:
-        GetLatestFromEdgeFunctions200Response,
-    GetLatestFromEdgeFunctionsAlphaOutput:
-        GetLatestFromEdgeFunctionsAlphaOutput,
+    GetLatestFromLivePlugins200Response: GetLatestFromLivePlugins200Response,
+    GetLatestFromLivePluginsAlphaOutput: GetLatestFromLivePluginsAlphaOutput,
     GetMessagingSubscriptionFailureResponse:
         GetMessagingSubscriptionFailureResponse,
     GetMessagingSubscriptionSuccessResponse:
@@ -2035,6 +2026,7 @@ let typeMap: { [index: string]: any } = {
     ListWarehousesV1Output: ListWarehousesV1Output,
     ListWorkspaceRegulations200Response: ListWorkspaceRegulations200Response,
     ListWorkspaceRegulationsV1Output: ListWorkspaceRegulationsV1Output,
+    LivePluginsAlpha: LivePluginsAlpha,
     LogosBeta: LogosBeta,
     MessageSubscriptionResponse: MessageSubscriptionResponse,
     MessageSubscriptionResponseError: MessageSubscriptionResponseError,

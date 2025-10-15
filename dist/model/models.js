@@ -112,9 +112,6 @@ __exportStar(require("./createDestinationV1Output"), exports);
 __exportStar(require("./createDownload200Response"), exports);
 __exportStar(require("./createDownloadAlphaInput"), exports);
 __exportStar(require("./createDownloadAlphaOutput"), exports);
-__exportStar(require("./createEdgeFunctions200Response"), exports);
-__exportStar(require("./createEdgeFunctionsAlphaInput"), exports);
-__exportStar(require("./createEdgeFunctionsAlphaOutput"), exports);
 __exportStar(require("./createFilterForDestination200Response"), exports);
 __exportStar(require("./createFilterForDestinationV1Input"), exports);
 __exportStar(require("./createFilterForDestinationV1Output"), exports);
@@ -135,6 +132,9 @@ __exportStar(require("./createInvitesV1Output"), exports);
 __exportStar(require("./createLabel201Response"), exports);
 __exportStar(require("./createLabelV1Input"), exports);
 __exportStar(require("./createLabelV1Output"), exports);
+__exportStar(require("./createLivePlugin200Response"), exports);
+__exportStar(require("./createLivePluginAlphaInput"), exports);
+__exportStar(require("./createLivePluginAlphaOutput"), exports);
 __exportStar(require("./createProfilesWarehouse201Response"), exports);
 __exportStar(require("./createProfilesWarehouseAlphaInput"), exports);
 __exportStar(require("./createProfilesWarehouseAlphaOutput"), exports);
@@ -191,6 +191,8 @@ __exportStar(require("./deleteLabel200Response"), exports);
 __exportStar(require("./deleteLabel200Response1"), exports);
 __exportStar(require("./deleteLabelAlphaOutput"), exports);
 __exportStar(require("./deleteLabelV1Output"), exports);
+__exportStar(require("./deleteLivePluginCode200Response"), exports);
+__exportStar(require("./deleteLivePluginCodeAlphaOutput"), exports);
 __exportStar(require("./deleteRegulation200Response"), exports);
 __exportStar(require("./deleteRegulationV1Output"), exports);
 __exportStar(require("./deleteReverseEtlModel200Response"), exports);
@@ -233,14 +235,11 @@ __exportStar(require("./destinationSubscription"), exports);
 __exportStar(require("./destinationSubscriptionConfiguration"), exports);
 __exportStar(require("./destinationSubscriptionUpdateInput"), exports);
 __exportStar(require("./destinationV1"), exports);
-__exportStar(require("./disableEdgeFunctions200Response"), exports);
-__exportStar(require("./disableEdgeFunctionsAlphaOutput"), exports);
 __exportStar(require("./download"), exports);
 __exportStar(require("./echo200Response"), exports);
 __exportStar(require("./echo200Response1"), exports);
 __exportStar(require("./echoAlphaOutput"), exports);
 __exportStar(require("./echoV1Output"), exports);
-__exportStar(require("./edgeFunctionsAlpha"), exports);
 __exportStar(require("./entityDetails"), exports);
 __exportStar(require("./eventSourceV1"), exports);
 __exportStar(require("./fQLDefinedPropertyV1"), exports);
@@ -250,8 +249,6 @@ __exportStar(require("./forceExecuteAudienceRunAlphaOutput"), exports);
 __exportStar(require("./functionDeployment"), exports);
 __exportStar(require("./functionSettingV1"), exports);
 __exportStar(require("./functionV1"), exports);
-__exportStar(require("./generateUploadURLForEdgeFunctions200Response"), exports);
-__exportStar(require("./generateUploadURLForEdgeFunctionsAlphaOutput"), exports);
 __exportStar(require("./getActivationFromAudience200Response"), exports);
 __exportStar(require("./getActivationFromAudienceOutput"), exports);
 __exportStar(require("./getAdvancedSyncScheduleFromWarehouse200Response"), exports);
@@ -299,8 +296,8 @@ __exportStar(require("./getFunctionVersion200Response"), exports);
 __exportStar(require("./getFunctionVersionAlphaOutput"), exports);
 __exportStar(require("./getInsertFunctionInstance200Response"), exports);
 __exportStar(require("./getInsertFunctionInstanceAlphaOutput"), exports);
-__exportStar(require("./getLatestFromEdgeFunctions200Response"), exports);
-__exportStar(require("./getLatestFromEdgeFunctionsAlphaOutput"), exports);
+__exportStar(require("./getLatestFromLivePlugins200Response"), exports);
+__exportStar(require("./getLatestFromLivePluginsAlphaOutput"), exports);
 __exportStar(require("./getMessagingSubscriptionFailureResponse"), exports);
 __exportStar(require("./getMessagingSubscriptionSuccessResponse"), exports);
 __exportStar(require("./getRegulation200Response"), exports);
@@ -462,6 +459,7 @@ __exportStar(require("./listWarehouses200Response"), exports);
 __exportStar(require("./listWarehousesV1Output"), exports);
 __exportStar(require("./listWorkspaceRegulations200Response"), exports);
 __exportStar(require("./listWorkspaceRegulationsV1Output"), exports);
+__exportStar(require("./livePluginsAlpha"), exports);
 __exportStar(require("./logosBeta"), exports);
 __exportStar(require("./messageSubscriptionResponse"), exports);
 __exportStar(require("./messageSubscriptionResponseError"), exports);
@@ -765,9 +763,6 @@ var createDestinationV1Output_1 = require("./createDestinationV1Output");
 var createDownload200Response_1 = require("./createDownload200Response");
 var createDownloadAlphaInput_1 = require("./createDownloadAlphaInput");
 var createDownloadAlphaOutput_1 = require("./createDownloadAlphaOutput");
-var createEdgeFunctions200Response_1 = require("./createEdgeFunctions200Response");
-var createEdgeFunctionsAlphaInput_1 = require("./createEdgeFunctionsAlphaInput");
-var createEdgeFunctionsAlphaOutput_1 = require("./createEdgeFunctionsAlphaOutput");
 var createFilterForDestination200Response_1 = require("./createFilterForDestination200Response");
 var createFilterForDestinationV1Input_1 = require("./createFilterForDestinationV1Input");
 var createFilterForDestinationV1Output_1 = require("./createFilterForDestinationV1Output");
@@ -788,6 +783,9 @@ var createInvitesV1Output_1 = require("./createInvitesV1Output");
 var createLabel201Response_1 = require("./createLabel201Response");
 var createLabelV1Input_1 = require("./createLabelV1Input");
 var createLabelV1Output_1 = require("./createLabelV1Output");
+var createLivePlugin200Response_1 = require("./createLivePlugin200Response");
+var createLivePluginAlphaInput_1 = require("./createLivePluginAlphaInput");
+var createLivePluginAlphaOutput_1 = require("./createLivePluginAlphaOutput");
 var createProfilesWarehouse201Response_1 = require("./createProfilesWarehouse201Response");
 var createProfilesWarehouseAlphaInput_1 = require("./createProfilesWarehouseAlphaInput");
 var createProfilesWarehouseAlphaOutput_1 = require("./createProfilesWarehouseAlphaOutput");
@@ -844,6 +842,8 @@ var deleteLabel200Response_1 = require("./deleteLabel200Response");
 var deleteLabel200Response1_1 = require("./deleteLabel200Response1");
 var deleteLabelAlphaOutput_1 = require("./deleteLabelAlphaOutput");
 var deleteLabelV1Output_1 = require("./deleteLabelV1Output");
+var deleteLivePluginCode200Response_1 = require("./deleteLivePluginCode200Response");
+var deleteLivePluginCodeAlphaOutput_1 = require("./deleteLivePluginCodeAlphaOutput");
 var deleteRegulation200Response_1 = require("./deleteRegulation200Response");
 var deleteRegulationV1Output_1 = require("./deleteRegulationV1Output");
 var deleteReverseEtlModel200Response_1 = require("./deleteReverseEtlModel200Response");
@@ -886,14 +886,11 @@ var destinationSubscription_1 = require("./destinationSubscription");
 var destinationSubscriptionConfiguration_1 = require("./destinationSubscriptionConfiguration");
 var destinationSubscriptionUpdateInput_1 = require("./destinationSubscriptionUpdateInput");
 var destinationV1_1 = require("./destinationV1");
-var disableEdgeFunctions200Response_1 = require("./disableEdgeFunctions200Response");
-var disableEdgeFunctionsAlphaOutput_1 = require("./disableEdgeFunctionsAlphaOutput");
 var download_1 = require("./download");
 var echo200Response_1 = require("./echo200Response");
 var echo200Response1_1 = require("./echo200Response1");
 var echoAlphaOutput_1 = require("./echoAlphaOutput");
 var echoV1Output_1 = require("./echoV1Output");
-var edgeFunctionsAlpha_1 = require("./edgeFunctionsAlpha");
 var entityDetails_1 = require("./entityDetails");
 var eventSourceV1_1 = require("./eventSourceV1");
 var fQLDefinedPropertyV1_1 = require("./fQLDefinedPropertyV1");
@@ -903,8 +900,6 @@ var forceExecuteAudienceRunAlphaOutput_1 = require("./forceExecuteAudienceRunAlp
 var functionDeployment_1 = require("./functionDeployment");
 var functionSettingV1_1 = require("./functionSettingV1");
 var functionV1_1 = require("./functionV1");
-var generateUploadURLForEdgeFunctions200Response_1 = require("./generateUploadURLForEdgeFunctions200Response");
-var generateUploadURLForEdgeFunctionsAlphaOutput_1 = require("./generateUploadURLForEdgeFunctionsAlphaOutput");
 var getActivationFromAudience200Response_1 = require("./getActivationFromAudience200Response");
 var getActivationFromAudienceOutput_1 = require("./getActivationFromAudienceOutput");
 var getAdvancedSyncScheduleFromWarehouse200Response_1 = require("./getAdvancedSyncScheduleFromWarehouse200Response");
@@ -952,8 +947,8 @@ var getFunctionVersion200Response_1 = require("./getFunctionVersion200Response")
 var getFunctionVersionAlphaOutput_1 = require("./getFunctionVersionAlphaOutput");
 var getInsertFunctionInstance200Response_1 = require("./getInsertFunctionInstance200Response");
 var getInsertFunctionInstanceAlphaOutput_1 = require("./getInsertFunctionInstanceAlphaOutput");
-var getLatestFromEdgeFunctions200Response_1 = require("./getLatestFromEdgeFunctions200Response");
-var getLatestFromEdgeFunctionsAlphaOutput_1 = require("./getLatestFromEdgeFunctionsAlphaOutput");
+var getLatestFromLivePlugins200Response_1 = require("./getLatestFromLivePlugins200Response");
+var getLatestFromLivePluginsAlphaOutput_1 = require("./getLatestFromLivePluginsAlphaOutput");
 var getMessagingSubscriptionFailureResponse_1 = require("./getMessagingSubscriptionFailureResponse");
 var getMessagingSubscriptionSuccessResponse_1 = require("./getMessagingSubscriptionSuccessResponse");
 var getRegulation200Response_1 = require("./getRegulation200Response");
@@ -1115,6 +1110,7 @@ var listWarehouses200Response_1 = require("./listWarehouses200Response");
 var listWarehousesV1Output_1 = require("./listWarehousesV1Output");
 var listWorkspaceRegulations200Response_1 = require("./listWorkspaceRegulations200Response");
 var listWorkspaceRegulationsV1Output_1 = require("./listWorkspaceRegulationsV1Output");
+var livePluginsAlpha_1 = require("./livePluginsAlpha");
 var logosBeta_1 = require("./logosBeta");
 var messageSubscriptionResponse_1 = require("./messageSubscriptionResponse");
 var messageSubscriptionResponseError_1 = require("./messageSubscriptionResponseError");
@@ -1362,6 +1358,7 @@ var enumsMap = {
     'DeleteInvitesV1Output.StatusEnum': deleteInvitesV1Output_1.DeleteInvitesV1Output.StatusEnum,
     'DeleteLabelAlphaOutput.StatusEnum': deleteLabelAlphaOutput_1.DeleteLabelAlphaOutput.StatusEnum,
     'DeleteLabelV1Output.StatusEnum': deleteLabelV1Output_1.DeleteLabelV1Output.StatusEnum,
+    'DeleteLivePluginCodeAlphaOutput.StatusEnum': deleteLivePluginCodeAlphaOutput_1.DeleteLivePluginCodeAlphaOutput.StatusEnum,
     'DeleteRegulationV1Output.StatusEnum': deleteRegulationV1Output_1.DeleteRegulationV1Output.StatusEnum,
     'DeleteReverseEtlModelOutput.StatusEnum': deleteReverseEtlModelOutput_1.DeleteReverseEtlModelOutput.StatusEnum,
     'DeleteSourceAlphaOutput.StatusEnum': deleteSourceAlphaOutput_1.DeleteSourceAlphaOutput.StatusEnum,
@@ -1537,9 +1534,6 @@ var typeMap = {
     CreateDownload200Response: createDownload200Response_1.CreateDownload200Response,
     CreateDownloadAlphaInput: createDownloadAlphaInput_1.CreateDownloadAlphaInput,
     CreateDownloadAlphaOutput: createDownloadAlphaOutput_1.CreateDownloadAlphaOutput,
-    CreateEdgeFunctions200Response: createEdgeFunctions200Response_1.CreateEdgeFunctions200Response,
-    CreateEdgeFunctionsAlphaInput: createEdgeFunctionsAlphaInput_1.CreateEdgeFunctionsAlphaInput,
-    CreateEdgeFunctionsAlphaOutput: createEdgeFunctionsAlphaOutput_1.CreateEdgeFunctionsAlphaOutput,
     CreateFilterForDestination200Response: createFilterForDestination200Response_1.CreateFilterForDestination200Response,
     CreateFilterForDestinationV1Input: createFilterForDestinationV1Input_1.CreateFilterForDestinationV1Input,
     CreateFilterForDestinationV1Output: createFilterForDestinationV1Output_1.CreateFilterForDestinationV1Output,
@@ -1560,6 +1554,9 @@ var typeMap = {
     CreateLabel201Response: createLabel201Response_1.CreateLabel201Response,
     CreateLabelV1Input: createLabelV1Input_1.CreateLabelV1Input,
     CreateLabelV1Output: createLabelV1Output_1.CreateLabelV1Output,
+    CreateLivePlugin200Response: createLivePlugin200Response_1.CreateLivePlugin200Response,
+    CreateLivePluginAlphaInput: createLivePluginAlphaInput_1.CreateLivePluginAlphaInput,
+    CreateLivePluginAlphaOutput: createLivePluginAlphaOutput_1.CreateLivePluginAlphaOutput,
     CreateProfilesWarehouse201Response: createProfilesWarehouse201Response_1.CreateProfilesWarehouse201Response,
     CreateProfilesWarehouseAlphaInput: createProfilesWarehouseAlphaInput_1.CreateProfilesWarehouseAlphaInput,
     CreateProfilesWarehouseAlphaOutput: createProfilesWarehouseAlphaOutput_1.CreateProfilesWarehouseAlphaOutput,
@@ -1616,6 +1613,8 @@ var typeMap = {
     DeleteLabel200Response1: deleteLabel200Response1_1.DeleteLabel200Response1,
     DeleteLabelAlphaOutput: deleteLabelAlphaOutput_1.DeleteLabelAlphaOutput,
     DeleteLabelV1Output: deleteLabelV1Output_1.DeleteLabelV1Output,
+    DeleteLivePluginCode200Response: deleteLivePluginCode200Response_1.DeleteLivePluginCode200Response,
+    DeleteLivePluginCodeAlphaOutput: deleteLivePluginCodeAlphaOutput_1.DeleteLivePluginCodeAlphaOutput,
     DeleteRegulation200Response: deleteRegulation200Response_1.DeleteRegulation200Response,
     DeleteRegulationV1Output: deleteRegulationV1Output_1.DeleteRegulationV1Output,
     DeleteReverseEtlModel200Response: deleteReverseEtlModel200Response_1.DeleteReverseEtlModel200Response,
@@ -1658,14 +1657,11 @@ var typeMap = {
     DestinationSubscriptionConfiguration: destinationSubscriptionConfiguration_1.DestinationSubscriptionConfiguration,
     DestinationSubscriptionUpdateInput: destinationSubscriptionUpdateInput_1.DestinationSubscriptionUpdateInput,
     DestinationV1: destinationV1_1.DestinationV1,
-    DisableEdgeFunctions200Response: disableEdgeFunctions200Response_1.DisableEdgeFunctions200Response,
-    DisableEdgeFunctionsAlphaOutput: disableEdgeFunctionsAlphaOutput_1.DisableEdgeFunctionsAlphaOutput,
     Download: download_1.Download,
     Echo200Response: echo200Response_1.Echo200Response,
     Echo200Response1: echo200Response1_1.Echo200Response1,
     EchoAlphaOutput: echoAlphaOutput_1.EchoAlphaOutput,
     EchoV1Output: echoV1Output_1.EchoV1Output,
-    EdgeFunctionsAlpha: edgeFunctionsAlpha_1.EdgeFunctionsAlpha,
     EntityDetails: entityDetails_1.EntityDetails,
     EventSourceV1: eventSourceV1_1.EventSourceV1,
     FQLDefinedPropertyV1: fQLDefinedPropertyV1_1.FQLDefinedPropertyV1,
@@ -1675,8 +1671,6 @@ var typeMap = {
     FunctionDeployment: functionDeployment_1.FunctionDeployment,
     FunctionSettingV1: functionSettingV1_1.FunctionSettingV1,
     FunctionV1: functionV1_1.FunctionV1,
-    GenerateUploadURLForEdgeFunctions200Response: generateUploadURLForEdgeFunctions200Response_1.GenerateUploadURLForEdgeFunctions200Response,
-    GenerateUploadURLForEdgeFunctionsAlphaOutput: generateUploadURLForEdgeFunctionsAlphaOutput_1.GenerateUploadURLForEdgeFunctionsAlphaOutput,
     GetActivationFromAudience200Response: getActivationFromAudience200Response_1.GetActivationFromAudience200Response,
     GetActivationFromAudienceOutput: getActivationFromAudienceOutput_1.GetActivationFromAudienceOutput,
     GetAdvancedSyncScheduleFromWarehouse200Response: getAdvancedSyncScheduleFromWarehouse200Response_1.GetAdvancedSyncScheduleFromWarehouse200Response,
@@ -1724,8 +1718,8 @@ var typeMap = {
     GetFunctionVersionAlphaOutput: getFunctionVersionAlphaOutput_1.GetFunctionVersionAlphaOutput,
     GetInsertFunctionInstance200Response: getInsertFunctionInstance200Response_1.GetInsertFunctionInstance200Response,
     GetInsertFunctionInstanceAlphaOutput: getInsertFunctionInstanceAlphaOutput_1.GetInsertFunctionInstanceAlphaOutput,
-    GetLatestFromEdgeFunctions200Response: getLatestFromEdgeFunctions200Response_1.GetLatestFromEdgeFunctions200Response,
-    GetLatestFromEdgeFunctionsAlphaOutput: getLatestFromEdgeFunctionsAlphaOutput_1.GetLatestFromEdgeFunctionsAlphaOutput,
+    GetLatestFromLivePlugins200Response: getLatestFromLivePlugins200Response_1.GetLatestFromLivePlugins200Response,
+    GetLatestFromLivePluginsAlphaOutput: getLatestFromLivePluginsAlphaOutput_1.GetLatestFromLivePluginsAlphaOutput,
     GetMessagingSubscriptionFailureResponse: getMessagingSubscriptionFailureResponse_1.GetMessagingSubscriptionFailureResponse,
     GetMessagingSubscriptionSuccessResponse: getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse,
     GetRegulation200Response: getRegulation200Response_1.GetRegulation200Response,
@@ -1887,6 +1881,7 @@ var typeMap = {
     ListWarehousesV1Output: listWarehousesV1Output_1.ListWarehousesV1Output,
     ListWorkspaceRegulations200Response: listWorkspaceRegulations200Response_1.ListWorkspaceRegulations200Response,
     ListWorkspaceRegulationsV1Output: listWorkspaceRegulationsV1Output_1.ListWorkspaceRegulationsV1Output,
+    LivePluginsAlpha: livePluginsAlpha_1.LivePluginsAlpha,
     LogosBeta: logosBeta_1.LogosBeta,
     MessageSubscriptionResponse: messageSubscriptionResponse_1.MessageSubscriptionResponse,
     MessageSubscriptionResponseError: messageSubscriptionResponseError_1.MessageSubscriptionResponseError,
