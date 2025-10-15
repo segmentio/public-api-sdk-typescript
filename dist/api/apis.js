@@ -90,8 +90,6 @@ __exportStar(require("./destinationFiltersApi"), exports);
 var destinationFiltersApi_1 = require("./destinationFiltersApi");
 __exportStar(require("./destinationsApi"), exports);
 var destinationsApi_1 = require("./destinationsApi");
-__exportStar(require("./edgeFunctionsApi"), exports);
-var edgeFunctionsApi_1 = require("./edgeFunctionsApi");
 __exportStar(require("./eventsApi"), exports);
 var eventsApi_1 = require("./eventsApi");
 __exportStar(require("./functionsApi"), exports);
@@ -104,6 +102,8 @@ __exportStar(require("./iAMUsersApi"), exports);
 var iAMUsersApi_1 = require("./iAMUsersApi");
 __exportStar(require("./labelsApi"), exports);
 var labelsApi_1 = require("./labelsApi");
+__exportStar(require("./livePluginsApi"), exports);
+var livePluginsApi_1 = require("./livePluginsApi");
 __exportStar(require("./monthlyTrackedUsersApi"), exports);
 var monthlyTrackedUsersApi_1 = require("./monthlyTrackedUsersApi");
 __exportStar(require("./profilesSyncApi"), exports);
@@ -154,13 +154,13 @@ exports.APIS = [
     deliveryOverviewApi_1.DeliveryOverviewApi,
     destinationFiltersApi_1.DestinationFiltersApi,
     destinationsApi_1.DestinationsApi,
-    edgeFunctionsApi_1.EdgeFunctionsApi,
     eventsApi_1.EventsApi,
     functionsApi_1.FunctionsApi,
     iAMGroupsApi_1.IAMGroupsApi,
     iAMRolesApi_1.IAMRolesApi,
     iAMUsersApi_1.IAMUsersApi,
     labelsApi_1.LabelsApi,
+    livePluginsApi_1.LivePluginsApi,
     monthlyTrackedUsersApi_1.MonthlyTrackedUsersApi,
     profilesSyncApi_1.ProfilesSyncApi,
     reverseETLApi_1.ReverseETLApi,
@@ -183,7 +183,7 @@ function configureApis(token, headers) {
         deletionAndSuppresion: new deletionAndSuppressionApi_1.DeletionAndSuppressionApi(),
         destinationFilters: new destinationFiltersApi_1.DestinationFiltersApi(),
         destinations: new destinationsApi_1.DestinationsApi(),
-        edgeFunctions: new edgeFunctionsApi_1.EdgeFunctionsApi(),
+        livePlugins: new livePluginsApi_1.LivePluginsApi(),
         events: new eventsApi_1.EventsApi(),
         functions: new functionsApi_1.FunctionsApi(),
         iamGroups: new iAMGroupsApi_1.IAMGroupsApi(),
@@ -203,7 +203,7 @@ function configureApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 60.1.1 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 61.0.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -220,7 +220,7 @@ function configureEuApis(token, headers) {
         deletionAndSuppresion: new deletionAndSuppressionApi_1.DeletionAndSuppressionApi(basePath),
         destinationFilters: new destinationFiltersApi_1.DestinationFiltersApi(basePath),
         destinations: new destinationsApi_1.DestinationsApi(basePath),
-        edgeFunctions: new edgeFunctionsApi_1.EdgeFunctionsApi(basePath),
+        livePlugins: new livePluginsApi_1.LivePluginsApi(basePath),
         events: new eventsApi_1.EventsApi(basePath),
         functions: new functionsApi_1.FunctionsApi(basePath),
         iamGroups: new iAMGroupsApi_1.IAMGroupsApi(basePath),
@@ -240,7 +240,7 @@ function configureEuApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 60.1.1 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 61.0.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
