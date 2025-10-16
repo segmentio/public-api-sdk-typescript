@@ -22,7 +22,7 @@ export class AudienceSchedule {
      */
     'id': string;
     /**
-     * Strategy of the audience schedule (manual, periodic or specific days).
+     * Strategy of the audience schedule (periodic or specific days).
      */
     'strategy': AudienceSchedule.StrategyEnum;
     'config'?: Config | null;
@@ -67,7 +67,6 @@ export class AudienceSchedule {
 
 export namespace AudienceSchedule {
     export enum StrategyEnum {
-        MANUAL = <any>'MANUAL',
         PERIODIC = <any>'PERIODIC',
         SPECIFIC_DAYS = <any>'SPECIFIC_DAYS',
     }
