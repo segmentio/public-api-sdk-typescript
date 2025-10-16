@@ -18,7 +18,7 @@ import { Config } from './config';
  */
 export class AddAudienceScheduleToAudienceAlphaInput {
     /**
-     * Strategy of the audience schedule (manual, periodic, or specific days).
+     * Strategy of the audience schedule (periodic or specific days).
      */
     'strategy': AddAudienceScheduleToAudienceAlphaInput.StrategyEnum;
     'config'?: Config | null;
@@ -49,7 +49,6 @@ export class AddAudienceScheduleToAudienceAlphaInput {
 
 export namespace AddAudienceScheduleToAudienceAlphaInput {
     export enum StrategyEnum {
-        MANUAL = <any>'MANUAL',
         PERIODIC = <any>'PERIODIC',
         SPECIFIC_DAYS = <any>'SPECIFIC_DAYS',
     }
