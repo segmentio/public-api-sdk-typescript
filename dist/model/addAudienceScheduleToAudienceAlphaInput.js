@@ -26,7 +26,6 @@ exports.AddAudienceScheduleToAudienceAlphaInput = AddAudienceScheduleToAudienceA
 (function (AddAudienceScheduleToAudienceAlphaInput) {
     var StrategyEnum;
     (function (StrategyEnum) {
-        StrategyEnum[StrategyEnum["MANUAL"] = 'MANUAL'] = "MANUAL";
         StrategyEnum[StrategyEnum["PERIODIC"] = 'PERIODIC'] = "PERIODIC";
         StrategyEnum[StrategyEnum["SPECIFIC_DAYS"] = 'SPECIFIC_DAYS'] = "SPECIFIC_DAYS";
     })(StrategyEnum = AddAudienceScheduleToAudienceAlphaInput.StrategyEnum || (AddAudienceScheduleToAudienceAlphaInput.StrategyEnum = {}));
