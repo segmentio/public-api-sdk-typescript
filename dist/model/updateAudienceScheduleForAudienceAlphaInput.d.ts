@@ -1,7 +1,7 @@
 import { Config } from './config';
 export declare class UpdateAudienceScheduleForAudienceAlphaInput {
     'strategy': UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum;
-    'config'?: Config | null;
+    'config': Config | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

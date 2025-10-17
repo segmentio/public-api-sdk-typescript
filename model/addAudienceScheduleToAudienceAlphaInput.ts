@@ -21,7 +21,7 @@ export class AddAudienceScheduleToAudienceAlphaInput {
      * Strategy of the audience schedule (periodic or specific days).
      */
     'strategy': AddAudienceScheduleToAudienceAlphaInput.StrategyEnum;
-    'config'?: Config | null;
+    'config': Config | null;
 
     static discriminator: string | undefined = undefined;
 

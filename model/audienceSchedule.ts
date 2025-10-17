@@ -25,7 +25,7 @@ export class AudienceSchedule {
      * Strategy of the audience schedule (periodic or specific days).
      */
     'strategy': AudienceSchedule.StrategyEnum;
-    'config'?: Config | null;
+    'config': Config | null;
     /**
      * The next scheduled execution time (RFC3339).
      */

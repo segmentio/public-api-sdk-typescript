@@ -2,7 +2,7 @@ import { Config } from './config';
 export declare class AudienceSchedule {
     'id': string;
     'strategy': AudienceSchedule.StrategyEnum;
-    'config'?: Config | null;
+    'config': Config | null;
     'nextExecution'?: string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
