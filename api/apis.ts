@@ -171,7 +171,7 @@ export function configureApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 61.0.2 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 61.1.3 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -218,7 +218,7 @@ export function configureEuApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 61.0.2 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 61.1.3 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
