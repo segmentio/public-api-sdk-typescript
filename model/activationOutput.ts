@@ -51,7 +51,7 @@ export class ActivationOutput {
      */
     'activationName': string;
     'personalization': PersonalizationInput;
-    'destinationMapping': DestinationSubscriptionConfiguration;
+    'destinationMapping'?: DestinationSubscriptionConfiguration;
     /**
      * Whether to perform a resync after creation of the activation.
      */

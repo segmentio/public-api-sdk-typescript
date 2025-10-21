@@ -35,7 +35,7 @@ export class AddActivationToAudienceAlphaInput {
      */
     'activationName': string;
     'personalization': PersonalizationInput;
-    'destinationMapping': DestinationSubscriptionConfiguration;
+    'destinationMapping'?: DestinationSubscriptionConfiguration;
 
     static discriminator: string | undefined = undefined;
 
