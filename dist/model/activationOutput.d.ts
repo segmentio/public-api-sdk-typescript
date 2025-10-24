@@ -10,7 +10,7 @@ export declare class ActivationOutput {
     'activationType': string;
     'activationName': string;
     'personalization': PersonalizationInput;
-    'destinationMapping': DestinationSubscriptionConfiguration;
+    'destinationMapping'?: DestinationSubscriptionConfiguration;
     'performResync'?: boolean;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
