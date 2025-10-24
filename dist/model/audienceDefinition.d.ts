@@ -1,5 +1,5 @@
 export declare class AudienceDefinition {
-    'targetEntity'?: string;
+    'targetEntity'?: string | null;
     'query': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
