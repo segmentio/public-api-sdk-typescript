@@ -344,6 +344,7 @@ __exportStar(require("./handleWebhookInput"), exports);
 __exportStar(require("./handleWebhookOutput"), exports);
 __exportStar(require("./hashPropertiesConfiguration"), exports);
 __exportStar(require("./iDSyncConfig"), exports);
+__exportStar(require("./iDSyncConfigurationInput"), exports);
 __exportStar(require("./iDSyncOptions"), exports);
 __exportStar(require("./identifySourceSettingsV1"), exports);
 __exportStar(require("./insertFunctionInstanceAlpha"), exports);
@@ -995,6 +996,7 @@ var handleWebhookInput_1 = require("./handleWebhookInput");
 var handleWebhookOutput_1 = require("./handleWebhookOutput");
 var hashPropertiesConfiguration_1 = require("./hashPropertiesConfiguration");
 var iDSyncConfig_1 = require("./iDSyncConfig");
+var iDSyncConfigurationInput_1 = require("./iDSyncConfigurationInput");
 var iDSyncOptions_1 = require("./iDSyncOptions");
 var identifySourceSettingsV1_1 = require("./identifySourceSettingsV1");
 var insertFunctionInstanceAlpha_1 = require("./insertFunctionInstanceAlpha");
@@ -1766,6 +1768,7 @@ var typeMap = {
     HandleWebhookOutput: handleWebhookOutput_1.HandleWebhookOutput,
     HashPropertiesConfiguration: hashPropertiesConfiguration_1.HashPropertiesConfiguration,
     IDSyncConfig: iDSyncConfig_1.IDSyncConfig,
+    IDSyncConfigurationInput: iDSyncConfigurationInput_1.IDSyncConfigurationInput,
     IDSyncOptions: iDSyncOptions_1.IDSyncOptions,
     IdentifySourceSettingsV1: identifySourceSettingsV1_1.IdentifySourceSettingsV1,
     InsertFunctionInstanceAlpha: insertFunctionInstanceAlpha_1.InsertFunctionInstanceAlpha,

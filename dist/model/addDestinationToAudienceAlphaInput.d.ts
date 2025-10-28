@@ -1,7 +1,8 @@
 import { DestinationInput } from './destinationInput';
+import { IDSyncConfigurationInput } from './iDSyncConfigurationInput';
 export declare class AddDestinationToAudienceAlphaInput {
     'destination': DestinationInput;
-    'idSyncConfiguration'?: object;
+    'idSyncConfiguration'?: Array<IDSyncConfigurationInput>;
     'connectionSettings'?: any | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

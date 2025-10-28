@@ -48,7 +48,7 @@ export class SimpleDestination {
      */
     'destinationId': string;
     'metadata'?: Metadata;
-    'idSync'?: IDSyncOptions;
+    'idSyncConfiguration'?: IDSyncOptions;
 
     static discriminator: string | undefined = undefined;
 
@@ -103,8 +103,8 @@ export class SimpleDestination {
             type: 'Metadata',
         },
         {
-            name: 'idSync',
-            baseName: 'idSync',
+            name: 'idSyncConfiguration',
+            baseName: 'idSyncConfiguration',
             type: 'IDSyncOptions',
         },
     ];

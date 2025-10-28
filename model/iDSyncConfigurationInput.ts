@@ -11,22 +11,19 @@
  */
 
 import { RequestFile } from './models';
-import { DestinationInput } from './destinationInput';
-import { IDSyncConfigurationInput } from './iDSyncConfigurationInput';
 
 /**
- * Input to Add a Destination into an Audience.
+ * The identifier sync configuration input.
  */
-export class AddDestinationToAudienceAlphaInput {
-    'destination': DestinationInput;
+export class IDSyncConfigurationInput {
     /**
-     * Identifier sync configuration - array of external IDs to sync with their strategies. Maximum 5 items allowed.
+     * The external id to sync, for example \"user_id\" or \"email\".
      */
-    'idSyncConfiguration'?: Array<IDSyncConfigurationInput>;
+    'externalId': string;
     /**
-     * The settings that a Destination requires to create audiences on a third-party platform. These settings are Destination-specific and thus are best defined as unknown.
+     * The strategy for syncing this identifier. Valid values: \"first\", \"last\", \"all\".
      */
-    'connectionSettings'?: any | null;
+    'strategy': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -36,23 +33,18 @@ export class AddDestinationToAudienceAlphaInput {
         type: string;
     }> = [
         {
-            name: 'destination',
-            baseName: 'destination',
-            type: 'DestinationInput',
+            name: 'externalId',
+            baseName: 'externalId',
+            type: 'string',
         },
         {
-            name: 'idSyncConfiguration',
-            baseName: 'idSyncConfiguration',
-            type: 'Array<IDSyncConfigurationInput>',
-        },
-        {
-            name: 'connectionSettings',
-            baseName: 'connectionSettings',
-            type: 'any',
+            name: 'strategy',
+            baseName: 'strategy',
+            type: 'string',
         },
     ];
 
     static getAttributeTypeMap() {
-        return AddDestinationToAudienceAlphaInput.attributeTypeMap;
+        return IDSyncConfigurationInput.attributeTypeMap;
     }
 }

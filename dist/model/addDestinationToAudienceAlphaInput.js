@@ -17,7 +17,7 @@ var AddDestinationToAudienceAlphaInput = (function () {
         {
             name: 'idSyncConfiguration',
             baseName: 'idSyncConfiguration',
-            type: 'object',
+            type: 'Array<IDSyncConfigurationInput>',
         },
         {
             name: 'connectionSettings',
