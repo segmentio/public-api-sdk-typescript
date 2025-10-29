@@ -12,7 +12,7 @@ export declare class SimpleDestination {
     };
     'destinationId': string;
     'metadata'?: Metadata;
-    'idSync'?: IDSyncOptions;
+    'idSyncConfiguration'?: IDSyncOptions;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

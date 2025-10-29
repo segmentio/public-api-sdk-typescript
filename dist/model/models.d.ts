@@ -330,6 +330,7 @@ export * from './handleWebhookInput';
 export * from './handleWebhookOutput';
 export * from './hashPropertiesConfiguration';
 export * from './iDSyncConfig';
+export * from './iDSyncConfigurationInput';
 export * from './iDSyncOptions';
 export * from './identifySourceSettingsV1';
 export * from './insertFunctionInstanceAlpha';
