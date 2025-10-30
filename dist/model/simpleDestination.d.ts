@@ -1,4 +1,4 @@
-import { IDSyncOptions } from './iDSyncOptions';
+import { IDSyncConfigurationInput } from './iDSyncConfigurationInput';
 import { Metadata } from './metadata';
 export declare class SimpleDestination {
     'id': string;
@@ -12,7 +12,7 @@ export declare class SimpleDestination {
     };
     'destinationId': string;
     'metadata'?: Metadata;
-    'idSyncConfiguration'?: IDSyncOptions;
+    'idSyncConfiguration'?: Array<IDSyncConfigurationInput>;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

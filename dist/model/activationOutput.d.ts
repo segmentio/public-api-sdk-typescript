@@ -6,7 +6,7 @@ export declare class ActivationOutput {
     'workspaceId': string;
     'spaceId': string;
     'audienceId': string;
-    'destinationConnectionId': string;
+    'connectionId': string;
     'activationType': string;
     'activationName': string;
     'personalization': PersonalizationInput;

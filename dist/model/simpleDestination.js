@@ -57,7 +57,7 @@ var SimpleDestination = (function () {
         {
             name: 'idSyncConfiguration',
             baseName: 'idSyncConfiguration',
-            type: 'IDSyncOptions',
+            type: 'Array<IDSyncConfigurationInput>',
         },
     ];
     return SimpleDestination;
