@@ -35,8 +35,8 @@ var ActivationOutput = (function () {
             type: 'string',
         },
         {
-            name: 'destinationConnectionId',
-            baseName: 'destinationConnectionId',
+            name: 'connectionId',
+            baseName: 'connectionId',
             type: 'string',
         },
         {

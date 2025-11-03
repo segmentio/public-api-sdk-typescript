@@ -39,9 +39,9 @@ export class ActivationOutput {
      */
     'audienceId': string;
     /**
-     * The DESTINATION connection id (formerly integrationInstanceId).
+     * The connection id.
      */
-    'destinationConnectionId': string;
+    'connectionId': string;
     /**
      * Type of activation trigger.
      */
@@ -90,8 +90,8 @@ export class ActivationOutput {
             type: 'string',
         },
         {
-            name: 'destinationConnectionId',
-            baseName: 'destinationConnectionId',
+            name: 'connectionId',
+            baseName: 'connectionId',
             type: 'string',
         },
         {
