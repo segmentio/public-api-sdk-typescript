@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { DestinationInput } from './destinationInput';
+import { IDSyncConfigurationInput } from './iDSyncConfigurationInput';
 
 /**
  * Input to Add a Destination into an Audience.
@@ -19,9 +20,9 @@ import { DestinationInput } from './destinationInput';
 export class AddDestinationToAudienceAlphaInput {
     'destination': DestinationInput;
     /**
-     * The identifier sync configuration input.
+     * Identifier sync configuration - array of external IDs to sync with their strategies. Maximum 5 items allowed.
      */
-    'idSyncConfiguration'?: object;
+    'idSyncConfiguration'?: Array<IDSyncConfigurationInput>;
     /**
      * The settings that a Destination requires to create audiences on a third-party platform. These settings are Destination-specific and thus are best defined as unknown.
      */
@@ -42,7 +43,7 @@ export class AddDestinationToAudienceAlphaInput {
         {
             name: 'idSyncConfiguration',
             baseName: 'idSyncConfiguration',
-            type: 'object',
+            type: 'Array<IDSyncConfigurationInput>',
         },
         {
             name: 'connectionSettings',

@@ -328,8 +328,7 @@ export * from './groupSubscriptionStatusResponse';
 export * from './handleWebhookInput';
 export * from './handleWebhookOutput';
 export * from './hashPropertiesConfiguration';
-export * from './iDSyncConfig';
-export * from './iDSyncOptions';
+export * from './iDSyncConfigurationInput';
 export * from './identifySourceSettingsV1';
 export * from './insertFunctionInstanceAlpha';
 export * from './integrationOptionBeta';
@@ -992,8 +991,7 @@ import { GroupSubscriptionStatusResponse } from './groupSubscriptionStatusRespon
 import { HandleWebhookInput } from './handleWebhookInput';
 import { HandleWebhookOutput } from './handleWebhookOutput';
 import { HashPropertiesConfiguration } from './hashPropertiesConfiguration';
-import { IDSyncConfig } from './iDSyncConfig';
-import { IDSyncOptions } from './iDSyncOptions';
+import { IDSyncConfigurationInput } from './iDSyncConfigurationInput';
 import { IdentifySourceSettingsV1 } from './identifySourceSettingsV1';
 import { InsertFunctionInstanceAlpha } from './insertFunctionInstanceAlpha';
 import { IntegrationOptionBeta } from './integrationOptionBeta';
@@ -1429,7 +1427,6 @@ let enumsMap: { [index: string]: any } = {
         GroupSubscriptionStatusResponse.StatusEnum,
     'HashPropertiesConfiguration.EncodingEnum':
         HashPropertiesConfiguration.EncodingEnum,
-    'IDSyncOptions.TriggerOnEnum': IDSyncOptions.TriggerOnEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum':
         IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
     'ListAudienceConsumersSortInput.FieldEnum':
@@ -1874,8 +1871,7 @@ let typeMap: { [index: string]: any } = {
     HandleWebhookInput: HandleWebhookInput,
     HandleWebhookOutput: HandleWebhookOutput,
     HashPropertiesConfiguration: HashPropertiesConfiguration,
-    IDSyncConfig: IDSyncConfig,
-    IDSyncOptions: IDSyncOptions,
+    IDSyncConfigurationInput: IDSyncConfigurationInput,
     IdentifySourceSettingsV1: IdentifySourceSettingsV1,
     InsertFunctionInstanceAlpha: InsertFunctionInstanceAlpha,
     IntegrationOptionBeta: IntegrationOptionBeta,

@@ -12,15 +12,18 @@
 
 import { RequestFile } from './models';
 
-export class IDSyncConfig {
+/**
+ * The identifier sync configuration input.
+ */
+export class IDSyncConfigurationInput {
     /**
-     * The strategy of the identifier.
+     * The external id to sync, for example \"user_id\" or \"email\".
+     */
+    'externalId': string;
+    /**
+     * The strategy for syncing this identifier. Valid values: \"first\", \"last\", \"all\".
      */
     'strategy': string;
-    /**
-     * The property to map the identifier to.
-     */
-    'mapTo'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -30,18 +33,18 @@ export class IDSyncConfig {
         type: string;
     }> = [
         {
-            name: 'strategy',
-            baseName: 'strategy',
+            name: 'externalId',
+            baseName: 'externalId',
             type: 'string',
         },
         {
-            name: 'mapTo',
-            baseName: 'mapTo',
+            name: 'strategy',
+            baseName: 'strategy',
             type: 'string',
         },
     ];
 
     static getAttributeTypeMap() {
-        return IDSyncConfig.attributeTypeMap;
+        return IDSyncConfigurationInput.attributeTypeMap;
     }
 }

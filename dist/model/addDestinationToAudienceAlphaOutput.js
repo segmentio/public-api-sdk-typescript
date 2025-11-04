@@ -14,6 +14,11 @@ var AddDestinationToAudienceAlphaOutput = (function () {
             baseName: 'connection',
             type: 'Connection',
         },
+        {
+            name: 'idSyncConfiguration',
+            baseName: 'idSyncConfiguration',
+            type: 'Array<IDSyncConfigurationInput>',
+        },
     ];
     return AddDestinationToAudienceAlphaOutput;
 }());

@@ -55,9 +55,9 @@ var SimpleDestination = (function () {
             type: 'Metadata',
         },
         {
-            name: 'idSync',
-            baseName: 'idSync',
-            type: 'IDSyncOptions',
+            name: 'idSyncConfiguration',
+            baseName: 'idSyncConfiguration',
+            type: 'Array<IDSyncConfigurationInput>',
         },
     ];
     return SimpleDestination;

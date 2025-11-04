@@ -12,9 +12,14 @@
 
 import { RequestFile } from './models';
 import { Connection } from './connection';
+import { IDSyncConfigurationInput } from './iDSyncConfigurationInput';
 
 export class AddDestinationToAudienceAlphaOutput {
     'connection': Connection;
+    /**
+     * The id sync configuration for the Destination - array of external ids with their strategies.
+     */
+    'idSyncConfiguration': Array<IDSyncConfigurationInput>;
 
     static discriminator: string | undefined = undefined;
 
@@ -27,6 +32,11 @@ export class AddDestinationToAudienceAlphaOutput {
             name: 'connection',
             baseName: 'connection',
             type: 'Connection',
+        },
+        {
+            name: 'idSyncConfiguration',
+            baseName: 'idSyncConfiguration',
+            type: 'Array<IDSyncConfigurationInput>',
         },
     ];
 

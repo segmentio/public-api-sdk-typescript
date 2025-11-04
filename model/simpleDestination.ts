@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { IDSyncOptions } from './iDSyncOptions';
+import { IDSyncConfigurationInput } from './iDSyncConfigurationInput';
 import { Metadata } from './metadata';
 
 export class SimpleDestination {
@@ -48,7 +48,10 @@ export class SimpleDestination {
      */
     'destinationId': string;
     'metadata'?: Metadata;
-    'idSync'?: IDSyncOptions;
+    /**
+     * ID Sync configuration - array of external IDs with their strategies.
+     */
+    'idSyncConfiguration'?: Array<IDSyncConfigurationInput>;
 
     static discriminator: string | undefined = undefined;
 
@@ -103,9 +106,9 @@ export class SimpleDestination {
             type: 'Metadata',
         },
         {
-            name: 'idSync',
-            baseName: 'idSync',
-            type: 'IDSyncOptions',
+            name: 'idSyncConfiguration',
+            baseName: 'idSyncConfiguration',
+            type: 'Array<IDSyncConfigurationInput>',
         },
     ];
 

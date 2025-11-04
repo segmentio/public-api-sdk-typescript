@@ -343,8 +343,7 @@ __exportStar(require("./groupSubscriptionStatusResponse"), exports);
 __exportStar(require("./handleWebhookInput"), exports);
 __exportStar(require("./handleWebhookOutput"), exports);
 __exportStar(require("./hashPropertiesConfiguration"), exports);
-__exportStar(require("./iDSyncConfig"), exports);
-__exportStar(require("./iDSyncOptions"), exports);
+__exportStar(require("./iDSyncConfigurationInput"), exports);
 __exportStar(require("./identifySourceSettingsV1"), exports);
 __exportStar(require("./insertFunctionInstanceAlpha"), exports);
 __exportStar(require("./integrationOptionBeta"), exports);
@@ -994,8 +993,7 @@ var groupSubscriptionStatusResponse_1 = require("./groupSubscriptionStatusRespon
 var handleWebhookInput_1 = require("./handleWebhookInput");
 var handleWebhookOutput_1 = require("./handleWebhookOutput");
 var hashPropertiesConfiguration_1 = require("./hashPropertiesConfiguration");
-var iDSyncConfig_1 = require("./iDSyncConfig");
-var iDSyncOptions_1 = require("./iDSyncOptions");
+var iDSyncConfigurationInput_1 = require("./iDSyncConfigurationInput");
 var identifySourceSettingsV1_1 = require("./identifySourceSettingsV1");
 var insertFunctionInstanceAlpha_1 = require("./insertFunctionInstanceAlpha");
 var integrationOptionBeta_1 = require("./integrationOptionBeta");
@@ -1392,7 +1390,6 @@ var enumsMap = {
     'GroupSubscriptionStatus.StatusEnum': groupSubscriptionStatus_1.GroupSubscriptionStatus.StatusEnum,
     'GroupSubscriptionStatusResponse.StatusEnum': groupSubscriptionStatusResponse_1.GroupSubscriptionStatusResponse.StatusEnum,
     'HashPropertiesConfiguration.EncodingEnum': hashPropertiesConfiguration_1.HashPropertiesConfiguration.EncodingEnum,
-    'IDSyncOptions.TriggerOnEnum': iDSyncOptions_1.IDSyncOptions.TriggerOnEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum': identifySourceSettingsV1_1.IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
     'ListAudienceConsumersSortInput.FieldEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.FieldEnum,
     'ListAudienceConsumersSortInput.DirectionEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.DirectionEnum,
@@ -1765,8 +1762,7 @@ var typeMap = {
     HandleWebhookInput: handleWebhookInput_1.HandleWebhookInput,
     HandleWebhookOutput: handleWebhookOutput_1.HandleWebhookOutput,
     HashPropertiesConfiguration: hashPropertiesConfiguration_1.HashPropertiesConfiguration,
-    IDSyncConfig: iDSyncConfig_1.IDSyncConfig,
-    IDSyncOptions: iDSyncOptions_1.IDSyncOptions,
+    IDSyncConfigurationInput: iDSyncConfigurationInput_1.IDSyncConfigurationInput,
     IdentifySourceSettingsV1: identifySourceSettingsV1_1.IdentifySourceSettingsV1,
     InsertFunctionInstanceAlpha: insertFunctionInstanceAlpha_1.InsertFunctionInstanceAlpha,
     IntegrationOptionBeta: integrationOptionBeta_1.IntegrationOptionBeta,
