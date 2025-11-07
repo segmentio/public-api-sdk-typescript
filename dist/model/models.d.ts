@@ -420,6 +420,8 @@ export * from './listSpaces200Response';
 export * from './listSpacesAlphaOutput';
 export * from './listSubscriptionsFromDestination200Response';
 export * from './listSubscriptionsFromDestinationAlphaOutput';
+export * from './listSupportedDestinationsFromAudience200Response';
+export * from './listSupportedDestinationsFromAudienceAlphaOutput';
 export * from './listSuppressions200Response';
 export * from './listSuppressionsV1Output';
 export * from './listSyncsFromWarehouse200Response';

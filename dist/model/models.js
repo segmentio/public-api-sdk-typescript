@@ -434,6 +434,8 @@ __exportStar(require("./listSpaces200Response"), exports);
 __exportStar(require("./listSpacesAlphaOutput"), exports);
 __exportStar(require("./listSubscriptionsFromDestination200Response"), exports);
 __exportStar(require("./listSubscriptionsFromDestinationAlphaOutput"), exports);
+__exportStar(require("./listSupportedDestinationsFromAudience200Response"), exports);
+__exportStar(require("./listSupportedDestinationsFromAudienceAlphaOutput"), exports);
 __exportStar(require("./listSuppressions200Response"), exports);
 __exportStar(require("./listSuppressionsV1Output"), exports);
 __exportStar(require("./listSyncsFromWarehouse200Response"), exports);
@@ -1084,6 +1086,8 @@ var listSpaces200Response_1 = require("./listSpaces200Response");
 var listSpacesAlphaOutput_1 = require("./listSpacesAlphaOutput");
 var listSubscriptionsFromDestination200Response_1 = require("./listSubscriptionsFromDestination200Response");
 var listSubscriptionsFromDestinationAlphaOutput_1 = require("./listSubscriptionsFromDestinationAlphaOutput");
+var listSupportedDestinationsFromAudience200Response_1 = require("./listSupportedDestinationsFromAudience200Response");
+var listSupportedDestinationsFromAudienceAlphaOutput_1 = require("./listSupportedDestinationsFromAudienceAlphaOutput");
 var listSuppressions200Response_1 = require("./listSuppressions200Response");
 var listSuppressionsV1Output_1 = require("./listSuppressionsV1Output");
 var listSyncsFromWarehouse200Response_1 = require("./listSyncsFromWarehouse200Response");
@@ -1853,6 +1857,8 @@ var typeMap = {
     ListSpacesAlphaOutput: listSpacesAlphaOutput_1.ListSpacesAlphaOutput,
     ListSubscriptionsFromDestination200Response: listSubscriptionsFromDestination200Response_1.ListSubscriptionsFromDestination200Response,
     ListSubscriptionsFromDestinationAlphaOutput: listSubscriptionsFromDestinationAlphaOutput_1.ListSubscriptionsFromDestinationAlphaOutput,
+    ListSupportedDestinationsFromAudience200Response: listSupportedDestinationsFromAudience200Response_1.ListSupportedDestinationsFromAudience200Response,
+    ListSupportedDestinationsFromAudienceAlphaOutput: listSupportedDestinationsFromAudienceAlphaOutput_1.ListSupportedDestinationsFromAudienceAlphaOutput,
     ListSuppressions200Response: listSuppressions200Response_1.ListSuppressions200Response,
     ListSuppressionsV1Output: listSuppressionsV1Output_1.ListSuppressionsV1Output,
     ListSyncsFromWarehouse200Response: listSyncsFromWarehouse200Response_1.ListSyncsFromWarehouse200Response,
