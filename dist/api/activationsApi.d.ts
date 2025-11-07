@@ -7,6 +7,7 @@ import { AddDestinationToAudienceAlphaInput } from '../model/addDestinationToAud
 import { GetActivationFromAudience200Response } from '../model/getActivationFromAudience200Response';
 import { ListActivationsFromAudience200Response } from '../model/listActivationsFromAudience200Response';
 import { ListDestinationsFromAudience200Response } from '../model/listDestinationsFromAudience200Response';
+import { ListSupportedDestinationsFromAudience200Response } from '../model/listSupportedDestinationsFromAudience200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveActivationFromAudience200Response } from '../model/removeActivationFromAudience200Response';
 import { UpdateActivationForAudience200Response } from '../model/updateActivationForAudience200Response';
@@ -73,6 +74,14 @@ export declare class ActivationsApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: ListDestinationsFromAudience200Response;
+    }>;
+    listSupportedDestinationsFromAudience(spaceId: string, audienceType: string, slug?: string, actionId?: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: ListSupportedDestinationsFromAudience200Response;
     }>;
     removeActivationFromAudience(spaceId: string, audienceId: string, id: string, options?: {
         headers: {

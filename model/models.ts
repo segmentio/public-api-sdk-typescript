@@ -419,6 +419,8 @@ export * from './listSpaces200Response';
 export * from './listSpacesAlphaOutput';
 export * from './listSubscriptionsFromDestination200Response';
 export * from './listSubscriptionsFromDestinationAlphaOutput';
+export * from './listSupportedDestinationsFromAudience200Response';
+export * from './listSupportedDestinationsFromAudienceAlphaOutput';
 export * from './listSuppressions200Response';
 export * from './listSuppressionsV1Output';
 export * from './listSyncsFromWarehouse200Response';
@@ -1082,6 +1084,8 @@ import { ListSpaces200Response } from './listSpaces200Response';
 import { ListSpacesAlphaOutput } from './listSpacesAlphaOutput';
 import { ListSubscriptionsFromDestination200Response } from './listSubscriptionsFromDestination200Response';
 import { ListSubscriptionsFromDestinationAlphaOutput } from './listSubscriptionsFromDestinationAlphaOutput';
+import { ListSupportedDestinationsFromAudience200Response } from './listSupportedDestinationsFromAudience200Response';
+import { ListSupportedDestinationsFromAudienceAlphaOutput } from './listSupportedDestinationsFromAudienceAlphaOutput';
 import { ListSuppressions200Response } from './listSuppressions200Response';
 import { ListSuppressionsV1Output } from './listSuppressionsV1Output';
 import { ListSyncsFromWarehouse200Response } from './listSyncsFromWarehouse200Response';
@@ -1996,6 +2000,10 @@ let typeMap: { [index: string]: any } = {
         ListSubscriptionsFromDestination200Response,
     ListSubscriptionsFromDestinationAlphaOutput:
         ListSubscriptionsFromDestinationAlphaOutput,
+    ListSupportedDestinationsFromAudience200Response:
+        ListSupportedDestinationsFromAudience200Response,
+    ListSupportedDestinationsFromAudienceAlphaOutput:
+        ListSupportedDestinationsFromAudienceAlphaOutput,
     ListSuppressions200Response: ListSuppressions200Response,
     ListSuppressionsV1Output: ListSuppressionsV1Output,
     ListSyncsFromWarehouse200Response: ListSyncsFromWarehouse200Response,
