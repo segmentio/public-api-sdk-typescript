@@ -1,0 +1,15 @@
+import { ListSupportedDestinationsFromAudienceAlphaOutput } from './listSupportedDestinationsFromAudienceAlphaOutput';
+export declare class ListSupportedDestinationsFromAudience200Response {
+    'data'?: ListSupportedDestinationsFromAudienceAlphaOutput;
+    static discriminator: string | undefined;
+    static attributeTypeMap: Array<{
+        name: string;
+        baseName: string;
+        type: string;
+    }>;
+    static getAttributeTypeMap(): {
+        name: string;
+        baseName: string;
+        type: string;
+    }[];
+}

@@ -21,6 +21,7 @@ import { AddDestinationToAudienceAlphaInput } from '../model/addDestinationToAud
 import { GetActivationFromAudience200Response } from '../model/getActivationFromAudience200Response';
 import { ListActivationsFromAudience200Response } from '../model/listActivationsFromAudience200Response';
 import { ListDestinationsFromAudience200Response } from '../model/listDestinationsFromAudience200Response';
+import { ListSupportedDestinationsFromAudience200Response } from '../model/listSupportedDestinationsFromAudience200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveActivationFromAudience200Response } from '../model/removeActivationFromAudience200Response';
 import { RequestErrorEnvelope } from '../model/requestErrorEnvelope';
@@ -827,6 +828,155 @@ export class ActivationsApi {
                                 body = ObjectSerializer.deserialize(
                                     body,
                                     'ListDestinationsFromAudience200Response'
+                                );
+                                resolve({ response: response, body: body });
+                            } else {
+                                reject(
+                                    new HttpError(
+                                        response,
+                                        body,
+                                        response.statusCode
+                                    )
+                                );
+                            }
+                        }
+                    }
+                );
+            });
+        });
+    }
+    /**
+     * Lists all Supported Destinations for this audience type that can be activated.  • This endpoint is in **Alpha** testing.  Please submit any feedback by sending an email to friends@segment.com.   • In order to successfully call this endpoint, the specified Workspace needs to have the Audience feature enabled. Please reach out to your customer success manager for more information.  • When called, this endpoint may generate the `Supported Destinations Listed For Audience` event in the [audit trail](/tag/Audit-Trail).   The rate limit for this endpoint is 60 requests per minute, which is lower than the default due to access pattern restrictions. Once reached, this endpoint will respond with the 429 HTTP status code with headers indicating the limit parameters. See [Rate Limiting](/#tag/Rate-Limits) for more information.
+     * @summary List Supported Destinations from Audience
+     * @param spaceId
+     * @param audienceType
+     * @param slug Optional destination slug to filter results.  This parameter exists in alpha.
+     * @param actionId Optional destination action id to filter results.  This parameter exists in alpha.
+     */
+    public async listSupportedDestinationsFromAudience(
+        spaceId: string,
+        audienceType: string,
+        slug?: string,
+        actionId?: string,
+        options: { headers: { [name: string]: string } } = { headers: {} }
+    ): Promise<{
+        response: http.IncomingMessage;
+        body: ListSupportedDestinationsFromAudience200Response;
+    }> {
+        const localVarPath =
+            this.basePath +
+            '/spaces/{spaceId}/audienceType/{audienceType}/supported-destinations'
+                .replace(
+                    '{' + 'spaceId' + '}',
+                    encodeURIComponent(String(spaceId))
+                )
+                .replace(
+                    '{' + 'audienceType' + '}',
+                    encodeURIComponent(String(audienceType))
+                );
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign(
+            {},
+            this._defaultHeaders
+        );
+        const produces = [
+            'application/vnd.segment.v1alpha+json',
+            'application/json',
+        ];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'spaceId' is not null or undefined
+        if (spaceId === null || spaceId === undefined) {
+            throw new Error(
+                'Required parameter spaceId was null or undefined when calling listSupportedDestinationsFromAudience.'
+            );
+        }
+
+        // verify required parameter 'audienceType' is not null or undefined
+        if (audienceType === null || audienceType === undefined) {
+            throw new Error(
+                'Required parameter audienceType was null or undefined when calling listSupportedDestinationsFromAudience.'
+            );
+        }
+
+        if (slug !== undefined) {
+            localVarQueryParameters['slug'] = ObjectSerializer.serialize(
+                slug,
+                'string'
+            );
+        }
+
+        if (actionId !== undefined) {
+            localVarQueryParameters['actionId'] = ObjectSerializer.serialize(
+                actionId,
+                'string'
+            );
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications.token.accessToken) {
+            authenticationPromise = authenticationPromise.then(() =>
+                this.authentications.token.applyToRequest(
+                    localVarRequestOptions
+                )
+            );
+        }
+        authenticationPromise = authenticationPromise.then(() =>
+            this.authentications.default.applyToRequest(localVarRequestOptions)
+        );
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() =>
+                interceptor(localVarRequestOptions)
+            );
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{
+                response: http.IncomingMessage;
+                body: ListSupportedDestinationsFromAudience200Response;
+            }>((resolve, reject) => {
+                localVarRequest(
+                    localVarRequestOptions,
+                    (error, response, body) => {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            if (
+                                response.statusCode &&
+                                response.statusCode >= 200 &&
+                                response.statusCode <= 299
+                            ) {
+                                body = ObjectSerializer.deserialize(
+                                    body,
+                                    'ListSupportedDestinationsFromAudience200Response'
                                 );
                                 resolve({ response: response, body: body });
                             } else {

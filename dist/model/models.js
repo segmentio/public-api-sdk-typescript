@@ -159,6 +159,9 @@ __exportStar(require("./createTrackingPlanV1Output"), exports);
 __exportStar(require("./createTransformation200Response"), exports);
 __exportStar(require("./createTransformationBetaInput"), exports);
 __exportStar(require("./createTransformationBetaOutput"), exports);
+__exportStar(require("./createTransformationFunctionInstance200Response"), exports);
+__exportStar(require("./createTransformationFunctionInstanceAlphaInput"), exports);
+__exportStar(require("./createTransformationFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./createTransformationV1Input"), exports);
 __exportStar(require("./createTransformationV1Output"), exports);
 __exportStar(require("./createUserGroup200Response"), exports);
@@ -206,6 +209,8 @@ __exportStar(require("./deleteTrackingPlanV1Output"), exports);
 __exportStar(require("./deleteTransformation200Response"), exports);
 __exportStar(require("./deleteTransformationBetaInput"), exports);
 __exportStar(require("./deleteTransformationBetaOutput"), exports);
+__exportStar(require("./deleteTransformationFunctionInstanceAlphaInput"), exports);
+__exportStar(require("./deleteTransformationFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./deleteTransformationV1Output"), exports);
 __exportStar(require("./deleteUserGroup200Response"), exports);
 __exportStar(require("./deleteUserGroupV1Output"), exports);
@@ -324,6 +329,8 @@ __exportStar(require("./getTrackingPlanV1Output"), exports);
 __exportStar(require("./getTransformation200Response"), exports);
 __exportStar(require("./getTransformationBetaInput"), exports);
 __exportStar(require("./getTransformationBetaOutput"), exports);
+__exportStar(require("./getTransformationFunctionInstanceAlphaInput"), exports);
+__exportStar(require("./getTransformationFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./getTransformationV1Output"), exports);
 __exportStar(require("./getUser200Response"), exports);
 __exportStar(require("./getUserGroup200Response"), exports);
@@ -434,6 +441,8 @@ __exportStar(require("./listSpaces200Response"), exports);
 __exportStar(require("./listSpacesAlphaOutput"), exports);
 __exportStar(require("./listSubscriptionsFromDestination200Response"), exports);
 __exportStar(require("./listSubscriptionsFromDestinationAlphaOutput"), exports);
+__exportStar(require("./listSupportedDestinationsFromAudience200Response"), exports);
+__exportStar(require("./listSupportedDestinationsFromAudienceAlphaOutput"), exports);
 __exportStar(require("./listSuppressions200Response"), exports);
 __exportStar(require("./listSuppressionsV1Output"), exports);
 __exportStar(require("./listSyncsFromWarehouse200Response"), exports);
@@ -442,6 +451,8 @@ __exportStar(require("./listSyncsFromWarehouseAndSourceV1Output"), exports);
 __exportStar(require("./listSyncsFromWarehouseV1Output"), exports);
 __exportStar(require("./listTrackingPlans200Response"), exports);
 __exportStar(require("./listTrackingPlansV1Output"), exports);
+__exportStar(require("./listTransformationFunctionInstancesAlphaInput"), exports);
+__exportStar(require("./listTransformationFunctionInstancesAlphaOutput"), exports);
 __exportStar(require("./listTransformations200Response"), exports);
 __exportStar(require("./listTransformationsBetaInput"), exports);
 __exportStar(require("./listTransformationsBetaOutput"), exports);
@@ -581,6 +592,7 @@ __exportStar(require("./trackingPlanV1"), exports);
 __exportStar(require("./traitDefinition"), exports);
 __exportStar(require("./traitOptions"), exports);
 __exportStar(require("./transformationBeta"), exports);
+__exportStar(require("./transformationFunctionInstanceAlpha"), exports);
 __exportStar(require("./transformationV1"), exports);
 __exportStar(require("./updateActivationForAudience200Response"), exports);
 __exportStar(require("./updateActivationForAudienceAlphaInput"), exports);
@@ -646,6 +658,8 @@ __exportStar(require("./updateTrackingPlanV1Output"), exports);
 __exportStar(require("./updateTransformation200Response"), exports);
 __exportStar(require("./updateTransformationBetaInput"), exports);
 __exportStar(require("./updateTransformationBetaOutput"), exports);
+__exportStar(require("./updateTransformationFunctionInstanceAlphaInput"), exports);
+__exportStar(require("./updateTransformationFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./updateTransformationV1Input"), exports);
 __exportStar(require("./updateTransformationV1Output"), exports);
 __exportStar(require("./updateUserGroup200Response"), exports);
@@ -809,6 +823,9 @@ var createTrackingPlanV1Output_1 = require("./createTrackingPlanV1Output");
 var createTransformation200Response_1 = require("./createTransformation200Response");
 var createTransformationBetaInput_1 = require("./createTransformationBetaInput");
 var createTransformationBetaOutput_1 = require("./createTransformationBetaOutput");
+var createTransformationFunctionInstance200Response_1 = require("./createTransformationFunctionInstance200Response");
+var createTransformationFunctionInstanceAlphaInput_1 = require("./createTransformationFunctionInstanceAlphaInput");
+var createTransformationFunctionInstanceAlphaOutput_1 = require("./createTransformationFunctionInstanceAlphaOutput");
 var createTransformationV1Input_1 = require("./createTransformationV1Input");
 var createTransformationV1Output_1 = require("./createTransformationV1Output");
 var createUserGroup200Response_1 = require("./createUserGroup200Response");
@@ -856,6 +873,8 @@ var deleteTrackingPlanV1Output_1 = require("./deleteTrackingPlanV1Output");
 var deleteTransformation200Response_1 = require("./deleteTransformation200Response");
 var deleteTransformationBetaInput_1 = require("./deleteTransformationBetaInput");
 var deleteTransformationBetaOutput_1 = require("./deleteTransformationBetaOutput");
+var deleteTransformationFunctionInstanceAlphaInput_1 = require("./deleteTransformationFunctionInstanceAlphaInput");
+var deleteTransformationFunctionInstanceAlphaOutput_1 = require("./deleteTransformationFunctionInstanceAlphaOutput");
 var deleteTransformationV1Output_1 = require("./deleteTransformationV1Output");
 var deleteUserGroup200Response_1 = require("./deleteUserGroup200Response");
 var deleteUserGroupV1Output_1 = require("./deleteUserGroupV1Output");
@@ -974,6 +993,8 @@ var getTrackingPlanV1Output_1 = require("./getTrackingPlanV1Output");
 var getTransformation200Response_1 = require("./getTransformation200Response");
 var getTransformationBetaInput_1 = require("./getTransformationBetaInput");
 var getTransformationBetaOutput_1 = require("./getTransformationBetaOutput");
+var getTransformationFunctionInstanceAlphaInput_1 = require("./getTransformationFunctionInstanceAlphaInput");
+var getTransformationFunctionInstanceAlphaOutput_1 = require("./getTransformationFunctionInstanceAlphaOutput");
 var getTransformationV1Output_1 = require("./getTransformationV1Output");
 var getUser200Response_1 = require("./getUser200Response");
 var getUserGroup200Response_1 = require("./getUserGroup200Response");
@@ -1084,6 +1105,8 @@ var listSpaces200Response_1 = require("./listSpaces200Response");
 var listSpacesAlphaOutput_1 = require("./listSpacesAlphaOutput");
 var listSubscriptionsFromDestination200Response_1 = require("./listSubscriptionsFromDestination200Response");
 var listSubscriptionsFromDestinationAlphaOutput_1 = require("./listSubscriptionsFromDestinationAlphaOutput");
+var listSupportedDestinationsFromAudience200Response_1 = require("./listSupportedDestinationsFromAudience200Response");
+var listSupportedDestinationsFromAudienceAlphaOutput_1 = require("./listSupportedDestinationsFromAudienceAlphaOutput");
 var listSuppressions200Response_1 = require("./listSuppressions200Response");
 var listSuppressionsV1Output_1 = require("./listSuppressionsV1Output");
 var listSyncsFromWarehouse200Response_1 = require("./listSyncsFromWarehouse200Response");
@@ -1092,6 +1115,8 @@ var listSyncsFromWarehouseAndSourceV1Output_1 = require("./listSyncsFromWarehous
 var listSyncsFromWarehouseV1Output_1 = require("./listSyncsFromWarehouseV1Output");
 var listTrackingPlans200Response_1 = require("./listTrackingPlans200Response");
 var listTrackingPlansV1Output_1 = require("./listTrackingPlansV1Output");
+var listTransformationFunctionInstancesAlphaInput_1 = require("./listTransformationFunctionInstancesAlphaInput");
+var listTransformationFunctionInstancesAlphaOutput_1 = require("./listTransformationFunctionInstancesAlphaOutput");
 var listTransformations200Response_1 = require("./listTransformations200Response");
 var listTransformationsBetaInput_1 = require("./listTransformationsBetaInput");
 var listTransformationsBetaOutput_1 = require("./listTransformationsBetaOutput");
@@ -1231,6 +1256,7 @@ var trackingPlanV1_1 = require("./trackingPlanV1");
 var traitDefinition_1 = require("./traitDefinition");
 var traitOptions_1 = require("./traitOptions");
 var transformationBeta_1 = require("./transformationBeta");
+var transformationFunctionInstanceAlpha_1 = require("./transformationFunctionInstanceAlpha");
 var transformationV1_1 = require("./transformationV1");
 var updateActivationForAudience200Response_1 = require("./updateActivationForAudience200Response");
 var updateActivationForAudienceAlphaInput_1 = require("./updateActivationForAudienceAlphaInput");
@@ -1296,6 +1322,8 @@ var updateTrackingPlanV1Output_1 = require("./updateTrackingPlanV1Output");
 var updateTransformation200Response_1 = require("./updateTransformation200Response");
 var updateTransformationBetaInput_1 = require("./updateTransformationBetaInput");
 var updateTransformationBetaOutput_1 = require("./updateTransformationBetaOutput");
+var updateTransformationFunctionInstanceAlphaInput_1 = require("./updateTransformationFunctionInstanceAlphaInput");
+var updateTransformationFunctionInstanceAlphaOutput_1 = require("./updateTransformationFunctionInstanceAlphaOutput");
 var updateTransformationV1Input_1 = require("./updateTransformationV1Input");
 var updateTransformationV1Output_1 = require("./updateTransformationV1Output");
 var updateUserGroup200Response_1 = require("./updateUserGroup200Response");
@@ -1363,6 +1391,7 @@ var enumsMap = {
     'DeleteSourceV1Output.StatusEnum': deleteSourceV1Output_1.DeleteSourceV1Output.StatusEnum,
     'DeleteTrackingPlanV1Output.StatusEnum': deleteTrackingPlanV1Output_1.DeleteTrackingPlanV1Output.StatusEnum,
     'DeleteTransformationBetaOutput.StatusEnum': deleteTransformationBetaOutput_1.DeleteTransformationBetaOutput.StatusEnum,
+    'DeleteTransformationFunctionInstanceAlphaOutput.StatusEnum': deleteTransformationFunctionInstanceAlphaOutput_1.DeleteTransformationFunctionInstanceAlphaOutput.StatusEnum,
     'DeleteTransformationV1Output.StatusEnum': deleteTransformationV1Output_1.DeleteTransformationV1Output.StatusEnum,
     'DeleteUserGroupV1Output.StatusEnum': deleteUserGroupV1Output_1.DeleteUserGroupV1Output.StatusEnum,
     'DeleteUsersV1Output.StatusEnum': deleteUsersV1Output_1.DeleteUsersV1Output.StatusEnum,
@@ -1578,6 +1607,9 @@ var typeMap = {
     CreateTransformation200Response: createTransformation200Response_1.CreateTransformation200Response,
     CreateTransformationBetaInput: createTransformationBetaInput_1.CreateTransformationBetaInput,
     CreateTransformationBetaOutput: createTransformationBetaOutput_1.CreateTransformationBetaOutput,
+    CreateTransformationFunctionInstance200Response: createTransformationFunctionInstance200Response_1.CreateTransformationFunctionInstance200Response,
+    CreateTransformationFunctionInstanceAlphaInput: createTransformationFunctionInstanceAlphaInput_1.CreateTransformationFunctionInstanceAlphaInput,
+    CreateTransformationFunctionInstanceAlphaOutput: createTransformationFunctionInstanceAlphaOutput_1.CreateTransformationFunctionInstanceAlphaOutput,
     CreateTransformationV1Input: createTransformationV1Input_1.CreateTransformationV1Input,
     CreateTransformationV1Output: createTransformationV1Output_1.CreateTransformationV1Output,
     CreateUserGroup200Response: createUserGroup200Response_1.CreateUserGroup200Response,
@@ -1625,6 +1657,8 @@ var typeMap = {
     DeleteTransformation200Response: deleteTransformation200Response_1.DeleteTransformation200Response,
     DeleteTransformationBetaInput: deleteTransformationBetaInput_1.DeleteTransformationBetaInput,
     DeleteTransformationBetaOutput: deleteTransformationBetaOutput_1.DeleteTransformationBetaOutput,
+    DeleteTransformationFunctionInstanceAlphaInput: deleteTransformationFunctionInstanceAlphaInput_1.DeleteTransformationFunctionInstanceAlphaInput,
+    DeleteTransformationFunctionInstanceAlphaOutput: deleteTransformationFunctionInstanceAlphaOutput_1.DeleteTransformationFunctionInstanceAlphaOutput,
     DeleteTransformationV1Output: deleteTransformationV1Output_1.DeleteTransformationV1Output,
     DeleteUserGroup200Response: deleteUserGroup200Response_1.DeleteUserGroup200Response,
     DeleteUserGroupV1Output: deleteUserGroupV1Output_1.DeleteUserGroupV1Output,
@@ -1743,6 +1777,8 @@ var typeMap = {
     GetTransformation200Response: getTransformation200Response_1.GetTransformation200Response,
     GetTransformationBetaInput: getTransformationBetaInput_1.GetTransformationBetaInput,
     GetTransformationBetaOutput: getTransformationBetaOutput_1.GetTransformationBetaOutput,
+    GetTransformationFunctionInstanceAlphaInput: getTransformationFunctionInstanceAlphaInput_1.GetTransformationFunctionInstanceAlphaInput,
+    GetTransformationFunctionInstanceAlphaOutput: getTransformationFunctionInstanceAlphaOutput_1.GetTransformationFunctionInstanceAlphaOutput,
     GetTransformationV1Output: getTransformationV1Output_1.GetTransformationV1Output,
     GetUser200Response: getUser200Response_1.GetUser200Response,
     GetUserGroup200Response: getUserGroup200Response_1.GetUserGroup200Response,
@@ -1853,6 +1889,8 @@ var typeMap = {
     ListSpacesAlphaOutput: listSpacesAlphaOutput_1.ListSpacesAlphaOutput,
     ListSubscriptionsFromDestination200Response: listSubscriptionsFromDestination200Response_1.ListSubscriptionsFromDestination200Response,
     ListSubscriptionsFromDestinationAlphaOutput: listSubscriptionsFromDestinationAlphaOutput_1.ListSubscriptionsFromDestinationAlphaOutput,
+    ListSupportedDestinationsFromAudience200Response: listSupportedDestinationsFromAudience200Response_1.ListSupportedDestinationsFromAudience200Response,
+    ListSupportedDestinationsFromAudienceAlphaOutput: listSupportedDestinationsFromAudienceAlphaOutput_1.ListSupportedDestinationsFromAudienceAlphaOutput,
     ListSuppressions200Response: listSuppressions200Response_1.ListSuppressions200Response,
     ListSuppressionsV1Output: listSuppressionsV1Output_1.ListSuppressionsV1Output,
     ListSyncsFromWarehouse200Response: listSyncsFromWarehouse200Response_1.ListSyncsFromWarehouse200Response,
@@ -1861,6 +1899,8 @@ var typeMap = {
     ListSyncsFromWarehouseV1Output: listSyncsFromWarehouseV1Output_1.ListSyncsFromWarehouseV1Output,
     ListTrackingPlans200Response: listTrackingPlans200Response_1.ListTrackingPlans200Response,
     ListTrackingPlansV1Output: listTrackingPlansV1Output_1.ListTrackingPlansV1Output,
+    ListTransformationFunctionInstancesAlphaInput: listTransformationFunctionInstancesAlphaInput_1.ListTransformationFunctionInstancesAlphaInput,
+    ListTransformationFunctionInstancesAlphaOutput: listTransformationFunctionInstancesAlphaOutput_1.ListTransformationFunctionInstancesAlphaOutput,
     ListTransformations200Response: listTransformations200Response_1.ListTransformations200Response,
     ListTransformationsBetaInput: listTransformationsBetaInput_1.ListTransformationsBetaInput,
     ListTransformationsBetaOutput: listTransformationsBetaOutput_1.ListTransformationsBetaOutput,
@@ -2000,6 +2040,7 @@ var typeMap = {
     TraitDefinition: traitDefinition_1.TraitDefinition,
     TraitOptions: traitOptions_1.TraitOptions,
     TransformationBeta: transformationBeta_1.TransformationBeta,
+    TransformationFunctionInstanceAlpha: transformationFunctionInstanceAlpha_1.TransformationFunctionInstanceAlpha,
     TransformationV1: transformationV1_1.TransformationV1,
     UpdateActivationForAudience200Response: updateActivationForAudience200Response_1.UpdateActivationForAudience200Response,
     UpdateActivationForAudienceAlphaInput: updateActivationForAudienceAlphaInput_1.UpdateActivationForAudienceAlphaInput,
@@ -2065,6 +2106,8 @@ var typeMap = {
     UpdateTransformation200Response: updateTransformation200Response_1.UpdateTransformation200Response,
     UpdateTransformationBetaInput: updateTransformationBetaInput_1.UpdateTransformationBetaInput,
     UpdateTransformationBetaOutput: updateTransformationBetaOutput_1.UpdateTransformationBetaOutput,
+    UpdateTransformationFunctionInstanceAlphaInput: updateTransformationFunctionInstanceAlphaInput_1.UpdateTransformationFunctionInstanceAlphaInput,
+    UpdateTransformationFunctionInstanceAlphaOutput: updateTransformationFunctionInstanceAlphaOutput_1.UpdateTransformationFunctionInstanceAlphaOutput,
     UpdateTransformationV1Input: updateTransformationV1Input_1.UpdateTransformationV1Input,
     UpdateTransformationV1Output: updateTransformationV1Output_1.UpdateTransformationV1Output,
     UpdateUserGroup200Response: updateUserGroup200Response_1.UpdateUserGroup200Response,
