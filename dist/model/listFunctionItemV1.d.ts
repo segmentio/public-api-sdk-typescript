@@ -24,6 +24,7 @@ export declare namespace ListFunctionItemV1 {
         DESTINATION,
         INSERT_DESTINATION,
         INSERT_SOURCE,
+        INSERT_TRANSFORMATION,
         SOURCE
     }
 }

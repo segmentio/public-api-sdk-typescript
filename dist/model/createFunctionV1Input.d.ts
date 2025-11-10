@@ -23,6 +23,7 @@ export declare namespace CreateFunctionV1Input {
         DESTINATION,
         INSERT_DESTINATION,
         INSERT_SOURCE,
+        INSERT_TRANSFORMATION,
         SOURCE
     }
 }
