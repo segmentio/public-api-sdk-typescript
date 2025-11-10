@@ -5,8 +5,6 @@ import { CreateFunctionDeployment200Response } from '../model/createFunctionDepl
 import { CreateFunctionV1Input } from '../model/createFunctionV1Input';
 import { CreateInsertFunctionInstance200Response } from '../model/createInsertFunctionInstance200Response';
 import { CreateInsertFunctionInstanceAlphaInput } from '../model/createInsertFunctionInstanceAlphaInput';
-import { CreateTransformationFunctionInstance200Response } from '../model/createTransformationFunctionInstance200Response';
-import { CreateTransformationFunctionInstanceAlphaInput } from '../model/createTransformationFunctionInstanceAlphaInput';
 import { DeleteFunction200Response } from '../model/deleteFunction200Response';
 import { DeleteInsertFunctionInstance200Response } from '../model/deleteInsertFunctionInstance200Response';
 import { GetFunction200Response } from '../model/getFunction200Response';
@@ -69,14 +67,6 @@ export declare class FunctionsApi {
         response: http.IncomingMessage;
         body: CreateInsertFunctionInstance200Response;
     }>;
-    createTransformationFunctionInstance(CreateTransformationFunctionInstanceAlphaInput: CreateTransformationFunctionInstanceAlphaInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateTransformationFunctionInstance200Response;
-    }>;
     deleteFunction(functionId: string, options?: {
         headers: {
             [name: string]: string;
@@ -125,7 +115,7 @@ export declare class FunctionsApi {
         response: http.IncomingMessage;
         body: ListFunctionVersions200Response;
     }>;
-    listFunctions(resourceType: 'DESTINATION' | 'INSERT_DESTINATION' | 'INSERT_SOURCE' | 'INSERT_TRANSFORMATION' | 'SOURCE', pagination?: PaginationInput, options?: {
+    listFunctions(resourceType: 'DESTINATION' | 'INSERT_DESTINATION' | 'INSERT_SOURCE' | 'SOURCE', pagination?: PaginationInput, options?: {
         headers: {
             [name: string]: string;
         };
