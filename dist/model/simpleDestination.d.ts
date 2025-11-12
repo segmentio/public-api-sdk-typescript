@@ -13,6 +13,7 @@ export declare class SimpleDestination {
     'destinationId': string;
     'metadata'?: Metadata;
     'idSyncConfiguration'?: Array<IDSyncConfigurationInput>;
+    'connectionSettings'?: any | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

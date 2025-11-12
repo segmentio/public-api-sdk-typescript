@@ -20,6 +20,10 @@ export class AddDestinationToAudienceAlphaOutput {
      * The id sync configuration for the Destination - array of external ids with their strategies.
      */
     'idSyncConfiguration': Array<IDSyncConfigurationInput>;
+    /**
+     * The settings that a Destination requires to create audiences on a third-party platform. These settings are Destination-specific and thus are best defined as unknown.
+     */
+    'connectionSettings'?: any | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -37,6 +41,11 @@ export class AddDestinationToAudienceAlphaOutput {
             name: 'idSyncConfiguration',
             baseName: 'idSyncConfiguration',
             type: 'Array<IDSyncConfigurationInput>',
+        },
+        {
+            name: 'connectionSettings',
+            baseName: 'connectionSettings',
+            type: 'any',
         },
     ];
 
