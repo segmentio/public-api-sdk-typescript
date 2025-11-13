@@ -3,6 +3,7 @@ import { IDSyncConfigurationInput } from './iDSyncConfigurationInput';
 export declare class AddDestinationToAudienceAlphaOutput {
     'connection': Connection;
     'idSyncConfiguration': Array<IDSyncConfigurationInput>;
+    'connectionSettings'?: any | null;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
