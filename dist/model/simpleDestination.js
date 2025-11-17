@@ -59,6 +59,11 @@ var SimpleDestination = (function () {
             baseName: 'idSyncConfiguration',
             type: 'Array<IDSyncConfigurationInput>',
         },
+        {
+            name: 'connectionSettings',
+            baseName: 'connectionSettings',
+            type: 'any',
+        },
     ];
     return SimpleDestination;
 }());
