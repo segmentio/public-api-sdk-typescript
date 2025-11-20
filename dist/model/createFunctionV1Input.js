@@ -49,7 +49,6 @@ exports.CreateFunctionV1Input = CreateFunctionV1Input;
         ResourceTypeEnum[ResourceTypeEnum["DESTINATION"] = 'DESTINATION'] = "DESTINATION";
         ResourceTypeEnum[ResourceTypeEnum["INSERT_DESTINATION"] = 'INSERT_DESTINATION'] = "INSERT_DESTINATION";
         ResourceTypeEnum[ResourceTypeEnum["INSERT_SOURCE"] = 'INSERT_SOURCE'] = "INSERT_SOURCE";
-        ResourceTypeEnum[ResourceTypeEnum["INSERT_TRANSFORMATION"] = 'INSERT_TRANSFORMATION'] = "INSERT_TRANSFORMATION";
         ResourceTypeEnum[ResourceTypeEnum["SOURCE"] = 'SOURCE'] = "SOURCE";
     })(ResourceTypeEnum = CreateFunctionV1Input.ResourceTypeEnum || (CreateFunctionV1Input.ResourceTypeEnum = {}));
 })(CreateFunctionV1Input = exports.CreateFunctionV1Input || (exports.CreateFunctionV1Input = {}));
