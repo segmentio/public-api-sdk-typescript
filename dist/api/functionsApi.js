@@ -370,18 +370,21 @@ var FunctionsApi = (function () {
             });
         });
     };
-    FunctionsApi.prototype.createTransformationFunctionInstance = function (CreateTransformationFunctionInstanceAlphaInput, options) {
+    FunctionsApi.prototype.deleteFunction = function (functionId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/transformation-function-instances';
+                localVarPath = this.basePath +
+                    '/functions/{functionId}'.replace('{' + 'functionId' + '}', encodeURIComponent(String(functionId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -390,20 +393,18 @@ var FunctionsApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (CreateTransformationFunctionInstanceAlphaInput === null ||
-                    CreateTransformationFunctionInstanceAlphaInput === undefined) {
-                    throw new Error('Required parameter CreateTransformationFunctionInstanceAlphaInput was null or undefined when calling createTransformationFunctionInstance.');
+                if (functionId === null || functionId === undefined) {
+                    throw new Error('Required parameter functionId was null or undefined when calling deleteFunction.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'POST',
+                    method: 'DELETE',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateTransformationFunctionInstanceAlphaInput, 'CreateTransformationFunctionInstanceAlphaInput'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -442,7 +443,7 @@ var FunctionsApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'CreateTransformationFunctionInstance200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteFunction200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -455,21 +456,19 @@ var FunctionsApi = (function () {
             });
         });
     };
-    FunctionsApi.prototype.deleteFunction = function (functionId, options) {
+    FunctionsApi.prototype.deleteInsertFunctionInstance = function (instanceId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_5, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/functions/{functionId}'.replace('{' + 'functionId' + '}', encodeURIComponent(String(functionId)));
+                    '/insert-function-instances/{instanceId}'.replace('{' + 'instanceId' + '}', encodeURIComponent(String(instanceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                    'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -478,8 +477,8 @@ var FunctionsApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (functionId === null || functionId === undefined) {
-                    throw new Error('Required parameter functionId was null or undefined when calling deleteFunction.');
+                if (instanceId === null || instanceId === undefined) {
+                    throw new Error('Required parameter instanceId was null or undefined when calling deleteInsertFunctionInstance.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -528,7 +527,7 @@ var FunctionsApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteFunction200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteInsertFunctionInstance200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -541,19 +540,21 @@ var FunctionsApi = (function () {
             });
         });
     };
-    FunctionsApi.prototype.deleteInsertFunctionInstance = function (instanceId, options) {
+    FunctionsApi.prototype.getFunction = function (functionId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_6, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/insert-function-instances/{instanceId}'.replace('{' + 'instanceId' + '}', encodeURIComponent(String(instanceId)));
+                    '/functions/{functionId}'.replace('{' + 'functionId' + '}', encodeURIComponent(String(functionId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -562,13 +563,13 @@ var FunctionsApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (instanceId === null || instanceId === undefined) {
-                    throw new Error('Required parameter instanceId was null or undefined when calling deleteInsertFunctionInstance.');
+                if (functionId === null || functionId === undefined) {
+                    throw new Error('Required parameter functionId was null or undefined when calling getFunction.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
-                    method: 'DELETE',
+                    method: 'GET',
                     qs: localVarQueryParameters,
                     headers: localVarHeaderParams,
                     uri: localVarPath,
@@ -612,7 +613,7 @@ var FunctionsApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'DeleteInsertFunctionInstance200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'GetFunction200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -625,21 +626,21 @@ var FunctionsApi = (function () {
             });
         });
     };
-    FunctionsApi.prototype.getFunction = function (functionId, options) {
+    FunctionsApi.prototype.getFunctionVersion = function (functionId, versionId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_7, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/functions/{functionId}'.replace('{' + 'functionId' + '}', encodeURIComponent(String(functionId)));
+                    '/functions/{functionId}/versions/{versionId}'
+                        .replace('{' + 'functionId' + '}', encodeURIComponent(String(functionId)))
+                        .replace('{' + 'versionId' + '}', encodeURIComponent(String(versionId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                    'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -649,7 +650,10 @@ var FunctionsApi = (function () {
                 }
                 localVarFormParams = {};
                 if (functionId === null || functionId === undefined) {
-                    throw new Error('Required parameter functionId was null or undefined when calling getFunction.');
+                    throw new Error('Required parameter functionId was null or undefined when calling getFunctionVersion.');
+                }
+                if (versionId === null || versionId === undefined) {
+                    throw new Error('Required parameter versionId was null or undefined when calling getFunctionVersion.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -698,7 +702,7 @@ var FunctionsApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetFunction200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'GetFunctionVersion200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -711,16 +715,14 @@ var FunctionsApi = (function () {
             });
         });
     };
-    FunctionsApi.prototype.getFunctionVersion = function (functionId, versionId, options) {
+    FunctionsApi.prototype.getInsertFunctionInstance = function (instanceId, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_8, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/functions/{functionId}/versions/{versionId}'
-                        .replace('{' + 'functionId' + '}', encodeURIComponent(String(functionId)))
-                        .replace('{' + 'versionId' + '}', encodeURIComponent(String(versionId)));
+                    '/insert-function-instances/{instanceId}'.replace('{' + 'instanceId' + '}', encodeURIComponent(String(instanceId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
@@ -734,11 +736,8 @@ var FunctionsApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (functionId === null || functionId === undefined) {
-                    throw new Error('Required parameter functionId was null or undefined when calling getFunctionVersion.');
-                }
-                if (versionId === null || versionId === undefined) {
-                    throw new Error('Required parameter versionId was null or undefined when calling getFunctionVersion.');
+                if (instanceId === null || instanceId === undefined) {
+                    throw new Error('Required parameter instanceId was null or undefined when calling getInsertFunctionInstance.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -787,7 +786,7 @@ var FunctionsApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetFunctionVersion200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'GetInsertFunctionInstance200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -800,14 +799,14 @@ var FunctionsApi = (function () {
             });
         });
     };
-    FunctionsApi.prototype.getInsertFunctionInstance = function (instanceId, options) {
+    FunctionsApi.prototype.listFunctionVersions = function (functionId, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_9, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
-                    '/insert-function-instances/{instanceId}'.replace('{' + 'instanceId' + '}', encodeURIComponent(String(instanceId)));
+                    '/functions/{functionId}/versions'.replace('{' + 'functionId' + '}', encodeURIComponent(String(functionId)));
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
@@ -821,8 +820,11 @@ var FunctionsApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (instanceId === null || instanceId === undefined) {
-                    throw new Error('Required parameter instanceId was null or undefined when calling getInsertFunctionInstance.');
+                if (functionId === null || functionId === undefined) {
+                    throw new Error('Required parameter functionId was null or undefined when calling listFunctionVersions.');
+                }
+                if (pagination !== undefined) {
+                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -871,7 +873,7 @@ var FunctionsApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'GetInsertFunctionInstance200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ListFunctionVersions200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -884,19 +886,20 @@ var FunctionsApi = (function () {
             });
         });
     };
-    FunctionsApi.prototype.listFunctionVersions = function (functionId, pagination, options) {
+    FunctionsApi.prototype.listFunctions = function (resourceType, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_10, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath +
-                    '/functions/{functionId}/versions'.replace('{' + 'functionId' + '}', encodeURIComponent(String(functionId)));
+                localVarPath = this.basePath + '/functions';
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v1+json',
                     'application/json',
+                    'application/vnd.segment.v1beta+json',
+                    'application/vnd.segment.v1alpha+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -905,11 +908,15 @@ var FunctionsApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (functionId === null || functionId === undefined) {
-                    throw new Error('Required parameter functionId was null or undefined when calling listFunctionVersions.');
+                if (resourceType === null || resourceType === undefined) {
+                    throw new Error('Required parameter resourceType was null or undefined when calling listFunctions.');
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
+                }
+                if (resourceType !== undefined) {
+                    localVarQueryParameters['resourceType'] =
+                        models_1.ObjectSerializer.serialize(resourceType, "'DESTINATION' | 'INSERT_DESTINATION' | 'INSERT_SOURCE' | 'SOURCE'");
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -958,7 +965,7 @@ var FunctionsApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListFunctionVersions200Response');
+                                        body = models_1.ObjectSerializer.deserialize(body, 'ListFunctions200Response');
                                         resolve({ response: response, body: body });
                                     }
                                     else {
@@ -971,20 +978,18 @@ var FunctionsApi = (function () {
             });
         });
     };
-    FunctionsApi.prototype.listFunctions = function (resourceType, pagination, options) {
+    FunctionsApi.prototype.listInsertFunctionInstances = function (functionId, pagination, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_11, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/functions';
+                localVarPath = this.basePath + '/insert-function-instances';
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
-                    'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -993,15 +998,14 @@ var FunctionsApi = (function () {
                     localVarHeaderParams.Accept = produces.join(',');
                 }
                 localVarFormParams = {};
-                if (resourceType === null || resourceType === undefined) {
-                    throw new Error('Required parameter resourceType was null or undefined when calling listFunctions.');
+                if (functionId === null || functionId === undefined) {
+                    throw new Error('Required parameter functionId was null or undefined when calling listInsertFunctionInstances.');
                 }
                 if (pagination !== undefined) {
                     localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
                 }
-                if (resourceType !== undefined) {
-                    localVarQueryParameters['resourceType'] =
-                        models_1.ObjectSerializer.serialize(resourceType, "'DESTINATION' | 'INSERT_DESTINATION' | 'INSERT_SOURCE' | 'INSERT_TRANSFORMATION' | 'SOURCE'");
+                if (functionId !== undefined) {
+                    localVarQueryParameters['functionId'] = models_1.ObjectSerializer.serialize(functionId, 'string');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -1050,95 +1054,6 @@ var FunctionsApi = (function () {
                                     if (response.statusCode &&
                                         response.statusCode >= 200 &&
                                         response.statusCode <= 299) {
-                                        body = models_1.ObjectSerializer.deserialize(body, 'ListFunctions200Response');
-                                        resolve({ response: response, body: body });
-                                    }
-                                    else {
-                                        reject(new apis_1.HttpError(response, body, response.statusCode));
-                                    }
-                                }
-                            });
-                        });
-                    })];
-            });
-        });
-    };
-    FunctionsApi.prototype.listInsertFunctionInstances = function (functionId, pagination, options) {
-        if (options === void 0) { options = { headers: {} }; }
-        return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_12, _i, _a, interceptor;
-            var _this = this;
-            return __generator(this, function (_b) {
-                localVarPath = this.basePath + '/insert-function-instances';
-                localVarQueryParameters = {};
-                localVarHeaderParams = Object.assign({}, this._defaultHeaders);
-                produces = [
-                    'application/vnd.segment.v1alpha+json',
-                    'application/json',
-                ];
-                if (produces.indexOf('application/json') >= 0) {
-                    localVarHeaderParams.Accept = 'application/json';
-                }
-                else {
-                    localVarHeaderParams.Accept = produces.join(',');
-                }
-                localVarFormParams = {};
-                if (functionId === null || functionId === undefined) {
-                    throw new Error('Required parameter functionId was null or undefined when calling listInsertFunctionInstances.');
-                }
-                if (pagination !== undefined) {
-                    localVarQueryParameters['pagination'] = models_1.ObjectSerializer.serialize(pagination, 'PaginationInput');
-                }
-                if (functionId !== undefined) {
-                    localVarQueryParameters['functionId'] = models_1.ObjectSerializer.serialize(functionId, 'string');
-                }
-                Object.assign(localVarHeaderParams, options.headers);
-                localVarUseFormData = false;
-                localVarRequestOptions = {
-                    method: 'GET',
-                    qs: localVarQueryParameters,
-                    headers: localVarHeaderParams,
-                    uri: localVarPath,
-                    useQuerystring: this._useQuerystring,
-                    json: true,
-                };
-                authenticationPromise = Promise.resolve();
-                if (this.authentications.token.accessToken) {
-                    authenticationPromise = authenticationPromise.then(function () {
-                        return _this.authentications.token.applyToRequest(localVarRequestOptions);
-                    });
-                }
-                authenticationPromise = authenticationPromise.then(function () {
-                    return _this.authentications.default.applyToRequest(localVarRequestOptions);
-                });
-                interceptorPromise = authenticationPromise;
-                _loop_12 = function (interceptor) {
-                    interceptorPromise = interceptorPromise.then(function () {
-                        return interceptor(localVarRequestOptions);
-                    });
-                };
-                for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
-                    interceptor = _a[_i];
-                    _loop_12(interceptor);
-                }
-                return [2, interceptorPromise.then(function () {
-                        if (Object.keys(localVarFormParams).length) {
-                            if (localVarUseFormData) {
-                                localVarRequestOptions.formData = localVarFormParams;
-                            }
-                            else {
-                                localVarRequestOptions.form = localVarFormParams;
-                            }
-                        }
-                        return new Promise(function (resolve, reject) {
-                            (0, request_1.default)(localVarRequestOptions, function (error, response, body) {
-                                if (error) {
-                                    reject(error);
-                                }
-                                else {
-                                    if (response.statusCode &&
-                                        response.statusCode >= 200 &&
-                                        response.statusCode <= 299) {
                                         body = models_1.ObjectSerializer.deserialize(body, 'ListInsertFunctionInstances200Response');
                                         resolve({ response: response, body: body });
                                     }
@@ -1155,7 +1070,7 @@ var FunctionsApi = (function () {
     FunctionsApi.prototype.restoreFunctionVersion = function (functionId, RestoreFunctionVersionAlphaInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_13, _i, _a, interceptor;
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_12, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
@@ -1201,14 +1116,14 @@ var FunctionsApi = (function () {
                     return _this.authentications.default.applyToRequest(localVarRequestOptions);
                 });
                 interceptorPromise = authenticationPromise;
-                _loop_13 = function (interceptor) {
+                _loop_12 = function (interceptor) {
                     interceptorPromise = interceptorPromise.then(function () {
                         return interceptor(localVarRequestOptions);
                     });
                 };
                 for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
                     interceptor = _a[_i];
-                    _loop_13(interceptor);
+                    _loop_12(interceptor);
                 }
                 return [2, interceptorPromise.then(function () {
                         if (Object.keys(localVarFormParams).length) {
@@ -1244,7 +1159,7 @@ var FunctionsApi = (function () {
     FunctionsApi.prototype.updateFunction = function (functionId, UpdateFunctionV1Input, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_14, _i, _a, interceptor;
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_13, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
@@ -1292,14 +1207,14 @@ var FunctionsApi = (function () {
                     return _this.authentications.default.applyToRequest(localVarRequestOptions);
                 });
                 interceptorPromise = authenticationPromise;
-                _loop_14 = function (interceptor) {
+                _loop_13 = function (interceptor) {
                     interceptorPromise = interceptorPromise.then(function () {
                         return interceptor(localVarRequestOptions);
                     });
                 };
                 for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
                     interceptor = _a[_i];
-                    _loop_14(interceptor);
+                    _loop_13(interceptor);
                 }
                 return [2, interceptorPromise.then(function () {
                         if (Object.keys(localVarFormParams).length) {
@@ -1335,7 +1250,7 @@ var FunctionsApi = (function () {
     FunctionsApi.prototype.updateInsertFunctionInstance = function (instanceId, UpdateInsertFunctionInstanceAlphaInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
-            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_15, _i, _a, interceptor;
+            var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_14, _i, _a, interceptor;
             var _this = this;
             return __generator(this, function (_b) {
                 localVarPath = this.basePath +
@@ -1381,14 +1296,14 @@ var FunctionsApi = (function () {
                     return _this.authentications.default.applyToRequest(localVarRequestOptions);
                 });
                 interceptorPromise = authenticationPromise;
-                _loop_15 = function (interceptor) {
+                _loop_14 = function (interceptor) {
                     interceptorPromise = interceptorPromise.then(function () {
                         return interceptor(localVarRequestOptions);
                     });
                 };
                 for (_i = 0, _a = this.interceptors; _i < _a.length; _i++) {
                     interceptor = _a[_i];
-                    _loop_15(interceptor);
+                    _loop_14(interceptor);
                 }
                 return [2, interceptorPromise.then(function () {
                         if (Object.keys(localVarFormParams).length) {
