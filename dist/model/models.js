@@ -209,8 +209,6 @@ __exportStar(require("./deleteTrackingPlanV1Output"), exports);
 __exportStar(require("./deleteTransformation200Response"), exports);
 __exportStar(require("./deleteTransformationBetaInput"), exports);
 __exportStar(require("./deleteTransformationBetaOutput"), exports);
-__exportStar(require("./deleteTransformationFunctionInstanceAlphaInput"), exports);
-__exportStar(require("./deleteTransformationFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./deleteTransformationV1Output"), exports);
 __exportStar(require("./deleteUserGroup200Response"), exports);
 __exportStar(require("./deleteUserGroupV1Output"), exports);
@@ -329,8 +327,6 @@ __exportStar(require("./getTrackingPlanV1Output"), exports);
 __exportStar(require("./getTransformation200Response"), exports);
 __exportStar(require("./getTransformationBetaInput"), exports);
 __exportStar(require("./getTransformationBetaOutput"), exports);
-__exportStar(require("./getTransformationFunctionInstanceAlphaInput"), exports);
-__exportStar(require("./getTransformationFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./getTransformationV1Output"), exports);
 __exportStar(require("./getUser200Response"), exports);
 __exportStar(require("./getUserGroup200Response"), exports);
@@ -451,8 +447,6 @@ __exportStar(require("./listSyncsFromWarehouseAndSourceV1Output"), exports);
 __exportStar(require("./listSyncsFromWarehouseV1Output"), exports);
 __exportStar(require("./listTrackingPlans200Response"), exports);
 __exportStar(require("./listTrackingPlansV1Output"), exports);
-__exportStar(require("./listTransformationFunctionInstancesAlphaInput"), exports);
-__exportStar(require("./listTransformationFunctionInstancesAlphaOutput"), exports);
 __exportStar(require("./listTransformations200Response"), exports);
 __exportStar(require("./listTransformationsBetaInput"), exports);
 __exportStar(require("./listTransformationsBetaOutput"), exports);
@@ -658,8 +652,6 @@ __exportStar(require("./updateTrackingPlanV1Output"), exports);
 __exportStar(require("./updateTransformation200Response"), exports);
 __exportStar(require("./updateTransformationBetaInput"), exports);
 __exportStar(require("./updateTransformationBetaOutput"), exports);
-__exportStar(require("./updateTransformationFunctionInstanceAlphaInput"), exports);
-__exportStar(require("./updateTransformationFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./updateTransformationV1Input"), exports);
 __exportStar(require("./updateTransformationV1Output"), exports);
 __exportStar(require("./updateUserGroup200Response"), exports);
@@ -873,8 +865,6 @@ var deleteTrackingPlanV1Output_1 = require("./deleteTrackingPlanV1Output");
 var deleteTransformation200Response_1 = require("./deleteTransformation200Response");
 var deleteTransformationBetaInput_1 = require("./deleteTransformationBetaInput");
 var deleteTransformationBetaOutput_1 = require("./deleteTransformationBetaOutput");
-var deleteTransformationFunctionInstanceAlphaInput_1 = require("./deleteTransformationFunctionInstanceAlphaInput");
-var deleteTransformationFunctionInstanceAlphaOutput_1 = require("./deleteTransformationFunctionInstanceAlphaOutput");
 var deleteTransformationV1Output_1 = require("./deleteTransformationV1Output");
 var deleteUserGroup200Response_1 = require("./deleteUserGroup200Response");
 var deleteUserGroupV1Output_1 = require("./deleteUserGroupV1Output");
@@ -993,8 +983,6 @@ var getTrackingPlanV1Output_1 = require("./getTrackingPlanV1Output");
 var getTransformation200Response_1 = require("./getTransformation200Response");
 var getTransformationBetaInput_1 = require("./getTransformationBetaInput");
 var getTransformationBetaOutput_1 = require("./getTransformationBetaOutput");
-var getTransformationFunctionInstanceAlphaInput_1 = require("./getTransformationFunctionInstanceAlphaInput");
-var getTransformationFunctionInstanceAlphaOutput_1 = require("./getTransformationFunctionInstanceAlphaOutput");
 var getTransformationV1Output_1 = require("./getTransformationV1Output");
 var getUser200Response_1 = require("./getUser200Response");
 var getUserGroup200Response_1 = require("./getUserGroup200Response");
@@ -1115,8 +1103,6 @@ var listSyncsFromWarehouseAndSourceV1Output_1 = require("./listSyncsFromWarehous
 var listSyncsFromWarehouseV1Output_1 = require("./listSyncsFromWarehouseV1Output");
 var listTrackingPlans200Response_1 = require("./listTrackingPlans200Response");
 var listTrackingPlansV1Output_1 = require("./listTrackingPlansV1Output");
-var listTransformationFunctionInstancesAlphaInput_1 = require("./listTransformationFunctionInstancesAlphaInput");
-var listTransformationFunctionInstancesAlphaOutput_1 = require("./listTransformationFunctionInstancesAlphaOutput");
 var listTransformations200Response_1 = require("./listTransformations200Response");
 var listTransformationsBetaInput_1 = require("./listTransformationsBetaInput");
 var listTransformationsBetaOutput_1 = require("./listTransformationsBetaOutput");
@@ -1322,8 +1308,6 @@ var updateTrackingPlanV1Output_1 = require("./updateTrackingPlanV1Output");
 var updateTransformation200Response_1 = require("./updateTransformation200Response");
 var updateTransformationBetaInput_1 = require("./updateTransformationBetaInput");
 var updateTransformationBetaOutput_1 = require("./updateTransformationBetaOutput");
-var updateTransformationFunctionInstanceAlphaInput_1 = require("./updateTransformationFunctionInstanceAlphaInput");
-var updateTransformationFunctionInstanceAlphaOutput_1 = require("./updateTransformationFunctionInstanceAlphaOutput");
 var updateTransformationV1Input_1 = require("./updateTransformationV1Input");
 var updateTransformationV1Output_1 = require("./updateTransformationV1Output");
 var updateUserGroup200Response_1 = require("./updateUserGroup200Response");
@@ -1391,7 +1375,6 @@ var enumsMap = {
     'DeleteSourceV1Output.StatusEnum': deleteSourceV1Output_1.DeleteSourceV1Output.StatusEnum,
     'DeleteTrackingPlanV1Output.StatusEnum': deleteTrackingPlanV1Output_1.DeleteTrackingPlanV1Output.StatusEnum,
     'DeleteTransformationBetaOutput.StatusEnum': deleteTransformationBetaOutput_1.DeleteTransformationBetaOutput.StatusEnum,
-    'DeleteTransformationFunctionInstanceAlphaOutput.StatusEnum': deleteTransformationFunctionInstanceAlphaOutput_1.DeleteTransformationFunctionInstanceAlphaOutput.StatusEnum,
     'DeleteTransformationV1Output.StatusEnum': deleteTransformationV1Output_1.DeleteTransformationV1Output.StatusEnum,
     'DeleteUserGroupV1Output.StatusEnum': deleteUserGroupV1Output_1.DeleteUserGroupV1Output.StatusEnum,
     'DeleteUsersV1Output.StatusEnum': deleteUsersV1Output_1.DeleteUsersV1Output.StatusEnum,
@@ -1657,8 +1640,6 @@ var typeMap = {
     DeleteTransformation200Response: deleteTransformation200Response_1.DeleteTransformation200Response,
     DeleteTransformationBetaInput: deleteTransformationBetaInput_1.DeleteTransformationBetaInput,
     DeleteTransformationBetaOutput: deleteTransformationBetaOutput_1.DeleteTransformationBetaOutput,
-    DeleteTransformationFunctionInstanceAlphaInput: deleteTransformationFunctionInstanceAlphaInput_1.DeleteTransformationFunctionInstanceAlphaInput,
-    DeleteTransformationFunctionInstanceAlphaOutput: deleteTransformationFunctionInstanceAlphaOutput_1.DeleteTransformationFunctionInstanceAlphaOutput,
     DeleteTransformationV1Output: deleteTransformationV1Output_1.DeleteTransformationV1Output,
     DeleteUserGroup200Response: deleteUserGroup200Response_1.DeleteUserGroup200Response,
     DeleteUserGroupV1Output: deleteUserGroupV1Output_1.DeleteUserGroupV1Output,
@@ -1777,8 +1758,6 @@ var typeMap = {
     GetTransformation200Response: getTransformation200Response_1.GetTransformation200Response,
     GetTransformationBetaInput: getTransformationBetaInput_1.GetTransformationBetaInput,
     GetTransformationBetaOutput: getTransformationBetaOutput_1.GetTransformationBetaOutput,
-    GetTransformationFunctionInstanceAlphaInput: getTransformationFunctionInstanceAlphaInput_1.GetTransformationFunctionInstanceAlphaInput,
-    GetTransformationFunctionInstanceAlphaOutput: getTransformationFunctionInstanceAlphaOutput_1.GetTransformationFunctionInstanceAlphaOutput,
     GetTransformationV1Output: getTransformationV1Output_1.GetTransformationV1Output,
     GetUser200Response: getUser200Response_1.GetUser200Response,
     GetUserGroup200Response: getUserGroup200Response_1.GetUserGroup200Response,
@@ -1899,8 +1878,6 @@ var typeMap = {
     ListSyncsFromWarehouseV1Output: listSyncsFromWarehouseV1Output_1.ListSyncsFromWarehouseV1Output,
     ListTrackingPlans200Response: listTrackingPlans200Response_1.ListTrackingPlans200Response,
     ListTrackingPlansV1Output: listTrackingPlansV1Output_1.ListTrackingPlansV1Output,
-    ListTransformationFunctionInstancesAlphaInput: listTransformationFunctionInstancesAlphaInput_1.ListTransformationFunctionInstancesAlphaInput,
-    ListTransformationFunctionInstancesAlphaOutput: listTransformationFunctionInstancesAlphaOutput_1.ListTransformationFunctionInstancesAlphaOutput,
     ListTransformations200Response: listTransformations200Response_1.ListTransformations200Response,
     ListTransformationsBetaInput: listTransformationsBetaInput_1.ListTransformationsBetaInput,
     ListTransformationsBetaOutput: listTransformationsBetaOutput_1.ListTransformationsBetaOutput,
@@ -2106,8 +2083,6 @@ var typeMap = {
     UpdateTransformation200Response: updateTransformation200Response_1.UpdateTransformation200Response,
     UpdateTransformationBetaInput: updateTransformationBetaInput_1.UpdateTransformationBetaInput,
     UpdateTransformationBetaOutput: updateTransformationBetaOutput_1.UpdateTransformationBetaOutput,
-    UpdateTransformationFunctionInstanceAlphaInput: updateTransformationFunctionInstanceAlphaInput_1.UpdateTransformationFunctionInstanceAlphaInput,
-    UpdateTransformationFunctionInstanceAlphaOutput: updateTransformationFunctionInstanceAlphaOutput_1.UpdateTransformationFunctionInstanceAlphaOutput,
     UpdateTransformationV1Input: updateTransformationV1Input_1.UpdateTransformationV1Input,
     UpdateTransformationV1Output: updateTransformationV1Output_1.UpdateTransformationV1Output,
     UpdateUserGroup200Response: updateUserGroup200Response_1.UpdateUserGroup200Response,

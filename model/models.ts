@@ -194,8 +194,6 @@ export * from './deleteTrackingPlanV1Output';
 export * from './deleteTransformation200Response';
 export * from './deleteTransformationBetaInput';
 export * from './deleteTransformationBetaOutput';
-export * from './deleteTransformationFunctionInstanceAlphaInput';
-export * from './deleteTransformationFunctionInstanceAlphaOutput';
 export * from './deleteTransformationV1Output';
 export * from './deleteUserGroup200Response';
 export * from './deleteUserGroupV1Output';
@@ -314,8 +312,6 @@ export * from './getTrackingPlanV1Output';
 export * from './getTransformation200Response';
 export * from './getTransformationBetaInput';
 export * from './getTransformationBetaOutput';
-export * from './getTransformationFunctionInstanceAlphaInput';
-export * from './getTransformationFunctionInstanceAlphaOutput';
 export * from './getTransformationV1Output';
 export * from './getUser200Response';
 export * from './getUserGroup200Response';
@@ -436,8 +432,6 @@ export * from './listSyncsFromWarehouseAndSourceV1Output';
 export * from './listSyncsFromWarehouseV1Output';
 export * from './listTrackingPlans200Response';
 export * from './listTrackingPlansV1Output';
-export * from './listTransformationFunctionInstancesAlphaInput';
-export * from './listTransformationFunctionInstancesAlphaOutput';
 export * from './listTransformations200Response';
 export * from './listTransformationsBetaInput';
 export * from './listTransformationsBetaOutput';
@@ -643,8 +637,6 @@ export * from './updateTrackingPlanV1Output';
 export * from './updateTransformation200Response';
 export * from './updateTransformationBetaInput';
 export * from './updateTransformationBetaOutput';
-export * from './updateTransformationFunctionInstanceAlphaInput';
-export * from './updateTransformationFunctionInstanceAlphaOutput';
 export * from './updateTransformationV1Input';
 export * from './updateTransformationV1Output';
 export * from './updateUserGroup200Response';
@@ -871,8 +863,6 @@ import { DeleteTrackingPlanV1Output } from './deleteTrackingPlanV1Output';
 import { DeleteTransformation200Response } from './deleteTransformation200Response';
 import { DeleteTransformationBetaInput } from './deleteTransformationBetaInput';
 import { DeleteTransformationBetaOutput } from './deleteTransformationBetaOutput';
-import { DeleteTransformationFunctionInstanceAlphaInput } from './deleteTransformationFunctionInstanceAlphaInput';
-import { DeleteTransformationFunctionInstanceAlphaOutput } from './deleteTransformationFunctionInstanceAlphaOutput';
 import { DeleteTransformationV1Output } from './deleteTransformationV1Output';
 import { DeleteUserGroup200Response } from './deleteUserGroup200Response';
 import { DeleteUserGroupV1Output } from './deleteUserGroupV1Output';
@@ -991,8 +981,6 @@ import { GetTrackingPlanV1Output } from './getTrackingPlanV1Output';
 import { GetTransformation200Response } from './getTransformation200Response';
 import { GetTransformationBetaInput } from './getTransformationBetaInput';
 import { GetTransformationBetaOutput } from './getTransformationBetaOutput';
-import { GetTransformationFunctionInstanceAlphaInput } from './getTransformationFunctionInstanceAlphaInput';
-import { GetTransformationFunctionInstanceAlphaOutput } from './getTransformationFunctionInstanceAlphaOutput';
 import { GetTransformationV1Output } from './getTransformationV1Output';
 import { GetUser200Response } from './getUser200Response';
 import { GetUserGroup200Response } from './getUserGroup200Response';
@@ -1113,8 +1101,6 @@ import { ListSyncsFromWarehouseAndSourceV1Output } from './listSyncsFromWarehous
 import { ListSyncsFromWarehouseV1Output } from './listSyncsFromWarehouseV1Output';
 import { ListTrackingPlans200Response } from './listTrackingPlans200Response';
 import { ListTrackingPlansV1Output } from './listTrackingPlansV1Output';
-import { ListTransformationFunctionInstancesAlphaInput } from './listTransformationFunctionInstancesAlphaInput';
-import { ListTransformationFunctionInstancesAlphaOutput } from './listTransformationFunctionInstancesAlphaOutput';
 import { ListTransformations200Response } from './listTransformations200Response';
 import { ListTransformationsBetaInput } from './listTransformationsBetaInput';
 import { ListTransformationsBetaOutput } from './listTransformationsBetaOutput';
@@ -1320,8 +1306,6 @@ import { UpdateTrackingPlanV1Output } from './updateTrackingPlanV1Output';
 import { UpdateTransformation200Response } from './updateTransformation200Response';
 import { UpdateTransformationBetaInput } from './updateTransformationBetaInput';
 import { UpdateTransformationBetaOutput } from './updateTransformationBetaOutput';
-import { UpdateTransformationFunctionInstanceAlphaInput } from './updateTransformationFunctionInstanceAlphaInput';
-import { UpdateTransformationFunctionInstanceAlphaOutput } from './updateTransformationFunctionInstanceAlphaOutput';
 import { UpdateTransformationV1Input } from './updateTransformationV1Input';
 import { UpdateTransformationV1Output } from './updateTransformationV1Output';
 import { UpdateUserGroup200Response } from './updateUserGroup200Response';
@@ -1414,8 +1398,6 @@ let enumsMap: { [index: string]: any } = {
         DeleteTrackingPlanV1Output.StatusEnum,
     'DeleteTransformationBetaOutput.StatusEnum':
         DeleteTransformationBetaOutput.StatusEnum,
-    'DeleteTransformationFunctionInstanceAlphaOutput.StatusEnum':
-        DeleteTransformationFunctionInstanceAlphaOutput.StatusEnum,
     'DeleteTransformationV1Output.StatusEnum':
         DeleteTransformationV1Output.StatusEnum,
     'DeleteUserGroupV1Output.StatusEnum': DeleteUserGroupV1Output.StatusEnum,
@@ -1752,10 +1734,6 @@ let typeMap: { [index: string]: any } = {
     DeleteTransformation200Response: DeleteTransformation200Response,
     DeleteTransformationBetaInput: DeleteTransformationBetaInput,
     DeleteTransformationBetaOutput: DeleteTransformationBetaOutput,
-    DeleteTransformationFunctionInstanceAlphaInput:
-        DeleteTransformationFunctionInstanceAlphaInput,
-    DeleteTransformationFunctionInstanceAlphaOutput:
-        DeleteTransformationFunctionInstanceAlphaOutput,
     DeleteTransformationV1Output: DeleteTransformationV1Output,
     DeleteUserGroup200Response: DeleteUserGroup200Response,
     DeleteUserGroupV1Output: DeleteUserGroupV1Output,
@@ -1892,10 +1870,6 @@ let typeMap: { [index: string]: any } = {
     GetTransformation200Response: GetTransformation200Response,
     GetTransformationBetaInput: GetTransformationBetaInput,
     GetTransformationBetaOutput: GetTransformationBetaOutput,
-    GetTransformationFunctionInstanceAlphaInput:
-        GetTransformationFunctionInstanceAlphaInput,
-    GetTransformationFunctionInstanceAlphaOutput:
-        GetTransformationFunctionInstanceAlphaOutput,
     GetTransformationV1Output: GetTransformationV1Output,
     GetUser200Response: GetUser200Response,
     GetUserGroup200Response: GetUserGroup200Response,
@@ -2054,10 +2028,6 @@ let typeMap: { [index: string]: any } = {
     ListSyncsFromWarehouseV1Output: ListSyncsFromWarehouseV1Output,
     ListTrackingPlans200Response: ListTrackingPlans200Response,
     ListTrackingPlansV1Output: ListTrackingPlansV1Output,
-    ListTransformationFunctionInstancesAlphaInput:
-        ListTransformationFunctionInstancesAlphaInput,
-    ListTransformationFunctionInstancesAlphaOutput:
-        ListTransformationFunctionInstancesAlphaOutput,
     ListTransformations200Response: ListTransformations200Response,
     ListTransformationsBetaInput: ListTransformationsBetaInput,
     ListTransformationsBetaOutput: ListTransformationsBetaOutput,
@@ -2313,10 +2283,6 @@ let typeMap: { [index: string]: any } = {
     UpdateTransformation200Response: UpdateTransformation200Response,
     UpdateTransformationBetaInput: UpdateTransformationBetaInput,
     UpdateTransformationBetaOutput: UpdateTransformationBetaOutput,
-    UpdateTransformationFunctionInstanceAlphaInput:
-        UpdateTransformationFunctionInstanceAlphaInput,
-    UpdateTransformationFunctionInstanceAlphaOutput:
-        UpdateTransformationFunctionInstanceAlphaOutput,
     UpdateTransformationV1Input: UpdateTransformationV1Input,
     UpdateTransformationV1Output: UpdateTransformationV1Output,
     UpdateUserGroup200Response: UpdateUserGroup200Response,
