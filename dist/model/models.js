@@ -159,9 +159,6 @@ __exportStar(require("./createTrackingPlanV1Output"), exports);
 __exportStar(require("./createTransformation200Response"), exports);
 __exportStar(require("./createTransformationBetaInput"), exports);
 __exportStar(require("./createTransformationBetaOutput"), exports);
-__exportStar(require("./createTransformationFunctionInstance200Response"), exports);
-__exportStar(require("./createTransformationFunctionInstanceAlphaInput"), exports);
-__exportStar(require("./createTransformationFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./createTransformationV1Input"), exports);
 __exportStar(require("./createTransformationV1Output"), exports);
 __exportStar(require("./createUserGroup200Response"), exports);
@@ -586,7 +583,6 @@ __exportStar(require("./trackingPlanV1"), exports);
 __exportStar(require("./traitDefinition"), exports);
 __exportStar(require("./traitOptions"), exports);
 __exportStar(require("./transformationBeta"), exports);
-__exportStar(require("./transformationFunctionInstanceAlpha"), exports);
 __exportStar(require("./transformationV1"), exports);
 __exportStar(require("./updateActivationForAudience200Response"), exports);
 __exportStar(require("./updateActivationForAudienceAlphaInput"), exports);
@@ -815,9 +811,6 @@ var createTrackingPlanV1Output_1 = require("./createTrackingPlanV1Output");
 var createTransformation200Response_1 = require("./createTransformation200Response");
 var createTransformationBetaInput_1 = require("./createTransformationBetaInput");
 var createTransformationBetaOutput_1 = require("./createTransformationBetaOutput");
-var createTransformationFunctionInstance200Response_1 = require("./createTransformationFunctionInstance200Response");
-var createTransformationFunctionInstanceAlphaInput_1 = require("./createTransformationFunctionInstanceAlphaInput");
-var createTransformationFunctionInstanceAlphaOutput_1 = require("./createTransformationFunctionInstanceAlphaOutput");
 var createTransformationV1Input_1 = require("./createTransformationV1Input");
 var createTransformationV1Output_1 = require("./createTransformationV1Output");
 var createUserGroup200Response_1 = require("./createUserGroup200Response");
@@ -1242,7 +1235,6 @@ var trackingPlanV1_1 = require("./trackingPlanV1");
 var traitDefinition_1 = require("./traitDefinition");
 var traitOptions_1 = require("./traitOptions");
 var transformationBeta_1 = require("./transformationBeta");
-var transformationFunctionInstanceAlpha_1 = require("./transformationFunctionInstanceAlpha");
 var transformationV1_1 = require("./transformationV1");
 var updateActivationForAudience200Response_1 = require("./updateActivationForAudience200Response");
 var updateActivationForAudienceAlphaInput_1 = require("./updateActivationForAudienceAlphaInput");
@@ -1590,9 +1582,6 @@ var typeMap = {
     CreateTransformation200Response: createTransformation200Response_1.CreateTransformation200Response,
     CreateTransformationBetaInput: createTransformationBetaInput_1.CreateTransformationBetaInput,
     CreateTransformationBetaOutput: createTransformationBetaOutput_1.CreateTransformationBetaOutput,
-    CreateTransformationFunctionInstance200Response: createTransformationFunctionInstance200Response_1.CreateTransformationFunctionInstance200Response,
-    CreateTransformationFunctionInstanceAlphaInput: createTransformationFunctionInstanceAlphaInput_1.CreateTransformationFunctionInstanceAlphaInput,
-    CreateTransformationFunctionInstanceAlphaOutput: createTransformationFunctionInstanceAlphaOutput_1.CreateTransformationFunctionInstanceAlphaOutput,
     CreateTransformationV1Input: createTransformationV1Input_1.CreateTransformationV1Input,
     CreateTransformationV1Output: createTransformationV1Output_1.CreateTransformationV1Output,
     CreateUserGroup200Response: createUserGroup200Response_1.CreateUserGroup200Response,
@@ -2017,7 +2006,6 @@ var typeMap = {
     TraitDefinition: traitDefinition_1.TraitDefinition,
     TraitOptions: traitOptions_1.TraitOptions,
     TransformationBeta: transformationBeta_1.TransformationBeta,
-    TransformationFunctionInstanceAlpha: transformationFunctionInstanceAlpha_1.TransformationFunctionInstanceAlpha,
     TransformationV1: transformationV1_1.TransformationV1,
     UpdateActivationForAudience200Response: updateActivationForAudience200Response_1.UpdateActivationForAudience200Response,
     UpdateActivationForAudienceAlphaInput: updateActivationForAudienceAlphaInput_1.UpdateActivationForAudienceAlphaInput,

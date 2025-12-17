@@ -144,9 +144,6 @@ export * from './createTrackingPlanV1Output';
 export * from './createTransformation200Response';
 export * from './createTransformationBetaInput';
 export * from './createTransformationBetaOutput';
-export * from './createTransformationFunctionInstance200Response';
-export * from './createTransformationFunctionInstanceAlphaInput';
-export * from './createTransformationFunctionInstanceAlphaOutput';
 export * from './createTransformationV1Input';
 export * from './createTransformationV1Output';
 export * from './createUserGroup200Response';
@@ -571,7 +568,6 @@ export * from './trackingPlanV1';
 export * from './traitDefinition';
 export * from './traitOptions';
 export * from './transformationBeta';
-export * from './transformationFunctionInstanceAlpha';
 export * from './transformationV1';
 export * from './updateActivationForAudience200Response';
 export * from './updateActivationForAudienceAlphaInput';
@@ -813,9 +809,6 @@ import { CreateTrackingPlanV1Output } from './createTrackingPlanV1Output';
 import { CreateTransformation200Response } from './createTransformation200Response';
 import { CreateTransformationBetaInput } from './createTransformationBetaInput';
 import { CreateTransformationBetaOutput } from './createTransformationBetaOutput';
-import { CreateTransformationFunctionInstance200Response } from './createTransformationFunctionInstance200Response';
-import { CreateTransformationFunctionInstanceAlphaInput } from './createTransformationFunctionInstanceAlphaInput';
-import { CreateTransformationFunctionInstanceAlphaOutput } from './createTransformationFunctionInstanceAlphaOutput';
 import { CreateTransformationV1Input } from './createTransformationV1Input';
 import { CreateTransformationV1Output } from './createTransformationV1Output';
 import { CreateUserGroup200Response } from './createUserGroup200Response';
@@ -1240,7 +1233,6 @@ import { TrackingPlanV1 } from './trackingPlanV1';
 import { TraitDefinition } from './traitDefinition';
 import { TraitOptions } from './traitOptions';
 import { TransformationBeta } from './transformationBeta';
-import { TransformationFunctionInstanceAlpha } from './transformationFunctionInstanceAlpha';
 import { TransformationV1 } from './transformationV1';
 import { UpdateActivationForAudience200Response } from './updateActivationForAudience200Response';
 import { UpdateActivationForAudienceAlphaInput } from './updateActivationForAudienceAlphaInput';
@@ -1678,12 +1670,6 @@ let typeMap: { [index: string]: any } = {
     CreateTransformation200Response: CreateTransformation200Response,
     CreateTransformationBetaInput: CreateTransformationBetaInput,
     CreateTransformationBetaOutput: CreateTransformationBetaOutput,
-    CreateTransformationFunctionInstance200Response:
-        CreateTransformationFunctionInstance200Response,
-    CreateTransformationFunctionInstanceAlphaInput:
-        CreateTransformationFunctionInstanceAlphaInput,
-    CreateTransformationFunctionInstanceAlphaOutput:
-        CreateTransformationFunctionInstanceAlphaOutput,
     CreateTransformationV1Input: CreateTransformationV1Input,
     CreateTransformationV1Output: CreateTransformationV1Output,
     CreateUserGroup200Response: CreateUserGroup200Response,
@@ -2191,7 +2177,6 @@ let typeMap: { [index: string]: any } = {
     TraitDefinition: TraitDefinition,
     TraitOptions: TraitOptions,
     TransformationBeta: TransformationBeta,
-    TransformationFunctionInstanceAlpha: TransformationFunctionInstanceAlpha,
     TransformationV1: TransformationV1,
     UpdateActivationForAudience200Response:
         UpdateActivationForAudience200Response,
