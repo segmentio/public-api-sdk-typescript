@@ -83,10 +83,13 @@ __exportStar(require("./connection"), exports);
 __exportStar(require("./contact"), exports);
 __exportStar(require("./createAudience200Response"), exports);
 __exportStar(require("./createAudience200Response1"), exports);
+__exportStar(require("./createAudience200Response2"), exports);
 __exportStar(require("./createAudienceAlphaInput"), exports);
 __exportStar(require("./createAudienceAlphaOutput"), exports);
 __exportStar(require("./createAudienceBetaInput"), exports);
 __exportStar(require("./createAudienceBetaOutput"), exports);
+__exportStar(require("./createAudienceInput"), exports);
+__exportStar(require("./createAudienceOutput"), exports);
 __exportStar(require("./createAudiencePreview200Response"), exports);
 __exportStar(require("./createAudiencePreview200Response1"), exports);
 __exportStar(require("./createAudiencePreviewAlphaInput"), exports);
@@ -735,10 +738,13 @@ var connection_1 = require("./connection");
 var contact_1 = require("./contact");
 var createAudience200Response_1 = require("./createAudience200Response");
 var createAudience200Response1_1 = require("./createAudience200Response1");
+var createAudience200Response2_1 = require("./createAudience200Response2");
 var createAudienceAlphaInput_1 = require("./createAudienceAlphaInput");
 var createAudienceAlphaOutput_1 = require("./createAudienceAlphaOutput");
 var createAudienceBetaInput_1 = require("./createAudienceBetaInput");
 var createAudienceBetaOutput_1 = require("./createAudienceBetaOutput");
+var createAudienceInput_1 = require("./createAudienceInput");
+var createAudienceOutput_1 = require("./createAudienceOutput");
 var createAudiencePreview200Response_1 = require("./createAudiencePreview200Response");
 var createAudiencePreview200Response1_1 = require("./createAudiencePreview200Response1");
 var createAudiencePreviewAlphaInput_1 = require("./createAudiencePreviewAlphaInput");
@@ -1343,6 +1349,7 @@ var enumsMap = {
     'ComputedTraitsDefinition.TypeEnum': computedTraitsDefinition_1.ComputedTraitsDefinition.TypeEnum,
     'CreateAudienceAlphaInput.AudienceTypeEnum': createAudienceAlphaInput_1.CreateAudienceAlphaInput.AudienceTypeEnum,
     'CreateAudienceBetaInput.AudienceTypeEnum': createAudienceBetaInput_1.CreateAudienceBetaInput.AudienceTypeEnum,
+    'CreateAudienceInput.AudienceTypeEnum': createAudienceInput_1.CreateAudienceInput.AudienceTypeEnum,
     'CreateAudiencePreviewAlphaInput.AudienceTypeEnum': createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
     'CreateAudiencePreviewBetaInput.AudienceTypeEnum': createAudiencePreviewBetaInput_1.CreateAudiencePreviewBetaInput.AudienceTypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
@@ -1506,10 +1513,13 @@ var typeMap = {
     Contact: contact_1.Contact,
     CreateAudience200Response: createAudience200Response_1.CreateAudience200Response,
     CreateAudience200Response1: createAudience200Response1_1.CreateAudience200Response1,
+    CreateAudience200Response2: createAudience200Response2_1.CreateAudience200Response2,
     CreateAudienceAlphaInput: createAudienceAlphaInput_1.CreateAudienceAlphaInput,
     CreateAudienceAlphaOutput: createAudienceAlphaOutput_1.CreateAudienceAlphaOutput,
     CreateAudienceBetaInput: createAudienceBetaInput_1.CreateAudienceBetaInput,
     CreateAudienceBetaOutput: createAudienceBetaOutput_1.CreateAudienceBetaOutput,
+    CreateAudienceInput: createAudienceInput_1.CreateAudienceInput,
+    CreateAudienceOutput: createAudienceOutput_1.CreateAudienceOutput,
     CreateAudiencePreview200Response: createAudiencePreview200Response_1.CreateAudiencePreview200Response,
     CreateAudiencePreview200Response1: createAudiencePreview200Response1_1.CreateAudiencePreview200Response1,
     CreateAudiencePreviewAlphaInput: createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput,

@@ -1,0 +1,28 @@
+import { AudienceDefinition } from './audienceDefinition';
+import { AudienceOptions } from './audienceOptions';
+export declare class CreateAudienceInput {
+    'name': string;
+    'enabled'?: boolean;
+    'description'?: string;
+    'definition': AudienceDefinition;
+    'audienceType': CreateAudienceInput.AudienceTypeEnum;
+    'options'?: AudienceOptions;
+    static discriminator: string | undefined;
+    static attributeTypeMap: Array<{
+        name: string;
+        baseName: string;
+        type: string;
+    }>;
+    static getAttributeTypeMap(): {
+        name: string;
+        baseName: string;
+        type: string;
+    }[];
+}
+export declare namespace CreateAudienceInput {
+    enum AudienceTypeEnum {
+        ACCOUNTS,
+        LINKED,
+        USERS
+    }
+}

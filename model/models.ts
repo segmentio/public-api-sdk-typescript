@@ -68,10 +68,13 @@ export * from './connection';
 export * from './contact';
 export * from './createAudience200Response';
 export * from './createAudience200Response1';
+export * from './createAudience200Response2';
 export * from './createAudienceAlphaInput';
 export * from './createAudienceAlphaOutput';
 export * from './createAudienceBetaInput';
 export * from './createAudienceBetaOutput';
+export * from './createAudienceInput';
+export * from './createAudienceOutput';
 export * from './createAudiencePreview200Response';
 export * from './createAudiencePreview200Response1';
 export * from './createAudiencePreviewAlphaInput';
@@ -733,10 +736,13 @@ import { Connection } from './connection';
 import { Contact } from './contact';
 import { CreateAudience200Response } from './createAudience200Response';
 import { CreateAudience200Response1 } from './createAudience200Response1';
+import { CreateAudience200Response2 } from './createAudience200Response2';
 import { CreateAudienceAlphaInput } from './createAudienceAlphaInput';
 import { CreateAudienceAlphaOutput } from './createAudienceAlphaOutput';
 import { CreateAudienceBetaInput } from './createAudienceBetaInput';
 import { CreateAudienceBetaOutput } from './createAudienceBetaOutput';
+import { CreateAudienceInput } from './createAudienceInput';
+import { CreateAudienceOutput } from './createAudienceOutput';
 import { CreateAudiencePreview200Response } from './createAudiencePreview200Response';
 import { CreateAudiencePreview200Response1 } from './createAudiencePreview200Response1';
 import { CreateAudiencePreviewAlphaInput } from './createAudiencePreviewAlphaInput';
@@ -1350,6 +1356,8 @@ let enumsMap: { [index: string]: any } = {
         CreateAudienceAlphaInput.AudienceTypeEnum,
     'CreateAudienceBetaInput.AudienceTypeEnum':
         CreateAudienceBetaInput.AudienceTypeEnum,
+    'CreateAudienceInput.AudienceTypeEnum':
+        CreateAudienceInput.AudienceTypeEnum,
     'CreateAudiencePreviewAlphaInput.AudienceTypeEnum':
         CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
     'CreateAudiencePreviewBetaInput.AudienceTypeEnum':
@@ -1585,10 +1593,13 @@ let typeMap: { [index: string]: any } = {
     Contact: Contact,
     CreateAudience200Response: CreateAudience200Response,
     CreateAudience200Response1: CreateAudience200Response1,
+    CreateAudience200Response2: CreateAudience200Response2,
     CreateAudienceAlphaInput: CreateAudienceAlphaInput,
     CreateAudienceAlphaOutput: CreateAudienceAlphaOutput,
     CreateAudienceBetaInput: CreateAudienceBetaInput,
     CreateAudienceBetaOutput: CreateAudienceBetaOutput,
+    CreateAudienceInput: CreateAudienceInput,
+    CreateAudienceOutput: CreateAudienceOutput,
     CreateAudiencePreview200Response: CreateAudiencePreview200Response,
     CreateAudiencePreview200Response1: CreateAudiencePreview200Response1,
     CreateAudiencePreviewAlphaInput: CreateAudiencePreviewAlphaInput,
