@@ -1,6 +1,6 @@
-import { RemoveAudienceFromSpaceBetaOutput } from './removeAudienceFromSpaceBetaOutput';
+import { RemoveAudienceFromSpaceOutput } from './removeAudienceFromSpaceOutput';
 export declare class RemoveAudienceFromSpace200Response {
-    'data'?: RemoveAudienceFromSpaceBetaOutput;
+    'data'?: RemoveAudienceFromSpaceOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
