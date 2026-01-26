@@ -12,7 +12,7 @@ var CreateAudience200Response1 = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'CreateAudienceAlphaOutput',
+            type: 'CreateAudienceBetaOutput',
         },
     ];
     return CreateAudience200Response1;

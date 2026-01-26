@@ -3,7 +3,7 @@ import http from 'http';
 import { AddAudienceScheduleToAudience200Response } from '../model/addAudienceScheduleToAudience200Response';
 import { AddAudienceScheduleToAudienceAlphaInput } from '../model/addAudienceScheduleToAudienceAlphaInput';
 import { CreateAudience200Response } from '../model/createAudience200Response';
-import { CreateAudienceBetaInput } from '../model/createAudienceBetaInput';
+import { CreateAudienceInput } from '../model/createAudienceInput';
 import { CreateAudiencePreview200Response } from '../model/createAudiencePreview200Response';
 import { CreateAudiencePreviewBetaInput } from '../model/createAudiencePreviewBetaInput';
 import { ForceExecuteAudienceRun200Response } from '../model/forceExecuteAudienceRun200Response';
@@ -54,7 +54,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: AddAudienceScheduleToAudience200Response;
     }>;
-    createAudience(spaceId: string, CreateAudienceBetaInput: CreateAudienceBetaInput, options?: {
+    createAudience(spaceId: string, CreateAudienceInput: CreateAudienceInput, options?: {
         headers: {
             [name: string]: string;
         };
