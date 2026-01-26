@@ -490,6 +490,8 @@ export * from './removeAudienceScheduleFromAudience200Response';
 export * from './removeAudienceScheduleFromAudienceAlphaOutput';
 export * from './removeComputedTraitFromSpace200Response';
 export * from './removeComputedTraitFromSpaceAlphaOutput';
+export * from './removeDestinationFromAudience200Response';
+export * from './removeDestinationFromAudienceAlphaOutput';
 export * from './removeFilterFromDestination200Response';
 export * from './removeFilterFromDestinationV1Output';
 export * from './removeProfilesWarehouseFromSpace200Response';

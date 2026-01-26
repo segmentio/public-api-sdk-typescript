@@ -10,6 +10,7 @@ import { ListDestinationsFromAudience200Response } from '../model/listDestinatio
 import { ListSupportedDestinationsFromAudience200Response } from '../model/listSupportedDestinationsFromAudience200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { RemoveActivationFromAudience200Response } from '../model/removeActivationFromAudience200Response';
+import { RemoveDestinationFromAudience200Response } from '../model/removeDestinationFromAudience200Response';
 import { UpdateActivationForAudience200Response } from '../model/updateActivationForAudience200Response';
 import { UpdateActivationForAudienceAlphaInput } from '../model/updateActivationForAudienceAlphaInput';
 import { Authentication, Interceptor } from '../model/models';
@@ -90,6 +91,14 @@ export declare class ActivationsApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: RemoveActivationFromAudience200Response;
+    }>;
+    removeDestinationFromAudience(spaceId: string, audienceId: string, destinationId: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: RemoveDestinationFromAudience200Response;
     }>;
     updateActivationForAudience(spaceId: string, audienceId: string, id: string, UpdateActivationForAudienceAlphaInput: UpdateActivationForAudienceAlphaInput, options?: {
         headers: {

@@ -504,6 +504,8 @@ __exportStar(require("./removeAudienceScheduleFromAudience200Response"), exports
 __exportStar(require("./removeAudienceScheduleFromAudienceAlphaOutput"), exports);
 __exportStar(require("./removeComputedTraitFromSpace200Response"), exports);
 __exportStar(require("./removeComputedTraitFromSpaceAlphaOutput"), exports);
+__exportStar(require("./removeDestinationFromAudience200Response"), exports);
+__exportStar(require("./removeDestinationFromAudienceAlphaOutput"), exports);
 __exportStar(require("./removeFilterFromDestination200Response"), exports);
 __exportStar(require("./removeFilterFromDestinationV1Output"), exports);
 __exportStar(require("./removeProfilesWarehouseFromSpace200Response"), exports);
@@ -1159,6 +1161,8 @@ var removeAudienceScheduleFromAudience200Response_1 = require("./removeAudienceS
 var removeAudienceScheduleFromAudienceAlphaOutput_1 = require("./removeAudienceScheduleFromAudienceAlphaOutput");
 var removeComputedTraitFromSpace200Response_1 = require("./removeComputedTraitFromSpace200Response");
 var removeComputedTraitFromSpaceAlphaOutput_1 = require("./removeComputedTraitFromSpaceAlphaOutput");
+var removeDestinationFromAudience200Response_1 = require("./removeDestinationFromAudience200Response");
+var removeDestinationFromAudienceAlphaOutput_1 = require("./removeDestinationFromAudienceAlphaOutput");
 var removeFilterFromDestination200Response_1 = require("./removeFilterFromDestination200Response");
 var removeFilterFromDestinationV1Output_1 = require("./removeFilterFromDestinationV1Output");
 var removeProfilesWarehouseFromSpace200Response_1 = require("./removeProfilesWarehouseFromSpace200Response");
@@ -1418,6 +1422,7 @@ var enumsMap = {
     'RemoveAudienceFromSpaceBetaOutput.StatusEnum': removeAudienceFromSpaceBetaOutput_1.RemoveAudienceFromSpaceBetaOutput.StatusEnum,
     'RemoveAudienceScheduleFromAudienceAlphaOutput.StatusEnum': removeAudienceScheduleFromAudienceAlphaOutput_1.RemoveAudienceScheduleFromAudienceAlphaOutput.StatusEnum,
     'RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum': removeComputedTraitFromSpaceAlphaOutput_1.RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum,
+    'RemoveDestinationFromAudienceAlphaOutput.StatusEnum': removeDestinationFromAudienceAlphaOutput_1.RemoveDestinationFromAudienceAlphaOutput.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum': removeFilterFromDestinationV1Output_1.RemoveFilterFromDestinationV1Output.StatusEnum,
     'RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum': removeProfilesWarehouseFromSpaceAlphaOutput_1.RemoveProfilesWarehouseFromSpaceAlphaOutput.StatusEnum,
     'RemoveRuleV1.TypeEnum': removeRuleV1_1.RemoveRuleV1.TypeEnum,
@@ -1934,6 +1939,8 @@ var typeMap = {
     RemoveAudienceScheduleFromAudienceAlphaOutput: removeAudienceScheduleFromAudienceAlphaOutput_1.RemoveAudienceScheduleFromAudienceAlphaOutput,
     RemoveComputedTraitFromSpace200Response: removeComputedTraitFromSpace200Response_1.RemoveComputedTraitFromSpace200Response,
     RemoveComputedTraitFromSpaceAlphaOutput: removeComputedTraitFromSpaceAlphaOutput_1.RemoveComputedTraitFromSpaceAlphaOutput,
+    RemoveDestinationFromAudience200Response: removeDestinationFromAudience200Response_1.RemoveDestinationFromAudience200Response,
+    RemoveDestinationFromAudienceAlphaOutput: removeDestinationFromAudienceAlphaOutput_1.RemoveDestinationFromAudienceAlphaOutput,
     RemoveFilterFromDestination200Response: removeFilterFromDestination200Response_1.RemoveFilterFromDestination200Response,
     RemoveFilterFromDestinationV1Output: removeFilterFromDestinationV1Output_1.RemoveFilterFromDestinationV1Output,
     RemoveProfilesWarehouseFromSpace200Response: removeProfilesWarehouseFromSpace200Response_1.RemoveProfilesWarehouseFromSpace200Response,
