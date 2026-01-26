@@ -5,7 +5,7 @@ import { AddAudienceScheduleToAudienceAlphaInput } from '../model/addAudienceSch
 import { CreateAudience200Response } from '../model/createAudience200Response';
 import { CreateAudienceInput } from '../model/createAudienceInput';
 import { CreateAudiencePreview200Response } from '../model/createAudiencePreview200Response';
-import { CreateAudiencePreviewBetaInput } from '../model/createAudiencePreviewBetaInput';
+import { CreateAudiencePreviewInput } from '../model/createAudiencePreviewInput';
 import { ForceExecuteAudienceRun200Response } from '../model/forceExecuteAudienceRun200Response';
 import { GetAudience200Response } from '../model/getAudience200Response';
 import { GetAudiencePreview200Response } from '../model/getAudiencePreview200Response';
@@ -20,7 +20,7 @@ import { PaginationInput } from '../model/paginationInput';
 import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromSpace200Response';
 import { RemoveAudienceScheduleFromAudience200Response } from '../model/removeAudienceScheduleFromAudience200Response';
 import { UpdateAudienceForSpace200Response } from '../model/updateAudienceForSpace200Response';
-import { UpdateAudienceForSpaceBetaInput } from '../model/updateAudienceForSpaceBetaInput';
+import { UpdateAudienceForSpaceInput } from '../model/updateAudienceForSpaceInput';
 import { UpdateAudienceScheduleForAudience200Response } from '../model/updateAudienceScheduleForAudience200Response';
 import { UpdateAudienceScheduleForAudienceAlphaInput } from '../model/updateAudienceScheduleForAudienceAlphaInput';
 import { Authentication, Interceptor } from '../model/models';
@@ -62,7 +62,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: CreateAudience200Response;
     }>;
-    createAudiencePreview(spaceId: string, CreateAudiencePreviewBetaInput: CreateAudiencePreviewBetaInput, options?: {
+    createAudiencePreview(spaceId: string, CreateAudiencePreviewInput: CreateAudiencePreviewInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -142,7 +142,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: RemoveAudienceScheduleFromAudience200Response;
     }>;
-    updateAudienceForSpace(spaceId: string, id: string, UpdateAudienceForSpaceBetaInput: UpdateAudienceForSpaceBetaInput, options?: {
+    updateAudienceForSpace(spaceId: string, id: string, UpdateAudienceForSpaceInput: UpdateAudienceForSpaceInput, options?: {
         headers: {
             [name: string]: string;
         };

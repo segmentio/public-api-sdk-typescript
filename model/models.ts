@@ -77,11 +77,14 @@ export * from './createAudienceInput';
 export * from './createAudienceOutput';
 export * from './createAudiencePreview200Response';
 export * from './createAudiencePreview200Response1';
+export * from './createAudiencePreview200Response2';
 export * from './createAudiencePreviewAlphaInput';
 export * from './createAudiencePreviewAlphaOutput';
 export * from './createAudiencePreviewBetaInput';
 export * from './createAudiencePreviewBetaOutput';
+export * from './createAudiencePreviewInput';
 export * from './createAudiencePreviewOptions';
+export * from './createAudiencePreviewOutput';
 export * from './createCloudSourceRegulation200Response';
 export * from './createCloudSourceRegulationV1Input';
 export * from './createCloudSourceRegulationV1Output';
@@ -243,12 +246,16 @@ export * from './getAdvancedSyncScheduleFromWarehouse200Response';
 export * from './getAdvancedSyncScheduleFromWarehouseV1Output';
 export * from './getAudience200Response';
 export * from './getAudience200Response1';
+export * from './getAudience200Response2';
 export * from './getAudienceAlphaOutput';
 export * from './getAudienceBetaOutput';
+export * from './getAudienceOutput';
 export * from './getAudiencePreview200Response';
 export * from './getAudiencePreview200Response1';
+export * from './getAudiencePreview200Response2';
 export * from './getAudiencePreviewAlphaOutput';
 export * from './getAudiencePreviewBetaOutput';
+export * from './getAudiencePreviewOutput';
 export * from './getAudienceScheduleFromSpaceAndAudience200Response';
 export * from './getAudienceScheduleFromSpaceAndAudienceAlphaOutput';
 export * from './getComputedTrait200Response';
@@ -350,8 +357,10 @@ export * from './listAudienceSchedulesFromSpaceAndAudienceAlphaOutput';
 export * from './listAudienceSearchInput';
 export * from './listAudiences200Response';
 export * from './listAudiences200Response1';
+export * from './listAudiences200Response2';
 export * from './listAudiencesAlphaOutput';
 export * from './listAudiencesBetaOutput';
+export * from './listAudiencesOutput';
 export * from './listAudiencesPaginationInput';
 export * from './listAuditEvents200Response';
 export * from './listAuditEventsV1Output';
@@ -579,10 +588,13 @@ export * from './updateActivationForAudienceAlphaInput';
 export * from './updateActivationForAudienceOutput';
 export * from './updateAudienceForSpace200Response';
 export * from './updateAudienceForSpace200Response1';
+export * from './updateAudienceForSpace200Response2';
 export * from './updateAudienceForSpaceAlphaInput';
 export * from './updateAudienceForSpaceAlphaOutput';
 export * from './updateAudienceForSpaceBetaInput';
 export * from './updateAudienceForSpaceBetaOutput';
+export * from './updateAudienceForSpaceInput';
+export * from './updateAudienceForSpaceOutput';
 export * from './updateAudienceScheduleForAudience200Response';
 export * from './updateAudienceScheduleForAudienceAlphaInput';
 export * from './updateAudienceScheduleForAudienceAlphaOutput';
@@ -747,11 +759,14 @@ import { CreateAudienceInput } from './createAudienceInput';
 import { CreateAudienceOutput } from './createAudienceOutput';
 import { CreateAudiencePreview200Response } from './createAudiencePreview200Response';
 import { CreateAudiencePreview200Response1 } from './createAudiencePreview200Response1';
+import { CreateAudiencePreview200Response2 } from './createAudiencePreview200Response2';
 import { CreateAudiencePreviewAlphaInput } from './createAudiencePreviewAlphaInput';
 import { CreateAudiencePreviewAlphaOutput } from './createAudiencePreviewAlphaOutput';
 import { CreateAudiencePreviewBetaInput } from './createAudiencePreviewBetaInput';
 import { CreateAudiencePreviewBetaOutput } from './createAudiencePreviewBetaOutput';
+import { CreateAudiencePreviewInput } from './createAudiencePreviewInput';
 import { CreateAudiencePreviewOptions } from './createAudiencePreviewOptions';
+import { CreateAudiencePreviewOutput } from './createAudiencePreviewOutput';
 import { CreateCloudSourceRegulation200Response } from './createCloudSourceRegulation200Response';
 import { CreateCloudSourceRegulationV1Input } from './createCloudSourceRegulationV1Input';
 import { CreateCloudSourceRegulationV1Output } from './createCloudSourceRegulationV1Output';
@@ -913,12 +928,16 @@ import { GetAdvancedSyncScheduleFromWarehouse200Response } from './getAdvancedSy
 import { GetAdvancedSyncScheduleFromWarehouseV1Output } from './getAdvancedSyncScheduleFromWarehouseV1Output';
 import { GetAudience200Response } from './getAudience200Response';
 import { GetAudience200Response1 } from './getAudience200Response1';
+import { GetAudience200Response2 } from './getAudience200Response2';
 import { GetAudienceAlphaOutput } from './getAudienceAlphaOutput';
 import { GetAudienceBetaOutput } from './getAudienceBetaOutput';
+import { GetAudienceOutput } from './getAudienceOutput';
 import { GetAudiencePreview200Response } from './getAudiencePreview200Response';
 import { GetAudiencePreview200Response1 } from './getAudiencePreview200Response1';
+import { GetAudiencePreview200Response2 } from './getAudiencePreview200Response2';
 import { GetAudiencePreviewAlphaOutput } from './getAudiencePreviewAlphaOutput';
 import { GetAudiencePreviewBetaOutput } from './getAudiencePreviewBetaOutput';
+import { GetAudiencePreviewOutput } from './getAudiencePreviewOutput';
 import { GetAudienceScheduleFromSpaceAndAudience200Response } from './getAudienceScheduleFromSpaceAndAudience200Response';
 import { GetAudienceScheduleFromSpaceAndAudienceAlphaOutput } from './getAudienceScheduleFromSpaceAndAudienceAlphaOutput';
 import { GetComputedTrait200Response } from './getComputedTrait200Response';
@@ -1020,8 +1039,10 @@ import { ListAudienceSchedulesFromSpaceAndAudienceAlphaOutput } from './listAudi
 import { ListAudienceSearchInput } from './listAudienceSearchInput';
 import { ListAudiences200Response } from './listAudiences200Response';
 import { ListAudiences200Response1 } from './listAudiences200Response1';
+import { ListAudiences200Response2 } from './listAudiences200Response2';
 import { ListAudiencesAlphaOutput } from './listAudiencesAlphaOutput';
 import { ListAudiencesBetaOutput } from './listAudiencesBetaOutput';
+import { ListAudiencesOutput } from './listAudiencesOutput';
 import { ListAudiencesPaginationInput } from './listAudiencesPaginationInput';
 import { ListAuditEvents200Response } from './listAuditEvents200Response';
 import { ListAuditEventsV1Output } from './listAuditEventsV1Output';
@@ -1249,10 +1270,13 @@ import { UpdateActivationForAudienceAlphaInput } from './updateActivationForAudi
 import { UpdateActivationForAudienceOutput } from './updateActivationForAudienceOutput';
 import { UpdateAudienceForSpace200Response } from './updateAudienceForSpace200Response';
 import { UpdateAudienceForSpace200Response1 } from './updateAudienceForSpace200Response1';
+import { UpdateAudienceForSpace200Response2 } from './updateAudienceForSpace200Response2';
 import { UpdateAudienceForSpaceAlphaInput } from './updateAudienceForSpaceAlphaInput';
 import { UpdateAudienceForSpaceAlphaOutput } from './updateAudienceForSpaceAlphaOutput';
 import { UpdateAudienceForSpaceBetaInput } from './updateAudienceForSpaceBetaInput';
 import { UpdateAudienceForSpaceBetaOutput } from './updateAudienceForSpaceBetaOutput';
+import { UpdateAudienceForSpaceInput } from './updateAudienceForSpaceInput';
+import { UpdateAudienceForSpaceOutput } from './updateAudienceForSpaceOutput';
 import { UpdateAudienceScheduleForAudience200Response } from './updateAudienceScheduleForAudience200Response';
 import { UpdateAudienceScheduleForAudienceAlphaInput } from './updateAudienceScheduleForAudienceAlphaInput';
 import { UpdateAudienceScheduleForAudienceAlphaOutput } from './updateAudienceScheduleForAudienceAlphaOutput';
@@ -1366,6 +1390,8 @@ let enumsMap: { [index: string]: any } = {
         CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
     'CreateAudiencePreviewBetaInput.AudienceTypeEnum':
         CreateAudiencePreviewBetaInput.AudienceTypeEnum,
+    'CreateAudiencePreviewInput.AudienceTypeEnum':
+        CreateAudiencePreviewInput.AudienceTypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum':
         CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum':
@@ -1608,11 +1634,14 @@ let typeMap: { [index: string]: any } = {
     CreateAudienceOutput: CreateAudienceOutput,
     CreateAudiencePreview200Response: CreateAudiencePreview200Response,
     CreateAudiencePreview200Response1: CreateAudiencePreview200Response1,
+    CreateAudiencePreview200Response2: CreateAudiencePreview200Response2,
     CreateAudiencePreviewAlphaInput: CreateAudiencePreviewAlphaInput,
     CreateAudiencePreviewAlphaOutput: CreateAudiencePreviewAlphaOutput,
     CreateAudiencePreviewBetaInput: CreateAudiencePreviewBetaInput,
     CreateAudiencePreviewBetaOutput: CreateAudiencePreviewBetaOutput,
+    CreateAudiencePreviewInput: CreateAudiencePreviewInput,
     CreateAudiencePreviewOptions: CreateAudiencePreviewOptions,
+    CreateAudiencePreviewOutput: CreateAudiencePreviewOutput,
     CreateCloudSourceRegulation200Response:
         CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: CreateCloudSourceRegulationV1Input,
@@ -1790,12 +1819,16 @@ let typeMap: { [index: string]: any } = {
         GetAdvancedSyncScheduleFromWarehouseV1Output,
     GetAudience200Response: GetAudience200Response,
     GetAudience200Response1: GetAudience200Response1,
+    GetAudience200Response2: GetAudience200Response2,
     GetAudienceAlphaOutput: GetAudienceAlphaOutput,
     GetAudienceBetaOutput: GetAudienceBetaOutput,
+    GetAudienceOutput: GetAudienceOutput,
     GetAudiencePreview200Response: GetAudiencePreview200Response,
     GetAudiencePreview200Response1: GetAudiencePreview200Response1,
+    GetAudiencePreview200Response2: GetAudiencePreview200Response2,
     GetAudiencePreviewAlphaOutput: GetAudiencePreviewAlphaOutput,
     GetAudiencePreviewBetaOutput: GetAudiencePreviewBetaOutput,
+    GetAudiencePreviewOutput: GetAudiencePreviewOutput,
     GetAudienceScheduleFromSpaceAndAudience200Response:
         GetAudienceScheduleFromSpaceAndAudience200Response,
     GetAudienceScheduleFromSpaceAndAudienceAlphaOutput:
@@ -1916,8 +1949,10 @@ let typeMap: { [index: string]: any } = {
     ListAudienceSearchInput: ListAudienceSearchInput,
     ListAudiences200Response: ListAudiences200Response,
     ListAudiences200Response1: ListAudiences200Response1,
+    ListAudiences200Response2: ListAudiences200Response2,
     ListAudiencesAlphaOutput: ListAudiencesAlphaOutput,
     ListAudiencesBetaOutput: ListAudiencesBetaOutput,
+    ListAudiencesOutput: ListAudiencesOutput,
     ListAudiencesPaginationInput: ListAudiencesPaginationInput,
     ListAuditEvents200Response: ListAuditEvents200Response,
     ListAuditEventsV1Output: ListAuditEventsV1Output,
@@ -2204,10 +2239,13 @@ let typeMap: { [index: string]: any } = {
     UpdateActivationForAudienceOutput: UpdateActivationForAudienceOutput,
     UpdateAudienceForSpace200Response: UpdateAudienceForSpace200Response,
     UpdateAudienceForSpace200Response1: UpdateAudienceForSpace200Response1,
+    UpdateAudienceForSpace200Response2: UpdateAudienceForSpace200Response2,
     UpdateAudienceForSpaceAlphaInput: UpdateAudienceForSpaceAlphaInput,
     UpdateAudienceForSpaceAlphaOutput: UpdateAudienceForSpaceAlphaOutput,
     UpdateAudienceForSpaceBetaInput: UpdateAudienceForSpaceBetaInput,
     UpdateAudienceForSpaceBetaOutput: UpdateAudienceForSpaceBetaOutput,
+    UpdateAudienceForSpaceInput: UpdateAudienceForSpaceInput,
+    UpdateAudienceForSpaceOutput: UpdateAudienceForSpaceOutput,
     UpdateAudienceScheduleForAudience200Response:
         UpdateAudienceScheduleForAudience200Response,
     UpdateAudienceScheduleForAudienceAlphaInput:

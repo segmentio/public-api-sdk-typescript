@@ -92,11 +92,14 @@ __exportStar(require("./createAudienceInput"), exports);
 __exportStar(require("./createAudienceOutput"), exports);
 __exportStar(require("./createAudiencePreview200Response"), exports);
 __exportStar(require("./createAudiencePreview200Response1"), exports);
+__exportStar(require("./createAudiencePreview200Response2"), exports);
 __exportStar(require("./createAudiencePreviewAlphaInput"), exports);
 __exportStar(require("./createAudiencePreviewAlphaOutput"), exports);
 __exportStar(require("./createAudiencePreviewBetaInput"), exports);
 __exportStar(require("./createAudiencePreviewBetaOutput"), exports);
+__exportStar(require("./createAudiencePreviewInput"), exports);
 __exportStar(require("./createAudiencePreviewOptions"), exports);
+__exportStar(require("./createAudiencePreviewOutput"), exports);
 __exportStar(require("./createCloudSourceRegulation200Response"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Input"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Output"), exports);
@@ -258,12 +261,16 @@ __exportStar(require("./getAdvancedSyncScheduleFromWarehouse200Response"), expor
 __exportStar(require("./getAdvancedSyncScheduleFromWarehouseV1Output"), exports);
 __exportStar(require("./getAudience200Response"), exports);
 __exportStar(require("./getAudience200Response1"), exports);
+__exportStar(require("./getAudience200Response2"), exports);
 __exportStar(require("./getAudienceAlphaOutput"), exports);
 __exportStar(require("./getAudienceBetaOutput"), exports);
+__exportStar(require("./getAudienceOutput"), exports);
 __exportStar(require("./getAudiencePreview200Response"), exports);
 __exportStar(require("./getAudiencePreview200Response1"), exports);
+__exportStar(require("./getAudiencePreview200Response2"), exports);
 __exportStar(require("./getAudiencePreviewAlphaOutput"), exports);
 __exportStar(require("./getAudiencePreviewBetaOutput"), exports);
+__exportStar(require("./getAudiencePreviewOutput"), exports);
 __exportStar(require("./getAudienceScheduleFromSpaceAndAudience200Response"), exports);
 __exportStar(require("./getAudienceScheduleFromSpaceAndAudienceAlphaOutput"), exports);
 __exportStar(require("./getComputedTrait200Response"), exports);
@@ -365,8 +372,10 @@ __exportStar(require("./listAudienceSchedulesFromSpaceAndAudienceAlphaOutput"), 
 __exportStar(require("./listAudienceSearchInput"), exports);
 __exportStar(require("./listAudiences200Response"), exports);
 __exportStar(require("./listAudiences200Response1"), exports);
+__exportStar(require("./listAudiences200Response2"), exports);
 __exportStar(require("./listAudiencesAlphaOutput"), exports);
 __exportStar(require("./listAudiencesBetaOutput"), exports);
+__exportStar(require("./listAudiencesOutput"), exports);
 __exportStar(require("./listAudiencesPaginationInput"), exports);
 __exportStar(require("./listAuditEvents200Response"), exports);
 __exportStar(require("./listAuditEventsV1Output"), exports);
@@ -594,10 +603,13 @@ __exportStar(require("./updateActivationForAudienceAlphaInput"), exports);
 __exportStar(require("./updateActivationForAudienceOutput"), exports);
 __exportStar(require("./updateAudienceForSpace200Response"), exports);
 __exportStar(require("./updateAudienceForSpace200Response1"), exports);
+__exportStar(require("./updateAudienceForSpace200Response2"), exports);
 __exportStar(require("./updateAudienceForSpaceAlphaInput"), exports);
 __exportStar(require("./updateAudienceForSpaceAlphaOutput"), exports);
 __exportStar(require("./updateAudienceForSpaceBetaInput"), exports);
 __exportStar(require("./updateAudienceForSpaceBetaOutput"), exports);
+__exportStar(require("./updateAudienceForSpaceInput"), exports);
+__exportStar(require("./updateAudienceForSpaceOutput"), exports);
 __exportStar(require("./updateAudienceScheduleForAudience200Response"), exports);
 __exportStar(require("./updateAudienceScheduleForAudienceAlphaInput"), exports);
 __exportStar(require("./updateAudienceScheduleForAudienceAlphaOutput"), exports);
@@ -749,11 +761,14 @@ var createAudienceInput_1 = require("./createAudienceInput");
 var createAudienceOutput_1 = require("./createAudienceOutput");
 var createAudiencePreview200Response_1 = require("./createAudiencePreview200Response");
 var createAudiencePreview200Response1_1 = require("./createAudiencePreview200Response1");
+var createAudiencePreview200Response2_1 = require("./createAudiencePreview200Response2");
 var createAudiencePreviewAlphaInput_1 = require("./createAudiencePreviewAlphaInput");
 var createAudiencePreviewAlphaOutput_1 = require("./createAudiencePreviewAlphaOutput");
 var createAudiencePreviewBetaInput_1 = require("./createAudiencePreviewBetaInput");
 var createAudiencePreviewBetaOutput_1 = require("./createAudiencePreviewBetaOutput");
+var createAudiencePreviewInput_1 = require("./createAudiencePreviewInput");
 var createAudiencePreviewOptions_1 = require("./createAudiencePreviewOptions");
+var createAudiencePreviewOutput_1 = require("./createAudiencePreviewOutput");
 var createCloudSourceRegulation200Response_1 = require("./createCloudSourceRegulation200Response");
 var createCloudSourceRegulationV1Input_1 = require("./createCloudSourceRegulationV1Input");
 var createCloudSourceRegulationV1Output_1 = require("./createCloudSourceRegulationV1Output");
@@ -915,12 +930,16 @@ var getAdvancedSyncScheduleFromWarehouse200Response_1 = require("./getAdvancedSy
 var getAdvancedSyncScheduleFromWarehouseV1Output_1 = require("./getAdvancedSyncScheduleFromWarehouseV1Output");
 var getAudience200Response_1 = require("./getAudience200Response");
 var getAudience200Response1_1 = require("./getAudience200Response1");
+var getAudience200Response2_1 = require("./getAudience200Response2");
 var getAudienceAlphaOutput_1 = require("./getAudienceAlphaOutput");
 var getAudienceBetaOutput_1 = require("./getAudienceBetaOutput");
+var getAudienceOutput_1 = require("./getAudienceOutput");
 var getAudiencePreview200Response_1 = require("./getAudiencePreview200Response");
 var getAudiencePreview200Response1_1 = require("./getAudiencePreview200Response1");
+var getAudiencePreview200Response2_1 = require("./getAudiencePreview200Response2");
 var getAudiencePreviewAlphaOutput_1 = require("./getAudiencePreviewAlphaOutput");
 var getAudiencePreviewBetaOutput_1 = require("./getAudiencePreviewBetaOutput");
+var getAudiencePreviewOutput_1 = require("./getAudiencePreviewOutput");
 var getAudienceScheduleFromSpaceAndAudience200Response_1 = require("./getAudienceScheduleFromSpaceAndAudience200Response");
 var getAudienceScheduleFromSpaceAndAudienceAlphaOutput_1 = require("./getAudienceScheduleFromSpaceAndAudienceAlphaOutput");
 var getComputedTrait200Response_1 = require("./getComputedTrait200Response");
@@ -1022,8 +1041,10 @@ var listAudienceSchedulesFromSpaceAndAudienceAlphaOutput_1 = require("./listAudi
 var listAudienceSearchInput_1 = require("./listAudienceSearchInput");
 var listAudiences200Response_1 = require("./listAudiences200Response");
 var listAudiences200Response1_1 = require("./listAudiences200Response1");
+var listAudiences200Response2_1 = require("./listAudiences200Response2");
 var listAudiencesAlphaOutput_1 = require("./listAudiencesAlphaOutput");
 var listAudiencesBetaOutput_1 = require("./listAudiencesBetaOutput");
+var listAudiencesOutput_1 = require("./listAudiencesOutput");
 var listAudiencesPaginationInput_1 = require("./listAudiencesPaginationInput");
 var listAuditEvents200Response_1 = require("./listAuditEvents200Response");
 var listAuditEventsV1Output_1 = require("./listAuditEventsV1Output");
@@ -1251,10 +1272,13 @@ var updateActivationForAudienceAlphaInput_1 = require("./updateActivationForAudi
 var updateActivationForAudienceOutput_1 = require("./updateActivationForAudienceOutput");
 var updateAudienceForSpace200Response_1 = require("./updateAudienceForSpace200Response");
 var updateAudienceForSpace200Response1_1 = require("./updateAudienceForSpace200Response1");
+var updateAudienceForSpace200Response2_1 = require("./updateAudienceForSpace200Response2");
 var updateAudienceForSpaceAlphaInput_1 = require("./updateAudienceForSpaceAlphaInput");
 var updateAudienceForSpaceAlphaOutput_1 = require("./updateAudienceForSpaceAlphaOutput");
 var updateAudienceForSpaceBetaInput_1 = require("./updateAudienceForSpaceBetaInput");
 var updateAudienceForSpaceBetaOutput_1 = require("./updateAudienceForSpaceBetaOutput");
+var updateAudienceForSpaceInput_1 = require("./updateAudienceForSpaceInput");
+var updateAudienceForSpaceOutput_1 = require("./updateAudienceForSpaceOutput");
 var updateAudienceScheduleForAudience200Response_1 = require("./updateAudienceScheduleForAudience200Response");
 var updateAudienceScheduleForAudienceAlphaInput_1 = require("./updateAudienceScheduleForAudienceAlphaInput");
 var updateAudienceScheduleForAudienceAlphaOutput_1 = require("./updateAudienceScheduleForAudienceAlphaOutput");
@@ -1356,6 +1380,7 @@ var enumsMap = {
     'CreateAudienceInput.AudienceTypeEnum': createAudienceInput_1.CreateAudienceInput.AudienceTypeEnum,
     'CreateAudiencePreviewAlphaInput.AudienceTypeEnum': createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
     'CreateAudiencePreviewBetaInput.AudienceTypeEnum': createAudiencePreviewBetaInput_1.CreateAudiencePreviewBetaInput.AudienceTypeEnum,
+    'CreateAudiencePreviewInput.AudienceTypeEnum': createAudiencePreviewInput_1.CreateAudiencePreviewInput.AudienceTypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
     'CreateFunctionV1Input.ResourceTypeEnum': createFunctionV1Input_1.CreateFunctionV1Input.ResourceTypeEnum,
@@ -1527,11 +1552,14 @@ var typeMap = {
     CreateAudienceOutput: createAudienceOutput_1.CreateAudienceOutput,
     CreateAudiencePreview200Response: createAudiencePreview200Response_1.CreateAudiencePreview200Response,
     CreateAudiencePreview200Response1: createAudiencePreview200Response1_1.CreateAudiencePreview200Response1,
+    CreateAudiencePreview200Response2: createAudiencePreview200Response2_1.CreateAudiencePreview200Response2,
     CreateAudiencePreviewAlphaInput: createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput,
     CreateAudiencePreviewAlphaOutput: createAudiencePreviewAlphaOutput_1.CreateAudiencePreviewAlphaOutput,
     CreateAudiencePreviewBetaInput: createAudiencePreviewBetaInput_1.CreateAudiencePreviewBetaInput,
     CreateAudiencePreviewBetaOutput: createAudiencePreviewBetaOutput_1.CreateAudiencePreviewBetaOutput,
+    CreateAudiencePreviewInput: createAudiencePreviewInput_1.CreateAudiencePreviewInput,
     CreateAudiencePreviewOptions: createAudiencePreviewOptions_1.CreateAudiencePreviewOptions,
+    CreateAudiencePreviewOutput: createAudiencePreviewOutput_1.CreateAudiencePreviewOutput,
     CreateCloudSourceRegulation200Response: createCloudSourceRegulation200Response_1.CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input,
     CreateCloudSourceRegulationV1Output: createCloudSourceRegulationV1Output_1.CreateCloudSourceRegulationV1Output,
@@ -1693,12 +1721,16 @@ var typeMap = {
     GetAdvancedSyncScheduleFromWarehouseV1Output: getAdvancedSyncScheduleFromWarehouseV1Output_1.GetAdvancedSyncScheduleFromWarehouseV1Output,
     GetAudience200Response: getAudience200Response_1.GetAudience200Response,
     GetAudience200Response1: getAudience200Response1_1.GetAudience200Response1,
+    GetAudience200Response2: getAudience200Response2_1.GetAudience200Response2,
     GetAudienceAlphaOutput: getAudienceAlphaOutput_1.GetAudienceAlphaOutput,
     GetAudienceBetaOutput: getAudienceBetaOutput_1.GetAudienceBetaOutput,
+    GetAudienceOutput: getAudienceOutput_1.GetAudienceOutput,
     GetAudiencePreview200Response: getAudiencePreview200Response_1.GetAudiencePreview200Response,
     GetAudiencePreview200Response1: getAudiencePreview200Response1_1.GetAudiencePreview200Response1,
+    GetAudiencePreview200Response2: getAudiencePreview200Response2_1.GetAudiencePreview200Response2,
     GetAudiencePreviewAlphaOutput: getAudiencePreviewAlphaOutput_1.GetAudiencePreviewAlphaOutput,
     GetAudiencePreviewBetaOutput: getAudiencePreviewBetaOutput_1.GetAudiencePreviewBetaOutput,
+    GetAudiencePreviewOutput: getAudiencePreviewOutput_1.GetAudiencePreviewOutput,
     GetAudienceScheduleFromSpaceAndAudience200Response: getAudienceScheduleFromSpaceAndAudience200Response_1.GetAudienceScheduleFromSpaceAndAudience200Response,
     GetAudienceScheduleFromSpaceAndAudienceAlphaOutput: getAudienceScheduleFromSpaceAndAudienceAlphaOutput_1.GetAudienceScheduleFromSpaceAndAudienceAlphaOutput,
     GetComputedTrait200Response: getComputedTrait200Response_1.GetComputedTrait200Response,
@@ -1800,8 +1832,10 @@ var typeMap = {
     ListAudienceSearchInput: listAudienceSearchInput_1.ListAudienceSearchInput,
     ListAudiences200Response: listAudiences200Response_1.ListAudiences200Response,
     ListAudiences200Response1: listAudiences200Response1_1.ListAudiences200Response1,
+    ListAudiences200Response2: listAudiences200Response2_1.ListAudiences200Response2,
     ListAudiencesAlphaOutput: listAudiencesAlphaOutput_1.ListAudiencesAlphaOutput,
     ListAudiencesBetaOutput: listAudiencesBetaOutput_1.ListAudiencesBetaOutput,
+    ListAudiencesOutput: listAudiencesOutput_1.ListAudiencesOutput,
     ListAudiencesPaginationInput: listAudiencesPaginationInput_1.ListAudiencesPaginationInput,
     ListAuditEvents200Response: listAuditEvents200Response_1.ListAuditEvents200Response,
     ListAuditEventsV1Output: listAuditEventsV1Output_1.ListAuditEventsV1Output,
@@ -2029,10 +2063,13 @@ var typeMap = {
     UpdateActivationForAudienceOutput: updateActivationForAudienceOutput_1.UpdateActivationForAudienceOutput,
     UpdateAudienceForSpace200Response: updateAudienceForSpace200Response_1.UpdateAudienceForSpace200Response,
     UpdateAudienceForSpace200Response1: updateAudienceForSpace200Response1_1.UpdateAudienceForSpace200Response1,
+    UpdateAudienceForSpace200Response2: updateAudienceForSpace200Response2_1.UpdateAudienceForSpace200Response2,
     UpdateAudienceForSpaceAlphaInput: updateAudienceForSpaceAlphaInput_1.UpdateAudienceForSpaceAlphaInput,
     UpdateAudienceForSpaceAlphaOutput: updateAudienceForSpaceAlphaOutput_1.UpdateAudienceForSpaceAlphaOutput,
     UpdateAudienceForSpaceBetaInput: updateAudienceForSpaceBetaInput_1.UpdateAudienceForSpaceBetaInput,
     UpdateAudienceForSpaceBetaOutput: updateAudienceForSpaceBetaOutput_1.UpdateAudienceForSpaceBetaOutput,
+    UpdateAudienceForSpaceInput: updateAudienceForSpaceInput_1.UpdateAudienceForSpaceInput,
+    UpdateAudienceForSpaceOutput: updateAudienceForSpaceOutput_1.UpdateAudienceForSpaceOutput,
     UpdateAudienceScheduleForAudience200Response: updateAudienceScheduleForAudience200Response_1.UpdateAudienceScheduleForAudience200Response,
     UpdateAudienceScheduleForAudienceAlphaInput: updateAudienceScheduleForAudienceAlphaInput_1.UpdateAudienceScheduleForAudienceAlphaInput,
     UpdateAudienceScheduleForAudienceAlphaOutput: updateAudienceScheduleForAudienceAlphaOutput_1.UpdateAudienceScheduleForAudienceAlphaOutput,
