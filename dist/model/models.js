@@ -498,8 +498,10 @@ __exportStar(require("./removeActivationFromAudience200Response"), exports);
 __exportStar(require("./removeActivationFromAudienceOutput"), exports);
 __exportStar(require("./removeAudienceFromSpace200Response"), exports);
 __exportStar(require("./removeAudienceFromSpace200Response1"), exports);
+__exportStar(require("./removeAudienceFromSpace200Response2"), exports);
 __exportStar(require("./removeAudienceFromSpaceAlphaOutput"), exports);
 __exportStar(require("./removeAudienceFromSpaceBetaOutput"), exports);
+__exportStar(require("./removeAudienceFromSpaceOutput"), exports);
 __exportStar(require("./removeAudienceScheduleFromAudience200Response"), exports);
 __exportStar(require("./removeAudienceScheduleFromAudienceAlphaOutput"), exports);
 __exportStar(require("./removeComputedTraitFromSpace200Response"), exports);
@@ -1153,8 +1155,10 @@ var removeActivationFromAudience200Response_1 = require("./removeActivationFromA
 var removeActivationFromAudienceOutput_1 = require("./removeActivationFromAudienceOutput");
 var removeAudienceFromSpace200Response_1 = require("./removeAudienceFromSpace200Response");
 var removeAudienceFromSpace200Response1_1 = require("./removeAudienceFromSpace200Response1");
+var removeAudienceFromSpace200Response2_1 = require("./removeAudienceFromSpace200Response2");
 var removeAudienceFromSpaceAlphaOutput_1 = require("./removeAudienceFromSpaceAlphaOutput");
 var removeAudienceFromSpaceBetaOutput_1 = require("./removeAudienceFromSpaceBetaOutput");
+var removeAudienceFromSpaceOutput_1 = require("./removeAudienceFromSpaceOutput");
 var removeAudienceScheduleFromAudience200Response_1 = require("./removeAudienceScheduleFromAudience200Response");
 var removeAudienceScheduleFromAudienceAlphaOutput_1 = require("./removeAudienceScheduleFromAudienceAlphaOutput");
 var removeComputedTraitFromSpace200Response_1 = require("./removeComputedTraitFromSpace200Response");
@@ -1416,6 +1420,7 @@ var enumsMap = {
     'RegulationListEntryV1.RegulationTypeEnum': regulationListEntryV1_1.RegulationListEntryV1.RegulationTypeEnum,
     'RemoveAudienceFromSpaceAlphaOutput.StatusEnum': removeAudienceFromSpaceAlphaOutput_1.RemoveAudienceFromSpaceAlphaOutput.StatusEnum,
     'RemoveAudienceFromSpaceBetaOutput.StatusEnum': removeAudienceFromSpaceBetaOutput_1.RemoveAudienceFromSpaceBetaOutput.StatusEnum,
+    'RemoveAudienceFromSpaceOutput.StatusEnum': removeAudienceFromSpaceOutput_1.RemoveAudienceFromSpaceOutput.StatusEnum,
     'RemoveAudienceScheduleFromAudienceAlphaOutput.StatusEnum': removeAudienceScheduleFromAudienceAlphaOutput_1.RemoveAudienceScheduleFromAudienceAlphaOutput.StatusEnum,
     'RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum': removeComputedTraitFromSpaceAlphaOutput_1.RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum': removeFilterFromDestinationV1Output_1.RemoveFilterFromDestinationV1Output.StatusEnum,
@@ -1928,8 +1933,10 @@ var typeMap = {
     RemoveActivationFromAudienceOutput: removeActivationFromAudienceOutput_1.RemoveActivationFromAudienceOutput,
     RemoveAudienceFromSpace200Response: removeAudienceFromSpace200Response_1.RemoveAudienceFromSpace200Response,
     RemoveAudienceFromSpace200Response1: removeAudienceFromSpace200Response1_1.RemoveAudienceFromSpace200Response1,
+    RemoveAudienceFromSpace200Response2: removeAudienceFromSpace200Response2_1.RemoveAudienceFromSpace200Response2,
     RemoveAudienceFromSpaceAlphaOutput: removeAudienceFromSpaceAlphaOutput_1.RemoveAudienceFromSpaceAlphaOutput,
     RemoveAudienceFromSpaceBetaOutput: removeAudienceFromSpaceBetaOutput_1.RemoveAudienceFromSpaceBetaOutput,
+    RemoveAudienceFromSpaceOutput: removeAudienceFromSpaceOutput_1.RemoveAudienceFromSpaceOutput,
     RemoveAudienceScheduleFromAudience200Response: removeAudienceScheduleFromAudience200Response_1.RemoveAudienceScheduleFromAudience200Response,
     RemoveAudienceScheduleFromAudienceAlphaOutput: removeAudienceScheduleFromAudienceAlphaOutput_1.RemoveAudienceScheduleFromAudienceAlphaOutput,
     RemoveComputedTraitFromSpace200Response: removeComputedTraitFromSpace200Response_1.RemoveComputedTraitFromSpace200Response,

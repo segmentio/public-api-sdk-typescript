@@ -483,8 +483,10 @@ export * from './removeActivationFromAudience200Response';
 export * from './removeActivationFromAudienceOutput';
 export * from './removeAudienceFromSpace200Response';
 export * from './removeAudienceFromSpace200Response1';
+export * from './removeAudienceFromSpace200Response2';
 export * from './removeAudienceFromSpaceAlphaOutput';
 export * from './removeAudienceFromSpaceBetaOutput';
+export * from './removeAudienceFromSpaceOutput';
 export * from './removeAudienceScheduleFromAudience200Response';
 export * from './removeAudienceScheduleFromAudienceAlphaOutput';
 export * from './removeComputedTraitFromSpace200Response';
@@ -1151,8 +1153,10 @@ import { RemoveActivationFromAudience200Response } from './removeActivationFromA
 import { RemoveActivationFromAudienceOutput } from './removeActivationFromAudienceOutput';
 import { RemoveAudienceFromSpace200Response } from './removeAudienceFromSpace200Response';
 import { RemoveAudienceFromSpace200Response1 } from './removeAudienceFromSpace200Response1';
+import { RemoveAudienceFromSpace200Response2 } from './removeAudienceFromSpace200Response2';
 import { RemoveAudienceFromSpaceAlphaOutput } from './removeAudienceFromSpaceAlphaOutput';
 import { RemoveAudienceFromSpaceBetaOutput } from './removeAudienceFromSpaceBetaOutput';
+import { RemoveAudienceFromSpaceOutput } from './removeAudienceFromSpaceOutput';
 import { RemoveAudienceScheduleFromAudience200Response } from './removeAudienceScheduleFromAudience200Response';
 import { RemoveAudienceScheduleFromAudienceAlphaOutput } from './removeAudienceScheduleFromAudienceAlphaOutput';
 import { RemoveComputedTraitFromSpace200Response } from './removeComputedTraitFromSpace200Response';
@@ -1464,6 +1468,8 @@ let enumsMap: { [index: string]: any } = {
         RemoveAudienceFromSpaceAlphaOutput.StatusEnum,
     'RemoveAudienceFromSpaceBetaOutput.StatusEnum':
         RemoveAudienceFromSpaceBetaOutput.StatusEnum,
+    'RemoveAudienceFromSpaceOutput.StatusEnum':
+        RemoveAudienceFromSpaceOutput.StatusEnum,
     'RemoveAudienceScheduleFromAudienceAlphaOutput.StatusEnum':
         RemoveAudienceScheduleFromAudienceAlphaOutput.StatusEnum,
     'RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum':
@@ -2077,8 +2083,10 @@ let typeMap: { [index: string]: any } = {
     RemoveActivationFromAudienceOutput: RemoveActivationFromAudienceOutput,
     RemoveAudienceFromSpace200Response: RemoveAudienceFromSpace200Response,
     RemoveAudienceFromSpace200Response1: RemoveAudienceFromSpace200Response1,
+    RemoveAudienceFromSpace200Response2: RemoveAudienceFromSpace200Response2,
     RemoveAudienceFromSpaceAlphaOutput: RemoveAudienceFromSpaceAlphaOutput,
     RemoveAudienceFromSpaceBetaOutput: RemoveAudienceFromSpaceBetaOutput,
+    RemoveAudienceFromSpaceOutput: RemoveAudienceFromSpaceOutput,
     RemoveAudienceScheduleFromAudience200Response:
         RemoveAudienceScheduleFromAudience200Response,
     RemoveAudienceScheduleFromAudienceAlphaOutput:
