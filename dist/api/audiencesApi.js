@@ -1216,7 +1216,7 @@ var AudiencesApi = (function () {
             });
         });
     };
-    AudiencesApi.prototype.updateAudienceForSpace = function (spaceId, id, UpdateAudienceForSpaceBetaInput, options) {
+    AudiencesApi.prototype.updateAudienceForSpace = function (spaceId, id, UpdateAudienceForSpaceInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_13, _i, _a, interceptor;
@@ -1229,9 +1229,10 @@ var AudiencesApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1+json',
+                    'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
-                    'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -1246,9 +1247,9 @@ var AudiencesApi = (function () {
                 if (id === null || id === undefined) {
                     throw new Error('Required parameter id was null or undefined when calling updateAudienceForSpace.');
                 }
-                if (UpdateAudienceForSpaceBetaInput === null ||
-                    UpdateAudienceForSpaceBetaInput === undefined) {
-                    throw new Error('Required parameter UpdateAudienceForSpaceBetaInput was null or undefined when calling updateAudienceForSpace.');
+                if (UpdateAudienceForSpaceInput === null ||
+                    UpdateAudienceForSpaceInput === undefined) {
+                    throw new Error('Required parameter UpdateAudienceForSpaceInput was null or undefined when calling updateAudienceForSpace.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -1259,7 +1260,7 @@ var AudiencesApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateAudienceForSpaceBetaInput, 'UpdateAudienceForSpaceBetaInput'),
+                    body: models_1.ObjectSerializer.serialize(UpdateAudienceForSpaceInput, 'UpdateAudienceForSpaceInput'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {

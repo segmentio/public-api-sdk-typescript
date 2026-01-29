@@ -12,7 +12,7 @@ var UpdateAudienceForSpace200Response1 = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'UpdateAudienceForSpaceAlphaOutput',
+            type: 'UpdateAudienceForSpaceBetaOutput',
         },
     ];
     return UpdateAudienceForSpace200Response1;

@@ -579,10 +579,13 @@ export * from './updateActivationForAudienceAlphaInput';
 export * from './updateActivationForAudienceOutput';
 export * from './updateAudienceForSpace200Response';
 export * from './updateAudienceForSpace200Response1';
+export * from './updateAudienceForSpace200Response2';
 export * from './updateAudienceForSpaceAlphaInput';
 export * from './updateAudienceForSpaceAlphaOutput';
 export * from './updateAudienceForSpaceBetaInput';
 export * from './updateAudienceForSpaceBetaOutput';
+export * from './updateAudienceForSpaceInput';
+export * from './updateAudienceForSpaceOutput';
 export * from './updateAudienceScheduleForAudience200Response';
 export * from './updateAudienceScheduleForAudienceAlphaInput';
 export * from './updateAudienceScheduleForAudienceAlphaOutput';
@@ -1249,10 +1252,13 @@ import { UpdateActivationForAudienceAlphaInput } from './updateActivationForAudi
 import { UpdateActivationForAudienceOutput } from './updateActivationForAudienceOutput';
 import { UpdateAudienceForSpace200Response } from './updateAudienceForSpace200Response';
 import { UpdateAudienceForSpace200Response1 } from './updateAudienceForSpace200Response1';
+import { UpdateAudienceForSpace200Response2 } from './updateAudienceForSpace200Response2';
 import { UpdateAudienceForSpaceAlphaInput } from './updateAudienceForSpaceAlphaInput';
 import { UpdateAudienceForSpaceAlphaOutput } from './updateAudienceForSpaceAlphaOutput';
 import { UpdateAudienceForSpaceBetaInput } from './updateAudienceForSpaceBetaInput';
 import { UpdateAudienceForSpaceBetaOutput } from './updateAudienceForSpaceBetaOutput';
+import { UpdateAudienceForSpaceInput } from './updateAudienceForSpaceInput';
+import { UpdateAudienceForSpaceOutput } from './updateAudienceForSpaceOutput';
 import { UpdateAudienceScheduleForAudience200Response } from './updateAudienceScheduleForAudience200Response';
 import { UpdateAudienceScheduleForAudienceAlphaInput } from './updateAudienceScheduleForAudienceAlphaInput';
 import { UpdateAudienceScheduleForAudienceAlphaOutput } from './updateAudienceScheduleForAudienceAlphaOutput';
@@ -2204,10 +2210,13 @@ let typeMap: { [index: string]: any } = {
     UpdateActivationForAudienceOutput: UpdateActivationForAudienceOutput,
     UpdateAudienceForSpace200Response: UpdateAudienceForSpace200Response,
     UpdateAudienceForSpace200Response1: UpdateAudienceForSpace200Response1,
+    UpdateAudienceForSpace200Response2: UpdateAudienceForSpace200Response2,
     UpdateAudienceForSpaceAlphaInput: UpdateAudienceForSpaceAlphaInput,
     UpdateAudienceForSpaceAlphaOutput: UpdateAudienceForSpaceAlphaOutput,
     UpdateAudienceForSpaceBetaInput: UpdateAudienceForSpaceBetaInput,
     UpdateAudienceForSpaceBetaOutput: UpdateAudienceForSpaceBetaOutput,
+    UpdateAudienceForSpaceInput: UpdateAudienceForSpaceInput,
+    UpdateAudienceForSpaceOutput: UpdateAudienceForSpaceOutput,
     UpdateAudienceScheduleForAudience200Response:
         UpdateAudienceScheduleForAudience200Response,
     UpdateAudienceScheduleForAudienceAlphaInput:

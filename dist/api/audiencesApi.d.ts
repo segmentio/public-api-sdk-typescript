@@ -20,7 +20,7 @@ import { PaginationInput } from '../model/paginationInput';
 import { RemoveAudienceFromSpace200Response } from '../model/removeAudienceFromSpace200Response';
 import { RemoveAudienceScheduleFromAudience200Response } from '../model/removeAudienceScheduleFromAudience200Response';
 import { UpdateAudienceForSpace200Response } from '../model/updateAudienceForSpace200Response';
-import { UpdateAudienceForSpaceBetaInput } from '../model/updateAudienceForSpaceBetaInput';
+import { UpdateAudienceForSpaceInput } from '../model/updateAudienceForSpaceInput';
 import { UpdateAudienceScheduleForAudience200Response } from '../model/updateAudienceScheduleForAudience200Response';
 import { UpdateAudienceScheduleForAudienceAlphaInput } from '../model/updateAudienceScheduleForAudienceAlphaInput';
 import { Authentication, Interceptor } from '../model/models';
@@ -142,7 +142,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: RemoveAudienceScheduleFromAudience200Response;
     }>;
-    updateAudienceForSpace(spaceId: string, id: string, UpdateAudienceForSpaceBetaInput: UpdateAudienceForSpaceBetaInput, options?: {
+    updateAudienceForSpace(spaceId: string, id: string, UpdateAudienceForSpaceInput: UpdateAudienceForSpaceInput, options?: {
         headers: {
             [name: string]: string;
         };

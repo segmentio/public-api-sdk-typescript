@@ -594,10 +594,13 @@ __exportStar(require("./updateActivationForAudienceAlphaInput"), exports);
 __exportStar(require("./updateActivationForAudienceOutput"), exports);
 __exportStar(require("./updateAudienceForSpace200Response"), exports);
 __exportStar(require("./updateAudienceForSpace200Response1"), exports);
+__exportStar(require("./updateAudienceForSpace200Response2"), exports);
 __exportStar(require("./updateAudienceForSpaceAlphaInput"), exports);
 __exportStar(require("./updateAudienceForSpaceAlphaOutput"), exports);
 __exportStar(require("./updateAudienceForSpaceBetaInput"), exports);
 __exportStar(require("./updateAudienceForSpaceBetaOutput"), exports);
+__exportStar(require("./updateAudienceForSpaceInput"), exports);
+__exportStar(require("./updateAudienceForSpaceOutput"), exports);
 __exportStar(require("./updateAudienceScheduleForAudience200Response"), exports);
 __exportStar(require("./updateAudienceScheduleForAudienceAlphaInput"), exports);
 __exportStar(require("./updateAudienceScheduleForAudienceAlphaOutput"), exports);
@@ -1251,10 +1254,13 @@ var updateActivationForAudienceAlphaInput_1 = require("./updateActivationForAudi
 var updateActivationForAudienceOutput_1 = require("./updateActivationForAudienceOutput");
 var updateAudienceForSpace200Response_1 = require("./updateAudienceForSpace200Response");
 var updateAudienceForSpace200Response1_1 = require("./updateAudienceForSpace200Response1");
+var updateAudienceForSpace200Response2_1 = require("./updateAudienceForSpace200Response2");
 var updateAudienceForSpaceAlphaInput_1 = require("./updateAudienceForSpaceAlphaInput");
 var updateAudienceForSpaceAlphaOutput_1 = require("./updateAudienceForSpaceAlphaOutput");
 var updateAudienceForSpaceBetaInput_1 = require("./updateAudienceForSpaceBetaInput");
 var updateAudienceForSpaceBetaOutput_1 = require("./updateAudienceForSpaceBetaOutput");
+var updateAudienceForSpaceInput_1 = require("./updateAudienceForSpaceInput");
+var updateAudienceForSpaceOutput_1 = require("./updateAudienceForSpaceOutput");
 var updateAudienceScheduleForAudience200Response_1 = require("./updateAudienceScheduleForAudience200Response");
 var updateAudienceScheduleForAudienceAlphaInput_1 = require("./updateAudienceScheduleForAudienceAlphaInput");
 var updateAudienceScheduleForAudienceAlphaOutput_1 = require("./updateAudienceScheduleForAudienceAlphaOutput");
@@ -2029,10 +2035,13 @@ var typeMap = {
     UpdateActivationForAudienceOutput: updateActivationForAudienceOutput_1.UpdateActivationForAudienceOutput,
     UpdateAudienceForSpace200Response: updateAudienceForSpace200Response_1.UpdateAudienceForSpace200Response,
     UpdateAudienceForSpace200Response1: updateAudienceForSpace200Response1_1.UpdateAudienceForSpace200Response1,
+    UpdateAudienceForSpace200Response2: updateAudienceForSpace200Response2_1.UpdateAudienceForSpace200Response2,
     UpdateAudienceForSpaceAlphaInput: updateAudienceForSpaceAlphaInput_1.UpdateAudienceForSpaceAlphaInput,
     UpdateAudienceForSpaceAlphaOutput: updateAudienceForSpaceAlphaOutput_1.UpdateAudienceForSpaceAlphaOutput,
     UpdateAudienceForSpaceBetaInput: updateAudienceForSpaceBetaInput_1.UpdateAudienceForSpaceBetaInput,
     UpdateAudienceForSpaceBetaOutput: updateAudienceForSpaceBetaOutput_1.UpdateAudienceForSpaceBetaOutput,
+    UpdateAudienceForSpaceInput: updateAudienceForSpaceInput_1.UpdateAudienceForSpaceInput,
+    UpdateAudienceForSpaceOutput: updateAudienceForSpaceOutput_1.UpdateAudienceForSpaceOutput,
     UpdateAudienceScheduleForAudience200Response: updateAudienceScheduleForAudience200Response_1.UpdateAudienceScheduleForAudience200Response,
     UpdateAudienceScheduleForAudienceAlphaInput: updateAudienceScheduleForAudienceAlphaInput_1.UpdateAudienceScheduleForAudienceAlphaInput,
     UpdateAudienceScheduleForAudienceAlphaOutput: updateAudienceScheduleForAudienceAlphaOutput_1.UpdateAudienceScheduleForAudienceAlphaOutput,
