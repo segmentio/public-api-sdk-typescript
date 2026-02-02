@@ -243,8 +243,10 @@ export * from './getAdvancedSyncScheduleFromWarehouse200Response';
 export * from './getAdvancedSyncScheduleFromWarehouseV1Output';
 export * from './getAudience200Response';
 export * from './getAudience200Response1';
+export * from './getAudience200Response2';
 export * from './getAudienceAlphaOutput';
 export * from './getAudienceBetaOutput';
+export * from './getAudienceOutput';
 export * from './getAudiencePreview200Response';
 export * from './getAudiencePreview200Response1';
 export * from './getAudiencePreviewAlphaOutput';
@@ -916,8 +918,10 @@ import { GetAdvancedSyncScheduleFromWarehouse200Response } from './getAdvancedSy
 import { GetAdvancedSyncScheduleFromWarehouseV1Output } from './getAdvancedSyncScheduleFromWarehouseV1Output';
 import { GetAudience200Response } from './getAudience200Response';
 import { GetAudience200Response1 } from './getAudience200Response1';
+import { GetAudience200Response2 } from './getAudience200Response2';
 import { GetAudienceAlphaOutput } from './getAudienceAlphaOutput';
 import { GetAudienceBetaOutput } from './getAudienceBetaOutput';
+import { GetAudienceOutput } from './getAudienceOutput';
 import { GetAudiencePreview200Response } from './getAudiencePreview200Response';
 import { GetAudiencePreview200Response1 } from './getAudiencePreview200Response1';
 import { GetAudiencePreviewAlphaOutput } from './getAudiencePreviewAlphaOutput';
@@ -1796,8 +1800,10 @@ let typeMap: { [index: string]: any } = {
         GetAdvancedSyncScheduleFromWarehouseV1Output,
     GetAudience200Response: GetAudience200Response,
     GetAudience200Response1: GetAudience200Response1,
+    GetAudience200Response2: GetAudience200Response2,
     GetAudienceAlphaOutput: GetAudienceAlphaOutput,
     GetAudienceBetaOutput: GetAudienceBetaOutput,
+    GetAudienceOutput: GetAudienceOutput,
     GetAudiencePreview200Response: GetAudiencePreview200Response,
     GetAudiencePreview200Response1: GetAudiencePreview200Response1,
     GetAudiencePreviewAlphaOutput: GetAudiencePreviewAlphaOutput,

@@ -258,8 +258,10 @@ __exportStar(require("./getAdvancedSyncScheduleFromWarehouse200Response"), expor
 __exportStar(require("./getAdvancedSyncScheduleFromWarehouseV1Output"), exports);
 __exportStar(require("./getAudience200Response"), exports);
 __exportStar(require("./getAudience200Response1"), exports);
+__exportStar(require("./getAudience200Response2"), exports);
 __exportStar(require("./getAudienceAlphaOutput"), exports);
 __exportStar(require("./getAudienceBetaOutput"), exports);
+__exportStar(require("./getAudienceOutput"), exports);
 __exportStar(require("./getAudiencePreview200Response"), exports);
 __exportStar(require("./getAudiencePreview200Response1"), exports);
 __exportStar(require("./getAudiencePreviewAlphaOutput"), exports);
@@ -918,8 +920,10 @@ var getAdvancedSyncScheduleFromWarehouse200Response_1 = require("./getAdvancedSy
 var getAdvancedSyncScheduleFromWarehouseV1Output_1 = require("./getAdvancedSyncScheduleFromWarehouseV1Output");
 var getAudience200Response_1 = require("./getAudience200Response");
 var getAudience200Response1_1 = require("./getAudience200Response1");
+var getAudience200Response2_1 = require("./getAudience200Response2");
 var getAudienceAlphaOutput_1 = require("./getAudienceAlphaOutput");
 var getAudienceBetaOutput_1 = require("./getAudienceBetaOutput");
+var getAudienceOutput_1 = require("./getAudienceOutput");
 var getAudiencePreview200Response_1 = require("./getAudiencePreview200Response");
 var getAudiencePreview200Response1_1 = require("./getAudiencePreview200Response1");
 var getAudiencePreviewAlphaOutput_1 = require("./getAudiencePreviewAlphaOutput");
@@ -1699,8 +1703,10 @@ var typeMap = {
     GetAdvancedSyncScheduleFromWarehouseV1Output: getAdvancedSyncScheduleFromWarehouseV1Output_1.GetAdvancedSyncScheduleFromWarehouseV1Output,
     GetAudience200Response: getAudience200Response_1.GetAudience200Response,
     GetAudience200Response1: getAudience200Response1_1.GetAudience200Response1,
+    GetAudience200Response2: getAudience200Response2_1.GetAudience200Response2,
     GetAudienceAlphaOutput: getAudienceAlphaOutput_1.GetAudienceAlphaOutput,
     GetAudienceBetaOutput: getAudienceBetaOutput_1.GetAudienceBetaOutput,
+    GetAudienceOutput: getAudienceOutput_1.GetAudienceOutput,
     GetAudiencePreview200Response: getAudiencePreview200Response_1.GetAudiencePreview200Response,
     GetAudiencePreview200Response1: getAudiencePreview200Response1_1.GetAudiencePreview200Response1,
     GetAudiencePreviewAlphaOutput: getAudiencePreviewAlphaOutput_1.GetAudiencePreviewAlphaOutput,
