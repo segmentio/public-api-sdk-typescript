@@ -367,8 +367,10 @@ __exportStar(require("./listAudienceSchedulesFromSpaceAndAudienceAlphaOutput"), 
 __exportStar(require("./listAudienceSearchInput"), exports);
 __exportStar(require("./listAudiences200Response"), exports);
 __exportStar(require("./listAudiences200Response1"), exports);
+__exportStar(require("./listAudiences200Response2"), exports);
 __exportStar(require("./listAudiencesAlphaOutput"), exports);
 __exportStar(require("./listAudiencesBetaOutput"), exports);
+__exportStar(require("./listAudiencesOutput"), exports);
 __exportStar(require("./listAudiencesPaginationInput"), exports);
 __exportStar(require("./listAuditEvents200Response"), exports);
 __exportStar(require("./listAuditEventsV1Output"), exports);
@@ -1029,8 +1031,10 @@ var listAudienceSchedulesFromSpaceAndAudienceAlphaOutput_1 = require("./listAudi
 var listAudienceSearchInput_1 = require("./listAudienceSearchInput");
 var listAudiences200Response_1 = require("./listAudiences200Response");
 var listAudiences200Response1_1 = require("./listAudiences200Response1");
+var listAudiences200Response2_1 = require("./listAudiences200Response2");
 var listAudiencesAlphaOutput_1 = require("./listAudiencesAlphaOutput");
 var listAudiencesBetaOutput_1 = require("./listAudiencesBetaOutput");
+var listAudiencesOutput_1 = require("./listAudiencesOutput");
 var listAudiencesPaginationInput_1 = require("./listAudiencesPaginationInput");
 var listAuditEvents200Response_1 = require("./listAuditEvents200Response");
 var listAuditEventsV1Output_1 = require("./listAuditEventsV1Output");
@@ -1812,8 +1816,10 @@ var typeMap = {
     ListAudienceSearchInput: listAudienceSearchInput_1.ListAudienceSearchInput,
     ListAudiences200Response: listAudiences200Response_1.ListAudiences200Response,
     ListAudiences200Response1: listAudiences200Response1_1.ListAudiences200Response1,
+    ListAudiences200Response2: listAudiences200Response2_1.ListAudiences200Response2,
     ListAudiencesAlphaOutput: listAudiencesAlphaOutput_1.ListAudiencesAlphaOutput,
     ListAudiencesBetaOutput: listAudiencesBetaOutput_1.ListAudiencesBetaOutput,
+    ListAudiencesOutput: listAudiencesOutput_1.ListAudiencesOutput,
     ListAudiencesPaginationInput: listAudiencesPaginationInput_1.ListAudiencesPaginationInput,
     ListAuditEvents200Response: listAuditEvents200Response_1.ListAuditEvents200Response,
     ListAuditEventsV1Output: listAuditEventsV1Output_1.ListAuditEventsV1Output,
