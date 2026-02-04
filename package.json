@@ -18,7 +18,7 @@
         "uuid": "^8.3.2",
         "request": "^2.88.2"
     },
-    "version": "67.0.0-b16989",
+    "version": "67.0.0-b17007",
     "devDependencies": {
         "@types/bluebird": "^3.5.33",
         "@types/jest": "^29",
