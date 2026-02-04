@@ -5,7 +5,7 @@ import { AddAudienceScheduleToAudienceAlphaInput } from '../model/addAudienceSch
 import { CreateAudience200Response } from '../model/createAudience200Response';
 import { CreateAudienceInput } from '../model/createAudienceInput';
 import { CreateAudiencePreview200Response } from '../model/createAudiencePreview200Response';
-import { CreateAudiencePreviewBetaInput } from '../model/createAudiencePreviewBetaInput';
+import { CreateAudiencePreviewInput } from '../model/createAudiencePreviewInput';
 import { ForceExecuteAudienceRun200Response } from '../model/forceExecuteAudienceRun200Response';
 import { GetAudience200Response } from '../model/getAudience200Response';
 import { GetAudiencePreview200Response } from '../model/getAudiencePreview200Response';
@@ -62,7 +62,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: CreateAudience200Response;
     }>;
-    createAudiencePreview(spaceId: string, CreateAudiencePreviewBetaInput: CreateAudiencePreviewBetaInput, options?: {
+    createAudiencePreview(spaceId: string, CreateAudiencePreviewInput: CreateAudiencePreviewInput, options?: {
         headers: {
             [name: string]: string;
         };

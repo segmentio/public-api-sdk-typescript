@@ -77,11 +77,14 @@ export * from './createAudienceInput';
 export * from './createAudienceOutput';
 export * from './createAudiencePreview200Response';
 export * from './createAudiencePreview200Response1';
+export * from './createAudiencePreview200Response2';
 export * from './createAudiencePreviewAlphaInput';
 export * from './createAudiencePreviewAlphaOutput';
 export * from './createAudiencePreviewBetaInput';
 export * from './createAudiencePreviewBetaOutput';
+export * from './createAudiencePreviewInput';
 export * from './createAudiencePreviewOptions';
+export * from './createAudiencePreviewOutput';
 export * from './createCloudSourceRegulation200Response';
 export * from './createCloudSourceRegulationV1Input';
 export * from './createCloudSourceRegulationV1Output';
@@ -754,11 +757,14 @@ import { CreateAudienceInput } from './createAudienceInput';
 import { CreateAudienceOutput } from './createAudienceOutput';
 import { CreateAudiencePreview200Response } from './createAudiencePreview200Response';
 import { CreateAudiencePreview200Response1 } from './createAudiencePreview200Response1';
+import { CreateAudiencePreview200Response2 } from './createAudiencePreview200Response2';
 import { CreateAudiencePreviewAlphaInput } from './createAudiencePreviewAlphaInput';
 import { CreateAudiencePreviewAlphaOutput } from './createAudiencePreviewAlphaOutput';
 import { CreateAudiencePreviewBetaInput } from './createAudiencePreviewBetaInput';
 import { CreateAudiencePreviewBetaOutput } from './createAudiencePreviewBetaOutput';
+import { CreateAudiencePreviewInput } from './createAudiencePreviewInput';
 import { CreateAudiencePreviewOptions } from './createAudiencePreviewOptions';
+import { CreateAudiencePreviewOutput } from './createAudiencePreviewOutput';
 import { CreateCloudSourceRegulation200Response } from './createCloudSourceRegulation200Response';
 import { CreateCloudSourceRegulationV1Input } from './createCloudSourceRegulationV1Input';
 import { CreateCloudSourceRegulationV1Output } from './createCloudSourceRegulationV1Output';
@@ -1380,6 +1386,8 @@ let enumsMap: { [index: string]: any } = {
         CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
     'CreateAudiencePreviewBetaInput.AudienceTypeEnum':
         CreateAudiencePreviewBetaInput.AudienceTypeEnum,
+    'CreateAudiencePreviewInput.AudienceTypeEnum':
+        CreateAudiencePreviewInput.AudienceTypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum':
         CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum':
@@ -1622,11 +1630,14 @@ let typeMap: { [index: string]: any } = {
     CreateAudienceOutput: CreateAudienceOutput,
     CreateAudiencePreview200Response: CreateAudiencePreview200Response,
     CreateAudiencePreview200Response1: CreateAudiencePreview200Response1,
+    CreateAudiencePreview200Response2: CreateAudiencePreview200Response2,
     CreateAudiencePreviewAlphaInput: CreateAudiencePreviewAlphaInput,
     CreateAudiencePreviewAlphaOutput: CreateAudiencePreviewAlphaOutput,
     CreateAudiencePreviewBetaInput: CreateAudiencePreviewBetaInput,
     CreateAudiencePreviewBetaOutput: CreateAudiencePreviewBetaOutput,
+    CreateAudiencePreviewInput: CreateAudiencePreviewInput,
     CreateAudiencePreviewOptions: CreateAudiencePreviewOptions,
+    CreateAudiencePreviewOutput: CreateAudiencePreviewOutput,
     CreateCloudSourceRegulation200Response:
         CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: CreateCloudSourceRegulationV1Input,

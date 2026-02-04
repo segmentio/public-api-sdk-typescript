@@ -296,7 +296,7 @@ var AudiencesApi = (function () {
             });
         });
     };
-    AudiencesApi.prototype.createAudiencePreview = function (spaceId, CreateAudiencePreviewBetaInput, options) {
+    AudiencesApi.prototype.createAudiencePreview = function (spaceId, CreateAudiencePreviewInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
@@ -307,9 +307,10 @@ var AudiencesApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
+                    'application/vnd.segment.v1+json',
+                    'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
-                    'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -321,9 +322,9 @@ var AudiencesApi = (function () {
                 if (spaceId === null || spaceId === undefined) {
                     throw new Error('Required parameter spaceId was null or undefined when calling createAudiencePreview.');
                 }
-                if (CreateAudiencePreviewBetaInput === null ||
-                    CreateAudiencePreviewBetaInput === undefined) {
-                    throw new Error('Required parameter CreateAudiencePreviewBetaInput was null or undefined when calling createAudiencePreview.');
+                if (CreateAudiencePreviewInput === null ||
+                    CreateAudiencePreviewInput === undefined) {
+                    throw new Error('Required parameter CreateAudiencePreviewInput was null or undefined when calling createAudiencePreview.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -334,7 +335,7 @@ var AudiencesApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(CreateAudiencePreviewBetaInput, 'CreateAudiencePreviewBetaInput'),
+                    body: models_1.ObjectSerializer.serialize(CreateAudiencePreviewInput, 'CreateAudiencePreviewInput'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {

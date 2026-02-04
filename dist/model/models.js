@@ -92,11 +92,14 @@ __exportStar(require("./createAudienceInput"), exports);
 __exportStar(require("./createAudienceOutput"), exports);
 __exportStar(require("./createAudiencePreview200Response"), exports);
 __exportStar(require("./createAudiencePreview200Response1"), exports);
+__exportStar(require("./createAudiencePreview200Response2"), exports);
 __exportStar(require("./createAudiencePreviewAlphaInput"), exports);
 __exportStar(require("./createAudiencePreviewAlphaOutput"), exports);
 __exportStar(require("./createAudiencePreviewBetaInput"), exports);
 __exportStar(require("./createAudiencePreviewBetaOutput"), exports);
+__exportStar(require("./createAudiencePreviewInput"), exports);
 __exportStar(require("./createAudiencePreviewOptions"), exports);
+__exportStar(require("./createAudiencePreviewOutput"), exports);
 __exportStar(require("./createCloudSourceRegulation200Response"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Input"), exports);
 __exportStar(require("./createCloudSourceRegulationV1Output"), exports);
@@ -756,11 +759,14 @@ var createAudienceInput_1 = require("./createAudienceInput");
 var createAudienceOutput_1 = require("./createAudienceOutput");
 var createAudiencePreview200Response_1 = require("./createAudiencePreview200Response");
 var createAudiencePreview200Response1_1 = require("./createAudiencePreview200Response1");
+var createAudiencePreview200Response2_1 = require("./createAudiencePreview200Response2");
 var createAudiencePreviewAlphaInput_1 = require("./createAudiencePreviewAlphaInput");
 var createAudiencePreviewAlphaOutput_1 = require("./createAudiencePreviewAlphaOutput");
 var createAudiencePreviewBetaInput_1 = require("./createAudiencePreviewBetaInput");
 var createAudiencePreviewBetaOutput_1 = require("./createAudiencePreviewBetaOutput");
+var createAudiencePreviewInput_1 = require("./createAudiencePreviewInput");
 var createAudiencePreviewOptions_1 = require("./createAudiencePreviewOptions");
+var createAudiencePreviewOutput_1 = require("./createAudiencePreviewOutput");
 var createCloudSourceRegulation200Response_1 = require("./createCloudSourceRegulation200Response");
 var createCloudSourceRegulationV1Input_1 = require("./createCloudSourceRegulationV1Input");
 var createCloudSourceRegulationV1Output_1 = require("./createCloudSourceRegulationV1Output");
@@ -1370,6 +1376,7 @@ var enumsMap = {
     'CreateAudienceInput.AudienceTypeEnum': createAudienceInput_1.CreateAudienceInput.AudienceTypeEnum,
     'CreateAudiencePreviewAlphaInput.AudienceTypeEnum': createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput.AudienceTypeEnum,
     'CreateAudiencePreviewBetaInput.AudienceTypeEnum': createAudiencePreviewBetaInput_1.CreateAudiencePreviewBetaInput.AudienceTypeEnum,
+    'CreateAudiencePreviewInput.AudienceTypeEnum': createAudiencePreviewInput_1.CreateAudiencePreviewInput.AudienceTypeEnum,
     'CreateCloudSourceRegulationV1Input.RegulationTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.RegulationTypeEnum,
     'CreateCloudSourceRegulationV1Input.SubjectTypeEnum': createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input.SubjectTypeEnum,
     'CreateFunctionV1Input.ResourceTypeEnum': createFunctionV1Input_1.CreateFunctionV1Input.ResourceTypeEnum,
@@ -1541,11 +1548,14 @@ var typeMap = {
     CreateAudienceOutput: createAudienceOutput_1.CreateAudienceOutput,
     CreateAudiencePreview200Response: createAudiencePreview200Response_1.CreateAudiencePreview200Response,
     CreateAudiencePreview200Response1: createAudiencePreview200Response1_1.CreateAudiencePreview200Response1,
+    CreateAudiencePreview200Response2: createAudiencePreview200Response2_1.CreateAudiencePreview200Response2,
     CreateAudiencePreviewAlphaInput: createAudiencePreviewAlphaInput_1.CreateAudiencePreviewAlphaInput,
     CreateAudiencePreviewAlphaOutput: createAudiencePreviewAlphaOutput_1.CreateAudiencePreviewAlphaOutput,
     CreateAudiencePreviewBetaInput: createAudiencePreviewBetaInput_1.CreateAudiencePreviewBetaInput,
     CreateAudiencePreviewBetaOutput: createAudiencePreviewBetaOutput_1.CreateAudiencePreviewBetaOutput,
+    CreateAudiencePreviewInput: createAudiencePreviewInput_1.CreateAudiencePreviewInput,
     CreateAudiencePreviewOptions: createAudiencePreviewOptions_1.CreateAudiencePreviewOptions,
+    CreateAudiencePreviewOutput: createAudiencePreviewOutput_1.CreateAudiencePreviewOutput,
     CreateCloudSourceRegulation200Response: createCloudSourceRegulation200Response_1.CreateCloudSourceRegulation200Response,
     CreateCloudSourceRegulationV1Input: createCloudSourceRegulationV1Input_1.CreateCloudSourceRegulationV1Input,
     CreateCloudSourceRegulationV1Output: createCloudSourceRegulationV1Output_1.CreateCloudSourceRegulationV1Output,
