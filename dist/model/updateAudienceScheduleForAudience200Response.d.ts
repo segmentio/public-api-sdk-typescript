@@ -1,6 +1,6 @@
-import { UpdateAudienceScheduleForAudienceAlphaOutput } from './updateAudienceScheduleForAudienceAlphaOutput';
+import { UpdateAudienceScheduleForAudienceOutput } from './updateAudienceScheduleForAudienceOutput';
 export declare class UpdateAudienceScheduleForAudience200Response {
-    'data'?: UpdateAudienceScheduleForAudienceAlphaOutput;
+    'data'?: UpdateAudienceScheduleForAudienceOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

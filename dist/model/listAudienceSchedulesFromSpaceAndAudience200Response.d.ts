@@ -1,6 +1,6 @@
-import { ListAudienceSchedulesFromSpaceAndAudienceAlphaOutput } from './listAudienceSchedulesFromSpaceAndAudienceAlphaOutput';
+import { ListAudienceSchedulesFromSpaceAndAudienceOutput } from './listAudienceSchedulesFromSpaceAndAudienceOutput';
 export declare class ListAudienceSchedulesFromSpaceAndAudience200Response {
-    'data'?: ListAudienceSchedulesFromSpaceAndAudienceAlphaOutput;
+    'data'?: ListAudienceSchedulesFromSpaceAndAudienceOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

@@ -7,8 +7,11 @@ export * from './addActivationToAudience200Response';
 export * from './addActivationToAudienceAlphaInput';
 export * from './addActivationToAudienceAlphaOutput';
 export * from './addAudienceScheduleToAudience200Response';
+export * from './addAudienceScheduleToAudience200Response1';
 export * from './addAudienceScheduleToAudienceAlphaInput';
 export * from './addAudienceScheduleToAudienceAlphaOutput';
+export * from './addAudienceScheduleToAudienceInput';
+export * from './addAudienceScheduleToAudienceOutput';
 export * from './addConnectionFromSourceToWarehouse201Response';
 export * from './addConnectionFromSourceToWarehouseV1Output';
 export * from './addDestinationToAudience200Response';
@@ -257,7 +260,9 @@ export * from './getAudiencePreviewAlphaOutput';
 export * from './getAudiencePreviewBetaOutput';
 export * from './getAudiencePreviewOutput';
 export * from './getAudienceScheduleFromSpaceAndAudience200Response';
+export * from './getAudienceScheduleFromSpaceAndAudience200Response1';
 export * from './getAudienceScheduleFromSpaceAndAudienceAlphaOutput';
+export * from './getAudienceScheduleFromSpaceAndAudienceOutput';
 export * from './getComputedTrait200Response';
 export * from './getComputedTraitAlphaOutput';
 export * from './getConnectionStateFromWarehouse200Response';
@@ -353,7 +358,9 @@ export * from './listAudienceConsumersFromSpaceAndAudience200Response';
 export * from './listAudienceConsumersFromSpaceAndAudienceAlphaOutput';
 export * from './listAudienceConsumersSortInput';
 export * from './listAudienceSchedulesFromSpaceAndAudience200Response';
+export * from './listAudienceSchedulesFromSpaceAndAudience200Response1';
 export * from './listAudienceSchedulesFromSpaceAndAudienceAlphaOutput';
+export * from './listAudienceSchedulesFromSpaceAndAudienceOutput';
 export * from './listAudienceSearchInput';
 export * from './listAudiences200Response';
 export * from './listAudiences200Response1';
@@ -497,7 +504,9 @@ export * from './removeAudienceFromSpaceAlphaOutput';
 export * from './removeAudienceFromSpaceBetaOutput';
 export * from './removeAudienceFromSpaceOutput';
 export * from './removeAudienceScheduleFromAudience200Response';
+export * from './removeAudienceScheduleFromAudience200Response1';
 export * from './removeAudienceScheduleFromAudienceAlphaOutput';
+export * from './removeAudienceScheduleFromAudienceOutput';
 export * from './removeComputedTraitFromSpace200Response';
 export * from './removeComputedTraitFromSpaceAlphaOutput';
 export * from './removeFilterFromDestination200Response';
@@ -596,8 +605,11 @@ export * from './updateAudienceForSpaceBetaOutput';
 export * from './updateAudienceForSpaceInput';
 export * from './updateAudienceForSpaceOutput';
 export * from './updateAudienceScheduleForAudience200Response';
+export * from './updateAudienceScheduleForAudience200Response1';
 export * from './updateAudienceScheduleForAudienceAlphaInput';
 export * from './updateAudienceScheduleForAudienceAlphaOutput';
+export * from './updateAudienceScheduleForAudienceInput';
+export * from './updateAudienceScheduleForAudienceOutput';
 export * from './updateComputedTraitForSpace200Response';
 export * from './updateComputedTraitForSpaceAlphaInput';
 export * from './updateComputedTraitForSpaceAlphaOutput';
@@ -689,8 +701,11 @@ import { AddActivationToAudience200Response } from './addActivationToAudience200
 import { AddActivationToAudienceAlphaInput } from './addActivationToAudienceAlphaInput';
 import { AddActivationToAudienceAlphaOutput } from './addActivationToAudienceAlphaOutput';
 import { AddAudienceScheduleToAudience200Response } from './addAudienceScheduleToAudience200Response';
+import { AddAudienceScheduleToAudience200Response1 } from './addAudienceScheduleToAudience200Response1';
 import { AddAudienceScheduleToAudienceAlphaInput } from './addAudienceScheduleToAudienceAlphaInput';
 import { AddAudienceScheduleToAudienceAlphaOutput } from './addAudienceScheduleToAudienceAlphaOutput';
+import { AddAudienceScheduleToAudienceInput } from './addAudienceScheduleToAudienceInput';
+import { AddAudienceScheduleToAudienceOutput } from './addAudienceScheduleToAudienceOutput';
 import { AddConnectionFromSourceToWarehouse201Response } from './addConnectionFromSourceToWarehouse201Response';
 import { AddConnectionFromSourceToWarehouseV1Output } from './addConnectionFromSourceToWarehouseV1Output';
 import { AddDestinationToAudience200Response } from './addDestinationToAudience200Response';
@@ -939,7 +954,9 @@ import { GetAudiencePreviewAlphaOutput } from './getAudiencePreviewAlphaOutput';
 import { GetAudiencePreviewBetaOutput } from './getAudiencePreviewBetaOutput';
 import { GetAudiencePreviewOutput } from './getAudiencePreviewOutput';
 import { GetAudienceScheduleFromSpaceAndAudience200Response } from './getAudienceScheduleFromSpaceAndAudience200Response';
+import { GetAudienceScheduleFromSpaceAndAudience200Response1 } from './getAudienceScheduleFromSpaceAndAudience200Response1';
 import { GetAudienceScheduleFromSpaceAndAudienceAlphaOutput } from './getAudienceScheduleFromSpaceAndAudienceAlphaOutput';
+import { GetAudienceScheduleFromSpaceAndAudienceOutput } from './getAudienceScheduleFromSpaceAndAudienceOutput';
 import { GetComputedTrait200Response } from './getComputedTrait200Response';
 import { GetComputedTraitAlphaOutput } from './getComputedTraitAlphaOutput';
 import { GetConnectionStateFromWarehouse200Response } from './getConnectionStateFromWarehouse200Response';
@@ -1035,7 +1052,9 @@ import { ListAudienceConsumersFromSpaceAndAudience200Response } from './listAudi
 import { ListAudienceConsumersFromSpaceAndAudienceAlphaOutput } from './listAudienceConsumersFromSpaceAndAudienceAlphaOutput';
 import { ListAudienceConsumersSortInput } from './listAudienceConsumersSortInput';
 import { ListAudienceSchedulesFromSpaceAndAudience200Response } from './listAudienceSchedulesFromSpaceAndAudience200Response';
+import { ListAudienceSchedulesFromSpaceAndAudience200Response1 } from './listAudienceSchedulesFromSpaceAndAudience200Response1';
 import { ListAudienceSchedulesFromSpaceAndAudienceAlphaOutput } from './listAudienceSchedulesFromSpaceAndAudienceAlphaOutput';
+import { ListAudienceSchedulesFromSpaceAndAudienceOutput } from './listAudienceSchedulesFromSpaceAndAudienceOutput';
 import { ListAudienceSearchInput } from './listAudienceSearchInput';
 import { ListAudiences200Response } from './listAudiences200Response';
 import { ListAudiences200Response1 } from './listAudiences200Response1';
@@ -1179,7 +1198,9 @@ import { RemoveAudienceFromSpaceAlphaOutput } from './removeAudienceFromSpaceAlp
 import { RemoveAudienceFromSpaceBetaOutput } from './removeAudienceFromSpaceBetaOutput';
 import { RemoveAudienceFromSpaceOutput } from './removeAudienceFromSpaceOutput';
 import { RemoveAudienceScheduleFromAudience200Response } from './removeAudienceScheduleFromAudience200Response';
+import { RemoveAudienceScheduleFromAudience200Response1 } from './removeAudienceScheduleFromAudience200Response1';
 import { RemoveAudienceScheduleFromAudienceAlphaOutput } from './removeAudienceScheduleFromAudienceAlphaOutput';
+import { RemoveAudienceScheduleFromAudienceOutput } from './removeAudienceScheduleFromAudienceOutput';
 import { RemoveComputedTraitFromSpace200Response } from './removeComputedTraitFromSpace200Response';
 import { RemoveComputedTraitFromSpaceAlphaOutput } from './removeComputedTraitFromSpaceAlphaOutput';
 import { RemoveFilterFromDestination200Response } from './removeFilterFromDestination200Response';
@@ -1278,8 +1299,11 @@ import { UpdateAudienceForSpaceBetaOutput } from './updateAudienceForSpaceBetaOu
 import { UpdateAudienceForSpaceInput } from './updateAudienceForSpaceInput';
 import { UpdateAudienceForSpaceOutput } from './updateAudienceForSpaceOutput';
 import { UpdateAudienceScheduleForAudience200Response } from './updateAudienceScheduleForAudience200Response';
+import { UpdateAudienceScheduleForAudience200Response1 } from './updateAudienceScheduleForAudience200Response1';
 import { UpdateAudienceScheduleForAudienceAlphaInput } from './updateAudienceScheduleForAudienceAlphaInput';
 import { UpdateAudienceScheduleForAudienceAlphaOutput } from './updateAudienceScheduleForAudienceAlphaOutput';
+import { UpdateAudienceScheduleForAudienceInput } from './updateAudienceScheduleForAudienceInput';
+import { UpdateAudienceScheduleForAudienceOutput } from './updateAudienceScheduleForAudienceOutput';
 import { UpdateComputedTraitForSpace200Response } from './updateComputedTraitForSpace200Response';
 import { UpdateComputedTraitForSpaceAlphaInput } from './updateComputedTraitForSpaceAlphaInput';
 import { UpdateComputedTraitForSpaceAlphaOutput } from './updateComputedTraitForSpaceAlphaOutput';
@@ -1367,6 +1391,8 @@ let primitives = [
 let enumsMap: { [index: string]: any } = {
     'AddAudienceScheduleToAudienceAlphaInput.StrategyEnum':
         AddAudienceScheduleToAudienceAlphaInput.StrategyEnum,
+    'AddAudienceScheduleToAudienceInput.StrategyEnum':
+        AddAudienceScheduleToAudienceInput.StrategyEnum,
     'AddConnectionFromSourceToWarehouseV1Output.StatusEnum':
         AddConnectionFromSourceToWarehouseV1Output.StatusEnum,
     'AddSourceToTrackingPlanV1Output.StatusEnum':
@@ -1498,6 +1524,8 @@ let enumsMap: { [index: string]: any } = {
         RemoveAudienceFromSpaceOutput.StatusEnum,
     'RemoveAudienceScheduleFromAudienceAlphaOutput.StatusEnum':
         RemoveAudienceScheduleFromAudienceAlphaOutput.StatusEnum,
+    'RemoveAudienceScheduleFromAudienceOutput.StatusEnum':
+        RemoveAudienceScheduleFromAudienceOutput.StatusEnum,
     'RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum':
         RemoveComputedTraitFromSpaceAlphaOutput.StatusEnum,
     'RemoveFilterFromDestinationV1Output.StatusEnum':
@@ -1531,6 +1559,8 @@ let enumsMap: { [index: string]: any } = {
     'TraitDefinition.TypeEnum': TraitDefinition.TypeEnum,
     'UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum':
         UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum,
+    'UpdateAudienceScheduleForAudienceInput.StrategyEnum':
+        UpdateAudienceScheduleForAudienceInput.StrategyEnum,
     'UpdateGroupSubscriptionStatusResponse.StatusEnum':
         UpdateGroupSubscriptionStatusResponse.StatusEnum,
     'UpdateRulesInTrackingPlanV1Output.StatusEnum':
@@ -1553,10 +1583,14 @@ let typeMap: { [index: string]: any } = {
     AddActivationToAudienceAlphaOutput: AddActivationToAudienceAlphaOutput,
     AddAudienceScheduleToAudience200Response:
         AddAudienceScheduleToAudience200Response,
+    AddAudienceScheduleToAudience200Response1:
+        AddAudienceScheduleToAudience200Response1,
     AddAudienceScheduleToAudienceAlphaInput:
         AddAudienceScheduleToAudienceAlphaInput,
     AddAudienceScheduleToAudienceAlphaOutput:
         AddAudienceScheduleToAudienceAlphaOutput,
+    AddAudienceScheduleToAudienceInput: AddAudienceScheduleToAudienceInput,
+    AddAudienceScheduleToAudienceOutput: AddAudienceScheduleToAudienceOutput,
     AddConnectionFromSourceToWarehouse201Response:
         AddConnectionFromSourceToWarehouse201Response,
     AddConnectionFromSourceToWarehouseV1Output:
@@ -1831,8 +1865,12 @@ let typeMap: { [index: string]: any } = {
     GetAudiencePreviewOutput: GetAudiencePreviewOutput,
     GetAudienceScheduleFromSpaceAndAudience200Response:
         GetAudienceScheduleFromSpaceAndAudience200Response,
+    GetAudienceScheduleFromSpaceAndAudience200Response1:
+        GetAudienceScheduleFromSpaceAndAudience200Response1,
     GetAudienceScheduleFromSpaceAndAudienceAlphaOutput:
         GetAudienceScheduleFromSpaceAndAudienceAlphaOutput,
+    GetAudienceScheduleFromSpaceAndAudienceOutput:
+        GetAudienceScheduleFromSpaceAndAudienceOutput,
     GetComputedTrait200Response: GetComputedTrait200Response,
     GetComputedTraitAlphaOutput: GetComputedTraitAlphaOutput,
     GetConnectionStateFromWarehouse200Response:
@@ -1944,8 +1982,12 @@ let typeMap: { [index: string]: any } = {
     ListAudienceConsumersSortInput: ListAudienceConsumersSortInput,
     ListAudienceSchedulesFromSpaceAndAudience200Response:
         ListAudienceSchedulesFromSpaceAndAudience200Response,
+    ListAudienceSchedulesFromSpaceAndAudience200Response1:
+        ListAudienceSchedulesFromSpaceAndAudience200Response1,
     ListAudienceSchedulesFromSpaceAndAudienceAlphaOutput:
         ListAudienceSchedulesFromSpaceAndAudienceAlphaOutput,
+    ListAudienceSchedulesFromSpaceAndAudienceOutput:
+        ListAudienceSchedulesFromSpaceAndAudienceOutput,
     ListAudienceSearchInput: ListAudienceSearchInput,
     ListAudiences200Response: ListAudiences200Response,
     ListAudiences200Response1: ListAudiences200Response1,
@@ -2124,8 +2166,12 @@ let typeMap: { [index: string]: any } = {
     RemoveAudienceFromSpaceOutput: RemoveAudienceFromSpaceOutput,
     RemoveAudienceScheduleFromAudience200Response:
         RemoveAudienceScheduleFromAudience200Response,
+    RemoveAudienceScheduleFromAudience200Response1:
+        RemoveAudienceScheduleFromAudience200Response1,
     RemoveAudienceScheduleFromAudienceAlphaOutput:
         RemoveAudienceScheduleFromAudienceAlphaOutput,
+    RemoveAudienceScheduleFromAudienceOutput:
+        RemoveAudienceScheduleFromAudienceOutput,
     RemoveComputedTraitFromSpace200Response:
         RemoveComputedTraitFromSpace200Response,
     RemoveComputedTraitFromSpaceAlphaOutput:
@@ -2248,10 +2294,16 @@ let typeMap: { [index: string]: any } = {
     UpdateAudienceForSpaceOutput: UpdateAudienceForSpaceOutput,
     UpdateAudienceScheduleForAudience200Response:
         UpdateAudienceScheduleForAudience200Response,
+    UpdateAudienceScheduleForAudience200Response1:
+        UpdateAudienceScheduleForAudience200Response1,
     UpdateAudienceScheduleForAudienceAlphaInput:
         UpdateAudienceScheduleForAudienceAlphaInput,
     UpdateAudienceScheduleForAudienceAlphaOutput:
         UpdateAudienceScheduleForAudienceAlphaOutput,
+    UpdateAudienceScheduleForAudienceInput:
+        UpdateAudienceScheduleForAudienceInput,
+    UpdateAudienceScheduleForAudienceOutput:
+        UpdateAudienceScheduleForAudienceOutput,
     UpdateComputedTraitForSpace200Response:
         UpdateComputedTraitForSpace200Response,
     UpdateComputedTraitForSpaceAlphaInput:
