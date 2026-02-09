@@ -267,8 +267,10 @@ __exportStar(require("./getAudienceBetaOutput"), exports);
 __exportStar(require("./getAudienceOutput"), exports);
 __exportStar(require("./getAudiencePreview200Response"), exports);
 __exportStar(require("./getAudiencePreview200Response1"), exports);
+__exportStar(require("./getAudiencePreview200Response2"), exports);
 __exportStar(require("./getAudiencePreviewAlphaOutput"), exports);
 __exportStar(require("./getAudiencePreviewBetaOutput"), exports);
+__exportStar(require("./getAudiencePreviewOutput"), exports);
 __exportStar(require("./getAudienceScheduleFromSpaceAndAudience200Response"), exports);
 __exportStar(require("./getAudienceScheduleFromSpaceAndAudienceAlphaOutput"), exports);
 __exportStar(require("./getComputedTrait200Response"), exports);
@@ -934,8 +936,10 @@ var getAudienceBetaOutput_1 = require("./getAudienceBetaOutput");
 var getAudienceOutput_1 = require("./getAudienceOutput");
 var getAudiencePreview200Response_1 = require("./getAudiencePreview200Response");
 var getAudiencePreview200Response1_1 = require("./getAudiencePreview200Response1");
+var getAudiencePreview200Response2_1 = require("./getAudiencePreview200Response2");
 var getAudiencePreviewAlphaOutput_1 = require("./getAudiencePreviewAlphaOutput");
 var getAudiencePreviewBetaOutput_1 = require("./getAudiencePreviewBetaOutput");
+var getAudiencePreviewOutput_1 = require("./getAudiencePreviewOutput");
 var getAudienceScheduleFromSpaceAndAudience200Response_1 = require("./getAudienceScheduleFromSpaceAndAudience200Response");
 var getAudienceScheduleFromSpaceAndAudienceAlphaOutput_1 = require("./getAudienceScheduleFromSpaceAndAudienceAlphaOutput");
 var getComputedTrait200Response_1 = require("./getComputedTrait200Response");
@@ -1723,8 +1727,10 @@ var typeMap = {
     GetAudienceOutput: getAudienceOutput_1.GetAudienceOutput,
     GetAudiencePreview200Response: getAudiencePreview200Response_1.GetAudiencePreview200Response,
     GetAudiencePreview200Response1: getAudiencePreview200Response1_1.GetAudiencePreview200Response1,
+    GetAudiencePreview200Response2: getAudiencePreview200Response2_1.GetAudiencePreview200Response2,
     GetAudiencePreviewAlphaOutput: getAudiencePreviewAlphaOutput_1.GetAudiencePreviewAlphaOutput,
     GetAudiencePreviewBetaOutput: getAudiencePreviewBetaOutput_1.GetAudiencePreviewBetaOutput,
+    GetAudiencePreviewOutput: getAudiencePreviewOutput_1.GetAudiencePreviewOutput,
     GetAudienceScheduleFromSpaceAndAudience200Response: getAudienceScheduleFromSpaceAndAudience200Response_1.GetAudienceScheduleFromSpaceAndAudience200Response,
     GetAudienceScheduleFromSpaceAndAudienceAlphaOutput: getAudienceScheduleFromSpaceAndAudienceAlphaOutput_1.GetAudienceScheduleFromSpaceAndAudienceAlphaOutput,
     GetComputedTrait200Response: getComputedTrait200Response_1.GetComputedTrait200Response,

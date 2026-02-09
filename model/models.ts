@@ -252,8 +252,10 @@ export * from './getAudienceBetaOutput';
 export * from './getAudienceOutput';
 export * from './getAudiencePreview200Response';
 export * from './getAudiencePreview200Response1';
+export * from './getAudiencePreview200Response2';
 export * from './getAudiencePreviewAlphaOutput';
 export * from './getAudiencePreviewBetaOutput';
+export * from './getAudiencePreviewOutput';
 export * from './getAudienceScheduleFromSpaceAndAudience200Response';
 export * from './getAudienceScheduleFromSpaceAndAudienceAlphaOutput';
 export * from './getComputedTrait200Response';
@@ -932,8 +934,10 @@ import { GetAudienceBetaOutput } from './getAudienceBetaOutput';
 import { GetAudienceOutput } from './getAudienceOutput';
 import { GetAudiencePreview200Response } from './getAudiencePreview200Response';
 import { GetAudiencePreview200Response1 } from './getAudiencePreview200Response1';
+import { GetAudiencePreview200Response2 } from './getAudiencePreview200Response2';
 import { GetAudiencePreviewAlphaOutput } from './getAudiencePreviewAlphaOutput';
 import { GetAudiencePreviewBetaOutput } from './getAudiencePreviewBetaOutput';
+import { GetAudiencePreviewOutput } from './getAudiencePreviewOutput';
 import { GetAudienceScheduleFromSpaceAndAudience200Response } from './getAudienceScheduleFromSpaceAndAudience200Response';
 import { GetAudienceScheduleFromSpaceAndAudienceAlphaOutput } from './getAudienceScheduleFromSpaceAndAudienceAlphaOutput';
 import { GetComputedTrait200Response } from './getComputedTrait200Response';
@@ -1821,8 +1825,10 @@ let typeMap: { [index: string]: any } = {
     GetAudienceOutput: GetAudienceOutput,
     GetAudiencePreview200Response: GetAudiencePreview200Response,
     GetAudiencePreview200Response1: GetAudiencePreview200Response1,
+    GetAudiencePreview200Response2: GetAudiencePreview200Response2,
     GetAudiencePreviewAlphaOutput: GetAudiencePreviewAlphaOutput,
     GetAudiencePreviewBetaOutput: GetAudiencePreviewBetaOutput,
+    GetAudiencePreviewOutput: GetAudiencePreviewOutput,
     GetAudienceScheduleFromSpaceAndAudience200Response:
         GetAudienceScheduleFromSpaceAndAudience200Response,
     GetAudienceScheduleFromSpaceAndAudienceAlphaOutput:
