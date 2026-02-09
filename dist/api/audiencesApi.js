@@ -112,7 +112,7 @@ var AudiencesApi = (function () {
     AudiencesApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    AudiencesApi.prototype.addAudienceScheduleToAudience = function (spaceId, id, AddAudienceScheduleToAudienceInput, options) {
+    AudiencesApi.prototype.addAudienceScheduleToAudience = function (spaceId, id, AddAudienceScheduleToAudienceAlphaInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -125,9 +125,8 @@ var AudiencesApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -142,9 +141,9 @@ var AudiencesApi = (function () {
                 if (id === null || id === undefined) {
                     throw new Error('Required parameter id was null or undefined when calling addAudienceScheduleToAudience.');
                 }
-                if (AddAudienceScheduleToAudienceInput === null ||
-                    AddAudienceScheduleToAudienceInput === undefined) {
-                    throw new Error('Required parameter AddAudienceScheduleToAudienceInput was null or undefined when calling addAudienceScheduleToAudience.');
+                if (AddAudienceScheduleToAudienceAlphaInput === null ||
+                    AddAudienceScheduleToAudienceAlphaInput === undefined) {
+                    throw new Error('Required parameter AddAudienceScheduleToAudienceAlphaInput was null or undefined when calling addAudienceScheduleToAudience.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -155,7 +154,7 @@ var AudiencesApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(AddAudienceScheduleToAudienceInput, 'AddAudienceScheduleToAudienceInput'),
+                    body: models_1.ObjectSerializer.serialize(AddAudienceScheduleToAudienceAlphaInput, 'AddAudienceScheduleToAudienceAlphaInput'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {
@@ -676,9 +675,8 @@ var AudiencesApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -867,9 +865,8 @@ var AudiencesApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -1144,9 +1141,8 @@ var AudiencesApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -1320,7 +1316,7 @@ var AudiencesApi = (function () {
             });
         });
     };
-    AudiencesApi.prototype.updateAudienceScheduleForAudience = function (spaceId, id, scheduleId, UpdateAudienceScheduleForAudienceInput, options) {
+    AudiencesApi.prototype.updateAudienceScheduleForAudience = function (spaceId, id, scheduleId, UpdateAudienceScheduleForAudienceAlphaInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_14, _i, _a, interceptor;
@@ -1334,9 +1330,8 @@ var AudiencesApi = (function () {
                 localVarQueryParameters = {};
                 localVarHeaderParams = Object.assign({}, this._defaultHeaders);
                 produces = [
-                    'application/vnd.segment.v1+json',
-                    'application/json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -1354,9 +1349,9 @@ var AudiencesApi = (function () {
                 if (scheduleId === null || scheduleId === undefined) {
                     throw new Error('Required parameter scheduleId was null or undefined when calling updateAudienceScheduleForAudience.');
                 }
-                if (UpdateAudienceScheduleForAudienceInput === null ||
-                    UpdateAudienceScheduleForAudienceInput === undefined) {
-                    throw new Error('Required parameter UpdateAudienceScheduleForAudienceInput was null or undefined when calling updateAudienceScheduleForAudience.');
+                if (UpdateAudienceScheduleForAudienceAlphaInput === null ||
+                    UpdateAudienceScheduleForAudienceAlphaInput === undefined) {
+                    throw new Error('Required parameter UpdateAudienceScheduleForAudienceAlphaInput was null or undefined when calling updateAudienceScheduleForAudience.');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
@@ -1367,7 +1362,7 @@ var AudiencesApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
-                    body: models_1.ObjectSerializer.serialize(UpdateAudienceScheduleForAudienceInput, 'UpdateAudienceScheduleForAudienceInput'),
+                    body: models_1.ObjectSerializer.serialize(UpdateAudienceScheduleForAudienceAlphaInput, 'UpdateAudienceScheduleForAudienceAlphaInput'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {

@@ -1,6 +1,6 @@
-import { RemoveAudienceScheduleFromAudienceOutput } from './removeAudienceScheduleFromAudienceOutput';
+import { RemoveAudienceScheduleFromAudienceAlphaOutput } from './removeAudienceScheduleFromAudienceAlphaOutput';
 export declare class RemoveAudienceScheduleFromAudience200Response {
-    'data'?: RemoveAudienceScheduleFromAudienceOutput;
+    'data'?: RemoveAudienceScheduleFromAudienceAlphaOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

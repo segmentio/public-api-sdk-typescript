@@ -12,7 +12,7 @@ var UpdateAudienceScheduleForAudience200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'UpdateAudienceScheduleForAudienceOutput',
+            type: 'UpdateAudienceScheduleForAudienceAlphaOutput',
         },
     ];
     return UpdateAudienceScheduleForAudience200Response;
