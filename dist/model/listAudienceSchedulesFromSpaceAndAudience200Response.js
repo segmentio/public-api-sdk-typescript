@@ -12,7 +12,7 @@ var ListAudienceSchedulesFromSpaceAndAudience200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'ListAudienceSchedulesFromSpaceAndAudienceAlphaOutput',
+            type: 'ListAudienceSchedulesFromSpaceAndAudienceOutput',
         },
     ];
     return ListAudienceSchedulesFromSpaceAndAudience200Response;
