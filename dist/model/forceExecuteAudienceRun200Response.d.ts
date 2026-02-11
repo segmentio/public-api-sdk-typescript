@@ -1,6 +1,6 @@
-import { ForceExecuteAudienceRunAlphaOutput } from './forceExecuteAudienceRunAlphaOutput';
+import { ForceExecuteAudienceRunOutput } from './forceExecuteAudienceRunOutput';
 export declare class ForceExecuteAudienceRun200Response {
-    'data'?: ForceExecuteAudienceRunAlphaOutput;
+    'data'?: ForceExecuteAudienceRunOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
