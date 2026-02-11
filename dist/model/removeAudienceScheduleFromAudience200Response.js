@@ -12,7 +12,7 @@ var RemoveAudienceScheduleFromAudience200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'RemoveAudienceScheduleFromAudienceAlphaOutput',
+            type: 'RemoveAudienceScheduleFromAudienceOutput',
         },
     ];
     return RemoveAudienceScheduleFromAudience200Response;

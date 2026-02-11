@@ -12,7 +12,7 @@ var AddAudienceScheduleToAudience200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'AddAudienceScheduleToAudienceAlphaOutput',
+            type: 'AddAudienceScheduleToAudienceOutput',
         },
     ];
     return AddAudienceScheduleToAudience200Response;

@@ -1,7 +1,7 @@
 /// <reference types="node" />
 import http from 'http';
 import { AddAudienceScheduleToAudience200Response } from '../model/addAudienceScheduleToAudience200Response';
-import { AddAudienceScheduleToAudienceAlphaInput } from '../model/addAudienceScheduleToAudienceAlphaInput';
+import { AddAudienceScheduleToAudienceInput } from '../model/addAudienceScheduleToAudienceInput';
 import { CreateAudience200Response } from '../model/createAudience200Response';
 import { CreateAudienceInput } from '../model/createAudienceInput';
 import { CreateAudiencePreview200Response } from '../model/createAudiencePreview200Response';
@@ -22,7 +22,7 @@ import { RemoveAudienceScheduleFromAudience200Response } from '../model/removeAu
 import { UpdateAudienceForSpace200Response } from '../model/updateAudienceForSpace200Response';
 import { UpdateAudienceForSpaceInput } from '../model/updateAudienceForSpaceInput';
 import { UpdateAudienceScheduleForAudience200Response } from '../model/updateAudienceScheduleForAudience200Response';
-import { UpdateAudienceScheduleForAudienceAlphaInput } from '../model/updateAudienceScheduleForAudienceAlphaInput';
+import { UpdateAudienceScheduleForAudienceInput } from '../model/updateAudienceScheduleForAudienceInput';
 import { Authentication, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
 export declare enum AudiencesApiApiKeys {
@@ -46,7 +46,7 @@ export declare class AudiencesApi {
     setApiKey(key: AudiencesApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    addAudienceScheduleToAudience(spaceId: string, id: string, AddAudienceScheduleToAudienceAlphaInput: AddAudienceScheduleToAudienceAlphaInput, options?: {
+    addAudienceScheduleToAudience(spaceId: string, id: string, AddAudienceScheduleToAudienceInput: AddAudienceScheduleToAudienceInput, options?: {
         headers: {
             [name: string]: string;
         };
@@ -150,7 +150,7 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: UpdateAudienceForSpace200Response;
     }>;
-    updateAudienceScheduleForAudience(spaceId: string, id: string, scheduleId: string, UpdateAudienceScheduleForAudienceAlphaInput: UpdateAudienceScheduleForAudienceAlphaInput, options?: {
+    updateAudienceScheduleForAudience(spaceId: string, id: string, scheduleId: string, UpdateAudienceScheduleForAudienceInput: UpdateAudienceScheduleForAudienceInput, options?: {
         headers: {
             [name: string]: string;
         };
