@@ -239,7 +239,9 @@ export * from './eventSourceV1';
 export * from './fQLDefinedPropertyV1';
 export * from './filter';
 export * from './forceExecuteAudienceRun200Response';
+export * from './forceExecuteAudienceRun200Response1';
 export * from './forceExecuteAudienceRunAlphaOutput';
+export * from './forceExecuteAudienceRunOutput';
 export * from './functionDeployment';
 export * from './functionSettingV1';
 export * from './functionV1';
@@ -933,7 +935,9 @@ import { EventSourceV1 } from './eventSourceV1';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
 import { Filter } from './filter';
 import { ForceExecuteAudienceRun200Response } from './forceExecuteAudienceRun200Response';
+import { ForceExecuteAudienceRun200Response1 } from './forceExecuteAudienceRun200Response1';
 import { ForceExecuteAudienceRunAlphaOutput } from './forceExecuteAudienceRunAlphaOutput';
+import { ForceExecuteAudienceRunOutput } from './forceExecuteAudienceRunOutput';
 import { FunctionDeployment } from './functionDeployment';
 import { FunctionSettingV1 } from './functionSettingV1';
 import { FunctionV1 } from './functionV1';
@@ -1841,7 +1845,9 @@ let typeMap: { [index: string]: any } = {
     FQLDefinedPropertyV1: FQLDefinedPropertyV1,
     Filter: Filter,
     ForceExecuteAudienceRun200Response: ForceExecuteAudienceRun200Response,
+    ForceExecuteAudienceRun200Response1: ForceExecuteAudienceRun200Response1,
     ForceExecuteAudienceRunAlphaOutput: ForceExecuteAudienceRunAlphaOutput,
+    ForceExecuteAudienceRunOutput: ForceExecuteAudienceRunOutput,
     FunctionDeployment: FunctionDeployment,
     FunctionSettingV1: FunctionSettingV1,
     FunctionV1: FunctionV1,

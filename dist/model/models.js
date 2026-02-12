@@ -254,7 +254,9 @@ __exportStar(require("./eventSourceV1"), exports);
 __exportStar(require("./fQLDefinedPropertyV1"), exports);
 __exportStar(require("./filter"), exports);
 __exportStar(require("./forceExecuteAudienceRun200Response"), exports);
+__exportStar(require("./forceExecuteAudienceRun200Response1"), exports);
 __exportStar(require("./forceExecuteAudienceRunAlphaOutput"), exports);
+__exportStar(require("./forceExecuteAudienceRunOutput"), exports);
 __exportStar(require("./functionDeployment"), exports);
 __exportStar(require("./functionSettingV1"), exports);
 __exportStar(require("./functionV1"), exports);
@@ -935,7 +937,9 @@ var eventSourceV1_1 = require("./eventSourceV1");
 var fQLDefinedPropertyV1_1 = require("./fQLDefinedPropertyV1");
 var filter_1 = require("./filter");
 var forceExecuteAudienceRun200Response_1 = require("./forceExecuteAudienceRun200Response");
+var forceExecuteAudienceRun200Response1_1 = require("./forceExecuteAudienceRun200Response1");
 var forceExecuteAudienceRunAlphaOutput_1 = require("./forceExecuteAudienceRunAlphaOutput");
+var forceExecuteAudienceRunOutput_1 = require("./forceExecuteAudienceRunOutput");
 var functionDeployment_1 = require("./functionDeployment");
 var functionSettingV1_1 = require("./functionSettingV1");
 var functionV1_1 = require("./functionV1");
@@ -1741,7 +1745,9 @@ var typeMap = {
     FQLDefinedPropertyV1: fQLDefinedPropertyV1_1.FQLDefinedPropertyV1,
     Filter: filter_1.Filter,
     ForceExecuteAudienceRun200Response: forceExecuteAudienceRun200Response_1.ForceExecuteAudienceRun200Response,
+    ForceExecuteAudienceRun200Response1: forceExecuteAudienceRun200Response1_1.ForceExecuteAudienceRun200Response1,
     ForceExecuteAudienceRunAlphaOutput: forceExecuteAudienceRunAlphaOutput_1.ForceExecuteAudienceRunAlphaOutput,
+    ForceExecuteAudienceRunOutput: forceExecuteAudienceRunOutput_1.ForceExecuteAudienceRunOutput,
     FunctionDeployment: functionDeployment_1.FunctionDeployment,
     FunctionSettingV1: functionSettingV1_1.FunctionSettingV1,
     FunctionV1: functionV1_1.FunctionV1,

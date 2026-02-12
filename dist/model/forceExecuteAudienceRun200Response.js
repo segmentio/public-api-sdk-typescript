@@ -12,7 +12,7 @@ var ForceExecuteAudienceRun200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'ForceExecuteAudienceRunAlphaOutput',
+            type: 'ForceExecuteAudienceRunOutput',
         },
     ];
     return ForceExecuteAudienceRun200Response;
