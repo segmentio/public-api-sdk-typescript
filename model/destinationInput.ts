@@ -17,11 +17,11 @@ import { RequestFile } from './models';
  */
 export class DestinationInput {
     /**
-     * The Destination instance id.
+     * The Destination id. Use the List Destinations endpoint to look up available ids.
      */
     'id': string;
     /**
-     * Type of Destination to add to the audience.
+     * The category of the Destination.  Possible values: destination, warehouse.
      */
     'type': string;
 
