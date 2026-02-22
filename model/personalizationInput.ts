@@ -24,7 +24,7 @@ export class PersonalizationInput {
      */
     'entities'?: Array<PersonalizationInputEntity>;
     /**
-     * Sync entity property changes back to Segment. Only applicable if activationType is \"Audience Membership Changed\".
+     * Sync entity property changes to the Destination. Only applicable if activationType is \"Audience Membership Changed\".
      */
     'syncEntityPropertyChanges'?: boolean;
 

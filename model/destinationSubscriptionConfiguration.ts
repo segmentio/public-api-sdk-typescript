@@ -17,7 +17,7 @@ import { RequestFile } from './models';
  */
 export class DestinationSubscriptionConfiguration {
     /**
-     * The action id to instantiate.
+     * The id for the action that Segment should perform on the Destination.
      */
     'actionId': string;
     /**

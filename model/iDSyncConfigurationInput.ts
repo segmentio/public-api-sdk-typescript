@@ -17,11 +17,11 @@ import { RequestFile } from './models';
  */
 export class IDSyncConfigurationInput {
     /**
-     * The external id to sync, for example \"user_id\" or \"email\".
+     * The id type to sync. Examples: user_id, email, anonymous_id.
      */
     'externalId': string;
     /**
-     * The strategy for syncing this identifier. Valid values: \"first\", \"last\", \"all\".
+     * The rule for selecting which identifiers to sync from a profile.  Possible values: first: Syncs only the oldest recorded value. last: Syncs only the most recently updated value. all: Syncs every value found on the profile (sends multiple events).
      */
     'strategy': string;
 

@@ -17,11 +17,11 @@ import { IDSyncConfigurationInput } from './iDSyncConfigurationInput';
 export class AddDestinationToAudienceAlphaOutput {
     'connection': Connection;
     /**
-     * The id sync configuration for the Destination - array of external ids with their strategies.
+     * Identifier sync configuration. Defines which external ids to sync and their selection strategies. Maximum 5 items allowed. If omitted, the default will be last email and last user_id, or all email and all user_id depending on the Destination.
      */
     'idSyncConfiguration': Array<IDSyncConfigurationInput>;
     /**
-     * The settings that a Destination requires to create audiences on a third-party platform. These settings are Destination-specific and thus are best defined as unknown.
+     * The settings that a Destination requires to create audiences on a third-party platform. These settings are Destination-specific. Use the List Supported Destinations from Audience endpoint to find the required connection settings.
      */
     'connectionSettings'?: any | null;
 
