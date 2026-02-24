@@ -44,7 +44,7 @@ export class AudienceSummary {
     'enabled': boolean;
     'definition': AudienceDefinition | null;
     /**
-     * Status for the audience.  Possible values: Backfilling, Computing, Failed, Live, Awaiting Destinations, Disabled.
+     * Status for the audience.  Possible values: Backfilling, Computing, Disabled, Error, Failed, Live, Locked, Not Computing, Preparing, Awaiting Destinations.
      */
     'status'?: string;
     /**
