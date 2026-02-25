@@ -1,0 +1,1 @@
+{"version":3,"file":"destination.js","sourceRoot":"","sources":["../../model/destination.ts"],"names":[],"mappings":";;;AAiBA;IAAA;IAuBA,CAAC;IAHU,+BAAmB,GAA1B;QACI,OAAO,WAAW,CAAC,gBAAgB,CAAC;IACxC,CAAC;IAhBM,yBAAa,GAAuB,SAAS,CAAC;IAE9C,4BAAgB,GAIlB;QACD;YACI,IAAI,EAAE,IAAI;YACV,QAAQ,EAAE,IAAI;YACd,IAAI,EAAE,QAAQ;SACjB;KACJ,CAAC;IAKN,kBAAC;CAAA,AAvBD,IAuBC;AAvBY,kCAAW"}
