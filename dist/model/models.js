@@ -228,6 +228,7 @@ __exportStar(require("./deliveryOverviewMetricsDatapoint"), exports);
 __exportStar(require("./deliveryOverviewMetricsDataset"), exports);
 __exportStar(require("./deliveryOverviewSourceFilterBy"), exports);
 __exportStar(require("./deliveryOverviewSuccessfullyReceivedFilterBy"), exports);
+__exportStar(require("./destination"), exports);
 __exportStar(require("./destinationFilterActionV1"), exports);
 __exportStar(require("./destinationFilterV1"), exports);
 __exportStar(require("./destinationInput"), exports);
@@ -633,6 +634,9 @@ __exportStar(require("./updateComputedTraitForSpace200Response"), exports);
 __exportStar(require("./updateComputedTraitForSpaceAlphaInput"), exports);
 __exportStar(require("./updateComputedTraitForSpaceAlphaOutput"), exports);
 __exportStar(require("./updateDestination200Response"), exports);
+__exportStar(require("./updateDestinationForAudience200Response"), exports);
+__exportStar(require("./updateDestinationForAudienceAlphaInput"), exports);
+__exportStar(require("./updateDestinationForAudienceAlphaOutput"), exports);
 __exportStar(require("./updateDestinationV1Input"), exports);
 __exportStar(require("./updateDestinationV1Output"), exports);
 __exportStar(require("./updateFilterById200Response"), exports);
@@ -913,6 +917,7 @@ var deliveryOverviewMetricsDatapoint_1 = require("./deliveryOverviewMetricsDatap
 var deliveryOverviewMetricsDataset_1 = require("./deliveryOverviewMetricsDataset");
 var deliveryOverviewSourceFilterBy_1 = require("./deliveryOverviewSourceFilterBy");
 var deliveryOverviewSuccessfullyReceivedFilterBy_1 = require("./deliveryOverviewSuccessfullyReceivedFilterBy");
+var destination_1 = require("./destination");
 var destinationFilterActionV1_1 = require("./destinationFilterActionV1");
 var destinationFilterV1_1 = require("./destinationFilterV1");
 var destinationInput_1 = require("./destinationInput");
@@ -1318,6 +1323,9 @@ var updateComputedTraitForSpace200Response_1 = require("./updateComputedTraitFor
 var updateComputedTraitForSpaceAlphaInput_1 = require("./updateComputedTraitForSpaceAlphaInput");
 var updateComputedTraitForSpaceAlphaOutput_1 = require("./updateComputedTraitForSpaceAlphaOutput");
 var updateDestination200Response_1 = require("./updateDestination200Response");
+var updateDestinationForAudience200Response_1 = require("./updateDestinationForAudience200Response");
+var updateDestinationForAudienceAlphaInput_1 = require("./updateDestinationForAudienceAlphaInput");
+var updateDestinationForAudienceAlphaOutput_1 = require("./updateDestinationForAudienceAlphaOutput");
 var updateDestinationV1Input_1 = require("./updateDestinationV1Input");
 var updateDestinationV1Output_1 = require("./updateDestinationV1Output");
 var updateFilterById200Response_1 = require("./updateFilterById200Response");
@@ -1724,6 +1732,7 @@ var typeMap = {
     DeliveryOverviewMetricsDataset: deliveryOverviewMetricsDataset_1.DeliveryOverviewMetricsDataset,
     DeliveryOverviewSourceFilterBy: deliveryOverviewSourceFilterBy_1.DeliveryOverviewSourceFilterBy,
     DeliveryOverviewSuccessfullyReceivedFilterBy: deliveryOverviewSuccessfullyReceivedFilterBy_1.DeliveryOverviewSuccessfullyReceivedFilterBy,
+    Destination: destination_1.Destination,
     DestinationFilterActionV1: destinationFilterActionV1_1.DestinationFilterActionV1,
     DestinationFilterV1: destinationFilterV1_1.DestinationFilterV1,
     DestinationInput: destinationInput_1.DestinationInput,
@@ -2129,6 +2138,9 @@ var typeMap = {
     UpdateComputedTraitForSpaceAlphaInput: updateComputedTraitForSpaceAlphaInput_1.UpdateComputedTraitForSpaceAlphaInput,
     UpdateComputedTraitForSpaceAlphaOutput: updateComputedTraitForSpaceAlphaOutput_1.UpdateComputedTraitForSpaceAlphaOutput,
     UpdateDestination200Response: updateDestination200Response_1.UpdateDestination200Response,
+    UpdateDestinationForAudience200Response: updateDestinationForAudience200Response_1.UpdateDestinationForAudience200Response,
+    UpdateDestinationForAudienceAlphaInput: updateDestinationForAudienceAlphaInput_1.UpdateDestinationForAudienceAlphaInput,
+    UpdateDestinationForAudienceAlphaOutput: updateDestinationForAudienceAlphaOutput_1.UpdateDestinationForAudienceAlphaOutput,
     UpdateDestinationV1Input: updateDestinationV1Input_1.UpdateDestinationV1Input,
     UpdateDestinationV1Output: updateDestinationV1Output_1.UpdateDestinationV1Output,
     UpdateFilterById200Response: updateFilterById200Response_1.UpdateFilterById200Response,

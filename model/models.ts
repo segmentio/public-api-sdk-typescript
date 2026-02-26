@@ -213,6 +213,7 @@ export * from './deliveryOverviewMetricsDatapoint';
 export * from './deliveryOverviewMetricsDataset';
 export * from './deliveryOverviewSourceFilterBy';
 export * from './deliveryOverviewSuccessfullyReceivedFilterBy';
+export * from './destination';
 export * from './destinationFilterActionV1';
 export * from './destinationFilterV1';
 export * from './destinationInput';
@@ -618,6 +619,9 @@ export * from './updateComputedTraitForSpace200Response';
 export * from './updateComputedTraitForSpaceAlphaInput';
 export * from './updateComputedTraitForSpaceAlphaOutput';
 export * from './updateDestination200Response';
+export * from './updateDestinationForAudience200Response';
+export * from './updateDestinationForAudienceAlphaInput';
+export * from './updateDestinationForAudienceAlphaOutput';
 export * from './updateDestinationV1Input';
 export * from './updateDestinationV1Output';
 export * from './updateFilterById200Response';
@@ -911,6 +915,7 @@ import { DeliveryOverviewMetricsDatapoint } from './deliveryOverviewMetricsDatap
 import { DeliveryOverviewMetricsDataset } from './deliveryOverviewMetricsDataset';
 import { DeliveryOverviewSourceFilterBy } from './deliveryOverviewSourceFilterBy';
 import { DeliveryOverviewSuccessfullyReceivedFilterBy } from './deliveryOverviewSuccessfullyReceivedFilterBy';
+import { Destination } from './destination';
 import { DestinationFilterActionV1 } from './destinationFilterActionV1';
 import { DestinationFilterV1 } from './destinationFilterV1';
 import { DestinationInput } from './destinationInput';
@@ -1316,6 +1321,9 @@ import { UpdateComputedTraitForSpace200Response } from './updateComputedTraitFor
 import { UpdateComputedTraitForSpaceAlphaInput } from './updateComputedTraitForSpaceAlphaInput';
 import { UpdateComputedTraitForSpaceAlphaOutput } from './updateComputedTraitForSpaceAlphaOutput';
 import { UpdateDestination200Response } from './updateDestination200Response';
+import { UpdateDestinationForAudience200Response } from './updateDestinationForAudience200Response';
+import { UpdateDestinationForAudienceAlphaInput } from './updateDestinationForAudienceAlphaInput';
+import { UpdateDestinationForAudienceAlphaOutput } from './updateDestinationForAudienceAlphaOutput';
 import { UpdateDestinationV1Input } from './updateDestinationV1Input';
 import { UpdateDestinationV1Output } from './updateDestinationV1Output';
 import { UpdateFilterById200Response } from './updateFilterById200Response';
@@ -1824,6 +1832,7 @@ let typeMap: { [index: string]: any } = {
     DeliveryOverviewSourceFilterBy: DeliveryOverviewSourceFilterBy,
     DeliveryOverviewSuccessfullyReceivedFilterBy:
         DeliveryOverviewSuccessfullyReceivedFilterBy,
+    Destination: Destination,
     DestinationFilterActionV1: DestinationFilterActionV1,
     DestinationFilterV1: DestinationFilterV1,
     DestinationInput: DestinationInput,
@@ -2327,6 +2336,12 @@ let typeMap: { [index: string]: any } = {
     UpdateComputedTraitForSpaceAlphaOutput:
         UpdateComputedTraitForSpaceAlphaOutput,
     UpdateDestination200Response: UpdateDestination200Response,
+    UpdateDestinationForAudience200Response:
+        UpdateDestinationForAudience200Response,
+    UpdateDestinationForAudienceAlphaInput:
+        UpdateDestinationForAudienceAlphaInput,
+    UpdateDestinationForAudienceAlphaOutput:
+        UpdateDestinationForAudienceAlphaOutput,
     UpdateDestinationV1Input: UpdateDestinationV1Input,
     UpdateDestinationV1Output: UpdateDestinationV1Output,
     UpdateFilterById200Response: UpdateFilterById200Response,

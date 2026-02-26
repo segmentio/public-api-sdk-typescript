@@ -13,6 +13,8 @@ import { RemoveActivationFromAudience200Response } from '../model/removeActivati
 import { RemoveDestinationFromAudience200Response } from '../model/removeDestinationFromAudience200Response';
 import { UpdateActivationForAudience200Response } from '../model/updateActivationForAudience200Response';
 import { UpdateActivationForAudienceAlphaInput } from '../model/updateActivationForAudienceAlphaInput';
+import { UpdateDestinationForAudience200Response } from '../model/updateDestinationForAudience200Response';
+import { UpdateDestinationForAudienceAlphaInput } from '../model/updateDestinationForAudienceAlphaInput';
 import { Authentication, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
 export declare enum ActivationsApiApiKeys {
@@ -107,5 +109,13 @@ export declare class ActivationsApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: UpdateActivationForAudience200Response;
+    }>;
+    updateDestinationForAudience(spaceId: string, audienceId: string, destinationId: string, UpdateDestinationForAudienceAlphaInput: UpdateDestinationForAudienceAlphaInput, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: UpdateDestinationForAudience200Response;
     }>;
 }
