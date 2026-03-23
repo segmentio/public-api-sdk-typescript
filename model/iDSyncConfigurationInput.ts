@@ -24,6 +24,10 @@ export class IDSyncConfigurationInput {
      * The rule for selecting which identifiers to sync from a profile.  Possible values: first: Syncs only the oldest recorded value. last: Syncs only the most recently updated value. all: Syncs every value found on the profile (sends multiple events).
      */
     'strategy': string;
+    /**
+     * Optional destination-specific identifier to map to (for example, \"Email_Address_c\").
+     */
+    'mapTo'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -40,6 +44,11 @@ export class IDSyncConfigurationInput {
         {
             name: 'strategy',
             baseName: 'strategy',
+            type: 'string',
+        },
+        {
+            name: 'mapTo',
+            baseName: 'mapTo',
             type: 'string',
         },
     ];
