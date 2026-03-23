@@ -19,6 +19,11 @@ var IDSyncConfigurationInput = (function () {
             baseName: 'strategy',
             type: 'string',
         },
+        {
+            name: 'mapTo',
+            baseName: 'mapTo',
+            type: 'string',
+        },
     ];
     return IDSyncConfigurationInput;
 }());
