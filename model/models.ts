@@ -187,8 +187,6 @@ export * from './deleteLabelAlphaOutput';
 export * from './deleteLabelV1Output';
 export * from './deleteLivePluginCode200Response';
 export * from './deleteLivePluginCodeAlphaOutput';
-export * from './deleteRegulation200Response';
-export * from './deleteRegulationV1Output';
 export * from './deleteReverseEtlModel200Response';
 export * from './deleteReverseEtlModelOutput';
 export * from './deleteSource200Response';
@@ -889,8 +887,6 @@ import { DeleteLabelAlphaOutput } from './deleteLabelAlphaOutput';
 import { DeleteLabelV1Output } from './deleteLabelV1Output';
 import { DeleteLivePluginCode200Response } from './deleteLivePluginCode200Response';
 import { DeleteLivePluginCodeAlphaOutput } from './deleteLivePluginCodeAlphaOutput';
-import { DeleteRegulation200Response } from './deleteRegulation200Response';
-import { DeleteRegulationV1Output } from './deleteRegulationV1Output';
 import { DeleteReverseEtlModel200Response } from './deleteReverseEtlModel200Response';
 import { DeleteReverseEtlModelOutput } from './deleteReverseEtlModelOutput';
 import { DeleteSource200Response } from './deleteSource200Response';
@@ -1461,7 +1457,6 @@ let enumsMap: { [index: string]: any } = {
     'DeleteLabelV1Output.StatusEnum': DeleteLabelV1Output.StatusEnum,
     'DeleteLivePluginCodeAlphaOutput.StatusEnum':
         DeleteLivePluginCodeAlphaOutput.StatusEnum,
-    'DeleteRegulationV1Output.StatusEnum': DeleteRegulationV1Output.StatusEnum,
     'DeleteReverseEtlModelOutput.StatusEnum':
         DeleteReverseEtlModelOutput.StatusEnum,
     'DeleteSourceAlphaOutput.StatusEnum': DeleteSourceAlphaOutput.StatusEnum,
@@ -1805,8 +1800,6 @@ let typeMap: { [index: string]: any } = {
     DeleteLabelV1Output: DeleteLabelV1Output,
     DeleteLivePluginCode200Response: DeleteLivePluginCode200Response,
     DeleteLivePluginCodeAlphaOutput: DeleteLivePluginCodeAlphaOutput,
-    DeleteRegulation200Response: DeleteRegulation200Response,
-    DeleteRegulationV1Output: DeleteRegulationV1Output,
     DeleteReverseEtlModel200Response: DeleteReverseEtlModel200Response,
     DeleteReverseEtlModelOutput: DeleteReverseEtlModelOutput,
     DeleteSource200Response: DeleteSource200Response,

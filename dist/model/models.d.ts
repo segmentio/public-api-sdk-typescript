@@ -188,8 +188,6 @@ export * from './deleteLabelAlphaOutput';
 export * from './deleteLabelV1Output';
 export * from './deleteLivePluginCode200Response';
 export * from './deleteLivePluginCodeAlphaOutput';
-export * from './deleteRegulation200Response';
-export * from './deleteRegulationV1Output';
 export * from './deleteReverseEtlModel200Response';
 export * from './deleteReverseEtlModelOutput';
 export * from './deleteSource200Response';
