@@ -6,7 +6,6 @@ import { CreateSourceRegulation200Response } from '../model/createSourceRegulati
 import { CreateSourceRegulationV1Input } from '../model/createSourceRegulationV1Input';
 import { CreateWorkspaceRegulation200Response } from '../model/createWorkspaceRegulation200Response';
 import { CreateWorkspaceRegulationV1Input } from '../model/createWorkspaceRegulationV1Input';
-import { DeleteRegulation200Response } from '../model/deleteRegulation200Response';
 import { GetRegulation200Response } from '../model/getRegulation200Response';
 import { ListRegulationsFromSource200Response } from '../model/listRegulationsFromSource200Response';
 import { ListSuppressions200Response } from '../model/listSuppressions200Response';
@@ -58,14 +57,6 @@ export declare class DeletionAndSuppressionApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: CreateWorkspaceRegulation200Response;
-    }>;
-    deleteRegulation(regulateId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: DeleteRegulation200Response;
     }>;
     getRegulation(regulateId: string, options?: {
         headers: {

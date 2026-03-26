@@ -202,8 +202,6 @@ __exportStar(require("./deleteLabelAlphaOutput"), exports);
 __exportStar(require("./deleteLabelV1Output"), exports);
 __exportStar(require("./deleteLivePluginCode200Response"), exports);
 __exportStar(require("./deleteLivePluginCodeAlphaOutput"), exports);
-__exportStar(require("./deleteRegulation200Response"), exports);
-__exportStar(require("./deleteRegulationV1Output"), exports);
 __exportStar(require("./deleteReverseEtlModel200Response"), exports);
 __exportStar(require("./deleteReverseEtlModelOutput"), exports);
 __exportStar(require("./deleteSource200Response"), exports);
@@ -891,8 +889,6 @@ var deleteLabelAlphaOutput_1 = require("./deleteLabelAlphaOutput");
 var deleteLabelV1Output_1 = require("./deleteLabelV1Output");
 var deleteLivePluginCode200Response_1 = require("./deleteLivePluginCode200Response");
 var deleteLivePluginCodeAlphaOutput_1 = require("./deleteLivePluginCodeAlphaOutput");
-var deleteRegulation200Response_1 = require("./deleteRegulation200Response");
-var deleteRegulationV1Output_1 = require("./deleteRegulationV1Output");
 var deleteReverseEtlModel200Response_1 = require("./deleteReverseEtlModel200Response");
 var deleteReverseEtlModelOutput_1 = require("./deleteReverseEtlModelOutput");
 var deleteSource200Response_1 = require("./deleteSource200Response");
@@ -1438,7 +1434,6 @@ var enumsMap = {
     'DeleteLabelAlphaOutput.StatusEnum': deleteLabelAlphaOutput_1.DeleteLabelAlphaOutput.StatusEnum,
     'DeleteLabelV1Output.StatusEnum': deleteLabelV1Output_1.DeleteLabelV1Output.StatusEnum,
     'DeleteLivePluginCodeAlphaOutput.StatusEnum': deleteLivePluginCodeAlphaOutput_1.DeleteLivePluginCodeAlphaOutput.StatusEnum,
-    'DeleteRegulationV1Output.StatusEnum': deleteRegulationV1Output_1.DeleteRegulationV1Output.StatusEnum,
     'DeleteReverseEtlModelOutput.StatusEnum': deleteReverseEtlModelOutput_1.DeleteReverseEtlModelOutput.StatusEnum,
     'DeleteSourceAlphaOutput.StatusEnum': deleteSourceAlphaOutput_1.DeleteSourceAlphaOutput.StatusEnum,
     'DeleteSourceV1Output.StatusEnum': deleteSourceV1Output_1.DeleteSourceV1Output.StatusEnum,
@@ -1706,8 +1701,6 @@ var typeMap = {
     DeleteLabelV1Output: deleteLabelV1Output_1.DeleteLabelV1Output,
     DeleteLivePluginCode200Response: deleteLivePluginCode200Response_1.DeleteLivePluginCode200Response,
     DeleteLivePluginCodeAlphaOutput: deleteLivePluginCodeAlphaOutput_1.DeleteLivePluginCodeAlphaOutput,
-    DeleteRegulation200Response: deleteRegulation200Response_1.DeleteRegulation200Response,
-    DeleteRegulationV1Output: deleteRegulationV1Output_1.DeleteRegulationV1Output,
     DeleteReverseEtlModel200Response: deleteReverseEtlModel200Response_1.DeleteReverseEtlModel200Response,
     DeleteReverseEtlModelOutput: deleteReverseEtlModelOutput_1.DeleteReverseEtlModelOutput,
     DeleteSource200Response: deleteSource200Response_1.DeleteSource200Response,
