@@ -5,7 +5,6 @@ export declare class AddActivationToAudienceAlphaInput {
     'performResync': boolean;
     'activationType': string;
     'activationName': string;
-    'displayName'?: string;
     'personalization': PersonalizationInput;
     'destinationMapping'?: DestinationSubscriptionConfiguration;
     static discriminator: string | undefined;

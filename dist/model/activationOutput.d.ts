@@ -9,7 +9,6 @@ export declare class ActivationOutput {
     'connectionId': string;
     'activationType': string;
     'activationName': string;
-    'displayName'?: string | null;
     'personalization': PersonalizationInput;
     'destinationMapping'?: DestinationSubscriptionConfiguration;
     'performResync'?: boolean;

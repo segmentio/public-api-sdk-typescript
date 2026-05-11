@@ -20,11 +20,6 @@ var UpdateActivationForAudienceAlphaInput = (function () {
             type: 'string',
         },
         {
-            name: 'displayName',
-            baseName: 'displayName',
-            type: 'string',
-        },
-        {
             name: 'personalization',
             baseName: 'personalization',
             type: 'PersonalizationInput',
