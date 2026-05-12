@@ -23,9 +23,13 @@ export class UpdateActivationForAudienceAlphaInput {
      */
     'enabled'?: boolean;
     /**
-     * Activation name.
+     * Activation name. For Warehouse Destinations, this is used as the table name.
      */
     'activationName'?: string;
+    /**
+     * Optional human-readable label for the activation. Only supported for Warehouse Destinations. Send null to clear. When omitted, the activationName is used as the label.
+     */
+    'displayName'?: string | null;
     'personalization'?: PersonalizationInput;
     'destinationMapping'?: DestinationSubscriptionConfiguration;
     /**
@@ -48,6 +52,11 @@ export class UpdateActivationForAudienceAlphaInput {
         {
             name: 'activationName',
             baseName: 'activationName',
+            type: 'string',
+        },
+        {
+            name: 'displayName',
+            baseName: 'displayName',
             type: 'string',
         },
         {

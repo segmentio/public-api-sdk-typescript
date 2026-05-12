@@ -3,6 +3,7 @@ import { PersonalizationInput } from './personalizationInput';
 export declare class UpdateActivationForAudienceAlphaInput {
     'enabled'?: boolean;
     'activationName'?: string;
+    'displayName'?: string | null;
     'personalization'?: PersonalizationInput;
     'destinationMapping'?: DestinationSubscriptionConfiguration;
     'performResync'?: boolean;

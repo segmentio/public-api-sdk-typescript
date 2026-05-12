@@ -27,13 +27,17 @@ export class AddActivationToAudienceAlphaInput {
      */
     'performResync': boolean;
     /**
-     * Determines when an event is sent to the Destination.   Possible values: Audience Entered: Sends an event when a profile or entity enters the audience. Audience Exited: Sends an event when a profile or entity exits the audience. Audience Membership Changed: Sends an event for both entries and exits. This does not apply to entities.  Note that events are sent for the profile, unless the audience is a Linked Audience. In that case, events are sent for the target entity defined for that audience.
+     * Determines when an event is sent to the Destination.  Possible values: Audience Entered: Sends an event when a profile or entity enters the audience. Audience Exited: Sends an event when a profile or entity exits the audience. Audience Membership Changed: Sends an event for both entries and exits. This does not apply to entities.  Note that events are sent for the profile, unless the audience is a Linked Audience. In that case, events are sent for the target entity defined for that audience.
      */
     'activationType': string;
     /**
-     * Name of the activation.
+     * Activation name. For Warehouse Destinations, this is used as the table name.
      */
     'activationName': string;
+    /**
+     * Optional human-readable label for the activation. Only supported for Warehouse Destinations. When omitted, the activationName is used as the label.
+     */
+    'displayName'?: string;
     'personalization': PersonalizationInput;
     'destinationMapping'?: DestinationSubscriptionConfiguration;
 
@@ -62,6 +66,11 @@ export class AddActivationToAudienceAlphaInput {
         {
             name: 'activationName',
             baseName: 'activationName',
+            type: 'string',
+        },
+        {
+            name: 'displayName',
+            baseName: 'displayName',
             type: 'string',
         },
         {
