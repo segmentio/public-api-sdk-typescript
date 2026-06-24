@@ -48,6 +48,8 @@ export * from './sourcesApi';
 import { SourcesApi } from './sourcesApi';
 export * from './spaceFiltersApi';
 import { SpaceFiltersApi } from './spaceFiltersApi';
+export * from './spaceSchemaApi';
+import { SpaceSchemaApi } from './spaceSchemaApi';
 export * from './spacesApi';
 import { SpacesApi } from './spacesApi';
 export * from './testingApi';
@@ -101,6 +103,7 @@ export const APIS = [
     SelectiveSyncApi,
     SourcesApi,
     SpaceFiltersApi,
+    SpaceSchemaApi,
     SpacesApi,
     TestingApi,
     TrackingPlansApi,
@@ -171,7 +174,7 @@ export function configureApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 73.0.1 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 73.0.4 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -218,7 +221,7 @@ export function configureEuApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 73.0.1 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 73.0.4 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }

@@ -234,13 +234,20 @@ export * from './echo200Response1';
 export * from './echoAlphaOutput';
 export * from './echoV1Output';
 export * from './entityDetails';
+export * from './entityPathAlpha';
+export * from './entityPropertyAlpha';
+export * from './eventAlpha';
+export * from './eventPropertyAlpha';
+export * from './eventPropertyType';
 export * from './eventSourceV1';
+export * from './eventType';
 export * from './fQLDefinedPropertyV1';
 export * from './filter';
 export * from './forceExecuteAudienceRun200Response';
 export * from './forceExecuteAudienceRun200Response1';
 export * from './forceExecuteAudienceRunAlphaOutput';
 export * from './forceExecuteAudienceRunOutput';
+export * from './forwardOnlyPaginationOutput';
 export * from './functionDeployment';
 export * from './functionSettingV1';
 export * from './functionV1';
@@ -390,6 +397,10 @@ export * from './listDestinations200Response';
 export * from './listDestinationsFromAudience200Response';
 export * from './listDestinationsFromAudienceAlphaOutput';
 export * from './listDestinationsV1Output';
+export * from './listEntityPaths200Response';
+export * from './listEntityPathsAlphaOutput';
+export * from './listEvents200Response';
+export * from './listEventsAlphaOutput';
 export * from './listFiltersForSpace200Response';
 export * from './listFiltersForSpaceOutput';
 export * from './listFiltersFromDestination200Response';
@@ -413,6 +424,10 @@ export * from './listLabelsAlphaOutput';
 export * from './listLabelsV1Output';
 export * from './listProfilesWarehouseInSpace200Response';
 export * from './listProfilesWarehouseInSpaceAlphaOutput';
+export * from './listPropertiesFromEntity200Response';
+export * from './listPropertiesFromEntityAlphaOutput';
+export * from './listPropertiesFromEvent200Response';
+export * from './listPropertiesFromEventAlphaOutput';
 export * from './listRegulationsFromSource200Response';
 export * from './listRegulationsFromSourceV1Output';
 export * from './listReverseETLSyncStatusesFromModelAndSubscriptionId200Response';
@@ -423,6 +438,12 @@ export * from './listRoles200Response';
 export * from './listRolesV1Output';
 export * from './listRulesFromTrackingPlan200Response';
 export * from './listRulesFromTrackingPlanV1Output';
+export * from './listSampleValuesFromEntityProperty200Response';
+export * from './listSampleValuesFromEntityPropertyAlphaOutput';
+export * from './listSampleValuesFromEventProperty200Response';
+export * from './listSampleValuesFromEventPropertyAlphaOutput';
+export * from './listSampleValuesFromTrait200Response';
+export * from './listSampleValuesFromTraitAlphaOutput';
 export * from './listSchemaSettingsInSource200Response';
 export * from './listSchemaSettingsInSourceV1Output';
 export * from './listSelectiveSyncsFromWarehouseAndSource200Response';
@@ -449,6 +470,8 @@ export * from './listSyncsFromWarehouseAndSourceV1Output';
 export * from './listSyncsFromWarehouseV1Output';
 export * from './listTrackingPlans200Response';
 export * from './listTrackingPlansV1Output';
+export * from './listTraits200Response';
+export * from './listTraitsAlphaOutput';
 export * from './listTransformations200Response';
 export * from './listTransformationsBetaInput';
 export * from './listTransformationsBetaOutput';
@@ -591,8 +614,10 @@ export * from './syncNoticeV1';
 export * from './syncV1';
 export * from './trackSourceSettingsV1';
 export * from './trackingPlanV1';
+export * from './traitAlpha';
 export * from './traitDefinition';
 export * from './traitOptions';
+export * from './traitType';
 export * from './transformationBeta';
 export * from './transformationV1';
 export * from './updateActivationForAudience200Response';
@@ -934,13 +959,20 @@ import { Echo200Response1 } from './echo200Response1';
 import { EchoAlphaOutput } from './echoAlphaOutput';
 import { EchoV1Output } from './echoV1Output';
 import { EntityDetails } from './entityDetails';
+import { EntityPathAlpha } from './entityPathAlpha';
+import { EntityPropertyAlpha } from './entityPropertyAlpha';
+import { EventAlpha } from './eventAlpha';
+import { EventPropertyAlpha } from './eventPropertyAlpha';
+import { EventPropertyType } from './eventPropertyType';
 import { EventSourceV1 } from './eventSourceV1';
+import { EventType } from './eventType';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
 import { Filter } from './filter';
 import { ForceExecuteAudienceRun200Response } from './forceExecuteAudienceRun200Response';
 import { ForceExecuteAudienceRun200Response1 } from './forceExecuteAudienceRun200Response1';
 import { ForceExecuteAudienceRunAlphaOutput } from './forceExecuteAudienceRunAlphaOutput';
 import { ForceExecuteAudienceRunOutput } from './forceExecuteAudienceRunOutput';
+import { ForwardOnlyPaginationOutput } from './forwardOnlyPaginationOutput';
 import { FunctionDeployment } from './functionDeployment';
 import { FunctionSettingV1 } from './functionSettingV1';
 import { FunctionV1 } from './functionV1';
@@ -1090,6 +1122,10 @@ import { ListDestinations200Response } from './listDestinations200Response';
 import { ListDestinationsFromAudience200Response } from './listDestinationsFromAudience200Response';
 import { ListDestinationsFromAudienceAlphaOutput } from './listDestinationsFromAudienceAlphaOutput';
 import { ListDestinationsV1Output } from './listDestinationsV1Output';
+import { ListEntityPaths200Response } from './listEntityPaths200Response';
+import { ListEntityPathsAlphaOutput } from './listEntityPathsAlphaOutput';
+import { ListEvents200Response } from './listEvents200Response';
+import { ListEventsAlphaOutput } from './listEventsAlphaOutput';
 import { ListFiltersForSpace200Response } from './listFiltersForSpace200Response';
 import { ListFiltersForSpaceOutput } from './listFiltersForSpaceOutput';
 import { ListFiltersFromDestination200Response } from './listFiltersFromDestination200Response';
@@ -1113,6 +1149,10 @@ import { ListLabelsAlphaOutput } from './listLabelsAlphaOutput';
 import { ListLabelsV1Output } from './listLabelsV1Output';
 import { ListProfilesWarehouseInSpace200Response } from './listProfilesWarehouseInSpace200Response';
 import { ListProfilesWarehouseInSpaceAlphaOutput } from './listProfilesWarehouseInSpaceAlphaOutput';
+import { ListPropertiesFromEntity200Response } from './listPropertiesFromEntity200Response';
+import { ListPropertiesFromEntityAlphaOutput } from './listPropertiesFromEntityAlphaOutput';
+import { ListPropertiesFromEvent200Response } from './listPropertiesFromEvent200Response';
+import { ListPropertiesFromEventAlphaOutput } from './listPropertiesFromEventAlphaOutput';
 import { ListRegulationsFromSource200Response } from './listRegulationsFromSource200Response';
 import { ListRegulationsFromSourceV1Output } from './listRegulationsFromSourceV1Output';
 import { ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response } from './listReverseETLSyncStatusesFromModelAndSubscriptionId200Response';
@@ -1123,6 +1163,12 @@ import { ListRoles200Response } from './listRoles200Response';
 import { ListRolesV1Output } from './listRolesV1Output';
 import { ListRulesFromTrackingPlan200Response } from './listRulesFromTrackingPlan200Response';
 import { ListRulesFromTrackingPlanV1Output } from './listRulesFromTrackingPlanV1Output';
+import { ListSampleValuesFromEntityProperty200Response } from './listSampleValuesFromEntityProperty200Response';
+import { ListSampleValuesFromEntityPropertyAlphaOutput } from './listSampleValuesFromEntityPropertyAlphaOutput';
+import { ListSampleValuesFromEventProperty200Response } from './listSampleValuesFromEventProperty200Response';
+import { ListSampleValuesFromEventPropertyAlphaOutput } from './listSampleValuesFromEventPropertyAlphaOutput';
+import { ListSampleValuesFromTrait200Response } from './listSampleValuesFromTrait200Response';
+import { ListSampleValuesFromTraitAlphaOutput } from './listSampleValuesFromTraitAlphaOutput';
 import { ListSchemaSettingsInSource200Response } from './listSchemaSettingsInSource200Response';
 import { ListSchemaSettingsInSourceV1Output } from './listSchemaSettingsInSourceV1Output';
 import { ListSelectiveSyncsFromWarehouseAndSource200Response } from './listSelectiveSyncsFromWarehouseAndSource200Response';
@@ -1149,6 +1195,8 @@ import { ListSyncsFromWarehouseAndSourceV1Output } from './listSyncsFromWarehous
 import { ListSyncsFromWarehouseV1Output } from './listSyncsFromWarehouseV1Output';
 import { ListTrackingPlans200Response } from './listTrackingPlans200Response';
 import { ListTrackingPlansV1Output } from './listTrackingPlansV1Output';
+import { ListTraits200Response } from './listTraits200Response';
+import { ListTraitsAlphaOutput } from './listTraitsAlphaOutput';
 import { ListTransformations200Response } from './listTransformations200Response';
 import { ListTransformationsBetaInput } from './listTransformationsBetaInput';
 import { ListTransformationsBetaOutput } from './listTransformationsBetaOutput';
@@ -1291,8 +1339,10 @@ import { SyncNoticeV1 } from './syncNoticeV1';
 import { SyncV1 } from './syncV1';
 import { TrackSourceSettingsV1 } from './trackSourceSettingsV1';
 import { TrackingPlanV1 } from './trackingPlanV1';
+import { TraitAlpha } from './traitAlpha';
 import { TraitDefinition } from './traitDefinition';
 import { TraitOptions } from './traitOptions';
+import { TraitType } from './traitType';
 import { TransformationBeta } from './transformationBeta';
 import { TransformationV1 } from './transformationV1';
 import { UpdateActivationForAudience200Response } from './updateActivationForAudience200Response';
@@ -1487,6 +1537,8 @@ let enumsMap: { [index: string]: any } = {
     'DestinationStatusV1.StatusEnum': DestinationStatusV1.StatusEnum,
     'EchoAlphaOutput.MethodEnum': EchoAlphaOutput.MethodEnum,
     'EchoV1Output.MethodEnum': EchoV1Output.MethodEnum,
+    EventPropertyType: EventPropertyType,
+    EventType: EventType,
     'FunctionDeployment.StatusEnum': FunctionDeployment.StatusEnum,
     'FunctionSettingV1.TypeEnum': FunctionSettingV1.TypeEnum,
     'FunctionV1.ResourceTypeEnum': FunctionV1.ResourceTypeEnum,
@@ -1570,6 +1622,7 @@ let enumsMap: { [index: string]: any } = {
         TrackSourceSettingsV1.CommonEventOnViolationsEnum,
     'TrackingPlanV1.TypeEnum': TrackingPlanV1.TypeEnum,
     'TraitDefinition.TypeEnum': TraitDefinition.TypeEnum,
+    TraitType: TraitType,
     'UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum':
         UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum,
     'UpdateAudienceScheduleForAudienceInput.StrategyEnum':
@@ -1849,6 +1902,10 @@ let typeMap: { [index: string]: any } = {
     EchoAlphaOutput: EchoAlphaOutput,
     EchoV1Output: EchoV1Output,
     EntityDetails: EntityDetails,
+    EntityPathAlpha: EntityPathAlpha,
+    EntityPropertyAlpha: EntityPropertyAlpha,
+    EventAlpha: EventAlpha,
+    EventPropertyAlpha: EventPropertyAlpha,
     EventSourceV1: EventSourceV1,
     FQLDefinedPropertyV1: FQLDefinedPropertyV1,
     Filter: Filter,
@@ -1856,6 +1913,7 @@ let typeMap: { [index: string]: any } = {
     ForceExecuteAudienceRun200Response1: ForceExecuteAudienceRun200Response1,
     ForceExecuteAudienceRunAlphaOutput: ForceExecuteAudienceRunAlphaOutput,
     ForceExecuteAudienceRunOutput: ForceExecuteAudienceRunOutput,
+    ForwardOnlyPaginationOutput: ForwardOnlyPaginationOutput,
     FunctionDeployment: FunctionDeployment,
     FunctionSettingV1: FunctionSettingV1,
     FunctionV1: FunctionV1,
@@ -2044,6 +2102,10 @@ let typeMap: { [index: string]: any } = {
     ListDestinationsFromAudienceAlphaOutput:
         ListDestinationsFromAudienceAlphaOutput,
     ListDestinationsV1Output: ListDestinationsV1Output,
+    ListEntityPaths200Response: ListEntityPaths200Response,
+    ListEntityPathsAlphaOutput: ListEntityPathsAlphaOutput,
+    ListEvents200Response: ListEvents200Response,
+    ListEventsAlphaOutput: ListEventsAlphaOutput,
     ListFiltersForSpace200Response: ListFiltersForSpace200Response,
     ListFiltersForSpaceOutput: ListFiltersForSpaceOutput,
     ListFiltersFromDestination200Response:
@@ -2072,6 +2134,10 @@ let typeMap: { [index: string]: any } = {
         ListProfilesWarehouseInSpace200Response,
     ListProfilesWarehouseInSpaceAlphaOutput:
         ListProfilesWarehouseInSpaceAlphaOutput,
+    ListPropertiesFromEntity200Response: ListPropertiesFromEntity200Response,
+    ListPropertiesFromEntityAlphaOutput: ListPropertiesFromEntityAlphaOutput,
+    ListPropertiesFromEvent200Response: ListPropertiesFromEvent200Response,
+    ListPropertiesFromEventAlphaOutput: ListPropertiesFromEventAlphaOutput,
     ListRegulationsFromSource200Response: ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: ListRegulationsFromSourceV1Output,
     ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response:
@@ -2084,6 +2150,16 @@ let typeMap: { [index: string]: any } = {
     ListRolesV1Output: ListRolesV1Output,
     ListRulesFromTrackingPlan200Response: ListRulesFromTrackingPlan200Response,
     ListRulesFromTrackingPlanV1Output: ListRulesFromTrackingPlanV1Output,
+    ListSampleValuesFromEntityProperty200Response:
+        ListSampleValuesFromEntityProperty200Response,
+    ListSampleValuesFromEntityPropertyAlphaOutput:
+        ListSampleValuesFromEntityPropertyAlphaOutput,
+    ListSampleValuesFromEventProperty200Response:
+        ListSampleValuesFromEventProperty200Response,
+    ListSampleValuesFromEventPropertyAlphaOutput:
+        ListSampleValuesFromEventPropertyAlphaOutput,
+    ListSampleValuesFromTrait200Response: ListSampleValuesFromTrait200Response,
+    ListSampleValuesFromTraitAlphaOutput: ListSampleValuesFromTraitAlphaOutput,
     ListSchemaSettingsInSource200Response:
         ListSchemaSettingsInSource200Response,
     ListSchemaSettingsInSourceV1Output: ListSchemaSettingsInSourceV1Output,
@@ -2122,6 +2198,8 @@ let typeMap: { [index: string]: any } = {
     ListSyncsFromWarehouseV1Output: ListSyncsFromWarehouseV1Output,
     ListTrackingPlans200Response: ListTrackingPlans200Response,
     ListTrackingPlansV1Output: ListTrackingPlansV1Output,
+    ListTraits200Response: ListTraits200Response,
+    ListTraitsAlphaOutput: ListTraitsAlphaOutput,
     ListTransformations200Response: ListTransformations200Response,
     ListTransformationsBetaInput: ListTransformationsBetaInput,
     ListTransformationsBetaOutput: ListTransformationsBetaOutput,
@@ -2292,6 +2370,7 @@ let typeMap: { [index: string]: any } = {
     SyncV1: SyncV1,
     TrackSourceSettingsV1: TrackSourceSettingsV1,
     TrackingPlanV1: TrackingPlanV1,
+    TraitAlpha: TraitAlpha,
     TraitDefinition: TraitDefinition,
     TraitOptions: TraitOptions,
     TransformationBeta: TransformationBeta,
