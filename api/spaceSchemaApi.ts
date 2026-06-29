@@ -14,6 +14,7 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
+import { EventPropertyType } from '../model/eventPropertyType';
 import { ListEntityPaths200Response } from '../model/listEntityPaths200Response';
 import { ListEvents200Response } from '../model/listEvents200Response';
 import { ListPropertiesFromEntity200Response } from '../model/listPropertiesFromEntity200Response';
@@ -893,7 +894,7 @@ export class SpaceSchemaApi {
         spaceId: string,
         eventName: string,
         propertyName: string,
-        propertyType: 'context' | 'property',
+        propertyType: EventPropertyType,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -961,10 +962,7 @@ export class SpaceSchemaApi {
 
         if (propertyType !== undefined) {
             localVarQueryParameters['propertyType'] =
-                ObjectSerializer.serialize(
-                    propertyType,
-                    "'context' | 'property'"
-                );
+                ObjectSerializer.serialize(propertyType, 'EventPropertyType');
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);

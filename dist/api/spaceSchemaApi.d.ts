@@ -1,5 +1,6 @@
 /// <reference types="node" />
 import http from 'http';
+import { EventPropertyType } from '../model/eventPropertyType';
 import { ListEntityPaths200Response } from '../model/listEntityPaths200Response';
 import { ListEvents200Response } from '../model/listEvents200Response';
 import { ListPropertiesFromEntity200Response } from '../model/listPropertiesFromEntity200Response';
@@ -72,7 +73,7 @@ export declare class SpaceSchemaApi {
         response: http.IncomingMessage;
         body: ListSampleValuesFromEntityProperty200Response;
     }>;
-    listSampleValuesFromEventProperty(spaceId: string, eventName: string, propertyName: string, propertyType: 'context' | 'property', options?: {
+    listSampleValuesFromEventProperty(spaceId: string, eventName: string, propertyName: string, propertyType: EventPropertyType, options?: {
         headers: {
             [name: string]: string;
         };

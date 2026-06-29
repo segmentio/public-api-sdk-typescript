@@ -639,7 +639,7 @@ var SpaceSchemaApi = (function () {
                 }
                 if (propertyType !== undefined) {
                     localVarQueryParameters['propertyType'] =
-                        models_1.ObjectSerializer.serialize(propertyType, "'context' | 'property'");
+                        models_1.ObjectSerializer.serialize(propertyType, 'EventPropertyType');
                 }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
