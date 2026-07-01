@@ -14,9 +14,6 @@ import { RequestFile } from './models';
 import { DestinationSubscriptionConfiguration } from './destinationSubscriptionConfiguration';
 import { PersonalizationInput } from './personalizationInput';
 
-/**
- * Input to create an activation.
- */
 export class AddActivationToAudienceAlphaInput {
     /**
      * Determines whether an activation is enabled.
