@@ -138,6 +138,9 @@ __exportStar(require("./createInsertFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./createInvites201Response"), exports);
 __exportStar(require("./createInvitesV1Input"), exports);
 __exportStar(require("./createInvitesV1Output"), exports);
+__exportStar(require("./createJourney200Response"), exports);
+__exportStar(require("./createJourneyAlphaInput"), exports);
+__exportStar(require("./createJourneyAlphaOutput"), exports);
 __exportStar(require("./createLabel201Response"), exports);
 __exportStar(require("./createLabelV1Input"), exports);
 __exportStar(require("./createLabelV1Output"), exports);
@@ -372,6 +375,8 @@ __exportStar(require("./insertFunctionInstanceAlpha"), exports);
 __exportStar(require("./integrationOptionBeta"), exports);
 __exportStar(require("./invitePermissionV1"), exports);
 __exportStar(require("./inviteV1"), exports);
+__exportStar(require("./journeyDefinition"), exports);
+__exportStar(require("./journeySummary"), exports);
 __exportStar(require("./labelAlpha"), exports);
 __exportStar(require("./labelV1"), exports);
 __exportStar(require("./listActivationsAlphaOutput"), exports);
@@ -850,6 +855,9 @@ var createInsertFunctionInstanceAlphaOutput_1 = require("./createInsertFunctionI
 var createInvites201Response_1 = require("./createInvites201Response");
 var createInvitesV1Input_1 = require("./createInvitesV1Input");
 var createInvitesV1Output_1 = require("./createInvitesV1Output");
+var createJourney200Response_1 = require("./createJourney200Response");
+var createJourneyAlphaInput_1 = require("./createJourneyAlphaInput");
+var createJourneyAlphaOutput_1 = require("./createJourneyAlphaOutput");
 var createLabel201Response_1 = require("./createLabel201Response");
 var createLabelV1Input_1 = require("./createLabelV1Input");
 var createLabelV1Output_1 = require("./createLabelV1Output");
@@ -1084,6 +1092,8 @@ var insertFunctionInstanceAlpha_1 = require("./insertFunctionInstanceAlpha");
 var integrationOptionBeta_1 = require("./integrationOptionBeta");
 var invitePermissionV1_1 = require("./invitePermissionV1");
 var inviteV1_1 = require("./inviteV1");
+var journeyDefinition_1 = require("./journeyDefinition");
+var journeySummary_1 = require("./journeySummary");
 var labelAlpha_1 = require("./labelAlpha");
 var labelV1_1 = require("./labelV1");
 var listActivationsAlphaOutput_1 = require("./listActivationsAlphaOutput");
@@ -1519,6 +1529,7 @@ var enumsMap = {
     'GroupSubscriptionStatusResponse.StatusEnum': groupSubscriptionStatusResponse_1.GroupSubscriptionStatusResponse.StatusEnum,
     'HashPropertiesConfiguration.EncodingEnum': hashPropertiesConfiguration_1.HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum': identifySourceSettingsV1_1.IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
+    'JourneySummary.ExecutionStateEnum': journeySummary_1.JourneySummary.ExecutionStateEnum,
     'ListAudienceConsumersSortInput.FieldEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.FieldEnum,
     'ListAudienceConsumersSortInput.DirectionEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.DirectionEnum,
     'ListAudienceSearchInput.TypeEnum': listAudienceSearchInput_1.ListAudienceSearchInput.TypeEnum,
@@ -1690,6 +1701,9 @@ var typeMap = {
     CreateInvites201Response: createInvites201Response_1.CreateInvites201Response,
     CreateInvitesV1Input: createInvitesV1Input_1.CreateInvitesV1Input,
     CreateInvitesV1Output: createInvitesV1Output_1.CreateInvitesV1Output,
+    CreateJourney200Response: createJourney200Response_1.CreateJourney200Response,
+    CreateJourneyAlphaInput: createJourneyAlphaInput_1.CreateJourneyAlphaInput,
+    CreateJourneyAlphaOutput: createJourneyAlphaOutput_1.CreateJourneyAlphaOutput,
     CreateLabel201Response: createLabel201Response_1.CreateLabel201Response,
     CreateLabelV1Input: createLabelV1Input_1.CreateLabelV1Input,
     CreateLabelV1Output: createLabelV1Output_1.CreateLabelV1Output,
@@ -1922,6 +1936,8 @@ var typeMap = {
     IntegrationOptionBeta: integrationOptionBeta_1.IntegrationOptionBeta,
     InvitePermissionV1: invitePermissionV1_1.InvitePermissionV1,
     InviteV1: inviteV1_1.InviteV1,
+    JourneyDefinition: journeyDefinition_1.JourneyDefinition,
+    JourneySummary: journeySummary_1.JourneySummary,
     LabelAlpha: labelAlpha_1.LabelAlpha,
     LabelV1: labelV1_1.LabelV1,
     ListActivationsAlphaOutput: listActivationsAlphaOutput_1.ListActivationsAlphaOutput,

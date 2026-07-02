@@ -123,6 +123,9 @@ export * from './createInsertFunctionInstanceAlphaOutput';
 export * from './createInvites201Response';
 export * from './createInvitesV1Input';
 export * from './createInvitesV1Output';
+export * from './createJourney200Response';
+export * from './createJourneyAlphaInput';
+export * from './createJourneyAlphaOutput';
 export * from './createLabel201Response';
 export * from './createLabelV1Input';
 export * from './createLabelV1Output';
@@ -357,6 +360,8 @@ export * from './insertFunctionInstanceAlpha';
 export * from './integrationOptionBeta';
 export * from './invitePermissionV1';
 export * from './inviteV1';
+export * from './journeyDefinition';
+export * from './journeySummary';
 export * from './labelAlpha';
 export * from './labelV1';
 export * from './listActivationsAlphaOutput';
@@ -848,6 +853,9 @@ import { CreateInsertFunctionInstanceAlphaOutput } from './createInsertFunctionI
 import { CreateInvites201Response } from './createInvites201Response';
 import { CreateInvitesV1Input } from './createInvitesV1Input';
 import { CreateInvitesV1Output } from './createInvitesV1Output';
+import { CreateJourney200Response } from './createJourney200Response';
+import { CreateJourneyAlphaInput } from './createJourneyAlphaInput';
+import { CreateJourneyAlphaOutput } from './createJourneyAlphaOutput';
 import { CreateLabel201Response } from './createLabel201Response';
 import { CreateLabelV1Input } from './createLabelV1Input';
 import { CreateLabelV1Output } from './createLabelV1Output';
@@ -1082,6 +1090,8 @@ import { InsertFunctionInstanceAlpha } from './insertFunctionInstanceAlpha';
 import { IntegrationOptionBeta } from './integrationOptionBeta';
 import { InvitePermissionV1 } from './invitePermissionV1';
 import { InviteV1 } from './inviteV1';
+import { JourneyDefinition } from './journeyDefinition';
+import { JourneySummary } from './journeySummary';
 import { LabelAlpha } from './labelAlpha';
 import { LabelV1 } from './labelV1';
 import { ListActivationsAlphaOutput } from './listActivationsAlphaOutput';
@@ -1560,6 +1570,7 @@ let enumsMap: { [index: string]: any } = {
         HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum':
         IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
+    'JourneySummary.ExecutionStateEnum': JourneySummary.ExecutionStateEnum,
     'ListAudienceConsumersSortInput.FieldEnum':
         ListAudienceConsumersSortInput.FieldEnum,
     'ListAudienceConsumersSortInput.DirectionEnum':
@@ -1785,6 +1796,9 @@ let typeMap: { [index: string]: any } = {
     CreateInvites201Response: CreateInvites201Response,
     CreateInvitesV1Input: CreateInvitesV1Input,
     CreateInvitesV1Output: CreateInvitesV1Output,
+    CreateJourney200Response: CreateJourney200Response,
+    CreateJourneyAlphaInput: CreateJourneyAlphaInput,
+    CreateJourneyAlphaOutput: CreateJourneyAlphaOutput,
     CreateLabel201Response: CreateLabel201Response,
     CreateLabelV1Input: CreateLabelV1Input,
     CreateLabelV1Output: CreateLabelV1Output,
@@ -2041,6 +2055,8 @@ let typeMap: { [index: string]: any } = {
     IntegrationOptionBeta: IntegrationOptionBeta,
     InvitePermissionV1: InvitePermissionV1,
     InviteV1: InviteV1,
+    JourneyDefinition: JourneyDefinition,
+    JourneySummary: JourneySummary,
     LabelAlpha: LabelAlpha,
     LabelV1: LabelV1,
     ListActivationsAlphaOutput: ListActivationsAlphaOutput,
