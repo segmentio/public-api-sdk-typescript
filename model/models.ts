@@ -243,6 +243,7 @@ export * from './eventAlpha';
 export * from './eventPropertyAlpha';
 export * from './eventPropertyType';
 export * from './eventSourceV1';
+export * from './eventTriggeredJourneySummary';
 export * from './eventType';
 export * from './fQLDefinedPropertyV1';
 export * from './filter';
@@ -361,7 +362,6 @@ export * from './integrationOptionBeta';
 export * from './invitePermissionV1';
 export * from './inviteV1';
 export * from './journeyDefinition';
-export * from './journeySummary';
 export * from './labelAlpha';
 export * from './labelV1';
 export * from './listActivationsAlphaOutput';
@@ -973,6 +973,7 @@ import { EventAlpha } from './eventAlpha';
 import { EventPropertyAlpha } from './eventPropertyAlpha';
 import { EventPropertyType } from './eventPropertyType';
 import { EventSourceV1 } from './eventSourceV1';
+import { EventTriggeredJourneySummary } from './eventTriggeredJourneySummary';
 import { EventType } from './eventType';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
 import { Filter } from './filter';
@@ -1091,7 +1092,6 @@ import { IntegrationOptionBeta } from './integrationOptionBeta';
 import { InvitePermissionV1 } from './invitePermissionV1';
 import { InviteV1 } from './inviteV1';
 import { JourneyDefinition } from './journeyDefinition';
-import { JourneySummary } from './journeySummary';
 import { LabelAlpha } from './labelAlpha';
 import { LabelV1 } from './labelV1';
 import { ListActivationsAlphaOutput } from './listActivationsAlphaOutput';
@@ -1570,7 +1570,6 @@ let enumsMap: { [index: string]: any } = {
         HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum':
         IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
-    'JourneySummary.ExecutionStateEnum': JourneySummary.ExecutionStateEnum,
     'ListAudienceConsumersSortInput.FieldEnum':
         ListAudienceConsumersSortInput.FieldEnum,
     'ListAudienceConsumersSortInput.DirectionEnum':
@@ -1921,6 +1920,7 @@ let typeMap: { [index: string]: any } = {
     EventAlpha: EventAlpha,
     EventPropertyAlpha: EventPropertyAlpha,
     EventSourceV1: EventSourceV1,
+    EventTriggeredJourneySummary: EventTriggeredJourneySummary,
     FQLDefinedPropertyV1: FQLDefinedPropertyV1,
     Filter: Filter,
     ForceExecuteAudienceRun200Response: ForceExecuteAudienceRun200Response,
@@ -2056,7 +2056,6 @@ let typeMap: { [index: string]: any } = {
     InvitePermissionV1: InvitePermissionV1,
     InviteV1: InviteV1,
     JourneyDefinition: JourneyDefinition,
-    JourneySummary: JourneySummary,
     LabelAlpha: LabelAlpha,
     LabelV1: LabelV1,
     ListActivationsAlphaOutput: ListActivationsAlphaOutput,

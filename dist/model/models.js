@@ -258,6 +258,7 @@ __exportStar(require("./eventAlpha"), exports);
 __exportStar(require("./eventPropertyAlpha"), exports);
 __exportStar(require("./eventPropertyType"), exports);
 __exportStar(require("./eventSourceV1"), exports);
+__exportStar(require("./eventTriggeredJourneySummary"), exports);
 __exportStar(require("./eventType"), exports);
 __exportStar(require("./fQLDefinedPropertyV1"), exports);
 __exportStar(require("./filter"), exports);
@@ -376,7 +377,6 @@ __exportStar(require("./integrationOptionBeta"), exports);
 __exportStar(require("./invitePermissionV1"), exports);
 __exportStar(require("./inviteV1"), exports);
 __exportStar(require("./journeyDefinition"), exports);
-__exportStar(require("./journeySummary"), exports);
 __exportStar(require("./labelAlpha"), exports);
 __exportStar(require("./labelV1"), exports);
 __exportStar(require("./listActivationsAlphaOutput"), exports);
@@ -975,6 +975,7 @@ var eventAlpha_1 = require("./eventAlpha");
 var eventPropertyAlpha_1 = require("./eventPropertyAlpha");
 var eventPropertyType_1 = require("./eventPropertyType");
 var eventSourceV1_1 = require("./eventSourceV1");
+var eventTriggeredJourneySummary_1 = require("./eventTriggeredJourneySummary");
 var eventType_1 = require("./eventType");
 var fQLDefinedPropertyV1_1 = require("./fQLDefinedPropertyV1");
 var filter_1 = require("./filter");
@@ -1093,7 +1094,6 @@ var integrationOptionBeta_1 = require("./integrationOptionBeta");
 var invitePermissionV1_1 = require("./invitePermissionV1");
 var inviteV1_1 = require("./inviteV1");
 var journeyDefinition_1 = require("./journeyDefinition");
-var journeySummary_1 = require("./journeySummary");
 var labelAlpha_1 = require("./labelAlpha");
 var labelV1_1 = require("./labelV1");
 var listActivationsAlphaOutput_1 = require("./listActivationsAlphaOutput");
@@ -1529,7 +1529,6 @@ var enumsMap = {
     'GroupSubscriptionStatusResponse.StatusEnum': groupSubscriptionStatusResponse_1.GroupSubscriptionStatusResponse.StatusEnum,
     'HashPropertiesConfiguration.EncodingEnum': hashPropertiesConfiguration_1.HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum': identifySourceSettingsV1_1.IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
-    'JourneySummary.ExecutionStateEnum': journeySummary_1.JourneySummary.ExecutionStateEnum,
     'ListAudienceConsumersSortInput.FieldEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.FieldEnum,
     'ListAudienceConsumersSortInput.DirectionEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.DirectionEnum,
     'ListAudienceSearchInput.TypeEnum': listAudienceSearchInput_1.ListAudienceSearchInput.TypeEnum,
@@ -1820,6 +1819,7 @@ var typeMap = {
     EventAlpha: eventAlpha_1.EventAlpha,
     EventPropertyAlpha: eventPropertyAlpha_1.EventPropertyAlpha,
     EventSourceV1: eventSourceV1_1.EventSourceV1,
+    EventTriggeredJourneySummary: eventTriggeredJourneySummary_1.EventTriggeredJourneySummary,
     FQLDefinedPropertyV1: fQLDefinedPropertyV1_1.FQLDefinedPropertyV1,
     Filter: filter_1.Filter,
     ForceExecuteAudienceRun200Response: forceExecuteAudienceRun200Response_1.ForceExecuteAudienceRun200Response,
@@ -1937,7 +1937,6 @@ var typeMap = {
     InvitePermissionV1: invitePermissionV1_1.InvitePermissionV1,
     InviteV1: inviteV1_1.InviteV1,
     JourneyDefinition: journeyDefinition_1.JourneyDefinition,
-    JourneySummary: journeySummary_1.JourneySummary,
     LabelAlpha: labelAlpha_1.LabelAlpha,
     LabelV1: labelV1_1.LabelV1,
     ListActivationsAlphaOutput: listActivationsAlphaOutput_1.ListActivationsAlphaOutput,

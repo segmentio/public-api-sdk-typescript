@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { JourneyDefinition } from './journeyDefinition';
 
 /**
- * Input to create a journey.
+ * Input to create an event-triggered journey.
  */
 export class CreateJourneyAlphaInput {
     /**

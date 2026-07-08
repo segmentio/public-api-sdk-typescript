@@ -1,6 +1,6 @@
-import { EventTriggeredJourneySummary } from './eventTriggeredJourneySummary';
-export declare class CreateJourneyAlphaOutput {
-    'journey': EventTriggeredJourneySummary;
+export declare class EventTriggeredJourneySummary {
+    'containerId': string;
+    'versionNumber': number;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;

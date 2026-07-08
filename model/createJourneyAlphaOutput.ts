@@ -11,13 +11,13 @@
  */
 
 import { RequestFile } from './models';
-import { JourneySummary } from './journeySummary';
+import { EventTriggeredJourneySummary } from './eventTriggeredJourneySummary';
 
 /**
- * Output from create journey.
+ * Output from create event-triggered journey.
  */
 export class CreateJourneyAlphaOutput {
-    'journey': JourneySummary;
+    'journey': EventTriggeredJourneySummary;
 
     static discriminator: string | undefined = undefined;
 
@@ -29,7 +29,7 @@ export class CreateJourneyAlphaOutput {
         {
             name: 'journey',
             baseName: 'journey',
-            type: 'JourneySummary',
+            type: 'EventTriggeredJourneySummary',
         },
     ];
 

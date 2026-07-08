@@ -12,7 +12,7 @@ var CreateJourneyAlphaOutput = (function () {
         {
             name: 'journey',
             baseName: 'journey',
-            type: 'JourneySummary',
+            type: 'EventTriggeredJourneySummary',
         },
     ];
     return CreateJourneyAlphaOutput;

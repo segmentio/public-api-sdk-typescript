@@ -13,25 +13,17 @@
 import { RequestFile } from './models';
 
 /**
- * The XState-format definition of an event-triggered journey. Passed through to personas-service as-is.
+ * Summary of a created event-triggered journey draft.
  */
-export class JourneyDefinition {
+export class EventTriggeredJourneySummary {
     /**
-     * The key of the initial state.
+     * Container id of the created journey draft.
      */
-    'initial': string;
+    'containerId': string;
     /**
-     * Map of state key → state definition.
+     * Version number of the created draft.
      */
-    'states': { [key: string]: any };
-    /**
-     * Entry rules controlling how profiles enter the journey.
-     */
-    'entryRules'?: { [key: string]: any };
-    /**
-     * Exit rules controlling global interrupt points.
-     */
-    'exitRules'?: { [key: string]: any };
+    'versionNumber': number;
 
     static discriminator: string | undefined = undefined;
 
@@ -41,28 +33,18 @@ export class JourneyDefinition {
         type: string;
     }> = [
         {
-            name: 'initial',
-            baseName: 'initial',
+            name: 'containerId',
+            baseName: 'containerId',
             type: 'string',
         },
         {
-            name: 'states',
-            baseName: 'states',
-            type: '{ [key: string]: any; }',
-        },
-        {
-            name: 'entryRules',
-            baseName: 'entryRules',
-            type: '{ [key: string]: any; }',
-        },
-        {
-            name: 'exitRules',
-            baseName: 'exitRules',
-            type: '{ [key: string]: any; }',
+            name: 'versionNumber',
+            baseName: 'versionNumber',
+            type: 'number',
         },
     ];
 
     static getAttributeTypeMap() {
-        return JourneyDefinition.attributeTypeMap;
+        return EventTriggeredJourneySummary.attributeTypeMap;
     }
 }
