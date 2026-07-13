@@ -234,7 +234,11 @@ export * from './echo200Response1';
 export * from './echoAlphaOutput';
 export * from './echoV1Output';
 export * from './entityDetails';
+export * from './eventAlpha';
+export * from './eventPropertyAlpha';
+export * from './eventPropertyType';
 export * from './eventSourceV1';
+export * from './eventType';
 export * from './fQLDefinedPropertyV1';
 export * from './filter';
 export * from './forceExecuteAudienceRun200Response';
@@ -390,6 +394,8 @@ export * from './listDestinations200Response';
 export * from './listDestinationsFromAudience200Response';
 export * from './listDestinationsFromAudienceAlphaOutput';
 export * from './listDestinationsV1Output';
+export * from './listEvents200Response';
+export * from './listEventsAlphaOutput';
 export * from './listFiltersForSpace200Response';
 export * from './listFiltersForSpaceOutput';
 export * from './listFiltersFromDestination200Response';
@@ -413,6 +419,8 @@ export * from './listLabelsAlphaOutput';
 export * from './listLabelsV1Output';
 export * from './listProfilesWarehouseInSpace200Response';
 export * from './listProfilesWarehouseInSpaceAlphaOutput';
+export * from './listPropertiesFromEvent200Response';
+export * from './listPropertiesFromEventAlphaOutput';
 export * from './listRegulationsFromSource200Response';
 export * from './listRegulationsFromSourceV1Output';
 export * from './listReverseETLSyncStatusesFromModelAndSubscriptionId200Response';
@@ -423,6 +431,8 @@ export * from './listRoles200Response';
 export * from './listRolesV1Output';
 export * from './listRulesFromTrackingPlan200Response';
 export * from './listRulesFromTrackingPlanV1Output';
+export * from './listSampleValuesFromEventProperty200Response';
+export * from './listSampleValuesFromEventPropertyAlphaOutput';
 export * from './listSchemaSettingsInSource200Response';
 export * from './listSchemaSettingsInSourceV1Output';
 export * from './listSelectiveSyncsFromWarehouseAndSource200Response';
@@ -934,7 +944,11 @@ import { Echo200Response1 } from './echo200Response1';
 import { EchoAlphaOutput } from './echoAlphaOutput';
 import { EchoV1Output } from './echoV1Output';
 import { EntityDetails } from './entityDetails';
+import { EventAlpha } from './eventAlpha';
+import { EventPropertyAlpha } from './eventPropertyAlpha';
+import { EventPropertyType } from './eventPropertyType';
 import { EventSourceV1 } from './eventSourceV1';
+import { EventType } from './eventType';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
 import { Filter } from './filter';
 import { ForceExecuteAudienceRun200Response } from './forceExecuteAudienceRun200Response';
@@ -1090,6 +1104,8 @@ import { ListDestinations200Response } from './listDestinations200Response';
 import { ListDestinationsFromAudience200Response } from './listDestinationsFromAudience200Response';
 import { ListDestinationsFromAudienceAlphaOutput } from './listDestinationsFromAudienceAlphaOutput';
 import { ListDestinationsV1Output } from './listDestinationsV1Output';
+import { ListEvents200Response } from './listEvents200Response';
+import { ListEventsAlphaOutput } from './listEventsAlphaOutput';
 import { ListFiltersForSpace200Response } from './listFiltersForSpace200Response';
 import { ListFiltersForSpaceOutput } from './listFiltersForSpaceOutput';
 import { ListFiltersFromDestination200Response } from './listFiltersFromDestination200Response';
@@ -1113,6 +1129,8 @@ import { ListLabelsAlphaOutput } from './listLabelsAlphaOutput';
 import { ListLabelsV1Output } from './listLabelsV1Output';
 import { ListProfilesWarehouseInSpace200Response } from './listProfilesWarehouseInSpace200Response';
 import { ListProfilesWarehouseInSpaceAlphaOutput } from './listProfilesWarehouseInSpaceAlphaOutput';
+import { ListPropertiesFromEvent200Response } from './listPropertiesFromEvent200Response';
+import { ListPropertiesFromEventAlphaOutput } from './listPropertiesFromEventAlphaOutput';
 import { ListRegulationsFromSource200Response } from './listRegulationsFromSource200Response';
 import { ListRegulationsFromSourceV1Output } from './listRegulationsFromSourceV1Output';
 import { ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response } from './listReverseETLSyncStatusesFromModelAndSubscriptionId200Response';
@@ -1123,6 +1141,8 @@ import { ListRoles200Response } from './listRoles200Response';
 import { ListRolesV1Output } from './listRolesV1Output';
 import { ListRulesFromTrackingPlan200Response } from './listRulesFromTrackingPlan200Response';
 import { ListRulesFromTrackingPlanV1Output } from './listRulesFromTrackingPlanV1Output';
+import { ListSampleValuesFromEventProperty200Response } from './listSampleValuesFromEventProperty200Response';
+import { ListSampleValuesFromEventPropertyAlphaOutput } from './listSampleValuesFromEventPropertyAlphaOutput';
 import { ListSchemaSettingsInSource200Response } from './listSchemaSettingsInSource200Response';
 import { ListSchemaSettingsInSourceV1Output } from './listSchemaSettingsInSourceV1Output';
 import { ListSelectiveSyncsFromWarehouseAndSource200Response } from './listSelectiveSyncsFromWarehouseAndSource200Response';
@@ -1487,6 +1507,8 @@ let enumsMap: { [index: string]: any } = {
     'DestinationStatusV1.StatusEnum': DestinationStatusV1.StatusEnum,
     'EchoAlphaOutput.MethodEnum': EchoAlphaOutput.MethodEnum,
     'EchoV1Output.MethodEnum': EchoV1Output.MethodEnum,
+    EventPropertyType: EventPropertyType,
+    EventType: EventType,
     'FunctionDeployment.StatusEnum': FunctionDeployment.StatusEnum,
     'FunctionSettingV1.TypeEnum': FunctionSettingV1.TypeEnum,
     'FunctionV1.ResourceTypeEnum': FunctionV1.ResourceTypeEnum,
@@ -1849,6 +1871,8 @@ let typeMap: { [index: string]: any } = {
     EchoAlphaOutput: EchoAlphaOutput,
     EchoV1Output: EchoV1Output,
     EntityDetails: EntityDetails,
+    EventAlpha: EventAlpha,
+    EventPropertyAlpha: EventPropertyAlpha,
     EventSourceV1: EventSourceV1,
     FQLDefinedPropertyV1: FQLDefinedPropertyV1,
     Filter: Filter,
@@ -2044,6 +2068,8 @@ let typeMap: { [index: string]: any } = {
     ListDestinationsFromAudienceAlphaOutput:
         ListDestinationsFromAudienceAlphaOutput,
     ListDestinationsV1Output: ListDestinationsV1Output,
+    ListEvents200Response: ListEvents200Response,
+    ListEventsAlphaOutput: ListEventsAlphaOutput,
     ListFiltersForSpace200Response: ListFiltersForSpace200Response,
     ListFiltersForSpaceOutput: ListFiltersForSpaceOutput,
     ListFiltersFromDestination200Response:
@@ -2072,6 +2098,8 @@ let typeMap: { [index: string]: any } = {
         ListProfilesWarehouseInSpace200Response,
     ListProfilesWarehouseInSpaceAlphaOutput:
         ListProfilesWarehouseInSpaceAlphaOutput,
+    ListPropertiesFromEvent200Response: ListPropertiesFromEvent200Response,
+    ListPropertiesFromEventAlphaOutput: ListPropertiesFromEventAlphaOutput,
     ListRegulationsFromSource200Response: ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: ListRegulationsFromSourceV1Output,
     ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response:
@@ -2084,6 +2112,10 @@ let typeMap: { [index: string]: any } = {
     ListRolesV1Output: ListRolesV1Output,
     ListRulesFromTrackingPlan200Response: ListRulesFromTrackingPlan200Response,
     ListRulesFromTrackingPlanV1Output: ListRulesFromTrackingPlanV1Output,
+    ListSampleValuesFromEventProperty200Response:
+        ListSampleValuesFromEventProperty200Response,
+    ListSampleValuesFromEventPropertyAlphaOutput:
+        ListSampleValuesFromEventPropertyAlphaOutput,
     ListSchemaSettingsInSource200Response:
         ListSchemaSettingsInSource200Response,
     ListSchemaSettingsInSourceV1Output: ListSchemaSettingsInSourceV1Output,

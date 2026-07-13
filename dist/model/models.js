@@ -249,7 +249,11 @@ __exportStar(require("./echo200Response1"), exports);
 __exportStar(require("./echoAlphaOutput"), exports);
 __exportStar(require("./echoV1Output"), exports);
 __exportStar(require("./entityDetails"), exports);
+__exportStar(require("./eventAlpha"), exports);
+__exportStar(require("./eventPropertyAlpha"), exports);
+__exportStar(require("./eventPropertyType"), exports);
 __exportStar(require("./eventSourceV1"), exports);
+__exportStar(require("./eventType"), exports);
 __exportStar(require("./fQLDefinedPropertyV1"), exports);
 __exportStar(require("./filter"), exports);
 __exportStar(require("./forceExecuteAudienceRun200Response"), exports);
@@ -405,6 +409,8 @@ __exportStar(require("./listDestinations200Response"), exports);
 __exportStar(require("./listDestinationsFromAudience200Response"), exports);
 __exportStar(require("./listDestinationsFromAudienceAlphaOutput"), exports);
 __exportStar(require("./listDestinationsV1Output"), exports);
+__exportStar(require("./listEvents200Response"), exports);
+__exportStar(require("./listEventsAlphaOutput"), exports);
 __exportStar(require("./listFiltersForSpace200Response"), exports);
 __exportStar(require("./listFiltersForSpaceOutput"), exports);
 __exportStar(require("./listFiltersFromDestination200Response"), exports);
@@ -428,6 +434,8 @@ __exportStar(require("./listLabelsAlphaOutput"), exports);
 __exportStar(require("./listLabelsV1Output"), exports);
 __exportStar(require("./listProfilesWarehouseInSpace200Response"), exports);
 __exportStar(require("./listProfilesWarehouseInSpaceAlphaOutput"), exports);
+__exportStar(require("./listPropertiesFromEvent200Response"), exports);
+__exportStar(require("./listPropertiesFromEventAlphaOutput"), exports);
 __exportStar(require("./listRegulationsFromSource200Response"), exports);
 __exportStar(require("./listRegulationsFromSourceV1Output"), exports);
 __exportStar(require("./listReverseETLSyncStatusesFromModelAndSubscriptionId200Response"), exports);
@@ -438,6 +446,8 @@ __exportStar(require("./listRoles200Response"), exports);
 __exportStar(require("./listRolesV1Output"), exports);
 __exportStar(require("./listRulesFromTrackingPlan200Response"), exports);
 __exportStar(require("./listRulesFromTrackingPlanV1Output"), exports);
+__exportStar(require("./listSampleValuesFromEventProperty200Response"), exports);
+__exportStar(require("./listSampleValuesFromEventPropertyAlphaOutput"), exports);
 __exportStar(require("./listSchemaSettingsInSource200Response"), exports);
 __exportStar(require("./listSchemaSettingsInSourceV1Output"), exports);
 __exportStar(require("./listSelectiveSyncsFromWarehouseAndSource200Response"), exports);
@@ -936,7 +946,11 @@ var echo200Response1_1 = require("./echo200Response1");
 var echoAlphaOutput_1 = require("./echoAlphaOutput");
 var echoV1Output_1 = require("./echoV1Output");
 var entityDetails_1 = require("./entityDetails");
+var eventAlpha_1 = require("./eventAlpha");
+var eventPropertyAlpha_1 = require("./eventPropertyAlpha");
+var eventPropertyType_1 = require("./eventPropertyType");
 var eventSourceV1_1 = require("./eventSourceV1");
+var eventType_1 = require("./eventType");
 var fQLDefinedPropertyV1_1 = require("./fQLDefinedPropertyV1");
 var filter_1 = require("./filter");
 var forceExecuteAudienceRun200Response_1 = require("./forceExecuteAudienceRun200Response");
@@ -1092,6 +1106,8 @@ var listDestinations200Response_1 = require("./listDestinations200Response");
 var listDestinationsFromAudience200Response_1 = require("./listDestinationsFromAudience200Response");
 var listDestinationsFromAudienceAlphaOutput_1 = require("./listDestinationsFromAudienceAlphaOutput");
 var listDestinationsV1Output_1 = require("./listDestinationsV1Output");
+var listEvents200Response_1 = require("./listEvents200Response");
+var listEventsAlphaOutput_1 = require("./listEventsAlphaOutput");
 var listFiltersForSpace200Response_1 = require("./listFiltersForSpace200Response");
 var listFiltersForSpaceOutput_1 = require("./listFiltersForSpaceOutput");
 var listFiltersFromDestination200Response_1 = require("./listFiltersFromDestination200Response");
@@ -1115,6 +1131,8 @@ var listLabelsAlphaOutput_1 = require("./listLabelsAlphaOutput");
 var listLabelsV1Output_1 = require("./listLabelsV1Output");
 var listProfilesWarehouseInSpace200Response_1 = require("./listProfilesWarehouseInSpace200Response");
 var listProfilesWarehouseInSpaceAlphaOutput_1 = require("./listProfilesWarehouseInSpaceAlphaOutput");
+var listPropertiesFromEvent200Response_1 = require("./listPropertiesFromEvent200Response");
+var listPropertiesFromEventAlphaOutput_1 = require("./listPropertiesFromEventAlphaOutput");
 var listRegulationsFromSource200Response_1 = require("./listRegulationsFromSource200Response");
 var listRegulationsFromSourceV1Output_1 = require("./listRegulationsFromSourceV1Output");
 var listReverseETLSyncStatusesFromModelAndSubscriptionId200Response_1 = require("./listReverseETLSyncStatusesFromModelAndSubscriptionId200Response");
@@ -1125,6 +1143,8 @@ var listRoles200Response_1 = require("./listRoles200Response");
 var listRolesV1Output_1 = require("./listRolesV1Output");
 var listRulesFromTrackingPlan200Response_1 = require("./listRulesFromTrackingPlan200Response");
 var listRulesFromTrackingPlanV1Output_1 = require("./listRulesFromTrackingPlanV1Output");
+var listSampleValuesFromEventProperty200Response_1 = require("./listSampleValuesFromEventProperty200Response");
+var listSampleValuesFromEventPropertyAlphaOutput_1 = require("./listSampleValuesFromEventPropertyAlphaOutput");
 var listSchemaSettingsInSource200Response_1 = require("./listSchemaSettingsInSource200Response");
 var listSchemaSettingsInSourceV1Output_1 = require("./listSchemaSettingsInSourceV1Output");
 var listSelectiveSyncsFromWarehouseAndSource200Response_1 = require("./listSelectiveSyncsFromWarehouseAndSource200Response");
@@ -1454,6 +1474,8 @@ var enumsMap = {
     'DestinationStatusV1.StatusEnum': destinationStatusV1_1.DestinationStatusV1.StatusEnum,
     'EchoAlphaOutput.MethodEnum': echoAlphaOutput_1.EchoAlphaOutput.MethodEnum,
     'EchoV1Output.MethodEnum': echoV1Output_1.EchoV1Output.MethodEnum,
+    EventPropertyType: eventPropertyType_1.EventPropertyType,
+    EventType: eventType_1.EventType,
     'FunctionDeployment.StatusEnum': functionDeployment_1.FunctionDeployment.StatusEnum,
     'FunctionSettingV1.TypeEnum': functionSettingV1_1.FunctionSettingV1.TypeEnum,
     'FunctionV1.ResourceTypeEnum': functionV1_1.FunctionV1.ResourceTypeEnum,
@@ -1748,6 +1770,8 @@ var typeMap = {
     EchoAlphaOutput: echoAlphaOutput_1.EchoAlphaOutput,
     EchoV1Output: echoV1Output_1.EchoV1Output,
     EntityDetails: entityDetails_1.EntityDetails,
+    EventAlpha: eventAlpha_1.EventAlpha,
+    EventPropertyAlpha: eventPropertyAlpha_1.EventPropertyAlpha,
     EventSourceV1: eventSourceV1_1.EventSourceV1,
     FQLDefinedPropertyV1: fQLDefinedPropertyV1_1.FQLDefinedPropertyV1,
     Filter: filter_1.Filter,
@@ -1904,6 +1928,8 @@ var typeMap = {
     ListDestinationsFromAudience200Response: listDestinationsFromAudience200Response_1.ListDestinationsFromAudience200Response,
     ListDestinationsFromAudienceAlphaOutput: listDestinationsFromAudienceAlphaOutput_1.ListDestinationsFromAudienceAlphaOutput,
     ListDestinationsV1Output: listDestinationsV1Output_1.ListDestinationsV1Output,
+    ListEvents200Response: listEvents200Response_1.ListEvents200Response,
+    ListEventsAlphaOutput: listEventsAlphaOutput_1.ListEventsAlphaOutput,
     ListFiltersForSpace200Response: listFiltersForSpace200Response_1.ListFiltersForSpace200Response,
     ListFiltersForSpaceOutput: listFiltersForSpaceOutput_1.ListFiltersForSpaceOutput,
     ListFiltersFromDestination200Response: listFiltersFromDestination200Response_1.ListFiltersFromDestination200Response,
@@ -1927,6 +1953,8 @@ var typeMap = {
     ListLabelsV1Output: listLabelsV1Output_1.ListLabelsV1Output,
     ListProfilesWarehouseInSpace200Response: listProfilesWarehouseInSpace200Response_1.ListProfilesWarehouseInSpace200Response,
     ListProfilesWarehouseInSpaceAlphaOutput: listProfilesWarehouseInSpaceAlphaOutput_1.ListProfilesWarehouseInSpaceAlphaOutput,
+    ListPropertiesFromEvent200Response: listPropertiesFromEvent200Response_1.ListPropertiesFromEvent200Response,
+    ListPropertiesFromEventAlphaOutput: listPropertiesFromEventAlphaOutput_1.ListPropertiesFromEventAlphaOutput,
     ListRegulationsFromSource200Response: listRegulationsFromSource200Response_1.ListRegulationsFromSource200Response,
     ListRegulationsFromSourceV1Output: listRegulationsFromSourceV1Output_1.ListRegulationsFromSourceV1Output,
     ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response: listReverseETLSyncStatusesFromModelAndSubscriptionId200Response_1.ListReverseETLSyncStatusesFromModelAndSubscriptionId200Response,
@@ -1937,6 +1965,8 @@ var typeMap = {
     ListRolesV1Output: listRolesV1Output_1.ListRolesV1Output,
     ListRulesFromTrackingPlan200Response: listRulesFromTrackingPlan200Response_1.ListRulesFromTrackingPlan200Response,
     ListRulesFromTrackingPlanV1Output: listRulesFromTrackingPlanV1Output_1.ListRulesFromTrackingPlanV1Output,
+    ListSampleValuesFromEventProperty200Response: listSampleValuesFromEventProperty200Response_1.ListSampleValuesFromEventProperty200Response,
+    ListSampleValuesFromEventPropertyAlphaOutput: listSampleValuesFromEventPropertyAlphaOutput_1.ListSampleValuesFromEventPropertyAlphaOutput,
     ListSchemaSettingsInSource200Response: listSchemaSettingsInSource200Response_1.ListSchemaSettingsInSource200Response,
     ListSchemaSettingsInSourceV1Output: listSchemaSettingsInSourceV1Output_1.ListSchemaSettingsInSourceV1Output,
     ListSelectiveSyncsFromWarehouseAndSource200Response: listSelectiveSyncsFromWarehouseAndSource200Response_1.ListSelectiveSyncsFromWarehouseAndSource200Response,
