@@ -21,7 +21,7 @@ export class CreateCredentialV1Input {
      */
     'name': string;
     /**
-     * A key-value object that contains type-specific settings for a Credential, plus a required `type` discriminator (e.g. `Snowflake`, `Redshift`) that determines which fields are expected.
+     * A key-value object that contains type-specific settings for a Credential, plus a required `type` discriminator (for example `Snowflake`, `Redshift`) that determines which fields are expected.
      */
     'settings': { [key: string]: any };
 

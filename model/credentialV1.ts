@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 /**
- * Defines a reusable Credential that can be used to connect one or more Warehouses to a data warehouse.
+ * Defines a reusable Credential that can be used to connect one or more Warehouses to a data Warehouse.
  */
 export class CredentialV1 {
     /**
@@ -29,7 +29,7 @@ export class CredentialV1 {
      */
     'name': string;
     /**
-     * A key-value object that contains type-specific settings for a Credential, plus a required `type` discriminator (e.g. `Snowflake`, `Redshift`) that determines which fields are expected.
+     * A key-value object that contains type-specific settings for a Credential, plus a required `type` discriminator (for example `Snowflake`, `Redshift`) that determines which fields are expected.
      */
     'settings': { [key: string]: any };
     /**
