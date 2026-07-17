@@ -15,6 +15,8 @@ export * from './credentialsApi';
 import { CredentialsApi } from './credentialsApi';
 export * from './customerInsightsApi';
 import { CustomerInsightsApi } from './customerInsightsApi';
+export * from './dataGraphSchemaApi';
+import { DataGraphSchemaApi } from './dataGraphSchemaApi';
 export * from './dbtApi';
 import { DbtApi } from './dbtApi';
 export * from './deletionAndSuppressionApi';
@@ -53,8 +55,6 @@ export * from './sourcesApi';
 import { SourcesApi } from './sourcesApi';
 export * from './spaceFiltersApi';
 import { SpaceFiltersApi } from './spaceFiltersApi';
-export * from './spaceSchemaApi';
-import { SpaceSchemaApi } from './spaceSchemaApi';
 export * from './spacesApi';
 import { SpacesApi } from './spacesApi';
 export * from './testingApi';
@@ -75,7 +75,7 @@ export declare class HttpError extends Error {
     constructor(response: http.IncomingMessage, body: any, statusCode?: number | undefined);
 }
 export { RequestFile } from '../model/models';
-export declare const APIS: (typeof APICallsApi | typeof ActivationsApi | typeof AudiencesApi | typeof AuditTrailApi | typeof CatalogApi | typeof ComputedTraitsApi | typeof CredentialsApi | typeof CustomerInsightsApi | typeof DbtApi | typeof DeletionAndSuppressionApi | typeof DeliveryOverviewApi | typeof DestinationFiltersApi | typeof DestinationsApi | typeof EventsApi | typeof FunctionsApi | typeof IAMGroupsApi | typeof IAMRolesApi | typeof IAMUsersApi | typeof JourneysApi | typeof LabelsApi | typeof LivePluginsApi | typeof MonthlyTrackedUsersApi | typeof ProfilesSyncApi | typeof ReverseETLApi | typeof SelectiveSyncApi | typeof SourcesApi | typeof SpaceFiltersApi | typeof SpaceSchemaApi | typeof SpacesApi | typeof TestingApi | typeof TrackingPlansApi | typeof TransformationsApi | typeof WarehousesApi | typeof WorkspacesApi)[];
+export declare const APIS: (typeof APICallsApi | typeof ActivationsApi | typeof AudiencesApi | typeof AuditTrailApi | typeof CatalogApi | typeof ComputedTraitsApi | typeof CredentialsApi | typeof CustomerInsightsApi | typeof DataGraphSchemaApi | typeof DbtApi | typeof DeletionAndSuppressionApi | typeof DeliveryOverviewApi | typeof DestinationFiltersApi | typeof DestinationsApi | typeof EventsApi | typeof FunctionsApi | typeof IAMGroupsApi | typeof IAMRolesApi | typeof IAMUsersApi | typeof JourneysApi | typeof LabelsApi | typeof LivePluginsApi | typeof MonthlyTrackedUsersApi | typeof ProfilesSyncApi | typeof ReverseETLApi | typeof SelectiveSyncApi | typeof SourcesApi | typeof SpaceFiltersApi | typeof SpacesApi | typeof TestingApi | typeof TrackingPlansApi | typeof TransformationsApi | typeof WarehousesApi | typeof WorkspacesApi)[];
 export interface Apis {
     apiCalls: APICallsApi;
     auditTrail: AuditTrailApi;

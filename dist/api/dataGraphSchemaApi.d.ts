@@ -12,9 +12,9 @@ import { ListTraits200Response } from '../model/listTraits200Response';
 import { PaginationInput } from '../model/paginationInput';
 import { Authentication, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
-export declare enum SpaceSchemaApiApiKeys {
+export declare enum DataGraphSchemaApiApiKeys {
 }
-export declare class SpaceSchemaApi {
+export declare class DataGraphSchemaApi {
     protected _basePath: string;
     protected _defaultHeaders: any;
     protected _useQuerystring: boolean;
@@ -30,7 +30,7 @@ export declare class SpaceSchemaApi {
     get defaultHeaders(): any;
     get basePath(): string;
     setDefaultAuthentication(auth: Authentication): void;
-    setApiKey(key: SpaceSchemaApiApiKeys, value: string): void;
+    setApiKey(key: DataGraphSchemaApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
     listEntityPaths(spaceId: string, pagination?: PaginationInput, search?: string, options?: {

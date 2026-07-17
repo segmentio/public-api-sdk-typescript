@@ -14,6 +14,8 @@ export * from './credentialsApi';
 import { CredentialsApi } from './credentialsApi';
 export * from './customerInsightsApi';
 import { CustomerInsightsApi } from './customerInsightsApi';
+export * from './dataGraphSchemaApi';
+import { DataGraphSchemaApi } from './dataGraphSchemaApi';
 export * from './dbtApi';
 import { DbtApi } from './dbtApi';
 export * from './deletionAndSuppressionApi';
@@ -52,8 +54,6 @@ export * from './sourcesApi';
 import { SourcesApi } from './sourcesApi';
 export * from './spaceFiltersApi';
 import { SpaceFiltersApi } from './spaceFiltersApi';
-export * from './spaceSchemaApi';
-import { SpaceSchemaApi } from './spaceSchemaApi';
 export * from './spacesApi';
 import { SpacesApi } from './spacesApi';
 export * from './testingApi';
@@ -90,6 +90,7 @@ export const APIS = [
     ComputedTraitsApi,
     CredentialsApi,
     CustomerInsightsApi,
+    DataGraphSchemaApi,
     DbtApi,
     DeletionAndSuppressionApi,
     DeliveryOverviewApi,
@@ -109,7 +110,6 @@ export const APIS = [
     SelectiveSyncApi,
     SourcesApi,
     SpaceFiltersApi,
-    SpaceSchemaApi,
     SpacesApi,
     TestingApi,
     TrackingPlansApi,

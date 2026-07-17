@@ -82,6 +82,8 @@ __exportStar(require("./credentialsApi"), exports);
 var credentialsApi_1 = require("./credentialsApi");
 __exportStar(require("./customerInsightsApi"), exports);
 var customerInsightsApi_1 = require("./customerInsightsApi");
+__exportStar(require("./dataGraphSchemaApi"), exports);
+var dataGraphSchemaApi_1 = require("./dataGraphSchemaApi");
 __exportStar(require("./dbtApi"), exports);
 var dbtApi_1 = require("./dbtApi");
 __exportStar(require("./deletionAndSuppressionApi"), exports);
@@ -120,8 +122,6 @@ __exportStar(require("./sourcesApi"), exports);
 var sourcesApi_1 = require("./sourcesApi");
 __exportStar(require("./spaceFiltersApi"), exports);
 var spaceFiltersApi_1 = require("./spaceFiltersApi");
-__exportStar(require("./spaceSchemaApi"), exports);
-var spaceSchemaApi_1 = require("./spaceSchemaApi");
 __exportStar(require("./spacesApi"), exports);
 var spacesApi_1 = require("./spacesApi");
 __exportStar(require("./testingApi"), exports);
@@ -156,6 +156,7 @@ exports.APIS = [
     computedTraitsApi_1.ComputedTraitsApi,
     credentialsApi_1.CredentialsApi,
     customerInsightsApi_1.CustomerInsightsApi,
+    dataGraphSchemaApi_1.DataGraphSchemaApi,
     dbtApi_1.DbtApi,
     deletionAndSuppressionApi_1.DeletionAndSuppressionApi,
     deliveryOverviewApi_1.DeliveryOverviewApi,
@@ -175,7 +176,6 @@ exports.APIS = [
     selectiveSyncApi_1.SelectiveSyncApi,
     sourcesApi_1.SourcesApi,
     spaceFiltersApi_1.SpaceFiltersApi,
-    spaceSchemaApi_1.SpaceSchemaApi,
     spacesApi_1.SpacesApi,
     testingApi_1.TestingApi,
     trackingPlansApi_1.TrackingPlansApi,
