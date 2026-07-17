@@ -94,9 +94,6 @@ export * from './createCloudSourceRegulationV1Output';
 export * from './createComputedTrait200Response';
 export * from './createComputedTraitAlphaInput';
 export * from './createComputedTraitAlphaOutput';
-export * from './createCredential201Response';
-export * from './createCredentialV1Input';
-export * from './createCredentialV1Output';
 export * from './createDbtModelSyncTrigger200Response';
 export * from './createDbtModelSyncTriggerInput';
 export * from './createDbtModelSyncTriggerOutput';
@@ -126,9 +123,6 @@ export * from './createInsertFunctionInstanceAlphaOutput';
 export * from './createInvites201Response';
 export * from './createInvitesV1Input';
 export * from './createInvitesV1Output';
-export * from './createJourney200Response';
-export * from './createJourneyAlphaInput';
-export * from './createJourneyAlphaOutput';
 export * from './createLabel201Response';
 export * from './createLabelV1Input';
 export * from './createLabelV1Output';
@@ -175,7 +169,6 @@ export * from './createWorkspaceRegulationV1Input';
 export * from './createWorkspaceRegulationV1Output';
 export * from './createWriteKeyForSource200Response';
 export * from './createWriteKeyForSourceAlphaOutput';
-export * from './credentialV1';
 export * from './dbtModelSyncTrigger';
 export * from './deleteActivationAlphaOutput';
 export * from './deleteDestination200Response';
@@ -247,7 +240,6 @@ export * from './eventAlpha';
 export * from './eventPropertyAlpha';
 export * from './eventPropertyType';
 export * from './eventSourceV1';
-export * from './eventTriggeredJourneySummary';
 export * from './eventType';
 export * from './fQLDefinedPropertyV1';
 export * from './filter';
@@ -365,7 +357,6 @@ export * from './insertFunctionInstanceAlpha';
 export * from './integrationOptionBeta';
 export * from './invitePermissionV1';
 export * from './inviteV1';
-export * from './journeyDefinition';
 export * from './labelAlpha';
 export * from './labelV1';
 export * from './listActivationsAlphaOutput';
@@ -650,9 +641,6 @@ export * from './updateAudienceScheduleForAudienceOutput';
 export * from './updateComputedTraitForSpace200Response';
 export * from './updateComputedTraitForSpaceAlphaInput';
 export * from './updateComputedTraitForSpaceAlphaOutput';
-export * from './updateCredential200Response';
-export * from './updateCredentialV1Input';
-export * from './updateCredentialV1Output';
 export * from './updateDestination200Response';
 export * from './updateDestinationForAudience200Response';
 export * from './updateDestinationForAudienceAlphaInput';
@@ -831,9 +819,6 @@ import { CreateCloudSourceRegulationV1Output } from './createCloudSourceRegulati
 import { CreateComputedTrait200Response } from './createComputedTrait200Response';
 import { CreateComputedTraitAlphaInput } from './createComputedTraitAlphaInput';
 import { CreateComputedTraitAlphaOutput } from './createComputedTraitAlphaOutput';
-import { CreateCredential201Response } from './createCredential201Response';
-import { CreateCredentialV1Input } from './createCredentialV1Input';
-import { CreateCredentialV1Output } from './createCredentialV1Output';
 import { CreateDbtModelSyncTrigger200Response } from './createDbtModelSyncTrigger200Response';
 import { CreateDbtModelSyncTriggerInput } from './createDbtModelSyncTriggerInput';
 import { CreateDbtModelSyncTriggerOutput } from './createDbtModelSyncTriggerOutput';
@@ -863,9 +848,6 @@ import { CreateInsertFunctionInstanceAlphaOutput } from './createInsertFunctionI
 import { CreateInvites201Response } from './createInvites201Response';
 import { CreateInvitesV1Input } from './createInvitesV1Input';
 import { CreateInvitesV1Output } from './createInvitesV1Output';
-import { CreateJourney200Response } from './createJourney200Response';
-import { CreateJourneyAlphaInput } from './createJourneyAlphaInput';
-import { CreateJourneyAlphaOutput } from './createJourneyAlphaOutput';
 import { CreateLabel201Response } from './createLabel201Response';
 import { CreateLabelV1Input } from './createLabelV1Input';
 import { CreateLabelV1Output } from './createLabelV1Output';
@@ -912,7 +894,6 @@ import { CreateWorkspaceRegulationV1Input } from './createWorkspaceRegulationV1I
 import { CreateWorkspaceRegulationV1Output } from './createWorkspaceRegulationV1Output';
 import { CreateWriteKeyForSource200Response } from './createWriteKeyForSource200Response';
 import { CreateWriteKeyForSourceAlphaOutput } from './createWriteKeyForSourceAlphaOutput';
-import { CredentialV1 } from './credentialV1';
 import { DbtModelSyncTrigger } from './dbtModelSyncTrigger';
 import { DeleteActivationAlphaOutput } from './deleteActivationAlphaOutput';
 import { DeleteDestination200Response } from './deleteDestination200Response';
@@ -984,7 +965,6 @@ import { EventAlpha } from './eventAlpha';
 import { EventPropertyAlpha } from './eventPropertyAlpha';
 import { EventPropertyType } from './eventPropertyType';
 import { EventSourceV1 } from './eventSourceV1';
-import { EventTriggeredJourneySummary } from './eventTriggeredJourneySummary';
 import { EventType } from './eventType';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
 import { Filter } from './filter';
@@ -1102,7 +1082,6 @@ import { InsertFunctionInstanceAlpha } from './insertFunctionInstanceAlpha';
 import { IntegrationOptionBeta } from './integrationOptionBeta';
 import { InvitePermissionV1 } from './invitePermissionV1';
 import { InviteV1 } from './inviteV1';
-import { JourneyDefinition } from './journeyDefinition';
 import { LabelAlpha } from './labelAlpha';
 import { LabelV1 } from './labelV1';
 import { ListActivationsAlphaOutput } from './listActivationsAlphaOutput';
@@ -1387,9 +1366,6 @@ import { UpdateAudienceScheduleForAudienceOutput } from './updateAudienceSchedul
 import { UpdateComputedTraitForSpace200Response } from './updateComputedTraitForSpace200Response';
 import { UpdateComputedTraitForSpaceAlphaInput } from './updateComputedTraitForSpaceAlphaInput';
 import { UpdateComputedTraitForSpaceAlphaOutput } from './updateComputedTraitForSpaceAlphaOutput';
-import { UpdateCredential200Response } from './updateCredential200Response';
-import { UpdateCredentialV1Input } from './updateCredentialV1Input';
-import { UpdateCredentialV1Output } from './updateCredentialV1Output';
 import { UpdateDestination200Response } from './updateDestination200Response';
 import { UpdateDestinationForAudience200Response } from './updateDestinationForAudience200Response';
 import { UpdateDestinationForAudienceAlphaInput } from './updateDestinationForAudienceAlphaInput';
@@ -1773,9 +1749,6 @@ let typeMap: { [index: string]: any } = {
     CreateComputedTrait200Response: CreateComputedTrait200Response,
     CreateComputedTraitAlphaInput: CreateComputedTraitAlphaInput,
     CreateComputedTraitAlphaOutput: CreateComputedTraitAlphaOutput,
-    CreateCredential201Response: CreateCredential201Response,
-    CreateCredentialV1Input: CreateCredentialV1Input,
-    CreateCredentialV1Output: CreateCredentialV1Output,
     CreateDbtModelSyncTrigger200Response: CreateDbtModelSyncTrigger200Response,
     CreateDbtModelSyncTriggerInput: CreateDbtModelSyncTriggerInput,
     CreateDbtModelSyncTriggerOutput: CreateDbtModelSyncTriggerOutput,
@@ -1812,9 +1785,6 @@ let typeMap: { [index: string]: any } = {
     CreateInvites201Response: CreateInvites201Response,
     CreateInvitesV1Input: CreateInvitesV1Input,
     CreateInvitesV1Output: CreateInvitesV1Output,
-    CreateJourney200Response: CreateJourney200Response,
-    CreateJourneyAlphaInput: CreateJourneyAlphaInput,
-    CreateJourneyAlphaOutput: CreateJourneyAlphaOutput,
     CreateLabel201Response: CreateLabel201Response,
     CreateLabelV1Input: CreateLabelV1Input,
     CreateLabelV1Output: CreateLabelV1Output,
@@ -1863,7 +1833,6 @@ let typeMap: { [index: string]: any } = {
     CreateWorkspaceRegulationV1Output: CreateWorkspaceRegulationV1Output,
     CreateWriteKeyForSource200Response: CreateWriteKeyForSource200Response,
     CreateWriteKeyForSourceAlphaOutput: CreateWriteKeyForSourceAlphaOutput,
-    CredentialV1: CredentialV1,
     DbtModelSyncTrigger: DbtModelSyncTrigger,
     DeleteActivationAlphaOutput: DeleteActivationAlphaOutput,
     DeleteDestination200Response: DeleteDestination200Response,
@@ -1938,7 +1907,6 @@ let typeMap: { [index: string]: any } = {
     EventAlpha: EventAlpha,
     EventPropertyAlpha: EventPropertyAlpha,
     EventSourceV1: EventSourceV1,
-    EventTriggeredJourneySummary: EventTriggeredJourneySummary,
     FQLDefinedPropertyV1: FQLDefinedPropertyV1,
     Filter: Filter,
     ForceExecuteAudienceRun200Response: ForceExecuteAudienceRun200Response,
@@ -2073,7 +2041,6 @@ let typeMap: { [index: string]: any } = {
     IntegrationOptionBeta: IntegrationOptionBeta,
     InvitePermissionV1: InvitePermissionV1,
     InviteV1: InviteV1,
-    JourneyDefinition: JourneyDefinition,
     LabelAlpha: LabelAlpha,
     LabelV1: LabelV1,
     ListActivationsAlphaOutput: ListActivationsAlphaOutput,
@@ -2440,9 +2407,6 @@ let typeMap: { [index: string]: any } = {
         UpdateComputedTraitForSpaceAlphaInput,
     UpdateComputedTraitForSpaceAlphaOutput:
         UpdateComputedTraitForSpaceAlphaOutput,
-    UpdateCredential200Response: UpdateCredential200Response,
-    UpdateCredentialV1Input: UpdateCredentialV1Input,
-    UpdateCredentialV1Output: UpdateCredentialV1Output,
     UpdateDestination200Response: UpdateDestination200Response,
     UpdateDestinationForAudience200Response:
         UpdateDestinationForAudience200Response,

@@ -10,12 +10,8 @@ export * from './catalogApi';
 import { CatalogApi } from './catalogApi';
 export * from './computedTraitsApi';
 import { ComputedTraitsApi } from './computedTraitsApi';
-export * from './credentialsApi';
-import { CredentialsApi } from './credentialsApi';
 export * from './customerInsightsApi';
 import { CustomerInsightsApi } from './customerInsightsApi';
-export * from './dataGraphSchemaApi';
-import { DataGraphSchemaApi } from './dataGraphSchemaApi';
 export * from './dbtApi';
 import { DbtApi } from './dbtApi';
 export * from './deletionAndSuppressionApi';
@@ -36,8 +32,6 @@ export * from './iAMRolesApi';
 import { IAMRolesApi } from './iAMRolesApi';
 export * from './iAMUsersApi';
 import { IAMUsersApi } from './iAMUsersApi';
-export * from './journeysApi';
-import { JourneysApi } from './journeysApi';
 export * from './labelsApi';
 import { LabelsApi } from './labelsApi';
 export * from './livePluginsApi';
@@ -54,6 +48,8 @@ export * from './sourcesApi';
 import { SourcesApi } from './sourcesApi';
 export * from './spaceFiltersApi';
 import { SpaceFiltersApi } from './spaceFiltersApi';
+export * from './spaceSchemaApi';
+import { SpaceSchemaApi } from './spaceSchemaApi';
 export * from './spacesApi';
 import { SpacesApi } from './spacesApi';
 export * from './testingApi';
@@ -88,9 +84,7 @@ export const APIS = [
     AuditTrailApi,
     CatalogApi,
     ComputedTraitsApi,
-    CredentialsApi,
     CustomerInsightsApi,
-    DataGraphSchemaApi,
     DbtApi,
     DeletionAndSuppressionApi,
     DeliveryOverviewApi,
@@ -101,7 +95,6 @@ export const APIS = [
     IAMGroupsApi,
     IAMRolesApi,
     IAMUsersApi,
-    JourneysApi,
     LabelsApi,
     LivePluginsApi,
     MonthlyTrackedUsersApi,
@@ -110,6 +103,7 @@ export const APIS = [
     SelectiveSyncApi,
     SourcesApi,
     SpaceFiltersApi,
+    SpaceSchemaApi,
     SpacesApi,
     TestingApi,
     TrackingPlansApi,
@@ -180,7 +174,7 @@ export function configureApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 73.0.4 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 73.0.3 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -227,7 +221,7 @@ export function configureEuApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 73.0.4 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 73.0.3 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }

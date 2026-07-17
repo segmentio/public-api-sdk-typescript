@@ -78,12 +78,8 @@ __exportStar(require("./catalogApi"), exports);
 var catalogApi_1 = require("./catalogApi");
 __exportStar(require("./computedTraitsApi"), exports);
 var computedTraitsApi_1 = require("./computedTraitsApi");
-__exportStar(require("./credentialsApi"), exports);
-var credentialsApi_1 = require("./credentialsApi");
 __exportStar(require("./customerInsightsApi"), exports);
 var customerInsightsApi_1 = require("./customerInsightsApi");
-__exportStar(require("./dataGraphSchemaApi"), exports);
-var dataGraphSchemaApi_1 = require("./dataGraphSchemaApi");
 __exportStar(require("./dbtApi"), exports);
 var dbtApi_1 = require("./dbtApi");
 __exportStar(require("./deletionAndSuppressionApi"), exports);
@@ -104,8 +100,6 @@ __exportStar(require("./iAMRolesApi"), exports);
 var iAMRolesApi_1 = require("./iAMRolesApi");
 __exportStar(require("./iAMUsersApi"), exports);
 var iAMUsersApi_1 = require("./iAMUsersApi");
-__exportStar(require("./journeysApi"), exports);
-var journeysApi_1 = require("./journeysApi");
 __exportStar(require("./labelsApi"), exports);
 var labelsApi_1 = require("./labelsApi");
 __exportStar(require("./livePluginsApi"), exports);
@@ -122,6 +116,8 @@ __exportStar(require("./sourcesApi"), exports);
 var sourcesApi_1 = require("./sourcesApi");
 __exportStar(require("./spaceFiltersApi"), exports);
 var spaceFiltersApi_1 = require("./spaceFiltersApi");
+__exportStar(require("./spaceSchemaApi"), exports);
+var spaceSchemaApi_1 = require("./spaceSchemaApi");
 __exportStar(require("./spacesApi"), exports);
 var spacesApi_1 = require("./spacesApi");
 __exportStar(require("./testingApi"), exports);
@@ -154,9 +150,7 @@ exports.APIS = [
     auditTrailApi_1.AuditTrailApi,
     catalogApi_1.CatalogApi,
     computedTraitsApi_1.ComputedTraitsApi,
-    credentialsApi_1.CredentialsApi,
     customerInsightsApi_1.CustomerInsightsApi,
-    dataGraphSchemaApi_1.DataGraphSchemaApi,
     dbtApi_1.DbtApi,
     deletionAndSuppressionApi_1.DeletionAndSuppressionApi,
     deliveryOverviewApi_1.DeliveryOverviewApi,
@@ -167,7 +161,6 @@ exports.APIS = [
     iAMGroupsApi_1.IAMGroupsApi,
     iAMRolesApi_1.IAMRolesApi,
     iAMUsersApi_1.IAMUsersApi,
-    journeysApi_1.JourneysApi,
     labelsApi_1.LabelsApi,
     livePluginsApi_1.LivePluginsApi,
     monthlyTrackedUsersApi_1.MonthlyTrackedUsersApi,
@@ -176,6 +169,7 @@ exports.APIS = [
     selectiveSyncApi_1.SelectiveSyncApi,
     sourcesApi_1.SourcesApi,
     spaceFiltersApi_1.SpaceFiltersApi,
+    spaceSchemaApi_1.SpaceSchemaApi,
     spacesApi_1.SpacesApi,
     testingApi_1.TestingApi,
     trackingPlansApi_1.TrackingPlansApi,
@@ -212,7 +206,7 @@ function configureApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 73.0.4 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 73.0.3 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -249,7 +243,7 @@ function configureEuApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 73.0.4 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 73.0.3 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }

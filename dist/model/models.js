@@ -109,9 +109,6 @@ __exportStar(require("./createCloudSourceRegulationV1Output"), exports);
 __exportStar(require("./createComputedTrait200Response"), exports);
 __exportStar(require("./createComputedTraitAlphaInput"), exports);
 __exportStar(require("./createComputedTraitAlphaOutput"), exports);
-__exportStar(require("./createCredential201Response"), exports);
-__exportStar(require("./createCredentialV1Input"), exports);
-__exportStar(require("./createCredentialV1Output"), exports);
 __exportStar(require("./createDbtModelSyncTrigger200Response"), exports);
 __exportStar(require("./createDbtModelSyncTriggerInput"), exports);
 __exportStar(require("./createDbtModelSyncTriggerOutput"), exports);
@@ -141,9 +138,6 @@ __exportStar(require("./createInsertFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./createInvites201Response"), exports);
 __exportStar(require("./createInvitesV1Input"), exports);
 __exportStar(require("./createInvitesV1Output"), exports);
-__exportStar(require("./createJourney200Response"), exports);
-__exportStar(require("./createJourneyAlphaInput"), exports);
-__exportStar(require("./createJourneyAlphaOutput"), exports);
 __exportStar(require("./createLabel201Response"), exports);
 __exportStar(require("./createLabelV1Input"), exports);
 __exportStar(require("./createLabelV1Output"), exports);
@@ -190,7 +184,6 @@ __exportStar(require("./createWorkspaceRegulationV1Input"), exports);
 __exportStar(require("./createWorkspaceRegulationV1Output"), exports);
 __exportStar(require("./createWriteKeyForSource200Response"), exports);
 __exportStar(require("./createWriteKeyForSourceAlphaOutput"), exports);
-__exportStar(require("./credentialV1"), exports);
 __exportStar(require("./dbtModelSyncTrigger"), exports);
 __exportStar(require("./deleteActivationAlphaOutput"), exports);
 __exportStar(require("./deleteDestination200Response"), exports);
@@ -262,7 +255,6 @@ __exportStar(require("./eventAlpha"), exports);
 __exportStar(require("./eventPropertyAlpha"), exports);
 __exportStar(require("./eventPropertyType"), exports);
 __exportStar(require("./eventSourceV1"), exports);
-__exportStar(require("./eventTriggeredJourneySummary"), exports);
 __exportStar(require("./eventType"), exports);
 __exportStar(require("./fQLDefinedPropertyV1"), exports);
 __exportStar(require("./filter"), exports);
@@ -380,7 +372,6 @@ __exportStar(require("./insertFunctionInstanceAlpha"), exports);
 __exportStar(require("./integrationOptionBeta"), exports);
 __exportStar(require("./invitePermissionV1"), exports);
 __exportStar(require("./inviteV1"), exports);
-__exportStar(require("./journeyDefinition"), exports);
 __exportStar(require("./labelAlpha"), exports);
 __exportStar(require("./labelV1"), exports);
 __exportStar(require("./listActivationsAlphaOutput"), exports);
@@ -665,9 +656,6 @@ __exportStar(require("./updateAudienceScheduleForAudienceOutput"), exports);
 __exportStar(require("./updateComputedTraitForSpace200Response"), exports);
 __exportStar(require("./updateComputedTraitForSpaceAlphaInput"), exports);
 __exportStar(require("./updateComputedTraitForSpaceAlphaOutput"), exports);
-__exportStar(require("./updateCredential200Response"), exports);
-__exportStar(require("./updateCredentialV1Input"), exports);
-__exportStar(require("./updateCredentialV1Output"), exports);
 __exportStar(require("./updateDestination200Response"), exports);
 __exportStar(require("./updateDestinationForAudience200Response"), exports);
 __exportStar(require("./updateDestinationForAudienceAlphaInput"), exports);
@@ -833,9 +821,6 @@ var createCloudSourceRegulationV1Output_1 = require("./createCloudSourceRegulati
 var createComputedTrait200Response_1 = require("./createComputedTrait200Response");
 var createComputedTraitAlphaInput_1 = require("./createComputedTraitAlphaInput");
 var createComputedTraitAlphaOutput_1 = require("./createComputedTraitAlphaOutput");
-var createCredential201Response_1 = require("./createCredential201Response");
-var createCredentialV1Input_1 = require("./createCredentialV1Input");
-var createCredentialV1Output_1 = require("./createCredentialV1Output");
 var createDbtModelSyncTrigger200Response_1 = require("./createDbtModelSyncTrigger200Response");
 var createDbtModelSyncTriggerInput_1 = require("./createDbtModelSyncTriggerInput");
 var createDbtModelSyncTriggerOutput_1 = require("./createDbtModelSyncTriggerOutput");
@@ -865,9 +850,6 @@ var createInsertFunctionInstanceAlphaOutput_1 = require("./createInsertFunctionI
 var createInvites201Response_1 = require("./createInvites201Response");
 var createInvitesV1Input_1 = require("./createInvitesV1Input");
 var createInvitesV1Output_1 = require("./createInvitesV1Output");
-var createJourney200Response_1 = require("./createJourney200Response");
-var createJourneyAlphaInput_1 = require("./createJourneyAlphaInput");
-var createJourneyAlphaOutput_1 = require("./createJourneyAlphaOutput");
 var createLabel201Response_1 = require("./createLabel201Response");
 var createLabelV1Input_1 = require("./createLabelV1Input");
 var createLabelV1Output_1 = require("./createLabelV1Output");
@@ -914,7 +896,6 @@ var createWorkspaceRegulationV1Input_1 = require("./createWorkspaceRegulationV1I
 var createWorkspaceRegulationV1Output_1 = require("./createWorkspaceRegulationV1Output");
 var createWriteKeyForSource200Response_1 = require("./createWriteKeyForSource200Response");
 var createWriteKeyForSourceAlphaOutput_1 = require("./createWriteKeyForSourceAlphaOutput");
-var credentialV1_1 = require("./credentialV1");
 var dbtModelSyncTrigger_1 = require("./dbtModelSyncTrigger");
 var deleteActivationAlphaOutput_1 = require("./deleteActivationAlphaOutput");
 var deleteDestination200Response_1 = require("./deleteDestination200Response");
@@ -986,7 +967,6 @@ var eventAlpha_1 = require("./eventAlpha");
 var eventPropertyAlpha_1 = require("./eventPropertyAlpha");
 var eventPropertyType_1 = require("./eventPropertyType");
 var eventSourceV1_1 = require("./eventSourceV1");
-var eventTriggeredJourneySummary_1 = require("./eventTriggeredJourneySummary");
 var eventType_1 = require("./eventType");
 var fQLDefinedPropertyV1_1 = require("./fQLDefinedPropertyV1");
 var filter_1 = require("./filter");
@@ -1104,7 +1084,6 @@ var insertFunctionInstanceAlpha_1 = require("./insertFunctionInstanceAlpha");
 var integrationOptionBeta_1 = require("./integrationOptionBeta");
 var invitePermissionV1_1 = require("./invitePermissionV1");
 var inviteV1_1 = require("./inviteV1");
-var journeyDefinition_1 = require("./journeyDefinition");
 var labelAlpha_1 = require("./labelAlpha");
 var labelV1_1 = require("./labelV1");
 var listActivationsAlphaOutput_1 = require("./listActivationsAlphaOutput");
@@ -1389,9 +1368,6 @@ var updateAudienceScheduleForAudienceOutput_1 = require("./updateAudienceSchedul
 var updateComputedTraitForSpace200Response_1 = require("./updateComputedTraitForSpace200Response");
 var updateComputedTraitForSpaceAlphaInput_1 = require("./updateComputedTraitForSpaceAlphaInput");
 var updateComputedTraitForSpaceAlphaOutput_1 = require("./updateComputedTraitForSpaceAlphaOutput");
-var updateCredential200Response_1 = require("./updateCredential200Response");
-var updateCredentialV1Input_1 = require("./updateCredentialV1Input");
-var updateCredentialV1Output_1 = require("./updateCredentialV1Output");
 var updateDestination200Response_1 = require("./updateDestination200Response");
 var updateDestinationForAudience200Response_1 = require("./updateDestinationForAudience200Response");
 var updateDestinationForAudienceAlphaInput_1 = require("./updateDestinationForAudienceAlphaInput");
@@ -1685,9 +1661,6 @@ var typeMap = {
     CreateComputedTrait200Response: createComputedTrait200Response_1.CreateComputedTrait200Response,
     CreateComputedTraitAlphaInput: createComputedTraitAlphaInput_1.CreateComputedTraitAlphaInput,
     CreateComputedTraitAlphaOutput: createComputedTraitAlphaOutput_1.CreateComputedTraitAlphaOutput,
-    CreateCredential201Response: createCredential201Response_1.CreateCredential201Response,
-    CreateCredentialV1Input: createCredentialV1Input_1.CreateCredentialV1Input,
-    CreateCredentialV1Output: createCredentialV1Output_1.CreateCredentialV1Output,
     CreateDbtModelSyncTrigger200Response: createDbtModelSyncTrigger200Response_1.CreateDbtModelSyncTrigger200Response,
     CreateDbtModelSyncTriggerInput: createDbtModelSyncTriggerInput_1.CreateDbtModelSyncTriggerInput,
     CreateDbtModelSyncTriggerOutput: createDbtModelSyncTriggerOutput_1.CreateDbtModelSyncTriggerOutput,
@@ -1717,9 +1690,6 @@ var typeMap = {
     CreateInvites201Response: createInvites201Response_1.CreateInvites201Response,
     CreateInvitesV1Input: createInvitesV1Input_1.CreateInvitesV1Input,
     CreateInvitesV1Output: createInvitesV1Output_1.CreateInvitesV1Output,
-    CreateJourney200Response: createJourney200Response_1.CreateJourney200Response,
-    CreateJourneyAlphaInput: createJourneyAlphaInput_1.CreateJourneyAlphaInput,
-    CreateJourneyAlphaOutput: createJourneyAlphaOutput_1.CreateJourneyAlphaOutput,
     CreateLabel201Response: createLabel201Response_1.CreateLabel201Response,
     CreateLabelV1Input: createLabelV1Input_1.CreateLabelV1Input,
     CreateLabelV1Output: createLabelV1Output_1.CreateLabelV1Output,
@@ -1766,7 +1736,6 @@ var typeMap = {
     CreateWorkspaceRegulationV1Output: createWorkspaceRegulationV1Output_1.CreateWorkspaceRegulationV1Output,
     CreateWriteKeyForSource200Response: createWriteKeyForSource200Response_1.CreateWriteKeyForSource200Response,
     CreateWriteKeyForSourceAlphaOutput: createWriteKeyForSourceAlphaOutput_1.CreateWriteKeyForSourceAlphaOutput,
-    CredentialV1: credentialV1_1.CredentialV1,
     DbtModelSyncTrigger: dbtModelSyncTrigger_1.DbtModelSyncTrigger,
     DeleteActivationAlphaOutput: deleteActivationAlphaOutput_1.DeleteActivationAlphaOutput,
     DeleteDestination200Response: deleteDestination200Response_1.DeleteDestination200Response,
@@ -1837,7 +1806,6 @@ var typeMap = {
     EventAlpha: eventAlpha_1.EventAlpha,
     EventPropertyAlpha: eventPropertyAlpha_1.EventPropertyAlpha,
     EventSourceV1: eventSourceV1_1.EventSourceV1,
-    EventTriggeredJourneySummary: eventTriggeredJourneySummary_1.EventTriggeredJourneySummary,
     FQLDefinedPropertyV1: fQLDefinedPropertyV1_1.FQLDefinedPropertyV1,
     Filter: filter_1.Filter,
     ForceExecuteAudienceRun200Response: forceExecuteAudienceRun200Response_1.ForceExecuteAudienceRun200Response,
@@ -1954,7 +1922,6 @@ var typeMap = {
     IntegrationOptionBeta: integrationOptionBeta_1.IntegrationOptionBeta,
     InvitePermissionV1: invitePermissionV1_1.InvitePermissionV1,
     InviteV1: inviteV1_1.InviteV1,
-    JourneyDefinition: journeyDefinition_1.JourneyDefinition,
     LabelAlpha: labelAlpha_1.LabelAlpha,
     LabelV1: labelV1_1.LabelV1,
     ListActivationsAlphaOutput: listActivationsAlphaOutput_1.ListActivationsAlphaOutput,
@@ -2238,9 +2205,6 @@ var typeMap = {
     UpdateComputedTraitForSpace200Response: updateComputedTraitForSpace200Response_1.UpdateComputedTraitForSpace200Response,
     UpdateComputedTraitForSpaceAlphaInput: updateComputedTraitForSpaceAlphaInput_1.UpdateComputedTraitForSpaceAlphaInput,
     UpdateComputedTraitForSpaceAlphaOutput: updateComputedTraitForSpaceAlphaOutput_1.UpdateComputedTraitForSpaceAlphaOutput,
-    UpdateCredential200Response: updateCredential200Response_1.UpdateCredential200Response,
-    UpdateCredentialV1Input: updateCredentialV1Input_1.UpdateCredentialV1Input,
-    UpdateCredentialV1Output: updateCredentialV1Output_1.UpdateCredentialV1Output,
     UpdateDestination200Response: updateDestination200Response_1.UpdateDestination200Response,
     UpdateDestinationForAudience200Response: updateDestinationForAudience200Response_1.UpdateDestinationForAudience200Response,
     UpdateDestinationForAudienceAlphaInput: updateDestinationForAudienceAlphaInput_1.UpdateDestinationForAudienceAlphaInput,
