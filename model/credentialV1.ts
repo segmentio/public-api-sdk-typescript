@@ -25,7 +25,7 @@ export class CredentialV1 {
      */
     'workspaceId': string;
     /**
-     * An optional human-readable name for this Credential.
+     * A human-readable name for this Credential.
      */
     'name': string;
     /**
