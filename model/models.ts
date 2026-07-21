@@ -123,6 +123,9 @@ export * from './createInsertFunctionInstanceAlphaOutput';
 export * from './createInvites201Response';
 export * from './createInvitesV1Input';
 export * from './createInvitesV1Output';
+export * from './createJourney200Response';
+export * from './createJourneyAlphaInput';
+export * from './createJourneyAlphaOutput';
 export * from './createLabel201Response';
 export * from './createLabelV1Input';
 export * from './createLabelV1Output';
@@ -240,6 +243,7 @@ export * from './eventAlpha';
 export * from './eventPropertyAlpha';
 export * from './eventPropertyType';
 export * from './eventSourceV1';
+export * from './eventTriggeredJourneySummary';
 export * from './eventType';
 export * from './fQLDefinedPropertyV1';
 export * from './filter';
@@ -357,6 +361,7 @@ export * from './insertFunctionInstanceAlpha';
 export * from './integrationOptionBeta';
 export * from './invitePermissionV1';
 export * from './inviteV1';
+export * from './journeyDefinition';
 export * from './labelAlpha';
 export * from './labelV1';
 export * from './listActivationsAlphaOutput';
@@ -848,6 +853,9 @@ import { CreateInsertFunctionInstanceAlphaOutput } from './createInsertFunctionI
 import { CreateInvites201Response } from './createInvites201Response';
 import { CreateInvitesV1Input } from './createInvitesV1Input';
 import { CreateInvitesV1Output } from './createInvitesV1Output';
+import { CreateJourney200Response } from './createJourney200Response';
+import { CreateJourneyAlphaInput } from './createJourneyAlphaInput';
+import { CreateJourneyAlphaOutput } from './createJourneyAlphaOutput';
 import { CreateLabel201Response } from './createLabel201Response';
 import { CreateLabelV1Input } from './createLabelV1Input';
 import { CreateLabelV1Output } from './createLabelV1Output';
@@ -965,6 +973,7 @@ import { EventAlpha } from './eventAlpha';
 import { EventPropertyAlpha } from './eventPropertyAlpha';
 import { EventPropertyType } from './eventPropertyType';
 import { EventSourceV1 } from './eventSourceV1';
+import { EventTriggeredJourneySummary } from './eventTriggeredJourneySummary';
 import { EventType } from './eventType';
 import { FQLDefinedPropertyV1 } from './fQLDefinedPropertyV1';
 import { Filter } from './filter';
@@ -1082,6 +1091,7 @@ import { InsertFunctionInstanceAlpha } from './insertFunctionInstanceAlpha';
 import { IntegrationOptionBeta } from './integrationOptionBeta';
 import { InvitePermissionV1 } from './invitePermissionV1';
 import { InviteV1 } from './inviteV1';
+import { JourneyDefinition } from './journeyDefinition';
 import { LabelAlpha } from './labelAlpha';
 import { LabelV1 } from './labelV1';
 import { ListActivationsAlphaOutput } from './listActivationsAlphaOutput';
@@ -1785,6 +1795,9 @@ let typeMap: { [index: string]: any } = {
     CreateInvites201Response: CreateInvites201Response,
     CreateInvitesV1Input: CreateInvitesV1Input,
     CreateInvitesV1Output: CreateInvitesV1Output,
+    CreateJourney200Response: CreateJourney200Response,
+    CreateJourneyAlphaInput: CreateJourneyAlphaInput,
+    CreateJourneyAlphaOutput: CreateJourneyAlphaOutput,
     CreateLabel201Response: CreateLabel201Response,
     CreateLabelV1Input: CreateLabelV1Input,
     CreateLabelV1Output: CreateLabelV1Output,
@@ -1907,6 +1920,7 @@ let typeMap: { [index: string]: any } = {
     EventAlpha: EventAlpha,
     EventPropertyAlpha: EventPropertyAlpha,
     EventSourceV1: EventSourceV1,
+    EventTriggeredJourneySummary: EventTriggeredJourneySummary,
     FQLDefinedPropertyV1: FQLDefinedPropertyV1,
     Filter: Filter,
     ForceExecuteAudienceRun200Response: ForceExecuteAudienceRun200Response,
@@ -2041,6 +2055,7 @@ let typeMap: { [index: string]: any } = {
     IntegrationOptionBeta: IntegrationOptionBeta,
     InvitePermissionV1: InvitePermissionV1,
     InviteV1: InviteV1,
+    JourneyDefinition: JourneyDefinition,
     LabelAlpha: LabelAlpha,
     LabelV1: LabelV1,
     ListActivationsAlphaOutput: ListActivationsAlphaOutput,
