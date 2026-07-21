@@ -52,8 +52,8 @@ export * from './sourcesApi';
 import { SourcesApi } from './sourcesApi';
 export * from './spaceFiltersApi';
 import { SpaceFiltersApi } from './spaceFiltersApi';
-export * from './spaceSchemaApi';
-import { SpaceSchemaApi } from './spaceSchemaApi';
+export * from './spaceSchemaAPIApi';
+import { SpaceSchemaAPIApi } from './spaceSchemaAPIApi';
 export * from './spacesApi';
 import { SpacesApi } from './spacesApi';
 export * from './testingApi';
@@ -109,7 +109,7 @@ export const APIS = [
     SelectiveSyncApi,
     SourcesApi,
     SpaceFiltersApi,
-    SpaceSchemaApi,
+    SpaceSchemaAPIApi,
     SpacesApi,
     TestingApi,
     TrackingPlansApi,

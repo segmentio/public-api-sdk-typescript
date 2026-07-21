@@ -120,8 +120,8 @@ __exportStar(require("./sourcesApi"), exports);
 var sourcesApi_1 = require("./sourcesApi");
 __exportStar(require("./spaceFiltersApi"), exports);
 var spaceFiltersApi_1 = require("./spaceFiltersApi");
-__exportStar(require("./spaceSchemaApi"), exports);
-var spaceSchemaApi_1 = require("./spaceSchemaApi");
+__exportStar(require("./spaceSchemaAPIApi"), exports);
+var spaceSchemaAPIApi_1 = require("./spaceSchemaAPIApi");
 __exportStar(require("./spacesApi"), exports);
 var spacesApi_1 = require("./spacesApi");
 __exportStar(require("./testingApi"), exports);
@@ -175,7 +175,7 @@ exports.APIS = [
     selectiveSyncApi_1.SelectiveSyncApi,
     sourcesApi_1.SourcesApi,
     spaceFiltersApi_1.SpaceFiltersApi,
-    spaceSchemaApi_1.SpaceSchemaApi,
+    spaceSchemaAPIApi_1.SpaceSchemaAPIApi,
     spacesApi_1.SpacesApi,
     testingApi_1.TestingApi,
     trackingPlansApi_1.TrackingPlansApi,

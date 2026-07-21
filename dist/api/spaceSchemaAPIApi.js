@@ -39,17 +39,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SpaceSchemaApi = exports.SpaceSchemaApiApiKeys = void 0;
+exports.SpaceSchemaAPIApi = exports.SpaceSchemaAPIApiApiKeys = void 0;
 var request_1 = __importDefault(require("request"));
 var models_1 = require("../model/models");
 var models_2 = require("../model/models");
 var apis_1 = require("./apis");
 var defaultBasePath = 'https://api.segmentapis.com';
-var SpaceSchemaApiApiKeys;
-(function (SpaceSchemaApiApiKeys) {
-})(SpaceSchemaApiApiKeys = exports.SpaceSchemaApiApiKeys || (exports.SpaceSchemaApiApiKeys = {}));
-var SpaceSchemaApi = (function () {
-    function SpaceSchemaApi(basePathOrUsername, password, basePath) {
+var SpaceSchemaAPIApiApiKeys;
+(function (SpaceSchemaAPIApiApiKeys) {
+})(SpaceSchemaAPIApiApiKeys = exports.SpaceSchemaAPIApiApiKeys || (exports.SpaceSchemaAPIApiApiKeys = {}));
+var SpaceSchemaAPIApi = (function () {
+    function SpaceSchemaAPIApi(basePathOrUsername, password, basePath) {
         this._basePath = defaultBasePath;
         this._defaultHeaders = {};
         this._useQuerystring = false;
@@ -69,14 +69,14 @@ var SpaceSchemaApi = (function () {
             }
         }
     }
-    Object.defineProperty(SpaceSchemaApi.prototype, "useQuerystring", {
+    Object.defineProperty(SpaceSchemaAPIApi.prototype, "useQuerystring", {
         set: function (value) {
             this._useQuerystring = value;
         },
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(SpaceSchemaApi.prototype, "basePath", {
+    Object.defineProperty(SpaceSchemaAPIApi.prototype, "basePath", {
         get: function () {
             return this._basePath;
         },
@@ -86,7 +86,7 @@ var SpaceSchemaApi = (function () {
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(SpaceSchemaApi.prototype, "defaultHeaders", {
+    Object.defineProperty(SpaceSchemaAPIApi.prototype, "defaultHeaders", {
         get: function () {
             return this._defaultHeaders;
         },
@@ -96,24 +96,24 @@ var SpaceSchemaApi = (function () {
         enumerable: false,
         configurable: true
     });
-    SpaceSchemaApi.prototype.setDefaultAuthentication = function (auth) {
+    SpaceSchemaAPIApi.prototype.setDefaultAuthentication = function (auth) {
         this.authentications.default = auth;
     };
-    SpaceSchemaApi.prototype.setApiKey = function (key, value) {
-        this.authentications[SpaceSchemaApiApiKeys[key]].apiKey =
+    SpaceSchemaAPIApi.prototype.setApiKey = function (key, value) {
+        this.authentications[SpaceSchemaAPIApiApiKeys[key]].apiKey =
             value;
     };
-    Object.defineProperty(SpaceSchemaApi.prototype, "accessToken", {
+    Object.defineProperty(SpaceSchemaAPIApi.prototype, "accessToken", {
         set: function (accessToken) {
             this.authentications.token.accessToken = accessToken;
         },
         enumerable: false,
         configurable: true
     });
-    SpaceSchemaApi.prototype.addInterceptor = function (interceptor) {
+    SpaceSchemaAPIApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    SpaceSchemaApi.prototype.listEntityPaths = function (spaceId, pagination, search, options) {
+    SpaceSchemaAPIApi.prototype.listEntityPaths = function (spaceId, pagination, search, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -203,7 +203,7 @@ var SpaceSchemaApi = (function () {
             });
         });
     };
-    SpaceSchemaApi.prototype.listEvents = function (spaceId, pagination, sortBy, sortDir, search, options) {
+    SpaceSchemaAPIApi.prototype.listEvents = function (spaceId, pagination, sortBy, sortDir, search, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_2, _i, _a, interceptor;
@@ -299,7 +299,7 @@ var SpaceSchemaApi = (function () {
             });
         });
     };
-    SpaceSchemaApi.prototype.listPropertiesFromEntity = function (spaceId, entitySlug, pagination, includeSampleValues, samplesCount, options) {
+    SpaceSchemaAPIApi.prototype.listPropertiesFromEntity = function (spaceId, entitySlug, pagination, includeSampleValues, samplesCount, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_3, _i, _a, interceptor;
@@ -399,7 +399,7 @@ var SpaceSchemaApi = (function () {
             });
         });
     };
-    SpaceSchemaApi.prototype.listPropertiesFromEvent = function (spaceId, eventName, pagination, sortBy, sortDir, search, includeSampleValues, samplesCount, options) {
+    SpaceSchemaAPIApi.prototype.listPropertiesFromEvent = function (spaceId, eventName, pagination, sortBy, sortDir, search, includeSampleValues, samplesCount, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_4, _i, _a, interceptor;
@@ -508,7 +508,7 @@ var SpaceSchemaApi = (function () {
             });
         });
     };
-    SpaceSchemaApi.prototype.listSampleValuesFromEntityProperty = function (spaceId, entitySlug, propertyName, options) {
+    SpaceSchemaAPIApi.prototype.listSampleValuesFromEntityProperty = function (spaceId, entitySlug, propertyName, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_5, _i, _a, interceptor;
@@ -601,7 +601,7 @@ var SpaceSchemaApi = (function () {
             });
         });
     };
-    SpaceSchemaApi.prototype.listSampleValuesFromEventProperty = function (spaceId, eventName, propertyName, propertyType, options) {
+    SpaceSchemaAPIApi.prototype.listSampleValuesFromEventProperty = function (spaceId, eventName, propertyName, propertyType, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_6, _i, _a, interceptor;
@@ -701,7 +701,7 @@ var SpaceSchemaApi = (function () {
             });
         });
     };
-    SpaceSchemaApi.prototype.listSampleValuesFromTrait = function (spaceId, traitKey, collection, options) {
+    SpaceSchemaAPIApi.prototype.listSampleValuesFromTrait = function (spaceId, traitKey, collection, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_7, _i, _a, interceptor;
@@ -793,7 +793,7 @@ var SpaceSchemaApi = (function () {
             });
         });
     };
-    SpaceSchemaApi.prototype.listTraits = function (spaceId, pagination, sortBy, sortDir, search, collection, includeSampleValues, samplesCount, options) {
+    SpaceSchemaAPIApi.prototype.listTraits = function (spaceId, pagination, sortBy, sortDir, search, collection, includeSampleValues, samplesCount, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_8, _i, _a, interceptor;
@@ -900,7 +900,7 @@ var SpaceSchemaApi = (function () {
             });
         });
     };
-    return SpaceSchemaApi;
+    return SpaceSchemaAPIApi;
 }());
-exports.SpaceSchemaApi = SpaceSchemaApi;
-//# sourceMappingURL=spaceSchemaApi.js.map
+exports.SpaceSchemaAPIApi = SpaceSchemaAPIApi;
+//# sourceMappingURL=spaceSchemaAPIApi.js.map
