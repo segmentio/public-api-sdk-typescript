@@ -10,6 +10,8 @@ export * from './catalogApi';
 import { CatalogApi } from './catalogApi';
 export * from './computedTraitsApi';
 import { ComputedTraitsApi } from './computedTraitsApi';
+export * from './credentialsApi';
+import { CredentialsApi } from './credentialsApi';
 export * from './customerInsightsApi';
 import { CustomerInsightsApi } from './customerInsightsApi';
 export * from './dbtApi';
@@ -86,6 +88,7 @@ export const APIS = [
     AuditTrailApi,
     CatalogApi,
     ComputedTraitsApi,
+    CredentialsApi,
     CustomerInsightsApi,
     DbtApi,
     DeletionAndSuppressionApi,
