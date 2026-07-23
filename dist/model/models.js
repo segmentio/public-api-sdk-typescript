@@ -193,6 +193,8 @@ __exportStar(require("./createWriteKeyForSourceAlphaOutput"), exports);
 __exportStar(require("./credentialV1"), exports);
 __exportStar(require("./dbtModelSyncTrigger"), exports);
 __exportStar(require("./deleteActivationAlphaOutput"), exports);
+__exportStar(require("./deleteCredential200Response"), exports);
+__exportStar(require("./deleteCredentialV1Output"), exports);
 __exportStar(require("./deleteDestination200Response"), exports);
 __exportStar(require("./deleteDestinationV1Output"), exports);
 __exportStar(require("./deleteFilterById200Response"), exports);
@@ -298,6 +300,8 @@ __exportStar(require("./getComputedTrait200Response"), exports);
 __exportStar(require("./getComputedTraitAlphaOutput"), exports);
 __exportStar(require("./getConnectionStateFromWarehouse200Response"), exports);
 __exportStar(require("./getConnectionStateFromWarehouseV1Output"), exports);
+__exportStar(require("./getCredential200Response"), exports);
+__exportStar(require("./getCredentialV1Output"), exports);
 __exportStar(require("./getDailyPerSourceAPICallsUsage200Response"), exports);
 __exportStar(require("./getDailyPerSourceAPICallsUsageV1Output"), exports);
 __exportStar(require("./getDailyPerSourceMTUUsage200Response"), exports);
@@ -415,6 +419,10 @@ __exportStar(require("./listConnectedWarehousesFromSource200Response"), exports)
 __exportStar(require("./listConnectedWarehousesFromSource200Response1"), exports);
 __exportStar(require("./listConnectedWarehousesFromSourceAlphaOutput"), exports);
 __exportStar(require("./listConnectedWarehousesFromSourceV1Output"), exports);
+__exportStar(require("./listCredentialConsumers200Response"), exports);
+__exportStar(require("./listCredentialConsumersV1Output"), exports);
+__exportStar(require("./listCredentials200Response"), exports);
+__exportStar(require("./listCredentialsV1Output"), exports);
 __exportStar(require("./listDeliveryMetricsSummaryFromDestination200Response"), exports);
 __exportStar(require("./listDeliveryMetricsSummaryFromDestinationBetaOutput"), exports);
 __exportStar(require("./listDestinations200Response"), exports);
@@ -917,6 +925,8 @@ var createWriteKeyForSourceAlphaOutput_1 = require("./createWriteKeyForSourceAlp
 var credentialV1_1 = require("./credentialV1");
 var dbtModelSyncTrigger_1 = require("./dbtModelSyncTrigger");
 var deleteActivationAlphaOutput_1 = require("./deleteActivationAlphaOutput");
+var deleteCredential200Response_1 = require("./deleteCredential200Response");
+var deleteCredentialV1Output_1 = require("./deleteCredentialV1Output");
 var deleteDestination200Response_1 = require("./deleteDestination200Response");
 var deleteDestinationV1Output_1 = require("./deleteDestinationV1Output");
 var deleteFilterById200Response_1 = require("./deleteFilterById200Response");
@@ -1022,6 +1032,8 @@ var getComputedTrait200Response_1 = require("./getComputedTrait200Response");
 var getComputedTraitAlphaOutput_1 = require("./getComputedTraitAlphaOutput");
 var getConnectionStateFromWarehouse200Response_1 = require("./getConnectionStateFromWarehouse200Response");
 var getConnectionStateFromWarehouseV1Output_1 = require("./getConnectionStateFromWarehouseV1Output");
+var getCredential200Response_1 = require("./getCredential200Response");
+var getCredentialV1Output_1 = require("./getCredentialV1Output");
 var getDailyPerSourceAPICallsUsage200Response_1 = require("./getDailyPerSourceAPICallsUsage200Response");
 var getDailyPerSourceAPICallsUsageV1Output_1 = require("./getDailyPerSourceAPICallsUsageV1Output");
 var getDailyPerSourceMTUUsage200Response_1 = require("./getDailyPerSourceMTUUsage200Response");
@@ -1139,6 +1151,10 @@ var listConnectedWarehousesFromSource200Response_1 = require("./listConnectedWar
 var listConnectedWarehousesFromSource200Response1_1 = require("./listConnectedWarehousesFromSource200Response1");
 var listConnectedWarehousesFromSourceAlphaOutput_1 = require("./listConnectedWarehousesFromSourceAlphaOutput");
 var listConnectedWarehousesFromSourceV1Output_1 = require("./listConnectedWarehousesFromSourceV1Output");
+var listCredentialConsumers200Response_1 = require("./listCredentialConsumers200Response");
+var listCredentialConsumersV1Output_1 = require("./listCredentialConsumersV1Output");
+var listCredentials200Response_1 = require("./listCredentials200Response");
+var listCredentialsV1Output_1 = require("./listCredentialsV1Output");
 var listDeliveryMetricsSummaryFromDestination200Response_1 = require("./listDeliveryMetricsSummaryFromDestination200Response");
 var listDeliveryMetricsSummaryFromDestinationBetaOutput_1 = require("./listDeliveryMetricsSummaryFromDestinationBetaOutput");
 var listDestinations200Response_1 = require("./listDestinations200Response");
@@ -1501,6 +1517,7 @@ var enumsMap = {
     'CreateValidationInWarehouseV1Output.StatusEnum': createValidationInWarehouseV1Output_1.CreateValidationInWarehouseV1Output.StatusEnum,
     'CreateWorkspaceRegulationV1Input.RegulationTypeEnum': createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input.RegulationTypeEnum,
     'CreateWorkspaceRegulationV1Input.SubjectTypeEnum': createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input.SubjectTypeEnum,
+    'DeleteCredentialV1Output.StatusEnum': deleteCredentialV1Output_1.DeleteCredentialV1Output.StatusEnum,
     'DeleteDestinationV1Output.StatusEnum': deleteDestinationV1Output_1.DeleteDestinationV1Output.StatusEnum,
     'DeleteFunctionV1Output.StatusEnum': deleteFunctionV1Output_1.DeleteFunctionV1Output.StatusEnum,
     'DeleteInsertFunctionInstanceAlphaOutput.StatusEnum': deleteInsertFunctionInstanceAlphaOutput_1.DeleteInsertFunctionInstanceAlphaOutput.StatusEnum,
@@ -1769,6 +1786,8 @@ var typeMap = {
     CredentialV1: credentialV1_1.CredentialV1,
     DbtModelSyncTrigger: dbtModelSyncTrigger_1.DbtModelSyncTrigger,
     DeleteActivationAlphaOutput: deleteActivationAlphaOutput_1.DeleteActivationAlphaOutput,
+    DeleteCredential200Response: deleteCredential200Response_1.DeleteCredential200Response,
+    DeleteCredentialV1Output: deleteCredentialV1Output_1.DeleteCredentialV1Output,
     DeleteDestination200Response: deleteDestination200Response_1.DeleteDestination200Response,
     DeleteDestinationV1Output: deleteDestinationV1Output_1.DeleteDestinationV1Output,
     DeleteFilterById200Response: deleteFilterById200Response_1.DeleteFilterById200Response,
@@ -1872,6 +1891,8 @@ var typeMap = {
     GetComputedTraitAlphaOutput: getComputedTraitAlphaOutput_1.GetComputedTraitAlphaOutput,
     GetConnectionStateFromWarehouse200Response: getConnectionStateFromWarehouse200Response_1.GetConnectionStateFromWarehouse200Response,
     GetConnectionStateFromWarehouseV1Output: getConnectionStateFromWarehouseV1Output_1.GetConnectionStateFromWarehouseV1Output,
+    GetCredential200Response: getCredential200Response_1.GetCredential200Response,
+    GetCredentialV1Output: getCredentialV1Output_1.GetCredentialV1Output,
     GetDailyPerSourceAPICallsUsage200Response: getDailyPerSourceAPICallsUsage200Response_1.GetDailyPerSourceAPICallsUsage200Response,
     GetDailyPerSourceAPICallsUsageV1Output: getDailyPerSourceAPICallsUsageV1Output_1.GetDailyPerSourceAPICallsUsageV1Output,
     GetDailyPerSourceMTUUsage200Response: getDailyPerSourceMTUUsage200Response_1.GetDailyPerSourceMTUUsage200Response,
@@ -1989,6 +2010,10 @@ var typeMap = {
     ListConnectedWarehousesFromSource200Response1: listConnectedWarehousesFromSource200Response1_1.ListConnectedWarehousesFromSource200Response1,
     ListConnectedWarehousesFromSourceAlphaOutput: listConnectedWarehousesFromSourceAlphaOutput_1.ListConnectedWarehousesFromSourceAlphaOutput,
     ListConnectedWarehousesFromSourceV1Output: listConnectedWarehousesFromSourceV1Output_1.ListConnectedWarehousesFromSourceV1Output,
+    ListCredentialConsumers200Response: listCredentialConsumers200Response_1.ListCredentialConsumers200Response,
+    ListCredentialConsumersV1Output: listCredentialConsumersV1Output_1.ListCredentialConsumersV1Output,
+    ListCredentials200Response: listCredentials200Response_1.ListCredentials200Response,
+    ListCredentialsV1Output: listCredentialsV1Output_1.ListCredentialsV1Output,
     ListDeliveryMetricsSummaryFromDestination200Response: listDeliveryMetricsSummaryFromDestination200Response_1.ListDeliveryMetricsSummaryFromDestination200Response,
     ListDeliveryMetricsSummaryFromDestinationBetaOutput: listDeliveryMetricsSummaryFromDestinationBetaOutput_1.ListDeliveryMetricsSummaryFromDestinationBetaOutput,
     ListDestinations200Response: listDestinations200Response_1.ListDestinations200Response,

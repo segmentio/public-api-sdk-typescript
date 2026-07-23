@@ -178,6 +178,8 @@ export * from './createWriteKeyForSourceAlphaOutput';
 export * from './credentialV1';
 export * from './dbtModelSyncTrigger';
 export * from './deleteActivationAlphaOutput';
+export * from './deleteCredential200Response';
+export * from './deleteCredentialV1Output';
 export * from './deleteDestination200Response';
 export * from './deleteDestinationV1Output';
 export * from './deleteFilterById200Response';
@@ -283,6 +285,8 @@ export * from './getComputedTrait200Response';
 export * from './getComputedTraitAlphaOutput';
 export * from './getConnectionStateFromWarehouse200Response';
 export * from './getConnectionStateFromWarehouseV1Output';
+export * from './getCredential200Response';
+export * from './getCredentialV1Output';
 export * from './getDailyPerSourceAPICallsUsage200Response';
 export * from './getDailyPerSourceAPICallsUsageV1Output';
 export * from './getDailyPerSourceMTUUsage200Response';
@@ -400,6 +404,10 @@ export * from './listConnectedWarehousesFromSource200Response';
 export * from './listConnectedWarehousesFromSource200Response1';
 export * from './listConnectedWarehousesFromSourceAlphaOutput';
 export * from './listConnectedWarehousesFromSourceV1Output';
+export * from './listCredentialConsumers200Response';
+export * from './listCredentialConsumersV1Output';
+export * from './listCredentials200Response';
+export * from './listCredentialsV1Output';
 export * from './listDeliveryMetricsSummaryFromDestination200Response';
 export * from './listDeliveryMetricsSummaryFromDestinationBetaOutput';
 export * from './listDestinations200Response';
@@ -915,6 +923,8 @@ import { CreateWriteKeyForSourceAlphaOutput } from './createWriteKeyForSourceAlp
 import { CredentialV1 } from './credentialV1';
 import { DbtModelSyncTrigger } from './dbtModelSyncTrigger';
 import { DeleteActivationAlphaOutput } from './deleteActivationAlphaOutput';
+import { DeleteCredential200Response } from './deleteCredential200Response';
+import { DeleteCredentialV1Output } from './deleteCredentialV1Output';
 import { DeleteDestination200Response } from './deleteDestination200Response';
 import { DeleteDestinationV1Output } from './deleteDestinationV1Output';
 import { DeleteFilterById200Response } from './deleteFilterById200Response';
@@ -1020,6 +1030,8 @@ import { GetComputedTrait200Response } from './getComputedTrait200Response';
 import { GetComputedTraitAlphaOutput } from './getComputedTraitAlphaOutput';
 import { GetConnectionStateFromWarehouse200Response } from './getConnectionStateFromWarehouse200Response';
 import { GetConnectionStateFromWarehouseV1Output } from './getConnectionStateFromWarehouseV1Output';
+import { GetCredential200Response } from './getCredential200Response';
+import { GetCredentialV1Output } from './getCredentialV1Output';
 import { GetDailyPerSourceAPICallsUsage200Response } from './getDailyPerSourceAPICallsUsage200Response';
 import { GetDailyPerSourceAPICallsUsageV1Output } from './getDailyPerSourceAPICallsUsageV1Output';
 import { GetDailyPerSourceMTUUsage200Response } from './getDailyPerSourceMTUUsage200Response';
@@ -1137,6 +1149,10 @@ import { ListConnectedWarehousesFromSource200Response } from './listConnectedWar
 import { ListConnectedWarehousesFromSource200Response1 } from './listConnectedWarehousesFromSource200Response1';
 import { ListConnectedWarehousesFromSourceAlphaOutput } from './listConnectedWarehousesFromSourceAlphaOutput';
 import { ListConnectedWarehousesFromSourceV1Output } from './listConnectedWarehousesFromSourceV1Output';
+import { ListCredentialConsumers200Response } from './listCredentialConsumers200Response';
+import { ListCredentialConsumersV1Output } from './listCredentialConsumersV1Output';
+import { ListCredentials200Response } from './listCredentials200Response';
+import { ListCredentialsV1Output } from './listCredentialsV1Output';
 import { ListDeliveryMetricsSummaryFromDestination200Response } from './listDeliveryMetricsSummaryFromDestination200Response';
 import { ListDeliveryMetricsSummaryFromDestinationBetaOutput } from './listDeliveryMetricsSummaryFromDestinationBetaOutput';
 import { ListDestinations200Response } from './listDestinations200Response';
@@ -1521,6 +1537,7 @@ let enumsMap: { [index: string]: any } = {
         CreateWorkspaceRegulationV1Input.RegulationTypeEnum,
     'CreateWorkspaceRegulationV1Input.SubjectTypeEnum':
         CreateWorkspaceRegulationV1Input.SubjectTypeEnum,
+    'DeleteCredentialV1Output.StatusEnum': DeleteCredentialV1Output.StatusEnum,
     'DeleteDestinationV1Output.StatusEnum':
         DeleteDestinationV1Output.StatusEnum,
     'DeleteFunctionV1Output.StatusEnum': DeleteFunctionV1Output.StatusEnum,
@@ -1866,6 +1883,8 @@ let typeMap: { [index: string]: any } = {
     CredentialV1: CredentialV1,
     DbtModelSyncTrigger: DbtModelSyncTrigger,
     DeleteActivationAlphaOutput: DeleteActivationAlphaOutput,
+    DeleteCredential200Response: DeleteCredential200Response,
+    DeleteCredentialV1Output: DeleteCredentialV1Output,
     DeleteDestination200Response: DeleteDestination200Response,
     DeleteDestinationV1Output: DeleteDestinationV1Output,
     DeleteFilterById200Response: DeleteFilterById200Response,
@@ -1981,6 +2000,8 @@ let typeMap: { [index: string]: any } = {
         GetConnectionStateFromWarehouse200Response,
     GetConnectionStateFromWarehouseV1Output:
         GetConnectionStateFromWarehouseV1Output,
+    GetCredential200Response: GetCredential200Response,
+    GetCredentialV1Output: GetCredentialV1Output,
     GetDailyPerSourceAPICallsUsage200Response:
         GetDailyPerSourceAPICallsUsage200Response,
     GetDailyPerSourceAPICallsUsageV1Output:
@@ -2125,6 +2146,10 @@ let typeMap: { [index: string]: any } = {
         ListConnectedWarehousesFromSourceAlphaOutput,
     ListConnectedWarehousesFromSourceV1Output:
         ListConnectedWarehousesFromSourceV1Output,
+    ListCredentialConsumers200Response: ListCredentialConsumers200Response,
+    ListCredentialConsumersV1Output: ListCredentialConsumersV1Output,
+    ListCredentials200Response: ListCredentials200Response,
+    ListCredentialsV1Output: ListCredentialsV1Output,
     ListDeliveryMetricsSummaryFromDestination200Response:
         ListDeliveryMetricsSummaryFromDestination200Response,
     ListDeliveryMetricsSummaryFromDestinationBetaOutput:
