@@ -78,6 +78,8 @@ __exportStar(require("./catalogApi"), exports);
 var catalogApi_1 = require("./catalogApi");
 __exportStar(require("./computedTraitsApi"), exports);
 var computedTraitsApi_1 = require("./computedTraitsApi");
+__exportStar(require("./credentialsApi"), exports);
+var credentialsApi_1 = require("./credentialsApi");
 __exportStar(require("./customerInsightsApi"), exports);
 var customerInsightsApi_1 = require("./customerInsightsApi");
 __exportStar(require("./dbtApi"), exports);
@@ -150,6 +152,7 @@ exports.APIS = [
     auditTrailApi_1.AuditTrailApi,
     catalogApi_1.CatalogApi,
     computedTraitsApi_1.ComputedTraitsApi,
+    credentialsApi_1.CredentialsApi,
     customerInsightsApi_1.CustomerInsightsApi,
     dbtApi_1.DbtApi,
     deletionAndSuppressionApi_1.DeletionAndSuppressionApi,
@@ -206,7 +209,7 @@ function configureApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 73.0.6 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 73.0.7 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -243,7 +246,7 @@ function configureEuApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 73.0.6 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 73.0.7 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }

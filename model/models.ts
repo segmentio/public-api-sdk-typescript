@@ -94,6 +94,9 @@ export * from './createCloudSourceRegulationV1Output';
 export * from './createComputedTrait200Response';
 export * from './createComputedTraitAlphaInput';
 export * from './createComputedTraitAlphaOutput';
+export * from './createCredential201Response';
+export * from './createCredentialV1Input';
+export * from './createCredentialV1Output';
 export * from './createDbtModelSyncTrigger200Response';
 export * from './createDbtModelSyncTriggerInput';
 export * from './createDbtModelSyncTriggerOutput';
@@ -169,6 +172,7 @@ export * from './createWorkspaceRegulationV1Input';
 export * from './createWorkspaceRegulationV1Output';
 export * from './createWriteKeyForSource200Response';
 export * from './createWriteKeyForSourceAlphaOutput';
+export * from './credentialV1';
 export * from './dbtModelSyncTrigger';
 export * from './deleteActivationAlphaOutput';
 export * from './deleteDestination200Response';
@@ -641,6 +645,9 @@ export * from './updateAudienceScheduleForAudienceOutput';
 export * from './updateComputedTraitForSpace200Response';
 export * from './updateComputedTraitForSpaceAlphaInput';
 export * from './updateComputedTraitForSpaceAlphaOutput';
+export * from './updateCredential200Response';
+export * from './updateCredentialV1Input';
+export * from './updateCredentialV1Output';
 export * from './updateDestination200Response';
 export * from './updateDestinationForAudience200Response';
 export * from './updateDestinationForAudienceAlphaInput';
@@ -819,6 +826,9 @@ import { CreateCloudSourceRegulationV1Output } from './createCloudSourceRegulati
 import { CreateComputedTrait200Response } from './createComputedTrait200Response';
 import { CreateComputedTraitAlphaInput } from './createComputedTraitAlphaInput';
 import { CreateComputedTraitAlphaOutput } from './createComputedTraitAlphaOutput';
+import { CreateCredential201Response } from './createCredential201Response';
+import { CreateCredentialV1Input } from './createCredentialV1Input';
+import { CreateCredentialV1Output } from './createCredentialV1Output';
 import { CreateDbtModelSyncTrigger200Response } from './createDbtModelSyncTrigger200Response';
 import { CreateDbtModelSyncTriggerInput } from './createDbtModelSyncTriggerInput';
 import { CreateDbtModelSyncTriggerOutput } from './createDbtModelSyncTriggerOutput';
@@ -894,6 +904,7 @@ import { CreateWorkspaceRegulationV1Input } from './createWorkspaceRegulationV1I
 import { CreateWorkspaceRegulationV1Output } from './createWorkspaceRegulationV1Output';
 import { CreateWriteKeyForSource200Response } from './createWriteKeyForSource200Response';
 import { CreateWriteKeyForSourceAlphaOutput } from './createWriteKeyForSourceAlphaOutput';
+import { CredentialV1 } from './credentialV1';
 import { DbtModelSyncTrigger } from './dbtModelSyncTrigger';
 import { DeleteActivationAlphaOutput } from './deleteActivationAlphaOutput';
 import { DeleteDestination200Response } from './deleteDestination200Response';
@@ -1366,6 +1377,9 @@ import { UpdateAudienceScheduleForAudienceOutput } from './updateAudienceSchedul
 import { UpdateComputedTraitForSpace200Response } from './updateComputedTraitForSpace200Response';
 import { UpdateComputedTraitForSpaceAlphaInput } from './updateComputedTraitForSpaceAlphaInput';
 import { UpdateComputedTraitForSpaceAlphaOutput } from './updateComputedTraitForSpaceAlphaOutput';
+import { UpdateCredential200Response } from './updateCredential200Response';
+import { UpdateCredentialV1Input } from './updateCredentialV1Input';
+import { UpdateCredentialV1Output } from './updateCredentialV1Output';
 import { UpdateDestination200Response } from './updateDestination200Response';
 import { UpdateDestinationForAudience200Response } from './updateDestinationForAudience200Response';
 import { UpdateDestinationForAudienceAlphaInput } from './updateDestinationForAudienceAlphaInput';
@@ -1749,6 +1763,9 @@ let typeMap: { [index: string]: any } = {
     CreateComputedTrait200Response: CreateComputedTrait200Response,
     CreateComputedTraitAlphaInput: CreateComputedTraitAlphaInput,
     CreateComputedTraitAlphaOutput: CreateComputedTraitAlphaOutput,
+    CreateCredential201Response: CreateCredential201Response,
+    CreateCredentialV1Input: CreateCredentialV1Input,
+    CreateCredentialV1Output: CreateCredentialV1Output,
     CreateDbtModelSyncTrigger200Response: CreateDbtModelSyncTrigger200Response,
     CreateDbtModelSyncTriggerInput: CreateDbtModelSyncTriggerInput,
     CreateDbtModelSyncTriggerOutput: CreateDbtModelSyncTriggerOutput,
@@ -1833,6 +1850,7 @@ let typeMap: { [index: string]: any } = {
     CreateWorkspaceRegulationV1Output: CreateWorkspaceRegulationV1Output,
     CreateWriteKeyForSource200Response: CreateWriteKeyForSource200Response,
     CreateWriteKeyForSourceAlphaOutput: CreateWriteKeyForSourceAlphaOutput,
+    CredentialV1: CredentialV1,
     DbtModelSyncTrigger: DbtModelSyncTrigger,
     DeleteActivationAlphaOutput: DeleteActivationAlphaOutput,
     DeleteDestination200Response: DeleteDestination200Response,
@@ -2407,6 +2425,9 @@ let typeMap: { [index: string]: any } = {
         UpdateComputedTraitForSpaceAlphaInput,
     UpdateComputedTraitForSpaceAlphaOutput:
         UpdateComputedTraitForSpaceAlphaOutput,
+    UpdateCredential200Response: UpdateCredential200Response,
+    UpdateCredentialV1Input: UpdateCredentialV1Input,
+    UpdateCredentialV1Output: UpdateCredentialV1Output,
     UpdateDestination200Response: UpdateDestination200Response,
     UpdateDestinationForAudience200Response:
         UpdateDestinationForAudience200Response,

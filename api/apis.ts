@@ -10,6 +10,8 @@ export * from './catalogApi';
 import { CatalogApi } from './catalogApi';
 export * from './computedTraitsApi';
 import { ComputedTraitsApi } from './computedTraitsApi';
+export * from './credentialsApi';
+import { CredentialsApi } from './credentialsApi';
 export * from './customerInsightsApi';
 import { CustomerInsightsApi } from './customerInsightsApi';
 export * from './dbtApi';
@@ -84,6 +86,7 @@ export const APIS = [
     AuditTrailApi,
     CatalogApi,
     ComputedTraitsApi,
+    CredentialsApi,
     CustomerInsightsApi,
     DbtApi,
     DeletionAndSuppressionApi,
@@ -174,7 +177,7 @@ export function configureApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 73.0.6 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 73.0.7 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -221,7 +224,7 @@ export function configureEuApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 73.0.6 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 73.0.7 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
