@@ -116,8 +116,8 @@ __exportStar(require("./sourcesApi"), exports);
 var sourcesApi_1 = require("./sourcesApi");
 __exportStar(require("./spaceFiltersApi"), exports);
 var spaceFiltersApi_1 = require("./spaceFiltersApi");
-__exportStar(require("./spaceSchemaApi"), exports);
-var spaceSchemaApi_1 = require("./spaceSchemaApi");
+__exportStar(require("./spaceSchemaAPIApi"), exports);
+var spaceSchemaAPIApi_1 = require("./spaceSchemaAPIApi");
 __exportStar(require("./spacesApi"), exports);
 var spacesApi_1 = require("./spacesApi");
 __exportStar(require("./testingApi"), exports);
@@ -169,7 +169,7 @@ exports.APIS = [
     selectiveSyncApi_1.SelectiveSyncApi,
     sourcesApi_1.SourcesApi,
     spaceFiltersApi_1.SpaceFiltersApi,
-    spaceSchemaApi_1.SpaceSchemaApi,
+    spaceSchemaAPIApi_1.SpaceSchemaAPIApi,
     spacesApi_1.SpacesApi,
     testingApi_1.TestingApi,
     trackingPlansApi_1.TrackingPlansApi,
@@ -206,7 +206,7 @@ function configureApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 73.0.5 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 73.0.6 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -243,7 +243,7 @@ function configureEuApis(token, headers) {
     for (var _i = 0, _a = Object.keys(apis); _i < _a.length; _i++) {
         var k = _a[_i];
         var key = k;
-        headers['User-Agent'] = 'Public API SDK 73.0.5 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 73.0.6 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
