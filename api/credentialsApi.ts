@@ -115,7 +115,7 @@ export class CredentialsApi {
     }
 
     /**
-     * Creates a new Credential.
+     * Creates a new Credential.    This endpoint requires the user to have at least the following permission(s):   * Workspace Owner  * Warehouse Admin  * Source Admin  * Entities Admin  * Unify and Engage Admin
      * @summary Create Credential
      * @param CreateCredentialV1Input
      */
@@ -234,7 +234,7 @@ export class CredentialsApi {
         });
     }
     /**
-     * Deletes an existing Credential. Fails if the Credential is still in use by a Warehouse or Source.
+     * Deletes an existing Credential. Fails if the Credential is still in use by a Warehouse or Source.    This endpoint requires the user to have at least the following permission(s):   * Workspace Owner
      * @summary Delete Credential
      * @param credentialId
      */
@@ -351,7 +351,7 @@ export class CredentialsApi {
         });
     }
     /**
-     * Returns a Credential by its id.
+     * Returns a Credential by its id.    This endpoint requires the user to have at least the following permission(s):   * Workspace Owner  * Warehouse Admin  * Source Admin  * Entities Admin  * Unify and Engage Admin
      * @summary Get Credential
      * @param credentialId
      */
@@ -468,7 +468,7 @@ export class CredentialsApi {
         });
     }
     /**
-     * Returns the Warehouses and Sources that use a Credential.
+     * Returns the Warehouses and Sources that use a Credential.    This endpoint requires the user to have at least the following permission(s):   * Workspace Owner  * Warehouse Admin  * Source Admin  * Entities Admin  * Unify and Engage Admin
      * @summary List Credential Consumers
      * @param credentialId
      * @param warehousesPagination Defines the pagination parameters for the list of Warehouses.  This parameter exists in v1.
@@ -605,7 +605,7 @@ export class CredentialsApi {
         });
     }
     /**
-     * Returns a list of Credentials.
+     * Returns a list of Credentials.    This endpoint requires the user to have at least the following permission(s):   * Workspace Owner  * Warehouse Admin  * Source Admin  * Entities Admin  * Unify and Engage Admin
      * @summary List Credentials
      * @param pagination Defines the pagination parameters.  This parameter exists in v1.
      */
@@ -717,7 +717,7 @@ export class CredentialsApi {
         });
     }
     /**
-     * Updates an existing Credential. All Warehouses using this Credential are affected immediately.
+     * Updates an existing Credential. All Warehouses using this Credential are affected immediately.    This endpoint requires the user to have at least the following permission(s):   * Workspace Owner
      * @summary Update Credential
      * @param credentialId
      * @param UpdateCredentialV1Input
