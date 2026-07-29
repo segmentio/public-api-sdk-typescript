@@ -18,10 +18,6 @@ import { CredentialV1 } from './credentialV1';
  */
 export class GetCredentialV1Output {
     'credential': CredentialV1;
-    /**
-     * The list of setting names (in this Credential\'s public `settings` shape) that cannot be changed after creation, if any.
-     */
-    'disabledFields'?: Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,11 +30,6 @@ export class GetCredentialV1Output {
             name: 'credential',
             baseName: 'credential',
             type: 'CredentialV1',
-        },
-        {
-            name: 'disabledFields',
-            baseName: 'disabledFields',
-            type: 'Array<string>',
         },
     ];
 

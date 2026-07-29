@@ -14,11 +14,6 @@ var GetCredentialV1Output = (function () {
             baseName: 'credential',
             type: 'CredentialV1',
         },
-        {
-            name: 'disabledFields',
-            baseName: 'disabledFields',
-            type: 'Array<string>',
-        },
     ];
     return GetCredentialV1Output;
 }());
