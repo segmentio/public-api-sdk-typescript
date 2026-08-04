@@ -8,7 +8,7 @@ on:
 jobs:
   publish:
     if: startsWith(github.event.head_commit.message, 'Automated SDK update')
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest-large
     timeout-minutes: 10
     environment: production
     permissions:
