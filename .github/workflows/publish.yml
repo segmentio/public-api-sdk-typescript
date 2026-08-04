@@ -22,8 +22,7 @@ jobs:
 
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
-          node-version: "20.17"
-          cache: npm
+          node-version: "24"
 
       - name: Install
         run: npm ci || npm install
@@ -32,4 +31,4 @@ jobs:
         run: npm run build
 
       - name: Publish
-        run: npm publish --provenance --access public
+        run: npm publish --provenance --access public --tag latest
