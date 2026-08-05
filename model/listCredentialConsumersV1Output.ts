@@ -16,7 +16,7 @@ import { SourceV1 } from './sourceV1';
 import { WarehouseV1 } from './warehouseV1';
 
 /**
- * Returns the Warehouses and Sources that consume a Credential, each paginated independently.
+ * Returns the Warehouses and Sources that consume a Credential. The two lists are paginated independently, so a caller can page through one without affecting the other.
  */
 export class ListCredentialConsumersV1Output {
     /**
