@@ -16,6 +16,9 @@ import { RequestFile } from './models';
  * The Personalization Input Entity.
  */
 export class PersonalizationInputEntity {
+    /**
+     * The entity properties to include in the event sent to the Destination.
+     */
     'properties': Array<string>;
     /**
      * The relationship slug for the entity.

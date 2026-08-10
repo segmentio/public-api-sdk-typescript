@@ -13,10 +13,16 @@
 import { RequestFile } from './models';
 
 /**
- * Profile Object.
+ * The profile traits included in the event sent to the Destination. Applies to both Classic and Linked Audiences. For a Classic audience this is the only form of personalization available, whereas a Linked Audience can also personalize on entities.
  */
 export class Profile {
+    /**
+     * The profile traits to include in the event sent to the Destination.
+     */
     'properties': Array<string>;
+    /**
+     * Maps a profile trait to the name it should be sent under. Each key is a trait, and each value is the name used in the event.
+     */
     'mapping'?: { [key: string]: string };
 
     static discriminator: string | undefined = undefined;
