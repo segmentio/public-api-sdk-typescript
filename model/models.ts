@@ -523,11 +523,13 @@ export * from './permissionResourceV1';
 export * from './permissionV1';
 export * from './personalizationInput';
 export * from './personalizationInputEntity';
+export * from './personalizationOutput';
 export * from './previewDestinationFilter200Response';
 export * from './previewDestinationFilterV1';
 export * from './previewDestinationFilterV1Input';
 export * from './previewDestinationFilterV1Output';
 export * from './profile';
+export * from './profile1';
 export * from './profilesWarehouseAlpha';
 export * from './propertyRenameBeta';
 export * from './propertyRenameV1';
@@ -1268,11 +1270,13 @@ import { PermissionResourceV1 } from './permissionResourceV1';
 import { PermissionV1 } from './permissionV1';
 import { PersonalizationInput } from './personalizationInput';
 import { PersonalizationInputEntity } from './personalizationInputEntity';
+import { PersonalizationOutput } from './personalizationOutput';
 import { PreviewDestinationFilter200Response } from './previewDestinationFilter200Response';
 import { PreviewDestinationFilterV1 } from './previewDestinationFilterV1';
 import { PreviewDestinationFilterV1Input } from './previewDestinationFilterV1Input';
 import { PreviewDestinationFilterV1Output } from './previewDestinationFilterV1Output';
 import { Profile } from './profile';
+import { Profile1 } from './profile1';
 import { ProfilesWarehouseAlpha } from './profilesWarehouseAlpha';
 import { PropertyRenameBeta } from './propertyRenameBeta';
 import { PropertyRenameV1 } from './propertyRenameV1';
@@ -2292,11 +2296,13 @@ let typeMap: { [index: string]: any } = {
     PermissionV1: PermissionV1,
     PersonalizationInput: PersonalizationInput,
     PersonalizationInputEntity: PersonalizationInputEntity,
+    PersonalizationOutput: PersonalizationOutput,
     PreviewDestinationFilter200Response: PreviewDestinationFilter200Response,
     PreviewDestinationFilterV1: PreviewDestinationFilterV1,
     PreviewDestinationFilterV1Input: PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: PreviewDestinationFilterV1Output,
     Profile: Profile,
+    Profile1: Profile1,
     ProfilesWarehouseAlpha: ProfilesWarehouseAlpha,
     PropertyRenameBeta: PropertyRenameBeta,
     PropertyRenameV1: PropertyRenameV1,

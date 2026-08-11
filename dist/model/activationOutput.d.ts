@@ -1,5 +1,5 @@
 import { DestinationSubscriptionConfiguration } from './destinationSubscriptionConfiguration';
-import { PersonalizationInput } from './personalizationInput';
+import { PersonalizationOutput } from './personalizationOutput';
 export declare class ActivationOutput {
     'id': string;
     'enabled': boolean;
@@ -10,7 +10,7 @@ export declare class ActivationOutput {
     'activationType': string;
     'activationName': string;
     'displayName'?: string | null;
-    'personalization': PersonalizationInput;
+    'personalization': PersonalizationOutput;
     'destinationMapping'?: DestinationSubscriptionConfiguration;
     'performResync'?: boolean;
     static discriminator: string | undefined;

@@ -57,7 +57,7 @@ var ActivationOutput = (function () {
         {
             name: 'personalization',
             baseName: 'personalization',
-            type: 'PersonalizationInput',
+            type: 'PersonalizationOutput',
         },
         {
             name: 'destinationMapping',
