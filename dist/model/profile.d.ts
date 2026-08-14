@@ -1,5 +1,5 @@
 export declare class Profile {
-    'properties': Array<string>;
+    'properties'?: Array<string>;
     'mapping'?: {
         [key: string]: string;
     };

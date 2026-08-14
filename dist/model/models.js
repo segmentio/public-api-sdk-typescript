@@ -533,11 +533,13 @@ __exportStar(require("./permissionResourceV1"), exports);
 __exportStar(require("./permissionV1"), exports);
 __exportStar(require("./personalizationInput"), exports);
 __exportStar(require("./personalizationInputEntity"), exports);
+__exportStar(require("./personalizationOutput"), exports);
 __exportStar(require("./previewDestinationFilter200Response"), exports);
 __exportStar(require("./previewDestinationFilterV1"), exports);
 __exportStar(require("./previewDestinationFilterV1Input"), exports);
 __exportStar(require("./previewDestinationFilterV1Output"), exports);
 __exportStar(require("./profile"), exports);
+__exportStar(require("./profile1"), exports);
 __exportStar(require("./profilesWarehouseAlpha"), exports);
 __exportStar(require("./propertyRenameBeta"), exports);
 __exportStar(require("./propertyRenameV1"), exports);
@@ -1260,11 +1262,13 @@ var permissionResourceV1_1 = require("./permissionResourceV1");
 var permissionV1_1 = require("./permissionV1");
 var personalizationInput_1 = require("./personalizationInput");
 var personalizationInputEntity_1 = require("./personalizationInputEntity");
+var personalizationOutput_1 = require("./personalizationOutput");
 var previewDestinationFilter200Response_1 = require("./previewDestinationFilter200Response");
 var previewDestinationFilterV1_1 = require("./previewDestinationFilterV1");
 var previewDestinationFilterV1Input_1 = require("./previewDestinationFilterV1Input");
 var previewDestinationFilterV1Output_1 = require("./previewDestinationFilterV1Output");
 var profile_1 = require("./profile");
+var profile1_1 = require("./profile1");
 var profilesWarehouseAlpha_1 = require("./profilesWarehouseAlpha");
 var propertyRenameBeta_1 = require("./propertyRenameBeta");
 var propertyRenameV1_1 = require("./propertyRenameV1");
@@ -2114,11 +2118,13 @@ var typeMap = {
     PermissionV1: permissionV1_1.PermissionV1,
     PersonalizationInput: personalizationInput_1.PersonalizationInput,
     PersonalizationInputEntity: personalizationInputEntity_1.PersonalizationInputEntity,
+    PersonalizationOutput: personalizationOutput_1.PersonalizationOutput,
     PreviewDestinationFilter200Response: previewDestinationFilter200Response_1.PreviewDestinationFilter200Response,
     PreviewDestinationFilterV1: previewDestinationFilterV1_1.PreviewDestinationFilterV1,
     PreviewDestinationFilterV1Input: previewDestinationFilterV1Input_1.PreviewDestinationFilterV1Input,
     PreviewDestinationFilterV1Output: previewDestinationFilterV1Output_1.PreviewDestinationFilterV1Output,
     Profile: profile_1.Profile,
+    Profile1: profile1_1.Profile1,
     ProfilesWarehouseAlpha: profilesWarehouseAlpha_1.ProfilesWarehouseAlpha,
     PropertyRenameBeta: propertyRenameBeta_1.PropertyRenameBeta,
     PropertyRenameV1: propertyRenameV1_1.PropertyRenameV1,

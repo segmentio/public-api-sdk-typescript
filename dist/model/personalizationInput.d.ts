@@ -1,7 +1,7 @@
 import { PersonalizationInputEntity } from './personalizationInputEntity';
 import { Profile } from './profile';
 export declare class PersonalizationInput {
-    'profile': Profile;
+    'profile'?: Profile;
     'entities'?: Array<PersonalizationInputEntity>;
     'syncEntityPropertyChanges'?: boolean;
     static discriminator: string | undefined;

@@ -6,7 +6,7 @@ export declare class AddActivationToAudienceAlphaInput {
     'activationType': string;
     'activationName': string;
     'displayName'?: string;
-    'personalization': PersonalizationInput;
+    'personalization'?: PersonalizationInput;
     'destinationMapping'?: DestinationSubscriptionConfiguration;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
