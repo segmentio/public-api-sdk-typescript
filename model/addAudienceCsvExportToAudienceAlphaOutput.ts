@@ -11,10 +11,13 @@
  */
 
 import { RequestFile } from './models';
-import { CreateAudienceCsvExportForAudienceAlphaOutput } from './createAudienceCsvExportForAudienceAlphaOutput';
+import { AudienceCsvExport } from './audienceCsvExport';
 
-export class CreateAudienceCsvExportForAudience200Response {
-    'data'?: CreateAudienceCsvExportForAudienceAlphaOutput;
+/**
+ * Output of creating a CSV export of an audience.
+ */
+export class AddAudienceCsvExportToAudienceAlphaOutput {
+    'audienceCsvExport': AudienceCsvExport;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,13 +27,13 @@ export class CreateAudienceCsvExportForAudience200Response {
         type: string;
     }> = [
         {
-            name: 'data',
-            baseName: 'data',
-            type: 'CreateAudienceCsvExportForAudienceAlphaOutput',
+            name: 'audienceCsvExport',
+            baseName: 'audienceCsvExport',
+            type: 'AudienceCsvExport',
         },
     ];
 
     static getAttributeTypeMap() {
-        return CreateAudienceCsvExportForAudience200Response.attributeTypeMap;
+        return AddAudienceCsvExportToAudienceAlphaOutput.attributeTypeMap;
     }
 }

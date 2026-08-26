@@ -21,6 +21,8 @@ __exportStar(require("./activationOutput"), exports);
 __exportStar(require("./addActivationToAudience200Response"), exports);
 __exportStar(require("./addActivationToAudienceAlphaInput"), exports);
 __exportStar(require("./addActivationToAudienceAlphaOutput"), exports);
+__exportStar(require("./addAudienceCsvExportToAudience200Response"), exports);
+__exportStar(require("./addAudienceCsvExportToAudienceAlphaOutput"), exports);
 __exportStar(require("./addAudienceScheduleToAudience200Response"), exports);
 __exportStar(require("./addAudienceScheduleToAudience200Response1"), exports);
 __exportStar(require("./addAudienceScheduleToAudienceAlphaInput"), exports);
@@ -92,8 +94,6 @@ __exportStar(require("./createAudienceAlphaInput"), exports);
 __exportStar(require("./createAudienceAlphaOutput"), exports);
 __exportStar(require("./createAudienceBetaInput"), exports);
 __exportStar(require("./createAudienceBetaOutput"), exports);
-__exportStar(require("./createAudienceCsvExportForAudience200Response"), exports);
-__exportStar(require("./createAudienceCsvExportForAudienceAlphaOutput"), exports);
 __exportStar(require("./createAudienceInput"), exports);
 __exportStar(require("./createAudienceOutput"), exports);
 __exportStar(require("./createAudiencePreview200Response"), exports);
@@ -774,6 +774,8 @@ var activationOutput_1 = require("./activationOutput");
 var addActivationToAudience200Response_1 = require("./addActivationToAudience200Response");
 var addActivationToAudienceAlphaInput_1 = require("./addActivationToAudienceAlphaInput");
 var addActivationToAudienceAlphaOutput_1 = require("./addActivationToAudienceAlphaOutput");
+var addAudienceCsvExportToAudience200Response_1 = require("./addAudienceCsvExportToAudience200Response");
+var addAudienceCsvExportToAudienceAlphaOutput_1 = require("./addAudienceCsvExportToAudienceAlphaOutput");
 var addAudienceScheduleToAudience200Response_1 = require("./addAudienceScheduleToAudience200Response");
 var addAudienceScheduleToAudience200Response1_1 = require("./addAudienceScheduleToAudience200Response1");
 var addAudienceScheduleToAudienceAlphaInput_1 = require("./addAudienceScheduleToAudienceAlphaInput");
@@ -845,8 +847,6 @@ var createAudienceAlphaInput_1 = require("./createAudienceAlphaInput");
 var createAudienceAlphaOutput_1 = require("./createAudienceAlphaOutput");
 var createAudienceBetaInput_1 = require("./createAudienceBetaInput");
 var createAudienceBetaOutput_1 = require("./createAudienceBetaOutput");
-var createAudienceCsvExportForAudience200Response_1 = require("./createAudienceCsvExportForAudience200Response");
-var createAudienceCsvExportForAudienceAlphaOutput_1 = require("./createAudienceCsvExportForAudienceAlphaOutput");
 var createAudienceInput_1 = require("./createAudienceInput");
 var createAudienceOutput_1 = require("./createAudienceOutput");
 var createAudiencePreview200Response_1 = require("./createAudiencePreview200Response");
@@ -1657,6 +1657,8 @@ var typeMap = {
     AddActivationToAudience200Response: addActivationToAudience200Response_1.AddActivationToAudience200Response,
     AddActivationToAudienceAlphaInput: addActivationToAudienceAlphaInput_1.AddActivationToAudienceAlphaInput,
     AddActivationToAudienceAlphaOutput: addActivationToAudienceAlphaOutput_1.AddActivationToAudienceAlphaOutput,
+    AddAudienceCsvExportToAudience200Response: addAudienceCsvExportToAudience200Response_1.AddAudienceCsvExportToAudience200Response,
+    AddAudienceCsvExportToAudienceAlphaOutput: addAudienceCsvExportToAudienceAlphaOutput_1.AddAudienceCsvExportToAudienceAlphaOutput,
     AddAudienceScheduleToAudience200Response: addAudienceScheduleToAudience200Response_1.AddAudienceScheduleToAudience200Response,
     AddAudienceScheduleToAudience200Response1: addAudienceScheduleToAudience200Response1_1.AddAudienceScheduleToAudience200Response1,
     AddAudienceScheduleToAudienceAlphaInput: addAudienceScheduleToAudienceAlphaInput_1.AddAudienceScheduleToAudienceAlphaInput,
@@ -1728,8 +1730,6 @@ var typeMap = {
     CreateAudienceAlphaOutput: createAudienceAlphaOutput_1.CreateAudienceAlphaOutput,
     CreateAudienceBetaInput: createAudienceBetaInput_1.CreateAudienceBetaInput,
     CreateAudienceBetaOutput: createAudienceBetaOutput_1.CreateAudienceBetaOutput,
-    CreateAudienceCsvExportForAudience200Response: createAudienceCsvExportForAudience200Response_1.CreateAudienceCsvExportForAudience200Response,
-    CreateAudienceCsvExportForAudienceAlphaOutput: createAudienceCsvExportForAudienceAlphaOutput_1.CreateAudienceCsvExportForAudienceAlphaOutput,
     CreateAudienceInput: createAudienceInput_1.CreateAudienceInput,
     CreateAudienceOutput: createAudienceOutput_1.CreateAudienceOutput,
     CreateAudiencePreview200Response: createAudiencePreview200Response_1.CreateAudiencePreview200Response,

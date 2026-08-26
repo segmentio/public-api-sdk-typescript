@@ -1,9 +1,9 @@
 /// <reference types="node" />
 import http from 'http';
+import { AddAudienceCsvExportToAudience200Response } from '../model/addAudienceCsvExportToAudience200Response';
 import { AddAudienceScheduleToAudience200Response } from '../model/addAudienceScheduleToAudience200Response';
 import { AddAudienceScheduleToAudienceInput } from '../model/addAudienceScheduleToAudienceInput';
 import { CreateAudience200Response } from '../model/createAudience200Response';
-import { CreateAudienceCsvExportForAudience200Response } from '../model/createAudienceCsvExportForAudience200Response';
 import { CreateAudienceInput } from '../model/createAudienceInput';
 import { CreateAudiencePreview200Response } from '../model/createAudiencePreview200Response';
 import { CreateAudiencePreviewInput } from '../model/createAudiencePreviewInput';
@@ -48,6 +48,14 @@ export declare class AudiencesApi {
     setApiKey(key: AudiencesApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
+    addAudienceCsvExportToAudience(spaceId: string, id: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: AddAudienceCsvExportToAudience200Response;
+    }>;
     addAudienceScheduleToAudience(spaceId: string, id: string, AddAudienceScheduleToAudienceInput: AddAudienceScheduleToAudienceInput, options?: {
         headers: {
             [name: string]: string;
@@ -63,14 +71,6 @@ export declare class AudiencesApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: CreateAudience200Response;
-    }>;
-    createAudienceCsvExportForAudience(spaceId: string, id: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: CreateAudienceCsvExportForAudience200Response;
     }>;
     createAudiencePreview(spaceId: string, CreateAudiencePreviewInput: CreateAudiencePreviewInput, options?: {
         headers: {

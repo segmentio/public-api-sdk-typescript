@@ -1,5 +1,5 @@
 import { AudienceCsvExport } from './audienceCsvExport';
-export declare class CreateAudienceCsvExportForAudienceAlphaOutput {
+export declare class AddAudienceCsvExportToAudienceAlphaOutput {
     'audienceCsvExport': AudienceCsvExport;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{

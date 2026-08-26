@@ -6,6 +6,8 @@ export * from './activationOutput';
 export * from './addActivationToAudience200Response';
 export * from './addActivationToAudienceAlphaInput';
 export * from './addActivationToAudienceAlphaOutput';
+export * from './addAudienceCsvExportToAudience200Response';
+export * from './addAudienceCsvExportToAudienceAlphaOutput';
 export * from './addAudienceScheduleToAudience200Response';
 export * from './addAudienceScheduleToAudience200Response1';
 export * from './addAudienceScheduleToAudienceAlphaInput';
@@ -77,8 +79,6 @@ export * from './createAudienceAlphaInput';
 export * from './createAudienceAlphaOutput';
 export * from './createAudienceBetaInput';
 export * from './createAudienceBetaOutput';
-export * from './createAudienceCsvExportForAudience200Response';
-export * from './createAudienceCsvExportForAudienceAlphaOutput';
 export * from './createAudienceInput';
 export * from './createAudienceOutput';
 export * from './createAudiencePreview200Response';
@@ -772,6 +772,8 @@ import { ActivationOutput } from './activationOutput';
 import { AddActivationToAudience200Response } from './addActivationToAudience200Response';
 import { AddActivationToAudienceAlphaInput } from './addActivationToAudienceAlphaInput';
 import { AddActivationToAudienceAlphaOutput } from './addActivationToAudienceAlphaOutput';
+import { AddAudienceCsvExportToAudience200Response } from './addAudienceCsvExportToAudience200Response';
+import { AddAudienceCsvExportToAudienceAlphaOutput } from './addAudienceCsvExportToAudienceAlphaOutput';
 import { AddAudienceScheduleToAudience200Response } from './addAudienceScheduleToAudience200Response';
 import { AddAudienceScheduleToAudience200Response1 } from './addAudienceScheduleToAudience200Response1';
 import { AddAudienceScheduleToAudienceAlphaInput } from './addAudienceScheduleToAudienceAlphaInput';
@@ -843,8 +845,6 @@ import { CreateAudienceAlphaInput } from './createAudienceAlphaInput';
 import { CreateAudienceAlphaOutput } from './createAudienceAlphaOutput';
 import { CreateAudienceBetaInput } from './createAudienceBetaInput';
 import { CreateAudienceBetaOutput } from './createAudienceBetaOutput';
-import { CreateAudienceCsvExportForAudience200Response } from './createAudienceCsvExportForAudience200Response';
-import { CreateAudienceCsvExportForAudienceAlphaOutput } from './createAudienceCsvExportForAudienceAlphaOutput';
 import { CreateAudienceInput } from './createAudienceInput';
 import { CreateAudienceOutput } from './createAudienceOutput';
 import { CreateAudiencePreview200Response } from './createAudiencePreview200Response';
@@ -1732,6 +1732,10 @@ let typeMap: { [index: string]: any } = {
     AddActivationToAudience200Response: AddActivationToAudience200Response,
     AddActivationToAudienceAlphaInput: AddActivationToAudienceAlphaInput,
     AddActivationToAudienceAlphaOutput: AddActivationToAudienceAlphaOutput,
+    AddAudienceCsvExportToAudience200Response:
+        AddAudienceCsvExportToAudience200Response,
+    AddAudienceCsvExportToAudienceAlphaOutput:
+        AddAudienceCsvExportToAudienceAlphaOutput,
     AddAudienceScheduleToAudience200Response:
         AddAudienceScheduleToAudience200Response,
     AddAudienceScheduleToAudience200Response1:
@@ -1816,10 +1820,6 @@ let typeMap: { [index: string]: any } = {
     CreateAudienceAlphaOutput: CreateAudienceAlphaOutput,
     CreateAudienceBetaInput: CreateAudienceBetaInput,
     CreateAudienceBetaOutput: CreateAudienceBetaOutput,
-    CreateAudienceCsvExportForAudience200Response:
-        CreateAudienceCsvExportForAudience200Response,
-    CreateAudienceCsvExportForAudienceAlphaOutput:
-        CreateAudienceCsvExportForAudienceAlphaOutput,
     CreateAudienceInput: CreateAudienceInput,
     CreateAudienceOutput: CreateAudienceOutput,
     CreateAudiencePreview200Response: CreateAudiencePreview200Response,

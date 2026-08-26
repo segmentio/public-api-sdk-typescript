@@ -1,6 +1,6 @@
-import { CreateAudienceCsvExportForAudienceAlphaOutput } from './createAudienceCsvExportForAudienceAlphaOutput';
-export declare class CreateAudienceCsvExportForAudience200Response {
-    'data'?: CreateAudienceCsvExportForAudienceAlphaOutput;
+import { AddAudienceCsvExportToAudienceAlphaOutput } from './addAudienceCsvExportToAudienceAlphaOutput';
+export declare class AddAudienceCsvExportToAudience200Response {
+    'data'?: AddAudienceCsvExportToAudienceAlphaOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
