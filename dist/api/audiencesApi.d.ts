@@ -3,11 +3,13 @@ import http from 'http';
 import { AddAudienceScheduleToAudience200Response } from '../model/addAudienceScheduleToAudience200Response';
 import { AddAudienceScheduleToAudienceInput } from '../model/addAudienceScheduleToAudienceInput';
 import { CreateAudience200Response } from '../model/createAudience200Response';
+import { CreateAudienceCsvExportForAudience200Response } from '../model/createAudienceCsvExportForAudience200Response';
 import { CreateAudienceInput } from '../model/createAudienceInput';
 import { CreateAudiencePreview200Response } from '../model/createAudiencePreview200Response';
 import { CreateAudiencePreviewInput } from '../model/createAudiencePreviewInput';
 import { ForceExecuteAudienceRun200Response } from '../model/forceExecuteAudienceRun200Response';
 import { GetAudience200Response } from '../model/getAudience200Response';
+import { GetAudienceCsvExportFromSpaceAndAudience200Response } from '../model/getAudienceCsvExportFromSpaceAndAudience200Response';
 import { GetAudiencePreview200Response } from '../model/getAudiencePreview200Response';
 import { GetAudienceScheduleFromSpaceAndAudience200Response } from '../model/getAudienceScheduleFromSpaceAndAudience200Response';
 import { ListAudienceConsumersFromSpaceAndAudience200Response } from '../model/listAudienceConsumersFromSpaceAndAudience200Response';
@@ -62,6 +64,14 @@ export declare class AudiencesApi {
         response: http.IncomingMessage;
         body: CreateAudience200Response;
     }>;
+    createAudienceCsvExportForAudience(spaceId: string, id: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: CreateAudienceCsvExportForAudience200Response;
+    }>;
     createAudiencePreview(spaceId: string, CreateAudiencePreviewInput: CreateAudiencePreviewInput, options?: {
         headers: {
             [name: string]: string;
@@ -85,6 +95,14 @@ export declare class AudiencesApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: GetAudience200Response;
+    }>;
+    getAudienceCsvExportFromSpaceAndAudience(spaceId: string, id: string, exportId: string, options?: {
+        headers: {
+            [name: string]: string;
+        };
+    }): Promise<{
+        response: http.IncomingMessage;
+        body: GetAudienceCsvExportFromSpaceAndAudience200Response;
     }>;
     getAudiencePreview(spaceId: string, id: string, options?: {
         headers: {

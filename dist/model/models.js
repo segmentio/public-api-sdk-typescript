@@ -54,6 +54,7 @@ __exportStar(require("./advancedWarehouseSyncScheduleV1Input"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Output"), exports);
 __exportStar(require("./allowedLabelBeta"), exports);
 __exportStar(require("./audienceComputeCadence"), exports);
+__exportStar(require("./audienceCsvExport"), exports);
 __exportStar(require("./audienceDefinition"), exports);
 __exportStar(require("./audienceDefinitionWithoutTargetEntity"), exports);
 __exportStar(require("./audienceOptions"), exports);
@@ -91,6 +92,8 @@ __exportStar(require("./createAudienceAlphaInput"), exports);
 __exportStar(require("./createAudienceAlphaOutput"), exports);
 __exportStar(require("./createAudienceBetaInput"), exports);
 __exportStar(require("./createAudienceBetaOutput"), exports);
+__exportStar(require("./createAudienceCsvExportForAudience200Response"), exports);
+__exportStar(require("./createAudienceCsvExportForAudienceAlphaOutput"), exports);
 __exportStar(require("./createAudienceInput"), exports);
 __exportStar(require("./createAudienceOutput"), exports);
 __exportStar(require("./createAudiencePreview200Response"), exports);
@@ -291,6 +294,8 @@ __exportStar(require("./getAudience200Response1"), exports);
 __exportStar(require("./getAudience200Response2"), exports);
 __exportStar(require("./getAudienceAlphaOutput"), exports);
 __exportStar(require("./getAudienceBetaOutput"), exports);
+__exportStar(require("./getAudienceCsvExportFromSpaceAndAudience200Response"), exports);
+__exportStar(require("./getAudienceCsvExportFromSpaceAndAudienceAlphaOutput"), exports);
 __exportStar(require("./getAudienceOutput"), exports);
 __exportStar(require("./getAudiencePreview200Response"), exports);
 __exportStar(require("./getAudiencePreview200Response1"), exports);
@@ -802,6 +807,7 @@ var advancedWarehouseSyncScheduleV1Input_1 = require("./advancedWarehouseSyncSch
 var advancedWarehouseSyncScheduleV1Output_1 = require("./advancedWarehouseSyncScheduleV1Output");
 var allowedLabelBeta_1 = require("./allowedLabelBeta");
 var audienceComputeCadence_1 = require("./audienceComputeCadence");
+var audienceCsvExport_1 = require("./audienceCsvExport");
 var audienceDefinition_1 = require("./audienceDefinition");
 var audienceDefinitionWithoutTargetEntity_1 = require("./audienceDefinitionWithoutTargetEntity");
 var audienceOptions_1 = require("./audienceOptions");
@@ -839,6 +845,8 @@ var createAudienceAlphaInput_1 = require("./createAudienceAlphaInput");
 var createAudienceAlphaOutput_1 = require("./createAudienceAlphaOutput");
 var createAudienceBetaInput_1 = require("./createAudienceBetaInput");
 var createAudienceBetaOutput_1 = require("./createAudienceBetaOutput");
+var createAudienceCsvExportForAudience200Response_1 = require("./createAudienceCsvExportForAudience200Response");
+var createAudienceCsvExportForAudienceAlphaOutput_1 = require("./createAudienceCsvExportForAudienceAlphaOutput");
 var createAudienceInput_1 = require("./createAudienceInput");
 var createAudienceOutput_1 = require("./createAudienceOutput");
 var createAudiencePreview200Response_1 = require("./createAudiencePreview200Response");
@@ -1039,6 +1047,8 @@ var getAudience200Response1_1 = require("./getAudience200Response1");
 var getAudience200Response2_1 = require("./getAudience200Response2");
 var getAudienceAlphaOutput_1 = require("./getAudienceAlphaOutput");
 var getAudienceBetaOutput_1 = require("./getAudienceBetaOutput");
+var getAudienceCsvExportFromSpaceAndAudience200Response_1 = require("./getAudienceCsvExportFromSpaceAndAudience200Response");
+var getAudienceCsvExportFromSpaceAndAudienceAlphaOutput_1 = require("./getAudienceCsvExportFromSpaceAndAudienceAlphaOutput");
 var getAudienceOutput_1 = require("./getAudienceOutput");
 var getAudiencePreview200Response_1 = require("./getAudiencePreview200Response");
 var getAudiencePreview200Response1_1 = require("./getAudiencePreview200Response1");
@@ -1680,6 +1690,7 @@ var typeMap = {
     AdvancedWarehouseSyncScheduleV1Output: advancedWarehouseSyncScheduleV1Output_1.AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: allowedLabelBeta_1.AllowedLabelBeta,
     AudienceComputeCadence: audienceComputeCadence_1.AudienceComputeCadence,
+    AudienceCsvExport: audienceCsvExport_1.AudienceCsvExport,
     AudienceDefinition: audienceDefinition_1.AudienceDefinition,
     AudienceDefinitionWithoutTargetEntity: audienceDefinitionWithoutTargetEntity_1.AudienceDefinitionWithoutTargetEntity,
     AudienceOptions: audienceOptions_1.AudienceOptions,
@@ -1717,6 +1728,8 @@ var typeMap = {
     CreateAudienceAlphaOutput: createAudienceAlphaOutput_1.CreateAudienceAlphaOutput,
     CreateAudienceBetaInput: createAudienceBetaInput_1.CreateAudienceBetaInput,
     CreateAudienceBetaOutput: createAudienceBetaOutput_1.CreateAudienceBetaOutput,
+    CreateAudienceCsvExportForAudience200Response: createAudienceCsvExportForAudience200Response_1.CreateAudienceCsvExportForAudience200Response,
+    CreateAudienceCsvExportForAudienceAlphaOutput: createAudienceCsvExportForAudienceAlphaOutput_1.CreateAudienceCsvExportForAudienceAlphaOutput,
     CreateAudienceInput: createAudienceInput_1.CreateAudienceInput,
     CreateAudienceOutput: createAudienceOutput_1.CreateAudienceOutput,
     CreateAudiencePreview200Response: createAudiencePreview200Response_1.CreateAudiencePreview200Response,
@@ -1915,6 +1928,8 @@ var typeMap = {
     GetAudience200Response2: getAudience200Response2_1.GetAudience200Response2,
     GetAudienceAlphaOutput: getAudienceAlphaOutput_1.GetAudienceAlphaOutput,
     GetAudienceBetaOutput: getAudienceBetaOutput_1.GetAudienceBetaOutput,
+    GetAudienceCsvExportFromSpaceAndAudience200Response: getAudienceCsvExportFromSpaceAndAudience200Response_1.GetAudienceCsvExportFromSpaceAndAudience200Response,
+    GetAudienceCsvExportFromSpaceAndAudienceAlphaOutput: getAudienceCsvExportFromSpaceAndAudienceAlphaOutput_1.GetAudienceCsvExportFromSpaceAndAudienceAlphaOutput,
     GetAudienceOutput: getAudienceOutput_1.GetAudienceOutput,
     GetAudiencePreview200Response: getAudiencePreview200Response_1.GetAudiencePreview200Response,
     GetAudiencePreview200Response1: getAudiencePreview200Response1_1.GetAudiencePreview200Response1,

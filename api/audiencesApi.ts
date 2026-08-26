@@ -23,6 +23,7 @@ import { CreateAudience200Response1 } from '../model/createAudience200Response1'
 import { CreateAudience200Response2 } from '../model/createAudience200Response2';
 import { CreateAudienceAlphaInput } from '../model/createAudienceAlphaInput';
 import { CreateAudienceBetaInput } from '../model/createAudienceBetaInput';
+import { CreateAudienceCsvExportForAudience200Response } from '../model/createAudienceCsvExportForAudience200Response';
 import { CreateAudienceInput } from '../model/createAudienceInput';
 import { CreateAudiencePreview200Response } from '../model/createAudiencePreview200Response';
 import { CreateAudiencePreview200Response1 } from '../model/createAudiencePreview200Response1';
@@ -35,6 +36,7 @@ import { ForceExecuteAudienceRun200Response1 } from '../model/forceExecuteAudien
 import { GetAudience200Response } from '../model/getAudience200Response';
 import { GetAudience200Response1 } from '../model/getAudience200Response1';
 import { GetAudience200Response2 } from '../model/getAudience200Response2';
+import { GetAudienceCsvExportFromSpaceAndAudience200Response } from '../model/getAudienceCsvExportFromSpaceAndAudience200Response';
 import { GetAudiencePreview200Response } from '../model/getAudiencePreview200Response';
 import { GetAudiencePreview200Response1 } from '../model/getAudiencePreview200Response1';
 import { GetAudiencePreview200Response2 } from '../model/getAudiencePreview200Response2';
@@ -415,6 +417,134 @@ export class AudiencesApi {
                                 body = ObjectSerializer.deserialize(
                                     body,
                                     'CreateAudience200Response'
+                                );
+                                resolve({ response: response, body: body });
+                            } else {
+                                reject(
+                                    new HttpError(
+                                        response,
+                                        body,
+                                        response.statusCode
+                                    )
+                                );
+                            }
+                        }
+                    }
+                );
+            });
+        });
+    }
+    /**
+     * Starts a CSV export of an Audience\'s membership. The export runs asynchronously: this returns immediately with an export id, and does not return the CSV itself. Poll `getAudienceCsvExportFromSpaceAndAudience` with that id for status and download URLs.  • In order to successfully call this endpoint, the specified Workspace needs to have the Audience feature enabled. Please reach out to your customer success manager for more information.
+     * @summary Create Audience Csv Export for Audience
+     * @param spaceId
+     * @param id
+     */
+    public async createAudienceCsvExportForAudience(
+        spaceId: string,
+        id: string,
+        options: { headers: { [name: string]: string } } = { headers: {} }
+    ): Promise<{
+        response: http.IncomingMessage;
+        body: CreateAudienceCsvExportForAudience200Response;
+    }> {
+        const localVarPath =
+            this.basePath +
+            '/spaces/{spaceId}/audiences/{id}/csv-exports'
+                .replace(
+                    '{' + 'spaceId' + '}',
+                    encodeURIComponent(String(spaceId))
+                )
+                .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign(
+            {},
+            this._defaultHeaders
+        );
+        const produces = [
+            'application/vnd.segment.v1alpha+json',
+            'application/json',
+        ];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'spaceId' is not null or undefined
+        if (spaceId === null || spaceId === undefined) {
+            throw new Error(
+                'Required parameter spaceId was null or undefined when calling createAudienceCsvExportForAudience.'
+            );
+        }
+
+        // verify required parameter 'id' is not null or undefined
+        if (id === null || id === undefined) {
+            throw new Error(
+                'Required parameter id was null or undefined when calling createAudienceCsvExportForAudience.'
+            );
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications.token.accessToken) {
+            authenticationPromise = authenticationPromise.then(() =>
+                this.authentications.token.applyToRequest(
+                    localVarRequestOptions
+                )
+            );
+        }
+        authenticationPromise = authenticationPromise.then(() =>
+            this.authentications.default.applyToRequest(localVarRequestOptions)
+        );
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() =>
+                interceptor(localVarRequestOptions)
+            );
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{
+                response: http.IncomingMessage;
+                body: CreateAudienceCsvExportForAudience200Response;
+            }>((resolve, reject) => {
+                localVarRequest(
+                    localVarRequestOptions,
+                    (error, response, body) => {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            if (
+                                response.statusCode &&
+                                response.statusCode >= 200 &&
+                                response.statusCode <= 299
+                            ) {
+                                body = ObjectSerializer.deserialize(
+                                    body,
+                                    'CreateAudienceCsvExportForAudience200Response'
                                 );
                                 resolve({ response: response, body: body });
                             } else {
@@ -821,6 +951,147 @@ export class AudiencesApi {
                                 body = ObjectSerializer.deserialize(
                                     body,
                                     'GetAudience200Response'
+                                );
+                                resolve({ response: response, body: body });
+                            } else {
+                                reject(
+                                    new HttpError(
+                                        response,
+                                        body,
+                                        response.statusCode
+                                    )
+                                );
+                            }
+                        }
+                    }
+                );
+            });
+        });
+    }
+    /**
+     * Returns the status of an Audience CSV export. While the export is running, `status` is IN_PROGRESS and no URLs are returned. Once `status` is SUCCESS, `urls` contains presigned download links created when the export completed. Repeated polling returns the same links.  • In order to successfully call this endpoint, the specified Workspace needs to have the Audience feature enabled. Please reach out to your customer success manager for more information.
+     * @summary Get Audience Csv Export from Space And Audience
+     * @param spaceId
+     * @param id
+     * @param exportId
+     */
+    public async getAudienceCsvExportFromSpaceAndAudience(
+        spaceId: string,
+        id: string,
+        exportId: string,
+        options: { headers: { [name: string]: string } } = { headers: {} }
+    ): Promise<{
+        response: http.IncomingMessage;
+        body: GetAudienceCsvExportFromSpaceAndAudience200Response;
+    }> {
+        const localVarPath =
+            this.basePath +
+            '/spaces/{spaceId}/audiences/{id}/csv-exports/{exportId}'
+                .replace(
+                    '{' + 'spaceId' + '}',
+                    encodeURIComponent(String(spaceId))
+                )
+                .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
+                .replace(
+                    '{' + 'exportId' + '}',
+                    encodeURIComponent(String(exportId))
+                );
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign(
+            {},
+            this._defaultHeaders
+        );
+        const produces = [
+            'application/vnd.segment.v1alpha+json',
+            'application/json',
+        ];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'spaceId' is not null or undefined
+        if (spaceId === null || spaceId === undefined) {
+            throw new Error(
+                'Required parameter spaceId was null or undefined when calling getAudienceCsvExportFromSpaceAndAudience.'
+            );
+        }
+
+        // verify required parameter 'id' is not null or undefined
+        if (id === null || id === undefined) {
+            throw new Error(
+                'Required parameter id was null or undefined when calling getAudienceCsvExportFromSpaceAndAudience.'
+            );
+        }
+
+        // verify required parameter 'exportId' is not null or undefined
+        if (exportId === null || exportId === undefined) {
+            throw new Error(
+                'Required parameter exportId was null or undefined when calling getAudienceCsvExportFromSpaceAndAudience.'
+            );
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications.token.accessToken) {
+            authenticationPromise = authenticationPromise.then(() =>
+                this.authentications.token.applyToRequest(
+                    localVarRequestOptions
+                )
+            );
+        }
+        authenticationPromise = authenticationPromise.then(() =>
+            this.authentications.default.applyToRequest(localVarRequestOptions)
+        );
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() =>
+                interceptor(localVarRequestOptions)
+            );
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{
+                response: http.IncomingMessage;
+                body: GetAudienceCsvExportFromSpaceAndAudience200Response;
+            }>((resolve, reject) => {
+                localVarRequest(
+                    localVarRequestOptions,
+                    (error, response, body) => {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            if (
+                                response.statusCode &&
+                                response.statusCode >= 200 &&
+                                response.statusCode <= 299
+                            ) {
+                                body = ObjectSerializer.deserialize(
+                                    body,
+                                    'GetAudienceCsvExportFromSpaceAndAudience200Response'
                                 );
                                 resolve({ response: response, body: body });
                             } else {

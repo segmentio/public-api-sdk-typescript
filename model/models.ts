@@ -39,6 +39,7 @@ export * from './advancedWarehouseSyncScheduleV1Input';
 export * from './advancedWarehouseSyncScheduleV1Output';
 export * from './allowedLabelBeta';
 export * from './audienceComputeCadence';
+export * from './audienceCsvExport';
 export * from './audienceDefinition';
 export * from './audienceDefinitionWithoutTargetEntity';
 export * from './audienceOptions';
@@ -76,6 +77,8 @@ export * from './createAudienceAlphaInput';
 export * from './createAudienceAlphaOutput';
 export * from './createAudienceBetaInput';
 export * from './createAudienceBetaOutput';
+export * from './createAudienceCsvExportForAudience200Response';
+export * from './createAudienceCsvExportForAudienceAlphaOutput';
 export * from './createAudienceInput';
 export * from './createAudienceOutput';
 export * from './createAudiencePreview200Response';
@@ -276,6 +279,8 @@ export * from './getAudience200Response1';
 export * from './getAudience200Response2';
 export * from './getAudienceAlphaOutput';
 export * from './getAudienceBetaOutput';
+export * from './getAudienceCsvExportFromSpaceAndAudience200Response';
+export * from './getAudienceCsvExportFromSpaceAndAudienceAlphaOutput';
 export * from './getAudienceOutput';
 export * from './getAudiencePreview200Response';
 export * from './getAudiencePreview200Response1';
@@ -800,6 +805,7 @@ import { AdvancedWarehouseSyncScheduleV1Input } from './advancedWarehouseSyncSch
 import { AdvancedWarehouseSyncScheduleV1Output } from './advancedWarehouseSyncScheduleV1Output';
 import { AllowedLabelBeta } from './allowedLabelBeta';
 import { AudienceComputeCadence } from './audienceComputeCadence';
+import { AudienceCsvExport } from './audienceCsvExport';
 import { AudienceDefinition } from './audienceDefinition';
 import { AudienceDefinitionWithoutTargetEntity } from './audienceDefinitionWithoutTargetEntity';
 import { AudienceOptions } from './audienceOptions';
@@ -837,6 +843,8 @@ import { CreateAudienceAlphaInput } from './createAudienceAlphaInput';
 import { CreateAudienceAlphaOutput } from './createAudienceAlphaOutput';
 import { CreateAudienceBetaInput } from './createAudienceBetaInput';
 import { CreateAudienceBetaOutput } from './createAudienceBetaOutput';
+import { CreateAudienceCsvExportForAudience200Response } from './createAudienceCsvExportForAudience200Response';
+import { CreateAudienceCsvExportForAudienceAlphaOutput } from './createAudienceCsvExportForAudienceAlphaOutput';
 import { CreateAudienceInput } from './createAudienceInput';
 import { CreateAudienceOutput } from './createAudienceOutput';
 import { CreateAudiencePreview200Response } from './createAudiencePreview200Response';
@@ -1037,6 +1045,8 @@ import { GetAudience200Response1 } from './getAudience200Response1';
 import { GetAudience200Response2 } from './getAudience200Response2';
 import { GetAudienceAlphaOutput } from './getAudienceAlphaOutput';
 import { GetAudienceBetaOutput } from './getAudienceBetaOutput';
+import { GetAudienceCsvExportFromSpaceAndAudience200Response } from './getAudienceCsvExportFromSpaceAndAudience200Response';
+import { GetAudienceCsvExportFromSpaceAndAudienceAlphaOutput } from './getAudienceCsvExportFromSpaceAndAudienceAlphaOutput';
 import { GetAudienceOutput } from './getAudienceOutput';
 import { GetAudiencePreview200Response } from './getAudiencePreview200Response';
 import { GetAudiencePreview200Response1 } from './getAudiencePreview200Response1';
@@ -1762,6 +1772,7 @@ let typeMap: { [index: string]: any } = {
         AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: AllowedLabelBeta,
     AudienceComputeCadence: AudienceComputeCadence,
+    AudienceCsvExport: AudienceCsvExport,
     AudienceDefinition: AudienceDefinition,
     AudienceDefinitionWithoutTargetEntity:
         AudienceDefinitionWithoutTargetEntity,
@@ -1805,6 +1816,10 @@ let typeMap: { [index: string]: any } = {
     CreateAudienceAlphaOutput: CreateAudienceAlphaOutput,
     CreateAudienceBetaInput: CreateAudienceBetaInput,
     CreateAudienceBetaOutput: CreateAudienceBetaOutput,
+    CreateAudienceCsvExportForAudience200Response:
+        CreateAudienceCsvExportForAudience200Response,
+    CreateAudienceCsvExportForAudienceAlphaOutput:
+        CreateAudienceCsvExportForAudienceAlphaOutput,
     CreateAudienceInput: CreateAudienceInput,
     CreateAudienceOutput: CreateAudienceOutput,
     CreateAudiencePreview200Response: CreateAudiencePreview200Response,
@@ -2020,6 +2035,10 @@ let typeMap: { [index: string]: any } = {
     GetAudience200Response2: GetAudience200Response2,
     GetAudienceAlphaOutput: GetAudienceAlphaOutput,
     GetAudienceBetaOutput: GetAudienceBetaOutput,
+    GetAudienceCsvExportFromSpaceAndAudience200Response:
+        GetAudienceCsvExportFromSpaceAndAudience200Response,
+    GetAudienceCsvExportFromSpaceAndAudienceAlphaOutput:
+        GetAudienceCsvExportFromSpaceAndAudienceAlphaOutput,
     GetAudienceOutput: GetAudienceOutput,
     GetAudiencePreview200Response: GetAudiencePreview200Response,
     GetAudiencePreview200Response1: GetAudiencePreview200Response1,
