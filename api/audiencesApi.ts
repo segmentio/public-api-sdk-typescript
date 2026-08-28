@@ -15,6 +15,7 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { AddAudienceCsvExportToAudience200Response } from '../model/addAudienceCsvExportToAudience200Response';
+import { AddAudienceCsvExportToAudienceAlphaInput } from '../model/addAudienceCsvExportToAudienceAlphaInput';
 import { AddAudienceScheduleToAudience200Response } from '../model/addAudienceScheduleToAudience200Response';
 import { AddAudienceScheduleToAudience200Response1 } from '../model/addAudienceScheduleToAudience200Response1';
 import { AddAudienceScheduleToAudienceAlphaInput } from '../model/addAudienceScheduleToAudienceAlphaInput';
@@ -158,14 +159,16 @@ export class AudiencesApi {
     }
 
     /**
-     * Starts a CSV export of an Audience\'s membership. The export runs asynchronously: this returns immediately with an export id, and does not return the CSV itself. Poll `getAudienceCsvExportFromSpaceAndAudience` with that id for status and download URLs.  • In order to successfully call this endpoint, the specified Workspace needs to have the Audience feature enabled. Please reach out to your customer success manager for more information.
+     * Starts a CSV export of an Audience\'s membership. Optional personalization selections add profile traits and Linked Audience entity properties to the export; this endpoint accepts property selections, not raw Liquid or another template language. Entity selections are initially supported only for Linked Audiences. Omitting personalization preserves the default export behavior. The export runs asynchronously: this returns immediately with an export id, and does not return the CSV itself. Poll `getAudienceCsvExportFromSpaceAndAudience` with that id for status and download URLs.  • In order to successfully call this endpoint, the specified Workspace needs to have the Audience feature enabled. Please reach out to your customer success manager for more information.
      * @summary Add Audience Csv Export to Audience
      * @param spaceId
      * @param id
+     * @param AddAudienceCsvExportToAudienceAlphaInput
      */
     public async addAudienceCsvExportToAudience(
         spaceId: string,
         id: string,
+        AddAudienceCsvExportToAudienceAlphaInput: AddAudienceCsvExportToAudienceAlphaInput,
         options: { headers: { [name: string]: string } } = { headers: {} }
     ): Promise<{
         response: http.IncomingMessage;
@@ -210,6 +213,16 @@ export class AudiencesApi {
             );
         }
 
+        // verify required parameter 'AddAudienceCsvExportToAudienceAlphaInput' is not null or undefined
+        if (
+            AddAudienceCsvExportToAudienceAlphaInput === null ||
+            AddAudienceCsvExportToAudienceAlphaInput === undefined
+        ) {
+            throw new Error(
+                'Required parameter AddAudienceCsvExportToAudienceAlphaInput was null or undefined when calling addAudienceCsvExportToAudience.'
+            );
+        }
+
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -221,6 +234,10 @@ export class AudiencesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
+            body: ObjectSerializer.serialize(
+                AddAudienceCsvExportToAudienceAlphaInput,
+                'AddAudienceCsvExportToAudienceAlphaInput'
+            ),
         };
 
         let authenticationPromise = Promise.resolve();

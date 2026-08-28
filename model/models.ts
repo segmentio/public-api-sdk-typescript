@@ -7,6 +7,7 @@ export * from './addActivationToAudience200Response';
 export * from './addActivationToAudienceAlphaInput';
 export * from './addActivationToAudienceAlphaOutput';
 export * from './addAudienceCsvExportToAudience200Response';
+export * from './addAudienceCsvExportToAudienceAlphaInput';
 export * from './addAudienceCsvExportToAudienceAlphaOutput';
 export * from './addAudienceScheduleToAudience200Response';
 export * from './addAudienceScheduleToAudience200Response1';
@@ -773,6 +774,7 @@ import { AddActivationToAudience200Response } from './addActivationToAudience200
 import { AddActivationToAudienceAlphaInput } from './addActivationToAudienceAlphaInput';
 import { AddActivationToAudienceAlphaOutput } from './addActivationToAudienceAlphaOutput';
 import { AddAudienceCsvExportToAudience200Response } from './addAudienceCsvExportToAudience200Response';
+import { AddAudienceCsvExportToAudienceAlphaInput } from './addAudienceCsvExportToAudienceAlphaInput';
 import { AddAudienceCsvExportToAudienceAlphaOutput } from './addAudienceCsvExportToAudienceAlphaOutput';
 import { AddAudienceScheduleToAudience200Response } from './addAudienceScheduleToAudience200Response';
 import { AddAudienceScheduleToAudience200Response1 } from './addAudienceScheduleToAudience200Response1';
@@ -1734,6 +1736,8 @@ let typeMap: { [index: string]: any } = {
     AddActivationToAudienceAlphaOutput: AddActivationToAudienceAlphaOutput,
     AddAudienceCsvExportToAudience200Response:
         AddAudienceCsvExportToAudience200Response,
+    AddAudienceCsvExportToAudienceAlphaInput:
+        AddAudienceCsvExportToAudienceAlphaInput,
     AddAudienceCsvExportToAudienceAlphaOutput:
         AddAudienceCsvExportToAudienceAlphaOutput,
     AddAudienceScheduleToAudience200Response:

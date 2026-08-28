@@ -22,6 +22,7 @@ __exportStar(require("./addActivationToAudience200Response"), exports);
 __exportStar(require("./addActivationToAudienceAlphaInput"), exports);
 __exportStar(require("./addActivationToAudienceAlphaOutput"), exports);
 __exportStar(require("./addAudienceCsvExportToAudience200Response"), exports);
+__exportStar(require("./addAudienceCsvExportToAudienceAlphaInput"), exports);
 __exportStar(require("./addAudienceCsvExportToAudienceAlphaOutput"), exports);
 __exportStar(require("./addAudienceScheduleToAudience200Response"), exports);
 __exportStar(require("./addAudienceScheduleToAudience200Response1"), exports);
@@ -775,6 +776,7 @@ var addActivationToAudience200Response_1 = require("./addActivationToAudience200
 var addActivationToAudienceAlphaInput_1 = require("./addActivationToAudienceAlphaInput");
 var addActivationToAudienceAlphaOutput_1 = require("./addActivationToAudienceAlphaOutput");
 var addAudienceCsvExportToAudience200Response_1 = require("./addAudienceCsvExportToAudience200Response");
+var addAudienceCsvExportToAudienceAlphaInput_1 = require("./addAudienceCsvExportToAudienceAlphaInput");
 var addAudienceCsvExportToAudienceAlphaOutput_1 = require("./addAudienceCsvExportToAudienceAlphaOutput");
 var addAudienceScheduleToAudience200Response_1 = require("./addAudienceScheduleToAudience200Response");
 var addAudienceScheduleToAudience200Response1_1 = require("./addAudienceScheduleToAudience200Response1");
@@ -1658,6 +1660,7 @@ var typeMap = {
     AddActivationToAudienceAlphaInput: addActivationToAudienceAlphaInput_1.AddActivationToAudienceAlphaInput,
     AddActivationToAudienceAlphaOutput: addActivationToAudienceAlphaOutput_1.AddActivationToAudienceAlphaOutput,
     AddAudienceCsvExportToAudience200Response: addAudienceCsvExportToAudience200Response_1.AddAudienceCsvExportToAudience200Response,
+    AddAudienceCsvExportToAudienceAlphaInput: addAudienceCsvExportToAudienceAlphaInput_1.AddAudienceCsvExportToAudienceAlphaInput,
     AddAudienceCsvExportToAudienceAlphaOutput: addAudienceCsvExportToAudienceAlphaOutput_1.AddAudienceCsvExportToAudienceAlphaOutput,
     AddAudienceScheduleToAudience200Response: addAudienceScheduleToAudience200Response_1.AddAudienceScheduleToAudience200Response,
     AddAudienceScheduleToAudience200Response1: addAudienceScheduleToAudience200Response1_1.AddAudienceScheduleToAudience200Response1,

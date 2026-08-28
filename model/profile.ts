@@ -21,7 +21,7 @@ export class Profile {
      */
     'properties'?: Array<string>;
     /**
-     * Maps a profile trait to the name it should be sent under. Each key is a trait, and each value is the name used in the event.
+     * Maps destination fields to profile traits. Each key is the destination field, and each value is the source trait: `{ destinationField: sourceTrait }`.
      */
     'mapping'?: { [key: string]: string };
 

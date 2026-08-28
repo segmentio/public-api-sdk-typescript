@@ -11,19 +11,13 @@
  */
 
 import { RequestFile } from './models';
+import { PersonalizationInput } from './personalizationInput';
 
 /**
- * The profile traits included in the event sent to the Destination. Applies to both Classic and Linked Audiences. For a Classic audience this is the only form of personalization available, whereas a Linked Audience can also personalize on entities.
+ * Input to create a CSV export of an audience.
  */
-export class Profile1 {
-    /**
-     * The profile traits included in the event sent to the Destination.
-     */
-    'properties': Array<string>;
-    /**
-     * Maps destination fields to profile traits. Each key is the destination field, and each value is the source trait: `{ destinationField: sourceTrait }`.
-     */
-    'mapping'?: { [key: string]: string };
+export class AddAudienceCsvExportToAudienceAlphaInput {
+    'personalization'?: PersonalizationInput;
 
     static discriminator: string | undefined = undefined;
 
@@ -33,18 +27,13 @@ export class Profile1 {
         type: string;
     }> = [
         {
-            name: 'properties',
-            baseName: 'properties',
-            type: 'Array<string>',
-        },
-        {
-            name: 'mapping',
-            baseName: 'mapping',
-            type: '{ [key: string]: string; }',
+            name: 'personalization',
+            baseName: 'personalization',
+            type: 'PersonalizationInput',
         },
     ];
 
     static getAttributeTypeMap() {
-        return Profile1.attributeTypeMap;
+        return AddAudienceCsvExportToAudienceAlphaInput.attributeTypeMap;
     }
 }

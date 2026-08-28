@@ -8,6 +8,7 @@ export * from './addActivationToAudience200Response';
 export * from './addActivationToAudienceAlphaInput';
 export * from './addActivationToAudienceAlphaOutput';
 export * from './addAudienceCsvExportToAudience200Response';
+export * from './addAudienceCsvExportToAudienceAlphaInput';
 export * from './addAudienceCsvExportToAudienceAlphaOutput';
 export * from './addAudienceScheduleToAudience200Response';
 export * from './addAudienceScheduleToAudience200Response1';

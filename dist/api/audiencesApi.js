@@ -112,7 +112,7 @@ var AudiencesApi = (function () {
     AudiencesApi.prototype.addInterceptor = function (interceptor) {
         this.interceptors.push(interceptor);
     };
-    AudiencesApi.prototype.addAudienceCsvExportToAudience = function (spaceId, id, options) {
+    AudiencesApi.prototype.addAudienceCsvExportToAudience = function (spaceId, id, AddAudienceCsvExportToAudienceAlphaInput, options) {
         if (options === void 0) { options = { headers: {} }; }
         return __awaiter(this, void 0, void 0, function () {
             var localVarPath, localVarQueryParameters, localVarHeaderParams, produces, localVarFormParams, localVarUseFormData, localVarRequestOptions, authenticationPromise, interceptorPromise, _loop_1, _i, _a, interceptor;
@@ -141,6 +141,10 @@ var AudiencesApi = (function () {
                 if (id === null || id === undefined) {
                     throw new Error('Required parameter id was null or undefined when calling addAudienceCsvExportToAudience.');
                 }
+                if (AddAudienceCsvExportToAudienceAlphaInput === null ||
+                    AddAudienceCsvExportToAudienceAlphaInput === undefined) {
+                    throw new Error('Required parameter AddAudienceCsvExportToAudienceAlphaInput was null or undefined when calling addAudienceCsvExportToAudience.');
+                }
                 Object.assign(localVarHeaderParams, options.headers);
                 localVarUseFormData = false;
                 localVarRequestOptions = {
@@ -150,6 +154,7 @@ var AudiencesApi = (function () {
                     uri: localVarPath,
                     useQuerystring: this._useQuerystring,
                     json: true,
+                    body: models_1.ObjectSerializer.serialize(AddAudienceCsvExportToAudienceAlphaInput, 'AddAudienceCsvExportToAudienceAlphaInput'),
                 };
                 authenticationPromise = Promise.resolve();
                 if (this.authentications.token.accessToken) {

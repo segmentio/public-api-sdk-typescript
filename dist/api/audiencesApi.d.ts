@@ -1,6 +1,7 @@
 /// <reference types="node" />
 import http from 'http';
 import { AddAudienceCsvExportToAudience200Response } from '../model/addAudienceCsvExportToAudience200Response';
+import { AddAudienceCsvExportToAudienceAlphaInput } from '../model/addAudienceCsvExportToAudienceAlphaInput';
 import { AddAudienceScheduleToAudience200Response } from '../model/addAudienceScheduleToAudience200Response';
 import { AddAudienceScheduleToAudienceInput } from '../model/addAudienceScheduleToAudienceInput';
 import { CreateAudience200Response } from '../model/createAudience200Response';
@@ -48,7 +49,7 @@ export declare class AudiencesApi {
     setApiKey(key: AudiencesApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    addAudienceCsvExportToAudience(spaceId: string, id: string, options?: {
+    addAudienceCsvExportToAudience(spaceId: string, id: string, AddAudienceCsvExportToAudienceAlphaInput: AddAudienceCsvExportToAudienceAlphaInput, options?: {
         headers: {
             [name: string]: string;
         };
