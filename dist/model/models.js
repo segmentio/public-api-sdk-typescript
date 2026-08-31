@@ -70,6 +70,9 @@ __exportStar(require("./audienceSize"), exports);
 __exportStar(require("./audienceSummary"), exports);
 __exportStar(require("./audienceSummaryWithAudienceTypeAndLookback"), exports);
 __exportStar(require("./auditEventV1"), exports);
+__exportStar(require("./batchQueryActivationsForSpace200Response"), exports);
+__exportStar(require("./batchQueryActivationsForSpaceAlphaInput"), exports);
+__exportStar(require("./batchQueryActivationsForSpaceAlphaOutput"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpace200Response"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput"), exports);
@@ -257,6 +260,7 @@ __exportStar(require("./echoV1Output"), exports);
 __exportStar(require("./entityDetails"), exports);
 __exportStar(require("./entityPathAlpha"), exports);
 __exportStar(require("./entityPropertyAlpha"), exports);
+__exportStar(require("./errorsInner"), exports);
 __exportStar(require("./eventAlpha"), exports);
 __exportStar(require("./eventPropertyAlpha"), exports);
 __exportStar(require("./eventPropertyType"), exports);
@@ -799,6 +803,9 @@ var audienceSize_1 = require("./audienceSize");
 var audienceSummary_1 = require("./audienceSummary");
 var audienceSummaryWithAudienceTypeAndLookback_1 = require("./audienceSummaryWithAudienceTypeAndLookback");
 var auditEventV1_1 = require("./auditEventV1");
+var batchQueryActivationsForSpace200Response_1 = require("./batchQueryActivationsForSpace200Response");
+var batchQueryActivationsForSpaceAlphaInput_1 = require("./batchQueryActivationsForSpaceAlphaInput");
+var batchQueryActivationsForSpaceAlphaOutput_1 = require("./batchQueryActivationsForSpaceAlphaOutput");
 var batchQueryMessagingSubscriptionsForSpace200Response_1 = require("./batchQueryMessagingSubscriptionsForSpace200Response");
 var batchQueryMessagingSubscriptionsForSpaceAlphaInput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput");
 var batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput");
@@ -986,6 +993,7 @@ var echoV1Output_1 = require("./echoV1Output");
 var entityDetails_1 = require("./entityDetails");
 var entityPathAlpha_1 = require("./entityPathAlpha");
 var entityPropertyAlpha_1 = require("./entityPropertyAlpha");
+var errorsInner_1 = require("./errorsInner");
 var eventAlpha_1 = require("./eventAlpha");
 var eventPropertyAlpha_1 = require("./eventPropertyAlpha");
 var eventPropertyType_1 = require("./eventPropertyType");
@@ -1657,6 +1665,9 @@ var typeMap = {
     AudienceSummary: audienceSummary_1.AudienceSummary,
     AudienceSummaryWithAudienceTypeAndLookback: audienceSummaryWithAudienceTypeAndLookback_1.AudienceSummaryWithAudienceTypeAndLookback,
     AuditEventV1: auditEventV1_1.AuditEventV1,
+    BatchQueryActivationsForSpace200Response: batchQueryActivationsForSpace200Response_1.BatchQueryActivationsForSpace200Response,
+    BatchQueryActivationsForSpaceAlphaInput: batchQueryActivationsForSpaceAlphaInput_1.BatchQueryActivationsForSpaceAlphaInput,
+    BatchQueryActivationsForSpaceAlphaOutput: batchQueryActivationsForSpaceAlphaOutput_1.BatchQueryActivationsForSpaceAlphaOutput,
     BatchQueryMessagingSubscriptionsForSpace200Response: batchQueryMessagingSubscriptionsForSpace200Response_1.BatchQueryMessagingSubscriptionsForSpace200Response,
     BatchQueryMessagingSubscriptionsForSpaceAlphaInput: batchQueryMessagingSubscriptionsForSpaceAlphaInput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaInput,
     BatchQueryMessagingSubscriptionsForSpaceAlphaOutput: batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
@@ -1844,6 +1855,7 @@ var typeMap = {
     EntityDetails: entityDetails_1.EntityDetails,
     EntityPathAlpha: entityPathAlpha_1.EntityPathAlpha,
     EntityPropertyAlpha: entityPropertyAlpha_1.EntityPropertyAlpha,
+    ErrorsInner: errorsInner_1.ErrorsInner,
     EventAlpha: eventAlpha_1.EventAlpha,
     EventPropertyAlpha: eventPropertyAlpha_1.EventPropertyAlpha,
     EventSourceV1: eventSourceV1_1.EventSourceV1,
