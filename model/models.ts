@@ -59,9 +59,6 @@ export * from './audienceSize';
 export * from './audienceSummary';
 export * from './audienceSummaryWithAudienceTypeAndLookback';
 export * from './auditEventV1';
-export * from './batchQueryActivationsForSpace200Response';
-export * from './batchQueryActivationsForSpaceAlphaInput';
-export * from './batchQueryActivationsForSpaceAlphaOutput';
 export * from './batchQueryMessagingSubscriptionsForSpace200Response';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 export * from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
@@ -258,7 +255,6 @@ export * from './echoV1Output';
 export * from './entityDetails';
 export * from './entityPathAlpha';
 export * from './entityPropertyAlpha';
-export * from './errorsInner';
 export * from './eventAlpha';
 export * from './eventPropertyAlpha';
 export * from './eventPropertyType';
@@ -394,9 +390,7 @@ export * from './listActivationsAlphaOutput';
 export * from './listActivationsFromAudience200Response';
 export * from './listActivationsFromAudienceOutput';
 export * from './listAudienceConsumersFromSpaceAndAudience200Response';
-export * from './listAudienceConsumersFromSpaceAndAudience200Response1';
 export * from './listAudienceConsumersFromSpaceAndAudienceAlphaOutput';
-export * from './listAudienceConsumersFromSpaceAndAudienceOutput';
 export * from './listAudienceConsumersSortInput';
 export * from './listAudienceSchedulesFromSpaceAndAudience200Response';
 export * from './listAudienceSchedulesFromSpaceAndAudience200Response1';
@@ -832,9 +826,6 @@ import { AudienceSize } from './audienceSize';
 import { AudienceSummary } from './audienceSummary';
 import { AudienceSummaryWithAudienceTypeAndLookback } from './audienceSummaryWithAudienceTypeAndLookback';
 import { AuditEventV1 } from './auditEventV1';
-import { BatchQueryActivationsForSpace200Response } from './batchQueryActivationsForSpace200Response';
-import { BatchQueryActivationsForSpaceAlphaInput } from './batchQueryActivationsForSpaceAlphaInput';
-import { BatchQueryActivationsForSpaceAlphaOutput } from './batchQueryActivationsForSpaceAlphaOutput';
 import { BatchQueryMessagingSubscriptionsForSpace200Response } from './batchQueryMessagingSubscriptionsForSpace200Response';
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaInput } from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
 import { BatchQueryMessagingSubscriptionsForSpaceAlphaOutput } from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
@@ -1031,7 +1022,6 @@ import { EchoV1Output } from './echoV1Output';
 import { EntityDetails } from './entityDetails';
 import { EntityPathAlpha } from './entityPathAlpha';
 import { EntityPropertyAlpha } from './entityPropertyAlpha';
-import { ErrorsInner } from './errorsInner';
 import { EventAlpha } from './eventAlpha';
 import { EventPropertyAlpha } from './eventPropertyAlpha';
 import { EventPropertyType } from './eventPropertyType';
@@ -1167,9 +1157,7 @@ import { ListActivationsAlphaOutput } from './listActivationsAlphaOutput';
 import { ListActivationsFromAudience200Response } from './listActivationsFromAudience200Response';
 import { ListActivationsFromAudienceOutput } from './listActivationsFromAudienceOutput';
 import { ListAudienceConsumersFromSpaceAndAudience200Response } from './listAudienceConsumersFromSpaceAndAudience200Response';
-import { ListAudienceConsumersFromSpaceAndAudience200Response1 } from './listAudienceConsumersFromSpaceAndAudience200Response1';
 import { ListAudienceConsumersFromSpaceAndAudienceAlphaOutput } from './listAudienceConsumersFromSpaceAndAudienceAlphaOutput';
-import { ListAudienceConsumersFromSpaceAndAudienceOutput } from './listAudienceConsumersFromSpaceAndAudienceOutput';
 import { ListAudienceConsumersSortInput } from './listAudienceConsumersSortInput';
 import { ListAudienceSchedulesFromSpaceAndAudience200Response } from './listAudienceSchedulesFromSpaceAndAudience200Response';
 import { ListAudienceSchedulesFromSpaceAndAudience200Response1 } from './listAudienceSchedulesFromSpaceAndAudience200Response1';
@@ -1811,12 +1799,6 @@ let typeMap: { [index: string]: any } = {
     AudienceSummaryWithAudienceTypeAndLookback:
         AudienceSummaryWithAudienceTypeAndLookback,
     AuditEventV1: AuditEventV1,
-    BatchQueryActivationsForSpace200Response:
-        BatchQueryActivationsForSpace200Response,
-    BatchQueryActivationsForSpaceAlphaInput:
-        BatchQueryActivationsForSpaceAlphaInput,
-    BatchQueryActivationsForSpaceAlphaOutput:
-        BatchQueryActivationsForSpaceAlphaOutput,
     BatchQueryMessagingSubscriptionsForSpace200Response:
         BatchQueryMessagingSubscriptionsForSpace200Response,
     BatchQueryMessagingSubscriptionsForSpaceAlphaInput:
@@ -2032,7 +2014,6 @@ let typeMap: { [index: string]: any } = {
     EntityDetails: EntityDetails,
     EntityPathAlpha: EntityPathAlpha,
     EntityPropertyAlpha: EntityPropertyAlpha,
-    ErrorsInner: ErrorsInner,
     EventAlpha: EventAlpha,
     EventPropertyAlpha: EventPropertyAlpha,
     EventSourceV1: EventSourceV1,
@@ -2188,12 +2169,8 @@ let typeMap: { [index: string]: any } = {
     ListActivationsFromAudienceOutput: ListActivationsFromAudienceOutput,
     ListAudienceConsumersFromSpaceAndAudience200Response:
         ListAudienceConsumersFromSpaceAndAudience200Response,
-    ListAudienceConsumersFromSpaceAndAudience200Response1:
-        ListAudienceConsumersFromSpaceAndAudience200Response1,
     ListAudienceConsumersFromSpaceAndAudienceAlphaOutput:
         ListAudienceConsumersFromSpaceAndAudienceAlphaOutput,
-    ListAudienceConsumersFromSpaceAndAudienceOutput:
-        ListAudienceConsumersFromSpaceAndAudienceOutput,
     ListAudienceConsumersSortInput: ListAudienceConsumersSortInput,
     ListAudienceSchedulesFromSpaceAndAudience200Response:
         ListAudienceSchedulesFromSpaceAndAudience200Response,

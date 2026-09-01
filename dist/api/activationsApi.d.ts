@@ -4,8 +4,6 @@ import { AddActivationToAudience200Response } from '../model/addActivationToAudi
 import { AddActivationToAudienceAlphaInput } from '../model/addActivationToAudienceAlphaInput';
 import { AddDestinationToAudience200Response } from '../model/addDestinationToAudience200Response';
 import { AddDestinationToAudienceAlphaInput } from '../model/addDestinationToAudienceAlphaInput';
-import { BatchQueryActivationsForSpace200Response } from '../model/batchQueryActivationsForSpace200Response';
-import { BatchQueryActivationsForSpaceAlphaInput } from '../model/batchQueryActivationsForSpaceAlphaInput';
 import { GetActivationFromAudience200Response } from '../model/getActivationFromAudience200Response';
 import { ListActivationsFromAudience200Response } from '../model/listActivationsFromAudience200Response';
 import { ListDestinationsFromAudience200Response } from '../model/listDestinationsFromAudience200Response';
@@ -55,14 +53,6 @@ export declare class ActivationsApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: AddDestinationToAudience200Response;
-    }>;
-    batchQueryActivationsForSpace(spaceId: string, BatchQueryActivationsForSpaceAlphaInput: BatchQueryActivationsForSpaceAlphaInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: BatchQueryActivationsForSpace200Response;
     }>;
     getActivationFromAudience(spaceId: string, audienceId: string, id: string, options?: {
         headers: {
