@@ -390,7 +390,9 @@ __exportStar(require("./listActivationsAlphaOutput"), exports);
 __exportStar(require("./listActivationsFromAudience200Response"), exports);
 __exportStar(require("./listActivationsFromAudienceOutput"), exports);
 __exportStar(require("./listAudienceConsumersFromSpaceAndAudience200Response"), exports);
+__exportStar(require("./listAudienceConsumersFromSpaceAndAudience200Response1"), exports);
 __exportStar(require("./listAudienceConsumersFromSpaceAndAudienceAlphaOutput"), exports);
+__exportStar(require("./listAudienceConsumersFromSpaceAndAudienceOutput"), exports);
 __exportStar(require("./listAudienceConsumersSortInput"), exports);
 __exportStar(require("./listAudienceSchedulesFromSpaceAndAudience200Response"), exports);
 __exportStar(require("./listAudienceSchedulesFromSpaceAndAudience200Response1"), exports);
@@ -1123,7 +1125,9 @@ var listActivationsAlphaOutput_1 = require("./listActivationsAlphaOutput");
 var listActivationsFromAudience200Response_1 = require("./listActivationsFromAudience200Response");
 var listActivationsFromAudienceOutput_1 = require("./listActivationsFromAudienceOutput");
 var listAudienceConsumersFromSpaceAndAudience200Response_1 = require("./listAudienceConsumersFromSpaceAndAudience200Response");
+var listAudienceConsumersFromSpaceAndAudience200Response1_1 = require("./listAudienceConsumersFromSpaceAndAudience200Response1");
 var listAudienceConsumersFromSpaceAndAudienceAlphaOutput_1 = require("./listAudienceConsumersFromSpaceAndAudienceAlphaOutput");
+var listAudienceConsumersFromSpaceAndAudienceOutput_1 = require("./listAudienceConsumersFromSpaceAndAudienceOutput");
 var listAudienceConsumersSortInput_1 = require("./listAudienceConsumersSortInput");
 var listAudienceSchedulesFromSpaceAndAudience200Response_1 = require("./listAudienceSchedulesFromSpaceAndAudience200Response");
 var listAudienceSchedulesFromSpaceAndAudience200Response1_1 = require("./listAudienceSchedulesFromSpaceAndAudience200Response1");
@@ -1983,7 +1987,9 @@ var typeMap = {
     ListActivationsFromAudience200Response: listActivationsFromAudience200Response_1.ListActivationsFromAudience200Response,
     ListActivationsFromAudienceOutput: listActivationsFromAudienceOutput_1.ListActivationsFromAudienceOutput,
     ListAudienceConsumersFromSpaceAndAudience200Response: listAudienceConsumersFromSpaceAndAudience200Response_1.ListAudienceConsumersFromSpaceAndAudience200Response,
+    ListAudienceConsumersFromSpaceAndAudience200Response1: listAudienceConsumersFromSpaceAndAudience200Response1_1.ListAudienceConsumersFromSpaceAndAudience200Response1,
     ListAudienceConsumersFromSpaceAndAudienceAlphaOutput: listAudienceConsumersFromSpaceAndAudienceAlphaOutput_1.ListAudienceConsumersFromSpaceAndAudienceAlphaOutput,
+    ListAudienceConsumersFromSpaceAndAudienceOutput: listAudienceConsumersFromSpaceAndAudienceOutput_1.ListAudienceConsumersFromSpaceAndAudienceOutput,
     ListAudienceConsumersSortInput: listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput,
     ListAudienceSchedulesFromSpaceAndAudience200Response: listAudienceSchedulesFromSpaceAndAudience200Response_1.ListAudienceSchedulesFromSpaceAndAudience200Response,
     ListAudienceSchedulesFromSpaceAndAudience200Response1: listAudienceSchedulesFromSpaceAndAudience200Response1_1.ListAudienceSchedulesFromSpaceAndAudience200Response1,
