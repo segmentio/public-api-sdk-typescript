@@ -1,6 +1,6 @@
-import { ListAudienceConsumersFromSpaceAndAudienceAlphaOutput } from './listAudienceConsumersFromSpaceAndAudienceAlphaOutput';
+import { ListAudienceConsumersFromSpaceAndAudienceOutput } from './listAudienceConsumersFromSpaceAndAudienceOutput';
 export declare class ListAudienceConsumersFromSpaceAndAudience200Response {
-    'data'?: ListAudienceConsumersFromSpaceAndAudienceAlphaOutput;
+    'data'?: ListAudienceConsumersFromSpaceAndAudienceOutput;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
