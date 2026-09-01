@@ -21,9 +21,6 @@ __exportStar(require("./activationOutput"), exports);
 __exportStar(require("./addActivationToAudience200Response"), exports);
 __exportStar(require("./addActivationToAudienceAlphaInput"), exports);
 __exportStar(require("./addActivationToAudienceAlphaOutput"), exports);
-__exportStar(require("./addAudienceCsvExportToAudience200Response"), exports);
-__exportStar(require("./addAudienceCsvExportToAudienceAlphaInput"), exports);
-__exportStar(require("./addAudienceCsvExportToAudienceAlphaOutput"), exports);
 __exportStar(require("./addAudienceScheduleToAudience200Response"), exports);
 __exportStar(require("./addAudienceScheduleToAudience200Response1"), exports);
 __exportStar(require("./addAudienceScheduleToAudienceAlphaInput"), exports);
@@ -57,7 +54,6 @@ __exportStar(require("./advancedWarehouseSyncScheduleV1Input"), exports);
 __exportStar(require("./advancedWarehouseSyncScheduleV1Output"), exports);
 __exportStar(require("./allowedLabelBeta"), exports);
 __exportStar(require("./audienceComputeCadence"), exports);
-__exportStar(require("./audienceCsvExport"), exports);
 __exportStar(require("./audienceDefinition"), exports);
 __exportStar(require("./audienceDefinitionWithoutTargetEntity"), exports);
 __exportStar(require("./audienceOptions"), exports);
@@ -74,6 +70,9 @@ __exportStar(require("./audienceSize"), exports);
 __exportStar(require("./audienceSummary"), exports);
 __exportStar(require("./audienceSummaryWithAudienceTypeAndLookback"), exports);
 __exportStar(require("./auditEventV1"), exports);
+__exportStar(require("./batchQueryActivationsForSpace200Response"), exports);
+__exportStar(require("./batchQueryActivationsForSpaceAlphaInput"), exports);
+__exportStar(require("./batchQueryActivationsForSpaceAlphaOutput"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpace200Response"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput"), exports);
 __exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput"), exports);
@@ -145,9 +144,6 @@ __exportStar(require("./createInsertFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./createInvites201Response"), exports);
 __exportStar(require("./createInvitesV1Input"), exports);
 __exportStar(require("./createInvitesV1Output"), exports);
-__exportStar(require("./createJourney200Response"), exports);
-__exportStar(require("./createJourneyAlphaInput"), exports);
-__exportStar(require("./createJourneyAlphaOutput"), exports);
 __exportStar(require("./createLabel201Response"), exports);
 __exportStar(require("./createLabelV1Input"), exports);
 __exportStar(require("./createLabelV1Output"), exports);
@@ -184,17 +180,11 @@ __exportStar(require("./createUserGroup200Response"), exports);
 __exportStar(require("./createUserGroupV1Input"), exports);
 __exportStar(require("./createUserGroupV1Output"), exports);
 __exportStar(require("./createValidationInWarehouse200Response"), exports);
-__exportStar(require("./createValidationInWarehouse200Response1"), exports);
 __exportStar(require("./createValidationInWarehouseV1Input"), exports);
 __exportStar(require("./createValidationInWarehouseV1Output"), exports);
-__exportStar(require("./createValidationInWarehouseV2Input"), exports);
-__exportStar(require("./createValidationInWarehouseV2Output"), exports);
 __exportStar(require("./createWarehouse201Response"), exports);
-__exportStar(require("./createWarehouse201Response1"), exports);
 __exportStar(require("./createWarehouseV1Input"), exports);
 __exportStar(require("./createWarehouseV1Output"), exports);
-__exportStar(require("./createWarehouseV2Input"), exports);
-__exportStar(require("./createWarehouseV2Output"), exports);
 __exportStar(require("./createWorkspaceRegulation200Response"), exports);
 __exportStar(require("./createWorkspaceRegulationV1Input"), exports);
 __exportStar(require("./createWorkspaceRegulationV1Output"), exports);
@@ -270,11 +260,11 @@ __exportStar(require("./echoV1Output"), exports);
 __exportStar(require("./entityDetails"), exports);
 __exportStar(require("./entityPathAlpha"), exports);
 __exportStar(require("./entityPropertyAlpha"), exports);
+__exportStar(require("./errorsInner"), exports);
 __exportStar(require("./eventAlpha"), exports);
 __exportStar(require("./eventPropertyAlpha"), exports);
 __exportStar(require("./eventPropertyType"), exports);
 __exportStar(require("./eventSourceV1"), exports);
-__exportStar(require("./eventTriggeredJourneySummary"), exports);
 __exportStar(require("./eventType"), exports);
 __exportStar(require("./fQLDefinedPropertyV1"), exports);
 __exportStar(require("./filter"), exports);
@@ -295,8 +285,6 @@ __exportStar(require("./getAudience200Response1"), exports);
 __exportStar(require("./getAudience200Response2"), exports);
 __exportStar(require("./getAudienceAlphaOutput"), exports);
 __exportStar(require("./getAudienceBetaOutput"), exports);
-__exportStar(require("./getAudienceCsvExportFromSpaceAndAudience200Response"), exports);
-__exportStar(require("./getAudienceCsvExportFromSpaceAndAudienceAlphaOutput"), exports);
 __exportStar(require("./getAudienceOutput"), exports);
 __exportStar(require("./getAudiencePreview200Response"), exports);
 __exportStar(require("./getAudiencePreview200Response1"), exports);
@@ -377,11 +365,9 @@ __exportStar(require("./getUserGroup200Response"), exports);
 __exportStar(require("./getUserGroupV1Output"), exports);
 __exportStar(require("./getUserV1Output"), exports);
 __exportStar(require("./getWarehouse200Response"), exports);
-__exportStar(require("./getWarehouse200Response1"), exports);
 __exportStar(require("./getWarehouseMetadata200Response"), exports);
 __exportStar(require("./getWarehouseMetadataV1Output"), exports);
 __exportStar(require("./getWarehouseV1Output"), exports);
-__exportStar(require("./getWarehouseV2Output"), exports);
 __exportStar(require("./getWarehousesCatalog200Response"), exports);
 __exportStar(require("./getWarehousesCatalogV1Output"), exports);
 __exportStar(require("./getWorkspace200Response"), exports);
@@ -398,7 +384,6 @@ __exportStar(require("./insertFunctionInstanceAlpha"), exports);
 __exportStar(require("./integrationOptionBeta"), exports);
 __exportStar(require("./invitePermissionV1"), exports);
 __exportStar(require("./inviteV1"), exports);
-__exportStar(require("./journeyDefinition"), exports);
 __exportStar(require("./labelAlpha"), exports);
 __exportStar(require("./labelV1"), exports);
 __exportStar(require("./listActivationsAlphaOutput"), exports);
@@ -531,9 +516,7 @@ __exportStar(require("./listUsersFromUserGroup200Response"), exports);
 __exportStar(require("./listUsersFromUserGroupV1Output"), exports);
 __exportStar(require("./listUsersV1Output"), exports);
 __exportStar(require("./listWarehouses200Response"), exports);
-__exportStar(require("./listWarehouses200Response1"), exports);
 __exportStar(require("./listWarehousesV1Output"), exports);
-__exportStar(require("./listWarehousesV2Output"), exports);
 __exportStar(require("./listWorkspaceRegulations200Response"), exports);
 __exportStar(require("./listWorkspaceRegulationsV1Output"), exports);
 __exportStar(require("./livePluginsAlpha"), exports);
@@ -752,11 +735,8 @@ __exportStar(require("./updateUserGroup200Response"), exports);
 __exportStar(require("./updateUserGroupV1Input"), exports);
 __exportStar(require("./updateUserGroupV1Output"), exports);
 __exportStar(require("./updateWarehouse200Response"), exports);
-__exportStar(require("./updateWarehouse200Response1"), exports);
 __exportStar(require("./updateWarehouseV1Input"), exports);
 __exportStar(require("./updateWarehouseV1Output"), exports);
-__exportStar(require("./updateWarehouseV2Input"), exports);
-__exportStar(require("./updateWarehouseV2Output"), exports);
 __exportStar(require("./upsertRuleV1"), exports);
 __exportStar(require("./userGroupV1"), exports);
 __exportStar(require("./userV1"), exports);
@@ -767,7 +747,6 @@ __exportStar(require("./warehouseMetadataV1"), exports);
 __exportStar(require("./warehouseSelectiveSyncItemV1"), exports);
 __exportStar(require("./warehouseSyncOverrideV1"), exports);
 __exportStar(require("./warehouseV1"), exports);
-__exportStar(require("./warehouseV2"), exports);
 __exportStar(require("./workspaceV1"), exports);
 var aPICallSnapshotV1_1 = require("./aPICallSnapshotV1");
 var accessPermissionV1_1 = require("./accessPermissionV1");
@@ -775,9 +754,6 @@ var activationOutput_1 = require("./activationOutput");
 var addActivationToAudience200Response_1 = require("./addActivationToAudience200Response");
 var addActivationToAudienceAlphaInput_1 = require("./addActivationToAudienceAlphaInput");
 var addActivationToAudienceAlphaOutput_1 = require("./addActivationToAudienceAlphaOutput");
-var addAudienceCsvExportToAudience200Response_1 = require("./addAudienceCsvExportToAudience200Response");
-var addAudienceCsvExportToAudienceAlphaInput_1 = require("./addAudienceCsvExportToAudienceAlphaInput");
-var addAudienceCsvExportToAudienceAlphaOutput_1 = require("./addAudienceCsvExportToAudienceAlphaOutput");
 var addAudienceScheduleToAudience200Response_1 = require("./addAudienceScheduleToAudience200Response");
 var addAudienceScheduleToAudience200Response1_1 = require("./addAudienceScheduleToAudience200Response1");
 var addAudienceScheduleToAudienceAlphaInput_1 = require("./addAudienceScheduleToAudienceAlphaInput");
@@ -811,7 +787,6 @@ var advancedWarehouseSyncScheduleV1Input_1 = require("./advancedWarehouseSyncSch
 var advancedWarehouseSyncScheduleV1Output_1 = require("./advancedWarehouseSyncScheduleV1Output");
 var allowedLabelBeta_1 = require("./allowedLabelBeta");
 var audienceComputeCadence_1 = require("./audienceComputeCadence");
-var audienceCsvExport_1 = require("./audienceCsvExport");
 var audienceDefinition_1 = require("./audienceDefinition");
 var audienceDefinitionWithoutTargetEntity_1 = require("./audienceDefinitionWithoutTargetEntity");
 var audienceOptions_1 = require("./audienceOptions");
@@ -828,6 +803,9 @@ var audienceSize_1 = require("./audienceSize");
 var audienceSummary_1 = require("./audienceSummary");
 var audienceSummaryWithAudienceTypeAndLookback_1 = require("./audienceSummaryWithAudienceTypeAndLookback");
 var auditEventV1_1 = require("./auditEventV1");
+var batchQueryActivationsForSpace200Response_1 = require("./batchQueryActivationsForSpace200Response");
+var batchQueryActivationsForSpaceAlphaInput_1 = require("./batchQueryActivationsForSpaceAlphaInput");
+var batchQueryActivationsForSpaceAlphaOutput_1 = require("./batchQueryActivationsForSpaceAlphaOutput");
 var batchQueryMessagingSubscriptionsForSpace200Response_1 = require("./batchQueryMessagingSubscriptionsForSpace200Response");
 var batchQueryMessagingSubscriptionsForSpaceAlphaInput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput");
 var batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput");
@@ -899,9 +877,6 @@ var createInsertFunctionInstanceAlphaOutput_1 = require("./createInsertFunctionI
 var createInvites201Response_1 = require("./createInvites201Response");
 var createInvitesV1Input_1 = require("./createInvitesV1Input");
 var createInvitesV1Output_1 = require("./createInvitesV1Output");
-var createJourney200Response_1 = require("./createJourney200Response");
-var createJourneyAlphaInput_1 = require("./createJourneyAlphaInput");
-var createJourneyAlphaOutput_1 = require("./createJourneyAlphaOutput");
 var createLabel201Response_1 = require("./createLabel201Response");
 var createLabelV1Input_1 = require("./createLabelV1Input");
 var createLabelV1Output_1 = require("./createLabelV1Output");
@@ -938,17 +913,11 @@ var createUserGroup200Response_1 = require("./createUserGroup200Response");
 var createUserGroupV1Input_1 = require("./createUserGroupV1Input");
 var createUserGroupV1Output_1 = require("./createUserGroupV1Output");
 var createValidationInWarehouse200Response_1 = require("./createValidationInWarehouse200Response");
-var createValidationInWarehouse200Response1_1 = require("./createValidationInWarehouse200Response1");
 var createValidationInWarehouseV1Input_1 = require("./createValidationInWarehouseV1Input");
 var createValidationInWarehouseV1Output_1 = require("./createValidationInWarehouseV1Output");
-var createValidationInWarehouseV2Input_1 = require("./createValidationInWarehouseV2Input");
-var createValidationInWarehouseV2Output_1 = require("./createValidationInWarehouseV2Output");
 var createWarehouse201Response_1 = require("./createWarehouse201Response");
-var createWarehouse201Response1_1 = require("./createWarehouse201Response1");
 var createWarehouseV1Input_1 = require("./createWarehouseV1Input");
 var createWarehouseV1Output_1 = require("./createWarehouseV1Output");
-var createWarehouseV2Input_1 = require("./createWarehouseV2Input");
-var createWarehouseV2Output_1 = require("./createWarehouseV2Output");
 var createWorkspaceRegulation200Response_1 = require("./createWorkspaceRegulation200Response");
 var createWorkspaceRegulationV1Input_1 = require("./createWorkspaceRegulationV1Input");
 var createWorkspaceRegulationV1Output_1 = require("./createWorkspaceRegulationV1Output");
@@ -1024,11 +993,11 @@ var echoV1Output_1 = require("./echoV1Output");
 var entityDetails_1 = require("./entityDetails");
 var entityPathAlpha_1 = require("./entityPathAlpha");
 var entityPropertyAlpha_1 = require("./entityPropertyAlpha");
+var errorsInner_1 = require("./errorsInner");
 var eventAlpha_1 = require("./eventAlpha");
 var eventPropertyAlpha_1 = require("./eventPropertyAlpha");
 var eventPropertyType_1 = require("./eventPropertyType");
 var eventSourceV1_1 = require("./eventSourceV1");
-var eventTriggeredJourneySummary_1 = require("./eventTriggeredJourneySummary");
 var eventType_1 = require("./eventType");
 var fQLDefinedPropertyV1_1 = require("./fQLDefinedPropertyV1");
 var filter_1 = require("./filter");
@@ -1049,8 +1018,6 @@ var getAudience200Response1_1 = require("./getAudience200Response1");
 var getAudience200Response2_1 = require("./getAudience200Response2");
 var getAudienceAlphaOutput_1 = require("./getAudienceAlphaOutput");
 var getAudienceBetaOutput_1 = require("./getAudienceBetaOutput");
-var getAudienceCsvExportFromSpaceAndAudience200Response_1 = require("./getAudienceCsvExportFromSpaceAndAudience200Response");
-var getAudienceCsvExportFromSpaceAndAudienceAlphaOutput_1 = require("./getAudienceCsvExportFromSpaceAndAudienceAlphaOutput");
 var getAudienceOutput_1 = require("./getAudienceOutput");
 var getAudiencePreview200Response_1 = require("./getAudiencePreview200Response");
 var getAudiencePreview200Response1_1 = require("./getAudiencePreview200Response1");
@@ -1131,11 +1098,9 @@ var getUserGroup200Response_1 = require("./getUserGroup200Response");
 var getUserGroupV1Output_1 = require("./getUserGroupV1Output");
 var getUserV1Output_1 = require("./getUserV1Output");
 var getWarehouse200Response_1 = require("./getWarehouse200Response");
-var getWarehouse200Response1_1 = require("./getWarehouse200Response1");
 var getWarehouseMetadata200Response_1 = require("./getWarehouseMetadata200Response");
 var getWarehouseMetadataV1Output_1 = require("./getWarehouseMetadataV1Output");
 var getWarehouseV1Output_1 = require("./getWarehouseV1Output");
-var getWarehouseV2Output_1 = require("./getWarehouseV2Output");
 var getWarehousesCatalog200Response_1 = require("./getWarehousesCatalog200Response");
 var getWarehousesCatalogV1Output_1 = require("./getWarehousesCatalogV1Output");
 var getWorkspace200Response_1 = require("./getWorkspace200Response");
@@ -1152,7 +1117,6 @@ var insertFunctionInstanceAlpha_1 = require("./insertFunctionInstanceAlpha");
 var integrationOptionBeta_1 = require("./integrationOptionBeta");
 var invitePermissionV1_1 = require("./invitePermissionV1");
 var inviteV1_1 = require("./inviteV1");
-var journeyDefinition_1 = require("./journeyDefinition");
 var labelAlpha_1 = require("./labelAlpha");
 var labelV1_1 = require("./labelV1");
 var listActivationsAlphaOutput_1 = require("./listActivationsAlphaOutput");
@@ -1285,9 +1249,7 @@ var listUsersFromUserGroup200Response_1 = require("./listUsersFromUserGroup200Re
 var listUsersFromUserGroupV1Output_1 = require("./listUsersFromUserGroupV1Output");
 var listUsersV1Output_1 = require("./listUsersV1Output");
 var listWarehouses200Response_1 = require("./listWarehouses200Response");
-var listWarehouses200Response1_1 = require("./listWarehouses200Response1");
 var listWarehousesV1Output_1 = require("./listWarehousesV1Output");
-var listWarehousesV2Output_1 = require("./listWarehousesV2Output");
 var listWorkspaceRegulations200Response_1 = require("./listWorkspaceRegulations200Response");
 var listWorkspaceRegulationsV1Output_1 = require("./listWorkspaceRegulationsV1Output");
 var livePluginsAlpha_1 = require("./livePluginsAlpha");
@@ -1506,11 +1468,8 @@ var updateUserGroup200Response_1 = require("./updateUserGroup200Response");
 var updateUserGroupV1Input_1 = require("./updateUserGroupV1Input");
 var updateUserGroupV1Output_1 = require("./updateUserGroupV1Output");
 var updateWarehouse200Response_1 = require("./updateWarehouse200Response");
-var updateWarehouse200Response1_1 = require("./updateWarehouse200Response1");
 var updateWarehouseV1Input_1 = require("./updateWarehouseV1Input");
 var updateWarehouseV1Output_1 = require("./updateWarehouseV1Output");
-var updateWarehouseV2Input_1 = require("./updateWarehouseV2Input");
-var updateWarehouseV2Output_1 = require("./updateWarehouseV2Output");
 var upsertRuleV1_1 = require("./upsertRuleV1");
 var userGroupV1_1 = require("./userGroupV1");
 var userV1_1 = require("./userV1");
@@ -1521,7 +1480,6 @@ var warehouseMetadataV1_1 = require("./warehouseMetadataV1");
 var warehouseSelectiveSyncItemV1_1 = require("./warehouseSelectiveSyncItemV1");
 var warehouseSyncOverrideV1_1 = require("./warehouseSyncOverrideV1");
 var warehouseV1_1 = require("./warehouseV1");
-var warehouseV2_1 = require("./warehouseV2");
 var workspaceV1_1 = require("./workspaceV1");
 var primitives = [
     'string',
@@ -1559,7 +1517,6 @@ var enumsMap = {
     'CreateSourceRegulationV1Input.SubjectTypeEnum': createSourceRegulationV1Input_1.CreateSourceRegulationV1Input.SubjectTypeEnum,
     'CreateTrackingPlanV1Input.TypeEnum': createTrackingPlanV1Input_1.CreateTrackingPlanV1Input.TypeEnum,
     'CreateValidationInWarehouseV1Output.StatusEnum': createValidationInWarehouseV1Output_1.CreateValidationInWarehouseV1Output.StatusEnum,
-    'CreateValidationInWarehouseV2Output.StatusEnum': createValidationInWarehouseV2Output_1.CreateValidationInWarehouseV2Output.StatusEnum,
     'CreateWorkspaceRegulationV1Input.RegulationTypeEnum': createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input.RegulationTypeEnum,
     'CreateWorkspaceRegulationV1Input.SubjectTypeEnum': createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input.SubjectTypeEnum,
     'DeleteCredentialV1Output.StatusEnum': deleteCredentialV1Output_1.DeleteCredentialV1Output.StatusEnum,
@@ -1659,9 +1616,6 @@ var typeMap = {
     AddActivationToAudience200Response: addActivationToAudience200Response_1.AddActivationToAudience200Response,
     AddActivationToAudienceAlphaInput: addActivationToAudienceAlphaInput_1.AddActivationToAudienceAlphaInput,
     AddActivationToAudienceAlphaOutput: addActivationToAudienceAlphaOutput_1.AddActivationToAudienceAlphaOutput,
-    AddAudienceCsvExportToAudience200Response: addAudienceCsvExportToAudience200Response_1.AddAudienceCsvExportToAudience200Response,
-    AddAudienceCsvExportToAudienceAlphaInput: addAudienceCsvExportToAudienceAlphaInput_1.AddAudienceCsvExportToAudienceAlphaInput,
-    AddAudienceCsvExportToAudienceAlphaOutput: addAudienceCsvExportToAudienceAlphaOutput_1.AddAudienceCsvExportToAudienceAlphaOutput,
     AddAudienceScheduleToAudience200Response: addAudienceScheduleToAudience200Response_1.AddAudienceScheduleToAudience200Response,
     AddAudienceScheduleToAudience200Response1: addAudienceScheduleToAudience200Response1_1.AddAudienceScheduleToAudience200Response1,
     AddAudienceScheduleToAudienceAlphaInput: addAudienceScheduleToAudienceAlphaInput_1.AddAudienceScheduleToAudienceAlphaInput,
@@ -1695,7 +1649,6 @@ var typeMap = {
     AdvancedWarehouseSyncScheduleV1Output: advancedWarehouseSyncScheduleV1Output_1.AdvancedWarehouseSyncScheduleV1Output,
     AllowedLabelBeta: allowedLabelBeta_1.AllowedLabelBeta,
     AudienceComputeCadence: audienceComputeCadence_1.AudienceComputeCadence,
-    AudienceCsvExport: audienceCsvExport_1.AudienceCsvExport,
     AudienceDefinition: audienceDefinition_1.AudienceDefinition,
     AudienceDefinitionWithoutTargetEntity: audienceDefinitionWithoutTargetEntity_1.AudienceDefinitionWithoutTargetEntity,
     AudienceOptions: audienceOptions_1.AudienceOptions,
@@ -1712,6 +1665,9 @@ var typeMap = {
     AudienceSummary: audienceSummary_1.AudienceSummary,
     AudienceSummaryWithAudienceTypeAndLookback: audienceSummaryWithAudienceTypeAndLookback_1.AudienceSummaryWithAudienceTypeAndLookback,
     AuditEventV1: auditEventV1_1.AuditEventV1,
+    BatchQueryActivationsForSpace200Response: batchQueryActivationsForSpace200Response_1.BatchQueryActivationsForSpace200Response,
+    BatchQueryActivationsForSpaceAlphaInput: batchQueryActivationsForSpaceAlphaInput_1.BatchQueryActivationsForSpaceAlphaInput,
+    BatchQueryActivationsForSpaceAlphaOutput: batchQueryActivationsForSpaceAlphaOutput_1.BatchQueryActivationsForSpaceAlphaOutput,
     BatchQueryMessagingSubscriptionsForSpace200Response: batchQueryMessagingSubscriptionsForSpace200Response_1.BatchQueryMessagingSubscriptionsForSpace200Response,
     BatchQueryMessagingSubscriptionsForSpaceAlphaInput: batchQueryMessagingSubscriptionsForSpaceAlphaInput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaInput,
     BatchQueryMessagingSubscriptionsForSpaceAlphaOutput: batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
@@ -1783,9 +1739,6 @@ var typeMap = {
     CreateInvites201Response: createInvites201Response_1.CreateInvites201Response,
     CreateInvitesV1Input: createInvitesV1Input_1.CreateInvitesV1Input,
     CreateInvitesV1Output: createInvitesV1Output_1.CreateInvitesV1Output,
-    CreateJourney200Response: createJourney200Response_1.CreateJourney200Response,
-    CreateJourneyAlphaInput: createJourneyAlphaInput_1.CreateJourneyAlphaInput,
-    CreateJourneyAlphaOutput: createJourneyAlphaOutput_1.CreateJourneyAlphaOutput,
     CreateLabel201Response: createLabel201Response_1.CreateLabel201Response,
     CreateLabelV1Input: createLabelV1Input_1.CreateLabelV1Input,
     CreateLabelV1Output: createLabelV1Output_1.CreateLabelV1Output,
@@ -1822,17 +1775,11 @@ var typeMap = {
     CreateUserGroupV1Input: createUserGroupV1Input_1.CreateUserGroupV1Input,
     CreateUserGroupV1Output: createUserGroupV1Output_1.CreateUserGroupV1Output,
     CreateValidationInWarehouse200Response: createValidationInWarehouse200Response_1.CreateValidationInWarehouse200Response,
-    CreateValidationInWarehouse200Response1: createValidationInWarehouse200Response1_1.CreateValidationInWarehouse200Response1,
     CreateValidationInWarehouseV1Input: createValidationInWarehouseV1Input_1.CreateValidationInWarehouseV1Input,
     CreateValidationInWarehouseV1Output: createValidationInWarehouseV1Output_1.CreateValidationInWarehouseV1Output,
-    CreateValidationInWarehouseV2Input: createValidationInWarehouseV2Input_1.CreateValidationInWarehouseV2Input,
-    CreateValidationInWarehouseV2Output: createValidationInWarehouseV2Output_1.CreateValidationInWarehouseV2Output,
     CreateWarehouse201Response: createWarehouse201Response_1.CreateWarehouse201Response,
-    CreateWarehouse201Response1: createWarehouse201Response1_1.CreateWarehouse201Response1,
     CreateWarehouseV1Input: createWarehouseV1Input_1.CreateWarehouseV1Input,
     CreateWarehouseV1Output: createWarehouseV1Output_1.CreateWarehouseV1Output,
-    CreateWarehouseV2Input: createWarehouseV2Input_1.CreateWarehouseV2Input,
-    CreateWarehouseV2Output: createWarehouseV2Output_1.CreateWarehouseV2Output,
     CreateWorkspaceRegulation200Response: createWorkspaceRegulation200Response_1.CreateWorkspaceRegulation200Response,
     CreateWorkspaceRegulationV1Input: createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input,
     CreateWorkspaceRegulationV1Output: createWorkspaceRegulationV1Output_1.CreateWorkspaceRegulationV1Output,
@@ -1908,10 +1855,10 @@ var typeMap = {
     EntityDetails: entityDetails_1.EntityDetails,
     EntityPathAlpha: entityPathAlpha_1.EntityPathAlpha,
     EntityPropertyAlpha: entityPropertyAlpha_1.EntityPropertyAlpha,
+    ErrorsInner: errorsInner_1.ErrorsInner,
     EventAlpha: eventAlpha_1.EventAlpha,
     EventPropertyAlpha: eventPropertyAlpha_1.EventPropertyAlpha,
     EventSourceV1: eventSourceV1_1.EventSourceV1,
-    EventTriggeredJourneySummary: eventTriggeredJourneySummary_1.EventTriggeredJourneySummary,
     FQLDefinedPropertyV1: fQLDefinedPropertyV1_1.FQLDefinedPropertyV1,
     Filter: filter_1.Filter,
     ForceExecuteAudienceRun200Response: forceExecuteAudienceRun200Response_1.ForceExecuteAudienceRun200Response,
@@ -1931,8 +1878,6 @@ var typeMap = {
     GetAudience200Response2: getAudience200Response2_1.GetAudience200Response2,
     GetAudienceAlphaOutput: getAudienceAlphaOutput_1.GetAudienceAlphaOutput,
     GetAudienceBetaOutput: getAudienceBetaOutput_1.GetAudienceBetaOutput,
-    GetAudienceCsvExportFromSpaceAndAudience200Response: getAudienceCsvExportFromSpaceAndAudience200Response_1.GetAudienceCsvExportFromSpaceAndAudience200Response,
-    GetAudienceCsvExportFromSpaceAndAudienceAlphaOutput: getAudienceCsvExportFromSpaceAndAudienceAlphaOutput_1.GetAudienceCsvExportFromSpaceAndAudienceAlphaOutput,
     GetAudienceOutput: getAudienceOutput_1.GetAudienceOutput,
     GetAudiencePreview200Response: getAudiencePreview200Response_1.GetAudiencePreview200Response,
     GetAudiencePreview200Response1: getAudiencePreview200Response1_1.GetAudiencePreview200Response1,
@@ -2013,11 +1958,9 @@ var typeMap = {
     GetUserGroupV1Output: getUserGroupV1Output_1.GetUserGroupV1Output,
     GetUserV1Output: getUserV1Output_1.GetUserV1Output,
     GetWarehouse200Response: getWarehouse200Response_1.GetWarehouse200Response,
-    GetWarehouse200Response1: getWarehouse200Response1_1.GetWarehouse200Response1,
     GetWarehouseMetadata200Response: getWarehouseMetadata200Response_1.GetWarehouseMetadata200Response,
     GetWarehouseMetadataV1Output: getWarehouseMetadataV1Output_1.GetWarehouseMetadataV1Output,
     GetWarehouseV1Output: getWarehouseV1Output_1.GetWarehouseV1Output,
-    GetWarehouseV2Output: getWarehouseV2Output_1.GetWarehouseV2Output,
     GetWarehousesCatalog200Response: getWarehousesCatalog200Response_1.GetWarehousesCatalog200Response,
     GetWarehousesCatalogV1Output: getWarehousesCatalogV1Output_1.GetWarehousesCatalogV1Output,
     GetWorkspace200Response: getWorkspace200Response_1.GetWorkspace200Response,
@@ -2034,7 +1977,6 @@ var typeMap = {
     IntegrationOptionBeta: integrationOptionBeta_1.IntegrationOptionBeta,
     InvitePermissionV1: invitePermissionV1_1.InvitePermissionV1,
     InviteV1: inviteV1_1.InviteV1,
-    JourneyDefinition: journeyDefinition_1.JourneyDefinition,
     LabelAlpha: labelAlpha_1.LabelAlpha,
     LabelV1: labelV1_1.LabelV1,
     ListActivationsAlphaOutput: listActivationsAlphaOutput_1.ListActivationsAlphaOutput,
@@ -2167,9 +2109,7 @@ var typeMap = {
     ListUsersFromUserGroupV1Output: listUsersFromUserGroupV1Output_1.ListUsersFromUserGroupV1Output,
     ListUsersV1Output: listUsersV1Output_1.ListUsersV1Output,
     ListWarehouses200Response: listWarehouses200Response_1.ListWarehouses200Response,
-    ListWarehouses200Response1: listWarehouses200Response1_1.ListWarehouses200Response1,
     ListWarehousesV1Output: listWarehousesV1Output_1.ListWarehousesV1Output,
-    ListWarehousesV2Output: listWarehousesV2Output_1.ListWarehousesV2Output,
     ListWorkspaceRegulations200Response: listWorkspaceRegulations200Response_1.ListWorkspaceRegulations200Response,
     ListWorkspaceRegulationsV1Output: listWorkspaceRegulationsV1Output_1.ListWorkspaceRegulationsV1Output,
     LivePluginsAlpha: livePluginsAlpha_1.LivePluginsAlpha,
@@ -2387,11 +2327,8 @@ var typeMap = {
     UpdateUserGroupV1Input: updateUserGroupV1Input_1.UpdateUserGroupV1Input,
     UpdateUserGroupV1Output: updateUserGroupV1Output_1.UpdateUserGroupV1Output,
     UpdateWarehouse200Response: updateWarehouse200Response_1.UpdateWarehouse200Response,
-    UpdateWarehouse200Response1: updateWarehouse200Response1_1.UpdateWarehouse200Response1,
     UpdateWarehouseV1Input: updateWarehouseV1Input_1.UpdateWarehouseV1Input,
     UpdateWarehouseV1Output: updateWarehouseV1Output_1.UpdateWarehouseV1Output,
-    UpdateWarehouseV2Input: updateWarehouseV2Input_1.UpdateWarehouseV2Input,
-    UpdateWarehouseV2Output: updateWarehouseV2Output_1.UpdateWarehouseV2Output,
     UpsertRuleV1: upsertRuleV1_1.UpsertRuleV1,
     UserGroupV1: userGroupV1_1.UserGroupV1,
     UserV1: userV1_1.UserV1,
@@ -2402,7 +2339,6 @@ var typeMap = {
     WarehouseSelectiveSyncItemV1: warehouseSelectiveSyncItemV1_1.WarehouseSelectiveSyncItemV1,
     WarehouseSyncOverrideV1: warehouseSyncOverrideV1_1.WarehouseSyncOverrideV1,
     WarehouseV1: warehouseV1_1.WarehouseV1,
-    WarehouseV2: warehouseV2_1.WarehouseV2,
     WorkspaceV1: workspaceV1_1.WorkspaceV1,
 };
 var ObjectSerializer = (function () {

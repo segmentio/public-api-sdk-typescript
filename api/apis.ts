@@ -34,8 +34,6 @@ export * from './iAMRolesApi';
 import { IAMRolesApi } from './iAMRolesApi';
 export * from './iAMUsersApi';
 import { IAMUsersApi } from './iAMUsersApi';
-export * from './journeysApi';
-import { JourneysApi } from './journeysApi';
 export * from './labelsApi';
 import { LabelsApi } from './labelsApi';
 export * from './livePluginsApi';
@@ -100,7 +98,6 @@ export const APIS = [
     IAMGroupsApi,
     IAMRolesApi,
     IAMUsersApi,
-    JourneysApi,
     LabelsApi,
     LivePluginsApi,
     MonthlyTrackedUsersApi,
@@ -180,7 +177,7 @@ export function configureApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 73.4.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 73.3.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }
@@ -227,7 +224,7 @@ export function configureEuApis(
 
     for (const k of Object.keys(apis)) {
         const key = k as keyof typeof apis;
-        headers['User-Agent'] = 'Public API SDK 73.4.0 (TypeScript)';
+        headers['User-Agent'] = 'Public API SDK 73.3.0 (TypeScript)';
         apis[key].accessToken = token;
         apis[key].defaultHeaders = headers;
     }

@@ -1,7 +1,5 @@
 /// <reference types="node" />
 import http from 'http';
-import { AddAudienceCsvExportToAudience200Response } from '../model/addAudienceCsvExportToAudience200Response';
-import { AddAudienceCsvExportToAudienceAlphaInput } from '../model/addAudienceCsvExportToAudienceAlphaInput';
 import { AddAudienceScheduleToAudience200Response } from '../model/addAudienceScheduleToAudience200Response';
 import { AddAudienceScheduleToAudienceInput } from '../model/addAudienceScheduleToAudienceInput';
 import { CreateAudience200Response } from '../model/createAudience200Response';
@@ -10,7 +8,6 @@ import { CreateAudiencePreview200Response } from '../model/createAudiencePreview
 import { CreateAudiencePreviewInput } from '../model/createAudiencePreviewInput';
 import { ForceExecuteAudienceRun200Response } from '../model/forceExecuteAudienceRun200Response';
 import { GetAudience200Response } from '../model/getAudience200Response';
-import { GetAudienceCsvExportFromSpaceAndAudience200Response } from '../model/getAudienceCsvExportFromSpaceAndAudience200Response';
 import { GetAudiencePreview200Response } from '../model/getAudiencePreview200Response';
 import { GetAudienceScheduleFromSpaceAndAudience200Response } from '../model/getAudienceScheduleFromSpaceAndAudience200Response';
 import { ListAudienceConsumersFromSpaceAndAudience200Response } from '../model/listAudienceConsumersFromSpaceAndAudience200Response';
@@ -49,14 +46,6 @@ export declare class AudiencesApi {
     setApiKey(key: AudiencesApiApiKeys, value: string): void;
     set accessToken(accessToken: string | (() => string));
     addInterceptor(interceptor: Interceptor): void;
-    addAudienceCsvExportToAudience(spaceId: string, id: string, AddAudienceCsvExportToAudienceAlphaInput: AddAudienceCsvExportToAudienceAlphaInput, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: AddAudienceCsvExportToAudience200Response;
-    }>;
     addAudienceScheduleToAudience(spaceId: string, id: string, AddAudienceScheduleToAudienceInput: AddAudienceScheduleToAudienceInput, options?: {
         headers: {
             [name: string]: string;
@@ -96,14 +85,6 @@ export declare class AudiencesApi {
     }): Promise<{
         response: http.IncomingMessage;
         body: GetAudience200Response;
-    }>;
-    getAudienceCsvExportFromSpaceAndAudience(spaceId: string, id: string, exportId: string, options?: {
-        headers: {
-            [name: string]: string;
-        };
-    }): Promise<{
-        response: http.IncomingMessage;
-        body: GetAudienceCsvExportFromSpaceAndAudience200Response;
     }>;
     getAudiencePreview(spaceId: string, id: string, options?: {
         headers: {
