@@ -180,11 +180,17 @@ __exportStar(require("./createUserGroup200Response"), exports);
 __exportStar(require("./createUserGroupV1Input"), exports);
 __exportStar(require("./createUserGroupV1Output"), exports);
 __exportStar(require("./createValidationInWarehouse200Response"), exports);
+__exportStar(require("./createValidationInWarehouse200Response1"), exports);
 __exportStar(require("./createValidationInWarehouseV1Input"), exports);
 __exportStar(require("./createValidationInWarehouseV1Output"), exports);
+__exportStar(require("./createValidationInWarehouseV2Input"), exports);
+__exportStar(require("./createValidationInWarehouseV2Output"), exports);
 __exportStar(require("./createWarehouse201Response"), exports);
+__exportStar(require("./createWarehouse201Response1"), exports);
 __exportStar(require("./createWarehouseV1Input"), exports);
 __exportStar(require("./createWarehouseV1Output"), exports);
+__exportStar(require("./createWarehouseV2Input"), exports);
+__exportStar(require("./createWarehouseV2Output"), exports);
 __exportStar(require("./createWorkspaceRegulation200Response"), exports);
 __exportStar(require("./createWorkspaceRegulationV1Input"), exports);
 __exportStar(require("./createWorkspaceRegulationV1Output"), exports);
@@ -365,9 +371,11 @@ __exportStar(require("./getUserGroup200Response"), exports);
 __exportStar(require("./getUserGroupV1Output"), exports);
 __exportStar(require("./getUserV1Output"), exports);
 __exportStar(require("./getWarehouse200Response"), exports);
+__exportStar(require("./getWarehouse200Response1"), exports);
 __exportStar(require("./getWarehouseMetadata200Response"), exports);
 __exportStar(require("./getWarehouseMetadataV1Output"), exports);
 __exportStar(require("./getWarehouseV1Output"), exports);
+__exportStar(require("./getWarehouseV2Output"), exports);
 __exportStar(require("./getWarehousesCatalog200Response"), exports);
 __exportStar(require("./getWarehousesCatalogV1Output"), exports);
 __exportStar(require("./getWorkspace200Response"), exports);
@@ -518,7 +526,9 @@ __exportStar(require("./listUsersFromUserGroup200Response"), exports);
 __exportStar(require("./listUsersFromUserGroupV1Output"), exports);
 __exportStar(require("./listUsersV1Output"), exports);
 __exportStar(require("./listWarehouses200Response"), exports);
+__exportStar(require("./listWarehouses200Response1"), exports);
 __exportStar(require("./listWarehousesV1Output"), exports);
+__exportStar(require("./listWarehousesV2Output"), exports);
 __exportStar(require("./listWorkspaceRegulations200Response"), exports);
 __exportStar(require("./listWorkspaceRegulationsV1Output"), exports);
 __exportStar(require("./livePluginsAlpha"), exports);
@@ -737,8 +747,11 @@ __exportStar(require("./updateUserGroup200Response"), exports);
 __exportStar(require("./updateUserGroupV1Input"), exports);
 __exportStar(require("./updateUserGroupV1Output"), exports);
 __exportStar(require("./updateWarehouse200Response"), exports);
+__exportStar(require("./updateWarehouse200Response1"), exports);
 __exportStar(require("./updateWarehouseV1Input"), exports);
 __exportStar(require("./updateWarehouseV1Output"), exports);
+__exportStar(require("./updateWarehouseV2Input"), exports);
+__exportStar(require("./updateWarehouseV2Output"), exports);
 __exportStar(require("./upsertRuleV1"), exports);
 __exportStar(require("./userGroupV1"), exports);
 __exportStar(require("./userV1"), exports);
@@ -749,6 +762,7 @@ __exportStar(require("./warehouseMetadataV1"), exports);
 __exportStar(require("./warehouseSelectiveSyncItemV1"), exports);
 __exportStar(require("./warehouseSyncOverrideV1"), exports);
 __exportStar(require("./warehouseV1"), exports);
+__exportStar(require("./warehouseV2"), exports);
 __exportStar(require("./workspaceV1"), exports);
 var aPICallSnapshotV1_1 = require("./aPICallSnapshotV1");
 var accessPermissionV1_1 = require("./accessPermissionV1");
@@ -915,11 +929,17 @@ var createUserGroup200Response_1 = require("./createUserGroup200Response");
 var createUserGroupV1Input_1 = require("./createUserGroupV1Input");
 var createUserGroupV1Output_1 = require("./createUserGroupV1Output");
 var createValidationInWarehouse200Response_1 = require("./createValidationInWarehouse200Response");
+var createValidationInWarehouse200Response1_1 = require("./createValidationInWarehouse200Response1");
 var createValidationInWarehouseV1Input_1 = require("./createValidationInWarehouseV1Input");
 var createValidationInWarehouseV1Output_1 = require("./createValidationInWarehouseV1Output");
+var createValidationInWarehouseV2Input_1 = require("./createValidationInWarehouseV2Input");
+var createValidationInWarehouseV2Output_1 = require("./createValidationInWarehouseV2Output");
 var createWarehouse201Response_1 = require("./createWarehouse201Response");
+var createWarehouse201Response1_1 = require("./createWarehouse201Response1");
 var createWarehouseV1Input_1 = require("./createWarehouseV1Input");
 var createWarehouseV1Output_1 = require("./createWarehouseV1Output");
+var createWarehouseV2Input_1 = require("./createWarehouseV2Input");
+var createWarehouseV2Output_1 = require("./createWarehouseV2Output");
 var createWorkspaceRegulation200Response_1 = require("./createWorkspaceRegulation200Response");
 var createWorkspaceRegulationV1Input_1 = require("./createWorkspaceRegulationV1Input");
 var createWorkspaceRegulationV1Output_1 = require("./createWorkspaceRegulationV1Output");
@@ -1100,9 +1120,11 @@ var getUserGroup200Response_1 = require("./getUserGroup200Response");
 var getUserGroupV1Output_1 = require("./getUserGroupV1Output");
 var getUserV1Output_1 = require("./getUserV1Output");
 var getWarehouse200Response_1 = require("./getWarehouse200Response");
+var getWarehouse200Response1_1 = require("./getWarehouse200Response1");
 var getWarehouseMetadata200Response_1 = require("./getWarehouseMetadata200Response");
 var getWarehouseMetadataV1Output_1 = require("./getWarehouseMetadataV1Output");
 var getWarehouseV1Output_1 = require("./getWarehouseV1Output");
+var getWarehouseV2Output_1 = require("./getWarehouseV2Output");
 var getWarehousesCatalog200Response_1 = require("./getWarehousesCatalog200Response");
 var getWarehousesCatalogV1Output_1 = require("./getWarehousesCatalogV1Output");
 var getWorkspace200Response_1 = require("./getWorkspace200Response");
@@ -1253,7 +1275,9 @@ var listUsersFromUserGroup200Response_1 = require("./listUsersFromUserGroup200Re
 var listUsersFromUserGroupV1Output_1 = require("./listUsersFromUserGroupV1Output");
 var listUsersV1Output_1 = require("./listUsersV1Output");
 var listWarehouses200Response_1 = require("./listWarehouses200Response");
+var listWarehouses200Response1_1 = require("./listWarehouses200Response1");
 var listWarehousesV1Output_1 = require("./listWarehousesV1Output");
+var listWarehousesV2Output_1 = require("./listWarehousesV2Output");
 var listWorkspaceRegulations200Response_1 = require("./listWorkspaceRegulations200Response");
 var listWorkspaceRegulationsV1Output_1 = require("./listWorkspaceRegulationsV1Output");
 var livePluginsAlpha_1 = require("./livePluginsAlpha");
@@ -1472,8 +1496,11 @@ var updateUserGroup200Response_1 = require("./updateUserGroup200Response");
 var updateUserGroupV1Input_1 = require("./updateUserGroupV1Input");
 var updateUserGroupV1Output_1 = require("./updateUserGroupV1Output");
 var updateWarehouse200Response_1 = require("./updateWarehouse200Response");
+var updateWarehouse200Response1_1 = require("./updateWarehouse200Response1");
 var updateWarehouseV1Input_1 = require("./updateWarehouseV1Input");
 var updateWarehouseV1Output_1 = require("./updateWarehouseV1Output");
+var updateWarehouseV2Input_1 = require("./updateWarehouseV2Input");
+var updateWarehouseV2Output_1 = require("./updateWarehouseV2Output");
 var upsertRuleV1_1 = require("./upsertRuleV1");
 var userGroupV1_1 = require("./userGroupV1");
 var userV1_1 = require("./userV1");
@@ -1484,6 +1511,7 @@ var warehouseMetadataV1_1 = require("./warehouseMetadataV1");
 var warehouseSelectiveSyncItemV1_1 = require("./warehouseSelectiveSyncItemV1");
 var warehouseSyncOverrideV1_1 = require("./warehouseSyncOverrideV1");
 var warehouseV1_1 = require("./warehouseV1");
+var warehouseV2_1 = require("./warehouseV2");
 var workspaceV1_1 = require("./workspaceV1");
 var primitives = [
     'string',
@@ -1521,6 +1549,7 @@ var enumsMap = {
     'CreateSourceRegulationV1Input.SubjectTypeEnum': createSourceRegulationV1Input_1.CreateSourceRegulationV1Input.SubjectTypeEnum,
     'CreateTrackingPlanV1Input.TypeEnum': createTrackingPlanV1Input_1.CreateTrackingPlanV1Input.TypeEnum,
     'CreateValidationInWarehouseV1Output.StatusEnum': createValidationInWarehouseV1Output_1.CreateValidationInWarehouseV1Output.StatusEnum,
+    'CreateValidationInWarehouseV2Output.StatusEnum': createValidationInWarehouseV2Output_1.CreateValidationInWarehouseV2Output.StatusEnum,
     'CreateWorkspaceRegulationV1Input.RegulationTypeEnum': createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input.RegulationTypeEnum,
     'CreateWorkspaceRegulationV1Input.SubjectTypeEnum': createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input.SubjectTypeEnum,
     'DeleteCredentialV1Output.StatusEnum': deleteCredentialV1Output_1.DeleteCredentialV1Output.StatusEnum,
@@ -1779,11 +1808,17 @@ var typeMap = {
     CreateUserGroupV1Input: createUserGroupV1Input_1.CreateUserGroupV1Input,
     CreateUserGroupV1Output: createUserGroupV1Output_1.CreateUserGroupV1Output,
     CreateValidationInWarehouse200Response: createValidationInWarehouse200Response_1.CreateValidationInWarehouse200Response,
+    CreateValidationInWarehouse200Response1: createValidationInWarehouse200Response1_1.CreateValidationInWarehouse200Response1,
     CreateValidationInWarehouseV1Input: createValidationInWarehouseV1Input_1.CreateValidationInWarehouseV1Input,
     CreateValidationInWarehouseV1Output: createValidationInWarehouseV1Output_1.CreateValidationInWarehouseV1Output,
+    CreateValidationInWarehouseV2Input: createValidationInWarehouseV2Input_1.CreateValidationInWarehouseV2Input,
+    CreateValidationInWarehouseV2Output: createValidationInWarehouseV2Output_1.CreateValidationInWarehouseV2Output,
     CreateWarehouse201Response: createWarehouse201Response_1.CreateWarehouse201Response,
+    CreateWarehouse201Response1: createWarehouse201Response1_1.CreateWarehouse201Response1,
     CreateWarehouseV1Input: createWarehouseV1Input_1.CreateWarehouseV1Input,
     CreateWarehouseV1Output: createWarehouseV1Output_1.CreateWarehouseV1Output,
+    CreateWarehouseV2Input: createWarehouseV2Input_1.CreateWarehouseV2Input,
+    CreateWarehouseV2Output: createWarehouseV2Output_1.CreateWarehouseV2Output,
     CreateWorkspaceRegulation200Response: createWorkspaceRegulation200Response_1.CreateWorkspaceRegulation200Response,
     CreateWorkspaceRegulationV1Input: createWorkspaceRegulationV1Input_1.CreateWorkspaceRegulationV1Input,
     CreateWorkspaceRegulationV1Output: createWorkspaceRegulationV1Output_1.CreateWorkspaceRegulationV1Output,
@@ -1962,9 +1997,11 @@ var typeMap = {
     GetUserGroupV1Output: getUserGroupV1Output_1.GetUserGroupV1Output,
     GetUserV1Output: getUserV1Output_1.GetUserV1Output,
     GetWarehouse200Response: getWarehouse200Response_1.GetWarehouse200Response,
+    GetWarehouse200Response1: getWarehouse200Response1_1.GetWarehouse200Response1,
     GetWarehouseMetadata200Response: getWarehouseMetadata200Response_1.GetWarehouseMetadata200Response,
     GetWarehouseMetadataV1Output: getWarehouseMetadataV1Output_1.GetWarehouseMetadataV1Output,
     GetWarehouseV1Output: getWarehouseV1Output_1.GetWarehouseV1Output,
+    GetWarehouseV2Output: getWarehouseV2Output_1.GetWarehouseV2Output,
     GetWarehousesCatalog200Response: getWarehousesCatalog200Response_1.GetWarehousesCatalog200Response,
     GetWarehousesCatalogV1Output: getWarehousesCatalogV1Output_1.GetWarehousesCatalogV1Output,
     GetWorkspace200Response: getWorkspace200Response_1.GetWorkspace200Response,
@@ -2115,7 +2152,9 @@ var typeMap = {
     ListUsersFromUserGroupV1Output: listUsersFromUserGroupV1Output_1.ListUsersFromUserGroupV1Output,
     ListUsersV1Output: listUsersV1Output_1.ListUsersV1Output,
     ListWarehouses200Response: listWarehouses200Response_1.ListWarehouses200Response,
+    ListWarehouses200Response1: listWarehouses200Response1_1.ListWarehouses200Response1,
     ListWarehousesV1Output: listWarehousesV1Output_1.ListWarehousesV1Output,
+    ListWarehousesV2Output: listWarehousesV2Output_1.ListWarehousesV2Output,
     ListWorkspaceRegulations200Response: listWorkspaceRegulations200Response_1.ListWorkspaceRegulations200Response,
     ListWorkspaceRegulationsV1Output: listWorkspaceRegulationsV1Output_1.ListWorkspaceRegulationsV1Output,
     LivePluginsAlpha: livePluginsAlpha_1.LivePluginsAlpha,
@@ -2333,8 +2372,11 @@ var typeMap = {
     UpdateUserGroupV1Input: updateUserGroupV1Input_1.UpdateUserGroupV1Input,
     UpdateUserGroupV1Output: updateUserGroupV1Output_1.UpdateUserGroupV1Output,
     UpdateWarehouse200Response: updateWarehouse200Response_1.UpdateWarehouse200Response,
+    UpdateWarehouse200Response1: updateWarehouse200Response1_1.UpdateWarehouse200Response1,
     UpdateWarehouseV1Input: updateWarehouseV1Input_1.UpdateWarehouseV1Input,
     UpdateWarehouseV1Output: updateWarehouseV1Output_1.UpdateWarehouseV1Output,
+    UpdateWarehouseV2Input: updateWarehouseV2Input_1.UpdateWarehouseV2Input,
+    UpdateWarehouseV2Output: updateWarehouseV2Output_1.UpdateWarehouseV2Output,
     UpsertRuleV1: upsertRuleV1_1.UpsertRuleV1,
     UserGroupV1: userGroupV1_1.UserGroupV1,
     UserV1: userV1_1.UserV1,
@@ -2345,6 +2387,7 @@ var typeMap = {
     WarehouseSelectiveSyncItemV1: warehouseSelectiveSyncItemV1_1.WarehouseSelectiveSyncItemV1,
     WarehouseSyncOverrideV1: warehouseSyncOverrideV1_1.WarehouseSyncOverrideV1,
     WarehouseV1: warehouseV1_1.WarehouseV1,
+    WarehouseV2: warehouseV2_1.WarehouseV2,
     WorkspaceV1: workspaceV1_1.WorkspaceV1,
 };
 var ObjectSerializer = (function () {
