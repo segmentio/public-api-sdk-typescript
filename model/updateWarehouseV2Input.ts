@@ -25,7 +25,7 @@ export class UpdateWarehouseV2Input {
      */
     'enabled'?: boolean;
     /**
-     * The id of a Credential to connect this Warehouse to. Swapping the Credential re-derives this Warehouse\'s connection settings and re-validates the connection.
+     * The id of a Credential to connect this Warehouse to. Swapping the Credential re-derives this Warehouse\'s connection settings and re-validates the connection. The Credential must be the same type as the Warehouse\'s existing type — a Warehouse\'s type cannot be changed after creation, so a mismatched Credential is rejected rather than silently ignored.
      */
     'credentialId'?: string;
 
