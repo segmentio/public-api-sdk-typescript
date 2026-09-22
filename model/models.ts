@@ -375,7 +375,9 @@ export * from './listActivationsAlphaOutput';
 export * from './listActivationsFromAudience200Response';
 export * from './listActivationsFromAudienceOutput';
 export * from './listAudienceConsumersFromSpaceAndAudience200Response';
+export * from './listAudienceConsumersFromSpaceAndAudience200Response1';
 export * from './listAudienceConsumersFromSpaceAndAudienceAlphaOutput';
+export * from './listAudienceConsumersFromSpaceAndAudienceOutput';
 export * from './listAudienceConsumersSortInput';
 export * from './listAudienceSchedulesFromSpaceAndAudience200Response';
 export * from './listAudienceSchedulesFromSpaceAndAudience200Response1';
@@ -1121,7 +1123,9 @@ import { ListActivationsAlphaOutput } from './listActivationsAlphaOutput';
 import { ListActivationsFromAudience200Response } from './listActivationsFromAudience200Response';
 import { ListActivationsFromAudienceOutput } from './listActivationsFromAudienceOutput';
 import { ListAudienceConsumersFromSpaceAndAudience200Response } from './listAudienceConsumersFromSpaceAndAudience200Response';
+import { ListAudienceConsumersFromSpaceAndAudience200Response1 } from './listAudienceConsumersFromSpaceAndAudience200Response1';
 import { ListAudienceConsumersFromSpaceAndAudienceAlphaOutput } from './listAudienceConsumersFromSpaceAndAudienceAlphaOutput';
+import { ListAudienceConsumersFromSpaceAndAudienceOutput } from './listAudienceConsumersFromSpaceAndAudienceOutput';
 import { ListAudienceConsumersSortInput } from './listAudienceConsumersSortInput';
 import { ListAudienceSchedulesFromSpaceAndAudience200Response } from './listAudienceSchedulesFromSpaceAndAudience200Response';
 import { ListAudienceSchedulesFromSpaceAndAudience200Response1 } from './listAudienceSchedulesFromSpaceAndAudience200Response1';
@@ -2107,8 +2111,12 @@ let typeMap: { [index: string]: any } = {
     ListActivationsFromAudienceOutput: ListActivationsFromAudienceOutput,
     ListAudienceConsumersFromSpaceAndAudience200Response:
         ListAudienceConsumersFromSpaceAndAudience200Response,
+    ListAudienceConsumersFromSpaceAndAudience200Response1:
+        ListAudienceConsumersFromSpaceAndAudience200Response1,
     ListAudienceConsumersFromSpaceAndAudienceAlphaOutput:
         ListAudienceConsumersFromSpaceAndAudienceAlphaOutput,
+    ListAudienceConsumersFromSpaceAndAudienceOutput:
+        ListAudienceConsumersFromSpaceAndAudienceOutput,
     ListAudienceConsumersSortInput: ListAudienceConsumersSortInput,
     ListAudienceSchedulesFromSpaceAndAudience200Response:
         ListAudienceSchedulesFromSpaceAndAudience200Response,

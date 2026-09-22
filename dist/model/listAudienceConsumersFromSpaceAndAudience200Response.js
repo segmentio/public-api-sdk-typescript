@@ -12,7 +12,7 @@ var ListAudienceConsumersFromSpaceAndAudience200Response = (function () {
         {
             name: 'data',
             baseName: 'data',
-            type: 'ListAudienceConsumersFromSpaceAndAudienceAlphaOutput',
+            type: 'ListAudienceConsumersFromSpaceAndAudienceOutput',
         },
     ];
     return ListAudienceConsumersFromSpaceAndAudience200Response;
