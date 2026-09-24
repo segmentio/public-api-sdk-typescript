@@ -129,6 +129,7 @@ var WarehousesApi = (function () {
                     'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v2+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -217,6 +218,7 @@ var WarehousesApi = (function () {
                     'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v2+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -304,6 +306,7 @@ var WarehousesApi = (function () {
                     'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v2+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -392,6 +395,7 @@ var WarehousesApi = (function () {
                     'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v2+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -478,6 +482,7 @@ var WarehousesApi = (function () {
                     'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v2+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -564,6 +569,7 @@ var WarehousesApi = (function () {
                     'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v2+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -650,6 +656,7 @@ var WarehousesApi = (function () {
                     'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v2+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -738,6 +745,7 @@ var WarehousesApi = (function () {
                     'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v2+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -826,6 +834,7 @@ var WarehousesApi = (function () {
                     'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v2+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';
@@ -915,6 +924,7 @@ var WarehousesApi = (function () {
                     'application/json',
                     'application/vnd.segment.v1beta+json',
                     'application/vnd.segment.v1alpha+json',
+                    'application/vnd.segment.v2+json',
                 ];
                 if (produces.indexOf('application/json') >= 0) {
                     localVarHeaderParams.Accept = 'application/json';

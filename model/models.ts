@@ -165,11 +165,17 @@ export * from './createUserGroup200Response';
 export * from './createUserGroupV1Input';
 export * from './createUserGroupV1Output';
 export * from './createValidationInWarehouse200Response';
+export * from './createValidationInWarehouse200Response1';
 export * from './createValidationInWarehouseV1Input';
 export * from './createValidationInWarehouseV1Output';
+export * from './createValidationInWarehouseV2Input';
+export * from './createValidationInWarehouseV2Output';
 export * from './createWarehouse201Response';
+export * from './createWarehouse201Response1';
 export * from './createWarehouseV1Input';
 export * from './createWarehouseV1Output';
+export * from './createWarehouseV2Input';
+export * from './createWarehouseV2Output';
 export * from './createWorkspaceRegulation200Response';
 export * from './createWorkspaceRegulationV1Input';
 export * from './createWorkspaceRegulationV1Output';
@@ -350,9 +356,11 @@ export * from './getUserGroup200Response';
 export * from './getUserGroupV1Output';
 export * from './getUserV1Output';
 export * from './getWarehouse200Response';
+export * from './getWarehouse200Response1';
 export * from './getWarehouseMetadata200Response';
 export * from './getWarehouseMetadataV1Output';
 export * from './getWarehouseV1Output';
+export * from './getWarehouseV2Output';
 export * from './getWarehousesCatalog200Response';
 export * from './getWarehousesCatalogV1Output';
 export * from './getWorkspace200Response';
@@ -503,7 +511,9 @@ export * from './listUsersFromUserGroup200Response';
 export * from './listUsersFromUserGroupV1Output';
 export * from './listUsersV1Output';
 export * from './listWarehouses200Response';
+export * from './listWarehouses200Response1';
 export * from './listWarehousesV1Output';
+export * from './listWarehousesV2Output';
 export * from './listWorkspaceRegulations200Response';
 export * from './listWorkspaceRegulationsV1Output';
 export * from './livePluginsAlpha';
@@ -722,8 +732,11 @@ export * from './updateUserGroup200Response';
 export * from './updateUserGroupV1Input';
 export * from './updateUserGroupV1Output';
 export * from './updateWarehouse200Response';
+export * from './updateWarehouse200Response1';
 export * from './updateWarehouseV1Input';
 export * from './updateWarehouseV1Output';
+export * from './updateWarehouseV2Input';
+export * from './updateWarehouseV2Output';
 export * from './upsertRuleV1';
 export * from './userGroupV1';
 export * from './userV1';
@@ -734,6 +747,7 @@ export * from './warehouseMetadataV1';
 export * from './warehouseSelectiveSyncItemV1';
 export * from './warehouseSyncOverrideV1';
 export * from './warehouseV1';
+export * from './warehouseV2';
 export * from './workspaceV1';
 
 import * as fs from 'fs';
@@ -913,11 +927,17 @@ import { CreateUserGroup200Response } from './createUserGroup200Response';
 import { CreateUserGroupV1Input } from './createUserGroupV1Input';
 import { CreateUserGroupV1Output } from './createUserGroupV1Output';
 import { CreateValidationInWarehouse200Response } from './createValidationInWarehouse200Response';
+import { CreateValidationInWarehouse200Response1 } from './createValidationInWarehouse200Response1';
 import { CreateValidationInWarehouseV1Input } from './createValidationInWarehouseV1Input';
 import { CreateValidationInWarehouseV1Output } from './createValidationInWarehouseV1Output';
+import { CreateValidationInWarehouseV2Input } from './createValidationInWarehouseV2Input';
+import { CreateValidationInWarehouseV2Output } from './createValidationInWarehouseV2Output';
 import { CreateWarehouse201Response } from './createWarehouse201Response';
+import { CreateWarehouse201Response1 } from './createWarehouse201Response1';
 import { CreateWarehouseV1Input } from './createWarehouseV1Input';
 import { CreateWarehouseV1Output } from './createWarehouseV1Output';
+import { CreateWarehouseV2Input } from './createWarehouseV2Input';
+import { CreateWarehouseV2Output } from './createWarehouseV2Output';
 import { CreateWorkspaceRegulation200Response } from './createWorkspaceRegulation200Response';
 import { CreateWorkspaceRegulationV1Input } from './createWorkspaceRegulationV1Input';
 import { CreateWorkspaceRegulationV1Output } from './createWorkspaceRegulationV1Output';
@@ -1098,9 +1118,11 @@ import { GetUserGroup200Response } from './getUserGroup200Response';
 import { GetUserGroupV1Output } from './getUserGroupV1Output';
 import { GetUserV1Output } from './getUserV1Output';
 import { GetWarehouse200Response } from './getWarehouse200Response';
+import { GetWarehouse200Response1 } from './getWarehouse200Response1';
 import { GetWarehouseMetadata200Response } from './getWarehouseMetadata200Response';
 import { GetWarehouseMetadataV1Output } from './getWarehouseMetadataV1Output';
 import { GetWarehouseV1Output } from './getWarehouseV1Output';
+import { GetWarehouseV2Output } from './getWarehouseV2Output';
 import { GetWarehousesCatalog200Response } from './getWarehousesCatalog200Response';
 import { GetWarehousesCatalogV1Output } from './getWarehousesCatalogV1Output';
 import { GetWorkspace200Response } from './getWorkspace200Response';
@@ -1251,7 +1273,9 @@ import { ListUsersFromUserGroup200Response } from './listUsersFromUserGroup200Re
 import { ListUsersFromUserGroupV1Output } from './listUsersFromUserGroupV1Output';
 import { ListUsersV1Output } from './listUsersV1Output';
 import { ListWarehouses200Response } from './listWarehouses200Response';
+import { ListWarehouses200Response1 } from './listWarehouses200Response1';
 import { ListWarehousesV1Output } from './listWarehousesV1Output';
+import { ListWarehousesV2Output } from './listWarehousesV2Output';
 import { ListWorkspaceRegulations200Response } from './listWorkspaceRegulations200Response';
 import { ListWorkspaceRegulationsV1Output } from './listWorkspaceRegulationsV1Output';
 import { LivePluginsAlpha } from './livePluginsAlpha';
@@ -1470,8 +1494,11 @@ import { UpdateUserGroup200Response } from './updateUserGroup200Response';
 import { UpdateUserGroupV1Input } from './updateUserGroupV1Input';
 import { UpdateUserGroupV1Output } from './updateUserGroupV1Output';
 import { UpdateWarehouse200Response } from './updateWarehouse200Response';
+import { UpdateWarehouse200Response1 } from './updateWarehouse200Response1';
 import { UpdateWarehouseV1Input } from './updateWarehouseV1Input';
 import { UpdateWarehouseV1Output } from './updateWarehouseV1Output';
+import { UpdateWarehouseV2Input } from './updateWarehouseV2Input';
+import { UpdateWarehouseV2Output } from './updateWarehouseV2Output';
 import { UpsertRuleV1 } from './upsertRuleV1';
 import { UserGroupV1 } from './userGroupV1';
 import { UserV1 } from './userV1';
@@ -1482,6 +1509,7 @@ import { WarehouseMetadataV1 } from './warehouseMetadataV1';
 import { WarehouseSelectiveSyncItemV1 } from './warehouseSelectiveSyncItemV1';
 import { WarehouseSyncOverrideV1 } from './warehouseSyncOverrideV1';
 import { WarehouseV1 } from './warehouseV1';
+import { WarehouseV2 } from './warehouseV2';
 import { WorkspaceV1 } from './workspaceV1';
 
 /* tslint:disable:no-unused-variable */
@@ -1539,6 +1567,8 @@ let enumsMap: { [index: string]: any } = {
     'CreateTrackingPlanV1Input.TypeEnum': CreateTrackingPlanV1Input.TypeEnum,
     'CreateValidationInWarehouseV1Output.StatusEnum':
         CreateValidationInWarehouseV1Output.StatusEnum,
+    'CreateValidationInWarehouseV2Output.StatusEnum':
+        CreateValidationInWarehouseV2Output.StatusEnum,
     'CreateWorkspaceRegulationV1Input.RegulationTypeEnum':
         CreateWorkspaceRegulationV1Input.RegulationTypeEnum,
     'CreateWorkspaceRegulationV1Input.SubjectTypeEnum':
@@ -1879,11 +1909,18 @@ let typeMap: { [index: string]: any } = {
     CreateUserGroupV1Output: CreateUserGroupV1Output,
     CreateValidationInWarehouse200Response:
         CreateValidationInWarehouse200Response,
+    CreateValidationInWarehouse200Response1:
+        CreateValidationInWarehouse200Response1,
     CreateValidationInWarehouseV1Input: CreateValidationInWarehouseV1Input,
     CreateValidationInWarehouseV1Output: CreateValidationInWarehouseV1Output,
+    CreateValidationInWarehouseV2Input: CreateValidationInWarehouseV2Input,
+    CreateValidationInWarehouseV2Output: CreateValidationInWarehouseV2Output,
     CreateWarehouse201Response: CreateWarehouse201Response,
+    CreateWarehouse201Response1: CreateWarehouse201Response1,
     CreateWarehouseV1Input: CreateWarehouseV1Input,
     CreateWarehouseV1Output: CreateWarehouseV1Output,
+    CreateWarehouseV2Input: CreateWarehouseV2Input,
+    CreateWarehouseV2Output: CreateWarehouseV2Output,
     CreateWorkspaceRegulation200Response: CreateWorkspaceRegulation200Response,
     CreateWorkspaceRegulationV1Input: CreateWorkspaceRegulationV1Input,
     CreateWorkspaceRegulationV1Output: CreateWorkspaceRegulationV1Output,
@@ -2084,9 +2121,11 @@ let typeMap: { [index: string]: any } = {
     GetUserGroupV1Output: GetUserGroupV1Output,
     GetUserV1Output: GetUserV1Output,
     GetWarehouse200Response: GetWarehouse200Response,
+    GetWarehouse200Response1: GetWarehouse200Response1,
     GetWarehouseMetadata200Response: GetWarehouseMetadata200Response,
     GetWarehouseMetadataV1Output: GetWarehouseMetadataV1Output,
     GetWarehouseV1Output: GetWarehouseV1Output,
+    GetWarehouseV2Output: GetWarehouseV2Output,
     GetWarehousesCatalog200Response: GetWarehousesCatalog200Response,
     GetWarehousesCatalogV1Output: GetWarehousesCatalogV1Output,
     GetWorkspace200Response: GetWorkspace200Response,
@@ -2283,7 +2322,9 @@ let typeMap: { [index: string]: any } = {
     ListUsersFromUserGroupV1Output: ListUsersFromUserGroupV1Output,
     ListUsersV1Output: ListUsersV1Output,
     ListWarehouses200Response: ListWarehouses200Response,
+    ListWarehouses200Response1: ListWarehouses200Response1,
     ListWarehousesV1Output: ListWarehousesV1Output,
+    ListWarehousesV2Output: ListWarehousesV2Output,
     ListWorkspaceRegulations200Response: ListWorkspaceRegulations200Response,
     ListWorkspaceRegulationsV1Output: ListWorkspaceRegulationsV1Output,
     LivePluginsAlpha: LivePluginsAlpha,
@@ -2561,8 +2602,11 @@ let typeMap: { [index: string]: any } = {
     UpdateUserGroupV1Input: UpdateUserGroupV1Input,
     UpdateUserGroupV1Output: UpdateUserGroupV1Output,
     UpdateWarehouse200Response: UpdateWarehouse200Response,
+    UpdateWarehouse200Response1: UpdateWarehouse200Response1,
     UpdateWarehouseV1Input: UpdateWarehouseV1Input,
     UpdateWarehouseV1Output: UpdateWarehouseV1Output,
+    UpdateWarehouseV2Input: UpdateWarehouseV2Input,
+    UpdateWarehouseV2Output: UpdateWarehouseV2Output,
     UpsertRuleV1: UpsertRuleV1,
     UserGroupV1: UserGroupV1,
     UserV1: UserV1,
@@ -2573,6 +2617,7 @@ let typeMap: { [index: string]: any } = {
     WarehouseSelectiveSyncItemV1: WarehouseSelectiveSyncItemV1,
     WarehouseSyncOverrideV1: WarehouseSyncOverrideV1,
     WarehouseV1: WarehouseV1,
+    WarehouseV2: WarehouseV2,
     WorkspaceV1: WorkspaceV1,
 };
 
