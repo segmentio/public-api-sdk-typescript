@@ -73,6 +73,9 @@ __exportStar(require("./auditEventV1"), exports);
 __exportStar(require("./batchQueryActivationsForSpace200Response"), exports);
 __exportStar(require("./batchQueryActivationsForSpaceAlphaInput"), exports);
 __exportStar(require("./batchQueryActivationsForSpaceAlphaOutput"), exports);
+__exportStar(require("./batchQueryMessagingSubscriptionsForSpace200Response"), exports);
+__exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput"), exports);
+__exportStar(require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput"), exports);
 __exportStar(require("./breakdownBeta"), exports);
 __exportStar(require("./cancelReverseETLSyncForModel200Response"), exports);
 __exportStar(require("./cancelReverseETLSyncForModelInput"), exports);
@@ -336,6 +339,8 @@ __exportStar(require("./getInsertFunctionInstance200Response"), exports);
 __exportStar(require("./getInsertFunctionInstanceAlphaOutput"), exports);
 __exportStar(require("./getLatestFromLivePlugins200Response"), exports);
 __exportStar(require("./getLatestFromLivePluginsAlphaOutput"), exports);
+__exportStar(require("./getMessagingSubscriptionFailureResponse"), exports);
+__exportStar(require("./getMessagingSubscriptionSuccessResponse"), exports);
 __exportStar(require("./getRegulation200Response"), exports);
 __exportStar(require("./getRegulationV1Output"), exports);
 __exportStar(require("./getReverseETLSyncStatus200Response"), exports);
@@ -354,6 +359,7 @@ __exportStar(require("./getSpace200Response"), exports);
 __exportStar(require("./getSpaceAlphaOutput"), exports);
 __exportStar(require("./getSubscriptionFromDestination200Response"), exports);
 __exportStar(require("./getSubscriptionFromDestinationAlphaOutput"), exports);
+__exportStar(require("./getSubscriptionRequest"), exports);
 __exportStar(require("./getTrackingPlan200Response"), exports);
 __exportStar(require("./getTrackingPlanV1Output"), exports);
 __exportStar(require("./getTransformation200Response"), exports);
@@ -375,6 +381,8 @@ __exportStar(require("./getWarehousesCatalogV1Output"), exports);
 __exportStar(require("./getWorkspace200Response"), exports);
 __exportStar(require("./getWorkspaceV1Output"), exports);
 __exportStar(require("./groupSourceSettingsV1"), exports);
+__exportStar(require("./groupSubscriptionStatus"), exports);
+__exportStar(require("./groupSubscriptionStatusResponse"), exports);
 __exportStar(require("./handleWebhookInput"), exports);
 __exportStar(require("./handleWebhookOutput"), exports);
 __exportStar(require("./hashPropertiesConfiguration"), exports);
@@ -525,6 +533,9 @@ __exportStar(require("./listWorkspaceRegulations200Response"), exports);
 __exportStar(require("./listWorkspaceRegulationsV1Output"), exports);
 __exportStar(require("./livePluginsAlpha"), exports);
 __exportStar(require("./logosBeta"), exports);
+__exportStar(require("./messageSubscriptionResponse"), exports);
+__exportStar(require("./messageSubscriptionResponseError"), exports);
+__exportStar(require("./messagesSubscriptionRequest"), exports);
 __exportStar(require("./metadata"), exports);
 __exportStar(require("./metricBeta"), exports);
 __exportStar(require("./minimalUserGroupV1"), exports);
@@ -595,6 +606,9 @@ __exportStar(require("./replaceLabelsInSourceAlphaInput"), exports);
 __exportStar(require("./replaceLabelsInSourceAlphaOutput"), exports);
 __exportStar(require("./replaceLabelsInSourceV1Input"), exports);
 __exportStar(require("./replaceLabelsInSourceV1Output"), exports);
+__exportStar(require("./replaceMessagingSubscriptionsInSpaces200Response"), exports);
+__exportStar(require("./replaceMessagingSubscriptionsInSpacesAlphaInput"), exports);
+__exportStar(require("./replaceMessagingSubscriptionsInSpacesAlphaOutput"), exports);
 __exportStar(require("./replacePermissionsForUser200Response"), exports);
 __exportStar(require("./replacePermissionsForUserGroup200Response"), exports);
 __exportStar(require("./replacePermissionsForUserGroupV1Input"), exports);
@@ -690,6 +704,7 @@ __exportStar(require("./updateFilterForDestinationV1Output"), exports);
 __exportStar(require("./updateFunction200Response"), exports);
 __exportStar(require("./updateFunctionV1Input"), exports);
 __exportStar(require("./updateFunctionV1Output"), exports);
+__exportStar(require("./updateGroupSubscriptionStatusResponse"), exports);
 __exportStar(require("./updateInsertFunctionInstance200Response"), exports);
 __exportStar(require("./updateInsertFunctionInstanceAlphaInput"), exports);
 __exportStar(require("./updateInsertFunctionInstanceAlphaOutput"), exports);
@@ -807,6 +822,9 @@ var auditEventV1_1 = require("./auditEventV1");
 var batchQueryActivationsForSpace200Response_1 = require("./batchQueryActivationsForSpace200Response");
 var batchQueryActivationsForSpaceAlphaInput_1 = require("./batchQueryActivationsForSpaceAlphaInput");
 var batchQueryActivationsForSpaceAlphaOutput_1 = require("./batchQueryActivationsForSpaceAlphaOutput");
+var batchQueryMessagingSubscriptionsForSpace200Response_1 = require("./batchQueryMessagingSubscriptionsForSpace200Response");
+var batchQueryMessagingSubscriptionsForSpaceAlphaInput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaInput");
+var batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1 = require("./batchQueryMessagingSubscriptionsForSpaceAlphaOutput");
 var breakdownBeta_1 = require("./breakdownBeta");
 var cancelReverseETLSyncForModel200Response_1 = require("./cancelReverseETLSyncForModel200Response");
 var cancelReverseETLSyncForModelInput_1 = require("./cancelReverseETLSyncForModelInput");
@@ -1070,6 +1088,8 @@ var getInsertFunctionInstance200Response_1 = require("./getInsertFunctionInstanc
 var getInsertFunctionInstanceAlphaOutput_1 = require("./getInsertFunctionInstanceAlphaOutput");
 var getLatestFromLivePlugins200Response_1 = require("./getLatestFromLivePlugins200Response");
 var getLatestFromLivePluginsAlphaOutput_1 = require("./getLatestFromLivePluginsAlphaOutput");
+var getMessagingSubscriptionFailureResponse_1 = require("./getMessagingSubscriptionFailureResponse");
+var getMessagingSubscriptionSuccessResponse_1 = require("./getMessagingSubscriptionSuccessResponse");
 var getRegulation200Response_1 = require("./getRegulation200Response");
 var getRegulationV1Output_1 = require("./getRegulationV1Output");
 var getReverseETLSyncStatus200Response_1 = require("./getReverseETLSyncStatus200Response");
@@ -1088,6 +1108,7 @@ var getSpace200Response_1 = require("./getSpace200Response");
 var getSpaceAlphaOutput_1 = require("./getSpaceAlphaOutput");
 var getSubscriptionFromDestination200Response_1 = require("./getSubscriptionFromDestination200Response");
 var getSubscriptionFromDestinationAlphaOutput_1 = require("./getSubscriptionFromDestinationAlphaOutput");
+var getSubscriptionRequest_1 = require("./getSubscriptionRequest");
 var getTrackingPlan200Response_1 = require("./getTrackingPlan200Response");
 var getTrackingPlanV1Output_1 = require("./getTrackingPlanV1Output");
 var getTransformation200Response_1 = require("./getTransformation200Response");
@@ -1109,6 +1130,8 @@ var getWarehousesCatalogV1Output_1 = require("./getWarehousesCatalogV1Output");
 var getWorkspace200Response_1 = require("./getWorkspace200Response");
 var getWorkspaceV1Output_1 = require("./getWorkspaceV1Output");
 var groupSourceSettingsV1_1 = require("./groupSourceSettingsV1");
+var groupSubscriptionStatus_1 = require("./groupSubscriptionStatus");
+var groupSubscriptionStatusResponse_1 = require("./groupSubscriptionStatusResponse");
 var handleWebhookInput_1 = require("./handleWebhookInput");
 var handleWebhookOutput_1 = require("./handleWebhookOutput");
 var hashPropertiesConfiguration_1 = require("./hashPropertiesConfiguration");
@@ -1259,6 +1282,9 @@ var listWorkspaceRegulations200Response_1 = require("./listWorkspaceRegulations2
 var listWorkspaceRegulationsV1Output_1 = require("./listWorkspaceRegulationsV1Output");
 var livePluginsAlpha_1 = require("./livePluginsAlpha");
 var logosBeta_1 = require("./logosBeta");
+var messageSubscriptionResponse_1 = require("./messageSubscriptionResponse");
+var messageSubscriptionResponseError_1 = require("./messageSubscriptionResponseError");
+var messagesSubscriptionRequest_1 = require("./messagesSubscriptionRequest");
 var metadata_1 = require("./metadata");
 var metricBeta_1 = require("./metricBeta");
 var minimalUserGroupV1_1 = require("./minimalUserGroupV1");
@@ -1329,6 +1355,9 @@ var replaceLabelsInSourceAlphaInput_1 = require("./replaceLabelsInSourceAlphaInp
 var replaceLabelsInSourceAlphaOutput_1 = require("./replaceLabelsInSourceAlphaOutput");
 var replaceLabelsInSourceV1Input_1 = require("./replaceLabelsInSourceV1Input");
 var replaceLabelsInSourceV1Output_1 = require("./replaceLabelsInSourceV1Output");
+var replaceMessagingSubscriptionsInSpaces200Response_1 = require("./replaceMessagingSubscriptionsInSpaces200Response");
+var replaceMessagingSubscriptionsInSpacesAlphaInput_1 = require("./replaceMessagingSubscriptionsInSpacesAlphaInput");
+var replaceMessagingSubscriptionsInSpacesAlphaOutput_1 = require("./replaceMessagingSubscriptionsInSpacesAlphaOutput");
 var replacePermissionsForUser200Response_1 = require("./replacePermissionsForUser200Response");
 var replacePermissionsForUserGroup200Response_1 = require("./replacePermissionsForUserGroup200Response");
 var replacePermissionsForUserGroupV1Input_1 = require("./replacePermissionsForUserGroupV1Input");
@@ -1424,6 +1453,7 @@ var updateFilterForDestinationV1Output_1 = require("./updateFilterForDestination
 var updateFunction200Response_1 = require("./updateFunction200Response");
 var updateFunctionV1Input_1 = require("./updateFunctionV1Input");
 var updateFunctionV1Output_1 = require("./updateFunctionV1Output");
+var updateGroupSubscriptionStatusResponse_1 = require("./updateGroupSubscriptionStatusResponse");
 var updateInsertFunctionInstance200Response_1 = require("./updateInsertFunctionInstance200Response");
 var updateInsertFunctionInstanceAlphaInput_1 = require("./updateInsertFunctionInstanceAlphaInput");
 var updateInsertFunctionInstanceAlphaOutput_1 = require("./updateInsertFunctionInstanceAlphaOutput");
@@ -1557,13 +1587,22 @@ var enumsMap = {
     'FunctionV1.ResourceTypeEnum': functionV1_1.FunctionV1.ResourceTypeEnum,
     'GetConnectionStateFromWarehouseV1Output.ConnectionStateEnum': getConnectionStateFromWarehouseV1Output_1.GetConnectionStateFromWarehouseV1Output.ConnectionStateEnum,
     'GetEventsVolumeFromWorkspaceV1Query.GranularityEnum': getEventsVolumeFromWorkspaceV1Query_1.GetEventsVolumeFromWorkspaceV1Query.GranularityEnum,
+    'GetMessagingSubscriptionSuccessResponse.TypeEnum': getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse.TypeEnum,
+    'GetMessagingSubscriptionSuccessResponse.StatusEnum': getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse.StatusEnum,
+    'GetSubscriptionRequest.TypeEnum': getSubscriptionRequest_1.GetSubscriptionRequest.TypeEnum,
     'GroupSourceSettingsV1.CommonEventOnViolationsEnum': groupSourceSettingsV1_1.GroupSourceSettingsV1.CommonEventOnViolationsEnum,
+    'GroupSubscriptionStatus.StatusEnum': groupSubscriptionStatus_1.GroupSubscriptionStatus.StatusEnum,
+    'GroupSubscriptionStatusResponse.StatusEnum': groupSubscriptionStatusResponse_1.GroupSubscriptionStatusResponse.StatusEnum,
     'HashPropertiesConfiguration.EncodingEnum': hashPropertiesConfiguration_1.HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum': identifySourceSettingsV1_1.IdentifySourceSettingsV1.CommonEventOnViolationsEnum,
     'ListAudienceConsumersSortInput.FieldEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.FieldEnum,
     'ListAudienceConsumersSortInput.DirectionEnum': listAudienceConsumersSortInput_1.ListAudienceConsumersSortInput.DirectionEnum,
     'ListAudienceSearchInput.TypeEnum': listAudienceSearchInput_1.ListAudienceSearchInput.TypeEnum,
     'ListFunctionItemV1.ResourceTypeEnum': listFunctionItemV1_1.ListFunctionItemV1.ResourceTypeEnum,
+    'MessageSubscriptionResponse.TypeEnum': messageSubscriptionResponse_1.MessageSubscriptionResponse.TypeEnum,
+    'MessageSubscriptionResponse.StatusEnum': messageSubscriptionResponse_1.MessageSubscriptionResponse.StatusEnum,
+    'MessagesSubscriptionRequest.TypeEnum': messagesSubscriptionRequest_1.MessagesSubscriptionRequest.TypeEnum,
+    'MessagesSubscriptionRequest.StatusEnum': messagesSubscriptionRequest_1.MessagesSubscriptionRequest.StatusEnum,
     'PermissionResourceV1.TypeEnum': permissionResourceV1_1.PermissionResourceV1.TypeEnum,
     'Regulation.OverallStatusEnum': regulation_1.Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': regulationListEntryV1_1.RegulationListEntryV1.StatusEnum,
@@ -1596,6 +1635,7 @@ var enumsMap = {
     TraitType: traitType_1.TraitType,
     'UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum': updateAudienceScheduleForAudienceAlphaInput_1.UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum,
     'UpdateAudienceScheduleForAudienceInput.StrategyEnum': updateAudienceScheduleForAudienceInput_1.UpdateAudienceScheduleForAudienceInput.StrategyEnum,
+    'UpdateGroupSubscriptionStatusResponse.StatusEnum': updateGroupSubscriptionStatusResponse_1.UpdateGroupSubscriptionStatusResponse.StatusEnum,
     'UpdateRulesInTrackingPlanV1Output.StatusEnum': updateRulesInTrackingPlanV1Output_1.UpdateRulesInTrackingPlanV1Output.StatusEnum,
     'UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum': updateSelectiveSyncForWarehouseAndSpaceAlphaOutput_1.UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum,
     'UpdateSelectiveSyncForWarehouseV1Output.StatusEnum': updateSelectiveSyncForWarehouseV1Output_1.UpdateSelectiveSyncForWarehouseV1Output.StatusEnum,
@@ -1661,6 +1701,9 @@ var typeMap = {
     BatchQueryActivationsForSpace200Response: batchQueryActivationsForSpace200Response_1.BatchQueryActivationsForSpace200Response,
     BatchQueryActivationsForSpaceAlphaInput: batchQueryActivationsForSpaceAlphaInput_1.BatchQueryActivationsForSpaceAlphaInput,
     BatchQueryActivationsForSpaceAlphaOutput: batchQueryActivationsForSpaceAlphaOutput_1.BatchQueryActivationsForSpaceAlphaOutput,
+    BatchQueryMessagingSubscriptionsForSpace200Response: batchQueryMessagingSubscriptionsForSpace200Response_1.BatchQueryMessagingSubscriptionsForSpace200Response,
+    BatchQueryMessagingSubscriptionsForSpaceAlphaInput: batchQueryMessagingSubscriptionsForSpaceAlphaInput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaInput,
+    BatchQueryMessagingSubscriptionsForSpaceAlphaOutput: batchQueryMessagingSubscriptionsForSpaceAlphaOutput_1.BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
     BreakdownBeta: breakdownBeta_1.BreakdownBeta,
     CancelReverseETLSyncForModel200Response: cancelReverseETLSyncForModel200Response_1.CancelReverseETLSyncForModel200Response,
     CancelReverseETLSyncForModelInput: cancelReverseETLSyncForModelInput_1.CancelReverseETLSyncForModelInput,
@@ -1922,6 +1965,8 @@ var typeMap = {
     GetInsertFunctionInstanceAlphaOutput: getInsertFunctionInstanceAlphaOutput_1.GetInsertFunctionInstanceAlphaOutput,
     GetLatestFromLivePlugins200Response: getLatestFromLivePlugins200Response_1.GetLatestFromLivePlugins200Response,
     GetLatestFromLivePluginsAlphaOutput: getLatestFromLivePluginsAlphaOutput_1.GetLatestFromLivePluginsAlphaOutput,
+    GetMessagingSubscriptionFailureResponse: getMessagingSubscriptionFailureResponse_1.GetMessagingSubscriptionFailureResponse,
+    GetMessagingSubscriptionSuccessResponse: getMessagingSubscriptionSuccessResponse_1.GetMessagingSubscriptionSuccessResponse,
     GetRegulation200Response: getRegulation200Response_1.GetRegulation200Response,
     GetRegulationV1Output: getRegulationV1Output_1.GetRegulationV1Output,
     GetReverseETLSyncStatus200Response: getReverseETLSyncStatus200Response_1.GetReverseETLSyncStatus200Response,
@@ -1940,6 +1985,7 @@ var typeMap = {
     GetSpaceAlphaOutput: getSpaceAlphaOutput_1.GetSpaceAlphaOutput,
     GetSubscriptionFromDestination200Response: getSubscriptionFromDestination200Response_1.GetSubscriptionFromDestination200Response,
     GetSubscriptionFromDestinationAlphaOutput: getSubscriptionFromDestinationAlphaOutput_1.GetSubscriptionFromDestinationAlphaOutput,
+    GetSubscriptionRequest: getSubscriptionRequest_1.GetSubscriptionRequest,
     GetTrackingPlan200Response: getTrackingPlan200Response_1.GetTrackingPlan200Response,
     GetTrackingPlanV1Output: getTrackingPlanV1Output_1.GetTrackingPlanV1Output,
     GetTransformation200Response: getTransformation200Response_1.GetTransformation200Response,
@@ -1961,6 +2007,8 @@ var typeMap = {
     GetWorkspace200Response: getWorkspace200Response_1.GetWorkspace200Response,
     GetWorkspaceV1Output: getWorkspaceV1Output_1.GetWorkspaceV1Output,
     GroupSourceSettingsV1: groupSourceSettingsV1_1.GroupSourceSettingsV1,
+    GroupSubscriptionStatus: groupSubscriptionStatus_1.GroupSubscriptionStatus,
+    GroupSubscriptionStatusResponse: groupSubscriptionStatusResponse_1.GroupSubscriptionStatusResponse,
     HandleWebhookInput: handleWebhookInput_1.HandleWebhookInput,
     HandleWebhookOutput: handleWebhookOutput_1.HandleWebhookOutput,
     HashPropertiesConfiguration: hashPropertiesConfiguration_1.HashPropertiesConfiguration,
@@ -2111,6 +2159,9 @@ var typeMap = {
     ListWorkspaceRegulationsV1Output: listWorkspaceRegulationsV1Output_1.ListWorkspaceRegulationsV1Output,
     LivePluginsAlpha: livePluginsAlpha_1.LivePluginsAlpha,
     LogosBeta: logosBeta_1.LogosBeta,
+    MessageSubscriptionResponse: messageSubscriptionResponse_1.MessageSubscriptionResponse,
+    MessageSubscriptionResponseError: messageSubscriptionResponseError_1.MessageSubscriptionResponseError,
+    MessagesSubscriptionRequest: messagesSubscriptionRequest_1.MessagesSubscriptionRequest,
     Metadata: metadata_1.Metadata,
     MetricBeta: metricBeta_1.MetricBeta,
     MinimalUserGroupV1: minimalUserGroupV1_1.MinimalUserGroupV1,
@@ -2181,6 +2232,9 @@ var typeMap = {
     ReplaceLabelsInSourceAlphaOutput: replaceLabelsInSourceAlphaOutput_1.ReplaceLabelsInSourceAlphaOutput,
     ReplaceLabelsInSourceV1Input: replaceLabelsInSourceV1Input_1.ReplaceLabelsInSourceV1Input,
     ReplaceLabelsInSourceV1Output: replaceLabelsInSourceV1Output_1.ReplaceLabelsInSourceV1Output,
+    ReplaceMessagingSubscriptionsInSpaces200Response: replaceMessagingSubscriptionsInSpaces200Response_1.ReplaceMessagingSubscriptionsInSpaces200Response,
+    ReplaceMessagingSubscriptionsInSpacesAlphaInput: replaceMessagingSubscriptionsInSpacesAlphaInput_1.ReplaceMessagingSubscriptionsInSpacesAlphaInput,
+    ReplaceMessagingSubscriptionsInSpacesAlphaOutput: replaceMessagingSubscriptionsInSpacesAlphaOutput_1.ReplaceMessagingSubscriptionsInSpacesAlphaOutput,
     ReplacePermissionsForUser200Response: replacePermissionsForUser200Response_1.ReplacePermissionsForUser200Response,
     ReplacePermissionsForUserGroup200Response: replacePermissionsForUserGroup200Response_1.ReplacePermissionsForUserGroup200Response,
     ReplacePermissionsForUserGroupV1Input: replacePermissionsForUserGroupV1Input_1.ReplacePermissionsForUserGroupV1Input,
@@ -2275,6 +2329,7 @@ var typeMap = {
     UpdateFunction200Response: updateFunction200Response_1.UpdateFunction200Response,
     UpdateFunctionV1Input: updateFunctionV1Input_1.UpdateFunctionV1Input,
     UpdateFunctionV1Output: updateFunctionV1Output_1.UpdateFunctionV1Output,
+    UpdateGroupSubscriptionStatusResponse: updateGroupSubscriptionStatusResponse_1.UpdateGroupSubscriptionStatusResponse,
     UpdateInsertFunctionInstance200Response: updateInsertFunctionInstance200Response_1.UpdateInsertFunctionInstance200Response,
     UpdateInsertFunctionInstanceAlphaInput: updateInsertFunctionInstanceAlphaInput_1.UpdateInsertFunctionInstanceAlphaInput,
     UpdateInsertFunctionInstanceAlphaOutput: updateInsertFunctionInstanceAlphaOutput_1.UpdateInsertFunctionInstanceAlphaOutput,
