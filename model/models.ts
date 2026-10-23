@@ -58,6 +58,9 @@ export * from './auditEventV1';
 export * from './batchQueryActivationsForSpace200Response';
 export * from './batchQueryActivationsForSpaceAlphaInput';
 export * from './batchQueryActivationsForSpaceAlphaOutput';
+export * from './batchQueryMessagingSubscriptionsForSpace200Response';
+export * from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
+export * from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 export * from './breakdownBeta';
 export * from './cancelReverseETLSyncForModel200Response';
 export * from './cancelReverseETLSyncForModelInput';
@@ -321,6 +324,8 @@ export * from './getInsertFunctionInstance200Response';
 export * from './getInsertFunctionInstanceAlphaOutput';
 export * from './getLatestFromLivePlugins200Response';
 export * from './getLatestFromLivePluginsAlphaOutput';
+export * from './getMessagingSubscriptionFailureResponse';
+export * from './getMessagingSubscriptionSuccessResponse';
 export * from './getRegulation200Response';
 export * from './getRegulationV1Output';
 export * from './getReverseETLSyncStatus200Response';
@@ -339,6 +344,7 @@ export * from './getSpace200Response';
 export * from './getSpaceAlphaOutput';
 export * from './getSubscriptionFromDestination200Response';
 export * from './getSubscriptionFromDestinationAlphaOutput';
+export * from './getSubscriptionRequest';
 export * from './getTrackingPlan200Response';
 export * from './getTrackingPlanV1Output';
 export * from './getTransformation200Response';
@@ -360,6 +366,8 @@ export * from './getWarehousesCatalogV1Output';
 export * from './getWorkspace200Response';
 export * from './getWorkspaceV1Output';
 export * from './groupSourceSettingsV1';
+export * from './groupSubscriptionStatus';
+export * from './groupSubscriptionStatusResponse';
 export * from './handleWebhookInput';
 export * from './handleWebhookOutput';
 export * from './hashPropertiesConfiguration';
@@ -510,6 +518,9 @@ export * from './listWorkspaceRegulations200Response';
 export * from './listWorkspaceRegulationsV1Output';
 export * from './livePluginsAlpha';
 export * from './logosBeta';
+export * from './messageSubscriptionResponse';
+export * from './messageSubscriptionResponseError';
+export * from './messagesSubscriptionRequest';
 export * from './metadata';
 export * from './metricBeta';
 export * from './minimalUserGroupV1';
@@ -580,6 +591,9 @@ export * from './replaceLabelsInSourceAlphaInput';
 export * from './replaceLabelsInSourceAlphaOutput';
 export * from './replaceLabelsInSourceV1Input';
 export * from './replaceLabelsInSourceV1Output';
+export * from './replaceMessagingSubscriptionsInSpaces200Response';
+export * from './replaceMessagingSubscriptionsInSpacesAlphaInput';
+export * from './replaceMessagingSubscriptionsInSpacesAlphaOutput';
 export * from './replacePermissionsForUser200Response';
 export * from './replacePermissionsForUserGroup200Response';
 export * from './replacePermissionsForUserGroupV1Input';
@@ -675,6 +689,7 @@ export * from './updateFilterForDestinationV1Output';
 export * from './updateFunction200Response';
 export * from './updateFunctionV1Input';
 export * from './updateFunctionV1Output';
+export * from './updateGroupSubscriptionStatusResponse';
 export * from './updateInsertFunctionInstance200Response';
 export * from './updateInsertFunctionInstanceAlphaInput';
 export * from './updateInsertFunctionInstanceAlphaOutput';
@@ -805,6 +820,9 @@ import { AuditEventV1 } from './auditEventV1';
 import { BatchQueryActivationsForSpace200Response } from './batchQueryActivationsForSpace200Response';
 import { BatchQueryActivationsForSpaceAlphaInput } from './batchQueryActivationsForSpaceAlphaInput';
 import { BatchQueryActivationsForSpaceAlphaOutput } from './batchQueryActivationsForSpaceAlphaOutput';
+import { BatchQueryMessagingSubscriptionsForSpace200Response } from './batchQueryMessagingSubscriptionsForSpace200Response';
+import { BatchQueryMessagingSubscriptionsForSpaceAlphaInput } from './batchQueryMessagingSubscriptionsForSpaceAlphaInput';
+import { BatchQueryMessagingSubscriptionsForSpaceAlphaOutput } from './batchQueryMessagingSubscriptionsForSpaceAlphaOutput';
 import { BreakdownBeta } from './breakdownBeta';
 import { CancelReverseETLSyncForModel200Response } from './cancelReverseETLSyncForModel200Response';
 import { CancelReverseETLSyncForModelInput } from './cancelReverseETLSyncForModelInput';
@@ -1068,6 +1086,8 @@ import { GetInsertFunctionInstance200Response } from './getInsertFunctionInstanc
 import { GetInsertFunctionInstanceAlphaOutput } from './getInsertFunctionInstanceAlphaOutput';
 import { GetLatestFromLivePlugins200Response } from './getLatestFromLivePlugins200Response';
 import { GetLatestFromLivePluginsAlphaOutput } from './getLatestFromLivePluginsAlphaOutput';
+import { GetMessagingSubscriptionFailureResponse } from './getMessagingSubscriptionFailureResponse';
+import { GetMessagingSubscriptionSuccessResponse } from './getMessagingSubscriptionSuccessResponse';
 import { GetRegulation200Response } from './getRegulation200Response';
 import { GetRegulationV1Output } from './getRegulationV1Output';
 import { GetReverseETLSyncStatus200Response } from './getReverseETLSyncStatus200Response';
@@ -1086,6 +1106,7 @@ import { GetSpace200Response } from './getSpace200Response';
 import { GetSpaceAlphaOutput } from './getSpaceAlphaOutput';
 import { GetSubscriptionFromDestination200Response } from './getSubscriptionFromDestination200Response';
 import { GetSubscriptionFromDestinationAlphaOutput } from './getSubscriptionFromDestinationAlphaOutput';
+import { GetSubscriptionRequest } from './getSubscriptionRequest';
 import { GetTrackingPlan200Response } from './getTrackingPlan200Response';
 import { GetTrackingPlanV1Output } from './getTrackingPlanV1Output';
 import { GetTransformation200Response } from './getTransformation200Response';
@@ -1107,6 +1128,8 @@ import { GetWarehousesCatalogV1Output } from './getWarehousesCatalogV1Output';
 import { GetWorkspace200Response } from './getWorkspace200Response';
 import { GetWorkspaceV1Output } from './getWorkspaceV1Output';
 import { GroupSourceSettingsV1 } from './groupSourceSettingsV1';
+import { GroupSubscriptionStatus } from './groupSubscriptionStatus';
+import { GroupSubscriptionStatusResponse } from './groupSubscriptionStatusResponse';
 import { HandleWebhookInput } from './handleWebhookInput';
 import { HandleWebhookOutput } from './handleWebhookOutput';
 import { HashPropertiesConfiguration } from './hashPropertiesConfiguration';
@@ -1257,6 +1280,9 @@ import { ListWorkspaceRegulations200Response } from './listWorkspaceRegulations2
 import { ListWorkspaceRegulationsV1Output } from './listWorkspaceRegulationsV1Output';
 import { LivePluginsAlpha } from './livePluginsAlpha';
 import { LogosBeta } from './logosBeta';
+import { MessageSubscriptionResponse } from './messageSubscriptionResponse';
+import { MessageSubscriptionResponseError } from './messageSubscriptionResponseError';
+import { MessagesSubscriptionRequest } from './messagesSubscriptionRequest';
 import { Metadata } from './metadata';
 import { MetricBeta } from './metricBeta';
 import { MinimalUserGroupV1 } from './minimalUserGroupV1';
@@ -1327,6 +1353,9 @@ import { ReplaceLabelsInSourceAlphaInput } from './replaceLabelsInSourceAlphaInp
 import { ReplaceLabelsInSourceAlphaOutput } from './replaceLabelsInSourceAlphaOutput';
 import { ReplaceLabelsInSourceV1Input } from './replaceLabelsInSourceV1Input';
 import { ReplaceLabelsInSourceV1Output } from './replaceLabelsInSourceV1Output';
+import { ReplaceMessagingSubscriptionsInSpaces200Response } from './replaceMessagingSubscriptionsInSpaces200Response';
+import { ReplaceMessagingSubscriptionsInSpacesAlphaInput } from './replaceMessagingSubscriptionsInSpacesAlphaInput';
+import { ReplaceMessagingSubscriptionsInSpacesAlphaOutput } from './replaceMessagingSubscriptionsInSpacesAlphaOutput';
 import { ReplacePermissionsForUser200Response } from './replacePermissionsForUser200Response';
 import { ReplacePermissionsForUserGroup200Response } from './replacePermissionsForUserGroup200Response';
 import { ReplacePermissionsForUserGroupV1Input } from './replacePermissionsForUserGroupV1Input';
@@ -1422,6 +1451,7 @@ import { UpdateFilterForDestinationV1Output } from './updateFilterForDestination
 import { UpdateFunction200Response } from './updateFunction200Response';
 import { UpdateFunctionV1Input } from './updateFunctionV1Input';
 import { UpdateFunctionV1Output } from './updateFunctionV1Output';
+import { UpdateGroupSubscriptionStatusResponse } from './updateGroupSubscriptionStatusResponse';
 import { UpdateInsertFunctionInstance200Response } from './updateInsertFunctionInstance200Response';
 import { UpdateInsertFunctionInstanceAlphaInput } from './updateInsertFunctionInstanceAlphaInput';
 import { UpdateInsertFunctionInstanceAlphaOutput } from './updateInsertFunctionInstanceAlphaOutput';
@@ -1593,8 +1623,16 @@ let enumsMap: { [index: string]: any } = {
         GetConnectionStateFromWarehouseV1Output.ConnectionStateEnum,
     'GetEventsVolumeFromWorkspaceV1Query.GranularityEnum':
         GetEventsVolumeFromWorkspaceV1Query.GranularityEnum,
+    'GetMessagingSubscriptionSuccessResponse.TypeEnum':
+        GetMessagingSubscriptionSuccessResponse.TypeEnum,
+    'GetMessagingSubscriptionSuccessResponse.StatusEnum':
+        GetMessagingSubscriptionSuccessResponse.StatusEnum,
+    'GetSubscriptionRequest.TypeEnum': GetSubscriptionRequest.TypeEnum,
     'GroupSourceSettingsV1.CommonEventOnViolationsEnum':
         GroupSourceSettingsV1.CommonEventOnViolationsEnum,
+    'GroupSubscriptionStatus.StatusEnum': GroupSubscriptionStatus.StatusEnum,
+    'GroupSubscriptionStatusResponse.StatusEnum':
+        GroupSubscriptionStatusResponse.StatusEnum,
     'HashPropertiesConfiguration.EncodingEnum':
         HashPropertiesConfiguration.EncodingEnum,
     'IdentifySourceSettingsV1.CommonEventOnViolationsEnum':
@@ -1605,6 +1643,14 @@ let enumsMap: { [index: string]: any } = {
         ListAudienceConsumersSortInput.DirectionEnum,
     'ListAudienceSearchInput.TypeEnum': ListAudienceSearchInput.TypeEnum,
     'ListFunctionItemV1.ResourceTypeEnum': ListFunctionItemV1.ResourceTypeEnum,
+    'MessageSubscriptionResponse.TypeEnum':
+        MessageSubscriptionResponse.TypeEnum,
+    'MessageSubscriptionResponse.StatusEnum':
+        MessageSubscriptionResponse.StatusEnum,
+    'MessagesSubscriptionRequest.TypeEnum':
+        MessagesSubscriptionRequest.TypeEnum,
+    'MessagesSubscriptionRequest.StatusEnum':
+        MessagesSubscriptionRequest.StatusEnum,
     'PermissionResourceV1.TypeEnum': PermissionResourceV1.TypeEnum,
     'Regulation.OverallStatusEnum': Regulation.OverallStatusEnum,
     'RegulationListEntryV1.StatusEnum': RegulationListEntryV1.StatusEnum,
@@ -1658,6 +1704,8 @@ let enumsMap: { [index: string]: any } = {
         UpdateAudienceScheduleForAudienceAlphaInput.StrategyEnum,
     'UpdateAudienceScheduleForAudienceInput.StrategyEnum':
         UpdateAudienceScheduleForAudienceInput.StrategyEnum,
+    'UpdateGroupSubscriptionStatusResponse.StatusEnum':
+        UpdateGroupSubscriptionStatusResponse.StatusEnum,
     'UpdateRulesInTrackingPlanV1Output.StatusEnum':
         UpdateRulesInTrackingPlanV1Output.StatusEnum,
     'UpdateSelectiveSyncForWarehouseAndSpaceAlphaOutput.StatusEnum':
@@ -1740,6 +1788,12 @@ let typeMap: { [index: string]: any } = {
         BatchQueryActivationsForSpaceAlphaInput,
     BatchQueryActivationsForSpaceAlphaOutput:
         BatchQueryActivationsForSpaceAlphaOutput,
+    BatchQueryMessagingSubscriptionsForSpace200Response:
+        BatchQueryMessagingSubscriptionsForSpace200Response,
+    BatchQueryMessagingSubscriptionsForSpaceAlphaInput:
+        BatchQueryMessagingSubscriptionsForSpaceAlphaInput,
+    BatchQueryMessagingSubscriptionsForSpaceAlphaOutput:
+        BatchQueryMessagingSubscriptionsForSpaceAlphaOutput,
     BreakdownBeta: BreakdownBeta,
     CancelReverseETLSyncForModel200Response:
         CancelReverseETLSyncForModel200Response,
@@ -2031,6 +2085,10 @@ let typeMap: { [index: string]: any } = {
     GetInsertFunctionInstanceAlphaOutput: GetInsertFunctionInstanceAlphaOutput,
     GetLatestFromLivePlugins200Response: GetLatestFromLivePlugins200Response,
     GetLatestFromLivePluginsAlphaOutput: GetLatestFromLivePluginsAlphaOutput,
+    GetMessagingSubscriptionFailureResponse:
+        GetMessagingSubscriptionFailureResponse,
+    GetMessagingSubscriptionSuccessResponse:
+        GetMessagingSubscriptionSuccessResponse,
     GetRegulation200Response: GetRegulation200Response,
     GetRegulationV1Output: GetRegulationV1Output,
     GetReverseETLSyncStatus200Response: GetReverseETLSyncStatus200Response,
@@ -2051,6 +2109,7 @@ let typeMap: { [index: string]: any } = {
         GetSubscriptionFromDestination200Response,
     GetSubscriptionFromDestinationAlphaOutput:
         GetSubscriptionFromDestinationAlphaOutput,
+    GetSubscriptionRequest: GetSubscriptionRequest,
     GetTrackingPlan200Response: GetTrackingPlan200Response,
     GetTrackingPlanV1Output: GetTrackingPlanV1Output,
     GetTransformation200Response: GetTransformation200Response,
@@ -2072,6 +2131,8 @@ let typeMap: { [index: string]: any } = {
     GetWorkspace200Response: GetWorkspace200Response,
     GetWorkspaceV1Output: GetWorkspaceV1Output,
     GroupSourceSettingsV1: GroupSourceSettingsV1,
+    GroupSubscriptionStatus: GroupSubscriptionStatus,
+    GroupSubscriptionStatusResponse: GroupSubscriptionStatusResponse,
     HandleWebhookInput: HandleWebhookInput,
     HandleWebhookOutput: HandleWebhookOutput,
     HashPropertiesConfiguration: HashPropertiesConfiguration,
@@ -2268,6 +2329,9 @@ let typeMap: { [index: string]: any } = {
     ListWorkspaceRegulationsV1Output: ListWorkspaceRegulationsV1Output,
     LivePluginsAlpha: LivePluginsAlpha,
     LogosBeta: LogosBeta,
+    MessageSubscriptionResponse: MessageSubscriptionResponse,
+    MessageSubscriptionResponseError: MessageSubscriptionResponseError,
+    MessagesSubscriptionRequest: MessagesSubscriptionRequest,
     Metadata: Metadata,
     MetricBeta: MetricBeta,
     MinimalUserGroupV1: MinimalUserGroupV1,
@@ -2359,6 +2423,12 @@ let typeMap: { [index: string]: any } = {
     ReplaceLabelsInSourceAlphaOutput: ReplaceLabelsInSourceAlphaOutput,
     ReplaceLabelsInSourceV1Input: ReplaceLabelsInSourceV1Input,
     ReplaceLabelsInSourceV1Output: ReplaceLabelsInSourceV1Output,
+    ReplaceMessagingSubscriptionsInSpaces200Response:
+        ReplaceMessagingSubscriptionsInSpaces200Response,
+    ReplaceMessagingSubscriptionsInSpacesAlphaInput:
+        ReplaceMessagingSubscriptionsInSpacesAlphaInput,
+    ReplaceMessagingSubscriptionsInSpacesAlphaOutput:
+        ReplaceMessagingSubscriptionsInSpacesAlphaOutput,
     ReplacePermissionsForUser200Response: ReplacePermissionsForUser200Response,
     ReplacePermissionsForUserGroup200Response:
         ReplacePermissionsForUserGroup200Response,
@@ -2472,6 +2542,8 @@ let typeMap: { [index: string]: any } = {
     UpdateFunction200Response: UpdateFunction200Response,
     UpdateFunctionV1Input: UpdateFunctionV1Input,
     UpdateFunctionV1Output: UpdateFunctionV1Output,
+    UpdateGroupSubscriptionStatusResponse:
+        UpdateGroupSubscriptionStatusResponse,
     UpdateInsertFunctionInstance200Response:
         UpdateInsertFunctionInstance200Response,
     UpdateInsertFunctionInstanceAlphaInput:
