@@ -116,7 +116,7 @@ export class ProfilesSyncApi {
     }
 
     /**
-     * Creates a new Profiles Warehouse.    • When called, this endpoint may generate the `Profiles Sync Warehouse Created` event in the [audit trail](/tag/Audit-Trail).
+     * Creates a new Profiles Warehouse.  <div style=\"background-color: #e8f4fd; border: 1px solid #90caf9; border-radius: 6px; padding: 16px; margin: 16px 0; color: #0d47a1; line-height: 1.5;\">   <ul style=\"margin: 0; padding-left: 20px; font-size: 13px;\">     <li style=\"margin-bottom: 6px;\"><strong>WARN</strong>: Please be careful to not use this API to link multiple Warehouses to a single Space. This is not officially supported. Although the Warehouse will be linked, it won\'t show up on the UI and can lead to various other unforeseen issues.</li>   </ul> </div>    • When called, this endpoint may generate the `Profiles Sync Warehouse Created` event in the [audit trail](/tag/Audit-Trail).
      * @summary Create Profiles Warehouse
      * @param spaceId
      * @param CreateProfilesWarehouseAlphaInput
