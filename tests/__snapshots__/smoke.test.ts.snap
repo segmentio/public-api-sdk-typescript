@@ -2,12 +2,10 @@
 
 exports[`Smoke tests parses errors correctly 1`] = `
 {
+  "body": "",
   "headers": {
     "accept": "application/json",
     "authorization": "Bearer 1ba60ccaae1c1a5230",
-    "connection": "keep-alive",
-    "content-length": "0",
-    "host": "localhost:52338",
   },
   "method": "DELETE",
   "url": "/sources/404",
@@ -18,13 +16,11 @@ exports[`Smoke tests parses errors correctly 2`] = `[HttpError: HTTP request fai
 
 exports[`Smoke tests sends correct request and parses response for create 1`] = `
 {
+  "body": "{"slug":"my-test-source","enabled":true,"metadataId":"IqDTy1TpoU"}",
   "headers": {
     "accept": "application/json",
     "authorization": "Bearer 1ba60ccaae1c1a5230",
-    "connection": "keep-alive",
-    "content-length": "66",
     "content-type": "application/json",
-    "host": "localhost:52338",
   },
   "method": "POST",
   "url": "/sources",
@@ -103,10 +99,8 @@ exports[`Smoke tests sends correct request and parses response for create 2`] = 
       },
     },
     "headers": {
-      "connection": "keep-alive",
       "content-type": "application/json",
       "date": Any<String>,
-      "keep-alive": "timeout=5",
       "transfer-encoding": "chunked",
     },
     "request": {
@@ -121,12 +115,10 @@ exports[`Smoke tests sends correct request and parses response for create 2`] = 
 
 exports[`Smoke tests sends correct request and parses response for delete 1`] = `
 {
+  "body": "",
   "headers": {
     "accept": "application/json",
     "authorization": "Bearer 1ba60ccaae1c1a5230",
-    "connection": "keep-alive",
-    "content-length": "0",
-    "host": "localhost:52338",
   },
   "method": "DELETE",
   "url": "/sources/my-source",
@@ -147,10 +139,8 @@ exports[`Smoke tests sends correct request and parses response for delete 2`] = 
       },
     },
     "headers": {
-      "connection": "keep-alive",
       "content-type": "application/json",
       "date": Any<String>,
-      "keep-alive": "timeout=5",
       "transfer-encoding": "chunked",
     },
     "request": {
@@ -165,11 +155,10 @@ exports[`Smoke tests sends correct request and parses response for delete 2`] = 
 
 exports[`Smoke tests sends correct request and parses response for list 1`] = `
 {
+  "body": "",
   "headers": {
     "accept": "application/json",
     "authorization": "Bearer 1ba60ccaae1c1a5230",
-    "connection": "keep-alive",
-    "host": "localhost:52338",
   },
   "method": "GET",
   "url": "/sources?pagination%5Bcount%5D=1",
@@ -263,10 +252,8 @@ exports[`Smoke tests sends correct request and parses response for list 2`] = `
       },
     },
     "headers": {
-      "connection": "keep-alive",
       "content-type": "application/json",
       "date": Any<String>,
-      "keep-alive": "timeout=5",
       "transfer-encoding": "chunked",
     },
     "request": {
@@ -281,11 +268,10 @@ exports[`Smoke tests sends correct request and parses response for list 2`] = `
 
 exports[`Smoke tests sends correct request and parses response for read 1`] = `
 {
+  "body": "",
   "headers": {
     "accept": "application/json",
     "authorization": "Bearer 1ba60ccaae1c1a5230",
-    "connection": "keep-alive",
-    "host": "localhost:52338",
   },
   "method": "GET",
   "url": "/sources/source-id",
@@ -366,10 +352,8 @@ exports[`Smoke tests sends correct request and parses response for read 2`] = `
       },
     },
     "headers": {
-      "connection": "keep-alive",
       "content-type": "application/json",
       "date": Any<String>,
-      "keep-alive": "timeout=5",
       "transfer-encoding": "chunked",
     },
     "request": {
@@ -384,13 +368,11 @@ exports[`Smoke tests sends correct request and parses response for read 2`] = `
 
 exports[`Smoke tests sends correct request and parses response for update 1`] = `
 {
+  "body": "{"name":"My updated source","enabled":false}",
   "headers": {
     "accept": "application/json",
     "authorization": "Bearer 1ba60ccaae1c1a5230",
-    "connection": "keep-alive",
-    "content-length": "44",
     "content-type": "application/json",
-    "host": "localhost:52338",
   },
   "method": "PATCH",
   "url": "/sources/source-id",
@@ -469,10 +451,8 @@ exports[`Smoke tests sends correct request and parses response for update 2`] = 
       },
     },
     "headers": {
-      "connection": "keep-alive",
       "content-type": "application/json",
       "date": Any<String>,
-      "keep-alive": "timeout=5",
       "transfer-encoding": "chunked",
     },
     "request": {
