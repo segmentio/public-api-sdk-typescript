@@ -49,10 +49,11 @@ function makeServer(response, statusCode) {
         return __generator(this, function (_a) {
             return [2, new Promise(function (resolve, reject) {
                     server = http_1.default.createServer(function (req, res) {
-                        expect(req).toMatchSnapshot({
-                            client: expect.any(Object),
-                            socket: expect.any(Object),
-                        });
+                        expect({
+                            method: req.method,
+                            url: req.url,
+                            headers: req.headers,
+                        }).toMatchSnapshot();
                         res.writeHead(statusCode, { 'Content-Type': 'application/json' });
                         res.end(JSON.stringify(response));
                     });

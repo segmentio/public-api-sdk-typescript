@@ -11,10 +11,13 @@ async function makeServer(
 ): Promise<SourcesApi> {
     return new Promise((resolve, reject) => {
         server = http.createServer(function (req, res) {
-            expect(req as any).toMatchSnapshot({
-                client: expect.any(Object),
-                socket: expect.any(Object),
-            });
+            // Snapshot only the stable parts of the request. Serializing the whole IncomingMessage
+            // captures Node's stream internals (e.g. highWaterMark), which change between Node versions.
+            expect({
+                method: req.method,
+                url: req.url,
+                headers: req.headers,
+            }).toMatchSnapshot();
             res.writeHead(statusCode, { 'Content-Type': 'application/json' });
             res.end(JSON.stringify(response));
         });
