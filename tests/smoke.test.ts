@@ -11,12 +11,35 @@ async function makeServer(
 ): Promise<SourcesApi> {
     return new Promise((resolve, reject) => {
         server = http.createServer(function (req, res) {
-            expect(req as any).toMatchSnapshot({
-                client: expect.any(Object),
-                socket: expect.any(Object),
+            let body = '';
+            req.on('data', (chunk) => {
+                body += chunk;
             });
-            res.writeHead(statusCode, { 'Content-Type': 'application/json' });
-            res.end(JSON.stringify(response));
+            req.on('end', () => {
+                // Snapshot only the parts of the request the SDK controls. Serializing the whole IncomingMessage
+                // captures Node's stream internals (e.g. highWaterMark), and Node adds headers such as `connection`
+                // and `host` itself, so both change between Node versions and environments. The body covers what
+                // `content-length` used to.
+                const headers: Record<string, string | string[] | undefined> =
+                    {};
+                for (const name of [
+                    'accept',
+                    'authorization',
+                    'content-type',
+                ]) {
+                    if (name in req.headers) headers[name] = req.headers[name];
+                }
+                expect({
+                    method: req.method,
+                    url: req.url,
+                    headers,
+                    body,
+                }).toMatchSnapshot();
+                res.writeHead(statusCode, {
+                    'Content-Type': 'application/json',
+                });
+                res.end(JSON.stringify(response));
+            });
         });
 
         server.on('error', reject);
@@ -30,6 +53,12 @@ async function makeServer(
         });
     });
 }
+// Node 19 made keep-alive the default for the HTTP client, which adds these response headers on newer Node only.
+function dropConnectionHeaders(resp: any): void {
+    delete resp.response.headers['connection'];
+    delete resp.response.headers['keep-alive'];
+}
+
 describe('Smoke tests', () => {
     afterEach(() => {
         if (server.listening) {
@@ -77,6 +106,7 @@ describe('Smoke tests', () => {
             slug: 'my-test-source',
         });
 
+        dropConnectionHeaders(resp);
         expect(resp).toMatchSnapshot({
             response: {
                 headers: {
@@ -124,6 +154,7 @@ describe('Smoke tests', () => {
 
         const resp = await mockedRead.getSource('source-id');
 
+        dropConnectionHeaders(resp);
         expect(resp).toMatchSnapshot({
             response: {
                 headers: {
@@ -177,6 +208,7 @@ describe('Smoke tests', () => {
 
         const resp = await mockedList.listSources({ count: 1 });
 
+        dropConnectionHeaders(resp);
         expect(resp).toMatchSnapshot({
             response: {
                 headers: {
@@ -226,6 +258,7 @@ describe('Smoke tests', () => {
             enabled: false,
         });
 
+        dropConnectionHeaders(resp);
         expect(resp).toMatchSnapshot({
             response: {
                 headers: {
@@ -245,6 +278,7 @@ describe('Smoke tests', () => {
 
         const resp = await mockedDelete.deleteSource('my-source');
 
+        dropConnectionHeaders(resp);
         expect(resp).toMatchSnapshot({
             response: {
                 headers: {
