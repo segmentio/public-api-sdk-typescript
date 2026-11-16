@@ -49,12 +49,32 @@ function makeServer(response, statusCode) {
         return __generator(this, function (_a) {
             return [2, new Promise(function (resolve, reject) {
                     server = http_1.default.createServer(function (req, res) {
-                        expect(req).toMatchSnapshot({
-                            client: expect.any(Object),
-                            socket: expect.any(Object),
+                        var body = '';
+                        req.on('data', function (chunk) {
+                            body += chunk;
                         });
-                        res.writeHead(statusCode, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify(response));
+                        req.on('end', function () {
+                            var headers = {};
+                            for (var _i = 0, _a = [
+                                'accept',
+                                'authorization',
+                                'content-type',
+                            ]; _i < _a.length; _i++) {
+                                var name_1 = _a[_i];
+                                if (name_1 in req.headers)
+                                    headers[name_1] = req.headers[name_1];
+                            }
+                            expect({
+                                method: req.method,
+                                url: req.url,
+                                headers: headers,
+                                body: body,
+                            }).toMatchSnapshot();
+                            res.writeHead(statusCode, {
+                                'Content-Type': 'application/json',
+                            });
+                            res.end(JSON.stringify(response));
+                        });
                     });
                     server.on('error', reject);
                     var port = 52338;
@@ -67,6 +87,10 @@ function makeServer(response, statusCode) {
                 })];
         });
     });
+}
+function dropConnectionHeaders(resp) {
+    delete resp.response.headers['connection'];
+    delete resp.response.headers['keep-alive'];
 }
 describe('Smoke tests', function () {
     afterEach(function () {
@@ -117,6 +141,7 @@ describe('Smoke tests', function () {
                         })];
                 case 2:
                     resp = _a.sent();
+                    dropConnectionHeaders(resp);
                     expect(resp).toMatchSnapshot({
                         response: {
                             headers: {
@@ -169,6 +194,7 @@ describe('Smoke tests', function () {
                     return [4, mockedRead.getSource('source-id')];
                 case 2:
                     resp = _a.sent();
+                    dropConnectionHeaders(resp);
                     expect(resp).toMatchSnapshot({
                         response: {
                             headers: {
@@ -227,6 +253,7 @@ describe('Smoke tests', function () {
                     return [4, mockedList.listSources({ count: 1 })];
                 case 2:
                     resp = _a.sent();
+                    dropConnectionHeaders(resp);
                     expect(resp).toMatchSnapshot({
                         response: {
                             headers: {
@@ -281,6 +308,7 @@ describe('Smoke tests', function () {
                         })];
                 case 2:
                     resp = _a.sent();
+                    dropConnectionHeaders(resp);
                     expect(resp).toMatchSnapshot({
                         response: {
                             headers: {
@@ -307,6 +335,7 @@ describe('Smoke tests', function () {
                     return [4, mockedDelete.deleteSource('my-source')];
                 case 2:
                     resp = _a.sent();
+                    dropConnectionHeaders(resp);
                     expect(resp).toMatchSnapshot({
                         response: {
                             headers: {
