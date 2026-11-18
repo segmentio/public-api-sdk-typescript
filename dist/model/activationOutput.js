@@ -69,6 +69,16 @@ var ActivationOutput = (function () {
             baseName: 'performResync',
             type: 'boolean',
         },
+        {
+            name: 'createdAt',
+            baseName: 'createdAt',
+            type: 'string',
+        },
+        {
+            name: 'updatedAt',
+            baseName: 'updatedAt',
+            type: 'string',
+        },
     ];
     return ActivationOutput;
 }());

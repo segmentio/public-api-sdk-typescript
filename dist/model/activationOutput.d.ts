@@ -13,6 +13,8 @@ export declare class ActivationOutput {
     'personalization': PersonalizationOutput;
     'destinationMapping'?: DestinationSubscriptionConfiguration;
     'performResync'?: boolean;
+    'createdAt': string;
+    'updatedAt': string;
     static discriminator: string | undefined;
     static attributeTypeMap: Array<{
         name: string;
